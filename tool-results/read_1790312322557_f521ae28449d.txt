@@ -1,0 +1,217 @@
+     1→# Foodie — Project Worklog
+     2→
+     3→---
+     4→Task ID: 1
+     5→Agent: Z.ai Code (main orchestrator)
+     6→Task: Build "Foodie" v1 — Food Discovery foundation (Next.js 16, mobile-first, mock data)
+     7→
+     8→Work Log:
+     9→- Inspected scaffold: Next.js 16 App Router + shadcn/ui + Tailwind 4 + Prisma (unused for v1 per requirements).
+    10→- Fetched 15 realistic food image sets (75+ images) via `z-ai image-search` CLI; learned to run calls sequentially with retries (parallel calls hit 429 rate limits) and that `-o` output is unreliable, so stdout was captured and parsed.
+    11→- Created domain layer:
+    12→  - `src/lib/foodie/types.ts` — Place, Dish, FoodCategory, EatContext, PriceRange, PlaceBadges (maps to future Supabase tables).
+    13→  - `src/lib/foodie/constants.ts` — 10 food categories, 5 eating-with contexts, mock current location (Koramangala, Bengaluru), app name/tagline.
+    14→  - `src/lib/foodie/store.ts` — Zustand store with state-based screen routing (splash → auth → onboarding → home → detail), preferences, search, category filter.
+    15→  - `src/lib/foodie/utils.ts` — open/closed hours logic (incl. past-midnight closing), search matcher, section sorters, INR formatting.
+    16→- Mock data: `src/data/places.ts` — 14 realistic Bengaluru places with badges (hiddenGem / localFavorite / popular / budget), famous + signature dishes with ₹ prices, hours, photos (image-search OSS URLs), local tips, Google Maps queries.
+    17→- Reusable components (`src/components/foodie/`): Logo (inline SVG + favicon `public/logo.svg`), SectionHeader, SearchBar, CategoryChip/CategoryTile, PlaceCards (CarouselCard / ListRow / WideCard / ranked), Badges (RatingBadge, PlaceBadge).
+    18→- Screens (`src/components/foodie/screens/`): SplashScreen (gradient + floating emojis + tagline + Get Started), AuthScreen (Sign Up / Log In tabs, mock auth), EatingWithContextScreen ("Who are you eating with?" — 5 options, auto-advance), PreferencesScreen (10 category tiles, multi-select), HomeScreen (location header, "What are you craving?" search, category chips, greeting card, Nearby / Hidden Gems / Local Favorites / Popular Places / Budget Eats sections with see-all toggles, coming-soon teaser), PlaceDetailScreen (photo carousel with dots + badges, rating, price range, location, open/closed hours, famous dishes, signature dishes, photos grid, local recommendation, sticky Get Directions → Google Maps).
+    19→- Shell: `FoodieApp.tsx` — mobile-first app surface (full-bleed on phones, rounded device mockup + desktop side-branding panel on sm+), AnimatePresence screen transitions.
+    20→- App wiring: `page.tsx` renders FoodieApp; `layout.tsx` with Outfit font + Foodie metadata + sonner Toaster; `globals.css` — orange brand theme (oklch), custom `@utility` classes (foodie-gradient, no-scrollbar, thin-scrollbar, foodie-dots, pb-safe).
+    21→- Bug fixes during verification:
+    22→  1. Tailwind v4 dropped `@layer utilities` custom classes → converted to `@utility` directives.
+    23→  2. Image URLs were missing file extensions → script re-mapped all 71 URLs to correct extensions (jpg/jpeg/png/webp).
+    24→  3. "Loved by Xk locals" math error on WideCard → ratingCount/1000.
+    25→  4. Nested `<main>` elements → outer wrapper became a div.
+    26→  5. Desktop side-panel wordmark invisible (dark tone on dark bg) → Logo tone="light".
+    27→
+    28→Stage Summary:
+    29→- All 6 requested experiences are implemented and browser-verified: splash, login/signup, onboarding (eating-with), food preferences, home discovery feed, place detail page.
+    30→- Verified via agent-browser (390×844 + 1600×900): full signup flow, login flow, search ("dosa" → 1 result), category filter (Cafe → 3 results), see-all expand, carousel dots, open/closed hours logic (Momo Nation "Closed right now" at ~9:45 AM IST), Get Directions Google Maps URL, back navigation, toasts, desktop mockup layout, mobile full-bleed.
+    31→- `bun run lint` clean; dev server compiles with no errors; no console/page errors.
+    32→- Architecture is ready for Supabase (types mirror tables), real auth, location services, and AI recommendations without structural rewrites.
+    33→
+    34→---
+    35→Task ID: 2
+    36→Agent: Z.ai Code (main orchestrator)
+    37→Task: Add REAL location feature — native Geolocation API, Haversine distances, distance filter + "Nearest First" sort, manual city fallback
+    38→
+    39→Work Log:
+    40→- Inspected existing Foodie v1 (state-routed screens, mock places, Zustand store) before touching anything.
+    41→- `src/lib/foodie/types.ts`: added `GeoPosition {lat,lng}`, required `latitude`/`longitude` on `Place` (removed hardcoded `distanceKm`), added `PlaceWithDistance`.
+    42→- NEW `src/lib/foodie/location.ts` — reusable location module: `requestBrowserLocation()` (Promise wrapper over `navigator.geolocation.getCurrentPosition`, high accuracy, 12s timeout, friendly error mapping for denied/unavailable/timeout/unsupported), `haversineKm()` (6371km radius, single source of truth), `formatDistance()` ("0.8 km away", metres under 100m), `formatLatLng()`, `reverseGeocode()` (best-effort OSM Nominatim, 5s abort, null fallback), `withDistances()` (annotates any coordinate-bearing list), `PROTOTYPE_CITY` + 8 `MANUAL_CITIES` with real center coords.
+    43→- NEW `src/lib/foodie/locationStore.ts` — Zustand location state: status (idle/locating/granted/denied/error/unsupported), source (prototype/browser/manual), `origin` (effective distance origin), browser `coords` + accuracy, `areaLabel`, `requestLocation/selectCity/usePrototypeCity`, plus derived `locationHeadline` + memoized `useLocationHeadline()` (zustand v5 needs stable selector results — fixed a getSnapshot infinite-loop crash found in browser testing) and `originSourceLabel()`.
+    44→- `src/lib/foodie/store.ts`: added `distanceFilterKm` (null=any) + `sortBy` ("nearest"|"rating") with setters.
+    45→- `src/lib/foodie/utils.ts`: distance-aware sorters/filters (`PlaceWithDistance[]`), `constants.ts`: removed fake `CURRENT_LOCATION`.
+    46→- `src/data/places.ts`: all 14 places now carry realistic WGS-84 coords around Koramangala (spread 0.3–2.3 km incl. honest Bellandur outlier at 2.3 km).
+    47→- NEW `src/components/foodie/LocationControls.tsx`: `LocationPromptBanner` ("Use my current location" CTA, status-aware copy) + `LocationSheet` (status card per state, gradient GPS button, 8-city manual grid, prototype-city reset, Escape/backdrop close, in-frame so it stays inside the phone mockup).
+    48→- NEW `src/components/foodie/FilterBar.tsx`: distance chips (Any/Within 1/3/5/10 km) + custom in-frame sort popover ("Nearest First" / "Top Rated").
+    49→- `HomeScreen.tsx`: full rewiring — withDistances(origin) → distance filter → sort; all 5 sections respect the radius; empty-state ("No places within X km") + section hiding; location status header (live green dot, amber permission warning, manual label); search respects filter+sort.
+    50→- `PlaceCards.tsx`: cards render computed `formatDistance` (distance-first in list rows so it never truncates); `PlaceDetailScreen.tsx`: computed distance + "Distance from {origin}" line; Get Directions upgrades to `google.com/maps/dir/?api=1&destination=lat,lng` when a real GPS fix exists.
+    51→- Bug fix during verification: `useLocationStore(locationHeadline)` returned a fresh object per call → React getSnapshot infinite loop on Home; replaced with primitive subscriptions + useMemo via `useLocationHeadline()`. Verified zero console errors after fix.
+    52→- Browser-verified (agent-browser 390×844 + 1600×900): signup/login/onboarding → home; prototype distances match hand-computed Haversine (0.3/0.4/0.5 km); Within 1 km excludes the 6 far places; sort switches rating↔distance; REAL denied path (headless denies permission → amber "Location permission required", app keeps working); manual Mumbai → honest ~849 km distances; emulated granted fix (Indiranagar) → header "Using your current location / Hoysala Nagara Central, Bengaluru" (live reverse geocode), distances recompute (4.3–5.2 km), empty state at Within 1 km, detail "4.3 km away · Distance from your current location", directions URL uses coordinates; desktop frame + mobile full-bleed both hold.
+    53→
+    54→Stage Summary:
+    55→- Location feature is REAL: native Geolocation API only, no hardcoded user coords, no IP fallback; origin = GPS fix > manual city > prototype city, always labelled honestly in the UI.
+    56→- All mock coords + stores structured for the future Supabase/places-API swap (`withDistances` works on any `{latitude, longitude}[]`).
+    57→- All 14 requirements met; existing screens unaffected (splash/auth/onboarding/prefs/detail all re-verified); lint clean; zero runtime errors.
+    58→
+    59→---
+    60→Task ID: 3
+    61→Agent: Z.ai Code (main orchestrator)
+    62→Task: Supabase database foundation — real restaurant DB layer with labelled DEMO fallback (keep ALL location features intact)
+    63→
+    64→Work Log:
+    65→- Installed @supabase/supabase-js@2.116.0; added NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY to .env (empty → demo mode) + documented .env.example; .env* already gitignored.
+    66→- SQL foundation (supabase/): schema.sql (restaurants/dishes/reviews/restaurant_photos with exact required columns, FKs with on delete cascade/set null, check constraints, btree indexes incl. (latitude, longitude), full RLS — public read, authenticated-only self writes — and a pure-SQL nearby_restaurants(lat,lng,radius_km) RPC doing Haversine IN Postgres + commented PostGIS upgrade path); seed-demo.sql (5 restaurants all prefixed "DEMO —", dishes with nutrition fields, review, photo); unseed-demo.sql (cleanup by prefix); README.md (project creation → schema → env → first real restaurant → nearby-search architecture diagram).
+    67→- Supabase client layer (src/lib/supabase/): config.ts (env validation, isSupabaseConfigured()), server.ts (singleton anon client for API routes, persistSession:false).
+    68→- Data layer (src/lib/foodie/data/): types.ts (row shapes mirroring schema.sql + DataMode + response types + notices); mappers.ts (row→Place with documented conventions: description→tagline, city→area, price_level→costForTwo brackets, is_signature→famous/signature split, popular=rating≥4.6, budget=₹; DEMO_ID_PREFIX "demo:" + uuid guard); demoBackend.ts (labelled fallback over src/data/places.ts, ids prefixed); supabaseBackend.ts (RPC-first nearby → bbox+Haversine-in-Node fallback; byId fetches restaurant+dishes+photos in parallel; sanitized .or ilike search; category eq); serverRepository.ts (single dispatch: configured→Supabase, unconfigured→demo, Supabase-error→demo+notice); repository.ts (THE UI-facing functions: getNearbyRestaurants(lat,lng,radiusKm), getRestaurantById, getRestaurantsByCategory, searchRestaurants via /api/restaurants/*); useRestaurantFeed.ts (keyed-outcome hook — loading/ready/error + auto-refetch on origin change; no sync setState in effects per react-hooks/set-state-in-effect).
+    69→- API routes (force-dynamic, no-store): /api/restaurants/nearby (lat/lng/radiusKm validation 400s), /[id] (404 unknown), /search (q required, 120-char cap), /category/[category] (validated against FOOD_CATEGORIES).
+    70→- UI rewiring: HomeScreen — PLACES import REMOVED, feed via useRestaurantFeed(origin); FeedSkeleton loading, FeedErrorCard with retry, EmptyDatabaseCard (distinguishes "Supabase connected but table empty" vs "demo doesn't cover this origin" — fixed misleading copy found in testing); DemoDataBanner (amber strip, tap → Supabase setup toast) when mode==="demo"; distance/filter/sort math unchanged on top of fetched data. PlaceDetailScreen — PLACES import REMOVED, getRestaurantById fetch with DetailSkeleton, upgraded "place moved its kitchen" state (retry + back), 🧪 Demo data chip, ratingCount>0 guards, empty-photos gradient hero, localTip/photos guards. PlaceCards — PlacePhoto placeholder component + WideCard ratingCount guard. src/data/places.ts header now screams "DEMO DATASET — NOT REAL BUSINESSES".
+    71→- Verification: bun run lint clean (fixed 2 set-state-in-effect errors via keyed-outcome pattern); curl: all 4 routes + demo notice + honest empty (Mumbai origin → 0 places), 404/400 paths; agent-browser E2E (390×844 + 1600×900): full flow splash→auth→onboarding→home, DEMO banner + tap-toast, GPS-denied path (amber, prototype fallback, app alive), manual Mumbai refetch with real Mumbai coords in request (19.076,72.8777), Bengaluru restore, detail via API (demo:dosa-corner → dishes/photos/distance/demo chip), search "dosa"→1 result, desktop frame intact, zero console errors. dev.log shows REAL user GPS fix (13.2886,77.5984) flowing into nearby query — granted path live for actual users. Resilience test with fake credentials: RPC fail → warn → bbox fail → demo+notice, exit 0.
+    72→
+    73→Stage Summary:
+    74→- Foodie now has a complete Supabase database foundation: schema+RLS+RPC in SQL, official JS client, clean repository layer, 4 API routes — UI contains zero restaurant data.
+    75→- Nearby search uses DB-stored lat/lng (RPC in Postgres first, Haversine fallback), fed by the real browser GPS fix; old hardcoded coords are never the user location (prototype fallback remains labelled).
+    76→- No credentials configured → app runs in clearly-labelled DEMO DATA mode (banner + per-place chips + honest notices); crashes impossible on Supabase failure.
+    77→- All existing screens/features (splash, auth, onboarding, prefs, location sheet, filters, detail, directions) re-verified untouched.
+    78→
+    79→---
+    80→Task ID: 6
+    81→Agent: Z.ai Code (main)
+    82→Task: Configure real Supabase credentials in .env, restart dev server, verify app switches from DEMO DATA mode to live Supabase mode.
+    83→
+    84→Work Log:
+    85→- Read .env — the two Supabase values the user supplied were already present (DATABASE_URL untouched, comments intact); no write required.
+    86→- Confirmed mode plumbing: src/lib/supabase/config.ts isSupabaseConfigured() gates serverRepository.ts, which returns mode "supabase"|"demo" (+notice) on every /api/restaurants/* response; UI shows DemoDataBanner only in demo mode.
+    87→- Sandbox quirk: background dev-server processes are reaped between Bash tool calls, so every verification ran as a single call (setsid server start + readiness poll + checks).
+    88→- API verification (HTTP 200 on all): /api/restaurants/nearby, /search, /category/south-indian → mode "supabase", notice none, places 0. Direct Supabase REST probe (key never printed) → HTTP 200, 0 rows.
+    89→- Restarted dev server via setsid; dev.log clean (Ready in ~650ms, no Supabase errors).
+    90→- Browser E2E (agent-browser, 390x844): splash → sign up (full name/email/password) → onboarding (Continue) → prefs (Skip for now) → Home. Home shows NO demo banner and the honest empty-state "No restaurants in your database yet / Foodie is connected to Supabase…"; location chip correctly labelled "· prototype" (headless browser denied geolocation). Screenshot: /tmp/foodie-live-home.png.
+    91→
+    92→Stage Summary:
+    93→- Foodie is now LIVE against https://moeqhmayzxmrytthhklp.supabase.co using the public publishable key from .env (never hardcoded in source; service key never used).
+    94→- DEMO DATA mode is fully exited; empty DB yields the designed empty-state, not a crash and not fake data.
+    95→- Next optional step: run supabase/seed-demo.sql for labelled demo rows, or insert the first real restaurant.
+    96→
+    97→---
+    98→Task ID: 7
+    99→Agent: Z.ai Code (main)
+   100→Task: Migrate Foodie DB schema to the Doddaballapura pilot corridor — 7 place categories, student_friendly + verification_status fields; keep code compatible; NO inserts.
+   101→
+   102→Work Log:
+   103→- Authored supabase/migration-001-pilot-categories.sql (idempotent, non-destructive): adds student_friendly boolean, verification_status text (CHECK: verified|community_submitted|unverified|closed), tags text[], locality text; remaps legacy categories then CHECKs category to restaurant|hotel|tiffin|cafe|fast_food|street_food|bakery_sweets; adds indexes + comments.
+   104→- Updated supabase/schema.sql for fresh-install parity; updated supabase/README.md (categories, trust fields, migration note); rewrote supabase/seed-demo.sql (7 labelled DEMO corridor rows, new columns, NOT executed).
+   105→- Code: constants.ts FOOD_CATEGORIES→PLACE_CATEGORIES (7, typed FoodCategory<PlaceCategory>); types.ts adds PlaceCategory/VerificationStatus unions + Place.verificationStatus/studentFriendly/tags + badges.studentFriendly/verified; location.ts PROTOTYPE_CITY→GITAM corridor (13.18,77.5 labelled approximate) + MANUAL_CITIES→3 corridor anchors (station 13.2797,77.5505 & town 13.2988,77.5408 from public sources); mappers.ts maps new fields, area=locality||city; supabaseBackend.ts filters closed places post-fetch (works pre-migration, no new-column SQL dependency); src/data/places.ts demo set replaced (7 labelled corridor samples, zero Koramangala data); HomeScreen/PreferencesScreen/LocationControls/locationStore/category-route updated (chips, prefs tiles, prototype copy, validation).
+   106→- Verified: bun run lint clean; APIs — nearby(13.18,77.5) 200 mode supabase, category/tiffin 200, category/south-indian 400 listing new ids, search 200; browser E2E — 7 new chips + prefs tiles, header "GITAM University area, Doddaballapura · prototype", updated empty-state, no demo banner. Screenshot /tmp/foodie-pilot-home.png.
+   107→
+   108→Stage Summary:
+   109→- Schema migration ready for the user to run in Supabase SQL Editor; nothing inserted, nothing deleted, DB still empty.
+   110→- Old Koramangala mock data fully removed from code; demo fallback now corridor-labelled samples (mode "demo" only, never touches Supabase).
+   111→- Waiting for user confirmation before inserting any real places.
+   112→
+   113→---
+   114→Task ID: 8
+   115→Agent: Z.ai Code (main)
+   116→Task: Prepare FIRST REAL FOODIE DATA BATCH (13 candidates, GITAM Nagadenahalli → Doddaballapura Railway Station → Doddaballapura town). Evidence-only research, structured data table, A/B/C classification. NO inserts, no fabricated data.
+   117→
+   118→Work Log:
+   119→- Read worklog + migration-001-pilot-categories.sql to confirm target columns: student_friendly (bool), verification_status (4-state CHECK), tags text[], locality text; category CHECK = 7 pilot values.
+   120→- Ran 4 rounds of evidence research via z-ai web_search + page_reader (scripts/research-batch1*.ts): 15 base queries + 10 gap-fill + 10 URL hunts; fetched magicpin store pages for Sri Annapoorneshwari (RNR Complex, TB Circle, opp old KEB; phone 8746888318) and Brundhavana Grand Veg ("Muthur Railway Station, Gauribidanur Road" — corridor-boundary question).
+   121→- Installed open-location-code@1.0.3; decoded Ayyappa Tiffin Room's published Google plus code 7HH2+XV9 (magicpin listing) → 13.279913, 77.552234, full code 7J5V7HH2+XV9; sanity-checked 0.19 km from station reference — self-consistent with "near railway station". Presented as PROPOSED (provenance stated), still unverified.
+   122→- Sources per place: JustDial, Zomato, Swiggy, magicpin, district.in, restaurant-guru, TripAdvisor, Explurger, MakeMyTrip/Goibibo/bag2bag/planetofhotels, Yandex Maps, Sulekha, Facebook, favhiker.
+   123→- Built 13-place structured table: every unknown = NULL (—); verification_status=unverified for ALL; student_friendly/is_hidden_gem/is_local_favorite left unclaimed (no guessing); tags only where name/listing evidence supports (veg, family_restaurant, food_court, biryani, self_service, bar...).
+   124→- Classification: A-ready (8): Ayyappa Tiffin Room, Shri Manjunatha Grand Veg, Hotel Halli Nanasu, Brundavana Family Restaurant, Chickpet Donne Biryani House, Hotel Royal Nandhana, Priyanka Tiffen Center, Sri Annapoorneshwari Tiffin Center. B-needs-verification (2): Lotus Gardenia (conflicting ratings TA 3.0 vs JD 4.0 vs bag2bag 4.5; JD locality variant), Abhiram Food Court (single thin source, Moparahalli position vs corridor unverified). C-duplicate/uncertain (3): Brundhavana Grand Veg (name near-collision with Brundavana Family + address possibly outside corridor), Bhadranna Tiffins (two similar RG listings "Bhadranna Tiffenies" / "Bhadranna giri tiffen center", no address), Amigos Cafe (deferred — user rule: no cafes yet; it IS in GITAM corridor, batch-2 candidate).
+   125→- Coordinates: 12 of 13 places have NO reliable coordinates (NULL) and are flagged for coordinate verification; only Ayyappa has evidence-based coords.
+   126→- NOTHING inserted into Supabase; no INSERT SQL generated; stopped and waited for user approval per instruction.
+   127→
+   128→Stage Summary:
+   129→- Evidence table delivered to user with A/B/C buckets and explicit decision list (plus-code coords accept/reject, Lotus rating source, Halli Nanasu phone pick, Priyanka partial address, Annapoorneshwari dual JD listing, Amigos deferral, price-level interpretations).
+   130→- Research scripts kept at scripts/research-batch1*.ts for reproducibility; open-location-code added to package.json (research-only).
+   131→- Next: on user approval, generate INSERT SQL for approved subset only.
+   132→
+   133→---
+   134→Task ID: 9
+   135→Agent: Z.ai Code (main)
+   136→Task: Generate review-ready INSERT SQL for the 8 approved A-list places (execute NOTHING; invent nothing; idempotent ON CONFLICT).
+   137→
+   138→Work Log:
+   139→- Schema conflict found: latitude/longitude/price_level were NOT NULL — incompatible with "uncertain → NULL" for 7 coord-less places. Part 0 of the new SQL drops those three NOT NULLs (idempotent, non-destructive); rating keeps NOT NULL DEFAULT 0 (= "not yet captured", UI hides badge at 0).
+   140→- Created supabase/insert-batch-001-pilot-8.sql: BEGIN/COMMIT atomic; 3 ALTERs; 8 INSERT…SELECT…WHERE NOT EXISTS(lower(btrim(name)), city)…ON CONFLICT (id) DO NOTHING using 8 pre-generated fixed UUIDs (uses existing PK — no new constraint); per-field source comments; final verification SELECT; commented UPDATE template for later coordinate verification.
+   141→- Values strictly evidence-backed: lat/lng NULL for 7 places (only Ayyappa = approved plus-code decode 13.279913/77.552234); price NULL for 6 (Brundavana ₹ from ₹300/2, Chickpet ₹₹ from ₹1000/2); hours only where single consistent source (Manjunatha 06:00-23:00, Halli Nanasu 11:00-23:00), NULL on conflicts (Ayyappa, Brundavana, Priyanka, Annapoorneshwari, Chickpet); phones only where published (Ayyappa +918088599999 single-source-flagged, Annapoorneshwari +918746888318 two-source agreement; Halli Nanasu NULL — 3 conflicting); ratings with platform+count in comments (4.6 Google/253, 4.2 JD/3357, 4.2 JD/263, 3.4 JD/278, 4.2 RG/615, 4.1 JD/354; 0 = not captured for Ayyappa + Chickpet); tags only evidence-supported.
+   142→- NULL-tolerance code changes: types.ts Place lat/lng/priceRange/costForTwo optional + RestaurantRow lat/lng/price_level nullable; mappers null→undefined; location.withDistances excludes coord-less places (never NaN); supabaseBackend bbox fallback filters null-coord rows (type predicate, no assertion); RatingBadge returns null at rating 0; PlaceCards + PlaceDetailScreen conditional price/distance rendering; detail shows "Coordinates pending verification".
+   143→- Verified: bun run lint clean; dev server ready; nearby (2 origins), search, category/tiffin all HTTP 200 mode "supabase", places [] (DB still empty — user has not run the INSERT).
+   144→- Nothing executed in Supabase; SQL shown to user for review.
+   145→
+   146→Stage Summary:
+   147→- supabase/insert-batch-001-pilot-8.sql ready for the user to run; double-layer duplicate protection (fixed uuid + name guard), atomic transaction.
+   148→- After the user runs it: only Ayyappa (has coords) surfaces in nearby discovery; the other 7 appear automatically once coordinates are filled via the UPDATE template.
+   149→
+   150→---
+   151→Task ID: 10
+   152→Agent: Z.ai Code (main)
+   153→Task: GITAM-side batch research (batch 2) — ~8 real food places near GITAM Bengaluru (Nagadenahalli / NH-207(648) / Bashettihalli). Evidence-only table + A/B/C. NO SQL, NO Supabase changes, station-road batch untouched.
+   154→
+   155→Work Log:
+   156→- Ran 4 research rounds (scripts/research-batch2-gitam*.ts): 13 + 18 + 18 + 6 web_search queries + 2 JD page reads (JD pages returned no text — bot-blocked).
+   157→- User's 4 personal places resolved: AMIGOS = JD "Amigos C"/"Amigos Gitam" (NH-207 Kodihalli Village, 4.3/46) + Snapchat "AMIGOS Cafe, main gate opp. GITAM University, 11:00-22:00" — distinct from Amigos Café Coorg / Amigos Resto Cafe Sanjay Nagar. ABHIRAM FOOD COURT = JD listing in Moparahalli (4.0/5, 11:00-23:00 daily); Moparahalli position vs campus unconfirmed. EPICRUISE = best web identity "Epicurus Multi Cuisine Restaurant" BUT 6 platforms disagree (JD "101, Nagandenahalli...560107", magicpin/Snapchat "101 MSPP Colony Rd Soladevanahalli 560107", district "Nagadenahalli Doddaballapura", Zomato Hesaraghatta/HSR, Swiggy Nagasandra) — pin 560107 evidence points far west → C. HANGOUTS = no verifiable listing anywhere (only Hangout Cafe Hebbal/Hindupur, Hideout Cafe Banashankari).
+   158→- Candidates verified: SS Hyderabadi Biriyani Zone (Near Gitam College, JD 4.0/326 vs 3.8/211 conflict, ph 08431950124 two-source, 10:00-22:00, ₹1000/2); GITAM University Canteen (JD 3.7/772 "Heggadahalli" + probable dup "Gitam Cafe" 3.7/768; gitam.edu Campus Dining page). New finds: Sri Ganesh Grand (Boss Tower, Doddaballapur Main Rd, Bashettihalli 561203; JD 4.1/10654 vs TA 3.4/7 conflict; district ₹200/2, 08:00-22:00; JD slug "Near Columbia Clinic Opp Navodaya Vidyalaya"); The Biryani Shack (Heggadahalli, JD 4.7/31, opens 07:00, unresolved plus-code-like fragment "9m4387m"); Pizza Junction (Bashettihalli per Swiggy, 3.6, JD 11:45-21:00); Garuda Cafe Restaurant (JD 4.0/46, Doddaballapura Main Rd, Nagadenahalli cluster, hours conflict 24h vs 22:00).
+   159→- Excluded with reasons: Epicurus (address evidence → Soladevanahalli 560107, far), Dhabariya Polywood (PVC window company, not food), Hoysala Family Restaurant (Bunk Kasaba Hobli = town proper), Snacks @7 / Meal Company (town-side/locality undetermined), Manjunatha Bar And Restaurant + Hotel Umashankar + Hotel Kesari Grand (thin/unplaced).
+   160→- Geography honesty: no coordinates derivable (no published Plus Codes; the "9m4387m" fragment unresolvable) → ALL lat/lng NULL for this batch; village relations cited only from sources (onefivenine: Nagadenahalli ~3 km from town, ~4 km from Bashettihalli; census source says 7 km — conflict noted, not averaged). JD "Nagadenahalli" cluster shown to be wide-area (Epicurus lands in it) — cluster-only placements flagged LOW confidence.
+   161→- Classification delivered: A=8 (Amigos, SS Hyderabadi Biriyani Zone, Gitam University Canteen, Abhiram Food Court, The Biryani Shack, Sri Ganesh Grand, Pizza Junction, Garuda Cafe Restaurant), B=4 (The Shri Cafe And Restaurant, HANGOUTS, Hotel Kesari Grand, Hotel Umashankar And Condiments), C=7+ (Epicurus, Manjunatha Bar, Dhabariya Polywood, Hoysala, Snacks@7, Meal Company, Durgashree).
+   162→- NOTHING inserted, NO SQL generated; stopped for user approval per instruction.
+   163→
+   164→Stage Summary:
+   165→- Research table + A/B/C delivered; batch-1 station/town rows never touched.
+   166→- Batch 2 has ZERO coordinates — after any future insert, these rows surface via search/category/detail only until coordinates are verified (user can supply from Google Maps later via UPDATE template).
+   167→- Next: on user approval of the A-list (and any field corrections), generate idempotent INSERT SQL in the same pattern as insert-batch-001 (NOT NULL drops already prepared there; fixed UUIDs + name guard), then wait again before any execution.
+   168→
+   169→---
+   170→Task ID: 11
+   171→Agent: Z.ai Code (main)
+   172→Task: Generate review-ready INSERT SQL for the 6 approved GITAM-side places (execute NOTHING; Garuda/Pizza Junction/Epicurus/HANGOUTS/Shri Cafe excluded; batch-001 rows untouched).
+   173→
+   174→Work Log:
+   175→- User approved exactly 6: Amigos, SS Hyderabadi Biriyani Zone, GITAM University Canteen, Abhiram Food Court, Sri Ganesh Grand, The Biryani Shack — with categories (cafe + 5×restaurant), blanket flags (student_friendly/is_hidden_gem/is_local_favorite=false, verification_status='unverified'), NULL coords for all 6, tags list fixed per place.
+   176→- Confirmed schema constraints: address NOT NULL (all 6 have sourced locality-level addresses), rating NOT NULL → conflicting/absent ratings stored as 0 sentinel ("not yet captured", app hides badge), price_level nullable via Part-0 ALTERs.
+   177→- Rating decisions per user's conflict rule: Amigos 4.3 (JD/46 single-source, kept), Canteen 3.7 (JD/772, dup listing agrees), Abhiram 4.0 (JD/5, thin but non-conflicting, kept+flagged), Shack 4.7 (JD/31, consistent ×2 pages, kept); SS → 0 (JD 4.0/326 vs 3.8/211 conflict), Ganesh Grand → 0 (JD 4.1/10654 vs TA 3.4/7 conflict).
+   178→- Kept values: SS phone +918431950124 (Snapchat+district agree), hours 10:00-22:00 (Snapchat, district corroborates open), ₹₹ (district ₹1000/2); Ganesh ₹ (district ₹200/2) + 08:00-22:00 (district single source); Abhiram 11:00-23:00 (JD daily); Amigos hours NULL (JD vs Snapchat conflict); Shack hours NULL (closing time unpublished).
+   179→- Created supabase/insert-batch-002-gitam-6.sql: BEGIN/COMMIT atomic; Part 0 re-applies the 3 idempotent ALTERs (order-independent vs batch 001); 6 INSERT…SELECT…WHERE NOT EXISTS(lower(btrim(name)), city)…ON CONFLICT (id) DO NOTHING with 6 fresh fixed UUIDs (no overlap with batch-001's 8); per-field source comments; verification SELECT scoped to the 6 ids only; commented coordinate UPDATE template.
+   180→- Name notes documented: 'Amigos Cafe' (Snapchat exact; JD variants "Amigos Gitam"/"Amigos C") and 'GITAM University Canteen' (JD casing) proposed — user can veto at review. Explicitly no UPDATE/DELETE anywhere; station/town batch untouched.
+   181→- Nothing executed in Supabase; SQL shown to user for review.
+   182→
+   183→Stage Summary:
+   184→- supabase/insert-batch-002-gitam-6.sql ready for user review; duplicate-safe (fixed uuid + name guard), atomic, zero row modification.
+   185→- All 6 rows have NULL lat/lng → they surface via search/category/detail only until coordinates are field-verified via the UPDATE template.
+   186→
+   187→---
+   188→Task ID: 12
+   189→Agent: Z.ai Code (main)
+   190→Task: Inspect current location/testing implementation for the "GITAM Test Area" dev mode + NULL-coordinate visibility plan. NO code changes made — awaiting user approval.
+   191→
+   192→Work Log:
+   193→- Read worklog (Tasks 9–11) and inspected: location.ts, locationStore.ts, LocationControls.tsx, HomeScreen.tsx, PlaceCards.tsx, PlaceDetailScreen.tsx, useRestaurantFeed.ts, repository.ts, serverRepository.ts, supabaseBackend.ts, demoBackend.ts, mappers.ts, types.ts, utils.ts, store.ts, FilterBar.tsx, nearby/search/category API routes, schema.sql RPC.
+   194→- Confirmed honest-by-design pieces: withDistances + server nearby paths (RPC + bbox fallback) exclude NULL-coord rows; detail screen hides distance for NULL coords; no 0 km anywhere; geolocation flow is native-only.
+   195→- Found the real gap: HomeScreen category browsing & search are CLIENT-SIDE filters over the nearby feed (which excludes NULL-coord rows) → the 6 new GITAM rows are currently invisible on Home; dedicated /category and /search endpoints exist but are unused by the UI.
+   196→- Produced the exact file-change plan (13 files max, 1 new API route) and behavior rules; reported to user; STOPPED for approval per instruction.
+   197→
+   198→Stage Summary:
+   199→- No app code, no SQL, no Supabase writes. Plan only: test-source in locationStore (+ GITAM_TEST_LOCATION const), LocationSheet dev option "TEST LOCATION — GITAM", new read-only GET /api/restaurants/all, feed merge so NULL-coord places surface in browse/search/list with "Location pending verification", card + detail label updates.
+   200→
+   201→---
+   202→Task ID: 13
+   203→Agent: Z.ai Code (main)
+   204→Task: Implement approved "GITAM Test Area" dev location + NULL-coordinate visibility/display plan (A+B+C). Read-only vs Supabase; batch-1/batch-2 rows untouched.
+   205→
+   206→Work Log:
+   207→- A (test origin): location.ts gained GITAM_TEST_LOCATION ("TEST LOCATION — GITAM", optionLabel "GITAM Test Area", reuses existing campus corridor reference 13.18/77.5 — no new coords); locationStore.ts gained source "test" + selectGitamTestArea() + headline (kicker "Development testing · not your real location", amber) + originSourceLabel; LocationControls.tsx gained a dashed amber "DEVELOPMENT" block in LocationSheet (FlaskConical, aria-pressed state, exact badges), test StatusCard, banner hidden in test mode, reset button also for test source. GPS + manual picker code untouched.
+   208→- B (NULL-coord visibility): supabaseBackend.getAllSupabaseRestaurants (select *, isDiscoverable, read-only), demoBackend.getAllDemoRestaurants, serverRepository.loadAllRestaurants, NEW GET /api/restaurants/all (force-dynamic, no-store), repository.getAllRestaurants, useAllRestaurants hook (origin-independent). HomeScreen merges nearby + all by id (nearby wins), annotates only coordinate-bearing rows with client Haversine; pending = distanceKm == null; radius filter + "Nearest First" apply to known-distance places only; pending places join search/category pool when no radius filter, sort last under Nearest First; new "Location pending verification" home section (hidden while radius filter active); dbEmpty/discoveryEmpty reworked; demo-banner + retry cover both feeds.
+   209→- C (display): types.ts PlaceMaybeWithDistance; PlaceCards DistanceChip (real distance OR "Location pending verification", never 0 km) for Carousel/Wide + amber pending row in ListRow; PlaceDetailScreen wording "Coordinates pending verification" → "Location pending verification" (amber).
+   210→- BUG CAUGHT IN BROWSER PASS: initially reused withDistances() for the all-feed, which silently DROPPED NULL-coord rows (pending section empty). Fixed with explicit annotation keeping NULL rows distance-free.
+   211→- Verification: lint clean; APIs — /all: 14 rows (8+6), 13 NULL-coord, 0 with distanceKm; nearby@13.18,77.5: only Ayyappa, real 12.466 km; search/category return NULL-coord rows without distance; all 6 GITAM names findable. Browser: full flow (onboarding→home), pending section renders 13 rows, test option aria-pressed, header "TEST LOCATION — GITAM", toast, StatusCard, reset; search "amigos" + Cafe category + Restaurant category via UI; Amigos detail shows "Location pending verification" + name-search directions URL; 1 km filter → honest empty card; manual Doddaballapura Town → 2.4 km Ayyappa; GPS click → real permission-denied state (headless denies; code path unchanged); zero console errors; dev.log all 200s.
+   212→- NO database writes of any kind; no SQL run; no restaurant coords touched.
+   213→
+   214→Stage Summary:
+   215→- GITAM pilot fully testable with clearly-labelled TEST LOCATION — GITAM origin; NULL-coord places browsable via category/search/list with honest labels; nearby strictly coordinate-bearing.
+   216→- When coordinates are later verified via UPDATE template, places auto-graduate into distance-sorted nearby — zero code changes needed.
+   217→
