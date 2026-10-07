@@ -727,7 +727,7 @@ export function HomeScreen() {
             </section>
 
             <p className="mt-8 text-center text-[11px] font-medium text-stone-400">
-              Foodie v1 · Discover · Decide · Devour
+              Foodie · Discover · Decide · Devour
             </p>
               </>
             )}

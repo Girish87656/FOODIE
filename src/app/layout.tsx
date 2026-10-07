@@ -15,8 +15,18 @@ export const metadata: Metadata = {
     "Foodie helps you discover nearby food places, hidden gems, local favorites and budget eats — matched to who you're eating with and what you crave.",
   keywords: ["Foodie", "food discovery", "restaurants", "hidden gems", "food companion"],
   authors: [{ name: "Foodie" }],
+  manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Foodie",
+    statusBarStyle: "black-translucent",
   },
   openGraph: {
     title: "Foodie — Your Personal Food Companion",
@@ -30,6 +40,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  viewportFit: "cover",
   themeColor: "#ea580c",
 };
 

@@ -1,5 +1,17 @@
 import { cn } from "@/lib/utils";
 
+/**
+ * ─────────────────────────────────────────────────────────────────────────────
+ *  Foodie logo — SINGLE SOURCE OF TRUTH
+ *
+ *  Every Foodie logo inside the app renders from this file. The static brand
+ *  assets (public/icon.svg, the PNG app icons and the apple-touch icon) are
+ *  generated from the same mark geometry via `scripts/generate-icons.mjs`.
+ *
+ *  If you change the mark or paths here, re-run:  bun scripts/generate-icons.mjs
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
 interface LogoProps {
   size?: "sm" | "md" | "lg";
   showWordmark?: boolean;
@@ -14,7 +26,58 @@ const sizes = {
   lg: { mark: "size-20 rounded-[1.4rem]", word: "text-4xl" },
 } as const;
 
-/** Foodie brand logo — gradient utensils mark + lowercase wordmark */
+/**
+ * Fork + spoon stroke geometry (viewBox 0 0 64 64) — shared with
+ * `scripts/generate-icons.mjs`, which emits the favicon/app icons from it.
+ * Kept as raw path data so the splash animation can draw the strokes.
+ */
+export const LOGO_MARK_PATHS = {
+  forkTines: "M19.5 15v11M25 15v11M30.5 15v11",
+  forkBody: "M19.5 26c0 3 2.46 4.8 5.5 4.8s5.5-1.8 5.5-4.8M25 30.8V48",
+  spoonBowl: "M36.4 20.5c0-3.3 2.06-6 4.6-6s4.6 2.7 4.6 6-2.06 6-4.6 6-4.6-2.7-4.6-6Z",
+  spoonStem: "M41 26.5V48",
+} as const;
+
+/**
+ * The Foodie mark — a white fork & spoon, gently fanned apart like a place
+ * setting, on the signature saffron gradient tile. Drawn with strokes (not
+ * fills) so it stays crisp from a 16px favicon up to the desktop panel.
+ * This is Foodie's own mark — deliberately not any aggregator's branding.
+ */
+export function FoodieMark({
+  className,
+  strokeWidth = 4,
+}: {
+  className?: string;
+  strokeWidth?: number;
+}) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} fill="none" aria-hidden="true">
+      <g
+        stroke="#fff"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        transform="rotate(-7 25 31)"
+      >
+        <path d={LOGO_MARK_PATHS.forkTines} />
+        <path d={LOGO_MARK_PATHS.forkBody} />
+      </g>
+      <g
+        stroke="#fff"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        transform="rotate(7 41 31)"
+      >
+        <path d={LOGO_MARK_PATHS.spoonBowl} />
+        <path d={LOGO_MARK_PATHS.spoonStem} />
+      </g>
+    </svg>
+  );
+}
+
+/** Foodie brand logo — gradient mark tile + lowercase "foodie." wordmark */
 export function Logo({ size = "md", showWordmark = true, tone = "dark", className }: LogoProps) {
   const s = sizes[size];
   return (
@@ -26,12 +89,7 @@ export function Logo({ size = "md", showWordmark = true, tone = "dark", classNam
         )}
         aria-hidden="true"
       >
-        <svg viewBox="0 0 64 64" className="size-[62%]" fill="none">
-          <g fill="#ffffff">
-            <path d="M22.5 12c-3.6 0-6.5 4.2-6.5 9.4 0 3.9 1.7 7.2 4 8.5V50a2.5 2.5 0 0 0 5 0V29.9c2.3-1.3 4-4.6 4-8.5 0-5.2-2.9-9.4-6.5-9.4z" />
-            <path d="M42 12v12.5a1.5 1.5 0 0 1-3 0V12h-2.5v12.5a1.5 1.5 0 0 1-3 0V12H31v14.8c0 2.9 1.9 5.3 4.5 6.1V50a2.5 2.5 0 0 0 5 0V32.9c2.6-.8 4.5-3.2 4.5-6.1V12H42z" />
-          </g>
-        </svg>
+        <FoodieMark className="size-[64%]" />
       </div>
       {showWordmark && (
         <span
@@ -42,7 +100,9 @@ export function Logo({ size = "md", showWordmark = true, tone = "dark", classNam
           )}
         >
           foodie
-          <span className="text-primary">.</span>
+          {/* on the orange gradient the primary-orange dot would vanish — use a
+              soft white dot for the light tone, brand orange on light surfaces */}
+          <span className={tone === "light" ? "text-white/70" : "text-primary"}>.</span>
         </span>
       )}
     </div>

@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useFoodieStore, type Screen } from "@/lib/foodie/store";
-import { needsOnboarding, stopAuthListener, useAuthStore } from "@/lib/foodie/authStore";
+import { stopAuthListener, useAuthStore } from "@/lib/foodie/authStore";
 import { APP_TAGLINE } from "@/lib/foodie/constants";
 import { Logo } from "./Logo";
 import { SplashScreen } from "./screens/SplashScreen";
@@ -46,7 +46,7 @@ function DesktopSidePanel() {
         </li>
       </ul>
       <p className="mt-8 text-[11px] font-medium uppercase tracking-widest text-stone-600">
-        Foodie v1 — discovery preview
+        Discovery preview · GITAM Bengaluru pilot
       </p>
     </aside>
   );
@@ -60,31 +60,17 @@ function DesktopSidePanel() {
  */
 export function FoodieApp() {
   const screen = useFoodieStore((s) => s.screen);
-  const authStatus = useAuthStore((s) => s.status);
-  const session = useAuthStore((s) => s.session);
   const Screen = SCREENS[screen];
 
   // Boot: initialize real Supabase Auth — restores any persisted session and
   // subscribes to auth-state changes. No-op in demo mode (stays "ready").
+  // Where to GO once auth resolves is decided by the splash screen itself,
+  // so the brand animation always plays in full (~1.4s) before routing:
+  // returning users land straight on home, first-time visitors on welcome.
   useEffect(() => {
     useAuthStore.getState().init();
     return () => stopAuthListener();
   }, []);
-
-  // Returning authenticated users skip straight to discovery — they never
-  // re-onboard on refresh. First-time users (no onboarding flag in their
-  // auth metadata) keep the Splash → Auth → Context → Preferences → Home
-  // flow exactly as before; new/unauthenticated users start at splash.
-  useEffect(() => {
-    if (
-      authStatus === "ready" &&
-      session &&
-      useFoodieStore.getState().screen === "splash"
-    ) {
-      const first = needsOnboarding(session.user);
-      useFoodieStore.getState().go(first ? "onboarding-context" : "home");
-    }
-  }, [authStatus, session]);
 
   // Keep the browser tab title honest with the current context
   useEffect(() => {
