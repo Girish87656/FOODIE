@@ -819,3 +819,23 @@ Work Log:
 Stage Summary:
 - Phase 1 complete at commit ef822a9 (14 files: +421/−131; new: icon set + manifest + generator script; deleted logo.svg). Foodie now renders in Outfit everywhere, has one logo source (Logo.tsx → generated static icons), an original improved mark, a polished ~1.4s emoji-free brand splash, PWA metadata/icons, and no "Foodie v1" strings. Returning users: 1.4s brand moment → straight home; first-timers: brand moment → welcome → unchanged auth/onboarding. All existing functionality verified intact; zero console errors.
 - NOTE for next agents: sandbox .env was restored (public Supabase values only) — required for auth verification. Do not commit .env. STOP — Phase 2 awaits explicit user instruction.
+
+---
+Task ID: prototype2-phase1-final-verify
+Agent: Z.ai Code (main)
+Task: Phase 1 remaining verification ONLY (no code changes) — detail-page deep check (name/rating/category/verification/address/hours/phone/dishes/photos/reviews/directions/back), console across splash/login/home/navigation/detail, repo-wide "Foodie v1"/"v1"/old-version-string search with classification, working-tree report, final PASS/FAIL.
+
+Work Log:
+- NO code changed. Working tree was clean at start (HEAD 775376b = platform checkpoint re-snapshotting Phase 1 assets + tool-results artifacts; zero src/ deltas — app code identical to ef822a9).
+- ENV incident handled (not a code change): sandbox had wiped .env's two PUBLIC Supabase vars again; dev server restart read the truncated file so an "Authentication isn't configured" banner appeared. Restored NEXT_PUBLIC_SUPABASE_URL + legacy NEXT_PUBLIC_SUPABASE_ANON_KEY from git history 6485739 (values never displayed/committed; .env not tracked). Banner disappeared; signup+login verified working again.
+- Sandbox process lesson recorded: platform start.sh (tini) owns the persistent dev server; processes spawned from Bash-tool commands are reaped when the command exits, so every verification command self-contains `(setsid bun run dev &)` + wait.
+- Detail page verified against REAL rows via API cross-check (/api/restaurants/all):
+  * Sri Ganesh Grand (rating:0, ratingCount:0, no phone, empty dishes/photos, hours 08:00-22:00, coords 13.2679055,77.5521405): renders name, ₹•₹250 for two, Restaurant tag, "Unverified listing", Bashettihalli · 11.3 km away + full stored address, "Open now · 08:00 – 22:00", Tags (Veg/Family Restaurant/Self Service), honest empty states (Menu/Photos/Reviews "—"), Get Directions = free maps/dir deep link with STORED coords. Rating honestly ABSENT because data has none.
+  * Sri Annapoorneshwari Tiffin Center (rating 4.1, phone +918746888318, no coords/hours): renders 4.1 "Listed rating" (labeled separate from Foodie reviews), Tiffin category, "Unverified listing", full address + "Location pending verification", "Hours not captured yet — we don't guess opening hours", Phone +918746888318 · tap to call (tel: link verified), honest Menu/Photos/Reviews empties, "Open in Google Maps" = free maps/search deep link with stored name+address. 
+  * Conclusion: detail screen is fully data-driven with honest per-field states (rich vs sparse rows); Phase 1 branding changes did NOT break it.
+- Navigation: card tap → detail; "Go back" → Home intact (location header, filters, greeting, destination chips, nearby list). tel:/maps links verified in DOM.
+- Console/errors across splash (returning-user reloads), login/home, restaurant navigation, detail: zero page errors; console only dev-mode HMR/Fast-Refresh logs; dev.log all 200s (one benign EADDRINUSE from overlapping verification commands).
+- String search: (?i)foodie\s*v1 → ONLY worklog.md + 35 stale tool-results/*.txt capture artifacts (internal, not served/imported). \bv1\b in src/ → 2 JSDoc comments only (store.ts:8, types.ts:3 — never rendered). public/ → zero (icon.svg hit is SVG path command "v11", false positive). Old splash string gone; FoodieApp.tsx:49 shows the NEW approved "Discovery preview · GITAM Bengaluru pilot". Verdict: ZERO user-facing old-brand/version strings remain; all remaining hits are internal/docs/build metadata and can remain.
+
+Stage Summary:
+- FINAL VERDICT: PASS. Detail page ✔, console clean ✔, no user-facing "Foodie v1"/"v1"/old-version strings ✔, working tree clean ✔ (before this worklog append). Phase 1 implementation commit remains ef822a9; HEAD 775376b adds only platform artifacts. No regressions found — no fixes needed. Phase 2 still awaits explicit user instruction.
