@@ -903,3 +903,21 @@ Work Log:
 Stage Summary:
 - Phase 3C review + Phase 3D preparation complete at v1.1.0. Deliverables: WORKFLOW.md (collection guide), research-worksheet-phase3d.csv (23 blank-slate rows), research-priority-phase3c.md (5 categories + 35-row evidence appendix), validator input schema extended for all 10 user-required research field groups with honest-evidence enforcement. Nothing imported; the 12 existing matches remain preserve-only; next action = user approval of the priority report, then Maps listing research per WORKFLOW.md.
 - STOP as instructed — no import preparation beyond this review/preparation phase.
+
+---
+Task ID: Phase 3D
+Agent: Z.ai Code (main)
+Task: Collect and verify local restaurant data (GITAM/Nagadenahalli + Doddaballapura Railway Station Road corridor) from public sources; fill research worksheet; run import validator dry-run; produce research log, matches/duplicates, new-candidates and uncertainty reports. No imports, no DB writes, no app-source changes.
+
+Work Log:
+- Read WORKFLOW.md, research-worksheet-phase3d.csv (23 candidate rows), research-priority-phase3c.md; refreshed baseline snapshot via fetch-baseline.ts (14 rows, read-only GET).
+- Ran 30 web searches (z-ai web_search) across the 23 candidates + discovery; read 12 listing pages (magicpin x7, district.in, restaurant-guru, Snapchat place, Mappls, Maps short-link preview); Justdial pages blocked (anti-bot) -> snippet-level evidence only, cited per row; Zomato/Swiggy referenced by URL only (no data copied).
+- Captured evidence into input/research-worksheet-phase3d.csv: 31 rows (23 candidates + 8 discoveries), incl. 8 phones, 14 rating/count pairs with check dates, 5 hours entries, 3 directory-reported coordinates (Maps marker, Mappls zdata, plus-code decode validated against a known DB point), per-field source URLs, uncertainty notes and review decisions.
+- Fixed a one-line validator bug (validate.ts): blank lat/lng CSV cells were parsed as invalid instead of absent; now normalized to null per WORKFLOW rule 1 ("blank means unknown"). Regression: all 6 fixture reports re-generated with correct inputs; only baseline sha/timestamp lines differ (snapshot refresh), zero behavioral change. (An accidental template.csv run over test-* reports was fully reverted via git checkout before correct regeneration.)
+- Ran validator dry-run -> reports/research-2026-10-09.dry-run.md: 27 potential new / 3 possible duplicates (GITAM Cafe vs canteen; Mantralaya intra-file pair) / 1 insufficient (Biryani Cafe) / 0 invalid / 3 coords awaiting confirmation; 0 errors, 0 warnings; re-run byte-identical (idempotent).
+- Wrote reports: phase3d-research-log.md, phase3d-matches-and-duplicates.md, phase3d-new-candidates.md, phase3d-missing-data-uncertainty.md. bun run lint clean.
+
+Stage Summary:
+- Deliverables complete; NOTHING imported, no writes/migrations/commits; src/ untouched (only scripts/foodie-import-validator/validate.ts one-line bug fix + reports + worksheet).
+- Key identity holds for human review: Kiran Tiffin Room vs existing Ayyappa Tiffin Room (RG slug "Aiyappa-Tiffin-Center"), GITAM Cafe vs canteen, Mantralaya pair, Ganesh Darshan vs Sri Ganesh Grand, Vaibhava/Vybhava family, Lakshmi Biriyani Point closure signal.
+- Research queue (40+ observed-but-unchecked names) documented in phase3d-research-log.md; Maps place URLs largely unobtainable in this environment (documented as the main gap).

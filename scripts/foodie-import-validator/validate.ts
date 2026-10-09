@@ -235,8 +235,11 @@ function toCandidateInput(raw: RawRow, rowNumber: number): CandidateInput {
     locality: v.locality ?? null,
     city: v.city ?? null,
     phone: v.phone ?? null,
-    latitudeRaw: v.latitude ?? null,
-    longitudeRaw: v.longitude ?? null,
+    // Blank CSV/JSON cells mean "unknown" (WORKFLOW.md rule 1) — treat them as
+    // absent, exactly like every other field (rules.ts `s()` does this for the
+    // string fields; latitude/longitude are parsed raw, so normalize here).
+    latitudeRaw: v.latitude !== undefined && v.latitude.trim() !== "" ? v.latitude : null,
+    longitudeRaw: v.longitude !== undefined && v.longitude.trim() !== "" ? v.longitude : null,
     sourceUrl: v.source_url ?? null,
     evidenceLevel: v.evidence_level ?? null,
     listingRating: v.listing_rating ?? null,
