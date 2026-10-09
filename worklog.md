@@ -942,3 +942,26 @@ Stage Summary:
 - Phase 3E deliverables complete: reports/phase3e-human-review.md + reports/phase3e-maps-evidence-gaps.md. Zero rows claimed as Google Maps-verified; external ratings never merged with Foodie community reviews; all missing fields remain blank; candidate coordinates remain quarantined (bucket 6).
 - Priority holds for the human: Kiran Tiffin Room vs Ayyappa Tiffin Room (RG slug rename), GITAM Cafe vs GITAM University Canteen, Mantralaya rows 6/24, Lakshmi Biriyani Point shutdown signal (+919845263318). New flag: Amrutha vs Abhiram Food Court.
 - NOTHING imported; no SQL; no commits/pushes. STOPPED — awaiting human approval.
+
+---
+Task ID: Phase 3F
+Agent: Z.ai Code (main)
+Task: Resolve identity holds and improve Maps evidence — 5 holds (Kiran/Ayyappa, GITAM Cafe/Canteen, Mantralaya pair, Amrutha/Abhiram, Lakshmi status) + evidence round for the 8 ready rows; permitted public sources only; no imports, no src changes, no commits.
+
+Work Log:
+- Read phase3e-human-review.md, phase3e-maps-evidence-update... (maps-evidence-gaps.md), worksheet CSV, WORKFLOW.md. Loaded web-search/web-reader skills; used z-ai CLI (17 web searches s01-s17, 8 page reads p01-p08 cached in /tmp/phase3f, not committed).
+- Hold A RESOLVED distinct: separate JD listings for Kiran Tifen Room (170928175119) and Ayyappa Tifin Room (170928162242, 4.0/580, since-1978 identity, Scout Camp Rd); Kiran phone +919663965135 confirmed by 3 directories (RG + Yandex + magicpin VERIFIED listing page-read); IG reel evening timings 6:30-10pm noted (not recorded as hours). Row 23 -> distinct_new_business.
+- Hold B improved, hold KEPT: canteen has TWO JD listings (Byradenahalli address); Gitam Cafe own JD listing w/ hours 8-21 (categories snippet, recorded 08:00-21:00); GITAM Cafe brand exists at Abbigere Bengaluru (different city). No distinguishing phone/address -> hold stays.
+- Hold C RESOLVED as two distinct listings: row 6 hours 06:00-22:00 + 4.8/15 vs row 24 06:00-21:30 pure veg (station); 3C-name mapping to row 6 documented as inference. Both needs_more_research.
+- Hold D RESOLVED distinct: separate JD listings (Amrutha 3.0/46 vs 3.2/48 conflict -> rating left blank; Abhiram 4.0/5 + IG coords 13.284964,77.596301 matching DB).
+- Hold E UNRESOLVED honestly: magicpin shutdown banner re-confirmed on page re-read; JD live w/ hours 09:30-22:00 (recorded w/ staleness caveat) + 4.7/10. Phone check decisive. Row 22 stays needs_more_research.
+- Hold F NEW: FB caption (Nammuru Doddaballapura) "Sri Ayyappa Tiffin Room, also known as Krishnamurthy Hotel" + ~150m pin proximity -> row 20 downgraded to possible_duplicate_hold (phones differ: 9742663255 vs 8088599999; separate magicpin/Mappls listings; founder-name hypothesis noted).
+- Maps accessibility re-test: row 9 short link re-read -> canonical /maps/place/ URL w/ CID + feature id + marker (matches recorded pin); payload search-context decodes to "vybhava sweets doddaballapura photos". 17 searches surfaced ZERO Maps URLs; district.in hasMap = query URLs only (rejected per rule 4). Maps evidence for the 8 ready rows explicitly labeled UNAVAILABLE; improvements came from other directories (district.in JSON-LD geo for rows 4 + 17 -> bucket 6 now 5 rows; ratings/hours with sources).
+- Conflict-rule applications: hours BLANKED on rows 12 (magicpin 10-20 vs JD 7-22 vs IG 9-22) and 14 (magicpin 11:30-14 vs same-phone double-listing 12:30-22:15 vs Zomato 12:15) and 17 (magicpin 8-21:30 vs district 12-22); row 2 rating 4.5/17 recorded (3D conflict resolved by consistent re-reads); row 4 address -> printed-menu verbatim.
+- Worksheet updated (15 rows touched, csv round-trip, blanks preserved); validator re-run label research-2026-10-09-phase3f: 25/0/5/1/0, bucket-6 = 5, 0 errors 0 warnings. New advisory intra-file flag 17-20 = proximity artifact (~85 m), understood/accepted. All 6 test fixtures byte-identical; zero-write proof PASS; lint exit 0.
+- Reports written: phase3f-identity-resolution.md (6 holds incl. new Hold F + resolution table + accessible/inaccessible sources + Abhis Food Court queue note), phase3f-maps-evidence-update.md (Maps accessibility state, row-9 upgrade, 8-row evidence table, worksheet change log, validator results).
+
+Stage Summary:
+- 3 of 5 original holds resolved (Kiran distinct; Mantralaya = two distinct listings; Amrutha=Abhiram closed), 1 improved-and-held (GITAM Cafe), 1 honestly unresolved (Lakshmi open/closed), 1 NEW hold raised (Krishnamoorthy vs Ayyappa alias claim). Ready-count 8 -> 7 (row 20 held).
+- Maps evidence: only row 9 has real Maps place-page evidence (now canonical URL); the 8 ready rows explicitly Maps-unavailable; 2 new directory-reported coordinate pins quarantined (bucket 6 = 5).
+- NOTHING imported; no SQL; no src/auth/review/AI changes; no commits/pushes. Changed: worksheet CSV (15 rows), 2 new 3F reports + 2 new dry-run files. STOP for human review.
