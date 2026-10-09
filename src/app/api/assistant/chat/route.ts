@@ -120,7 +120,7 @@ export async function POST(req: NextRequest) {
     }
 
     // ---- 5) Honest notices (demo mode / widened search / test origin) ----
-    const notices = [outcome.notice];
+    const notices: (string | null | undefined)[] = [outcome.notice];
     if (intentFailed) {
       notices.push("I couldn't fully read your request, so I searched Foodie's data broadly.");
     }

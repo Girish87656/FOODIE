@@ -1,0 +1,85 @@
+-- ============================================================================
+-- Foodie — SNAPSHOT: destination tables (documentation ONLY — not a migration)
+-- ----------------------------------------------------------------------------
+-- STATUS: documentation snapshot. The live destination tables already exist
+--   in Supabase and are working (Bengaluru / Tirupati / Mumbai + 5 foods).
+--   The original migration-003 / insert-batch-003 SQL files were never
+--   committed to this repository, so this file records their VERIFIED live
+--   structure instead of guessing it.
+--
+--   This file contains ONLY comments — running it is a harmless no-op.
+--   DO NOT re-create or alter the live tables from it.
+--
+-- VERIFICATION METHOD (this environment, read-only, publishable key):
+--   Each live table was queried via PostgREST `select=*`; every column of a
+--   table appears in the returned rows, giving the exact live column set.
+--   Types below are inferred from the JSON value types + the app's 1:1 row
+--   mappings (src/lib/foodie/data/types.ts), which have been verified
+--   against live data. Constraints/PK defaults that cannot be observed
+--   through a publishable key are marked UNVERIFIED.
+--
+--   Snapshot taken: Phase 2 (HEAD at or near a74c68f), live counts:
+--   destinations = 3, destination_foods = 5, destination_food_places = 0.
+-- ============================================================================
+
+-- ---------------------------------------------------------------------------
+-- destinations  (3 rows live — Bengaluru, Tirupati, Mumbai)
+-- Column set VERIFIED live. Types inferred (UNVERIFIED = not observable).
+-- ---------------------------------------------------------------------------
+-- id           uuid           (PK assumed — UNVERIFIED default/constraint)
+-- slug         text           (values seen: bengaluru, mumbai, tirupati)
+-- name         text
+-- region       text           (non-null on all 3 live rows; nullability of
+--                              the column itself: app mapper treats as
+--                              nullable)
+-- country      text           (same nullability note as region)
+-- description  text           (same nullability note as region)
+-- image_url    text           (NULL on all 3 live rows — intentionally so:
+--                              unverified URLs are never rendered)
+-- latitude     double precision  (reference coords for auto-detection)
+-- longitude    double precision
+-- is_active    boolean        (all 3 live rows true; API filters is_active=true)
+-- created_at   timestamptz
+--
+-- RLS behaviour VERIFIED live: public SELECT works with the publishable
+-- key (the /api/destinations endpoint has always read it anonymously).
+
+-- ---------------------------------------------------------------------------
+-- destination_foods  (5 rows live — 2 Bengaluru, 2 Mumbai, 1 Tirupati)
+-- Column set VERIFIED live.
+-- ---------------------------------------------------------------------------
+-- id              uuid        (PK assumed — UNVERIFIED default/constraint)
+-- destination_id  uuid        (FK -> destinations.id assumed — UNVERIFIED)
+-- name            text
+-- description     text
+-- food_type       text        (free text, e.g. 'breakfast', 'street food')
+-- designation     text        (live values ⊆ {'signature','famous','local'};
+--                              the app mirrors this as a CHECK named
+--                              destination_foods_designation_check — the
+--                              CHECK itself is UNVERIFIED from here)
+-- image_url       text        (NULL on all 5 live rows — same honesty rule)
+-- created_at      timestamptz
+--
+-- RLS behaviour VERIFIED live: public SELECT works with the publishable key.
+
+-- ---------------------------------------------------------------------------
+-- destination_food_places  (0 rows live)
+-- ---------------------------------------------------------------------------
+-- VERIFIED live: the table EXISTS, public SELECT is allowed (returns an
+-- empty 200 with the publishable key) and it is EMPTY.
+--
+-- NOT VERIFIABLE from this environment: the exact COLUMN SET. A publishable
+-- key cannot read column definitions (the PostgREST OpenAPI root endpoint
+-- requires a secret key), an empty table reveals no columns via select=*,
+-- and the original migration-004 DDL was never committed. Per the Phase 2
+-- instruction this structure is therefore REPORTED MISSING — not guessed,
+-- not recreated, not altered. The app does not consume this table yet
+-- (see src/lib/foodie/data/types.ts). To close the gap, either commit the
+-- original migration-004 file or run, in the Supabase SQL editor:
+--     select column_name, data_type, is_nullable
+--       from information_schema.columns
+--      where table_schema = 'public'
+--        and table_name   = 'destination_food_places'
+--      order by ordinal_position;
+-- and paste the result into this file.
+-- ============================================================================

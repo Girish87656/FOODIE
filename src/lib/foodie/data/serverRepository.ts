@@ -25,7 +25,7 @@ import { DEMO_MODE_NOTICE, SUPABASE_ERROR_NOTICE } from "./types";
 import * as demo from "./demoBackend";
 import * as supabase from "./supabaseBackend";
 
-function demoResult<T extends { notice?: string }>(result: T, notice: string): T & { mode: DataMode } {
+function demoResult<T>(result: T, notice: string): T & { mode: DataMode } {
   return { ...result, mode: "demo", notice };
 }
 

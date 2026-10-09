@@ -17,7 +17,7 @@ import type { GeoPosition, Place, PlaceWithDistance } from "../types";
 import { fromDemoId, toDemoId } from "./mappers";
 
 /** Prefix every id so demo results are unmistakable downstream. */
-function tagDemo(place: Place): Place {
+function tagDemo<T extends Place>(place: T): T {
   return { ...place, id: toDemoId(place.id) };
 }
 

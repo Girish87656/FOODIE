@@ -43,18 +43,48 @@ export interface RestaurantRow {
   is_hidden_gem: boolean;
   is_local_favorite: boolean;
   /**
-   * Optional: rows fetched via `select("*")` include these, but the
-   * `nearby_restaurants` RPC predates migration-001 and omits them.
-   * The mapper treats missing values as "false / unverified".
+   * Optional: rows fetched via `select("*")` include these. The legacy
+   * nearby_restaurants RPC (pre-migration-005) also omitted them; the
+   * rebuilt RPC (migration-005) returns the complete row. The mapper
+   * treats a missing value as "unknown" — never as "false / unverified".
    */
   student_friendly?: boolean;
   verification_status?: string;
   tags?: string[] | null;
   locality?: string | null;
+  /**
+   * Phase 2 — provenance + Foodie community aggregates (migration-005).
+   * Optional because pre-migration tables and the legacy RPC don't carry
+   * them; the mapper maps a missing column exactly like NULL (unknown)
+   * and NEVER invents a value.
+   *
+   *   review_count     : real count of Foodie reviews (0 = none yet)
+   *   community_rating : average of Foodie review ratings (NULL = none yet)
+   *   source/source_url/last_verified_at : NULL = unknown, never guessed
+   *   *_verified       : NULL = not checked · false = checked, NOT verified
+   *                      · true = verified with real evidence
+   *
+   * The listed `rating` column is never touched by any of these.
+   */
+  review_count?: number;
+  community_rating?: number | null;
+  source?: string | null;
+  source_url?: string | null;
+  last_verified_at?: string | null;
+  address_verified?: boolean | null;
+  coordinates_verified?: boolean | null;
+  hours_verified?: boolean | null;
+  photos_verified?: boolean | null;
   created_at: string;
 }
 
-/** Row shape returned by the `nearby_restaurants` RPC (schema.sql §6). */
+/**
+ * Row shape returned by the `nearby_restaurants` RPC.
+ * Rebuilt in migration-005 to carry the complete current restaurant row
+ * (aggregates + provenance) on top of the unchanged Haversine behaviour.
+ * Before that migration runs, the legacy RPC omits the newer columns and
+ * the mapper null-fills them — both shapes satisfy this interface.
+ */
 export interface NearbyRestaurantRow extends RestaurantRow {
   distance_km: number;
 }

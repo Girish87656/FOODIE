@@ -26,6 +26,15 @@
  *                                 opensAt/closesAt fallback below only powers
  *                                 the open/closed dot, never fake displayed
  *                                 hours on rows where the column is NULL
+ *   - `review_count`/`community_rating` ➜ Foodie COMMUNITY review data
+ *                                 (migration-005). Kept FOREVER separate from
+ *                                 the listed `rating`/`ratingCount` — 0 reviews
+ *                                 means absent community rating, never a
+ *                                 merged or invented number.
+ *   - `source`/`source_url`/`last_verified_at`/`*_verified` ➜ provenance for
+ *                                 the future "About this data" panel; missing
+ *                                 columns map exactly like NULL (unknown) and
+ *                                 are never defaulted to "verified".
  *   - dishes with `is_signature=false` ➜ "Famous dishes",
  *     `is_signature=true` ➜ "Signature dishes"
  */
@@ -165,6 +174,19 @@ export function restaurantRowToPlace(
     verificationStatus: parseVerificationStatus(row.verification_status),
     studentFriendly: row.student_friendly ?? false,
     tags: row.tags ?? undefined,
+    // Phase 2 — Foodie community aggregates + provenance (migration-005).
+    // A missing column (pre-migration table or legacy RPC) maps exactly like
+    // NULL: unknown. 0 review_count is a REAL value and is preserved; nothing
+    // is defaulted to "verified" and the listed rating is never touched.
+    reviewCount: row.review_count ?? undefined,
+    communityRating: row.community_rating ?? undefined,
+    source: row.source ?? undefined,
+    sourceUrl: row.source_url ?? undefined,
+    lastVerifiedAt: row.last_verified_at ?? undefined,
+    addressVerified: row.address_verified ?? null,
+    coordinatesVerified: row.coordinates_verified ?? null,
+    hoursVerified: row.hours_verified ?? null,
+    photosVerified: row.photos_verified ?? null,
   };
 }
 

@@ -30,6 +30,7 @@ import type {
   DishRow,
   NearbyRestaurantRow,
   RestaurantRow,
+  ReviewRow,
 } from "./types";
 
 function requireClient() {

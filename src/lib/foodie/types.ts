@@ -159,6 +159,38 @@ export interface Place {
   studentFriendly?: boolean;
   /** Finer type tags from the database (tea_stall, canteen, ...). */
   tags?: string[];
+
+  /* ---------------------------------------------------------------- */
+  /* Foodie community reviews + provenance (Phase 2 — migration-005)   */
+  /* ---------------------------------------------------------------- */
+  /**
+   * Number of Foodie community reviews (trigger-maintained in the DB).
+   * 0 is a REAL value ("no reviews yet") — never fabricated, and never
+   * merged with the listed `rating`/`ratingCount`.
+   */
+  reviewCount?: number;
+  /**
+   * Average of Foodie community review ratings. Absent when there are no
+   * reviews yet. FOREVER separate from the listed `rating` — the UI must
+   * be able to show "4.1 · Listed rating" and "4.7 · Foodie community ·
+   * 23 reviews" as two different things, never one merged number.
+   */
+  communityRating?: number;
+  /** Listing source as stored (absent/NULL = unknown — never guessed). */
+  source?: string;
+  /** Source URL as stored (absent/NULL = unknown — never invented). */
+  sourceUrl?: string;
+  /** When the listing was last actually verified (absent = never). */
+  lastVerifiedAt?: string;
+  /**
+   * Per-field verification flags — NULL/absent = unknown/pending,
+   * false = explicitly checked and NOT verified, true = verified with
+   * real evidence. Never defaulted to true.
+   */
+  addressVerified?: boolean | null;
+  coordinatesVerified?: boolean | null;
+  hoursVerified?: boolean | null;
+  photosVerified?: boolean | null;
 }
 
 /** A Place annotated with its live distance (km) from the user's chosen origin. */
