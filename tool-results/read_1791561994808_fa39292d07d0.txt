@@ -1,0 +1,746 @@
+     1→"use client";
+     2→
+     3→import { useMemo, useState } from "react";
+     4→import { motion } from "framer-motion";
+     5→import {
+     6→  AlertTriangle,
+     7→  Bell,
+     8→  ChevronDown,
+     9→  Compass,
+    10→  Database,
+    11→  Flame,
+    12→  LocateFixed,
+    13→  MapPinned,
+    14→  RefreshCw,
+    15→  SearchX,
+    16→} from "lucide-react";
+    17→import { toast } from "sonner";
+    18→import { useFoodieStore } from "@/lib/foodie/store";
+    19→import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
+    20→import {
+    21→  useAllRestaurants,
+    22→  useRestaurantFeed,
+    23→} from "@/lib/foodie/data/useRestaurantFeed";
+    24→import {
+    25→  GITAM_TEST_LOCATION,
+    26→  PROTOTYPE_CITY,
+    27→  haversineKm,
+    28→  withDistances,
+    29→} from "@/lib/foodie/location";
+    30→import {
+    31→  useLocationHeadline,
+    32→  useLocationStore,
+    33→} from "@/lib/foodie/locationStore";
+    34→import type {
+    35→  PlaceMaybeWithDistance,
+    36→  PlaceWithDistance,
+    37→} from "@/lib/foodie/types";
+    38→import {
+    39→  budgetEats,
+    40→  byDistance,
+    41→  byRating,
+    42→  hiddenGems,
+    43→  localFavorites,
+    44→  matchesQuery,
+    45→  popularPlaces,
+    46→} from "@/lib/foodie/utils";
+    47→import { SectionHeader } from "../SectionHeader";
+    48→import { SearchBar } from "../SearchBar";
+    49→import { CategoryChip } from "../CategoryChip";
+    50→import { CarouselCard, ListRow, WideCard } from "../PlaceCards";
+    51→import { DiscoveryFilterBar } from "../FilterBar";
+    52→import { DestinationDiscoveryCard } from "../DestinationDiscoveryCard";
+    53→import { LocationPromptBanner, LocationSheet } from "../LocationControls";
+    54→import { AccountControls } from "../AccountControls";
+    55→import { AssistantControls } from "../AssistantControls";
+    56→import { DemoDataBanner } from "../DemoDataBanner";
+    57→import { Skeleton } from "@/components/ui/skeleton";
+    58→import { cn } from "@/lib/utils";
+    59→
+    60→function greeting(): string {
+    61→  const h = new Date().getHours();
+    62→  if (h < 5) return "Late night cravings";
+    63→  if (h < 12) return "Good morning";
+    64→  if (h < 17) return "Good afternoon";
+    65→  return "Good evening";
+    66→}
+    67→
+    68→/**
+    69→ * Distance sort that tolerates places WITHOUT a distance (NULL coordinates):
+    70→ * they sink to the end of the list instead of faking a number. Only places
+    71→ * with a real Haversine distance can ever rank first.
+    72→ */
+    73→function byKnownDistance(a: PlaceMaybeWithDistance, b: PlaceMaybeWithDistance): number {
+    74→  return (
+    75→    (a.distanceKm ?? Number.POSITIVE_INFINITY) -
+    76→    (b.distanceKm ?? Number.POSITIVE_INFINITY)
+    77→  );
+    78→}
+    79→
+    80→/** Expandable horizontal rail section */
+    81→function RailSection({
+    82→  emoji,
+    83→  title,
+    84→  subtitle,
+    85→  children,
+    86→  total,
+    87→  onSeeAll,
+    88→  expanded,
+    89→}: {
+    90→  emoji?: string;
+    91→  title: string;
+    92→  subtitle?: string;
+    93→  children: React.ReactNode;
+    94→  total: number;
+    95→  onSeeAll: () => void;
+    96→  expanded: boolean;
+    97→}) {
+    98→  return (
+    99→    <section className="mt-7 first:mt-5">
+   100→      <SectionHeader
+   101→        title={title}
+   102→        subtitle={subtitle}
+   103→        emoji={emoji}
+   104→        actionLabel={expanded ? "Show less" : total > 4 ? `See all ${total}` : undefined}
+   105→        onAction={onSeeAll}
+   106→        className="px-5"
+   107→      />
+   108→      {expanded ? (
+   109→        <div className="space-y-2.5 px-5">{children}</div>
+   110→      ) : (
+   111→        <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
+   112→          {children}
+   113→        </div>
+   114→      )}
+   115→    </section>
+   116→  );
+   117→}
+   118→
+   119→const SECTION_ICONS = {
+   120→  favorites: "❤️",
+   121→} as const;
+   122→
+   123→/** Full-feed loading state — shown while the data layer fetches. */
+   124→function FeedSkeleton() {
+   125→  return (
+   126→    <div className="px-5 pt-5" aria-busy="true" aria-live="polite" aria-label="Loading places">
+   127→      <Skeleton className="h-12 w-full rounded-2xl" />
+   128→      <Skeleton className="mt-4 h-24 w-full rounded-3xl" />
+   129→      <div className="mt-6 space-y-2.5">
+   130→        {[0, 1, 2, 3].map((i) => (
+   131→          <div
+   132→            key={i}
+   133→            className="flex items-center gap-3 rounded-2xl border border-border/50 bg-card p-2.5"
+   134→          >
+   135→            <Skeleton className="size-[76px] shrink-0 rounded-xl" />
+   136→            <div className="min-w-0 flex-1 space-y-2">
+   137→              <Skeleton className="h-4 w-2/3" />
+   138→              <Skeleton className="h-3 w-1/2" />
+   139→              <Skeleton className="h-3 w-1/3" />
+   140→            </div>
+   141→          </div>
+   142→        ))}
+   143→      </div>
+   144→      <p className="mt-5 text-center text-[11.5px] font-medium text-stone-400">
+   145→        Finding great food around you…
+   146→      </p>
+   147→    </div>
+   148→  );
+   149→}
+   150→
+   151→/** Full-feed error state with retry. */
+   152→function FeedErrorCard({ error, onRetry }: { error: string | null; onRetry: () => void }) {
+   153→  return (
+   154→    <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-rose-200 bg-rose-50/50 px-6 py-12 text-center">
+   155→      <AlertTriangle className="size-10 text-rose-300" aria-hidden="true" />
+   156→      <p className="mt-3 text-[15px] font-bold text-foreground">Couldn&apos;t load restaurants</p>
+   157→      <p className="mt-1 max-w-[260px] text-[13px] leading-snug text-muted-foreground">
+   158→        {error ?? "Something went wrong while fetching places."}
+   159→      </p>
+   160→      <button
+   161→        type="button"
+   162→        onClick={onRetry}
+   163→        className="mt-4 flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-white shadow-md shadow-orange-600/25 transition-all hover:bg-primary/90 active:scale-95"
+   164→      >
+   165→        <RefreshCw className="size-3.5" aria-hidden="true" />
+   166→        Try again
+   167→      </button>
+   168→    </div>
+   169→  );
+   170→}
+   171→
+   172→/** The database answered, but it has zero restaurants (or the demo set is empty). */
+   173→function EmptyDatabaseCard({ mode }: { mode: "supabase" | "demo" | null }) {
+   174→  const supabase = mode === "supabase";
+   175→  return (
+   176→    <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-12 text-center">
+   177→      <Database className="size-10 text-stone-300" aria-hidden="true" />
+   178→      <p className="mt-3 text-[15px] font-bold text-foreground">
+   179→        {supabase ? "No restaurants in your database yet" : "No demo places near this origin"}
+   180→      </p>
+   181→      <p className="mt-1 max-w-[280px] text-[13px] leading-snug text-muted-foreground">
+   182→        {supabase
+   183→          ? "Foodie is connected to Supabase, but the restaurants table is empty. Add the first pilot-area place (GITAM → Doddaballapura) — guide in supabase/README.md."
+   184→          : "The labelled demo dataset only covers the pilot corridor (GITAM University → Doddaballapura). Pick a corridor point manually, or connect Supabase for real places."}
+   185→      </p>
+   186→    </div>
+   187→  );
+   188→}
+   189→
+   190→/** Screen 5 — the discovery home feed, powered by the user's real location */
+   191→export function HomeScreen() {
+   192→  const go = useFoodieStore((s) => s.go);
+   193→  const userName = useFoodieStore((s) => s.userName);
+   194→  const eatContext = useFoodieStore((s) => s.eatContext);
+   195→  const preferences = useFoodieStore((s) => s.preferences);
+   196→  const searchQuery = useFoodieStore((s) => s.searchQuery);
+   197→  const setSearchQuery = useFoodieStore((s) => s.setSearchQuery);
+   198→  const activeCategory = useFoodieStore((s) => s.activeCategory);
+   199→  const setActiveCategory = useFoodieStore((s) => s.setActiveCategory);
+   200→  const openPlace = useFoodieStore((s) => s.openPlace);
+   201→  const distanceFilterKm = useFoodieStore((s) => s.distanceFilterKm);
+   202→  const setDistanceFilter = useFoodieStore((s) => s.setDistanceFilter);
+   203→  const sortBy = useFoodieStore((s) => s.sortBy);
+   204→  const setSortBy = useFoodieStore((s) => s.setSortBy);
+   205→
+   206→  // --- real location state (native Geolocation API → Zustand) ---
+   207→  const headline = useLocationHeadline();
+   208→  const locSource = useLocationStore((s) => s.source);
+   209→  const locStatus = useLocationStore((s) => s.status);
+   210→  const origin = useLocationStore((s) => s.origin);
+   211→
+   212→  const [expanded, setExpanded] = useState<string | null>(null);
+   213→  const [locSheetOpen, setLocSheetOpen] = useState(false);
+   214→
+   215→  const searching = searchQuery.trim().length > 0 || activeCategory !== null;
+   216→
+   217→  /* 0) Restaurant data — two read-only sources:
+   218→   *    - nearby feed: coordinate-bearing places, distance-annotated server-side;
+   219→   *    - full list:   every discoverable place, INCLUDING rows whose
+   220→   *      coordinates are still NULL ("Location pending verification").
+   221→   *    Neither source ever writes to the database. */
+   222→  const feed = useRestaurantFeed(origin);
+   223→  const allFeed = useAllRestaurants();
+   224→
+   225→  /* 1) Haversine distance from the active origin to every coordinate-bearing
+   226→   *    place. NULL-coordinate rows never enter this math — they are kept as-is
+   227→   *    (NO distanceKm) and tracked separately as "pending". */
+   228→  const withDistance = useMemo(() => withDistances(feed.places, origin), [feed.places, origin]);
+   229→  const allAnnotated = useMemo(
+   230→    () =>
+   231→      allFeed.places.map((p) =>
+   232→        p.latitude != null && p.longitude != null
+   233→          ? { ...p, distanceKm: haversineKm(origin, { lat: p.latitude, lng: p.longitude }) }
+   234→          : p
+   235→      ),
+   236→    [allFeed.places, origin]
+   237→  );
+   238→
+   239→  /* Merge by id — nearby results win (authoritative distance source). */
+   240→  const merged = useMemo(() => {
+   241→    const byId = new Map<string, PlaceMaybeWithDistance>();
+   242→    for (const p of allAnnotated) byId.set(p.id, p);
+   243→    for (const p of withDistance) byId.set(p.id, p);
+   244→    return [...byId.values()];
+   245→  }, [allAnnotated, withDistance]);
+   246→
+   247→  /* Places with a KNOWN distance — the only ones eligible for radius
+   248→   * filters and "nearest" sorting. */
+   249→  const withKnownDistance = useMemo(
+   250→    () => merged.filter((p): p is PlaceWithDistance => p.distanceKm != null),
+   251→    [merged]
+   252→  );
+   253→
+   254→  /* NULL-coordinate places — honest "Location pending verification" rows.
+   255→   * They carry no distance and never fake one. */
+   256→  const pending = useMemo(() => merged.filter((p) => p.distanceKm == null), [merged]);
+   257→
+   258→  /* 2) Distance filter applies ONLY to places with known distances. */
+   259→  const inRange = useMemo(
+   260→    () =>
+   261→      distanceFilterKm == null
+   262→        ? withKnownDistance
+   263→        : withKnownDistance.filter((p) => p.distanceKm <= distanceFilterKm),
+   264→    [withKnownDistance, distanceFilterKm]
+   265→  );
+   266→
+   267→  /* 3) Sort + section the filtered list. */
+   268→  const nearby = useMemo(
+   269→    () => (sortBy === "nearest" ? [...inRange].sort(byDistance) : [...inRange].sort(byRating)),
+   270→    [inRange, sortBy]
+   271→  );
+   272→  const gems = useMemo(() => hiddenGems(inRange), [inRange]);
+   273→  const favorites = useMemo(() => localFavorites(inRange), [inRange]);
+   274→  const popular = useMemo(() => popularPlaces(inRange), [inRange]);
+   275→  const budget = useMemo(() => budgetEats(inRange), [inRange]);
+   276→
+   277→  /* 4) Search / category results — pending places join the pool whenever no
+   278→   *    radius filter is active (an unknown distance can't honestly satisfy
+   279→   *    "within X km"). With "Nearest First" they sort to the very end. */
+   280→  const results = useMemo(() => {
+   281→    const pool: PlaceMaybeWithDistance[] =
+   282→      distanceFilterKm == null ? [...inRange, ...pending] : [...inRange];
+   283→    let list = pool;
+   284→    if (activeCategory) {
+   285→      list = list.filter((p) => p.categoryIds.includes(activeCategory));
+   286→    }
+   287→    if (searchQuery.trim()) {
+   288→      list = list.filter((p) => matchesQuery(p, searchQuery));
+   289→    }
+   290→    return sortBy === "nearest" ? [...list].sort(byKnownDistance) : [...list].sort(byRating);
+   291→  }, [inRange, pending, distanceFilterKm, activeCategory, searchQuery, sortBy]);
+   292→
+   293→  /* Page-level loading / error across BOTH feeds (never a silent partial). */
+   294→  const feedLoading = feed.status === "loading" || allFeed.status === "loading";
+   295→  const feedError =
+   296→    feed.status === "error" ? feed.error : allFeed.status === "error" ? allFeed.error : null;
+   297→  const retryFeed = () => {
+   298→    feed.reload();
+   299→    allFeed.reload();
+   300→  };
+   301→
+   302→  const discoveryEmpty =
+   303→    nearby.length === 0 &&
+   304→    gems.length === 0 &&
+   305→    favorites.length === 0 &&
+   306→    popular.length === 0 &&
+   307→    budget.length === 0 &&
+   308→    // pending places count as content only when no radius filter hides them
+   309→    (distanceFilterKm != null || pending.length === 0);
+   310→
+   311→  /* The backend answered, but the database truly has zero restaurants. */
+   312→  const dbEmpty =
+   313→    feed.status === "ready" && allFeed.status === "ready" && merged.length === 0;
+   314→
+   315→  const demoBanner = feed.mode === "demo" || allFeed.mode === "demo";
+   316→  const demoNotice = feed.notice ?? allFeed.notice;
+   317→
+   318→  const preferredCats = PLACE_CATEGORIES.filter((c) => preferences.includes(c.id));
+   319→
+   320→  const nearbySubtitle =
+   321→    locSource === "browser"
+   322→      ? "Closest to your live location"
+   323→      : locSource === "manual"
+   324→        ? "Distances from your selected city"
+   325→        : locSource === "test"
+   326→          ? `Distances from ${GITAM_TEST_LOCATION.label}`
+   327→          : `Around ${PROTOTYPE_CITY.area} · prototype origin`;
+   328→
+   329→  function toggleExpand(key: string) {
+   330→    setExpanded((cur) => (cur === key ? null : key));
+   331→  }
+   332→
+   333→  return (
+   334→    <div className="relative flex h-full flex-col bg-background">
+   335→      {/* ---------------- header ---------------- */}
+   336→      <header className="z-10 shrink-0 border-b border-border/50 bg-background/95 px-5 pb-3 pt-5 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+   337→        <div className="flex items-center justify-between gap-3">
+   338→          <button
+   339→            type="button"
+   340→            onClick={() => setLocSheetOpen(true)}
+   341→            aria-haspopup="dialog"
+   342→            className="group flex min-w-0 items-start gap-1.5 text-left"
+   343→          >
+   344→            <span className="relative mt-0.5 shrink-0">
+   345→              <MapPinned
+   346→                className={cn(
+   347→                  "size-4",
+   348→                  headline.tone === "live" ? "text-emerald-600" : "text-primary"
+   349→                )}
+   350→                aria-hidden="true"
+   351→              />
+   352→              {headline.tone === "live" && (
+   353→                <span
+   354→                  className="absolute -right-0.5 -top-0.5 size-1.5 animate-pulse rounded-full bg-emerald-500"
+   355→                  aria-hidden="true"
+   356→                />
+   357→              )}
+   358→            </span>
+   359→            <span className="min-w-0">
+   360→              <span
+   361→                className={cn(
+   362→                  "block text-[10.5px] font-bold uppercase tracking-wider",
+   363→                  headline.tone === "live"
+   364→                    ? "text-emerald-600"
+   365→                    : headline.tone === "warn"
+   366→                      ? "text-amber-600"
+   367→                      : "text-muted-foreground"
+   368→                )}
+   369→              >
+   370→                {headline.kicker}
+   371→              </span>
+   372→              <span className="flex items-center gap-0.5 text-[14px] font-bold leading-tight text-foreground">
+   373→                <span className="truncate">{headline.value}</span>
+   374→                <ChevronDown
+   375→                  className="size-3.5 shrink-0 text-muted-foreground transition-transform group-hover:translate-y-0.5"
+   376→                  aria-hidden="true"
+   377→                />
+   378→              </span>
+   379→            </span>
+   380→          </button>
+   381→
+   382→          <button
+   383→            type="button"
+   384→            onClick={() =>
+   385→              toast.info("No new alerts", { description: "Foodie tips will show up here soon." })
+   386→            }
+   387→            aria-label="Notifications"
+   388→            className="relative grid size-9 shrink-0 place-items-center rounded-full border border-border bg-card shadow-sm transition-colors hover:bg-accent"
+   389→          >
+   390→            <Bell className="size-4" />
+   391→            <span className="absolute right-2 top-2 size-1.5 rounded-full bg-primary" aria-hidden="true" />
+   392→          </button>
+   393→
+   394→          {/* Real-session account controls (avatar + sign out) — renders
+   395→              nothing in demo mode, so the header is unchanged there */}
+   396→          <AccountControls />
+   397→        </div>
+   398→
+   399→        <SearchBar value={searchQuery} onChange={setSearchQuery} className="mt-3.5" />
+   400→
+   401→        {/* food categories */}
+   402→        <div className="no-scrollbar -mx-5 mt-3 flex gap-2 overflow-x-auto px-5" role="tablist" aria-label="Food categories">
+   403→          <CategoryChip
+   404→            category={{ id: "all", label: "All", emoji: "🍽️" }}
+   405→            active={activeCategory === null}
+   406→            onClick={() => {
+   407→              setActiveCategory(null);
+   408→              setSearchQuery("");
+   409→            }}
+   410→          />
+   411→          {PLACE_CATEGORIES.map((c) => (
+   412→            <CategoryChip
+   413→              key={c.id}
+   414→              category={c}
+   415→              active={activeCategory === c.id}
+   416→              onClick={() => setActiveCategory(activeCategory === c.id ? null : c.id)}
+   417→            />
+   418→          ))}
+   419→        </div>
+   420→
+   421→        {/* distance filter + sorting */}
+   422→        <DiscoveryFilterBar
+   423→          distanceFilterKm={distanceFilterKm}
+   424→          onDistanceChange={setDistanceFilter}
+   425→          sortBy={sortBy}
+   426→          onSortChange={setSortBy}
+   427→          className="mt-3"
+   428→        />
+   429→      </header>
+   430→
+   431→      {/* ---------------- feed ---------------- */}
+   432→      <main className="thin-scrollbar flex-1 overflow-y-auto pb-10" role="main">
+   433→        {feedLoading && <FeedSkeleton />}
+   434→
+   435→        {!feedLoading && feedError && (
+   436→          <FeedErrorCard error={feedError} onRetry={retryFeed} />
+   437→        )}
+   438→
+   439→        {!feedLoading && !feedError && (
+   440→          <>
+   441→            {demoBanner && (
+   442→              <div className="px-5 pt-4">
+   443→                <DemoDataBanner notice={demoNotice} />
+   444→              </div>
+   445→            )}
+   446→        {searching ? (
+   447→          /* ------- search / filter results ------- */
+   448→          <section className="px-5 pt-5">
+   449→            <h2 className="text-[16px] font-bold text-foreground">
+   450→              {results.length} {results.length === 1 ? "place" : "places"}{" "}
+   451→              {searchQuery.trim() ? (
+   452→                <>
+   453→                  for <span className="text-primary">&ldquo;{searchQuery.trim()}&rdquo;</span>
+   454→                </>
+   455→              ) : (
+   456→                <>
+   457→                  in{" "}
+   458→                  <span className="text-primary">
+   459→                    {PLACE_CATEGORIES.find((c) => c.id === activeCategory)?.label}
+   460→                  </span>
+   461→                </>
+   462→              )}
+   463→              {distanceFilterKm != null && (
+   464→                <span className="text-muted-foreground"> · within {distanceFilterKm} km</span>
+   465→              )}
+   466→            </h2>
+   467→            {preferredCats.length > 0 && !searchQuery.trim() && (
+   468→              <p className="mt-0.5 text-[12.5px] text-muted-foreground">
+   469→                Based on your love for {preferredCats.map((c) => c.label).join(", ")}
+   470→              </p>
+   471→            )}
+   472→            <div className="mt-4 space-y-2.5">
+   473→              {results.map((p) => (
+   474→                <ListRow key={p.id} place={p} onSelect={openPlace} />
+   475→              ))}
+   476→              {results.length === 0 && (
+   477→                <div className="flex flex-col items-center rounded-2xl border border-dashed border-border bg-card/60 px-6 py-10 text-center">
+   478→                  <SearchX className="size-9 text-stone-300" aria-hidden="true" />
+   479→                  <p className="mt-3 text-[15px] font-bold text-foreground">Nothing matches… yet</p>
+   480→                  <p className="mt-1 text-[13px] text-muted-foreground">
+   481→                    {distanceFilterKm != null
+   482→                      ? `Nothing within ${distanceFilterKm} km — try widening the distance.`
+   483→                      : "Try \u201Cbiryani\u201D, \u201Cdosa\u201D, \u201Ccoffee\u201D or clear the filters."}
+   484→                  </p>
+   485→                  <div className="mt-4 flex gap-2">
+   486→                    {distanceFilterKm != null && (
+   487→                      <button
+   488→                        type="button"
+   489→                        onClick={() => setDistanceFilter(null)}
+   490→                        className="rounded-full border border-border bg-card px-4 py-2 text-[13px] font-bold text-foreground transition-colors hover:bg-accent"
+   491→                      >
+   492→                        Any distance
+   493→                      </button>
+   494→                    )}
+   495→                    <button
+   496→                      type="button"
+   497→                      onClick={() => {
+   498→                        setSearchQuery("");
+   499→                        setActiveCategory(null);
+   500→                      }}
+   501→                      className="rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-white shadow-md shadow-orange-600/25 transition-all hover:bg-primary/90 active:scale-95"
+   502→                    >
+   503→                      Reset search
+   504→                    </button>
+   505→                  </div>
+   506→                </div>
+   507→              )}
+   508→            </div>
+   509→          </section>
+   510→        ) : (
+   511→          /* ------- discovery sections ------- */
+   512→          <>
+   513→            {/* 📍 Use my current location — clear GPS control */}
+   514→            <div className="mx-5 mt-5">
+   515→              <LocationPromptBanner onOpen={() => setLocSheetOpen(true)} />
+   516→            </div>
+   517→
+   518→            {/* greeting */}
+   519→            <motion.section
+   520→              initial={{ opacity: 0, y: 10 }}
+   521→              animate={{ opacity: 1, y: 0 }}
+   522→              className="mx-5 mt-4 overflow-hidden rounded-3xl foodie-gradient-soft p-4"
+   523→            >
+   524→              <div className="flex items-center justify-between gap-3">
+   525→                <div className="min-w-0">
+   526→                  <p className="text-[15px] font-extrabold tracking-tight text-foreground">
+   527→                    {greeting()}
+   528→                    {userName ? `, ${userName}` : ""}! <span aria-hidden="true">🌆</span>
+   529→                  </p>
+   530→                  <p className="mt-0.5 truncate text-[12.5px] text-muted-foreground">
+   531→                    {eatContext
+   532→                      ? `Showing picks great for ${eatContext.toLowerCase()} dining`
+   533→                      : "Hungry? Let's find your next favorite spot."}
+   534→                  </p>
+   535→                </div>
+   536→                <span className="text-3xl" aria-hidden="true">
+   537→                  {eatContext === "Travelling" ? "🧳" : eatContext === "Family" ? "👨‍👩‍👧" : eatContext === "Partner" ? "❤️" : eatContext === "Friends" ? "🎉" : "🍽️"}
+   538→                </span>
+   539→              </div>
+   540→              {preferences.length > 0 && (
+   541→                <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto" aria-label="Your preferences">
+   542→                  {preferredCats.map((c) => (
+   543→                    <span
+   544→                      key={c.id}
+   545→                      className="shrink-0 rounded-full bg-white/80 px-2.5 py-1 text-[11px] font-semibold text-stone-700 shadow-sm"
+   546→                    >
+   547→                      {c.emoji} {c.label}
+   548→                    </span>
+   549→                  ))}
+   550→                </div>
+   551→              )}
+   552→            </motion.section>
+   553→
+   554→            {/* destination discovery — Famous here card + destination chips */}
+   555→            <DestinationDiscoveryCard className="mt-4" />
+   556→
+   557→            {dbEmpty ? (
+   558→              <EmptyDatabaseCard mode={feed.mode} />
+   559→            ) : discoveryEmpty ? (
+   560→              /* everything filtered out by the distance radius */
+   561→              <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-12 text-center">
+   562→                <MapPinned className="size-10 text-stone-300" aria-hidden="true" />
+   563→                <p className="mt-3 text-[15px] font-bold text-foreground">
+   564→                  {distanceFilterKm != null
+   565→                    ? `No places within ${distanceFilterKm} km`
+   566→                    : "No places to show right now"}
+   567→                </p>
+   568→                <p className="mt-1 max-w-[240px] text-[13px] leading-snug text-muted-foreground">
+   569→                  Widen the radius to see everything Foodie has around this origin.
+   570→                </p>
+   571→                <button
+   572→                  type="button"
+   573→                  onClick={() => setDistanceFilter(null)}
+   574→                  className="mt-4 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-white shadow-md shadow-orange-600/25 transition-all hover:bg-primary/90 active:scale-95"
+   575→                >
+   576→                  Show any distance
+   577→                </button>
+   578→              </div>
+   579→            ) : (
+   580→              <>
+   581→                {/* nearby */}
+   582→                {nearby.length > 0 && (
+   583→                  <section className="mt-7">
+   584→                    <SectionHeader
+   585→                      emoji="📍"
+   586→                      title="Nearby food places"
+   587→                      subtitle={nearbySubtitle}
+   588→                      className="px-5"
+   589→                    />
+   590→                    <div className="space-y-2.5 px-5">
+   591→                      {nearby.slice(0, 4).map((p) => (
+   592→                        <ListRow key={p.id} place={p} onSelect={openPlace} />
+   593→                      ))}
+   594→                    </div>
+   595→                  </section>
+   596→                )}
+   597→
+   598→                {/* hidden gems */}
+   599→                {gems.length > 0 && (
+   600→                  <RailSection
+   601→                    emoji="💎"
+   602→                    title="Hidden Gems"
+   603→                    subtitle="Low-key spots locals swear by"
+   604→                    total={gems.length}
+   605→                    expanded={expanded === "gems"}
+   606→                    onSeeAll={() => toggleExpand("gems")}
+   607→                  >
+   608→                    {gems.map((p) =>
+   609→                      expanded === "gems" ? (
+   610→                        <ListRow key={p.id} place={p} onSelect={openPlace} />
+   611→                      ) : (
+   612→                        <CarouselCard key={p.id} place={p} onSelect={openPlace} />
+   613→                      )
+   614→                    )}
+   615→                  </RailSection>
+   616→                )}
+   617→
+   618→                {/* local favorites */}
+   619→                {favorites.length > 0 && (
+   620→                  <section className="mt-7">
+   621→                    <SectionHeader
+   622→                      emoji={SECTION_ICONS.favorites}
+   623→                      title="Local Favorites"
+   624→                      subtitle="Most loved by people around you"
+   625→                      className="px-5"
+   626→                    />
+   627→                    <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
+   628→                      {favorites.map((p) => (
+   629→                        <WideCard key={p.id} place={p} onSelect={openPlace} />
+   630→                      ))}
+   631→                    </div>
+   632→                  </section>
+   633→                )}
+   634→
+   635→                {/* popular */}
+   636→                {popular.length > 0 && (
+   637→                  <section className="mt-7">
+   638→                    <SectionHeader
+   639→                      emoji="📈"
+   640→                      title="Popular Places"
+   641→                      subtitle="Trending near you right now"
+   642→                      className="px-5"
+   643→                    />
+   644→                    <div className="space-y-2.5 px-5">
+   645→                      {popular.slice(0, 4).map((p, i) => (
+   646→                        <ListRow key={p.id} place={p} onSelect={openPlace} rank={i + 1} />
+   647→                      ))}
+   648→                    </div>
+   649→                  </section>
+   650→                )}
+   651→
+   652→                {/* budget eats */}
+   653→                {budget.length > 0 && (
+   654→                  <RailSection
+   655→                    emoji="💸"
+   656→                    title="Budget Eats"
+   657→                    subtitle="Big flavor, small bills"
+   658→                    total={budget.length}
+   659→                    expanded={expanded === "budget"}
+   660→                    onSeeAll={() => toggleExpand("budget")}
+   661→                  >
+   662→                    {budget.map((p) =>
+   663→                      expanded === "budget" ? (
+   664→                        <ListRow key={p.id} place={p} onSelect={openPlace} />
+   665→                      ) : (
+   666→                        <CarouselCard key={p.id} place={p} onSelect={openPlace} />
+   667→                      )
+   668→                    )}
+   669→                  </RailSection>
+   670→                )}
+   671→
+   672→                {/* places awaiting coordinate verification — honest, never a guessed distance.
+   673→                    Hidden while a radius filter is active (an unknown distance can't satisfy
+   674→                    "within X km"); they reappear on "Any distance" and in search/category. */}
+   675→                {distanceFilterKm == null && pending.length > 0 && (
+   676→                  <section className="mt-7">
+   677→                    <SectionHeader
+   678→                      emoji="⏳"
+   679→                      title="Location pending verification"
+   680→                      subtitle="Real places we're still mapping — no guessed distances"
+   681→                      className="px-5"
+   682→                    />
+   683→                    <div className="space-y-2.5 px-5">
+   684→                      {pending.map((p) => (
+   685→                        <ListRow key={p.id} place={p} onSelect={openPlace} />
+   686→                      ))}
+   687→                    </div>
+   688→                  </section>
+   689→                )}
+   690→              </>
+   691→            )}
+   692→
+   693→            {/* location retry nudge when GPS failed and no manual pick/test mode is active */}
+   694→            {locStatus !== "granted" && locSource !== "manual" && locSource !== "test" && !discoveryEmpty && (
+   695→              <p className="mt-6 flex items-center justify-center gap-1.5 px-5 text-center text-[11.5px] font-medium text-stone-400">
+   696→                <LocateFixed className="size-3.5" aria-hidden="true" />
+   697→                Share your location to sort every list by real distance.
+   698→              </p>
+   699→            )}
+   700→
+   701→            {/* teaser for coming-soon features */}
+   702→            <section className="mx-5 mt-8">
+   703→              <button
+   704→                type="button"
+   705→                onClick={() =>
+   706→                  toast.info("Sneak peek 👀", {
+   707→                    description: "Travel food guides, AI picks & community tips are on the way.",
+   708→                  })
+   709→                }
+   710→                className={cn(
+   711→                  "flex w-full items-center gap-3 rounded-2xl border border-dashed border-primary/40 bg-orange-50/60 p-4 text-left transition-colors hover:bg-orange-50"
+   712→                )}
+   713→              >
+   714→                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+   715→                  <Compass className="size-5" aria-hidden="true" />
+   716→                </span>
+   717→                <span className="min-w-0">
+   718→                  <span className="block text-[14px] font-bold text-foreground">
+   719→                    More delicious things are cooking
+   720→                  </span>
+   721→                  <span className="mt-0.5 block text-[12px] leading-snug text-muted-foreground">
+   722→                    Travel food guide · AI recommendations · Community picks
+   723→                  </span>
+   724→                </span>
+   725→                <Flame className="ml-auto size-4 shrink-0 text-orange-400" aria-hidden="true" />
+   726→              </button>
+   727→            </section>
+   728→
+   729→            <p className="mt-8 text-center text-[11px] font-medium text-stone-400">
+   730→              Foodie · Discover · Decide · Devour
+   731→            </p>
+   732→              </>
+   733→            )}
+   734→          </>
+   735→        )}
+   736→      </main>
+   737→
+   738→      {/* location sheet (status + GPS button + manual city fallback) */}
+   739→      <LocationSheet open={locSheetOpen} onClose={() => setLocSheetOpen(false)} />
+   740→
+   741→      {/* Foodie AI — floating button + bottom sheet (reads existing stores at send time) */}
+   742→      <AssistantControls />
+   743→    </div>
+   744→  );
+   745→}
+   746→

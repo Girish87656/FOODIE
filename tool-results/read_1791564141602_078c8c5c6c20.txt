@@ -1,0 +1,721 @@
+     1→"use client";
+     2→
+     3→import { useEffect, useState } from "react";
+     4→import { motion } from "framer-motion";
+     5→import {
+     6→  ArrowLeft,
+     7→  BadgeCheck,
+     8→  Clock,
+     9→  ExternalLink,
+    10→  ImageOff,
+    11→  Images,
+    12→  MapPin,
+    13→  Navigation,
+    14→  Phone,
+    15→  Quote,
+    16→  RefreshCw,
+    17→  Star,
+    18→  Tag,
+    19→  UtensilsCrossed,
+    20→} from "lucide-react";
+    21→import { toast } from "sonner";
+    22→import { useFoodieStore } from "@/lib/foodie/store";
+    23→import { getRestaurantById } from "@/lib/foodie/data/repository";
+    24→import type { DataMode } from "@/lib/foodie/data/types";
+    25→import type { Dish, Place } from "@/lib/foodie/types";
+    26→import { formatDistance, haversineKm } from "@/lib/foodie/location";
+    27→import { originSourceLabel, useLocationStore } from "@/lib/foodie/locationStore";
+    28→import {
+    29→  formatHours,
+    30→  inr,
+    31→  isOpenNow,
+    32→  prettifyTag,
+    33→  verificationStatusLabel,
+    34→} from "@/lib/foodie/utils";
+    35→import { RatingBadge, PlaceBadge } from "../Badges";
+    36→import { ReviewsSection } from "../ReviewsSection";
+    37→import { Skeleton } from "@/components/ui/skeleton";
+    38→import { cn } from "@/lib/utils";
+    39→
+    40→/** A completed (or failed) detail fetch, tagged with the request it belongs to. */
+    41→type DetailOutcome =
+    42→  | { key: string; kind: "ready"; place: Place; mode: DataMode | null }
+    43→  | { key: string; kind: "error"; mode: DataMode | null };
+    44→
+    45→/** Detail-screen loading state — hero + text line placeholders. */
+    46→function DetailSkeleton() {
+    47→  return (
+    48→    <div
+    49→      className="flex h-full flex-col bg-background"
+    50→      aria-busy="true"
+    51→      aria-live="polite"
+    52→      aria-label="Loading place details"
+    53→    >
+    54→      <Skeleton className="h-[260px] w-full shrink-0 rounded-none" />
+    55→      <div className="flex-1 space-y-3 px-5 pt-4">
+    56→        <Skeleton className="h-6 w-2/3" />
+    57→        <Skeleton className="h-4 w-1/2" />
+    58→        <Skeleton className="h-14 w-full rounded-2xl" />
+    59→        <Skeleton className="h-14 w-full rounded-2xl" />
+    60→        <Skeleton className="h-4 w-1/3" />
+    61→        <Skeleton className="h-4 w-2/5" />
+    62→      </div>
+    63→    </div>
+    64→  );
+    65→}
+    66→
+    67→/** Shared look for the info cards (location / hours / phone). */
+    68→function InfoCard({
+    69→  icon,
+    70→  tone,
+    71→  children,
+    72→  as = "div",
+    73→  href,
+    74→  ariaLabel,
+    75→}: {
+    76→  icon: React.ReactNode;
+    77→  tone: "primary" | "open" | "closed" | "neutral";
+    78→  children: React.ReactNode;
+    79→  as?: "div" | "a";
+    80→  href?: string;
+    81→  ariaLabel?: string;
+    82→}) {
+    83→  const toneClasses = {
+    84→    primary: "bg-orange-50 text-primary",
+    85→    open: "bg-emerald-50 text-emerald-600",
+    86→    closed: "bg-rose-50 text-rose-500",
+    87→    neutral: "bg-stone-100 text-stone-400",
+    88→  }[tone];
+    89→  const className =
+    90→    "flex items-start gap-3 rounded-2xl border border-border/70 bg-card p-3.5 shadow-sm";
+    91→  if (as === "a" && href) {
+    92→    return (
+    93→      <a href={href} aria-label={ariaLabel} className={cn(className, "transition-colors hover:bg-accent/70 active:bg-accent")}>
+    94→        <span className={cn("grid size-9 shrink-0 place-items-center rounded-xl", toneClasses)}>
+    95→          {icon}
+    96→        </span>
+    97→        {children}
+    98→      </a>
+    99→    );
+   100→  }
+   101→  return (
+   102→    <div className={className}>
+   103→      <span className={cn("grid size-9 shrink-0 place-items-center rounded-xl", toneClasses)}>
+   104→        {icon}
+   105→      </span>
+   106→      {children}
+   107→    </div>
+   108→  );
+   109→}
+   110→
+   111→/**
+   112→ * Compact nutrition caption from the dishes table's real columns —
+   113→ * only the values that actually exist are included (never "0 kcal").
+   114→ */
+   115→function nutritionLine(d: Dish): string | null {
+   116→  const parts: string[] = [];
+   117→  if (d.calories != null) parts.push(`${Math.round(d.calories)} kcal`);
+   118→  if (d.protein != null) parts.push(`P ${d.protein} g`);
+   119→  if (d.carbs != null) parts.push(`C ${d.carbs} g`);
+   120→  if (d.fat != null) parts.push(`F ${d.fat} g`);
+   121→  return parts.length > 0 ? parts.join(" · ") : null;
+   122→}
+   123→
+   124→/** Screen 6 — place details */
+   125→export function PlaceDetailScreen() {
+   126→  const back = useFoodieStore((s) => s.backFromDetail);
+   127→  const selectedPlaceId = useFoodieStore((s) => s.selectedPlaceId);
+   128→  const [photoIdx, setPhotoIdx] = useState(0);
+   129→  const [attempt, setAttempt] = useState(0);
+   130→  const [outcome, setOutcome] = useState<DetailOutcome | null>(null);
+   131→
+   132→  // active origin (GPS fix, manual city or prototype city) for the distance math
+   133→  const origin = useLocationStore((s) => s.origin);
+   134→  const locState = useLocationStore();
+   135→  const locSource = locState.source;
+   136→
+   137→  // Load through the data-access layer — Supabase when connected,
+   138→  // the labelled demo dataset otherwise. No hardcoded data in the UI.
+   139→  // (Result is keyed to the request; state updates happen in async callbacks.)
+   140→  const detailKey = `${selectedPlaceId ?? ""}|${attempt}`;
+   141→  useEffect(() => {
+   142→    if (!selectedPlaceId) return;
+   143→    let cancelled = false;
+   144→    getRestaurantById(selectedPlaceId)
+   145→      .then((res) => {
+   146→        if (cancelled) return;
+   147→        setPhotoIdx(0);
+   148→        setOutcome(
+   149→          res.place
+   150→            ? { key: detailKey, kind: "ready", place: res.place, mode: res.mode }
+   151→            : { key: detailKey, kind: "error", mode: res.mode }
+   152→        );
+   153→      })
+   154→      .catch(() => {
+   155→        if (!cancelled) setOutcome({ key: detailKey, kind: "error", mode: null });
+   156→      });
+   157→    return () => {
+   158→      cancelled = true;
+   159→    };
+   160→  }, [detailKey, selectedPlaceId]);
+   161→
+   162→  const current = outcome?.key === detailKey ? outcome : null;
+   163→  const place = current?.kind === "ready" ? current.place : null;
+   164→  const mode: DataMode | null = current?.mode ?? null;
+   165→  const detailStatus =
+   166→    current === null ? "loading" : current.kind === "ready" ? "ready" : "error";
+   167→  const retry = () => setAttempt((n) => n + 1);
+   168→
+   169→  if (detailStatus === "loading") {
+   170→    return <DetailSkeleton />;
+   171→  }
+   172→
+   173→  if (!place) {
+   174→    return (
+   175→      <div className="grid h-full place-items-center px-8 text-center">
+   176→        <div>
+   177→          <UtensilsCrossed className="mx-auto size-8 text-stone-300" aria-hidden="true" />
+   178→          <p className="mt-3 text-[15px] font-bold">This place moved its kitchen</p>
+   179→          <p className="mt-1 max-w-[240px] text-[12.5px] leading-snug text-muted-foreground">
+   180→            It may have been removed from the database, or the connection dropped.
+   181→          </p>
+   182→          <div className="mt-4 flex justify-center gap-2">
+   183→            <button
+   184→              type="button"
+   185→              onClick={retry}
+   186→              className="flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2.5 text-[13px] font-bold text-foreground transition-colors hover:bg-accent"
+   187→            >
+   188→              <RefreshCw className="size-3.5" aria-hidden="true" />
+   189→              Try again
+   190→            </button>
+   191→            <button
+   192→              type="button"
+   193→              onClick={back}
+   194→              className="rounded-full bg-primary px-5 py-2.5 text-[13.5px] font-bold text-white shadow-md"
+   195→            >
+   196→              Back to discovery
+   197→            </button>
+   198→          </div>
+   199→        </div>
+   200→      </div>
+   201→    );
+   202→  }
+   203→
+   204→  // ---- honesty guards (unchanged contract with the database) ---------------
+   205→  // Hours are only claimed when they actually exist: the raw opening_hours
+   206→  // string for database rows, or the demo dataset's own explicit hours.
+   207→  // NULL hours show "not captured yet" — never the mapper's fallback window.
+   208→  const hoursKnown = place.openingHours != null || mode === "demo";
+   209→  const hoursText = place.openingHours
+   210→    ? place.openingHours.replace("-", " – ")
+   211→    : formatHours(place);
+   212→  const open = hoursKnown ? isOpenNow(place) : false;
+   213→
+   214→  // Haversine distance from the user's chosen origin to THIS place.
+   215→  // Places awaiting coordinate verification (NULL lat/lng) show no distance —
+   216→  // we never guess coordinates.
+   217→  const placeCoords =
+   218→    place.latitude != null && place.longitude != null
+   219→      ? { lat: place.latitude, lng: place.longitude }
+   220→      : null;
+   221→  const distanceKm = placeCoords ? haversineKm(origin, placeCoords) : null;
+   222→  const fromLabel = originSourceLabel(locState);
+   223→
+   224→  // Two honest CTAs, keyed on the PLACE's own coordinates (not the origin):
+   225→  //  - verified latitude/longitude → "Get Directions" with the coordinate-based
+   226→  //    directions URL (destination = exact stored pin);
+   227→  //  - NULL coordinates → "Open in Google Maps" via a name + stored-address
+   228→  //    search query, so we never pretend the location is verified.
+   229→  const mapsUrl = placeCoords
+   230→    ? `https://www.google.com/maps/dir/?api=1&destination=${placeCoords.lat},${placeCoords.lng}&travelmode=driving`
+   231→    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.mapsQuery)}`;
+   232→
+   233→  // Phone from the database — a Call button only exists when a number exists.
+   234→  const telHref = place.phone ? `tel:${place.phone.replace(/[^\d+]/g, "")}` : null;
+   235→
+   236→  const verification = verificationStatusLabel(place.verificationStatus);
+   237→  const verificationChipClass = {
+   238→    verified: "border-emerald-200 bg-emerald-50 text-emerald-700",
+   239→    neutral: "border-border bg-card text-stone-600",
+   240→    unverified: "border-amber-200 bg-amber-50 text-amber-700",
+   241→  }[verification.tone];
+   242→
+   243→  return (
+   244→    <div className="flex h-full flex-col bg-background">
+   245→      {/* ---------------- hero photos ---------------- */}
+   246→      <div className="relative shrink-0">
+   247→        {place.photos.length === 0 ? (
+   248→          /* no photos in the database yet — honest gradient placeholder */
+   249→          <div className="grid h-[260px] w-full place-items-center bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
+   250→            <UtensilsCrossed className="size-14 text-orange-300" aria-hidden="true" />
+   251→          </div>
+   252→        ) : (
+   253→          <div
+   254→            className="no-scrollbar flex h-[260px] snap-x snap-mandatory overflow-x-auto"
+   255→            onScroll={(e) => {
+   256→              const el = e.currentTarget;
+   257→              setPhotoIdx(Math.round(el.scrollLeft / el.clientWidth));
+   258→            }}
+   259→            aria-label={`Photos of ${place.name}`}
+   260→          >
+   261→            {place.photos.map((src, i) => (
+   262→              <img
+   263→                key={src}
+   264→                src={src}
+   265→                alt={`${place.name} photo ${i + 1}`}
+   266→                className="h-full w-full shrink-0 snap-center object-cover"
+   267→                loading={i === 0 ? "eager" : "lazy"}
+   268→              />
+   269→            ))}
+   270→          </div>
+   271→        )}
+   272→
+   273→        <button
+   274→          type="button"
+   275→          onClick={back}
+   276→          aria-label="Go back"
+   277→          className="absolute left-4 top-4 grid size-10 place-items-center rounded-full bg-black/45 text-white shadow-lg backdrop-blur transition-all hover:bg-black/65 active:scale-95"
+   278→        >
+   279→          <ArrowLeft className="size-4.5" />
+   280→        </button>
+   281→
+   282→        <div className="absolute right-4 top-4 flex gap-1.5">
+   283→          {place.badges.hiddenGem && <PlaceBadge label="Hidden Gem" />}
+   284→          {place.badges.localFavorite && <PlaceBadge label="Local Favorite" />}
+   285→          {place.badges.popular && <PlaceBadge label="Popular" />}
+   286→          {place.badges.budget && <PlaceBadge label="Budget Pick" />}
+   287→          {place.badges.studentFriendly && <PlaceBadge label="Student Friendly" />}
+   288→          {(place.verificationStatus === "verified" || place.badges.verified) && (
+   289→            <PlaceBadge label="✓ Verified" />
+   290→          )}
+   291→        </div>
+   292→
+   293→        {/* photo dots */}
+   294→        {place.photos.length > 1 && (
+   295→          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5" aria-hidden="true">
+   296→            {place.photos.map((src, i) => (
+   297→              <span
+   298→                key={src}
+   299→                className={cn(
+   300→                  "size-1.5 rounded-full transition-all",
+   301→                  i === photoIdx ? "w-4 bg-white" : "bg-white/50"
+   302→                )}
+   303→              />
+   304→            ))}
+   305→          </div>
+   306→        )}
+   307→      </div>
+   308→
+   309→      {/* ---------------- content ---------------- */}
+   310→      <div className="thin-scrollbar flex-1 overflow-y-auto px-5 pb-4 pt-4">
+   311→        <motion.div initial={{ y: 14, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+   312→          {/* name */}
+   313→          <div className="flex items-start justify-between gap-3">
+   314→            <div className="min-w-0">
+   315→              <h1 className="text-[22px] font-extrabold leading-tight tracking-tight text-foreground">
+   316→                {place.name}
+   317→              </h1>
+   318→              {place.tagline && (
+   319→                <p className="mt-0.5 text-[13px] font-medium italic text-muted-foreground">
+   320→                  {place.tagline}
+   321→                </p>
+   322→              )}
+   323→            </div>
+   324→          </div>
+   325→
+   326→          {/* rating / price row */}
+   327→          <div className="mt-3 flex flex-wrap items-center gap-2 text-[12.5px]">
+   328→            <RatingBadge rating={place.rating} className="px-2 py-1 text-[12.5px]" />
+   329→            {place.rating > 0 && (
+   330→              <span
+   331→                className="text-[11px] font-medium text-stone-400"
+   332→                title="The place's listed rating from its public listing — kept separate from Foodie user reviews below"
+   333→              >
+   334→                Listed rating
+   335→              </span>
+   336→            )}
+   337→            {place.ratingCount > 0 && (
+   338→              <>
+   339→                <span className="font-semibold text-stone-600">
+   340→                  {place.ratingCount.toLocaleString("en-IN")} ratings
+   341→                </span>
+   342→                <span className="text-stone-300">•</span>
+   343→              </>
+   344→            )}
+   345→            {place.priceRange != null && (
+   346→              <>
+   347→                <span className="font-bold text-primary">{place.priceRange}</span>
+   348→                <span className="text-stone-300">•</span>
+   349→              </>
+   350→            )}
+   351→            {place.costForTwo != null && (
+   352→              <span className="font-medium text-stone-600">{inr(place.costForTwo)} for two</span>
+   353→            )}
+   354→          </div>
+   355→
+   356→          {/* category + verification status */}
+   357→          <div className="mt-2.5 flex flex-wrap gap-1.5">
+   358→            {place.cuisines.map((c) => (
+   359→              <span
+   360→                key={c}
+   361→                className="rounded-full border border-border bg-card px-2.5 py-1 text-[11.5px] font-semibold text-stone-600"
+   362→              >
+   363→                {c}
+   364→              </span>
+   365→            ))}
+   366→            <span
+   367→              className={cn(
+   368→                "rounded-full border px-2.5 py-1 text-[11.5px] font-semibold",
+   369→                verificationChipClass
+   370→              )}
+   371→            >
+   372→              {verification.label}
+   373→            </span>
+   374→            {mode === "demo" && (
+   375→              <span
+   376→                className="rounded-full border border-dashed border-amber-300 bg-amber-50 px-2.5 py-1 text-[11.5px] font-bold text-amber-700"
+   377→                title="This entry comes from the labelled demo dataset, not the real database"
+   378→              >
+   379→                🧪 Demo data
+   380→              </span>
+   381→            )}
+   382→          </div>
+   383→        </motion.div>
+   384→
+   385→        {/* info cards — location, hours, phone */}
+   386→        <div className="mt-5 grid gap-2.5">
+   387→          {/* location section */}
+   388→          <InfoCard icon={<MapPin className="size-4.5" aria-hidden="true" />} tone="primary">
+   389→            <div className="min-w-0">
+   390→              <p className="text-[13.5px] font-bold text-foreground">
+   391→                {place.area}
+   392→                {distanceKm != null && ` · ${formatDistance(distanceKm)}`}
+   393→              </p>
+   394→              <p className="mt-0.5 text-[12.5px] leading-snug text-muted-foreground">
+   395→                {place.address}
+   396→              </p>
+   397→              <p
+   398→                className={cn(
+   399→                  "mt-1 text-[11px] font-medium",
+   400→                  distanceKm != null ? "text-stone-400" : "text-amber-600"
+   401→                )}
+   402→              >
+   403→                {distanceKm != null
+   404→                  ? `Distance from ${fromLabel}`
+   405→                  : "Location pending verification"}
+   406→              </p>
+   407→            </div>
+   408→          </InfoCard>
+   409→
+   410→          {/* opening-hours section */}
+   411→          <InfoCard
+   412→            icon={<Clock className="size-4.5" aria-hidden="true" />}
+   413→            tone={!hoursKnown ? "neutral" : open ? "open" : "closed"}
+   414→          >
+   415→            <div className="min-w-0">
+   416→              {hoursKnown ? (
+   417→                <>
+   418→                  <p className="flex items-center gap-1.5 text-[13.5px] font-bold">
+   419→                    <span className={open ? "text-emerald-600" : "text-rose-500"}>
+   420→                      {open ? "Open now" : "Closed right now"}
+   421→                    </span>
+   422→                  </p>
+   423→                  <p className="mt-0.5 text-[12.5px] text-muted-foreground">
+   424→                    Opening hours · {hoursText}
+   425→                  </p>
+   426→                </>
+   427→              ) : (
+   428→                <>
+   429→                  <p className="text-[13.5px] font-bold text-stone-500">
+   430→                    Hours not captured yet
+   431→                  </p>
+   432→                  <p className="mt-0.5 text-[12.5px] leading-snug text-muted-foreground">
+   433→                    Timings will appear once they&apos;re verified — we don&apos;t
+   434→                    guess opening hours.
+   435→                  </p>
+   436→                </>
+   437→              )}
+   438→            </div>
+   439→          </InfoCard>
+   440→
+   441→          {/* phone — only when the database actually has a number */}
+   442→          {telHref && (
+   443→            <InfoCard
+   444→              as="a"
+   445→              href={telHref}
+   446→              ariaLabel={`Call ${place.name} at ${place.phone}`}
+   447→              icon={<Phone className="size-4.5" aria-hidden="true" />}
+   448→              tone="primary"
+   449→            >
+   450→              <div className="min-w-0">
+   451→                <p className="text-[13.5px] font-bold text-foreground">Phone</p>
+   452→                <p className="mt-0.5 text-[12.5px] text-muted-foreground">
+   453→                  {place.phone} · tap to call
+   454→                </p>
+   455→              </div>
+   456→            </InfoCard>
+   457→          )}
+   458→        </div>
+   459→
+   460→        {/* tags — the database's finer type labels (never invented) */}
+   461→        {place.tags && place.tags.length > 0 && (
+   462→          <section className="mt-6">
+   463→            <h2 className="flex items-center gap-1.5 text-[15.5px] font-bold text-foreground">
+   464→              <Tag className="size-4 text-primary" aria-hidden="true" />
+   465→              Tags
+   466→            </h2>
+   467→            <div className="mt-2.5 flex flex-wrap gap-1.5">
+   468→              {place.tags.map((t) => (
+   469→                <span
+   470→                  key={t}
+   471→                  className="rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 text-[11.5px] font-semibold text-stone-600"
+   472→                >
+   473→                  {prettifyTag(t)}
+   474→                </span>
+   475→              ))}
+   476→            </div>
+   477→          </section>
+   478→        )}
+   479→
+   480→        {/* dishes / menu — REAL rows from the dishes table only.
+   481→            Both sections always exist in the schema's terms (is_signature
+   482→            splits them); when a place has no dish rows at all we show a
+   483→            clean empty state instead of inventing menu items. */}
+   484→        {place.famousDishes.length === 0 && place.signatureDishes.length === 0 ? (
+   485→          <section className="mt-6">
+   486→            <h2 className="flex items-center gap-1.5 text-[15.5px] font-bold text-foreground">
+   487→              <UtensilsCrossed className="size-4 text-primary" aria-hidden="true" />
+   488→              Menu
+   489→            </h2>
+   490→            <div
+   491→              className="mt-2.5 grid place-items-center rounded-2xl border border-dashed border-stone-200 bg-stone-50 px-4 py-8 text-center"
+   492→              aria-live="polite"
+   493→            >
+   494→              <UtensilsCrossed className="size-6 text-stone-300" aria-hidden="true" />
+   495→              <p className="mt-2 text-[13.5px] font-bold text-stone-500">
+   496→                No dishes added yet
+   497→              </p>
+   498→              <p className="mt-1 max-w-[260px] text-[12px] leading-snug text-stone-400">
+   499→                Menu items will appear here once they&apos;re added for this place.
+   500→              </p>
+   501→            </div>
+   502→          </section>
+   503→        ) : (
+   504→          <>
+   505→            {/* famous dishes */}
+   506→            {place.famousDishes.length > 0 && (
+   507→              <section className="mt-6">
+   508→                <h2 className="flex items-center gap-1.5 text-[15.5px] font-bold text-foreground">
+   509→                  <Star className="size-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+   510→                  Famous dishes
+   511→                </h2>
+   512→                <div className="mt-2.5 flex flex-wrap gap-2">
+   513→                  {place.famousDishes.map((d, i) => (
+   514→                    <span
+   515→                      key={`${d.name}-${i}`}
+   516→                      title={d.description}
+   517→                      className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12.5px] font-semibold text-amber-800"
+   518→                    >
+   519→                      {d.emoji && (
+   520→                        <span aria-hidden="true" className="mr-1">{d.emoji}</span>
+   521→                      )}
+   522→                      {d.name}
+   523→                      {d.price != null && (
+   524→                        <span className="ml-1 font-bold text-amber-600">{inr(d.price)}</span>
+   525→                      )}
+   526→                    </span>
+   527→                  ))}
+   528→                </div>
+   529→              </section>
+   530→            )}
+   531→
+   532→            {/* signature dishes */}
+   533→            {place.signatureDishes.length > 0 && (
+   534→              <section className="mt-6">
+   535→                <h2 className="flex items-center gap-1.5 text-[15.5px] font-bold text-foreground">
+   536→                  <BadgeCheck className="size-4 text-primary" aria-hidden="true" />
+   537→                  Signature dishes
+   538→                </h2>
+   539→                <div className="mt-2.5 divide-y divide-border/60 overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm">
+   540→                  {place.signatureDishes.map((d, i) => {
+   541→                    const nutrition = nutritionLine(d);
+   542→                    return (
+   543→                      <div
+   544→                        key={`${d.name}-${i}`}
+   545→                        className="flex items-start justify-between gap-3 px-4 py-3"
+   546→                      >
+   547→                        <div className="min-w-0">
+   548→                          <span className="flex min-w-0 flex-wrap items-center gap-1.5">
+   549→                            {d.emoji && (
+   550→                              <span aria-hidden="true" className="text-base">{d.emoji}</span>
+   551→                            )}
+   552→                            <span className="text-[13.5px] font-semibold text-foreground">
+   553→                              {d.name}
+   554→                            </span>
+   555→                            {d.category && (
+   556→                              <span className="rounded-full bg-stone-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-stone-500">
+   557→                                {prettifyTag(d.category)}
+   558→                              </span>
+   559→                            )}
+   560→                          </span>
+   561→                          {d.description && (
+   562→                            <p className="mt-0.5 text-[12px] leading-snug text-muted-foreground">
+   563→                              {d.description}
+   564→                            </p>
+   565→                          )}
+   566→                          {nutrition && (
+   567→                            <p className="mt-0.5 text-[11px] font-medium text-stone-400">
+   568→                              {nutrition}
+   569→                            </p>
+   570→                          )}
+   571→                        </div>
+   572→                        {d.price != null && (
+   573→                          <span className="shrink-0 text-[13px] font-bold text-stone-600">
+   574→                            {inr(d.price)}
+   575→                          </span>
+   576→                        )}
+   577→                      </div>
+   578→                    );
+   579→                  })}
+   580→                </div>
+   581→              </section>
+   582→            )}
+   583→          </>
+   584→        )}
+   585→
+   586→        {/* photos — REAL rows from the restaurant_photos table only.
+   587→            The gallery always renders: stored photos in the grid, or a clean
+   588→            empty state when none exist yet. Stock/fake images are never shown. */}
+   589→        <section className="mt-6">
+   590→          <h2 className="flex items-center gap-1.5 text-[15.5px] font-bold text-foreground">
+   591→            <Images className="size-4 text-primary" aria-hidden="true" />
+   592→            Photos
+   593→            {place.photos.length > 0 && (
+   594→              <span className="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] font-bold text-stone-500">
+   595→                {place.photos.length}
+   596→              </span>
+   597→            )}
+   598→          </h2>
+   599→          {place.photos.length === 0 ? (
+   600→            <div
+   601→              className="mt-2.5 grid place-items-center rounded-2xl border border-dashed border-stone-200 bg-stone-50 px-4 py-8 text-center"
+   602→              aria-live="polite"
+   603→            >
+   604→              <ImageOff className="size-6 text-stone-300" aria-hidden="true" />
+   605→              <p className="mt-2 text-[13.5px] font-bold text-stone-500">
+   606→                No photos added yet
+   607→              </p>
+   608→              <p className="mt-1 max-w-[260px] text-[12px] leading-snug text-stone-400">
+   609→                Photos will appear here once they&apos;re added for this place.
+   610→              </p>
+   611→            </div>
+   612→          ) : (
+   613→            <div className="mt-2.5 grid grid-cols-3 gap-1.5 overflow-hidden rounded-2xl">
+   614→              {place.photos.map((src, i) => (
+   615→                <img
+   616→                  key={`${src}-${i}`}
+   617→                  src={src}
+   618→                  alt={`${place.name} gallery photo ${i + 1}`}
+   619→                  loading="lazy"
+   620→                  className="aspect-square w-full rounded-lg object-cover transition-transform hover:scale-[1.03]"
+   621→                />
+   622→              ))}
+   623→            </div>
+   624→          )}
+   625→        </section>
+   626→
+   627→        {/* local recommendation */}
+   628→        {place.localTip.trim().length > 0 && (
+   629→          <section className="mt-6">
+   630→            <h2 className="flex items-center gap-1.5 text-[15.5px] font-bold text-foreground">
+   631→              <Quote className="size-4 text-primary" aria-hidden="true" />
+   632→              Local recommendation
+   633→            </h2>
+   634→            <div className="relative mt-2.5 overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 p-4">
+   635→              <Quote
+   636→                className="absolute -right-2 -top-2 size-16 text-orange-100"
+   637→                aria-hidden="true"
+   638→              />
+   639→              <p className="relative text-[13.5px] font-medium leading-relaxed text-stone-700">
+   640→                {place.localTip}
+   641→              </p>
+   642→              <p className="relative mt-2.5 text-[11.5px] font-bold uppercase tracking-wide text-primary">
+   643→                — A Foodie local
+   644→              </p>
+   645→            </div>
+   646→          </section>
+   647→        )}
+   648→
+   649→        {/* reviews — REAL rows from the reviews table only (public read;
+   650→            writes use the signed-in user's own session + RLS). The average
+   651→            here is computed from user reviews and is deliberately kept
+   652→            separate from the seeded listed rating shown above. */}
+   653→        <ReviewsSection placeId={place.id} />
+   654→
+   655→        <div className="h-2" />
+   656→      </div>
+   657→
+   658→      {/* ---------------- sticky actions ---------------- */}
+   659→      <div
+   660→        className="shrink-0 border-t border-border/60 bg-background/95 p-4 backdrop-blur"
+   661→        style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}
+   662→      >
+   663→        <div className="flex gap-2.5">
+   664→          {telHref && (
+   665→            <a
+   666→              href={telHref}
+   667→              onClick={() =>
+   668→                toast.success(`Calling ${place.name}…`, {
+   669→                  description: place.phone,
+   670→                })
+   671→              }
+   672→              aria-label={`Call ${place.name}`}
+   673→              className="flex h-[52px] items-center justify-center gap-2 rounded-2xl border border-primary/30 bg-orange-50 px-5 text-[14.5px] font-bold text-primary transition-all hover:bg-orange-100 active:scale-[0.98]"
+   674→            >
+   675→              <Phone className="size-4.5" aria-hidden="true" />
+   676→              Call
+   677→            </a>
+   678→          )}
+   679→          <a
+   680→            href={mapsUrl}
+   681→            target="_blank"
+   682→            rel="noopener noreferrer"
+   683→            aria-label={
+   684→              placeCoords
+   685→                ? `Get directions to ${place.name}`
+   686→                : `Open ${place.name} in Google Maps`
+   687→            }
+   688→            onClick={() =>
+   689→              placeCoords
+   690→                ? toast.success("Opening directions…", {
+   691→                    description:
+   692→                      locSource === "browser" && distanceKm != null
+   693→                        ? `${place.name} · ${formatDistance(distanceKm)} from your location`
+   694→                        : place.address,
+   695→                  })
+   696→                : toast.success("Opening Google Maps…", {
+   697→                    description: `${place.name} · location pending verification`,
+   698→                  })
+   699→            }
+   700→            className="foodie-gradient flex h-[52px] flex-1 items-center justify-center gap-2 rounded-2xl text-[15.5px] font-bold text-white shadow-xl shadow-orange-600/30 transition-all hover:opacity-95 active:scale-[0.98]"
+   701→          >
+   702→            {placeCoords ? (
+   703→              <>
+   704→                <Navigation className="size-4.5" aria-hidden="true" />
+   705→                Get Directions
+   706→                <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
+   707→              </>
+   708→            ) : (
+   709→              <>
+   710→                <MapPin className="size-4.5" aria-hidden="true" />
+   711→                Open in Google Maps
+   712→                <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
+   713→              </>
+   714→            )}
+   715→          </a>
+   716→        </div>
+   717→      </div>
+   718→    </div>
+   719→  );
+   720→}
+   721→
