@@ -1,0 +1,66 @@
+{
+  "_comment": "Fixture: Phase 3D research-workflow fields. Expected outcomes — Row 1 Research Garden Cafe: potential_new, ZERO issues (place-anchored maps URL, cuisine/menu, rating+count+source+check date, per-field sources). Row 2 Search Url Cafes: insufficient_evidence (a maps SEARCH url is not an identity anchor) with warning MAPS_URL_IS_SEARCH_NOT_LISTING. Row 3 Menu Rich Kitchen: insufficient_evidence — cuisine/menu notes are descriptive, not identity. Row 4 Count No Source Cafe: potential_new with warnings LISTING_REVIEW_COUNT_WITHOUT_SOURCE + RATING_WITHOUT_CHECK_DATE. Row 5 Ayyappa Tiffin Room: existing_match, zero issues — review_decision=same_as_existing with a real existing_match_id. Row 6 Wrong Id Diner: insufficient_evidence with warning EXISTING_MATCH_ID_NOT_IN_BASELINE (valid uuid, absent from baseline). Row 7 Bad Decision Bistro: invalid_data via INVALID_REVIEW_DECISION. Row 8 Foreign Directory House: invalid_data via INVALID_MAPS_LISTING_URL (non-Google URL in maps_listing_url). Row 9 Amigos: existing_match with flag REVIEW_DECISION_CONFLICTS_WITH_MATCH (distinct_new_business contradicts a strong tool match — human must resolve).",
+  "rows": [
+    {
+      "name": "Research Garden Cafe",
+      "category": "cafe",
+      "address": "Shop 3, Service Road, Nagadenahalli",
+      "locality": "Nagadenahalli",
+      "city": "Doddaballapura",
+      "maps_listing_url": "https://www.google.com/maps/place/Research+Garden+Cafe/@13.2841,77.6009,17z",
+      "cuisine": "Continental, snacks",
+      "menu_notes": "Menu tab lists sandwiches and coffee; prices published",
+      "menu_source_url": "https://www.google.com/maps/place/Research+Garden+Cafe/@13.2841,77.6009,17z",
+      "listing_rating": "4.3",
+      "listing_review_count": "96",
+      "rating_source_url": "https://www.google.com/maps/place/Research+Garden+Cafe/@13.2841,77.6009,17z",
+      "rating_checked_on": "2026-10-10",
+      "opening_hours": "09:00-22:00",
+      "address_source_url": "https://www.google.com/maps/place/Research+Garden+Cafe/@13.2841,77.6009,17z",
+      "phone_source_url": "https://directory.example.com/research-garden-cafe",
+      "hours_source_url": "https://directory.example.com/research-garden-cafe",
+      "uncertainty_notes": "Signboard spelling differs from the listing by one letter; flagged for reviewer"
+    },
+    {
+      "name": "Search Url Cafes",
+      "maps_listing_url": "https://www.google.com/maps/search/cafes+near+GITAM"
+    },
+    {
+      "name": "Menu Rich Kitchen",
+      "cuisine": "North Indian, Chinese",
+      "menu_notes": "Third-party menu page lists thali combos",
+      "menu_source_url": "https://menus.example.com/menu-rich-kitchen",
+      "uncertainty_notes": "No address or listing found yet"
+    },
+    {
+      "name": "Count No Source Cafe",
+      "listing_review_count": "55"
+    },
+    {
+      "name": "Ayyappa Tiffin Room",
+      "address": "Scout Camp Road, near Railway Station, Doddaballapura",
+      "review_decision": "same_as_existing",
+      "existing_match_id": "02a34d5f-75cd-4dfc-bc4d-989e5ea7d3c5",
+      "notes": "Researcher corroborated the existing record; no second row to be created"
+    },
+    {
+      "name": "Wrong Id Diner",
+      "review_decision": "same_as_existing",
+      "existing_match_id": "00000000-0000-4000-8000-0000000000aa"
+    },
+    {
+      "name": "Bad Decision Bistro",
+      "review_decision": "i think new"
+    },
+    {
+      "name": "Foreign Directory House",
+      "maps_listing_url": "https://directory.example.com/justdial-style-page"
+    },
+    {
+      "name": "Amigos",
+      "address": "NH 207, Nagadenahalli",
+      "review_decision": "distinct_new_business",
+      "uncertainty_notes": "Researcher believes a second Amigos exists; tool strongly matches Amigos Cafe — must be resolved by a human"
+    }
+  ]
+}

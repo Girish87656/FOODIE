@@ -129,6 +129,11 @@ const HEADER_ALIASES: Record<string, string> = {
   external_rating: "listing_rating",
   hours: "opening_hours",
   note: "notes",
+  // Phase 3D research-workflow aliases
+  maps_url: "maps_listing_url",
+  google_maps_url: "maps_listing_url",
+  external_review_count: "listing_review_count",
+  checked_on: "rating_checked_on",
 };
 
 function toSnake(key: string): string {
@@ -240,6 +245,20 @@ function toCandidateInput(raw: RawRow, rowNumber: number): CandidateInput {
     coordinatesVerified: v.coordinates_verified ?? null,
     verificationStatus: v.verification_status ?? null,
     notes: v.notes ?? null,
+    mapsListingUrl: v.maps_listing_url ?? null,
+    cuisine: v.cuisine ?? null,
+    menuNotes: v.menu_notes ?? null,
+    listingReviewCount: v.listing_review_count ?? null,
+    ratingSourceUrl: v.rating_source_url ?? null,
+    ratingCheckedOn: v.rating_checked_on ?? null,
+    addressSourceUrl: v.address_source_url ?? null,
+    phoneSourceUrl: v.phone_source_url ?? null,
+    hoursSourceUrl: v.hours_source_url ?? null,
+    coordinatesSourceUrl: v.coordinates_source_url ?? null,
+    menuSourceUrl: v.menu_source_url ?? null,
+    uncertaintyNotes: v.uncertainty_notes ?? null,
+    reviewDecision: v.review_decision ?? null,
+    existingMatchId: v.existing_match_id ?? null,
     forbiddenColumns: raw.forbidden,
     unknownColumns: raw.unknown,
   };
@@ -342,6 +361,27 @@ async function main(): Promise<number> {
     }
     const hasErrors = issues.some((i) => i.severity === "error");
     const nameOnly = isNameOnly(normalized);
+
+    // Cross-checks that need the baseline / matching outcome (never DB writes):
+    // a recorded existing_match_id should point at a real baseline row, and a
+    // human "distinct_new_business" decision must not silently contradict a
+    // strong tool match — surface the contradiction, never auto-resolve it.
+    if (normalized.existingMatchId !== null) {
+      const known = baseline.rows.some((r) => r.id.toLowerCase() === normalized.existingMatchId);
+      if (!known) {
+        issues.push({
+          field: "existing_match_id",
+          code: "EXISTING_MATCH_ID_NOT_IN_BASELINE",
+          severity: "warning",
+          message:
+            "existing_match_id is a valid UUID but no existing restaurant with this id was found in the current baseline — refresh the baseline snapshot or fix the id.",
+        });
+      }
+    }
+    if (normalized.reviewDecision === "distinct_new_business" && outcome.hasStrong) {
+      flags.push("REVIEW_DECISION_CONFLICTS_WITH_MATCH");
+    }
+
     const { category, confidence } = classify(
       { rowNumber: candidate.rowNumber, input: candidate, normalized, issues, matches: outcome.matches, flags },
       hasErrors,

@@ -1,6 +1,6 @@
 # Foodie — Restaurant Import Dry-Run Report
 
-**Mode:** dry-run (read-only) · **Tool:** foodie-restaurant-import-validator v1.0.0
+**Mode:** dry-run (read-only) · **Tool:** foodie-restaurant-import-validator v1.1.0
 
 ## Run context
 
@@ -38,6 +38,9 @@
 - Missing coordinates, phone numbers, opening hours, prices, photos and menu data stay NULL — the tool never invents values.
 - External listing ratings (listing_rating + source_url) are kept strictly separate from Foodie community reviews (review_count / community_rating), which are trigger-maintained in the database and rejected if present in an import.
 - Recommended initial verification_status for any future import is 'unverified'; 'verified' can only be granted by human review.
+- A Google Maps listing URL (maps_listing_url) documents the listing only — it never verifies a coordinate, and a search-results URL is flagged because it identifies no business.
+- External rating/review counts (listing_rating, listing_review_count) require a source and a check date (rating_checked_on); they stay strictly separate from Foodie community reviews.
+- review_decision records the human duplicate-review decision verbatim — it never overrides the tool's matching and never triggers a database action.
 - Reports are deterministic (no timestamps): same input + same baseline snapshot ⇒ byte-identical report (idempotent re-runs).
 
 ## Potential new businesses (0)

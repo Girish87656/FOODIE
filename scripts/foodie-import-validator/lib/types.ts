@@ -9,6 +9,17 @@
 /** Evidence provenance for a candidate row (requirement 6). */
 export type EvidenceLevel = "directory_reported" | "independently_confirmed";
 
+/**
+ * Human duplicate-review decision (Phase 3D workflow). Recorded verbatim in
+ * the report — it NEVER overrides the tool's own matching, and it never
+ * triggers any database action. Empty/absent = not yet reviewed.
+ */
+export type ReviewDecision =
+  | "distinct_new_business"
+  | "same_as_existing"
+  | "possible_duplicate_hold"
+  | "needs_more_research";
+
 /** The five primary dry-run buckets (requirement 9). */
 export type RowCategory =
   | "potential_new"
@@ -46,6 +57,24 @@ export interface CandidateInput {
   coordinatesVerified: string | null;
   verificationStatus: string | null;
   notes: string | null;
+  // ---- Phase 3D research-workflow fields (all optional) ----------------
+  /** Google Maps LISTING (place) URL — a search-results URL is flagged. */
+  mapsListingUrl: string | null;
+  cuisine: string | null;
+  menuNotes: string | null;
+  listingReviewCount: string | null;
+  ratingSourceUrl: string | null;
+  /** YYYY-MM-DD when the external rating/review count was read. */
+  ratingCheckedOn: string | null;
+  addressSourceUrl: string | null;
+  phoneSourceUrl: string | null;
+  hoursSourceUrl: string | null;
+  coordinatesSourceUrl: string | null;
+  menuSourceUrl: string | null;
+  uncertaintyNotes: string | null;
+  reviewDecision: string | null;
+  /** Existing-record id referenced by review_decision=same_as_existing. */
+  existingMatchId: string | null;
   /** Columns/keys present in the input that the import must never supply. */
   forbiddenColumns: Array<{ field: string; value: string }>;
   /** Header names that did not map to any known column (typo protection). */
@@ -68,6 +97,14 @@ export interface NormalizedCandidate {
   listingRating: number | null;
   openingHours: string | null;
   priceLevel: string | null;
+  mapsListingUrl: string | null;
+  cuisine: string | null;
+  menuNotes: string | null;
+  listingReviewCount: number | null;
+  ratingCheckedOn: string | null;
+  uncertaintyNotes: string | null;
+  reviewDecision: ReviewDecision | null;
+  existingMatchId: string | null;
 }
 
 /** A match against an existing Supabase `restaurants` row. */

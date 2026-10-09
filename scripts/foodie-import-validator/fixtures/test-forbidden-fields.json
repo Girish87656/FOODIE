@@ -1,5 +1,5 @@
 {
-  "_comment": "Fixture: forbidden/system-managed and unsupported verification claims. Every row must land in invalid_data. Row 1 supplies trigger-maintained community fields. Row 2 claims coordinates_verified=true from a directory listing. Row 3 tries verification_status=verified. Row 4 has a listing rating with no source URL (warning, not error — stays potential_new + awaiting-confirmation).",
+  "_comment": "Fixture: forbidden/system-managed and unsupported verification claims. Every row must land in invalid_data EXCEPT row 4. Row 1 supplies trigger-maintained community fields. Row 2 claims coordinates_verified=true from a directory listing. Row 3 tries verification_status=verified. Row 4 has a listing rating with no source and no check date (two warnings, not errors — stays potential_new).",
   "rows": [
     {
       "name": "Trigger Field Cafe",

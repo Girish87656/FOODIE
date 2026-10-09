@@ -1,13 +1,13 @@
 # Foodie — Restaurant Import Dry-Run Report
 
-**Mode:** dry-run (read-only) · **Tool:** foodie-restaurant-import-validator v1.0.0
+**Mode:** dry-run (read-only) · **Tool:** foodie-restaurant-import-validator v1.1.0
 
 ## Run context
 
 | Item | Value |
 | --- | --- |
 | Input file | `/home/z/my-project/scripts/foodie-import-validator/fixtures/test-forbidden-fields.json` |
-| Input sha256 | `738a938f970937d5fc47c6b10dc52708639118113853bc2c4929578147924ebf` |
+| Input sha256 | `ed6ad1a88e0535ce278c7e8a36568c35f7ee62c884b86f0bf382c4ad755a245e` |
 | Rows in input | 4 |
 | Baseline source | snapshot |
 | Baseline file | `/home/z/my-project/scripts/foodie-import-validator/fixtures/baseline-snapshot.json` |
@@ -27,7 +27,7 @@
 | 6. Candidate coordinates awaiting confirmation (cross-cutting) | 1 |
 | **Total rows** | **4** |
 | Validation errors | 4 |
-| Validation warnings | 1 |
+| Validation warnings | 2 |
 
 ## Policy enforced by this run
 
@@ -38,6 +38,9 @@
 - Missing coordinates, phone numbers, opening hours, prices, photos and menu data stay NULL — the tool never invents values.
 - External listing ratings (listing_rating + source_url) are kept strictly separate from Foodie community reviews (review_count / community_rating), which are trigger-maintained in the database and rejected if present in an import.
 - Recommended initial verification_status for any future import is 'unverified'; 'verified' can only be granted by human review.
+- A Google Maps listing URL (maps_listing_url) documents the listing only — it never verifies a coordinate, and a search-results URL is flagged because it identifies no business.
+- External rating/review counts (listing_rating, listing_review_count) require a source and a check date (rating_checked_on); they stay strictly separate from Foodie community reviews.
+- review_decision records the human duplicate-review decision verbatim — it never overrides the tool's matching and never triggers a database action.
 - Reports are deterministic (no timestamps): same input + same baseline snapshot ⇒ byte-identical report (idempotent re-runs).
 
 ## Potential new businesses (1)
@@ -47,7 +50,8 @@
 - **Confidence:** low
 - **Input:** address: Bashettihalli · city: Doddaballapura · listing_rating: 4.8
 - **Issues:**
-  - `WARN` **LISTING_RATING_WITHOUT_SOURCE** (listing_rating): An external listing rating is present without source_url — evidence without provenance. Add the listing URL or drop the rating.
+  - `WARN` **LISTING_RATING_WITHOUT_SOURCE** (listing_rating): An external listing rating is present without any source (source_url / rating_source_url / maps_listing_url) — evidence without provenance. Add a source or drop the rating.
+  - `WARN` **RATING_WITHOUT_CHECK_DATE** (rating_checked_on): An external rating/review count was captured without rating_checked_on — record the date you read it so staleness can be judged later.
 - **Recommended initial verification_status:** unverified
 
 ## Existing-record matches (no action taken — never auto-merged) (0)

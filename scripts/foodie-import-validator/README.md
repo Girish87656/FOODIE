@@ -9,6 +9,11 @@ anything is considered for import into the Supabase `restaurants` table.
 > endpoint the app reads). There is no insert/update/delete code path anywhere.
 > See `demo/no-write-proof.ts` for an executable proof.
 
+**Researching businesses for the next import round?** Start with
+[`WORKFLOW.md`](./WORKFLOW.md) — the field-by-field Phase 3D data-collection
+guide — and fill `input/research-worksheet-phase3d.csv`. This README documents
+the tool itself.
+
 ## What it does
 
 1. Reads candidates from a **CSV or JSON** file you provide.
@@ -106,14 +111,27 @@ columns are rejected outright.
 | `latitude` / `longitude` | – | Numeric ranges enforced; lat/lng swap detection; soft corridor check (warning) outside GITAM–Doddaballapura bbox |
 | `source_url` | – | Must be `http(s)` |
 | `evidence_level` | – | `directory_reported` (default) · `independently_confirmed` |
-| `listing_rating` | – | 0–5; external rating only; warns without `source_url` |
+| `listing_rating` | – | 0–5; external rating only; warns without any source (`source_url` / `rating_source_url` / `maps_listing_url`) and without a check date |
 | `opening_hours` | – | `HH:MM-HH:MM` 24h |
 | `price_level` | – | `₹` · `₹₹` · `₹₹₹` |
 | `coordinates_verified` | – | `true`/`false`; `true` requires independent evidence + source (else rejected) |
 | `verification_status` | – | Enum; `verified` rejected; others warn (recommend leaving empty) |
 | `notes` | – | Free text; preserved as evidence context |
+| `maps_listing_url` | – | Google Maps **place-page** URL. Search-result URLs → `MAPS_URL_IS_SEARCH_NOT_LISTING` (and do not count as identity/source); non-Google URLs rejected (use `source_url`); never coordinate evidence |
+| `cuisine` / `menu_notes` | – | Free text from reliable public sources; descriptive only — do NOT lift a name-only row out of insufficient evidence |
+| `menu_source_url` | – | `http(s)`; backs the menu details specifically |
+| `listing_review_count` | – | Non-negative integer; EXTERNAL directory count — never Foodie community data; warns without any source |
+| `rating_source_url` | – | `http(s)`; where the rating/count were read |
+| `rating_checked_on` | – | `YYYY-MM-DD` when the rating/count were observed; expected whenever a rating/count is present (`RATING_WITHOUT_CHECK_DATE` warning) |
+| `address_source_url` / `phone_source_url` / `hours_source_url` / `coordinates_source_url` | – | Per-field provenance where practical |
+| `uncertainty_notes` | – | Free text; everything unresolved about this row |
+| `review_decision` | – | Human duplicate-review decision: `distinct_new_business` · `same_as_existing` · `possible_duplicate_hold` · `needs_more_research`; recorded verbatim, never overrides matching |
+| `existing_match_id` | – | UUID of the existing record (required in practice for `same_as_existing`); checked for format and against the baseline (`EXISTING_MATCH_ID_NOT_IN_BASELINE` warning) |
 
 Templates: `input/template.csv` and `input/template.json`.
+Research worksheet for the 23 Phase 3D candidates:
+`input/research-worksheet-phase3d.csv` (names + region only — fill per
+`WORKFLOW.md`).
 
 ## Matching methodology (transparent, conservative)
 
@@ -131,6 +149,10 @@ Templates: `input/template.csv` and `input/template.json`.
   tokens — generic names don't create false matches.
 - **Intra-file duplicates**: pairwise strong name/phone/geo match between
   candidate rows → both flagged, neither merged.
+- **Human decisions are recorded, never obeyed**: `review_decision=same_as_existing`
+  does not create or merge anything; `distinct_new_business` against a strong
+  tool match raises the `REVIEW_DECISION_CONFLICTS_WITH_MATCH` flag for a human
+  to resolve.
 
 ## Determinism & idempotency
 
@@ -157,7 +179,8 @@ runs the full pipeline, and asserts every captured request is a `GET`
 | `fixtures/test-missing-fields.csv` | Name-only rows, blank/whitespace names, CSV quoting |
 | `fixtures/test-malformed.json` | Bad lat/lng (range + swap), bad phones, bad URL, bad enums, bad hours, corridor warning |
 | `fixtures/test-duplicates.json` | Exact + fuzzy intra-file duplicate pairs, existing-record matches |
-| `fixtures/test-forbidden-fields.json` | Trigger-maintained fields, unsupported verification claims, rating without source |
+| `fixtures/test-forbidden-fields.json` | Trigger-maintained fields, unsupported verification claims, rating without source/date |
+| `fixtures/test-research-fields.json` | Phase 3D fields: place-anchored vs search Maps URLs, cuisine/menu-only rows, review counts, check dates, review decisions, match-id checks, decision-vs-match conflict |
 
 `fixtures/baseline-snapshot.json` is a **read-only export** of the live
 public `restaurants` rows (business listing data only — no keys) used to keep
@@ -175,5 +198,8 @@ runs deterministic between refreshes.
 - Coordinates are only range/swap/corridor-checked. Whether a pin is at the
   *exact business* requires independent confirmation (Phase 3B workflow) — a
   map-search result or directory pin never verifies it.
+- A place-anchored Google Maps URL is accepted as **evidence of the listing**,
+  not of the coordinate; the tool cannot open URLs or check that a short link
+  resolves to the claimed business.
 - This tool is **not an importer**. It will never write to Supabase; a
   reviewed, human-approved SQL/insert path remains the only way data enters.

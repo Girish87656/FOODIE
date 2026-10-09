@@ -1,13 +1,13 @@
 # Foodie — Restaurant Import Dry-Run Report
 
-**Mode:** dry-run (read-only) · **Tool:** foodie-restaurant-import-validator v1.0.0
+**Mode:** dry-run (read-only) · **Tool:** foodie-restaurant-import-validator v1.1.0
 
 ## Run context
 
 | Item | Value |
 | --- | --- |
 | Input file | `/home/z/my-project/scripts/foodie-import-validator/fixtures/test-valid.json` |
-| Input sha256 | `733559cc178f4c7a0a9d138a19a989f1207c3d0e89b7557c6e9626adb65473ed` |
+| Input sha256 | `f1a281d3e773830b0db3c0de6aa1e67cd22359e89902eba352ca805107988ef4` |
 | Rows in input | 3 |
 | Baseline source | snapshot |
 | Baseline file | `/home/z/my-project/scripts/foodie-import-validator/fixtures/baseline-snapshot.json` |
@@ -38,6 +38,9 @@
 - Missing coordinates, phone numbers, opening hours, prices, photos and menu data stay NULL — the tool never invents values.
 - External listing ratings (listing_rating + source_url) are kept strictly separate from Foodie community reviews (review_count / community_rating), which are trigger-maintained in the database and rejected if present in an import.
 - Recommended initial verification_status for any future import is 'unverified'; 'verified' can only be granted by human review.
+- A Google Maps listing URL (maps_listing_url) documents the listing only — it never verifies a coordinate, and a search-results URL is flagged because it identifies no business.
+- External rating/review counts (listing_rating, listing_review_count) require a source and a check date (rating_checked_on); they stay strictly separate from Foodie community reviews.
+- review_decision records the human duplicate-review decision verbatim — it never overrides the tool's matching and never triggers a database action.
 - Reports are deterministic (no timestamps): same input + same baseline snapshot ⇒ byte-identical report (idempotent re-runs).
 
 ## Potential new businesses (2)
@@ -45,7 +48,7 @@
 ### Row 1: Lotus Leaf Cafe
 
 - **Confidence:** medium
-- **Input:** address: Shop 3, NH-207 service road, Nagadenahalli · locality: Nagadenahalli · city: Doddaballapura · phone: +91 98765 43210 · coords: 13.2841, 77.6009 · source: https://directory.example.com/lotus-leaf-cafe · listing_rating: 4.4 · evidence: directory_reported
+- **Input:** address: Shop 3, NH-207 service road, Nagadenahalli · locality: Nagadenahalli · city: Doddaballapura · phone: +91 98765 43210 · coords: 13.2841, 77.6009 · source: https://directory.example.com/lotus-leaf-cafe · listing_rating: 4.4 · checked_on: 2026-10-09 · evidence: directory_reported
 - **Coordinates awaiting confirmation:** 13.2841, 77.6009 — evidence level: directory_reported · source: https://directory.example.com/lotus-leaf-cafe. Candidate pin only — do NOT treat as confirmed GPS until independently checked against the exact business.
 - **Recommended initial verification_status:** unverified
 

@@ -19,7 +19,7 @@ import {
   parseLongitude,
 } from "./normalize";
 
-export const TOOL_VERSION = "1.0.0";
+export const TOOL_VERSION = "1.1.0";
 
 /** The 7 pilot categories (supabase/schema.sql §1). */
 export const PLACE_CATEGORIES = [
@@ -41,6 +41,14 @@ export const VERIFICATION_STATUSES = [
 
 export const EVIDENCE_LEVELS = ["directory_reported", "independently_confirmed"] as const;
 
+/** Human duplicate-review decisions accepted in the review_decision column. */
+export const REVIEW_DECISIONS = [
+  "distinct_new_business",
+  "same_as_existing",
+  "possible_duplicate_hold",
+  "needs_more_research",
+] as const;
+
 /** CSV/JSON headers accepted by the tool (canonical snake_case). */
 export const KNOWN_FIELDS = [
   "name",
@@ -59,6 +67,21 @@ export const KNOWN_FIELDS = [
   "coordinates_verified",
   "verification_status",
   "notes",
+  // ---- Phase 3D research-workflow fields (all optional) ----------------
+  "maps_listing_url",
+  "cuisine",
+  "menu_notes",
+  "listing_review_count",
+  "rating_source_url",
+  "rating_checked_on",
+  "address_source_url",
+  "phone_source_url",
+  "hours_source_url",
+  "coordinates_source_url",
+  "menu_source_url",
+  "uncertainty_notes",
+  "review_decision",
+  "existing_match_id",
 ] as const;
 
 /** Columns that belong to the live database's trigger-maintained aggregates. */
@@ -70,10 +93,17 @@ export interface RowValidation {
 }
 
 const HOURS_RE = /^(\d{1,2})(?::(\d{2}))?-(\d{1,2})(?::(\d{2}))?$/;
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 function s(v: string | null | undefined): string | null {
   const t = (v ?? "").trim();
   return t === "" ? null : t;
+}
+
+function isGoogleMapsHost(host: string): boolean {
+  const h = host.toLowerCase();
+  return /(^|\.)google\./.test(h) || h === "goo.gl" || h.endsWith(".goo.gl");
 }
 
 function validateHours(raw: string, issues: Issue[]): string | null {
@@ -123,6 +153,14 @@ export function validateRow(input: CandidateInput): RowValidation {
     listingRating: null,
     openingHours: null,
     priceLevel: null,
+    mapsListingUrl: null,
+    cuisine: s(input.cuisine),
+    menuNotes: s(input.menuNotes),
+    listingReviewCount: null,
+    ratingCheckedOn: null,
+    uncertaintyNotes: s(input.uncertaintyNotes),
+    reviewDecision: null,
+    existingMatchId: null,
   };
 
   // ---- name ----------------------------------------------------------
@@ -229,7 +267,7 @@ export function validateRow(input: CandidateInput): RowValidation {
     }
   }
 
-  // ---- source URL ----------------------------------------------------
+  // ---- source URL + per-field source URLs -----------------------------
   const sourceUrl = s(input.sourceUrl);
   if (sourceUrl !== null) {
     try {
@@ -242,6 +280,82 @@ export function validateRow(input: CandidateInput): RowValidation {
         code: "INVALID_URL",
         severity: "error",
         message: `"${sourceUrl}" is not a valid http(s) URL. Kept as null.`,
+      });
+    }
+  }
+
+  for (const [field, raw] of [
+    ["rating_source_url", input.ratingSourceUrl],
+    ["address_source_url", input.addressSourceUrl],
+    ["phone_source_url", input.phoneSourceUrl],
+    ["hours_source_url", input.hoursSourceUrl],
+    ["coordinates_source_url", input.coordinatesSourceUrl],
+    ["menu_source_url", input.menuSourceUrl],
+  ] as const) {
+    const v = s(raw);
+    if (v === null) continue;
+    try {
+      const u = new URL(v);
+      if (u.protocol !== "http:" && u.protocol !== "https:") throw new Error("protocol");
+    } catch {
+      issues.push({
+        field,
+        code: "INVALID_URL",
+        severity: "error",
+        message: `"${v}" is not a valid http(s) URL. Kept as null.`,
+      });
+    }
+  }
+
+  // ---- Google Maps listing URL ------------------------------------------
+  // A LISTING (place) URL documents the listing — it is never coordinate
+  // evidence and never sets coordinates_verified. A search-results URL (or any
+  // URL not anchored to a specific place) identifies NO business: it is
+  // flagged AND does not count as an identity anchor or a rating source.
+  const mapsUrlRaw = s(input.mapsListingUrl);
+  if (mapsUrlRaw !== null) {
+    try {
+      const u = new URL(mapsUrlRaw);
+      if (u.protocol !== "http:" && u.protocol !== "https:") throw new Error("protocol");
+      if (!isGoogleMapsHost(u.hostname)) {
+        issues.push({
+          field: "maps_listing_url",
+          code: "INVALID_MAPS_LISTING_URL",
+          severity: "error",
+          message: `"${mapsUrlRaw}" is not a Google Maps URL. Put other directories' listing URLs in source_url instead. Kept as null.`,
+        });
+      } else {
+        const isShortLink = /(^|\.)goo\.gl$/.test(u.hostname.toLowerCase());
+        const isSearch = u.pathname.includes("/maps/search/");
+        const placeAnchored =
+          u.pathname.includes("/maps/place/") ||
+          u.searchParams.has("place_id") ||
+          u.searchParams.has("cid");
+        if (isSearch) {
+          issues.push({
+            field: "maps_listing_url",
+            code: "MAPS_URL_IS_SEARCH_NOT_LISTING",
+            severity: "warning",
+            message:
+              "This is a Google Maps SEARCH-results URL, not a business listing. A search URL does not identify a business and never proves its location. Open the exact place page and use that URL.",
+          });
+        } else if (!isShortLink && !placeAnchored) {
+          issues.push({
+            field: "maps_listing_url",
+            code: "MAPS_URL_NOT_PLACE_ANCHORED",
+            severity: "warning",
+            message:
+              "This Google Maps URL does not anchor to a specific place (no /maps/place/ path, place_id or cid). Short links should be expanded; use the place page URL.",
+          });
+        }
+        normalized.mapsListingUrl = isSearch || (!isShortLink && !placeAnchored) ? null : u.toString();
+      }
+    } catch {
+      issues.push({
+        field: "maps_listing_url",
+        code: "INVALID_URL",
+        severity: "error",
+        message: `"${mapsUrlRaw}" is not a valid http(s) URL. Kept as null.`,
       });
     }
   }
@@ -263,6 +377,8 @@ export function validateRow(input: CandidateInput): RowValidation {
 
   // ---- listing rating (external directory rating — NEVER community) ----
   const ratingRaw = s(input.listingRating);
+  const hasAnyRatingSource =
+    normalized.sourceUrl !== null || s(input.ratingSourceUrl) !== null || normalized.mapsListingUrl !== null;
   if (ratingRaw !== null) {
     const v = Number(ratingRaw);
     if (!Number.isFinite(v) || v < 0 || v > 5) {
@@ -274,16 +390,78 @@ export function validateRow(input: CandidateInput): RowValidation {
       });
     } else {
       normalized.listingRating = v;
-      if (normalized.sourceUrl === null) {
+      if (!hasAnyRatingSource) {
         issues.push({
           field: "listing_rating",
           code: "LISTING_RATING_WITHOUT_SOURCE",
           severity: "warning",
           message:
-            "An external listing rating is present without source_url — evidence without provenance. Add the listing URL or drop the rating.",
+            "An external listing rating is present without any source (source_url / rating_source_url / maps_listing_url) — evidence without provenance. Add a source or drop the rating.",
         });
       }
     }
+  }
+
+  // ---- external listing review count (directory count — NEVER community) --
+  const reviewCountRaw = s(input.listingReviewCount);
+  if (reviewCountRaw !== null) {
+    const v = Number(reviewCountRaw);
+    if (!Number.isInteger(v) || v < 0) {
+      issues.push({
+        field: "listing_review_count",
+        code: "INVALID_LISTING_REVIEW_COUNT",
+        severity: "error",
+        message: `"${reviewCountRaw}" is not a non-negative whole number.`,
+      });
+    } else {
+      normalized.listingReviewCount = v;
+      if (!hasAnyRatingSource) {
+        issues.push({
+          field: "listing_review_count",
+          code: "LISTING_REVIEW_COUNT_WITHOUT_SOURCE",
+          severity: "warning",
+          message:
+            "An external listing review count is present without any source (source_url / rating_source_url / maps_listing_url) — evidence without provenance.",
+        });
+      }
+    }
+  }
+
+  // ---- rating check date ------------------------------------------------
+  const checkedOnRaw = s(input.ratingCheckedOn);
+  if (checkedOnRaw !== null) {
+    if (!DATE_RE.test(checkedOnRaw)) {
+      issues.push({
+        field: "rating_checked_on",
+        code: "INVALID_DATE",
+        severity: "error",
+        message: `"${checkedOnRaw}" is not a YYYY-MM-DD date.`,
+      });
+    } else {
+      const [, month, day] = checkedOnRaw.split("-").map(Number);
+      if (month < 1 || month > 12 || day < 1 || day > 31) {
+        issues.push({
+          field: "rating_checked_on",
+          code: "INVALID_DATE",
+          severity: "error",
+          message: `"${checkedOnRaw}" has an out-of-range month or day.`,
+        });
+      } else {
+        normalized.ratingCheckedOn = checkedOnRaw;
+      }
+    }
+  }
+  if (
+    (normalized.listingRating !== null || normalized.listingReviewCount !== null) &&
+    normalized.ratingCheckedOn === null
+  ) {
+    issues.push({
+      field: "rating_checked_on",
+      code: "RATING_WITHOUT_CHECK_DATE",
+      severity: "warning",
+      message:
+        "An external rating/review count was captured without rating_checked_on — record the date you read it so staleness can be judged later.",
+    });
   }
 
   // ---- opening hours --------------------------------------------------
@@ -304,6 +482,44 @@ export function validateRow(input: CandidateInput): RowValidation {
         message: `"${priceRaw}" is not one of: ₹, ₹₹, ₹₹₹.`,
       });
     }
+  }
+
+  // ---- duplicate-review decision (human input, recorded never obeyed) ----
+  const decisionRaw = s(input.reviewDecision);
+  if (decisionRaw !== null) {
+    if ((REVIEW_DECISIONS as readonly string[]).includes(decisionRaw)) {
+      normalized.reviewDecision = decisionRaw as NormalizedCandidate["reviewDecision"];
+    } else {
+      issues.push({
+        field: "review_decision",
+        code: "INVALID_REVIEW_DECISION",
+        severity: "error",
+        message: `"${decisionRaw}" is not one of: ${REVIEW_DECISIONS.join(", ")} (leave empty when undecided).`,
+      });
+    }
+  }
+
+  const matchIdRaw = s(input.existingMatchId);
+  if (matchIdRaw !== null) {
+    if (!UUID_RE.test(matchIdRaw)) {
+      issues.push({
+        field: "existing_match_id",
+        code: "INVALID_EXISTING_MATCH_ID",
+        severity: "error",
+        message: `"${matchIdRaw}" is not a UUID. Copy the full existing-record id from the dry-run report.`,
+      });
+    } else {
+      normalized.existingMatchId = matchIdRaw.toLowerCase();
+    }
+  }
+  if (normalized.reviewDecision === "same_as_existing" && normalized.existingMatchId === null) {
+    issues.push({
+      field: "existing_match_id",
+      code: "SAME_AS_EXISTING_WITHOUT_MATCH_ID",
+      severity: "warning",
+      message:
+        'review_decision is "same_as_existing" but no existing_match_id is given — record WHICH existing record this candidate duplicates (copy its id from the dry-run report).',
+    });
   }
 
   // ---- verification claims ---------------------------------------------
@@ -371,7 +587,13 @@ export function validateRow(input: CandidateInput): RowValidation {
   return { issues, normalized };
 }
 
-/** True when the row carries no usable data beyond the name. */
+/**
+ * True when the row carries no usable IDENTITY data beyond the name.
+ * Descriptive research fields (cuisine, menu notes, uncertainty notes,
+ * per-field source URLs, review decisions) do NOT identify a business and do
+ * not lift a row out of insufficient_evidence — only an address/locality/
+ * phone/coordinates/hours/price/rating or a specific Maps listing does.
+ */
 export function isNameOnly(normalized: NormalizedCandidate): boolean {
   return (
     normalized.category === null &&
@@ -383,6 +605,8 @@ export function isNameOnly(normalized: NormalizedCandidate): boolean {
     normalized.longitude === null &&
     normalized.openingHours === null &&
     normalized.priceLevel === null &&
-    normalized.listingRating === null
+    normalized.listingRating === null &&
+    normalized.mapsListingUrl === null &&
+    normalized.listingReviewCount === null
   );
 }

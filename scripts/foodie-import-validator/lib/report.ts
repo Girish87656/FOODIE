@@ -14,6 +14,7 @@ import type {
   RowCategory,
   ValidatedRow,
 } from "./types";
+import { TOOL_VERSION } from "./rules";
 
 export const CATEGORY_ORDER: RowCategory[] = [
   "potential_new",
@@ -76,6 +77,9 @@ export const REPORT_POLICY: string[] = [
   "Missing coordinates, phone numbers, opening hours, prices, photos and menu data stay NULL — the tool never invents values.",
   "External listing ratings (listing_rating + source_url) are kept strictly separate from Foodie community reviews (review_count / community_rating), which are trigger-maintained in the database and rejected if present in an import.",
   "Recommended initial verification_status for any future import is 'unverified'; 'verified' can only be granted by human review.",
+  "A Google Maps listing URL (maps_listing_url) documents the listing only — it never verifies a coordinate, and a search-results URL is flagged because it identifies no business.",
+  "External rating/review counts (listing_rating, listing_review_count) require a source and a check date (rating_checked_on); they stay strictly separate from Foodie community reviews.",
+  "review_decision records the human duplicate-review decision verbatim — it never overrides the tool's matching and never triggers a database action.",
   "Reports are deterministic (no timestamps): same input + same baseline snapshot ⇒ byte-identical report (idempotent re-runs).",
 ];
 
@@ -92,7 +96,7 @@ export function buildReport(
 ): DryRunReport {
   return {
     tool: "foodie-restaurant-import-validator",
-    version: "1.0.0",
+    version: TOOL_VERSION,
     mode: "dry-run (read-only)",
     input,
     baseline: {
@@ -123,9 +127,16 @@ function describeInput(c: CandidateInput): string {
   if (c.city) parts.push(`city: ${c.city}`);
   if (c.phone) parts.push(`phone: ${c.phone}`);
   if (c.latitudeRaw && c.longitudeRaw) parts.push(`coords: ${c.latitudeRaw}, ${c.longitudeRaw}`);
+  if (c.mapsListingUrl) parts.push(`maps_listing: ${c.mapsListingUrl}`);
   if (c.sourceUrl) parts.push(`source: ${c.sourceUrl}`);
+  if (c.cuisine) parts.push(`cuisine: ${c.cuisine}`);
   if (c.listingRating) parts.push(`listing_rating: ${c.listingRating}`);
+  if (c.listingReviewCount) parts.push(`listing_reviews: ${c.listingReviewCount}`);
+  if (c.ratingCheckedOn) parts.push(`checked_on: ${c.ratingCheckedOn}`);
   if (c.evidenceLevel) parts.push(`evidence: ${c.evidenceLevel}`);
+  if (c.reviewDecision) parts.push(`review_decision: ${c.reviewDecision}`);
+  if (c.existingMatchId) parts.push(`existing_match_id: ${c.existingMatchId}`);
+  if (c.uncertaintyNotes) parts.push(`uncertainty: ${c.uncertaintyNotes}`);
   if (c.notes) parts.push(`notes: ${c.notes}`);
   return parts.length === 0 ? "_no data beyond the name_" : parts.join(" · ");
 }
