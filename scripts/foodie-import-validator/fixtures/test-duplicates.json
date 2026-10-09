@@ -1,0 +1,10 @@
+{
+  "_comment": "Fixture: duplicate candidates. Rows 1+2 are an exact-name duplicate pair (intra-file). Rows 3+4 are a fuzzy pair (one-letter spelling difference) that ALSO strong-matches the existing 'SS Hyderabadi Biriyani Zone'. Row 5 strong-matches the existing 'Amigos Cafe' by token subset.",
+  "rows": [
+    { "name": "Sunrise Juice Center", "address": "NH-207, Nagadenahalli", "city": "Doddaballapura" },
+    { "name": "Sunrise Juice Center", "address": "NH-207 near GITAM gate", "city": "Doddaballapura" },
+    { "name": "SS Hyderabadi Biriyani Zone", "address": "Nagadenahalli", "city": "Doddaballapura" },
+    { "name": "SS Hyderabadi Biryani Zone", "address": "Nagadenahalli", "city": "Doddaballapura" },
+    { "name": "Amigos", "address": "Nagadenahalli", "city": "Doddaballapura" }
+  ]
+}

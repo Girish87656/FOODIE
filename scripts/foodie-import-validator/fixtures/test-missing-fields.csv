@@ -1,0 +1,4 @@
+name,notes
+"Vayassu Tiffin Room","name-only row — should land in insufficient_evidence"
+,"blank name — should land in invalid_data (MISSING_NAME)"
+"   ","whitespace name — should land in invalid_data (MISSING_NAME)"

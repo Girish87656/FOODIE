@@ -1,0 +1,37 @@
+{
+  "_comment": "Fixture: valid input rows. Expected outcomes — Lotus Leaf Cafe: potential_new + coordinates_awaiting_confirmation (directory pin). Nagadenahalli Bake Studio: potential_new, NOT awaiting confirmation (claims independently_confirmed + source; claim recorded, never auto-trusted). Kiran Cha House: possible_duplicate via SAME_PHONE_DIFFERENT_NAME (reuses Ayyappa Tiffin Room's phone).",
+  "rows": [
+    {
+      "name": "Lotus Leaf Cafe",
+      "category": "cafe",
+      "address": "Shop 3, NH-207 service road, Nagadenahalli",
+      "locality": "Nagadenahalli",
+      "city": "Doddaballapura",
+      "phone": "+91 98765 43210",
+      "latitude": "13.2841",
+      "longitude": "77.6009",
+      "source_url": "https://directory.example.com/lotus-leaf-cafe",
+      "evidence_level": "directory_reported",
+      "listing_rating": "4.4",
+      "opening_hours": "09:00-22:30",
+      "price_level": "₹"
+    },
+    {
+      "name": "Nagadenahalli Bake Studio",
+      "category": "bakery_sweets",
+      "address": "Survey 42, Bashettihalli main road",
+      "locality": "Bashettihalli",
+      "city": "Doddaballapura",
+      "latitude": "13.2701",
+      "longitude": "77.5531",
+      "source_url": "https://field-notes.example.com/bake-studio-gps",
+      "evidence_level": "independently_confirmed"
+    },
+    {
+      "name": "Kiran Cha House",
+      "phone": "080 8859 9999",
+      "address": "Railway Station Road",
+      "city": "Doddaballapura"
+    }
+  ]
+}

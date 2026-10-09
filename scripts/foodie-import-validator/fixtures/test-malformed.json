@@ -1,0 +1,16 @@
+{
+  "_comment": "Fixture: malformed/invalid values. Expected: every row lands in invalid_data with the error code noted per row, and the offending value is kept OUT of the normalized output (stays null).",
+  "rows": [
+    { "name": "Bad Lat Cafe", "latitude": "999.0", "longitude": "77.601", "source_url": "https://ok.example.com/bad-lat", "notes": "latitude 999 -> INVALID_COORDINATES (out of [-90,90])" },
+    { "name": "Bad Lng Cafe", "latitude": "13.2841", "longitude": "not-a-number", "source_url": "https://ok.example.com/bad-lng", "notes": "longitude not numeric -> INVALID_COORDINATES" },
+    { "name": "Swapped Pin Diner", "latitude": "77.5512", "longitude": "13.2843", "source_url": "https://ok.example.com/swap", "notes": "both values inside the other's India range -> INVALID_COORDINATES + COORDINATES_SWAPPED" },
+    { "name": "Bad Phone House", "phone": "12345", "notes": "phone 12345 -> INVALID_PHONE" },
+    { "name": "Zero Start Cafe", "phone": "0123456789", "notes": "10 digits starting 0 after STD strip -> INVALID_PHONE" },
+    { "name": "Bad URL Store", "source_url": "htp://missing-slash.example.com", "notes": "scheme not http(s) -> INVALID_URL" },
+    { "name": "Bad Evidence Villa", "evidence_level": "maybe", "notes": "evidence_level maybe -> INVALID_EVIDENCE_LEVEL" },
+    { "name": "Bad Hours Dhaba", "opening_hours": "26:00-99:99", "notes": "hours out of range -> INVALID_HOURS" },
+    { "name": "Bad Price Mess", "price_level": "Rs", "category": "restaurant", "notes": "price Rs -> INVALID_PRICE_LEVEL" },
+    { "name": "Bad Category Spot", "category": "dhaba", "notes": "category dhaba -> INVALID_CATEGORY (7 pilot categories)" },
+    { "name": "Corridor Diner", "latitude": "12.7001", "longitude": "77.7001", "source_url": "https://ok.example.com/corridor", "notes": "VALID coords but south of the pilot bbox -> OUTSIDE_PILOT_CORRIDOR warning; row itself remains potential_new" }
+  ]
+}

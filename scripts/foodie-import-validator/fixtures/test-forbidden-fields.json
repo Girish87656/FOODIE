@@ -1,0 +1,34 @@
+{
+  "_comment": "Fixture: forbidden/system-managed and unsupported verification claims. Every row must land in invalid_data. Row 1 supplies trigger-maintained community fields. Row 2 claims coordinates_verified=true from a directory listing. Row 3 tries verification_status=verified. Row 4 has a listing rating with no source URL (warning, not error — stays potential_new + awaiting-confirmation).",
+  "rows": [
+    {
+      "name": "Trigger Field Cafe",
+      "address": "Nagadenahalli",
+      "city": "Doddaballapura",
+      "community_rating": "4.5",
+      "review_count": "12"
+    },
+    {
+      "name": "Selfie Pin Cafe",
+      "address": "NH-207",
+      "city": "Doddaballapura",
+      "latitude": "13.2842",
+      "longitude": "77.6010",
+      "source_url": "https://directory.example.com/selfie-pin",
+      "evidence_level": "directory_reported",
+      "coordinates_verified": "true"
+    },
+    {
+      "name": "Pretend Verified Biryani",
+      "address": "Railway Station Road",
+      "city": "Doddaballapura",
+      "verification_status": "verified"
+    },
+    {
+      "name": "Rating No Source Cafe",
+      "address": "Bashettihalli",
+      "city": "Doddaballapura",
+      "listing_rating": "4.8"
+    }
+  ]
+}

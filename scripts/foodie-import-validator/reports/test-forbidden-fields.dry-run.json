@@ -1,0 +1,271 @@
+{
+  "tool": "foodie-restaurant-import-validator",
+  "version": "1.0.0",
+  "mode": "dry-run (read-only)",
+  "input": {
+    "file": "/home/z/my-project/scripts/foodie-import-validator/fixtures/test-forbidden-fields.json",
+    "sha256": "738a938f970937d5fc47c6b10dc52708639118113853bc2c4929578147924ebf",
+    "rowCount": 4
+  },
+  "baseline": {
+    "source": "snapshot",
+    "file": "/home/z/my-project/scripts/foodie-import-validator/fixtures/baseline-snapshot.json",
+    "sha256": "f3daf908bc5f5ecf8ddcda428467500574fb86be808a236116229c44ad03f594",
+    "fetchedAt": "2026-10-09T13:20:19.904Z",
+    "rowCount": 14
+  },
+  "summary": {
+    "totalRows": 4,
+    "potentialNew": 1,
+    "existingMatches": 0,
+    "possibleDuplicates": 0,
+    "insufficientEvidence": 0,
+    "invalidData": 3,
+    "coordinatesAwaitingConfirmation": 1,
+    "errors": 4,
+    "warnings": 1
+  },
+  "policy": [
+    "DRY RUN ONLY — this tool performs ZERO database writes: it has no insert/update/delete code path and reads the existing records with a single GET using the public publishable key.",
+    "Existing-record matches are reported for human review; nothing is merged, updated or created.",
+    "Every coordinate in the input is a CANDIDATE until independently confirmed against the exact business; directory pins are never treated as confirmed GPS evidence.",
+    "coordinates_verified can never be set from a third-party directory listing; the tool rejects unsupported verification claims outright.",
+    "Missing coordinates, phone numbers, opening hours, prices, photos and menu data stay NULL — the tool never invents values.",
+    "External listing ratings (listing_rating + source_url) are kept strictly separate from Foodie community reviews (review_count / community_rating), which are trigger-maintained in the database and rejected if present in an import.",
+    "Recommended initial verification_status for any future import is 'unverified'; 'verified' can only be granted by human review.",
+    "Reports are deterministic (no timestamps): same input + same baseline snapshot ⇒ byte-identical report (idempotent re-runs)."
+  ],
+  "rows": [
+    {
+      "rowNumber": 1,
+      "input": {
+        "rowNumber": 1,
+        "name": "Trigger Field Cafe",
+        "category": null,
+        "address": "Nagadenahalli",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitudeRaw": null,
+        "longitudeRaw": null,
+        "sourceUrl": null,
+        "evidenceLevel": null,
+        "listingRating": null,
+        "openingHours": null,
+        "priceLevel": null,
+        "coordinatesVerified": null,
+        "verificationStatus": null,
+        "notes": null,
+        "forbiddenColumns": [
+          {
+            "field": "community_rating",
+            "value": "4.5"
+          },
+          {
+            "field": "review_count",
+            "value": "12"
+          }
+        ],
+        "unknownColumns": []
+      },
+      "normalized": {
+        "name": "Trigger Field Cafe",
+        "category": null,
+        "address": "Nagadenahalli",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitude": null,
+        "longitude": null,
+        "sourceUrl": null,
+        "evidenceLevel": "directory_reported",
+        "listingRating": null,
+        "openingHours": null,
+        "priceLevel": null
+      },
+      "issues": [
+        {
+          "field": "community_rating",
+          "code": "FORBIDDEN_SYSTEM_FIELD",
+          "severity": "error",
+          "message": "\"community_rating\" (value \"4.5\") is maintained by database triggers (migration-005) and can never be provided by an import. Remove the column/value."
+        },
+        {
+          "field": "review_count",
+          "code": "FORBIDDEN_SYSTEM_FIELD",
+          "severity": "error",
+          "message": "\"review_count\" (value \"12\") is maintained by database triggers (migration-005) and can never be provided by an import. Remove the column/value."
+        }
+      ],
+      "category": "invalid_data",
+      "confidence": "none",
+      "matches": [],
+      "intraFileDuplicates": [],
+      "flags": [],
+      "coordinatesAwaitingConfirmation": false,
+      "recommendedVerificationStatus": "unverified"
+    },
+    {
+      "rowNumber": 2,
+      "input": {
+        "rowNumber": 2,
+        "name": "Selfie Pin Cafe",
+        "category": null,
+        "address": "NH-207",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitudeRaw": "13.2842",
+        "longitudeRaw": "77.6010",
+        "sourceUrl": "https://directory.example.com/selfie-pin",
+        "evidenceLevel": "directory_reported",
+        "listingRating": null,
+        "openingHours": null,
+        "priceLevel": null,
+        "coordinatesVerified": "true",
+        "verificationStatus": null,
+        "notes": null,
+        "forbiddenColumns": [],
+        "unknownColumns": []
+      },
+      "normalized": {
+        "name": "Selfie Pin Cafe",
+        "category": null,
+        "address": "NH-207",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitude": 13.2842,
+        "longitude": 77.601,
+        "sourceUrl": "https://directory.example.com/selfie-pin",
+        "evidenceLevel": "directory_reported",
+        "listingRating": null,
+        "openingHours": null,
+        "priceLevel": null
+      },
+      "issues": [
+        {
+          "field": "coordinates_verified",
+          "code": "UNSUPPORTED_VERIFICATION_CLAIM",
+          "severity": "error",
+          "message": "coordinates_verified=true requires evidence_level=independently_confirmed AND a source_url. A directory listing (or no provenance at all) never verifies a pin."
+        }
+      ],
+      "category": "invalid_data",
+      "confidence": "none",
+      "matches": [],
+      "intraFileDuplicates": [],
+      "flags": [],
+      "coordinatesAwaitingConfirmation": true,
+      "recommendedVerificationStatus": "unverified"
+    },
+    {
+      "rowNumber": 3,
+      "input": {
+        "rowNumber": 3,
+        "name": "Pretend Verified Biryani",
+        "category": null,
+        "address": "Railway Station Road",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitudeRaw": null,
+        "longitudeRaw": null,
+        "sourceUrl": null,
+        "evidenceLevel": null,
+        "listingRating": null,
+        "openingHours": null,
+        "priceLevel": null,
+        "coordinatesVerified": null,
+        "verificationStatus": "verified",
+        "notes": null,
+        "forbiddenColumns": [],
+        "unknownColumns": []
+      },
+      "normalized": {
+        "name": "Pretend Verified Biryani",
+        "category": null,
+        "address": "Railway Station Road",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitude": null,
+        "longitude": null,
+        "sourceUrl": null,
+        "evidenceLevel": "directory_reported",
+        "listingRating": null,
+        "openingHours": null,
+        "priceLevel": null
+      },
+      "issues": [
+        {
+          "field": "verification_status",
+          "code": "UNSUPPORTED_VERIFICATION_CLAIM",
+          "severity": "error",
+          "message": "Import candidates cannot enter as 'verified'. Verification is granted by a human after on-site/phone confirmation, never by an import file."
+        }
+      ],
+      "category": "invalid_data",
+      "confidence": "none",
+      "matches": [],
+      "intraFileDuplicates": [],
+      "flags": [],
+      "coordinatesAwaitingConfirmation": false,
+      "recommendedVerificationStatus": "unverified"
+    },
+    {
+      "rowNumber": 4,
+      "input": {
+        "rowNumber": 4,
+        "name": "Rating No Source Cafe",
+        "category": null,
+        "address": "Bashettihalli",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitudeRaw": null,
+        "longitudeRaw": null,
+        "sourceUrl": null,
+        "evidenceLevel": null,
+        "listingRating": "4.8",
+        "openingHours": null,
+        "priceLevel": null,
+        "coordinatesVerified": null,
+        "verificationStatus": null,
+        "notes": null,
+        "forbiddenColumns": [],
+        "unknownColumns": []
+      },
+      "normalized": {
+        "name": "Rating No Source Cafe",
+        "category": null,
+        "address": "Bashettihalli",
+        "locality": null,
+        "city": "Doddaballapura",
+        "phone": null,
+        "latitude": null,
+        "longitude": null,
+        "sourceUrl": null,
+        "evidenceLevel": "directory_reported",
+        "listingRating": 4.8,
+        "openingHours": null,
+        "priceLevel": null
+      },
+      "issues": [
+        {
+          "field": "listing_rating",
+          "code": "LISTING_RATING_WITHOUT_SOURCE",
+          "severity": "warning",
+          "message": "An external listing rating is present without source_url — evidence without provenance. Add the listing URL or drop the rating."
+        }
+      ],
+      "category": "potential_new",
+      "confidence": "low",
+      "matches": [],
+      "intraFileDuplicates": [],
+      "flags": [],
+      "coordinatesAwaitingConfirmation": false,
+      "recommendedVerificationStatus": "unverified"
+    }
+  ]
+}
