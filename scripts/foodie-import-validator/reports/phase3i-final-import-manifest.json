@@ -1,0 +1,472 @@
+{
+  "manifest_version": "phase3i-final-import-manifest",
+  "artifact_status": "REVIEW ARTIFACT — the companion SQL has NEVER been executed; zero live-database writes have occurred in this pipeline. Importing requires explicit human approval and a manual SQL-Editor run by the repository owner.",
+  "generator": "scripts/foodie-import-validator/gen-import-sql.ts (deterministic; re-running against the same committed inputs reproduces both artifacts byte-for-byte)",
+  "supersedes": "reports/phase3h-proposed-import-manifest.json",
+  "inputs": {
+    "phase3h_manifest": {
+      "path": "scripts/foodie-import-validator/reports/phase3h-proposed-import-manifest.json",
+      "sha256": "0ed6e045f7cc35b0268676f76019685e4a54d8f9caff1788a15cdc7029abc4a7"
+    },
+    "fresh_validator_run": {
+      "path": "scripts/foodie-import-validator/reports/research-2026-10-09-final-qa.dry-run.json",
+      "sha256": "1d8c0e86fc2c55ffe4569a81dd172a2e4558f476ed1c93aad6b6894846c59e47",
+      "summary": {
+        "totalRows": 45,
+        "potentialNew": 35,
+        "existingMatches": 0,
+        "possibleDuplicates": 9,
+        "insufficientEvidence": 1,
+        "invalidData": 0,
+        "coordinatesAwaitingConfirmation": 16,
+        "errors": 0,
+        "warnings": 0
+      },
+      "note": "fresh dry-run of the 45-row worksheet against a live read-only baseline snapshot; existing-matches 0, errors 0, warnings 0; idempotency proven (byte-identical re-run)"
+    },
+    "live_baseline": {
+      "path": "scripts/foodie-import-validator/fixtures/baseline-snapshot.json",
+      "sha256": "4a198d3d38cda21b6d367def77ecc6943727b4f5e8eec3152889181185040a39",
+      "count": 14,
+      "fetched_at": "2026-10-09T17:22:52.336Z",
+      "mode": "live-read-only-get",
+      "names": [
+        "Abhiram Food Court",
+        "Amigos Cafe",
+        "Ayyappa Tiffin Room",
+        "Brundavana Family Restaurant",
+        "Chickpet Donne Biryani House",
+        "GITAM University Canteen",
+        "Hotel Halli Nanasu",
+        "Hotel Royal Nandhana",
+        "Priyanka Tiffen Center",
+        "Shri Manjunatha Grand Veg",
+        "Sri Annapoorneshwari Tiffin Center",
+        "Sri Ganesh Grand",
+        "SS Hyderabadi Biriyani Zone",
+        "The Biryani Shack"
+      ]
+    }
+  },
+  "decision": {
+    "proposed_insert_set": 14,
+    "held_possible_duplicate": 4,
+    "held_needs_more_research": 20,
+    "existing_matches": 0,
+    "note": "All 14 Phase 3H rows survived the fresh live re-check (no name/phone/coordinate collision with the 14 live rows; no collision inside the set). Three rows (15, 17, 32) carry documented cross-directory PROXIMITY ADVISORIES — distinct names/categories/phones; the paired rows (20, 44) are HELD and are NOT in the insert set. Nothing is promoted to verified; the insert set is not reduced."
+  },
+  "import_state_guarantees": {
+    "verification_status": "unverified (every row)",
+    "verification_booleans": "address_verified / coordinates_verified / hours_verified / photos_verified all stay NULL",
+    "last_verified_at": "stays NULL — never verified",
+    "community_aggregates": "review_count=0 (schema default), community_rating untouched (trigger-maintained); the imported `rating` is the external directory rating, separate forever",
+    "coordinates": "only where a directory publishes them; candidate_coordinates; excluded from nearby-distance discovery until field-verified",
+    "missing_values": "NULL — never guessed"
+  },
+  "sql_file": {
+    "path": "supabase/insert-batch-003-phase3h-14.sql",
+    "sha256": "018751a5b8f8883bf47c15a88fa4f8d00244637a680424970be40307d97222b8",
+    "executed": false,
+    "execution_policy": "Manual, by the repository owner, after explicit approval, via the Supabase SQL Editor, in one transaction. The file contains preflight guards (baseline-drift + name/phone/id collision aborts), per-row guarded inserts, and read-only postflight verification queries. COMMIT is performed by the human after eyeballing the postflight output."
+  },
+  "proposed_insert_set": [
+    {
+      "worksheet_row": 2,
+      "name": "The Shri Cafe and Restaurant",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Nagadenahalli",
+      "latitude": null,
+      "longitude": null,
+      "phone": "+919844929931",
+      "listing_rating": 4.5,
+      "listing_review_count": 17,
+      "opening_hours": null,
+      "price_level": null,
+      "source_url": "https://www.justdial.com/Bangalore/The-Shri-Cafe-And-Restaurant-Nagadenahalii/080PXX80-XX80-251224194043-V6Q3_BZDET",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "5987ea2a-dd7b-561f-8b0a-cb6d1e614c76",
+      "tags": [],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 4,
+      "name": "Epicurus Multi Cuisine Restaurant",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Nagadenahalli",
+      "latitude": 13.2852505,
+      "longitude": 77.598904,
+      "phone": "+919035972563",
+      "listing_rating": null,
+      "listing_review_count": null,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://www.district.in/dining/doddaballapura/epicurus-multi-cuisine-restaurant-doddaballapura-locality",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "85807b55-1ea0-5781-8aa1-4264edec77ca",
+      "tags": [],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 8,
+      "name": "Lotus Gardenia",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Nagadenahalli",
+      "latitude": null,
+      "longitude": null,
+      "phone": null,
+      "listing_rating": 4,
+      "listing_review_count": 2410,
+      "opening_hours": null,
+      "price_level": null,
+      "source_url": "https://www.justdial.com/Bangalore/Lotus-Gardenia-Restaurants-Bar-Rooms-Opposite-Indian-Oil-Petrol-BunkNear-Railway-Station-Doddaballapur/080PXX80-XX80-210421154401-X4L9_BZDET",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "17330e95-8470-5d90-aff0-e9a6bf3c1bdb",
+      "tags": [],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 12,
+      "name": "Best Choice Bakery",
+      "category": "bakery_sweets",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapur town",
+      "latitude": null,
+      "longitude": null,
+      "phone": "+919980213680",
+      "listing_rating": 4,
+      "listing_review_count": 386,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Best-Choice-Bakery/store/922554",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "6cda358f-f756-58e7-aa62-6b6fd808fb8f",
+      "tags": [],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 14,
+      "name": "Rainbow Huts Family Restaurant",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Bashettihalli",
+      "latitude": null,
+      "longitude": null,
+      "phone": "+918951368020",
+      "listing_rating": 4.6,
+      "listing_review_count": 49,
+      "opening_hours": null,
+      "price_level": null,
+      "source_url": "https://magicpin.in/Bangalore/Bashettihalli/Restaurant/Rainbow-Huts-Family-Restaurant/store/184787c",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "b5359a3e-dead-5481-b469-d8d0e1dd80be",
+      "tags": [
+        "family_restaurant"
+      ],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 15,
+      "name": "Hotel Bindushree Family Restaurant",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Bashettihalli",
+      "latitude": 13.2799,
+      "longitude": 77.556969,
+      "phone": null,
+      "listing_rating": 4.2,
+      "listing_review_count": 5,
+      "opening_hours": null,
+      "price_level": null,
+      "source_url": "https://magicpin.in/Bangalore/Bashettihalli/Hotel/Hotel-Bindushree-Family-Restaurant/store/1174189",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "a28b5aa3-70d6-5ff1-b36f-faf3fd1cd1ac",
+      "tags": [
+        "family_restaurant"
+      ],
+      "proximity_advisory": "cross-directory pin proximity — see manifest decision note; distinct identity evidence"
+    },
+    {
+      "worksheet_row": 17,
+      "name": "Sri Vinayaka Food Point",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura Railway Station",
+      "latitude": 13.279693,
+      "longitude": 77.5515242,
+      "phone": "+918197052687",
+      "listing_rating": 4.1,
+      "listing_review_count": 4731,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Sri-Vinayaka-Food-Point/store/15a4365",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "c7e99d61-c536-571f-81ac-c8807ec914d9",
+      "tags": [],
+      "proximity_advisory": "cross-directory pin proximity — see manifest decision note; distinct identity evidence"
+    },
+    {
+      "worksheet_row": 23,
+      "name": "Kiran Tiffin Room",
+      "category": "tiffin",
+      "city": "Doddaballapura",
+      "locality": "Kasbhag Road",
+      "latitude": null,
+      "longitude": null,
+      "phone": "+919663965135",
+      "listing_rating": 4.8,
+      "listing_review_count": 78,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://restaurant-guru.in/Aiyappa-Tiffin-Center-Doddaballapura",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "a6caa179-490d-55ba-8acc-608225d624a4",
+      "tags": [],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 32,
+      "name": "Abhis Food Court",
+      "category": "fast_food",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura Railway Station / Scout Camp Road",
+      "latitude": 13.2798556,
+      "longitude": 77.5561673,
+      "phone": "+916361695837",
+      "listing_rating": 4.9,
+      "listing_review_count": 1,
+      "opening_hours": "17:00-22:00",
+      "price_level": "₹",
+      "source_url": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Abhis-Food-Court/store/1575606",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "18d3bc43-f148-5b3e-980c-e9f63ebfe6f1",
+      "tags": [
+        "food_court"
+      ],
+      "proximity_advisory": "cross-directory pin proximity — see manifest decision note; distinct identity evidence"
+    },
+    {
+      "worksheet_row": 33,
+      "name": "Burger Time",
+      "category": "fast_food",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura town",
+      "latitude": 13.291965,
+      "longitude": 77.542015,
+      "phone": "+918553717034",
+      "listing_rating": 3.9,
+      "listing_review_count": 6,
+      "opening_hours": "10:45-20:45",
+      "price_level": "₹",
+      "source_url": "https://www.district.in/dining/doddaballapura/burger-time-doddaballapura-locality",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "f93d78ab-ac75-5477-85d0-ca800a7cd33f",
+      "tags": [
+        "burger"
+      ],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 34,
+      "name": "Bbq Junction",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura town",
+      "latitude": 13.285751,
+      "longitude": 77.5311807,
+      "phone": "+919945071428",
+      "listing_rating": 4.7,
+      "listing_review_count": 14,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Bbq-Junction/store/1835603",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "c5fcb7c8-a971-569c-a162-d6bebbf9e5fa",
+      "tags": [
+        "bbq"
+      ],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 35,
+      "name": "Rajashree Veg And Non-Veg Family Restaurant",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura town",
+      "latitude": 13.301893,
+      "longitude": 77.55085,
+      "phone": "+919030376363",
+      "listing_rating": null,
+      "listing_review_count": null,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://www.district.in/dining/doddaballapura/rajashree-veg-and-non-veg-family-restaurant-doddaballapura-locality",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "966f2829-6584-5315-bef3-46800053a84e",
+      "tags": [
+        "family_restaurant"
+      ],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 36,
+      "name": "Maha Naati Ruchi",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura town",
+      "latitude": 13.3044077,
+      "longitude": 77.5425688,
+      "phone": "+918095788474",
+      "listing_rating": 4.2,
+      "listing_review_count": 546,
+      "opening_hours": null,
+      "price_level": "₹",
+      "source_url": "https://www.district.in/dining/doddaballapura/maha-naati-ruchi-3-doddaballapura-locality",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "902fa33d-850b-5fb8-9a17-5c7306776e8f",
+      "tags": [],
+      "proximity_advisory": null
+    },
+    {
+      "worksheet_row": 37,
+      "name": "Palav Ramu Hotel",
+      "category": "restaurant",
+      "city": "Doddaballapura",
+      "locality": "Doddaballapura bus stand area",
+      "latitude": null,
+      "longitude": null,
+      "phone": null,
+      "listing_rating": 3.9,
+      "listing_review_count": 97,
+      "opening_hours": "12:00-22:00",
+      "price_level": "₹",
+      "source_url": "https://restaurant-guru.in/PALAV-RAMU-HOTEL-Doddaballapura",
+      "evidence_level": "directory_reported",
+      "review_decision": "distinct_new_business",
+      "uuid": "d644e9f7-058d-54ce-88c3-202420cccc44",
+      "tags": [
+        "palav"
+      ],
+      "proximity_advisory": null
+    }
+  ],
+  "held_and_excluded_reference": [
+    {
+      "worksheet_row": 1,
+      "name": "GITAM Cafe",
+      "status": "possible_duplicate_hold",
+      "reason": "no distinguishing phone/address vs GITAM University Canteen; campus-edge on-site check pending"
+    },
+    {
+      "worksheet_row": 20,
+      "name": "Hotel Krishnamoorthy",
+      "status": "possible_duplicate_hold",
+      "reason": "FB alias claim ('Ayyappa Tiffin Room, also known as Krishnamurthy Hotel') + ~150 m proximity; phones differ; two calls / on-site decide"
+    },
+    {
+      "worksheet_row": 9,
+      "name": "Vaibhava Sweets & Chats",
+      "status": "possible_duplicate_hold",
+      "reason": "Vaibhava/Vybhava spelling family; Fort Rd 'Vybhava Sweets' may be a distinct shop"
+    },
+    {
+      "worksheet_row": 21,
+      "name": "Ganesh Darshan & Chats",
+      "status": "possible_duplicate_hold",
+      "reason": "plus-code conflicts with JD placement; 'ganesh' token vs Sri Ganesh Grand needs distinguishing phone/address"
+    },
+    {
+      "worksheet_row": 22,
+      "name": "Lakshmi Biriyani Point",
+      "status": "needs_more_research - excluded pending current-operation confirmation",
+      "reason": "magicpin shutdown banner (re-confirmed 2026-10-09) vs live JD listing; call +919845263318 or on-site"
+    },
+    {
+      "worksheet_row": 6,
+      "name": "Mantralaya Hotel & Chats",
+      "status": "needs_more_research",
+      "reason": "distinct from row 24 (address-distinguished) but JD-only, no phone"
+    },
+    {
+      "worksheet_row": 24,
+      "name": "Mantralaya Hotel",
+      "status": "needs_more_research",
+      "reason": "distinct from row 24's sibling listing; JD-only, sparse"
+    },
+    {
+      "worksheet_row": 5,
+      "name": "Biryani Cafe",
+      "status": "do_not_import (3E recommendation)",
+      "reason": "no listing found in target zones; no identity"
+    },
+    {
+      "worksheet_row": 10,
+      "name": "Appu Chats",
+      "status": "do_not_import (3E recommendation)",
+      "reason": "only listing is Tubugere - outside the two agreed zones"
+    },
+    {
+      "worksheet_row": 38,
+      "name": "Shawarma Cartel",
+      "status": "needs_more_research",
+      "reason": "address conflict (Market Rd vs Hemavathipet vs '3rd branch Main Rd') + multi-branch claim; one call decides"
+    },
+    {
+      "worksheet_row": 39,
+      "name": "Udupi Upahar",
+      "status": "needs_more_research",
+      "reason": "3-4 same-name local listings + Zomato temp-closed banner; which listing is the candidate is unresolved"
+    },
+    {
+      "worksheet_row": 40,
+      "name": "Hasanamba Iyengar Bakery",
+      "status": "needs_more_research",
+      "reason": "no directory listing exists; IG reel only (Jalappa College Rd)"
+    },
+    {
+      "worksheet_row": 41,
+      "name": "Durgashree Samruddhi Grand Veg",
+      "status": "needs_more_research",
+      "reason": "Grand/Garden name family + Kasaba-Police-Stn vs Muthasandra split; human must pick the family member; Maps place URL + verified magicpin captured"
+    },
+    {
+      "worksheet_row": 42,
+      "name": "Desi Family Dhaba And Restaurant",
+      "status": "needs_more_research",
+      "reason": "in-zone (GITAM/Nagadenahalli) but snippet-only; JD rating conflict; no phone; needs a second source"
+    },
+    {
+      "worksheet_row": 43,
+      "name": "Zoop Cafe",
+      "status": "needs_more_research",
+      "reason": "real 'Zoop Cafe' on Jalappa College Rd but queued name 'Diamond Zoop Cafe' found nowhere; identity intent to confirm"
+    },
+    {
+      "worksheet_row": 44,
+      "name": "Five Star Kohli Hut",
+      "status": "needs_more_research",
+      "reason": "exact-name verified magicpin listing exists; unresolved vs JD 'Five Star Chicken - Koli Hut' (Basettihalli) and brand naming"
+    },
+    {
+      "worksheet_row": 45,
+      "name": "Lounge de La Reserve",
+      "status": "needs_more_research - do_not_import recommended",
+      "reason": "located Raghunathapura, Devanahalli Rd (near Grover Zampa) - outside both agreed zones; human may override"
+    }
+  ]
+}
