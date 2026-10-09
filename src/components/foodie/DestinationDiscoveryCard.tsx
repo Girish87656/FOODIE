@@ -35,7 +35,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { MapPin, RefreshCw, X } from "lucide-react";
+import { MapPin, RefreshCw, Search, X } from "lucide-react";
 import { haversineKm } from "@/lib/foodie/location";
 import type { GeoPosition } from "@/lib/foodie/types";
 import type { Destination, DestinationFood, DestinationFoodDesignation } from "@/lib/foodie/types";
@@ -116,7 +116,7 @@ function sortFoods(foods: readonly DestinationFood[]): DestinationFood[] {
   });
 }
 
-export function DestinationDiscoveryCard({ className }: { className?: string }) {
+export function DestinationDiscoveryCard({ className, onFindFoodPlaces }: { className?: string; /** Destination → Famous Food → Places handoff: search the REAL place pool for a food's name (honest empty state when nothing matches). */ onFindFoodPlaces?: (foodName: string) => void }) {
   const { status, destinations } = useDestinations();
   // Read-only subscription — this component never writes location state.
   const origin = useLocationStore((s) => s.origin);
@@ -197,6 +197,7 @@ export function DestinationDiscoveryCard({ className }: { className?: string }) 
             onRetryFoods={foodsState.reload}
             onAutoCollapse={dismiss}
             onDismiss={dismiss}
+            onFindFoodPlaces={onFindFoodPlaces}
           />
         </div>
       )}
@@ -250,6 +251,7 @@ function FamousHereCard({
   onRetryFoods,
   onAutoCollapse,
   onDismiss,
+  onFindFoodPlaces,
 }: {
   source: "detected" | "selected";
   destination: Destination;
@@ -259,6 +261,7 @@ function FamousHereCard({
   onRetryFoods: () => void;
   onAutoCollapse: () => void;
   onDismiss: () => void;
+  onFindFoodPlaces?: (foodName: string) => void;
 }) {
   // Auto-collapse — one timer per PRESENTATION INSTANCE: the parent keys
   // this component by presentation.key, so every show event remounts it and
@@ -326,30 +329,49 @@ function FamousHereCard({
         </p>
       ) : (
         <ul className="mt-3 space-y-2">
-          {foods.map((f) => (
-            <li key={f.id} className="rounded-2xl bg-white/80 px-3 py-2.5 shadow-sm">
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-[13.5px] font-bold text-foreground">{f.name}</p>
-                {f.designation && (
-                  <span
-                    className={cn(
-                      "shrink-0 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide",
-                      f.designation === "signature" && "bg-primary/10 text-primary",
-                      f.designation === "famous" && "bg-amber-100 text-amber-700",
-                      f.designation === "local" && "bg-emerald-50 text-emerald-700"
-                    )}
-                  >
-                    {designationLabel(f.designation)}
-                  </span>
+          {foods.map((f) => {
+            const findPlaces = onFindFoodPlaces
+              ? () => {
+                  onFindFoodPlaces(f.name);
+                  onDismiss();
+                }
+              : undefined;
+            return (
+              <li key={f.id} className="rounded-2xl bg-white/80 px-3 py-2.5 shadow-sm">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-[13.5px] font-bold text-foreground">{f.name}</p>
+                  {f.designation && (
+                    <span
+                      className={cn(
+                        "shrink-0 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide",
+                        f.designation === "signature" && "bg-primary/10 text-primary",
+                        f.designation === "famous" && "bg-amber-100 text-amber-700",
+                        f.designation === "local" && "bg-emerald-50 text-emerald-700"
+                      )}
+                    >
+                      {designationLabel(f.designation)}
+                    </span>
+                  )}
+                </div>
+                {f.description && (
+                  <p className="mt-0.5 line-clamp-2 text-[12px] leading-snug text-stone-600">
+                    {f.description}
+                  </p>
                 )}
-              </div>
-              {f.description && (
-                <p className="mt-0.5 line-clamp-2 text-[12px] leading-snug text-stone-600">
-                  {f.description}
-                </p>
-              )}
-            </li>
-          ))}
+                {findPlaces && (
+                  <button
+                    type="button"
+                    onClick={findPlaces}
+                    aria-label={`Search Foodie for places serving ${f.name}`}
+                    className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-white px-3 py-1.5 text-[11.5px] font-bold text-primary shadow-sm transition-all hover:bg-orange-50 active:scale-95"
+                  >
+                    <Search className="size-3" aria-hidden="true" />
+                    Find places
+                  </button>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
 
