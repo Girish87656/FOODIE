@@ -10,8 +10,8 @@
   "baseline": {
     "source": "snapshot",
     "file": "/home/z/my-project/scripts/foodie-import-validator/fixtures/baseline-snapshot.json",
-    "sha256": "f7faa45a2eb88464072bb87fbb9824ae76fefcd7fe37e435407e082ed6e9117a",
-    "fetchedAt": "2026-10-09T14:23:36.907Z",
+    "sha256": "e9968f0ef90ddbb1db0e6bec4f34a23c50dcfad00f07c27df9489136b6e7a768",
+    "fetchedAt": "2026-10-09T15:57:25.231Z",
     "rowCount": 14
   },
   "summary": {
