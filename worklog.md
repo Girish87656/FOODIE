@@ -1079,3 +1079,24 @@ Stage Summary:
 - Everything UP TO the push is verified ready: tree clean, range audited secret-free, marker in place, fast-forward-only (0 behind).
 - EXACT NEXT STEP (human): provide a GitHub credential with write access to Girish87656/FOODIE — recommended: create a fine-grained PAT (repo FOODIE, Contents: Read+Write) or classic PAT with `repo` scope, then either (a) run `git push origin main` locally where the credential can be entered securely, or (b) provide the token as an env var (GH_TOKEN) for the sandbox session and revoke it after release. Vercel Git integration then triggers the deployment automatically on push (no local Vercel token exists).
 - Import remains UNEXECUTED pending explicit approval of the exact SQL + hash.
+
+---
+Task ID: release-final-execution
+Agent: Z.ai Code (main)
+Task: FINAL PUSH AND DEPLOYMENT — complete device-flow auth, fast-forward push, wait for real Vercel build, verify marker + deployed commit, production smoke tests.
+
+Work Log:
+- Rechecked state: HEAD 5a18585 (22 ahead — one worklog-only auto-checkpoint atop 28d4370), tree clean, 0 behind; push re-test still failed anonymously.
+- No pre-existing GitHub connection found anywhere (gh config, credential stores, .netrc, SSH, env) → initiated GitHub official OAuth DEVICE FLOW (gh CLI public client id; grant appears as "GitHub CLI" in the user's account).
+- User authorized via https://github.com/login/device (one-time code shown in chat; token NEVER printed/persisted in chat). Token stored only in ~/.git-credentials (0600). Verified API: push permission TRUE on Girish87656/FOODIE.
+- Final range audit (22 commits, 129+1 files): 0 .env, 0 postgres-credential URLs, 0 JWT/private-key patterns, all 27 tool-results/ changes are DELETIONS (leaked historical files now removed from tree tip), new commit is worklog-only prose.
+- PUSH: `f9b056d..5a18585 main -> main` fast-forward, exit 0, divergence 0/0. History preserved, no force.
+- Vercel Git integration AUTO-TRIGGERED on push; commit status on 5a18585: Vercel=pending → Vercel=success ("Deployment has completed"), target https://vercel.com/arjun-123b/foodie/UebxCJ7KoPG6uye2g7nWdWHwUdrB.
+- Deployment verification: production alias https://foodie-arjun-123b.vercel.app/ serves `application-version: prototype-2.1.0` (age 0, fresh); branch alias foodie-git-main-arjun-123b.vercel.app identical. NOTE: the previously-reported URL foodie-k4za8m5ba-arjun-123b.vercel.app is an immutable 9-day-old unique CLI-deployment snapshot (served stale cache, no marker) — the live production domain is foodie-arjun-123b.vercel.app.
+- Production smoke (all against foodie-arjun-123b.vercel.app, mode=supabase real data): /restaurants/all 14 rows (unverified, communityRating null) · nearby(13.1837,77.6832,25km) 6 · category restaurant 8 / tiffin 3 / cafe 1 · search biryani 2, cafe 1, no-match 0 · destinations 3 · Bengaluru foods 2 (Benne Masala Dosa, Bisi Bele Bath) · detail honesty fields correct (unverified / communityRating None / reviewCount 0 / addressVerified None / coordsVerified None) · reviews GET 0 rows · food→places handoff honest 0 · assistant empty-message guard 400 · assistant grounded 200 with 6 structured real places (Biryani Shack, Shri Manjunatha Grand Veg, Amigos Cafe…), no "verified" claims.
+- DB integrity: only GET reads + assistant POST (LLM); reviews 0 rows before and after; no import executed (SQL sha256 018751a5… still unexecuted); no credential changes; no history rewrite.
+
+Stage Summary:
+- RELEASE SHIPPED: origin/main = 5a18585, Vercel production deployment SUCCESS, live at https://foodie-arjun-123b.vercel.app/ with prototype-2.1.0 marker.
+- 14-restaurant import remains UNAPPROVED and UNEXECUTED.
+- GitHub OAuth grant (scope repo) remains stored in sandbox ~/.git-credentials for future releases; user may revoke at github.com/settings/applications ("GitHub CLI").
