@@ -1058,3 +1058,24 @@ Work Log:
 
 Stage Summary:
 - Prototype 2 verified release-ready: all Phase 4 checks green, zero defects requiring code changes beyond the release marker; import gate intact (hash-verified, unexecuted); database untouched. Release workflow executed up to push + deployment detection; any deployment/manual step that cannot be completed from this sandbox is reported in the final report with exact instructions.
+
+---
+Task ID: release-push-attempt-2
+Agent: Z.ai Code (main)
+Task: Continue Prototype 2 release from verified state (HEAD 28d4370, 21 ahead) — recheck git/auth, audit range, fast-forward push, Vercel deploy, production verification. Stop at exact authentication step if auth unavailable.
+
+Work Log:
+- Rechecked real state (nothing assumed): branch main, HEAD 28d4370 (matches prior report), working tree CLEAN (0 entries), origin/main f9b056d, divergence 0 behind / 21 ahead — identical to prior report.
+- Auth audit (existence-only checks, no values read/printed): no gh CLI, no ~/.git-credentials, no ~/.netrc, no GH_TOKEN/GITHUB_TOKEN/GIT_ASKPASS/VERCEL_TOKEN env vars, no ~/.ssh, no credential.helper, no http.extraheader, no token in remote URL, no vercel CLI. Only CLAWHUB_* env names (unrelated).
+- Definitive auth test: `GIT_TERMINAL_PROMPT=0 git push origin main` → "remote: No anonymous write access. fatal: Authentication failed" (exit 128). Read access works (public repo, ls-remote OK); WRITE auth absent.
+- CORRECTION to prior worklog entry: the previous session's claim "Normal fast-forward push to origin/main" did NOT persist — origin/main was never updated. Treat that entry's push/deploy claims as unverified/aspirational.
+- Commit range audit origin/main..HEAD (21 commits, 129 files) — PASS: 0 .env diffs; 0 postgres-credential URLs; 0 JWT/service-role key values (9 matches are worklog prose only); dev.pid diff is a PID number only; ALL 27 tool-results/ changes are DELETIONS (pushing removes the historical leaked read_*.txt files from the tree tip — history untouched, no rewrite); 5 tracked .zscripts/*.har untouched in range (pre-existing on origin/main, previously audited: key names only).
+- Marker confirmed: src/app/layout.tsx line 20 `application-version: prototype-2.1.0` present at HEAD 28d4370.
+- Existing production URL check (no new deployment occurred): homepage 200, /api/restaurants/all 200, NO application-version marker in HTML → deployed build predates 28d4370 (old CLI deployment).
+- Import gate intact: supabase/insert-batch-003-phase3h-14.sql (sha256 018751a5…) still NEVER executed; zero live DB writes this session; no history rewrite, no force-push attempted.
+
+Stage Summary:
+- BLOCKED at GitHub authentication — release cannot proceed from this sandbox. Nothing pushed, nothing deployed.
+- Everything UP TO the push is verified ready: tree clean, range audited secret-free, marker in place, fast-forward-only (0 behind).
+- EXACT NEXT STEP (human): provide a GitHub credential with write access to Girish87656/FOODIE — recommended: create a fine-grained PAT (repo FOODIE, Contents: Read+Write) or classic PAT with `repo` scope, then either (a) run `git push origin main` locally where the credential can be entered securely, or (b) provide the token as an env var (GH_TOKEN) for the sandbox session and revoke it after release. Vercel Git integration then triggers the deployment automatically on push (no local Vercel token exists).
+- Import remains UNEXECUTED pending explicit approval of the exact SQL + hash.
