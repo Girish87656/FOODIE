@@ -11,8 +11,8 @@
 | Rows in input | 45 |
 | Baseline source | snapshot |
 | Baseline file | `/home/z/my-project/scripts/foodie-import-validator/fixtures/baseline-snapshot.json` |
-| Baseline sha256 | `4a198d3d38cda21b6d367def77ecc6943727b4f5e8eec3152889181185040a39` |
-| Baseline fetched at | 2026-10-09T17:22:52.336Z |
+| Baseline sha256 | `73fe8156a4cd3765c5e539861830ca7b11bcd442b87204f15e21b656f2b6f4ce` |
+| Baseline fetched at | 2026-10-10T14:23:10.916Z |
 | Baseline rows (existing restaurants) | 14 |
 
 ## Summary

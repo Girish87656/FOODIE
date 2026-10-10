@@ -1,0 +1,78 @@
+-- ============================================================================
+-- Foodie — INSERT BATCH 004: curated DESTINATION FOOD → PLACE relationships
+-- ----------------------------------------------------------------------------
+-- Requires: migration-004-destination-food-places.sql (the link table) —
+--           apply that FIRST.
+--
+-- WHAT THIS DOES
+--   NOTHING YET — deliberately. This batch is the template for the curated
+--   evidence-gated "food → place" relationships. It currently inserts ZERO
+--   rows because, as of authoring, NO relationship between the 5 curated
+--   destination foods (Bengaluru / Tirupati / Mumbai) and the 14 real
+--   Foodie restaurants (all in the Doddaballapura pilot corridor) can be
+--   supported by actual evidence:
+--
+--     * No destination food is associated with Doddaballapura.
+--     * No pilot-corridor restaurant publishes a menu naming any of these
+--       foods (the dishes table is empty; listings captured so far name
+--       only generic categories like tiffin/cafe/biryani).
+--     * Category / name / cuisine similarity is NEVER sufficient evidence
+--       (see migration-004 header).
+--
+--   Per the data-honesty rule: fewer real places beat fabricated
+--   relationships, so the honest state is ZERO links, and the UI shows the
+--   honest "No verified places serving this food have been added yet."
+--   empty state for every food.
+--
+-- HOW TO CURATE A RELATIONSHIP (later, when evidence exists)
+--   1) Find real evidence that the SPECIFIC restaurant serves the SPECIFIC
+--      destination food (its own menu/site, a reputable publication naming
+--      the place, or owner confirmation).
+--   2) Uncomment ONE template block below, fill in:
+--        - a fresh fixed uuid (never reuse),
+--        - the destination food NAME (resolved by destination slug + name,
+--          never by guessed id),
+--        - the restaurant NAME + city (resolved exactly like batch-001),
+--        - a one-line source citation in the comment.
+--   3) Review, then paste into Supabase SQL Editor and Run.
+--
+-- DUPLICATE SAFETY (same house pattern as batch-001/003)
+--   * Fixed uuid + `on conflict (id) do nothing`.
+--   * The unique (destination_food_id, restaurant_id) constraint plus the
+--     not-exists guard prevent duplicate pairs even under different ids.
+-- ============================================================================
+
+-- begin;  -- uncomment when the first real link is curated
+
+-- ---------------------------------------------------------------------------
+-- TEMPLATE — copy, fill, review, run. (Currently ZERO live rows.)
+-- ---------------------------------------------------------------------------
+-- insert into public.destination_food_places
+--   (id, destination_food_id, restaurant_id)
+-- select
+--   '<fresh-uuid>',                        -- pre-generated fixed uuid
+--   (select f.id from public.destination_foods f
+--      join public.destinations d on d.id = f.destination_id
+--    where d.slug = '<destination-slug>'          -- e.g. 'bengaluru'
+--      and lower(btrim(f.name)) = lower(btrim('<food name>'))),
+--   (select r.id from public.restaurants r
+--    where lower(btrim(r.name)) = lower(btrim('<restaurant name>'))
+--      and r.city = '<restaurant city>')          -- exact city guard
+-- where (select f.id from public.destination_foods f
+--        join public.destinations d on d.id = f.destination_id
+--       where d.slug = '<destination-slug>'
+--         and lower(btrim(f.name)) = lower(btrim('<food name>'))) is not null
+--   and (select r.id from public.restaurants r
+--        where lower(btrim(r.name)) = lower(btrim('<restaurant name>'))
+--          and r.city = '<restaurant city>') is not null
+-- on conflict (id) do nothing;
+--
+-- Source: <citation — menu URL / publication / owner confirmation + date>
+-- ---------------------------------------------------------------------------
+
+-- commit;  -- uncomment with begin;
+
+-- ---------------------------------------------------------------------------
+-- Verification
+-- ---------------------------------------------------------------------------
+select count(*) as destination_food_places_rows from public.destination_food_places;
