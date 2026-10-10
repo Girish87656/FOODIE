@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "Foodie helps you discover nearby food places, hidden gems, local favorites and budget eats — matched to who you're eating with and what you crave.",
   keywords: ["Foodie", "food discovery", "restaurants", "hidden gems", "food companion"],
   authors: [{ name: "Foodie" }],
+  other: {
+    // Release marker — lets deployment verification confirm which build is live.
+    "application-version": "prototype-2.1.0",
+  },
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
