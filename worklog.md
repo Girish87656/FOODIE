@@ -1229,3 +1229,41 @@ Work Log:
 
 Stage Summary:
 - Part 2 is LIVE in production. Import execution (batch-005 62 rows + batch-006 1 row + migration-006) remains the documented human SQL-Editor step — packages are validated, additive, idempotent, and order-safe; nothing was claimed as imported that is not.
+
+---
+Task ID: part2-batch005-hardening
+Agent: Z.ai Code (main)
+Task: Minimal safety-only hardening of supabase/insert-batch-005-round3-62.sql before the live import (postflight informational checks -> hard rollback guards); validator + syntax + idempotency + rollback-drill re-verification. No Supabase execution, no live-data changes.
+
+Work Log:
+- State check: main=46b7ed9 clean; live DB untouched (14 rows); committed batch-005 sha 17e60129...
+- Schema confirmed from migration-005 DDL: verification_status text not null default 'unverified' (check: verified/community_submitted/unverified/closed); last_verified_at + address_verified/coordinates_verified/hours_verified/photos_verified ALL nullable, no defaults; review_count integer not null default 0; community_rating nullable; id uuid. Only trigger touching restaurants = reviews AFTER-aggregate-sync trigger; nothing auto-sets verification fields on insert.
+- Validator re-run (research-worksheet-round3.csv, --strict, scratch report-dir): exit 0, 0 errors/0 warnings; output identical to the committed report except the baseline snapshot's fetchedAt/sha — resolved honestly: the fixture was re-fetched in round-4 (46b7ed9) with BYTE-IDENTICAL 14-row data (rows-sha256 54d99786... identical across all 9 historical versions).
+- Edited ONLY the postflight template in scripts/foodie-import-validator/gen-import-sql-round3.ts (+ REV-2 header note + closing-comment update); regenerated. Manifest byte-identical (0 diff). All 62 INSERT statements byte-identical (Part-1 region sha256 ba24e1b9... in old and new). New postflight = one plpgsql DO block carrying the same 62 fixed ids (cross-checked: preflight == inserts == postflight, order+values, all unique) with 4 hard guards, each raise-exception on violation: 2.1 all 62 present; 2.2 all still 'unverified'; 2.3 no non-NULL verification timestamp/boolean; 2.4 no fabricated community aggregate. Proximity report renumbered 2.4->2.5, stays informational.
+- Syntax: sqlglot parse OK (67 statements = 1 begin + 2 DO + 62 insert + 1 select + 1 commit). Guard patterns pre-proven on real Postgres 16 (PGlite): array[...]::uuid[], unnest-join + = any(), COMMIT on aborted transaction acts as ROLLBACK.
+- End-to-end on real Postgres 16 (PGlite local replica: Supabase-role/auth stubs + supabase/schema.sql + migration-005 + the 14 live baseline rows from the committed snapshot; live-faithful nullable price_level/latitude/longitude mirrored — the live table demonstrably predates current schema.sql, evidenced by live rows holding NULLs; batch values proven constraint-agnostic: price_level in {NULL,'INR1','INR2'}, categories subset of allowed 7): RUN1 healthy -> 76 rows, 62 batch rows all unverified/NULL-fields/0-aggregates, 14 baseline rows byte-identical; RUN2 -> idempotent (still 76/62, 0 duplicate names, baseline identical). FOUR rollback drills each raised the guard, the trailing commit acted as ROLLBACK, and left exactly 14 rows with baseline intact: A verification-timestamp set; B status forced 'verified'; C fabricated community aggregates; D postflight id drift (missing row).
+- Determinism: generator run twice -> byte-identical SQL. Final sha256: ac4f176ac80c901f862e72963e92e23dcf75d5c88ae063a7b23e663d58bf0c76.
+- ZERO SQL executed against Supabase; zero live-data changes; no credentials exposed; nothing committed or pushed (awaiting user).
+
+Stage Summary:
+- supabase/insert-batch-005-round3-62.sql hardened (sha256 ac4f176a...): postflight is now hard guards — any violation (missing row, non-'unverified' status, set verification timestamp/boolean, fabricated community aggregate) aborts the transaction and the trailing commit acts as ROLLBACK; NOTHING is written. Proximity report stays informational.
+- All 62 reviewed records and their exact values are byte-identical to the reviewed package (proof: Part-1 region sha unchanged ba24e1b9...; only the header provenance line (baseline-snapshot sha -> the actually-committed fixture bytes) and the postflight region changed).
+- Ready for the human Supabase SQL-Editor step; execution order unchanged (batch-005 before batch-006; migration-006 before any licensed photo rows).
+
+---
+Task ID: part2-batch005-hardening-push
+Agent: Z.ai Code (main)
+Task: Commit and push ONLY the two reviewed hardening files (supabase/insert-batch-005-round3-62.sql + scripts/foodie-import-validator/gen-import-sql-round3.ts); verify diff scope, byte-identical 62 inserts, final sha256; no Supabase execution.
+
+Work Log:
+- Pre-push verification: diff 5548c85..HEAD for the SQL file contains ONLY the REV-2 header note, the provenance baseline-snapshot sha line (967a68f3... -> c5bc2813..., fixture re-fetched in round-4 with byte-identical 14-row data), the postflight hard-guards DO block, the 2.4->2.5 informational proximity renumber, and the closing-comment update. Generator diff mirrors exactly those template changes (SQL regenerated from generator, not hand-edited).
+- Byte-identity proof: Part-1 region (first INSERT -> Part-2 marker, 1907 lines, 62 inserts) extracted independently from pre-hardening 5548c85 and the hardened file — sha256 6cdcf1795258752e5c47e3834d24d2d347e7352624ae3bbc454b31c226141580 IDENTICAL, zero diff. 62-id sets identical across preflight == inserts == postflight (each INSERT carries its id twice: value + where-not-exists guard = 124 occurrences, 62 unique).
+- Found the previous hardening commit f35e844 (local-only, UUID-named message) also contained worklog.md — restructured with git reset --soft (non-destructive, origin unaffected), unstaged worklog.md, recommitted ONLY the two reviewed files as 34916b4 with a descriptive message.
+- Push: 5548c85..34916b4 main -> main (clean fast-forward). main == origin/main == 34916b46a32be1a4f2f957e29ac84580d06a5c84 (rev-list 0 0).
+- Final sha256 supabase/insert-batch-005-round3-62.sql = ac4f176ac80c901f862e72963e92e23dcf75d5c88ae063a7b23e663d58bf0c76 (matches expected). Pre-hardening sha was 17e60129...
+- ZERO SQL executed against Supabase; zero live-data changes; worklog.md left uncommitted in the worktree per the user's only-these-two-files instruction (this entry included).
+
+Stage Summary:
+- Hardened batch-005 package is on origin/main (34916b4): postflight = 4 hard rollback guards + informational proximity report; all 62 reviewed records byte-identical to the reviewed package; file sha256 ac4f176a... verified pre- and post-push.
+- worklog.md changes (part2-batch005-hardening entry + this entry) remain intentionally uncommitted — awaiting user direction.
+- Live DB untouched (14 rows); execution order unchanged (batch-005 before batch-006; migration-006 before any licensed photo rows).
