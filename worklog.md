@@ -1215,3 +1215,17 @@ Stage Summary:
 - Live DB untouched (14 rows) — batch-005 (62 rows) + batch-006 (1 row) are validated, idempotent, ready-to-run packages for the human SQL-Editor step; migration-006 must run before any licensed photo rows are inserted.
 - Round-4 coverage: 551-row worksheet (unique), 63 importable rows total across both packages, 424 single-source leads recorded for future double-sourcing, 0 unverifiable claims.
 - Production verified separately after push (see part2-deploy section).
+
+---
+Task ID: part2-deploy
+Agent: Z.ai Code (main)
+Task: Push Part 2, verify Vercel deployment, production smoke.
+
+Work Log:
+- Push: 8ba909f..46b7ed9 main -> main (clean fast-forward, 23 files, Part 2 commit only).
+- Deployment verification: the GitHub commit-status API was rate-limited (unauthenticated, 0 remaining — the "pending" readings were error payloads, not build states). Deployment was instead marker-verified against production: GET /api/restaurants/nearby WITHOUT params now returns 400 on https://foodie-arjun-123b.vercel.app/ (the 400-guard fix shipped only in 46b7ed9) → the new build IS live.
+- Production smoke (post-deploy): home 200; /api/restaurants/all 200 supabase 14 places (DB untouched — correct, imports are ready-to-run packages); /api/destinations 200; /search?q=biryani 200 (2 real); assistant POST 200 (grounded, 6 real places); nearby with lat/lng 200.
+- Local QA evidence retained in part2 section above (mobile+desktop browser pass, zero console errors).
+
+Stage Summary:
+- Part 2 is LIVE in production. Import execution (batch-005 62 rows + batch-006 1 row + migration-006) remains the documented human SQL-Editor step — packages are validated, additive, idempotent, and order-safe; nothing was claimed as imported that is not.
