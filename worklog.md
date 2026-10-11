@@ -1143,3 +1143,32 @@ Stage Summary:
 - Import package ready: 62-row additive SQL (sha256 17e60129…), validator-clean, idempotent, honest (all unverified; provenance preserved; conflicts blank).
 - Precise blockers: (1) z-ai SDK 429 all session — 108-query plan checkpointed in scripts/research3-runner.ts for a future run; (2) restaurant INSERT RLS-closed — the 62-row SQL needs the Supabase SQL Editor/service key (exact file + hash provided); (3) Justdial/Restaurant Guru/Tripadvisor/Sulekha/eazydiner/scribd/Google Maps/Overpass/Nominatim(403-then-OK-for-search) accessibility documented in tool-results/research3/.
 - Zero live-DB writes this session (GET reads + one 42501-denied probe + zero-row-confirming follow-up count).
+
+---
+Task ID: Part-1
+Agent: Z.ai Code (main orchestrator)
+Task: PART 1 — UI styling, functional homepage dropdowns, integration audit/fixes, verification, push & deploy. (Session resumed after sandbox recycle; found Part 1 code + round-3 research prep already committed locally in unpushed commit 04c7df7 — this session's job was to VERIFY that work in real code/browser, run all checks, audit the diff, and ship it.)
+
+Work Log:
+- Git state on resume: tree clean, HEAD 04c7df7 (1 ahead of origin/main). Verified every claim of 04c7df7 in actual code instead of trusting the message.
+- Code verification (all real, all committed):
+  - FilterBar.tsx: Home discovery controls = 3 functional dropdowns (Category: All + 7 pilot categories · Distance: Any/1/3/5/10 km · Sort: Nearest First/Top Rated), in-frame listbox popovers (no portal, stays inside desktop mockup), full listbox a11y (aria-haspopup/expanded, role=option, aria-selected, Escape/Tab/outside close).
+  - HomeScreen.tsx: dropdown selections write to the real Zustand store (setDistanceFilter/setSortBy/activeCategory) and genuinely drive feed filtering/sorting/empty states (verified wiring lines + section headers echo active category & radius).
+  - PlaceDetailScreen.tsx: per-photo onError tracking → honest "photo unavailable" tile (ImageOff on warm gradient) in BOTH hero carousel and gallery — no broken-image glyphs, no substitute images; "Listing source" provenance card rendered ONLY when DB actually stores source/source_url, with "a source is not a verification" note.
+  - PlaceCards.tsx WideCard: fabricated "Loved by Xk locals" removed → honest "{ratingCount} listing ratings" (never rendered when 0).
+  - globals.css: app-wide :focus-visible ring (keyboard a11y), prefers-reduced-motion respect, foodie-header-shadow utility for sticky header, dropdown open animation.
+- Checks: bun run lint exit 0. bunx tsc --noEmit: only the 4 pre-recorded sandbox examples//skills errors (gitignored, invisible to Vercel) — app code clean. Validator: round3 worksheet re-run = 127 rows, 0 errors/0 warnings (v1.1.0 dry-run); 6 fixture suites re-run behave as designed (positive 0 errors; negative fixtures correctly flagged); gen-import-sql-round3.ts regeneration = byte-identical SQL, sha256 17e60129… re-confirmed, tree stayed clean (idempotency re-proven).
+- Browser QA (agent-browser, live Supabase data, mock-free unless stated):
+  - Mobile 390x844: category dropdown opens with all 8 options; selecting Cafe → header "Filter by category: Cafe", feed "1 place in Cafe" (Amigos Cafe) — real narrowing. Distance "Within 1 km" → honest empty state "No places within 1 km" + "Show any distance" reset CTA. Sort "Top Rated" visibly reorders feed (Biryani Shack first). Reset paths all work.
+  - Detail (Amigos Cafe, live data): "Listed rating 4.3", "Unverified listing" chip, honest "15.6 km away · Distance from … prototype origin", "Hours not captured yet — we don't guess opening hours", gradient hero (place has no photos — no fake image), Get Directions CTA. Provenance card correctly ABSENT when DB has no source.
+  - Mock-injected QA row (network-route only, ZERO DB writes): broken photo URL → honest "photo unavailable" tile; source+sourceUrl present → "LISTING SOURCE / QA Mock Directory / example.com/qa-listing" card renders. Unknown id → "This place moved its kitchen" error state with Try again / Back to discovery.
+  - Desktop 1600x900: mockup frame + side branding intact; live feed renders; zero console errors, zero page errors.
+  - Grounded AI assistant: answered "cheap cafe near GITAM" with structured REAL places (Amigos Cafe, Biryani Shack, Chickpet Donne Biryani House with "Location pending verification"). z-ai LLM prose hit the session-long 429 quota → designed fallback fired (FALLBACK_REPLY_WITH_PLACES, HTTP 200, honest notice) — no crash, no fake data.
+- Diff audit (origin/main..main, 25 files): 0 .env, 0 tokens/keys (regex scan + targeted anon/service_role/eyJ scans — only prose comments about anonymous API tiers), 0 tool-results/ leaks; research scripts/worksheets/import SQL are intended Part 2 handoff artifacts.
+- BLOCKER (push): sandbox recycle wiped ~/.git-credentials — the stored OAuth token is gone (gh CLI absent, no SSH keys, no env tokens, no .netrc). Re-initiated the approved OAuth DEVICE FLOW per the no-tokens-in-chat rule; poller stores token (0600, never logged/printed) and auto-pushes on authorization. First code expired unauthorized; fresh code 69AD-0497 issued (github.com/login/device).
+- Zero DB writes this session (API reads + client-side network mocks only; mocks unrouted after QA).
+
+Stage Summary:
+- Part 1 verified end-to-end and ready to ship: dropdowns functional against real store+API data, honest fallbacks/error/empty states proven (including via controlled mocks), preserved features intact (auth session, reviews fields, 5 food modes in store, destinations, grounded assistant, all routes), no fake data anywhere, no schema changes, no imports.
+- Ship pending: user authorizes GitHub device code 69AD-0497 → poller auto-pushes 04c7df7 + this worklog commit → Vercel auto-deploys → production https://foodie-arjun-123b.vercel.app/ serves the update.
+- Part 2 handoff intact: research-worksheet-round3.csv (127 rows), validator v1.1.0, insert-batch-005-round3-62.sql (sha 17e60129…, needs Supabase SQL Editor due to RLS), research3 scripts + evidence corpus, photo/source metadata conventions.
