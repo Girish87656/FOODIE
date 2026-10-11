@@ -1306,3 +1306,20 @@ Work Log:
 
 Stage Summary:
 - Batch-006 REV 2 (window 77) unblocks safe re-runs; validation-only, payload untouched. Release can proceed: commit batch-006 fix trio + worklog, push, then user runs batch-005 -> batch-006 in Supabase SQL Editor (exact runbook in the release report).
+
+---
+Task ID: master-release-push-verify
+Agent: Z.ai Code (main)
+Task: Commit with descriptive messages, push to origin/main, verify GitHub state, production smoke tests.
+
+Work Log:
+- Rewrote the 3 unpushed UUID-named commit subjects message-only (stash -> rebase -i reword -> pop); git diff old-vs-new EMPTY -> trees byte-identical, only messages changed. New hashes c01661e / ab07d79 / d1c4443.
+- Committed: cbc7b25 (batch-006 REV 2 window fix trio), 52dcbd3 (worklog). 5 commits total ahead.
+- Pre-push: full diff origin/main..HEAD = exactly 6 intended files (250+/47-); git diff --check clean; no secrets in diff (worklog matches are prose about absence of secrets); lint exit 0; tsc clean for src/ (examples/ + skills/ pre-existing errors excluded from build by next.config typescript.ignoreBuildErrors, unchanged since initial release f9b056d).
+- Push: 34916b4..52dcbd3 main -> main (clean fast-forward, no force). Post-push: HEAD == origin/main == 52dcbd3d729e116d2601a6ba8c4e537d46d7f3f2; rev-list count 0.
+- Live DB read-only check (fetch-baseline.ts, single GET, zero writes): 14 rows, names == committed fixture set, row-by-row equality with fixture TRUE, all verification_status unverified / review_count 0 / community_rating NULL, zero import markers. Pristine baseline confirmed.
+- Production smoke (foodie-arjun-123b.vercel.app): home 200 "Foodie — Your Personal Food Companion"; /api/restaurants/all 200 mode=supabase 14 places, all verificationStatus unverified, zero community aggregates; search biryani -> 2 real hits; nearby missing/invalid params -> safe 400 with clear message; nearby valid -> 200 6 results; category -> 200; detail -> 200; reviews -> 200 empty (honest); destinations -> 200 3; destination foods -> 200; assistant real-data + fabricated-name canary -> 200, real rows only, honest fallback notice, NO invented facts (LLM composition not engaged on Vercel: z-ai-web-dev-sdk reads disk .z-ai-config which does not exist serverless — pre-existing architecture, graceful degradation by design, zero app-code change this release).
+- Browser check (agent-browser): homepage renders, 0 page errors, 0 console errors/warnings; onboarding "Create your account" form renders (Sign Up/Log In tabs, required fields, disabled submit until valid). No account created (no production data pollution); post-login flows NOT TESTED.
+
+Stage Summary:
+- origin/main = 52dcbd3 with the full reviewed release (REV-3 batch-005 hardening + batch-006 REV 2 window fix). Live DB verified pristine 14-row baseline. All that remains for data release: user runs batch-005 then batch-006 in Supabase SQL Editor per runbook; migration-006 + licensed photo import remain future gated work.
