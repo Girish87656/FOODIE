@@ -22,7 +22,7 @@ import { toast } from "sonner";
 import { useFoodieStore } from "@/lib/foodie/store";
 import { getRestaurantById } from "@/lib/foodie/data/repository";
 import type { DataMode } from "@/lib/foodie/data/types";
-import type { Dish, Place } from "@/lib/foodie/types";
+import type { Dish, PhotoCredit, Place } from "@/lib/foodie/types";
 import { formatDistance, haversineKm } from "@/lib/foodie/location";
 import { originSourceLabel, useLocationStore } from "@/lib/foodie/locationStore";
 import {
@@ -131,6 +131,23 @@ export function PlaceDetailScreen() {
   /** Photo URLs that failed to load in THIS session (broken link / network).
    *  They render an honest "photo unavailable" tile — never a fake image. */
   const [failedPhotos, setFailedPhotos] = useState<Record<string, true>>({});
+
+  /** Licensing metadata for a photo (migration-006), matched by URL.
+   *  Rendered only for what is actually recorded — never invented. */
+  const photoCreditFor = (src: string): PhotoCredit | undefined =>
+    outcome?.kind === "ready" ? outcome.place.photoCredits?.find((c) => c.url === src) : undefined;
+  const creditLabelFor = (c: PhotoCredit): string => {
+    const parts = [c.attribution, c.license].filter((x): x is string => Boolean(x && x.trim()));
+    if (parts.length > 0) return parts.join(" · ");
+    if (c.sourceUrl) {
+      try {
+        return new URL(c.sourceUrl).hostname;
+      } catch {
+        return c.sourceUrl.slice(0, 40);
+      }
+    }
+    return "";
+  };
 
   // active origin (GPS fix, manual city or prototype city) for the distance math
   const origin = useLocationStore((s) => s.origin);
@@ -281,14 +298,26 @@ export function PlaceDetailScreen() {
                   <ImageOff className="size-10 text-orange-300" aria-hidden="true" />
                 </div>
               ) : (
-                <img
-                  key={src}
-                  src={src}
-                  alt={`${place.name} photo ${i + 1}`}
-                  className="h-full w-full shrink-0 snap-center object-cover"
-                  loading={i === 0 ? "eager" : "lazy"}
-                  onError={() => markPhotoFailed(src)}
-                />
+                <div key={src} className="relative h-full w-full shrink-0 snap-center">
+                  <img
+                    src={src}
+                    alt={`${place.name} photo ${i + 1}`}
+                    className="h-full w-full object-cover"
+                    loading={i === 0 ? "eager" : "lazy"}
+                    onError={() => markPhotoFailed(src)}
+                  />
+                  {(() => {
+                    const credit = photoCreditFor(src);
+                    if (!credit) return null;
+                    const label = creditLabelFor(credit);
+                    if (!label) return null;
+                    return (
+                      <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/50 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
+                        {label}
+                      </span>
+                    );
+                  })()}
+                </div>
               )
             )}
           </div>
@@ -678,14 +707,29 @@ export function PlaceDetailScreen() {
                     <ImageOff className="size-5 text-orange-300" aria-hidden="true" />
                   </div>
                 ) : (
-                  <img
-                    key={`${src}-${i}`}
-                    src={src}
-                    alt={`${place.name} gallery photo ${i + 1}`}
-                    loading="lazy"
-                    onError={() => markPhotoFailed(src)}
-                    className="aspect-square w-full rounded-lg object-cover transition-transform hover:scale-[1.03]"
-                  />
+                  <div key={`${src}-${i}`} className="relative">
+                    <img
+                      src={src}
+                      alt={`${place.name} gallery photo ${i + 1}`}
+                      loading="lazy"
+                      onError={() => markPhotoFailed(src)}
+                      className="aspect-square w-full rounded-lg object-cover transition-transform hover:scale-[1.03]"
+                    />
+                    {(() => {
+                      const credit = photoCreditFor(src);
+                      if (!credit) return null;
+                      const label = creditLabelFor(credit);
+                      if (!label) return null;
+                      return (
+                        <span
+                          className="absolute inset-x-1 bottom-1 truncate rounded bg-black/55 px-1.5 py-0.5 text-[9px] font-semibold text-white"
+                          title={`${label}${credit.sourceUrl ? ` — ${credit.sourceUrl}` : ""}`}
+                        >
+                          {label}
+                        </span>
+                      );
+                    })()}
+                  </div>
                 )
               )}
             </div>

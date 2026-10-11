@@ -106,6 +106,23 @@ export interface GeoPosition {
   lng: number;
 }
 
+/**
+ * Licensing/provenance metadata for one place photo (migration-006).
+ * Every field is optional: NULL in the database means "not recorded" and the
+ * UI must never invent it. A photo whose `license` is unknown has no
+ * established usage basis and must not be displayed.
+ */
+export interface PhotoCredit {
+  /** The photo URL this credit belongs to (matches `Place.photos` entries). */
+  url: string;
+  /** Page the photo was taken from. NULL = unknown. */
+  sourceUrl?: string;
+  /** Usage basis, verbatim (e.g. "CC BY-SA 4.0"). NULL = not established. */
+  license?: string;
+  /** Credit line to display. NULL = no attribution recorded. */
+  attribution?: string;
+}
+
 /** A food place — the heart of discovery */
 export interface Place {
   id: string;
@@ -148,6 +165,13 @@ export interface Place {
    */
   phone?: string;
   photos: string[];
+  /**
+   * Licensing metadata per photo (migration-006 `restaurant_photos.source_url`
+   * / `license` / `attribution`), matched to `photos` entries by image URL.
+   * Absent fields mean the information was never recorded — the UI renders
+   * attribution ONLY for what is actually stored and never invents it.
+   */
+  photoCredits?: PhotoCredit[];
   localTip: string;
   /** Google Maps search query (name + stored address) — used by the
    *  "Open in Google Maps" CTA when a place has no verified coordinates. */

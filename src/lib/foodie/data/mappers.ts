@@ -48,6 +48,7 @@ import type {
   Place,
   PlaceWithDistance,
   PriceRange,
+  PhotoCredit,
   VerificationStatus,
 } from "../types";
 import type { DestinationFoodRow, DestinationRow, DishRow, NearbyRestaurantRow, RestaurantRow } from "./types";
@@ -121,16 +122,44 @@ function dishRowToDish(row: DishRow): Dish {
 }
 
 /**
+ * A `restaurant_photos` row as read from Supabase. The licensing columns
+ * (migration-006) are optional: on a database where the migration has not run
+ * yet the SELECT simply returns fewer columns and every credit is undefined —
+ * the mapping degrades gracefully and nothing is invented.
+ */
+export interface PhotoRecord {
+  image_url: string;
+  source_url?: string | null;
+  license?: string | null;
+  attribution?: string | null;
+}
+
+/**
  * Map a `restaurants` row (plus its dishes/photos when already fetched)
  * into the domain `Place` used across the UI.
  */
 export function restaurantRowToPlace(
   row: RestaurantRow,
   dishes: DishRow[] = [],
-  photoUrls: string[] = []
+  photos: PhotoRecord[] = []
 ): Place {
   const { opensAt, closesAt } = parseOpeningHours(row.opening_hours);
   const priceLevel: PriceRange | undefined = row.price_level ?? undefined;
+  // Photo licensing metadata (migration-006): kept ONLY for photos that
+  // actually carry recorded credit information — photos without any are
+  // rendered from `photos` alone with no invented attribution.
+  const photoCredits: PhotoCredit[] | undefined = photos.some(
+    (p) => p.source_url || p.license || p.attribution
+  )
+    ? photos
+        .filter((p) => p.source_url || p.license || p.attribution)
+        .map((p) => ({
+          url: p.image_url,
+          sourceUrl: p.source_url ?? undefined,
+          license: p.license ?? undefined,
+          attribution: p.attribution ?? undefined,
+        }))
+    : undefined;
   return {
     id: row.id,
     name: row.name,
@@ -157,7 +186,8 @@ export function restaurantRowToPlace(
     // instead of showing invented hours or a Call button without a number.
     openingHours: row.opening_hours ?? undefined,
     phone: row.phone ?? undefined,
-    photos: photoUrls,
+    photos: photos.map((p) => p.image_url),
+    photoCredits,
     localTip: "",
     // Google Maps search query built ONLY from stored values (name + full
     // address). Used by the detail screen when a place has no verified

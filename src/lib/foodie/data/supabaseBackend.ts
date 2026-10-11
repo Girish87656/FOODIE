@@ -23,6 +23,7 @@ import {
   isUuid,
   nearbyRowToPlaceWithDistance,
   restaurantRowToPlace,
+  type PhotoRecord,
 } from "./mappers";
 import type {
   DestinationFoodRow,
@@ -134,12 +135,16 @@ export async function getSupabaseRestaurantById(id: string): Promise<Place | nul
     Promise.resolve(
       sb
         .from("restaurant_photos")
-        .select("image_url")
+        // select("*") — returns image_url always, plus the licensing columns
+        // (migration-006) when the migration has run. On a pre-migration
+        // database the extra columns are simply absent (no error), so photos
+        // keep rendering and credits degrade gracefully to "unknown".
+        .select("*")
         .eq("restaurant_id", id)
         .order("created_at", { ascending: true })
     ).catch((err) => {
       console.warn("[foodie/data] restaurant_photos read failed:", (err as Error)?.message ?? err);
-      return { data: [] as { image_url: string }[], error: null };
+      return { data: [] as PhotoRecord[], error: null };
     }),
   ]);
   if (restaurantRes.error) throw new Error(restaurantRes.error.message);
@@ -148,7 +153,7 @@ export async function getSupabaseRestaurantById(id: string): Promise<Place | nul
   return restaurantRowToPlace(
     restaurantRes.data as RestaurantRow,
     (dishesRes.data ?? []) as DishRow[],
-    ((photosRes.data ?? []) as { image_url: string }[]).map((p) => p.image_url)
+    (photosRes.data ?? []) as PhotoRecord[]
   );
 }
 

@@ -1,0 +1,53 @@
+{
+ "manifest_version": "round4-1.0.0",
+ "artifact_status": "PROPOSED — additive import package; execution requires the DB write path (Supabase Dashboard SQL Editor / service key) which is not available from the research sandbox",
+ "generator": "scripts/foodie-import-validator/gen-import-sql-round4.ts",
+ "context": {
+  "round": 4,
+  "scope": "magicpin corridor continuation (804 store pages fetched, robots-declared sitemap inventory) + district sitemap rescan (regenerated sitemap no longer covers the area — 0 new venues) + hold re-review with fresh evidence",
+  "worksheet": "input/research-worksheet-round4.csv (551 rows = round-3 127 with 3 evidence updates + 424 verbatim single-source zone leads)",
+  "epicruise_hangouts": "corpus probes: 'epicruise' 0 hits, 'hangout' 1 out-of-zone hit (Hangout @ Nandi, Nandi Hills), 'gitam' 0 hits, 'epicurus' 0 hits in the 804-page magicpin store corpus"
+ },
+ "inputs": {
+  "worksheet_sha256": "c9f648ff576fdcb4dfa5e1bca946f9d9f4a0706d16dfb13e79e9ee7f3691c490",
+  "validator_report": "reports/research-2026-10-11-round4.dry-run.json",
+  "validator_report_sha256": "387bd6d967d14bce2cc6fbcf63221839179ecff7380631545d0afd9af663c2a0",
+  "validator_errors": 0,
+  "validator_warnings": 0,
+  "baseline_rows": 14,
+  "baseline_snapshot_sha256": "967a68f39a1ec56aba8f5752ac4886501f1ef5fb0728d36e48a3cfc9bb2cead8"
+ },
+ "import_state_guarantees": [
+  "additive only — INSERTs; no UPDATE, no DELETE, no DDL",
+  "every row verification_status 'unverified'; verification booleans, last_verified_at, review_count, community_rating NOT in the column list",
+  "fixed UUIDv5 ids (batch namespace 9f0c3a52-…) + triple per-row guards (id / normalized name / phone) -> idempotent re-runs",
+  "preflight aborts on baseline drift (names + count window 14..76 covering pre/post batch-005 states)",
+  "postflight re-checks: counts, identity, untouched aggregates, proximity report"
+ ],
+ "sql_file": "supabase/insert-batch-006-round4-1.sql",
+ "proposed_insert_set": [
+  {
+   "worksheet_row_name": "Lounge de La Réserve",
+   "id": "4923568a-4b62-5507-b246-523ad25b001c",
+   "name": "Lounge de La Réserve",
+   "category": "restaurant",
+   "address": "Raghunathapur, Doddaballapura Locality, Doddaballapura",
+   "city": "Doddaballapura",
+   "locality": "Nagadenahalli/Moparahalli corridor",
+   "latitude": 13.286726,
+   "longitude": 77.5824616,
+   "listing_rating": 2.8,
+   "rating_source": "https://magicpin.in/Bangalore/Bashettihalli/Restaurant/Lounge-De-La-Réserve/store/163b85a",
+   "rating_checked_on": "2026-10-11",
+   "opening_hours": "10:00-17:00",
+   "phone": "+916366946331",
+   "source": "round4-research-import",
+   "source_url": "https://www.district.in/dining/doddaballapura/lounge-de-la-r%C3%A9serve-2-doddaballapura-locality",
+   "evidence": {
+    "identity_basis": "district.in + magicpin listings agree on IDENTICAL phone +916366946331 and IDENTICAL pin 13.286726,77.5824616 (both re-read 2026-10-11); the 'Bashettihalli' magicpin area label is a filing quirk, not a branch. Held in round 3, promoted on this fresh identity agreement.",
+    "coordinate_status": "directory-reported pin, coordinates_verified stays NULL (candidate_coordinates)",
+    "notes": "RESOLVED round-4 (2026-10-11): the 'Bashettihalli' magicpin area label was a filing quirk — the magicpin listing shares the IDENTICAL phone +916366946331 and IDENTICAL pin 13.286726,77.5824616 with the district.in listing (both re-read 2026-10-11), so the two listings are the same business, not branches. Same-business evidence is cross-directory agreement (directory_reported); on-site GPS still the only path to verified."
+   }
+  }
+ ]
+}

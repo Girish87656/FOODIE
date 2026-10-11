@@ -19,11 +19,25 @@ export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams;
-  const lat = Number(sp.get("lat"));
-  const lng = Number(sp.get("lng"));
+  // Explicit presence check first: `Number(null)` is 0 in JS, so a missing
+  // parameter would otherwise silently become the coordinate 0 (Null Island)
+  // and return "honest" results in the Gulf of Guinea instead of a 400.
+  const latRaw = sp.get("lat");
+  const lngRaw = sp.get("lng");
+  const lat = Number(latRaw);
+  const lng = Number(lngRaw);
   const radiusRaw = Number(sp.get("radiusKm") ?? DEFAULT_DISCOVERY_RADIUS_KM);
 
-  if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) {
+  if (
+    latRaw === null ||
+    lngRaw === null ||
+    latRaw.trim() === "" ||
+    lngRaw.trim() === "" ||
+    !Number.isFinite(lat) ||
+    !Number.isFinite(lng) ||
+    Math.abs(lat) > 90 ||
+    Math.abs(lng) > 180
+  ) {
     return NextResponse.json(
       { error: "Valid 'lat' and 'lng' query parameters are required (WGS-84 degrees)." },
       { status: 400 }
