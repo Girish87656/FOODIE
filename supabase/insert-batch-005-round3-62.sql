@@ -2152,7 +2152,7 @@ begin
   select count(*) into v_not_unverified
   from public.restaurants
   where id = any(v_batch_ids)
-    and verification_status <> 'unverified';
+    and verification_status IS DISTINCT FROM 'unverified';
   if v_not_unverified <> 0 then
     raise exception 'POSTFLIGHT FAIL: % batch row(s) are not ''unverified'' — an import must never set a verification status; the transaction will roll back and nothing is written.', v_not_unverified;
   end if;

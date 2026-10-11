@@ -406,7 +406,7 @@ lines.push(`  -- 2.2 Every batch row must still be 'unverified' — an import ne
 lines.push(`  select count(*) into v_not_unverified`);
 lines.push(`  from public.restaurants`);
 lines.push(`  where id = any(v_batch_ids)`);
-lines.push(`    and verification_status <> 'unverified';`);
+lines.push(`    and verification_status IS DISTINCT FROM 'unverified';`);
 lines.push(`  if v_not_unverified <> 0 then`);
 lines.push(`    raise exception 'POSTFLIGHT FAIL: % batch row(s) are not ''unverified'' — an import must never set a verification status; the transaction will roll back and nothing is written.', v_not_unverified;`);
 lines.push(`  end if;`);
