@@ -1172,3 +1172,22 @@ Stage Summary:
 - Part 1 verified end-to-end and ready to ship: dropdowns functional against real store+API data, honest fallbacks/error/empty states proven (including via controlled mocks), preserved features intact (auth session, reviews fields, 5 food modes in store, destinations, grounded assistant, all routes), no fake data anywhere, no schema changes, no imports.
 - Ship pending: user authorizes GitHub device code 69AD-0497 → poller auto-pushes 04c7df7 + this worklog commit → Vercel auto-deploys → production https://foodie-arjun-123b.vercel.app/ serves the update.
 - Part 2 handoff intact: research-worksheet-round3.csv (127 rows), validator v1.1.0, insert-batch-005-round3-62.sql (sha 17e60129…, needs Supabase SQL Editor due to RLS), research3 scripts + evidence corpus, photo/source metadata conventions.
+
+---
+Task ID: part1-release
+Agent: Z.ai Code (main)
+Task: Complete GitHub device-flow auth, push Part 1 commits, verify Vercel deployment, run production smoke tests.
+
+Work Log:
+- Fresh device code 6C19-484F issued (client 178c6fc778ccc68e1d6a, scope repo). Background poller was killed between sandbox turns (log showed "poller started" with no result); user authorized within the validity window, so a direct token exchange recovered the grant.
+- Token stored to ~/.git-credentials (0600, scope repo, NEVER printed or logged); spent /tmp/device-flow.json removed after exchange.
+- Push: 6578c27..81c0ebb main -> main — clean fast-forward of exactly the two Part 1 commits (04c7df7 round-3 research + functional dropdowns; 81c0ebb verification worklog). Remote head = local head = 81c0ebb.
+- Vercel: commit status SUCCESS for 81c0ebb (~3.5 min, deployment HVbgdrTqKfrrmGbAZTohFP1TVuH9).
+- Production smoke (https://foodie-arjun-123b.vercel.app/): home 200 (age 0, fresh; meta application-version prototype-2.1.0); /api/restaurants/all 200 mode supabase 14 places; /api/destinations 200 (3, Bengaluru first); /api/restaurants/search?q=biryani 200 (2 real); /api/restaurants/nearby?lat=13.2299&lng=77.5427&radiusKm=25 200 (6 real: Sri Ganesh Grand 4.3 km, Ayyappa Tiffin Room 5.7 km, Amigos Cafe 8.4 km); POST /api/assistant/chat 200 grounded (6 real places, honest broaden notice).
+- Build marker check: fetched home HTML + 7 JS chunks from production — "listing ratings" (WideCard honest wording) and "Listing source" (provenance card) both FOUND, confirming the served build is the Part 1 code.
+- Known minor quirk logged for Part 2 backlog (pre-existing, NOT a Part 1 regression): /api/restaurants/nearby called WITHOUT lat/lng returns 200 searching at (0,0) because Number(null)=0 bypasses the 400 guard; the app client always sends real coordinates, so zero user impact.
+
+Stage Summary:
+- Part 1 is LIVE in production: round-3 systematic research package (93 district venues, 62-row validated import artifact), functional home dropdowns, gallery/provenance hardening.
+- OAuth token persisted for future pushes; no credentials exposed in chat or logs.
+- Database remains at 14 places — the validated 62-row import package (insert-batch-005-round3-62.sql, sha256 17e60129…) is committed as an artifact but NOT executed against the live DB. Execution (validator + idempotent migration) is Part 2 scope and was NOT started per user instruction.
