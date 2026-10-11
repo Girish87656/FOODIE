@@ -128,6 +128,9 @@ export function PlaceDetailScreen() {
   const [photoIdx, setPhotoIdx] = useState(0);
   const [attempt, setAttempt] = useState(0);
   const [outcome, setOutcome] = useState<DetailOutcome | null>(null);
+  /** Photo URLs that failed to load in THIS session (broken link / network).
+   *  They render an honest "photo unavailable" tile — never a fake image. */
+  const [failedPhotos, setFailedPhotos] = useState<Record<string, true>>({});
 
   // active origin (GPS fix, manual city or prototype city) for the distance math
   const origin = useLocationStore((s) => s.origin);
@@ -145,6 +148,7 @@ export function PlaceDetailScreen() {
       .then((res) => {
         if (cancelled) return;
         setPhotoIdx(0);
+        setFailedPhotos({});
         setOutcome(
           res.place
             ? { key: detailKey, kind: "ready", place: res.place, mode: res.mode }
@@ -233,6 +237,13 @@ export function PlaceDetailScreen() {
   // Phone from the database — a Call button only exists when a number exists.
   const telHref = place.phone ? `tel:${place.phone.replace(/[^\d+]/g, "")}` : null;
 
+  // ---- photo failure honesty ------------------------------------------------
+  // A stored URL that cannot load (removed file, network hiccup, blocked host)
+  // degrades to an explicit "photo unavailable" tile — the broken-image glyph
+  // of a dead <img> is never shown, and nothing is substituted for it.
+  const markPhotoFailed = (src: string) =>
+    setFailedPhotos((prev) => (prev[src] ? prev : { ...prev, [src]: true }));
+
   const verification = verificationStatusLabel(place.verificationStatus);
   const verificationChipClass = {
     verified: "border-emerald-200 bg-emerald-50 text-emerald-700",
@@ -258,15 +269,28 @@ export function PlaceDetailScreen() {
             }}
             aria-label={`Photos of ${place.name}`}
           >
-            {place.photos.map((src, i) => (
-              <img
-                key={src}
-                src={src}
-                alt={`${place.name} photo ${i + 1}`}
-                className="h-full w-full shrink-0 snap-center object-cover"
-                loading={i === 0 ? "eager" : "lazy"}
-              />
-            ))}
+            {place.photos.map((src, i) =>
+              failedPhotos[src] ? (
+                <div
+                  key={`${src}-failed`}
+                  role="img"
+                  aria-label={`${place.name} photo ${i + 1} — currently unavailable`}
+                  className="grid h-full w-full shrink-0 snap-center place-items-center bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50"
+                  title="This photo couldn't be loaded right now"
+                >
+                  <ImageOff className="size-10 text-orange-300" aria-hidden="true" />
+                </div>
+              ) : (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`${place.name} photo ${i + 1}`}
+                  className="h-full w-full shrink-0 snap-center object-cover"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  onError={() => markPhotoFailed(src)}
+                />
+              )
+            )}
           </div>
         )}
 
@@ -455,6 +479,37 @@ export function PlaceDetailScreen() {
               </div>
             </InfoCard>
           )}
+
+          {/* provenance — where this listing came from, exactly as stored.
+              Shown only when the database actually records a source; nothing
+              is invented for rows without one. A listing source is NOT a
+              verification claim. */}
+          {(place.source || place.sourceUrl) && (
+            <div className="rounded-2xl border border-border/60 bg-stone-50/60 p-3">
+              <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-stone-400">
+                <ExternalLink className="size-3 shrink-0" aria-hidden="true" />
+                Listing source
+              </p>
+              <p className="mt-1 text-[12px] leading-snug text-stone-500">
+                {place.source && <span className="font-semibold text-stone-600">{place.source}</span>}
+                {place.source && place.sourceUrl && " · "}
+                {place.sourceUrl && (
+                  <a
+                    href={place.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="break-all font-medium text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary"
+                  >
+                    {place.sourceUrl.replace(/^https?:\/\//, "").slice(0, 80)}
+                    {place.sourceUrl.replace(/^https?:\/\//, "").length > 80 ? "…" : ""}
+                  </a>
+                )}
+                <span className="mt-0.5 block text-[11px] text-stone-400">
+                  Transcribed from a public listing — a source is not a verification.
+                </span>
+              </p>
+            </div>
+          )}
         </div>
 
         {/* tags — the database's finer type labels (never invented) */}
@@ -611,15 +666,28 @@ export function PlaceDetailScreen() {
             </div>
           ) : (
             <div className="mt-2.5 grid grid-cols-3 gap-1.5 overflow-hidden rounded-2xl">
-              {place.photos.map((src, i) => (
-                <img
-                  key={`${src}-${i}`}
-                  src={src}
-                  alt={`${place.name} gallery photo ${i + 1}`}
-                  loading="lazy"
-                  className="aspect-square w-full rounded-lg object-cover transition-transform hover:scale-[1.03]"
-                />
-              ))}
+              {place.photos.map((src, i) =>
+                failedPhotos[src] ? (
+                  <div
+                    key={`${src}-${i}-failed`}
+                    role="img"
+                    aria-label={`${place.name} gallery photo ${i + 1} — currently unavailable`}
+                    title="This photo couldn't be loaded right now"
+                    className="grid aspect-square w-full place-items-center rounded-lg bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50"
+                  >
+                    <ImageOff className="size-5 text-orange-300" aria-hidden="true" />
+                  </div>
+                ) : (
+                  <img
+                    key={`${src}-${i}`}
+                    src={src}
+                    alt={`${place.name} gallery photo ${i + 1}`}
+                    loading="lazy"
+                    onError={() => markPhotoFailed(src)}
+                    className="aspect-square w-full rounded-lg object-cover transition-transform hover:scale-[1.03]"
+                  />
+                )
+              )}
             </div>
           )}
         </section>

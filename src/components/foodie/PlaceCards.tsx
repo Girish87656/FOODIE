@@ -191,7 +191,6 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
 /* Compact wide card — hero-ish row for Local Favorites               */
 /* ------------------------------------------------------------------ */
 export function WideCard({ place, onSelect }: PlaceCardBase) {
-  const locals = (place.ratingCount / 1000).toFixed(1);
   return (
     <button
       type="button"
@@ -216,7 +215,7 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
             {place.ratingCount > 0 && (
               <span className="flex items-center gap-1 text-[10.5px] font-semibold text-white/85">
                 <Users className="size-3" aria-hidden="true" />
-                Loved by {locals}k locals
+                {place.ratingCount.toLocaleString("en-IN")} listing ratings
               </span>
             )}
           </div>

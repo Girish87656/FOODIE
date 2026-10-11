@@ -123,6 +123,20 @@
        covers utilities, not this base rule. */
     font-family: var(--font-outfit), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   }
+  /* Keyboard visibility for EVERY interactive element app-wide (a11y):
+     a consistent brand-colored focus ring that never shows for mouse users. */
+  :where(button, a, [role="button"], [role="option"], input, [tabindex]):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 /* ---- custom utilities (Tailwind v4 @utility directive) ---- */
@@ -149,6 +163,11 @@
 @utility foodie-dots {
   background-image: radial-gradient(oklch(1 0 0 / 12%) 1px, transparent 1px);
   background-size: 18px 18px;
+}
+
+/* soft elevation for the sticky discovery header */
+@utility foodie-header-shadow {
+  box-shadow: 0 1px 0 oklch(0.929 0.006 56.36), 0 8px 24px -18px oklch(0.216 0.006 56.04 / 0.35);
 }
 
 /* nicer thin scrollbars for vertical lists */

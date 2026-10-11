@@ -46,7 +46,6 @@ import {
 } from "@/lib/foodie/utils";
 import { SectionHeader } from "../SectionHeader";
 import { SearchBar } from "../SearchBar";
-import { CategoryChip } from "../CategoryChip";
 import { CarouselCard, ListRow, WideCard } from "../PlaceCards";
 import { DiscoveryFilterBar } from "../FilterBar";
 import { DestinationDiscoveryCard } from "../DestinationDiscoveryCard";
@@ -333,7 +332,7 @@ export function HomeScreen() {
   return (
     <div className="relative flex h-full flex-col bg-background">
       {/* ---------------- header ---------------- */}
-      <header className="z-10 shrink-0 border-b border-border/50 bg-background/95 px-5 pb-3 pt-5 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <header className="z-10 shrink-0 border-b border-border/50 bg-background/95 px-5 pb-3 pt-5 backdrop-blur supports-[backdrop-filter]:bg-background/80 foodie-header-shadow">
         <div className="flex items-center justify-between gap-3">
           <button
             type="button"
@@ -398,32 +397,22 @@ export function HomeScreen() {
 
         <SearchBar value={searchQuery} onChange={setSearchQuery} className="mt-3.5" />
 
-        {/* food categories */}
-        <div className="no-scrollbar -mx-5 mt-3 flex gap-2 overflow-x-auto px-5" role="tablist" aria-label="Food categories">
-          <CategoryChip
-            category={{ id: "all", label: "All", emoji: "🍽️" }}
-            active={activeCategory === null}
-            onClick={() => {
-              setActiveCategory(null);
-              setSearchQuery("");
-            }}
-          />
-          {PLACE_CATEGORIES.map((c) => (
-            <CategoryChip
-              key={c.id}
-              category={c}
-              active={activeCategory === c.id}
-              onClick={() => setActiveCategory(activeCategory === c.id ? null : c.id)}
-            />
-          ))}
-        </div>
-
-        {/* distance filter + sorting */}
+        {/* discovery controls — one row of functional dropdowns.
+            Every choice really drives the feed below (store-backed):
+            Category (All + the 7 pilot categories), Distance (Any/1/3/5/10 km),
+            Sort (Nearest First / Top Rated). */}
         <DiscoveryFilterBar
           distanceFilterKm={distanceFilterKm}
           onDistanceChange={setDistanceFilter}
           sortBy={sortBy}
           onSortChange={setSortBy}
+          activeCategory={activeCategory}
+          onCategoryChange={(id) => {
+            setActiveCategory(id);
+            // same contract as the old "All" chip: picking All also clears the
+            // free-text query so the dropdown truly resets the filter state
+            if (id === null) setSearchQuery("");
+          }}
           className="mt-3"
         />
       </header>
