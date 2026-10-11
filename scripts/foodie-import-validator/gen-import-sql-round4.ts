@@ -178,7 +178,7 @@ const manifest = {
     "additive only — INSERTs; no UPDATE, no DELETE, no DDL",
     "every row verification_status 'unverified'; verification booleans, last_verified_at, review_count, community_rating NOT in the column list",
     "fixed UUIDv5 ids (batch namespace 9f0c3a52-…) + triple per-row guards (id / normalized name / phone) -> idempotent re-runs",
-    "preflight aborts on baseline drift (names + count window 14..76 covering pre/post batch-005 states)",
+    "preflight aborts on baseline drift (names + count window 14..77 covering pre/post batch-005 and the applied batch-006 state)",
     "postflight re-checks: counts, identity, untouched aggregates, proximity report",
   ],
   sql_file: "supabase/insert-batch-006-round4-1.sql",
@@ -299,6 +299,14 @@ const sql = `-- ================================================================
 -- IDEMPOTENT: safe to run more than once. Fixed UUIDv5 id + per-row guards
 -- (id / normalized name / phone) make any re-run a no-op.
 --
+-- REV 2 (2026-10-11): PREFLIGHT COUNT WINDOW 76 -> 77 (validation-only fix,
+-- payload unchanged). After batch-005 (62 rows) AND this batch (1 row) are
+-- applied, the legitimate live state is exactly 77 rows; the old 14..76
+-- window aborted on that state, making the script unusable for re-runs
+-- after full application. Upper bound stays tight: any count above 77 is
+-- drift and still aborts. Single-record payload, baseline-name check,
+-- triple-guarded insert and every postflight honesty guard are unchanged.
+--
 -- WORKSHEET SHA256: ${wsSha}
 -- BASELINE SNAPSHOT SHA256: ${baselineSha}
 -- ============================================================================
@@ -314,8 +322,10 @@ declare
   missing_names text;
 begin
   select count(*) into live_count from public.restaurants;
-  if live_count < 14 or live_count > 76 then
-    raise exception 'PREFLIGHT FAIL: restaurants row count is %, expected 14..76 (14 baseline + up to 62 batch-005 rows). Database has drifted — investigate before importing.', live_count;
+  -- 14 baseline + up to 62 batch-005 rows + this batch's 1 row = 77. A count
+  -- above 77 is drift and aborts (mirrors batch-005 REV-3 window policy).
+  if live_count < 14 or live_count > 77 then
+    raise exception 'PREFLIGHT FAIL: restaurants row count is %, expected 14..77 (14 baseline + up to 62 batch-005 rows + the 1 batch-006 row). Database has drifted — investigate before importing.', live_count;
   end if;
 
   select string_agg(n, ', ') into missing_names

@@ -35,8 +35,16 @@
 -- IDEMPOTENT: safe to run more than once. Fixed UUIDv5 id + per-row guards
 -- (id / normalized name / phone) make any re-run a no-op.
 --
+-- REV 2 (2026-10-11): PREFLIGHT COUNT WINDOW 76 -> 77 (validation-only fix,
+-- payload unchanged). After batch-005 (62 rows) AND this batch (1 row) are
+-- applied, the legitimate live state is exactly 77 rows; the old 14..76
+-- window aborted on that state, making the script unusable for re-runs
+-- after full application. Upper bound stays tight: any count above 77 is
+-- drift and still aborts. Single-record payload, baseline-name check,
+-- triple-guarded insert and every postflight honesty guard are unchanged.
+--
 -- WORKSHEET SHA256: c9f648ff576fdcb4dfa5e1bca946f9d9f4a0706d16dfb13e79e9ee7f3691c490
--- BASELINE SNAPSHOT SHA256: 967a68f39a1ec56aba8f5752ac4886501f1ef5fb0728d36e48a3cfc9bb2cead8
+-- BASELINE SNAPSHOT SHA256: c5bc2813b626a20c0755f3de3cee38acde4b1e802eb657b1bcfa8ac13a2e2a56
 -- ============================================================================
 
 begin;
@@ -50,8 +58,10 @@ declare
   missing_names text;
 begin
   select count(*) into live_count from public.restaurants;
-  if live_count < 14 or live_count > 76 then
-    raise exception 'PREFLIGHT FAIL: restaurants row count is %, expected 14..76 (14 baseline + up to 62 batch-005 rows). Database has drifted — investigate before importing.', live_count;
+  -- 14 baseline + up to 62 batch-005 rows + this batch's 1 row = 77. A count
+  -- above 77 is drift and aborts (mirrors batch-005 REV-3 window policy).
+  if live_count < 14 or live_count > 77 then
+    raise exception 'PREFLIGHT FAIL: restaurants row count is %, expected 14..77 (14 baseline + up to 62 batch-005 rows + the 1 batch-006 row). Database has drifted — investigate before importing.', live_count;
   end if;
 
   select string_agg(n, ', ') into missing_names

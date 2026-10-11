@@ -15,13 +15,13 @@
   "validator_errors": 0,
   "validator_warnings": 0,
   "baseline_rows": 14,
-  "baseline_snapshot_sha256": "967a68f39a1ec56aba8f5752ac4886501f1ef5fb0728d36e48a3cfc9bb2cead8"
+  "baseline_snapshot_sha256": "c5bc2813b626a20c0755f3de3cee38acde4b1e802eb657b1bcfa8ac13a2e2a56"
  },
  "import_state_guarantees": [
   "additive only — INSERTs; no UPDATE, no DELETE, no DDL",
   "every row verification_status 'unverified'; verification booleans, last_verified_at, review_count, community_rating NOT in the column list",
   "fixed UUIDv5 ids (batch namespace 9f0c3a52-…) + triple per-row guards (id / normalized name / phone) -> idempotent re-runs",
-  "preflight aborts on baseline drift (names + count window 14..76 covering pre/post batch-005 states)",
+  "preflight aborts on baseline drift (names + count window 14..77 covering pre/post batch-005 and the applied batch-006 state)",
   "postflight re-checks: counts, identity, untouched aggregates, proximity report"
  ],
  "sql_file": "supabase/insert-batch-006-round4-1.sql",
