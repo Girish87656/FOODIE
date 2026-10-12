@@ -1413,3 +1413,17 @@ Work Log:
 
 Stage Summary:
 - Enrichment fully live and verified end to end: 77/25/0 counts exact, menus render on the right places with recorded source URLs, honesty guardrails intact, mobile clean, zero errors. No code changes needed. Pending: user push (4 local commits) + Vercel deploy to bring the provenance UI to production; deployment blocked on user approval by instruction.
+
+---
+Task ID: final-publication-push-attempt
+Agent: Z.ai Code (main)
+Task: Final publication — verify branch/tree/commits, review diff, push main to origin/main, then monitor Vercel. Push FAILED (no configured GitHub auth in sandbox) — stopped per user instruction; Vercel steps NOT executed and NO deployment claimed.
+
+Work Log:
+- Pre-push verification: branch main; working tree CLEAN; origin = github.com/Girish87656/FOODIE.git (https remote, no embedded credentials); origin/main = a70c4bf; local main ahead by 5 code-bearing commits (90770fd batch-006 REV 3, b891d5d audit worklog, 3097153 prototype 2 enrichment, 29f3ff3 batch-007 REV 2, 39d48f4 verification worklog).
+- Diff review (origin/main..main, 177 files, +4679/-12): ONLY intended Foodie changes — scripts/foodie-enrichment/* (pipeline + worksheets + evidence), scripts/foodie-import-validator/gen-import-sql-round4.ts, supabase/{batch-006 REV3, batch-007, batch-008, migration-007}, src/components/foodie/{PlaceCards,PlaceDetailScreen}, src/lib/foodie/{data/mappers,data/types,types}, worklog.md. Secret checks: NO .env/secret/key files tracked; diff contains NO service-role keys / PATs / Bearer tokens (pattern-scanned).
+- PUSH ATTEMPT (GIT_TERMINAL_PROMPT=0 git push origin main): FAILED — "fatal: could not read Username for 'https://github.com': terminal prompts disabled". Auth environment exhaustively checked: credential.helper=store but ~/.git-credentials does NOT exist; no gh CLI; GITHUB_TOKEN/GH_TOKEN/GIT_TOKEN/GITHUB_PAT all unset; no GIT_* env helpers; no ~/.ssh keys. Per user instruction #4: STOPPED — no force-push attempted, no history rewritten, no commits duplicated.
+- Vercel (NOT monitored for a new build — no push occurred, no deployment triggered, NONE claimed): current production https://foodie-arjun-123b.vercel.app/ probed read-only — homepage 200 (x-vercel-cache HIT, build id _FVQ6VkyYFlg3XTX_EsOW, application-version prototype-2.1.0); /api/restaurants/[id] for Abhis Food Court returns mode supabase with 5 dishes WITH prices (dynamic reads serve the live 77/25 data already) but sourceUrl stripped by the old mapper; "published listing" provenance string ABSENT from all served JS chunks → deployed build predates 3097153. Exact deployed commit not publicly determinable without a Vercel token (no vercel.json, no .vercel dir, no VERCEL_TOKEN).
+
+Stage Summary:
+- Everything is ready and verified locally; the ONLY blocker is GitHub credentials in this sandbox. User action: run `git push origin main` from an authenticated machine (carries 5 commits + this worklog commit). Vercel Git integration then builds automatically; the provenance UI + mapper change land together. Zero Supabase data touched; zero secrets exposed; no deployment success claimed.
