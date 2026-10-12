@@ -1381,3 +1381,18 @@ Work Log:
 
 Stage Summary:
 - Prototype 2 enrichment shipped as: a repeatable, license-aware, fully-guarded pipeline + 2 generated SQL batches + 2 additive migrations + minimal honest UI upgrades. Zero DB writes from the sandbox; zero fabricated data (0 photos approved — honestly none available license-aware; menus only as published with per-item source URLs). Pending: (1) user runs migration-006 + migration-007 + batch-007 + batch-008 in Supabase SQL Editor; (2) menu research backoff run may extend coverage — worksheets/SQL then regenerate; (3) git push of the local commits (credentials) triggers the Vercel Git-integration deployment — push BLOCKED in this session.
+
+---
+Task ID: batch007-rev2-preflight-column-fix
+Agent: Z.ai Code (main)
+Task: Fix runtime 42703 "column c.column does not exist" in insert-batch-007-photos.sql preflight (c) — generator-first lockstep, no Supabase execution, no data changes.
+
+Work Log:
+- Root cause CONFIRMED: preflight (c) wrote bool_and(c."column" is not null); c = information_schema.columns, which has NO column named "column" — the matched-row test must reference c.column_name (the join in the same statement already used c.column_name = v."column" correctly). sqlglot parse-level validation could not catch it (syntactic only, no catalog resolution) — disclosure of the earlier validation gap. Bug existed in exactly 2 copies: the generated file + the generator template (gen-insert-batches.ts line 135). Repo-wide scan: no other file affected; batch-008's equivalent check already used c.column_name; v."column" is valid (quoted VALUES-alias column named "column").
+- Fix (generator-first, lockstep): gen-insert-batches.ts edited in exactly 2 regions — REV 2 header note (2026-10-12) + bool_and(c.column_name is not null). Regenerated both batches via bun gen-insert-batches.ts; git diff confirms batch-007 changed ONLY in those regions; batch-008 byte-identical to committed version (cmp OK; SHA-256 unchanged 004ea2e0...).
+- Validation (static, read-only; NOTHING executed against Supabase): sqlglot postgres parse = transaction + 2 DO-commands + commit (same profile as reviewed batches); residual scan: remaining "column" mentions are comment-only or the valid v."column" alias; guard semantics simulated: migration-006 applied -> PASS; not applied / partial -> FAIL with the pointed run-migration-006-first exception and full rollback; lint clean; guard structure intact (8 raise/notice statements + begin + commit).
+- Honest limitation: no PostgreSQL binary in the sandbox — the corrected file was NOT executed against any database; validation is static only.
+- New hashes: batch-007 REV 2 = d90fd6ef289000690b33edd36393d561d6456e67b61dbef6a8fb7eb19ea3af14; batch-008 UNCHANGED 004ea2e004a01f0b3985fa613e8a4a6c9c97a7f16f187ce7265b85f899fa3622; generator = a6b79495b4ba80aea8ada1518b3dbecd37ce7a30da8eb2467bfbbe856161d05a.
+
+Stage Summary:
+- Batch-007 REV 2 fixes the one runtime error that made every run roll back (42703 inside preflight (c)); guards, payload and transaction logic unchanged; batch-008 untouched. User re-runs FILE 3 (REV 2) then FILE 4 (unchanged) in Supabase SQL Editor in the verified order.
