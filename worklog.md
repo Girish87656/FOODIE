@@ -1396,3 +1396,20 @@ Work Log:
 
 Stage Summary:
 - Batch-007 REV 2 fixes the one runtime error that made every run roll back (42703 inside preflight (c)); guards, payload and transaction logic unchanged; batch-008 untouched. User re-runs FILE 3 (REV 2) then FILE 4 (unchanged) in Supabase SQL Editor in the verified order.
+
+---
+Task ID: prototype2-post-execution-verification
+Agent: Z.ai Code (main)
+Task: After the user executed all four enrichment SQL files — verify live counts, confirm 25 menus display on the correct 7 places with provenance, audit UI/UX end to end, fix only identified issues, run checks, report. No push/deploy (user approval pending).
+
+Work Log:
+- LIVE DB (read-only PostgREST GETs, anon key): restaurants 0-76/77, dishes 0-24/25, restaurant_photos */0 — exactly the expected 77/25/0. Dish distribution matches batch-008 precisely: Abhis Food Court 5, Biryani Darbhar 6, I Cake Bakery 1, Mathsya Darshini 4, Parisara Family Dhaba 2, Rajanna Nati Style Dum Biryani 2, Sri Vinayaka Food Point 5; 0 NULL source_url, 0 NULL price, 0 signature flags. (First probe of the detail API seemed to show 0 dishes — was my script reading the wrong key; the API exposes famousDishes/signatureDishes, both correct.)
+- APP DATA PATH: /api/restaurants/[id] returns mode supabase with dishes joined (Abhis 5, Biryani Darbhar 6 — every row name+price+sourceUrl; non-enriched Vamsi → honest 0/0). /api/restaurants/all → 77 places.
+- BROWSER E2E (agent-browser; NEW throwaway account prototype2-verify-20261012@foodie-test.dev — DISCLOSED, only auth.users row created; prior audit account's password was not recorded): signup → onboarding → home renders real rows with distances, NO demo banner. Search: Abhis→1, Biryani Darbhar→1, Vamsi→1. Detail (Abhis Food Court): all 5 pills with prices + "Items & prices from published listing: magicpin.in" (link) + Unverified listing chip + LISTING SOURCE + honest "No photos added yet"/"No Foodie reviews yet". Detail (Biryani Darbhar): 6 dishes, dual-host provenance justdial.com + zomato.com. Detail (Mathsya, 390x844 mobile): pills + zomato.com provenance + honest empty states; layout clean, no overflow. Detail (Vamsi, non-enriched): NO menu section rendered (no fabricated section), honest empty states. Get Directions opens real Google Maps externally (verified — link navigated out). Sort Top Rated → 4.9-rated first (enriched places prominent). 0 page errors, 0 console errors.
+- Headless scroll nuance investigated: detail overlay scroll container (.thin-scrollbar.flex-1.overflow-y-auto, 1319px content) scrolls via scrollTop/touch; synthetic wheel delivery is a headless artifact, NOT an app defect — container is a standard overflow-y-auto and prior mobile sessions scrolled it normally.
+- POLISH: no specific defect identified → ZERO code changes (per instruction: polish only where an issue is found). Filter-pill ellipsis truncation at 390px is by-design responsive truncation.
+- CHECKS: bun run lint exit 0; bunx tsc --noEmit → src/ clean (pre-existing examples/+skills/ errors only, not compiled by Next). `bun run build` NOT run — disallowed by the sandbox (single port, dev server must keep running); compile correctness covered by tsc+lint+running E2E; Vercel performs the real production build at deploy time.
+- PRODUCTION NOTE: origin/main = a70c4bf; local main is 4 commits ahead (90770fd, b891d5d, 3097153, 29f3ff3). Production (Vercel, built from origin/main) ALREADY renders dish pills with prices from the live DB (dynamic no-store reads), but the provenance line ships in 3097153 — it appears only after push + deploy (awaiting user approval).
+
+Stage Summary:
+- Enrichment fully live and verified end to end: 77/25/0 counts exact, menus render on the right places with recorded source URLs, honesty guardrails intact, mobile clean, zero errors. No code changes needed. Pending: user push (4 local commits) + Vercel deploy to bring the provenance UI to production; deployment blocked on user approval by instruction.
