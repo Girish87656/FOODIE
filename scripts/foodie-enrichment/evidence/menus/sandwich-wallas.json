@@ -1,0 +1,11 @@
+{
+  "restaurantId": "486981ad-76a7-581a-ad67-db33f4785c7c",
+  "restaurantName": "Sandwich Wallas",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/sandwich-wallas-doddaballapura-locality",
+    "websearch:\"Sandwich Wallas Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

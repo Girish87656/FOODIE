@@ -1,0 +1,11 @@
+{
+  "restaurantId": "03c886f6-4f9d-51a6-8a0a-2a8ff686b1b1",
+  "restaurantName": "Pizza Corner",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/pizza-corner-doddaballapura-locality",
+    "websearch:\"Pizza Corner Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

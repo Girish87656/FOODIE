@@ -1,0 +1,11 @@
+{
+  "restaurantId": "50c204ec-11d8-55bd-885d-d9ce4db53295",
+  "restaurantName": "Golden Cafe & Resto",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/golden-cafe-resto-doddaballapura-locality",
+    "websearch:\"Golden Cafe & Resto Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

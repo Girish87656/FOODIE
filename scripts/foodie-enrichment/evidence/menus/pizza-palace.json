@@ -1,0 +1,11 @@
+{
+  "restaurantId": "a90a64bc-dbd5-5a18-b69c-94b9c020524f",
+  "restaurantName": "Pizza Palace",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/pizza-palace-doddaballapura-locality",
+    "websearch:\"Pizza Palace Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,11 @@
+{
+  "restaurantId": "209a42b5-fedf-5a42-8612-1bbad7061db4",
+  "restaurantName": "R R Lunch House",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/r-r-lunch-house-doddaballapura-locality",
+    "websearch:\"R R Lunch House Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

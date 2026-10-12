@@ -1,0 +1,11 @@
+{
+  "restaurantId": "b9ee0ae8-6f47-5b80-adc0-3ca490f62ed5",
+  "restaurantName": "Kwality Walls",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/kwality-walls-doddaballapura-locality",
+    "websearch:\"Kwality Walls Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

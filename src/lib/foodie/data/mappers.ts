@@ -118,6 +118,8 @@ function dishRowToDish(row: DishRow): Dish {
     protein: row.protein != null ? Number(row.protein) : undefined,
     carbs: row.carbs != null ? Number(row.carbs) : undefined,
     fat: row.fat != null ? Number(row.fat) : undefined,
+    // migration-007 provenance — absent on legacy rows, never defaulted.
+    sourceUrl: row.source_url ?? undefined,
   };
 }
 

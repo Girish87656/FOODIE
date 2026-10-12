@@ -1,0 +1,11 @@
+{
+  "restaurantId": "3a223ad9-b241-5481-a515-4d60e9b4d35b",
+  "restaurantName": "The Brothers Adda",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/the-brothers-adda-1-doddaballapura-locality",
+    "websearch:\"The Brothers Adda Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

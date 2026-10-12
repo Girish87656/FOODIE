@@ -101,6 +101,11 @@ export interface DishRow {
   carbs: number | null;
   fat: number | null;
   is_signature: boolean;
+  /**
+   * migration-007 provenance: page that published this item (NULL on legacy
+   * rows / pre-migration tables — mapped to unknown, never guessed).
+   */
+  source_url?: string | null;
   created_at: string;
 }
 

@@ -1,0 +1,32 @@
+{
+  "restaurantId": "b3419ddd-4d6a-53d8-97f1-c332b953008e",
+  "restaurantName": "Parisara Family Dhaba",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/parisara-family-dhaba-7-doddaballapura-locality",
+    "websearch:\"Parisara Family Dhaba Doddaballapura menu price\""
+  ],
+  "candidates": [
+    {
+      "restaurantId": "b3419ddd-4d6a-53d8-97f1-c332b953008e",
+      "restaurantName": "Parisara Family Dhaba",
+      "name": "Chicken Biryani (Family Pack, Serves 9-10)",
+      "price": 900,
+      "sourceUrl": "https://www.zomato.com",
+      "evidence": "[search snippet · Parisara Family Dhaba - Doddaballapura Locality] Chicken Biryani (Family Pack, Serves 9-10). ₹900 ; Chicken Kabab (Family Pack, 28 Pieces). ₹520 ; Chicken Kabab Biryani (Serves 9-10). ₹ ... Read more",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "b3419ddd-4d6a-53d8-97f1-c332b953008e",
+      "restaurantName": "Parisara Family Dhaba",
+      "name": "Chicken Kabab (Family Pack, 28 Pieces)",
+      "price": 520,
+      "sourceUrl": "https://www.zomato.com",
+      "evidence": "[search snippet · Parisara Family Dhaba - Doddaballapura Locality] Chicken Kabab (Family Pack, 28 Pieces). ₹520 ; Chicken Kabab Biryani (Serves 9-10). ₹ ... Read more",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

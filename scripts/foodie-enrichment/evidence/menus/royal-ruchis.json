@@ -1,0 +1,11 @@
+{
+  "restaurantId": "47faeb3d-806b-5dd8-9f65-9b3bfaf271a2",
+  "restaurantName": "Royal Ruchis",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/royal-ruchis-2-doddaballapura-locality",
+    "websearch:\"Royal Ruchis Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

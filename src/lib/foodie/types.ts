@@ -81,6 +81,11 @@ export interface Dish {
   /** Menu line exactly as stored in the DB — absent when `description` is NULL. */
   description?: string;
   price?: number;
+  /**
+   * Page that published this item (and its price) — migration-007 provenance.
+   * Absent when unknown; the menu UI shows a source line ONLY when present.
+   */
+  sourceUrl?: string;
   /** Demo dataset only — the real dishes table has no emoji column. */
   emoji?: string;
   /**

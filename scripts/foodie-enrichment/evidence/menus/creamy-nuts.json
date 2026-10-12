@@ -1,0 +1,11 @@
+{
+  "restaurantId": "111a3964-e6cd-5452-a303-c31216222980",
+  "restaurantName": "Creamy Nuts",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/creamy-nuts-doddaballapura-locality",
+    "websearch:\"Creamy Nuts Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

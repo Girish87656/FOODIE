@@ -1,0 +1,72 @@
+{
+  "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+  "restaurantName": "Biryani Darbhar",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/biryani-darbhar-doddaballapura-locality",
+    "websearch:\"Biryani Darbhar Doddaballapura menu price\""
+  ],
+  "candidates": [
+    {
+      "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+      "restaurantName": "Biryani Darbhar",
+      "name": "Chicken Biryani",
+      "price": 190,
+      "sourceUrl": "https://www.zomato.com",
+      "evidence": "[search snippet · Biryani Darbhar, Doddaballapura Locality order online] Chicken Biryani ₹190 ADD customizable Mutton Biryani ₹310. Chilli Chicken ₹199 ADD customizable Chicken 65 ₹199 ADD customizable Chicken Manchurian ₹199",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+      "restaurantName": "Biryani Darbhar",
+      "name": "Chilli Chicken",
+      "price": 199,
+      "sourceUrl": "https://www.zomato.com",
+      "evidence": "[search snippet · Biryani Darbhar, Doddaballapura Locality order online] Chilli Chicken ₹199 ADD customizable Chicken 65 ₹199 ADD customizable Chicken Manchurian ₹199",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+      "restaurantName": "Biryani Darbhar",
+      "name": "Chicken 65",
+      "price": 200,
+      "sourceUrl": "https://www.justdial.com",
+      "evidence": "[search snippet · Menu of Biryani Darbhar in Doddaballapur, Bangalore] Chicken 65, ₹ 200 ; Chicken Fry, ₹ 190 ; Chicken Kebab, ₹ 180 ; Mutton Fry, ₹ 300 ...",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+      "restaurantName": "Biryani Darbhar",
+      "name": "Chicken Fry",
+      "price": 190,
+      "sourceUrl": "https://www.justdial.com",
+      "evidence": "[search snippet · Menu of Biryani Darbhar in Doddaballapur, Bangalore] Chicken Fry, ₹ 190 ; Chicken Kebab, ₹ 180 ; Mutton Fry, ₹ 300 ...",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+      "restaurantName": "Biryani Darbhar",
+      "name": "Chicken Kebab",
+      "price": 180,
+      "sourceUrl": "https://www.justdial.com",
+      "evidence": "[search snippet · Menu of Biryani Darbhar in Doddaballapur, Bangalore] Chicken Kebab, ₹ 180 ; Mutton Fry, ₹ 300 ...",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "75307086-4835-545e-aa30-6ec704d6906e",
+      "restaurantName": "Biryani Darbhar",
+      "name": "Mutton Fry",
+      "price": 300,
+      "sourceUrl": "https://www.justdial.com",
+      "evidence": "[search snippet · Menu of Biryani Darbhar in Doddaballapur, Bangalore] Mutton Fry, ₹ 300 ...",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

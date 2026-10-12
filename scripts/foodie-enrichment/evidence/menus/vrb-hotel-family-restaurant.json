@@ -1,0 +1,11 @@
+{
+  "restaurantId": "b5eeb3be-707d-5ae8-9d6a-d095b8f3d05b",
+  "restaurantName": "VRB HOTEL FAMILY RESTAURANT",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/vrb-hotel-family-restaurant-doddaballapura-locality",
+    "websearch:\"VRB HOTEL FAMILY RESTAURANT Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

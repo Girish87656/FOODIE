@@ -1,0 +1,11 @@
+{
+  "restaurantId": "35e3c89e-0bd6-5dff-9590-0849a565d0c2",
+  "restaurantName": "Burger Time",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/burger-time-doddaballapura-locality",
+    "websearch:\"Burger Time Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

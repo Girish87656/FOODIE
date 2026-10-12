@@ -1,0 +1,11 @@
+{
+  "restaurantId": "975bcf72-a8e9-59c0-8831-5a468e5d609f",
+  "restaurantName": "Vamsi Military Hotel",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/vamsi-military-hotel-doddaballapura-locality",
+    "websearch:\"Vamsi Military Hotel Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,52 @@
+{
+  "restaurantId": "09996a9b-9821-5b53-8d6f-9adf23a655b4",
+  "restaurantName": "Mathsya Darshini",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/mathsya-darshini-doddaballapura-locality",
+    "websearch:\"Mathsya Darshini Doddaballapura menu price\""
+  ],
+  "candidates": [
+    {
+      "restaurantId": "09996a9b-9821-5b53-8d6f-9adf23a655b4",
+      "restaurantName": "Mathsya Darshini",
+      "name": "Chapathi (2 Pcs)",
+      "price": 55,
+      "sourceUrl": "https://www.zomato.com/doddaballapura/mathsya-darshini-doddaballapura-locality/order",
+      "evidence": "[search snippet · Mathsya Darshini, Doddaballapura Locality order online] Chapathi (2 Pcs). ₹55 ; Chapathi Fish Curry Meals. ₹220 ; Fish Biriyani. ₹250 ; Fish With Curry. ₹170 ; Mudde Fish Curry Meals. ₹220.",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "09996a9b-9821-5b53-8d6f-9adf23a655b4",
+      "restaurantName": "Mathsya Darshini",
+      "name": "Chapathi Fish Curry Meals",
+      "price": 220,
+      "sourceUrl": "https://www.zomato.com/doddaballapura/mathsya-darshini-doddaballapura-locality/order",
+      "evidence": "[search snippet · Mathsya Darshini, Doddaballapura Locality order online] Chapathi Fish Curry Meals. ₹220 ; Fish Biriyani. ₹250 ; Fish With Curry. ₹170 ; Mudde Fish Curry Meals. ₹220.",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "09996a9b-9821-5b53-8d6f-9adf23a655b4",
+      "restaurantName": "Mathsya Darshini",
+      "name": "Fish Biriyani",
+      "price": 250,
+      "sourceUrl": "https://www.zomato.com/doddaballapura/mathsya-darshini-doddaballapura-locality/order",
+      "evidence": "[search snippet · Mathsya Darshini, Doddaballapura Locality order online] Fish Biriyani. ₹250 ; Fish With Curry. ₹170 ; Mudde Fish Curry Meals. ₹220.",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "09996a9b-9821-5b53-8d6f-9adf23a655b4",
+      "restaurantName": "Mathsya Darshini",
+      "name": "Fish With Curry",
+      "price": 170,
+      "sourceUrl": "https://www.zomato.com/doddaballapura/mathsya-darshini-doddaballapura-locality/order",
+      "evidence": "[search snippet · Mathsya Darshini, Doddaballapura Locality order online] Fish With Curry. ₹170 ; Mudde Fish Curry Meals. ₹220.",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

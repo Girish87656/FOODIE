@@ -1,0 +1,11 @@
+{
+  "restaurantId": "8b5f32a4-7e35-5119-8cb5-2cfba5f2e746",
+  "restaurantName": "Cafe 66",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/cafe-66-1-doddaballapura-locality",
+    "websearch:\"Cafe 66 Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,13 @@
+{
+  "restaurantId": "bf44af7e-518e-56be-b34c-61ab5b3a4dc8",
+  "restaurantName": "Rainbow Huts Family Restaurant",
+  "queries": [
+    "page_reader:https://magicpin.in/Bangalore/Bashettihalli/Restaurant/Rainbow-Huts-Family-Restaurant/store/184787c",
+    "websearch:\"Rainbow Huts Family Restaurant Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [
+    "page read OK but no menu-shaped text: https://magicpin.in/Bangalore/Bashettihalli/Restaurant/Rainbow-Huts-Family-Restaurant/store/184787c"
+  ],
+  "retrievedOn": "2026-10-12"
+}

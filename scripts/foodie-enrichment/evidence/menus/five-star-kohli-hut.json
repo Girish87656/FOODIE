@@ -1,0 +1,11 @@
+{
+  "restaurantId": "8fcffd2d-72a2-53ff-8a3b-093b3d292601",
+  "restaurantName": "Five Star Kohli Hut",
+  "queries": [
+    "page_reader:https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Five-Star-Kohli-Hut/store/1644707",
+    "websearch:\"Five Star Kohli Hut Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

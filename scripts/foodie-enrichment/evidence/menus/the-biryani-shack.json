@@ -1,0 +1,10 @@
+{
+  "restaurantId": "3f25ba72-4d39-400b-aebb-ca303a7bdfd2",
+  "restaurantName": "The Biryani Shack",
+  "queries": [
+    "websearch:\"The Biryani Shack Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

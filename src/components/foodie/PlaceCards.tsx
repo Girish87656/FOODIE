@@ -3,6 +3,7 @@
 import { MapPin, Users, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
+import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
 import { RatingBadge, PlaceBadge } from "./Badges";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
 
@@ -39,33 +40,54 @@ function DistanceChip({
 
 /**
  * Photo with an honest placeholder when the database row has no image yet
- * (demo data always ships photos; real rows may not).
+ * (demo data always ships photos; real rows may not). The placeholder is
+ * category-aware — the emoji comes from the place's REAL stored category,
+ * never a random decoration.
  */
+function categoryEmoji(categoryId?: string): string | null {
+  if (!categoryId) return null;
+  return PLACE_CATEGORIES.find((c) => c.id === categoryId)?.emoji ?? null;
+}
+
 function PlacePhoto({
   src,
   alt,
   className,
   iconClassName,
+  category,
 }: {
   src?: string;
   alt: string;
   className?: string;
   iconClassName?: string;
+  category?: string;
 }) {
   if (!src) {
+    const emoji = categoryEmoji(category);
     return (
       <div
         role="img"
         aria-label={alt}
         className={cn(
-          "grid size-full place-items-center bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
+          "relative grid size-full place-items-center overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
           className
         )}
       >
-        <UtensilsCrossed
-          className={cn("size-6 text-orange-300", iconClassName)}
+        {/* soft radial warmth behind the category emoji */}
+        <span
           aria-hidden="true"
+          className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
         />
+        {emoji ? (
+          <span aria-hidden="true" className="text-[26px] drop-shadow-sm">
+            {emoji}
+          </span>
+        ) : (
+          <UtensilsCrossed
+            className={cn("size-6 text-orange-300", iconClassName)}
+            aria-hidden="true"
+          />
+        )}
       </div>
     );
   }
@@ -95,6 +117,7 @@ export function CarouselCard({ place, onSelect }: PlaceCardBase) {
           src={place.photos[0]}
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+          category={place.categoryIds[0]}
         />
         {place.badges.hiddenGem && (
           <PlaceBadge label="Hidden Gem" className="absolute left-2 top-2" />
@@ -152,6 +175,7 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
           alt={`${place.name} — ${place.cuisines.join(", ")}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           iconClassName="size-5"
+          category={place.categoryIds[0]}
         />
       </div>
       <div className="min-w-0 flex-1">
@@ -203,6 +227,7 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           iconClassName="size-8"
+          category={place.categoryIds[0]}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
         <DistanceChip

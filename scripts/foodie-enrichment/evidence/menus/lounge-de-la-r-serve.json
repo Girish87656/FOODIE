@@ -1,0 +1,11 @@
+{
+  "restaurantId": "4923568a-4b62-5507-b246-523ad25b001c",
+  "restaurantName": "Lounge de La Réserve",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/lounge-de-la-r%C3%A9serve-2-doddaballapura-locality",
+    "websearch:\"Lounge de La Réserve Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

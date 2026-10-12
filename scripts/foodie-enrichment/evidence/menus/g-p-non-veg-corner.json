@@ -1,0 +1,11 @@
+{
+  "restaurantId": "22085eae-fb35-5164-8e65-f24689889e48",
+  "restaurantName": "G P Non Veg Corner",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/g-p-non-veg-corner-doddaballapura-locality",
+    "websearch:\"G P Non Veg Corner Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

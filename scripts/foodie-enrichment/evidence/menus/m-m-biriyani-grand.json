@@ -1,0 +1,11 @@
+{
+  "restaurantId": "9d2bef79-294a-5dc6-b5a3-95738837e70b",
+  "restaurantName": "M M Biriyani Grand",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/m-m-biriyani-grand-doddaballapura-locality",
+    "websearch:\"M M Biriyani Grand Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

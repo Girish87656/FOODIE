@@ -1,0 +1,32 @@
+{
+  "restaurantId": "b13552e5-6ea7-5053-9e5f-05abab78aa44",
+  "restaurantName": "Rajanna Nati Style Dum Biryani",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/rajanna-nati-style-dum-biryani-doddaballapura-locality",
+    "websearch:\"Rajanna Nati Style Dum Biryani Doddaballapura menu price\""
+  ],
+  "candidates": [
+    {
+      "restaurantId": "b13552e5-6ea7-5053-9e5f-05abab78aa44",
+      "restaurantName": "Rajanna Nati Style Dum Biryani",
+      "name": "Chicken Biryani",
+      "price": 160,
+      "sourceUrl": "https://www.zomato.com/doddaballapura/rajanna-nati-style-dum-biryani-doddaballapura-locality/order",
+      "evidence": "[search snippet · Rajanna Nati Style Dum Biryani - Doddaballapura Locality] Chicken Biryani ₹160 ADD Mutton Biryani ₹250 ADD customizable Starters Egg Boti Fry ₹150 ADD Chicken Fry ₹130 ADD Chicken Kebab ₹100 ADD Chicken Masala ₹130",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "b13552e5-6ea7-5053-9e5f-05abab78aa44",
+      "restaurantName": "Rajanna Nati Style Dum Biryani",
+      "name": "non-veg Chicken Lollipop",
+      "price": 120,
+      "sourceUrl": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Rajanna-Nati-Style-Dum-Biryani/store/16b6836?srsltid=AU7gw4UGxH3TAusC2I-_MfP-Ydtlwz4HMYxvBcCVPEV663XMC41-r2P2",
+      "evidence": "[search snippet · Rajanna Nati Style Dum Biryani, Doddaballapur, Bangalore] non-veg Chicken Lollipop ₹120 ...",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,11 @@
+{
+  "restaurantId": "f3094c5f-204e-56c3-8910-5a7ad273c665",
+  "restaurantName": "Rajashree Veg And Non-Veg Family Restaurant",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/rajashree-veg-and-non-veg-family-restaurant-doddaballapura-locality",
+    "websearch:\"Rajashree Veg And Non-Veg Family Restaurant Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

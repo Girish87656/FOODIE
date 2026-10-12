@@ -1,0 +1,13 @@
+{
+  "restaurantId": "d0f6f3aa-bb95-5628-bd81-75314729fca2",
+  "restaurantName": "Lotus Gardenia",
+  "queries": [
+    "page_reader:https://www.justdial.com/Bangalore/Lotus-Gardenia-Restaurants-Bar-Rooms-Opposite-Indian-Oil-Petrol-BunkNear-Railway-Station-Doddaballapur/080PXX80-XX80-210421154401-X4L9_BZDET",
+    "websearch:\"Lotus Gardenia Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [
+    "page read OK but no menu-shaped text: https://www.justdial.com/Bangalore/Lotus-Gardenia-Restaurants-Bar-Rooms-Opposite-Indian-Oil-Petrol-BunkNear-Railway-Station-Doddaballapur/080PXX80-XX80-210421154401-X4L9_BZDET"
+  ],
+  "retrievedOn": "2026-10-12"
+}

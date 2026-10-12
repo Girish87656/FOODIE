@@ -1,0 +1,11 @@
+{
+  "restaurantId": "50ecd47f-6afe-5d08-b499-07fa612f41b3",
+  "restaurantName": "Durgashree Samruddhi Garden",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/durgashree-samruddhi-garden-1-doddaballapura-locality",
+    "websearch:\"Durgashree Samruddhi Garden Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,61 @@
+{
+  "restaurantId": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+  "restaurantName": "Sri Vinayaka Food Point",
+  "queries": [
+    "worksheet:menu_notes"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+      "restaurantName": "Sri Vinayaka Food Point",
+      "name": "Bajji (4 pc)",
+      "price": 45,
+      "sourceUrl": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Sri-Vinayaka-Food-Point/store/15a4365",
+      "evidence": "[round3 worksheet menu_notes] Bajji (4 pc) Rs 45; Rava Idli (1 pc) Rs 65; 3 Poori Rs 70; Paper Plain Dosa Rs 80; Idli (3 pc) with 1 vada Rs 80 (magicpin, 2026-10-09).",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+      "restaurantName": "Sri Vinayaka Food Point",
+      "name": "Rava Idli (1 pc)",
+      "price": 65,
+      "sourceUrl": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Sri-Vinayaka-Food-Point/store/15a4365",
+      "evidence": "[round3 worksheet menu_notes] Rava Idli (1 pc) Rs 65; 3 Poori Rs 70; Paper Plain Dosa Rs 80; Idli (3 pc) with 1 vada Rs 80 (magicpin, 2026-10-09).",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+      "restaurantName": "Sri Vinayaka Food Point",
+      "name": "3 Poori",
+      "price": 70,
+      "sourceUrl": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Sri-Vinayaka-Food-Point/store/15a4365",
+      "evidence": "[round3 worksheet menu_notes] 3 Poori Rs 70; Paper Plain Dosa Rs 80; Idli (3 pc) with 1 vada Rs 80 (magicpin, 2026-10-09).",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+      "restaurantName": "Sri Vinayaka Food Point",
+      "name": "Paper Plain Dosa",
+      "price": 80,
+      "sourceUrl": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Sri-Vinayaka-Food-Point/store/15a4365",
+      "evidence": "[round3 worksheet menu_notes] Paper Plain Dosa Rs 80; Idli (3 pc) with 1 vada Rs 80 (magicpin, 2026-10-09).",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    },
+    {
+      "restaurantId": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+      "restaurantName": "Sri Vinayaka Food Point",
+      "name": "Idli (3 pc) with 1 vada",
+      "price": 80,
+      "sourceUrl": "https://magicpin.in/Bangalore/Doddaballapur/Restaurant/Sri-Vinayaka-Food-Point/store/15a4365",
+      "evidence": "[round3 worksheet menu_notes] Idli (3 pc) with 1 vada Rs 80 (magicpin, 2026-10-09).",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

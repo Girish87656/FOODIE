@@ -1,0 +1,11 @@
+{
+  "restaurantId": "aa436737-6104-57d9-b127-a43b2e6b071e",
+  "restaurantName": "Hotel Sweetheart",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/hotel-sweetheart-doddaballapura-locality",
+    "websearch:\"Hotel Sweetheart Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

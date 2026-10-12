@@ -1,0 +1,11 @@
+{
+  "restaurantId": "d4c31bf9-3ffa-5783-b9f9-d09a2d278fd5",
+  "restaurantName": "Dada Tea And Chats",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/dada-tea-and-chats-doddaballapura-locality",
+    "websearch:\"Dada Tea And Chats Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,11 @@
+{
+  "restaurantId": "7253deaf-15cc-504d-a9cb-dd75b86589dd",
+  "restaurantName": "House Full",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/house-full-doddaballapura-locality",
+    "websearch:\"House Full Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,22 @@
+{
+  "restaurantId": "4df2f4dc-7a76-57b2-b0d1-4d8f6d06e14b",
+  "restaurantName": "I Cake Bakery",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/i-cake-bakery-doddaballapura-locality",
+    "websearch:\"I Cake Bakery Doddaballapura menu price\""
+  ],
+  "candidates": [
+    {
+      "restaurantId": "4df2f4dc-7a76-57b2-b0d1-4d8f6d06e14b",
+      "restaurantName": "I Cake Bakery",
+      "name": "Cakes Cupcakes Strawberry Cupcake",
+      "price": 50,
+      "sourceUrl": "https://www.zomato.com",
+      "evidence": "[search snippet · I Cake Bakery, Doddaballapura Locality order online] Cakes Cupcakes Strawberry Cupcake ₹50 ADD customizable Blackcurrant Cupcake ₹50 ADD customizable Pastries Black Forest Pastry ₹70 ADD customizable Rich Truffle",
+      "isSignature": false,
+      "retrievedOn": "2026-10-12"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

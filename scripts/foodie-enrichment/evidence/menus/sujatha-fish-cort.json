@@ -1,0 +1,11 @@
+{
+  "restaurantId": "7fff391d-305e-54bf-94c2-2508d7648973",
+  "restaurantName": "Sujatha Fish Cort",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/sujatha-fish-cort-doddaballapura-locality",
+    "websearch:\"Sujatha Fish Cort Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

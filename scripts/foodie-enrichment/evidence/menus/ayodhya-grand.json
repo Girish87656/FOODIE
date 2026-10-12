@@ -1,0 +1,11 @@
+{
+  "restaurantId": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+  "restaurantName": "Ayodhya Grand",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/ayodhya-grand-doddaballapura-locality",
+    "websearch:\"Ayodhya Grand Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

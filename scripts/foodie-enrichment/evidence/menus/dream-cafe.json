@@ -1,0 +1,11 @@
+{
+  "restaurantId": "bd17aca9-8a48-5926-b353-e5027c73a540",
+  "restaurantName": "DREAM CAFE",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/dream-cafe-doddaballapura-locality",
+    "websearch:\"DREAM CAFE Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

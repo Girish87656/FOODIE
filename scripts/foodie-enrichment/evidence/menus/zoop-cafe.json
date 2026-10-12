@@ -1,0 +1,13 @@
+{
+  "restaurantId": "2a0132c0-1eaf-5a0b-bb8b-3265ef4ecc4d",
+  "restaurantName": "Zoop Cafe",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/zoop-cafe-doddaballapura-locality",
+    "websearch:\"Zoop Cafe Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [
+    "page unreadable: https://www.district.in/dining/doddaballapura/zoop-cafe-doddaballapura-locality"
+  ],
+  "retrievedOn": "2026-10-12"
+}

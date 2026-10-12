@@ -1,0 +1,11 @@
+{
+  "restaurantId": "9aba4a22-4ccd-59b1-bfe8-a43da68f2352",
+  "restaurantName": "Naati Mane",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/naati-mane-1-doddaballapura-locality",
+    "websearch:\"Naati Mane Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

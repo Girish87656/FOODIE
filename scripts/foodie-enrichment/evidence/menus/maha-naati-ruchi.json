@@ -1,0 +1,11 @@
+{
+  "restaurantId": "177458f4-249c-5dbb-b91a-6084aeb7020d",
+  "restaurantName": "Maha Naati Ruchi",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/maha-naati-ruchi-3-doddaballapura-locality",
+    "websearch:\"Maha Naati Ruchi Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

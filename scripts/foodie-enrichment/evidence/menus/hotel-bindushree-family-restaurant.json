@@ -1,0 +1,13 @@
+{
+  "restaurantId": "55422d8b-8ae5-5082-97ab-85b7870ae1dc",
+  "restaurantName": "Hotel Bindushree Family Restaurant",
+  "queries": [
+    "page_reader:https://magicpin.in/Bangalore/Bashettihalli/Hotel/Hotel-Bindushree-Family-Restaurant/store/1174189",
+    "websearch:\"Hotel Bindushree Family Restaurant Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [
+    "page read OK but no menu-shaped text: https://magicpin.in/Bangalore/Bashettihalli/Hotel/Hotel-Bindushree-Family-Restaurant/store/1174189"
+  ],
+  "retrievedOn": "2026-10-12"
+}

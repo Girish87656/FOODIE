@@ -254,6 +254,23 @@ export function PlaceDetailScreen() {
   // Phone from the database — a Call button only exists when a number exists.
   const telHref = place.phone ? `tel:${place.phone.replace(/[^\d+]/g, "")}` : null;
 
+  // Menu provenance (migration-007): unique source domains actually recorded on
+  // this place's dish rows. Nothing is displayed when no dish carries a
+  // source — provenance is shown only when it exists, never guessed.
+  const menuSources = (() => {
+    const byHost = new Map<string, string>();
+    for (const d of [...place.signatureDishes, ...place.famousDishes]) {
+      if (!d.sourceUrl) continue;
+      try {
+        const host = new URL(d.sourceUrl).hostname.replace(/^www\./, "");
+        if (!byHost.has(host)) byHost.set(host, d.sourceUrl);
+      } catch {
+        /* malformed stored URL — skip it rather than render a broken link */
+      }
+    }
+    return [...byHost.entries()];
+  })();
+
   // ---- photo failure honesty ------------------------------------------------
   // A stored URL that cannot load (removed file, network hiccup, blocked host)
   // degrades to an explicit "photo unavailable" tile — the broken-image glyph
@@ -663,6 +680,30 @@ export function PlaceDetailScreen() {
                   })}
                 </div>
               </section>
+            )}
+
+            {/* honest provenance for recorded menu data (migration-007) —
+                rendered only when dish rows actually carry source URLs */}
+            {menuSources.length > 0 && (
+              <p className="mt-3 flex flex-wrap items-center gap-x-1 gap-y-0.5 px-1 text-[11px] font-medium text-stone-400">
+                <ExternalLink className="size-3 shrink-0" aria-hidden="true" />
+                <span>
+                  Items &amp; prices from published listing{menuSources.length > 1 ? "s" : ""}:
+                </span>
+                {menuSources.map(([host, url], i) => (
+                  <span key={host} className="flex items-center gap-1">
+                    {i > 0 && <span aria-hidden="true">·</span>}
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-stone-500 underline decoration-dotted underline-offset-2 transition-colors hover:text-primary"
+                    >
+                      {host}
+                    </a>
+                  </span>
+                ))}
+              </p>
             )}
           </>
         )}

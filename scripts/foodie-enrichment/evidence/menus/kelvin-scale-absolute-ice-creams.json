@@ -1,0 +1,11 @@
+{
+  "restaurantId": "cbcd6b35-43dd-50aa-990b-64ebff397e69",
+  "restaurantName": "Kelvin Scale - Absolute Ice Creams",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/kelvin-scale-absolute-ice-creams-doddaballapura-locality",
+    "websearch:\"Kelvin Scale - Absolute Ice Creams Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

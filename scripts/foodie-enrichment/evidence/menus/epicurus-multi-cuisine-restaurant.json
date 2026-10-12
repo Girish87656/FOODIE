@@ -1,0 +1,11 @@
+{
+  "restaurantId": "7409bf48-5007-5875-b149-f4892ae27ed3",
+  "restaurantName": "Epicurus Multi Cuisine Restaurant",
+  "queries": [
+    "page_reader:https://www.district.in/dining/doddaballapura/epicurus-multi-cuisine-restaurant-doddaballapura-locality",
+    "websearch:\"Epicurus Multi Cuisine Restaurant Doddaballapura menu price\""
+  ],
+  "candidates": [],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}
