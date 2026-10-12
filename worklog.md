@@ -1468,3 +1468,19 @@ Work Log:
 
 Stage Summary:
 - All 7 commits verified, reviewed, and ready; push remains blocked solely on GitHub credentials — user action: `git push origin main` from an authenticated machine (or provide a PAT / `gh auth login` in the sandbox). Vercel Git integration then deploys automatically; no Vercel access exists to trigger/observe it manually. Production (old build) passes every functional check that does not depend on the 7 unpushed commits; the dish-level provenance line + provenance UI land only after push+deploy. Photo pipeline stays at 0 approved / 0 integrated by evidence, production photo set honestly empty.
+
+---
+Task ID: publish-device-flow-and-fallback
+Agent: Z.ai Code (main)
+Task: Continue publication via browser-based GitHub device authentication; fallback = portable patch. Nothing pushed/deployed claimed without verification.
+
+Work Log:
+- GIT pre-check: branch main @ 24ff9bd, tree clean, exactly 8 commits ahead of origin/main (a70c4bf) — verified.
+- gh CLI INSTALLED safely: official binary v2.102.0 from cli/cli releases → ~/.local/bin/gh (no package-manager changes, no root).
+- gh's own `gh auth login --web` device flow STARTED (code displayed to user) but the sandbox kills background processes between tool invocations — gh's poller died before user authorization; flow unusable as-is.
+- Switched to GitHub's DOCUMENTED device flow (RFC 8628) with the official GitHub CLI client_id (178c6fc778ccc68e1d6a), scope repo,workflow,read:org: user_code 9E4C-AE68 shown to the user; two poll windows (~12 min total) against /login/oauth/access_token; result: expired_token (user did not complete browser authorization in the 15-min window). NO token ever received; NOTHING printed/leaked; no retries beyond the two windows; flow can be re-issued on user request in seconds.
+- FALLBACK prepared: portable artifacts in /home/z/foodie-publish/ — full git bundle (exact SHAs) + format-patch series (git-am portable). Bundle verified; secret format scan (ghp_/gho_/github_pat_/AKIA/private-key blocks/service_role) clean across diff and patch files; no .env or credential files in the commit range.
+- SECURITY: token file (never created — auth never succeeded) handling was designed chmod-600 + rm after gh login; gh auth status output token-redacted; device/user codes are safe-by-design (worthless without the user's browser authorization).
+
+Stage Summary:
+- Publication still blocked on user-side authorization timing (or credentials on an authenticated machine). Two ready paths: (a) say "go" → fresh device code → authorize in browser → I push immediately; (b) take /home/z/foodie-publish/ artifacts to any authenticated machine → fetch bundle + push (or git am). No force-push, no history rewrite, remote untouched at a70c4bf.
