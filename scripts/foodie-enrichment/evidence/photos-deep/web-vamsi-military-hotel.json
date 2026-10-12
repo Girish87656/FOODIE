@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "975bcf72-a8e9-59c0-8831-5a468e5d609f",
+    "name": "Vamsi Military Hotel"
+  },
+  "query": "\"Vamsi Military Hotel\" Bashettihalli",
+  "hits": [],
+  "errors": [
+    "rate-limited (3)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

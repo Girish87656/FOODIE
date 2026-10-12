@@ -1,0 +1,39 @@
+{
+  "place": {
+    "id": "486981ad-76a7-581a-ad67-db33f4785c7c",
+    "name": "Sandwich Wallas"
+  },
+  "query": "\"Sandwich Wallas\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/bangalore",
+      "name": "Related to Sandwichwallas",
+      "snippet": "Sandwichwallas is a popular food destination in Basavanagudi, Bangalore, known for serving delicious italian food. Customers can order from Sandwichwallas for ... Read more",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com",
+      "name": "Menu of Sandwichwallas, Jayanagar, Bangalore",
+      "snippet": "278, 37th A Cross, 2nd Main, 8th Block, Jayanagar, Bangalore. ClosedOpens at 11am. Order Online. Sandwichwallas Menu. Food menu. Food. 2 pages ... Read more\nDINING 4.1 528 DELIVERY Sandwichwallas Sandwich, Fast Food, Street Food, Beverages, Desserts, Shake 669, 7th Phase, JP Nagar, Bangalore ClosedOpens at 12noon. ...\n28, E.A.T Street, Near BMS Women's College, Basavanagudi, Bangalore. ClosedOpens at 11am. Order online. Ordina Online. Menu Sandwichwallas. Food menu. Food. Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com/bangalore/restaurants",
+      "name": "Order Online from Sandwichwallas in Jayanagar",
+      "snippet": "Sandwich, Fast Food, Street Food, Beverages, Desserts, Shake. ₹250 for two. Jayanagar, Bangalore. Opens at 11am. 1.1 km · Restaurant Card. Sandwichwallas. Read more\nSandwich, Fast Food, Street Food, Beverages, Desserts, Shake. ₹250 for two. Basavanagudi, Bangalore. Opens at 3pm. 387 m · Restaurant Card ... Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Sandwichwallas in East End Circle, Bangalore",
+      "snippet": "New Satkar Lodge, Doddaballapura , Sri Kongadiyappa Main Road, Doddaballapur , Bangalore - 561203. Listed Categories. Fast Food · Fast Food Delivery Services ... Read more\n41 Sandwich Stalls With No Seating in Bangalore. Hari Super Sandwich 3.93k Ratings Old Kanakapura Road Bugle Rock Open until 9:30 pm. Good place to try and eat ...",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

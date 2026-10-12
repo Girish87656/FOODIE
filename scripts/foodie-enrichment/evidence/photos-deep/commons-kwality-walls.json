@@ -1,0 +1,67 @@
+{
+  "restaurantId": "b9ee0ae8-6f47-5b80-adc0-3ca490f62ed5",
+  "restaurantName": "Kwality Walls",
+  "queries": [
+    "Kwality Walls Doddaballapura",
+    "Kwality Walls",
+    "Kwality Walls Doddaballapura town (north edge)"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "b9ee0ae8-6f47-5b80-adc0-3ca490f62ed5",
+      "restaurantName": "Kwality Walls",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Quisqualis_indica_%28323896467%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Quisqualis_indica_(323896467).jpg",
+      "license": "CC BY-SA 2.0",
+      "attribution": "Dinesh Valke from Thane, India",
+      "matchKind": "lead",
+      "mime": "image/jpeg",
+      "width": 1632,
+      "height": 1224,
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "description": "Common name : Rangoon Creeper, Parijat (Manipuri), Madhu Malati मधु मालती (Hindi, Marathi, Konkani), Ishq pecha इश्क़ पेचां (Urdu), Madhumanjari (Bengali) Botanical name : Quisqualis indica - [ (kwis-KWAL-iss) from the Latin quis (\"who\") an",
+      "matchNotes": "Commons file \"File:Quisqualis indica (323896467).jpg\" vs place \"Kwality Walls\" → lead · license CC BY-SA 2.0 · desc: Common name : Rangoon Creeper, Parijat (Manipuri), Madhu Malati मधु मालती (Hindi, Marathi, Konkani), Ishq pecha इश्क़ पे",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    },
+    {
+      "restaurantId": "b9ee0ae8-6f47-5b80-adc0-3ca490f62ed5",
+      "restaurantName": "Kwality Walls",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/De_wormen_%28titel_op_object%29_Prenten-magazijn_voor_de_jeugd_%28serietitel_op_object%29_Natuurlijke_geschiedenis_%28serietitel_op_object%29%2C_RP-P-OB-205.790.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:De_wormen_(titel_op_object)_Prenten-magazijn_voor_de_jeugd_(serietitel_op_object)_Natuurlijke_geschiedenis_(serietitel_op_object),_RP-P-OB-205.790.jpg",
+      "license": "CC0",
+      "attribution": "Rijksmuseum",
+      "matchKind": "lead",
+      "mime": "image/jpeg",
+      "width": 4727,
+      "height": 6503,
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "description": "Identificatie Titel(s): De wormen (titel op object) Prenten-magazijn voor de jeugd (serietitel op object). Natuurlijke geschiedenis (serietitel op object) Objecttype: prent volksprent Serienummer: 192/194 Objectnummer: RP-P-OB-205.790 Opsch",
+      "matchNotes": "Commons file \"File:De wormen (titel op object) Prenten-magazijn voor de jeugd (serietitel op object) Natuurlijke geschiedenis (serietitel op object), RP-P-OB-205.790.jpg\" vs place \"Kwality Walls\" → lead · license CC0 · desc: Identificatie Titel(s): De wormen (titel op object) Prenten-magazijn voor de jeugd (serietitel op object). Natuurlijke g",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    },
+    {
+      "restaurantId": "b9ee0ae8-6f47-5b80-adc0-3ca490f62ed5",
+      "restaurantName": "Kwality Walls",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/De_wormen_%28titel_op_object%29_Prenten-magazijn_voor_de_jeugd_%28serietitel_op_object%29_Natuurlijke_geschiedenis_%28serietitel_op_object%29%2C_RP-P-OB-206.340.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:De_wormen_(titel_op_object)_Prenten-magazijn_voor_de_jeugd_(serietitel_op_object)_Natuurlijke_geschiedenis_(serietitel_op_object),_RP-P-OB-206.340.jpg",
+      "license": "CC0",
+      "attribution": "Rijksmuseum",
+      "matchKind": "lead",
+      "mime": "image/jpeg",
+      "width": 4624,
+      "height": 5908,
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "description": "Identificatie Titel(s): De wormen (titel op object). Prenten-magazijn voor de jeugd (serietitel op object). Natuurlijke geschiedenis (serietitel op object) Objecttype: prent volksprent Serienummer: 192/192 Objectnummer: RP-P-OB-206.340 Opsc",
+      "matchNotes": "Commons file \"File:De wormen (titel op object) Prenten-magazijn voor de jeugd (serietitel op object) Natuurlijke geschiedenis (serietitel op object), RP-P-OB-206.340.jpg\" vs place \"Kwality Walls\" → lead · license CC0 · desc: Identificatie Titel(s): De wormen (titel op object). Prenten-magazijn voor de jeugd (serietitel op object). Natuurlijke ",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

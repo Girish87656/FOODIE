@@ -1,0 +1,22 @@
+{
+  "place": {
+    "id": "a16dff9d-4d1e-5022-8d5f-075c31fe1839",
+    "name": "Veg Sandwich And Lassi Point",
+    "category": "fast_food",
+    "address": "716, Court Road, Opposite Church, Doddaballapura Locality, Doddaballapura",
+    "city": "Doddaballapura",
+    "locality": "Doddaballapura town",
+    "latitude": 13.3091118,
+    "longitude": 77.5426434,
+    "sourceUrl": "https://www.district.in/dining/doddaballapura/veg-sandwich-and-lassi-point-doddaballapura-locality",
+    "index": 75
+  },
+  "query": "\"Veg Sandwich And Lassi Point\" Doddaballapura town",
+  "hits": [],
+  "errors": [
+    "rate-limited (4)",
+    "persistent rate limit — remaining places skipped this run (resumable)"
+  ],
+  "retrievedOn": "2026-10-12",
+  "skipped": true
+}

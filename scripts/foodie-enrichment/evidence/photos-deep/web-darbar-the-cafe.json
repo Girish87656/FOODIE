@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "f2b0c4f8-bc5e-551f-a111-53368334f938",
+    "name": "Darbar The Cafe"
+  },
+  "query": "\"Darbar The Cafe\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com",
+      "name": "TAJ DARBAR THE MULTICUSINE RESTAURANT, Agra",
+      "snippet": "Taj Darbar the multicusine restaurant, Agra: rated 4.2 of 5 on Tripadvisor … best mughlai food in the town . Amazing food and hospitality",
+      "host": "www.tripadvisor.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://breakfastwithnick.com",
+      "name": "CLOSED: Beyond Breakfast: Mughal Darbar | Columbus, OH",
+      "snippet": "Nov 27, 2013 — UPDATE: Mughal Darbar has CLOSED. 2321 N. High St. (map it!) Columbus, OH 43214 (614) 429-0700 Open Tues-Sat, 11a-2p, 5-9:30; Sun, 11:30a-2p, 5 ...",
+      "host": "breakfastwithnick.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://tribune.com.pk",
+      "name": "Data Darbar – the same bloody story",
+      "snippet": "Jul 2, 2010 — During a visit to Data Darbar, I met Shah Jee, a 90-something who had been abandoned at the shrine as a toddler and had grown with it for ...",
+      "host": "tribune.com.pk",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

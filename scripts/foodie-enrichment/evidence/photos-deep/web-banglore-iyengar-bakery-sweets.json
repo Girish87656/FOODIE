@@ -1,0 +1,18 @@
+{
+  "place": {
+    "id": "3b5dde2f-220f-57f0-9ba7-8aea9e368e83",
+    "name": "Banglore Iyengar Bakery & Sweets"
+  },
+  "query": "\"Banglore Iyengar Bakery & Sweets\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Bakeries With No Seating in Ngef Layout, Bangalore",
+      "snippet": "150 Bakeries With No Seating in Ngef Layout, Bangalore. Find ✓Bakeries in Ngef Layout, Bangalore. Get Phone Numbers, Address, Reviews, Photos, ...",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -47,6 +47,16 @@ export interface PhotoCandidate {
   /** Free-text match explanation (what matched, what did not). */
   matchNotes: string;
   retrievedOn: string;
+  /** Optional deep-pass metadata (research-photos-deep.ts) — evidence only. */
+  mime?: string;
+  width?: number;
+  height?: number;
+  /** License URL when the source records one (e.g. Commons LicenseUrl). */
+  licenseUrl?: string | null;
+  /** Source-side description of the image (what it depicts, where). */
+  description?: string;
+  /** Which research tier produced the row (e.g. "commons-deep"). */
+  tierB?: string;
 }
 
 /** One menu/dish item with per-fact provenance. No evidence → no row. */

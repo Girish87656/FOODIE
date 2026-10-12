@@ -1,0 +1,46 @@
+{
+  "place": {
+    "id": "c8f9982b-1375-5ea1-9e59-d7ac177fb990",
+    "name": "Chai Bunk Cafe"
+  },
+  "query": "\"Chai Bunk Cafe\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.instagram.com",
+      "name": "Chai Bunk Cafe Doddaballapur (@chaibunk_doddaballapur)",
+      "snippet": "A table full of smiles. A café full of good vibes. And every bite, just ₹99! ✨ From delicious food to the perfect ambiance, Chai Bunk Café is where ... Read more",
+      "host": "www.instagram.com",
+      "classification": "instagram"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Order from Chai Bunk Cafe online in Doddaballapura",
+      "snippet": "Chai Bunk Cafe is a popular food destination in Doddaballapura, Doddaballapura, known for serving delicious chinese food. Customers can order from Chai Bunk ... Read more",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com",
+      "name": "Chai Bunk Cafe, Doddaballapura Locality order online",
+      "snippet": "Chai Bunk Cafe ; Veg Fried Rice · ₹149 · Vegetables. ; Paneer Fried Rice. ₹189 · Paneer loaded. ; Mushroom Fried Rice. ₹179. Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Chai Bunk Cafe Doddaballapur - Juice Centres In Bangalore",
+      "snippet": "Established in the year 2025, Chai Bunk Cafe Doddaballapur in Doddaballapur , Bangalore is a top player in the category Juice Centres in the Bangalore. This well ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.facebook.com",
+      "name": "Chai Bunk Cafe Doddaballapur",
+      "snippet": "A café full of good vibes. And every bite, just ₹99! ✨ From delicious food to the perfect ambiance, Chai Bunk Café is where memories are made. Grab your ...",
+      "host": "www.facebook.com",
+      "classification": "facebook"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

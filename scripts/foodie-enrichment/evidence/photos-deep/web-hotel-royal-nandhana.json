@@ -1,0 +1,60 @@
+{
+  "place": {
+    "id": "e989603f-3316-4b09-a025-e41438d7a5a6",
+    "name": "Hotel Royal Nandhana"
+  },
+  "query": "\"Hotel Royal Nandhana\" Arehalli Guddadahalli",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.fr",
+      "name": "HOTEL ROYAL NANDHANA (Devanhalli, Inde)",
+      "snippet": "Réserver Hotel Royal Nandhana , Devanhalli sur Tripadvisor : consultez les avis de voyageurs, photos, et les meilleures offres pour Hotel Royal Nandhana sur",
+      "host": "www.tripadvisor.fr",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.tripadvisor.com.tr",
+      "name": "ROYAL NANDHANA (Bangalore, Hindistan) - Otel Yorumları",
+      "snippet": "Royal Nandhana, Bangalore: uk Road, near columbia Hospital, Arehalli Guddadahalli ,, Bangalore 562163 Hindistan Ulaşım Kempegowda International Airport 25 km",
+      "host": "www.tripadvisor.com.tr",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.agoda.com",
+      "name": "HD Photos + Reviews of Hotels in Doddaballapura, India",
+      "snippet": "View, Hotel Royal Nandhana in Doddaballapura Hotel Royal Nandhana . 1/10. View, Hotel Royal ...",
+      "host": "www.agoda.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.tiket.com",
+      "name": "Hotel Royal Nandhana - Harga Promo Terbaru",
+      "snippet": "Saat Anda menginap di Hotel Royal Nandhana di kota Doddaballapur, Anda akan berada 14 menit dengan mobil dari Padukone and Dravid Centre for Sport Excellence. Read more",
+      "host": "www.tiket.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.expedia.it",
+      "name": "Hotel Royal Nandhana - Nuove Recensioni, Prezzi e",
+      "snippet": "Tutte le camere di Hotel Royal Nandhana dispongono di comfort come postazioni laptop e l'aria condizionata, oltre a dotazioni come il Wi-Fi gratis. I servizi ... Read more",
+      "host": "www.expedia.it",
+      "classification": "other"
+    },
+    {
+      "url": "https://vacantier.ro",
+      "name": "Hotel Royal Nandhana, Doddaballapura - Vacantier",
+      "snippet": "Make the most of your stay at the Hotel Royal Nandhana with convenient amenities like 24-hour room service, room service and daily housekeeping at your disposal ... Read more",
+      "host": "vacantier.ro",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.hotel.com.au",
+      "name": "Hotel Royal Nandanaa (formerly Hotel Royal Keys) NO.",
+      "snippet": "Aug 18, 2026 — Hotel Royal Nandanaa is located in Dod Ballāpur, 31 km from Yeswanthpur Railway Station. This 3-star hotel offers room service. Minimum check- ...",
+      "host": "www.hotel.com.au",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

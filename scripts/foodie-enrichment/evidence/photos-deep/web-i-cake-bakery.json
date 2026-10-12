@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "4df2f4dc-7a76-57b2-b0d1-4d8f6d06e14b",
+    "name": "I Cake Bakery"
+  },
+  "query": "\"I Cake Bakery\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/doddaballapura/i-cake-bakery-doddaballapura-locality/order",
+      "name": "I Cake Bakery, Doddaballapura Locality order online",
+      "snippet": "I Cake Bakery · Cakes · Strawberry Cupcake · Blackcurrant Cupcake · Pastries · Black Forest Pastry · Rich Truffle Pastry · Desserts · Choco Lava.",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com/doddaballapura/i-cake-bakery-doddaballapura-locality/reviews",
+      "name": "Reviews of I Cake Bakery, Doddaballapura Locality",
+      "snippet": "15/4, Sri Ranga Arcade, Gangadarapura, Near Barat Gas Godown, Doddaballapura Locality, Doddaballapura. I Cake Bakery Dining Reviews. No Reviews Graphic ...",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com/it/doddaballapura/i-cake-bakery-doddaballapura-locality/reviews",
+      "name": "Reviews of I Cake Bakery, Doddaballapura Locality",
+      "snippet": "15/4, Sri Ranga Arcade, Gangadarapura, Near Barat Gas Godown, Doddaballapura Locality, Doddaballapura. I Cake Bakery Dining Reviews. No Reviews Graphic ...",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

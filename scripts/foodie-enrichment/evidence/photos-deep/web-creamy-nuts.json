@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "111a3964-e6cd-5452-a303-c31216222980",
+    "name": "Creamy Nuts"
+  },
+  "query": "\"Creamy Nuts\" Doddaballapura Railway Station",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Gadag",
+      "name": "Creamy Nuts Cafe in Vivekananda Road,Gadag",
+      "snippet": "Nestled near Next Malipatil Hospital, Opposite : J T College At in Vivekananda Road, Creamy Nuts Cafe is a convenient stop for both locals and visitors ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Fast Food Having All Day Breakfast Bangalore near me",
+      "snippet": "Fast Food in Railway Station Doddaballapur Doddaballapur , Bangalore. Average Rating 4.0. (6463 Ratings & Reviews as on 14/08/2026). Latest ... Read more\nOrder Food Online from Creamy Nuts in New Paccha Peth,Solapur well known for Fast Food in Solapur . Rated 3.9 based on 147 Customer Reviews and Ratings with ...\nBest Fast Food With Wifi near Railway Station Doddaballapur Doddaballapur , Bangalore - Order Food Online ; Cafe Coffee Day · 232 Ratings. Doddaballapur Road ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com/Bangalore/nct-11286512",
+      "name": "Top Sandwich Outlets near Railway Station Doddaballapur",
+      "snippet": "Subway at RMZ Galleria Mall, opposite Yelahanka Police Station, is a fantastic dining spot! The service is excellent, and the staff is friendly and ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

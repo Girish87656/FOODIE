@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "3a223ad9-b241-5481-a515-4d60e9b4d35b",
+    "name": "The Brothers Adda"
+  },
+  "query": "\"The Brothers Adda\" Doddaballapura town",
+  "hits": [],
+  "errors": [
+    "rate-limited (3)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

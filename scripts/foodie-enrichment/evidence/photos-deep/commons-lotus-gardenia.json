@@ -1,0 +1,67 @@
+{
+  "restaurantId": "d0f6f3aa-bb95-5628-bd81-75314729fca2",
+  "restaurantName": "Lotus Gardenia",
+  "queries": [
+    "Lotus Gardenia Doddaballapura",
+    "Lotus Gardenia",
+    "Lotus Gardenia Nagadenahalli"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "d0f6f3aa-bb95-5628-bd81-75314729fca2",
+      "restaurantName": "Lotus Gardenia",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Dish_%28Pan%29_with_Gardenia_Spray%2C_Lotus%2C_Pomegranates%2C_Peaches%2C_and_Grapes_LACMA_M.54.32_%281_of_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dish_(Pan)_with_Gardenia_Spray,_Lotus,_Pomegranates,_Peaches,_and_Grapes_LACMA_M.54.32_(1_of_2).jpg",
+      "license": "Public domain",
+      "attribution": "Image: http://collections.lacma.org/sites/default/files/remote_images/piction/ma-31784438-O3.jpg Gallery: http://collections.lacma.org/node/231247 archive copy at the Wayback Machine",
+      "matchKind": "fuzzy",
+      "mime": "image/jpeg",
+      "width": 2100,
+      "height": 2100,
+      "licenseUrl": null,
+      "description": "China, Jiangxi Province, Jingdezhen, Chinese, Ming dynasty, Hongzhi mark and period, 1488-1505 Furnishings; Serviceware Wheel-thrown porcelain with underglaze blue, clear glaze, and reserved overglaze enamel ground Gift of Miss Bella Mabury",
+      "matchNotes": "Commons file \"File:Dish (Pan) with Gardenia Spray, Lotus, Pomegranates, Peaches, and Grapes LACMA M.54.32 (1 of 2).jpg\" vs place \"Lotus Gardenia\" → exact · license Public domain · desc: China, Jiangxi Province, Jingdezhen, Chinese, Ming dynasty, Hongzhi mark and period, 1488-1505 Furnishings; Serviceware  · DOWNGRADED: no location token in title/description",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    },
+    {
+      "restaurantId": "d0f6f3aa-bb95-5628-bd81-75314729fca2",
+      "restaurantName": "Lotus Gardenia",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Dish_%28Pan%29_with_Gardenia_Spray%2C_Lotus%2C_Pomegranates%2C_Peaches%2C_and_Grapes_LACMA_M.54.32_%282_of_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dish_(Pan)_with_Gardenia_Spray,_Lotus,_Pomegranates,_Peaches,_and_Grapes_LACMA_M.54.32_(2_of_2).jpg",
+      "license": "Public domain",
+      "attribution": "Image: http://collections.lacma.org/sites/default/files/remote_images/piction/ma-1886718-O3.jpg Gallery: http://collections.lacma.org/node/231247 archive copy at the Wayback Machine",
+      "matchKind": "fuzzy",
+      "mime": "image/jpeg",
+      "width": 2100,
+      "height": 1014,
+      "licenseUrl": null,
+      "description": "China, Jiangxi Province, Jingdezhen, Chinese, Ming dynasty, Hongzhi mark and period, 1488-1505 Furnishings; Serviceware Wheel-thrown porcelain with underglaze blue, clear glaze, and reserved overglaze enamel ground Gift of Miss Bella Mabury",
+      "matchNotes": "Commons file \"File:Dish (Pan) with Gardenia Spray, Lotus, Pomegranates, Peaches, and Grapes LACMA M.54.32 (2 of 2).jpg\" vs place \"Lotus Gardenia\" → exact · license Public domain · desc: China, Jiangxi Province, Jingdezhen, Chinese, Ming dynasty, Hongzhi mark and period, 1488-1505 Furnishings; Serviceware  · DOWNGRADED: no location token in title/description",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    },
+    {
+      "restaurantId": "d0f6f3aa-bb95-5628-bd81-75314729fca2",
+      "restaurantName": "Lotus Gardenia",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/%E8%93%AE%E8%8A%B1_Nelumbo_nucifera_cultivars_1_-%E6%BE%B3%E9%96%80%E9%BE%8D%E7%92%B0%E8%91%A1%E9%9F%BB_Macau_Lotus_Show%2C_China-_%2812338315825%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%93%AE%E8%8A%B1_Nelumbo_nucifera_cultivars_1_-%E6%BE%B3%E9%96%80%E9%BE%8D%E7%92%B0%E8%91%A1%E9%9F%BB_Macau_Lotus_Show,_China-_(12338315825).jpg",
+      "license": "CC BY-SA 2.0",
+      "attribution": "阿橋 HQ",
+      "matchKind": "fuzzy",
+      "mime": "image/jpeg",
+      "width": 2047,
+      "height": 2047,
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "description": "蓮花-矮牡丹 Nelumbo nucifera 'Short Peony' 蓮花-白衣戰士 Nelumbo nucifera 'White Warrior' 蓮花-少瓣紅 Nelumbo nucifera 'Few Petals Red' 蓮花-瑞雪映春 Nelumbo nucifera 'Auspicious Snow Reflecting Spring' 蓮花-翠苔 Nelumbo nucifera 'Green Moss' 梔子碗蓮 Nelumbo nucifera '",
+      "matchNotes": "Commons file \"File:蓮花 Nelumbo nucifera cultivars 1 -澳門龍環葡韻 Macau Lotus Show, China- (12338315825).jpg\" vs place \"Lotus Gardenia\" → exact · license CC BY-SA 2.0 · desc: 蓮花-矮牡丹 Nelumbo nucifera 'Short Peony' 蓮花-白衣戰士 Nelumbo nucifera 'White Warrior' 蓮花-少瓣紅 Nelumbo nucifera 'Few Petals Red'  · DOWNGRADED: no location token in title/description",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

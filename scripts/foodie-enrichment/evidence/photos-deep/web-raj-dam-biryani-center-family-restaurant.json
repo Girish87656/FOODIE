@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "111d95b7-058b-5e3e-bc50-14b636c5d8eb",
+    "name": "Raj Dam Biryani Center & Family Restaurant"
+  },
+  "query": "\"Raj Dam Biryani Center & Family Restaurant\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "A1 Karnataka Dum Biryani - Fast Food in Doddaballapur",
+      "snippet": "Dum Biryani in Doddaballapur ,Bangalore well known for Fast Food in Bangalore. Open from Monday:- 12:00 pm - 10:00 pm, Tuesday:- 12 ready to welcome you",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Best Biryani Restaurants in Doddaballapura",
+      "snippet": "Explore The Best Biryani Restaurants In Doddaballapura. View Menus, Photos, Ratings, Reviews Or Order Online … 4.0 • 805 min Chicken Biryani ₹200 3.9 (51)",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.instagram.com",
+      "name": "Raj Dum Biriyani Kr Puram",
+      "snippet": "Raj Dum Biriyani in KR Puram, Bangalore, is a highly-rated restaurant serving North Indian and South Indian cuisine, particularly known for its dum biryani.",
+      "host": "www.instagram.com",
+      "classification": "instagram"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

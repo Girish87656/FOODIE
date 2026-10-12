@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "b9ee0ae8-6f47-5b80-adc0-3ca490f62ed5",
+    "name": "Kwality Walls"
+  },
+  "query": "\"Kwality Walls\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Kwality Wall's Frozen Dessert And Ice Cream Shop in",
+      "snippet": "Location and Overview: Kwality Walls Frozen Dessert And Ice Cream Shop in benachity, Durgapur is a top player in the category Ice Cream Parlours in the Durgapur ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://magicpin.in",
+      "name": "Kwality Wall's, Doddaballapur, Bangalore",
+      "snippet": "... . Kwality Walls offers a diverse range of flavors and products, catering to a wide spectrum of consumer preferences. Its commitment to using fine ... Read more",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com",
+      "name": "Kwality Wall's Ice Cream And More",
+      "snippet": "Order food online from Kwality Wall's Ice Cream And More, Kadubeesanahalli, Bengaluru. Get great offers and super fast food delivery when you order food ...",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

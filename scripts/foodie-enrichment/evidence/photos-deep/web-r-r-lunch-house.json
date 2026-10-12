@@ -1,0 +1,39 @@
+{
+  "place": {
+    "id": "209a42b5-fedf-5a42-8612-1bbad7061db4",
+    "name": "R R Lunch House"
+  },
+  "query": "\"R R Lunch House\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Royal Dine Food Corner - Doddaballapura Locality",
+      "snippet": "Royal Dine Food Corner North Indian, Biryani, Chinese Marasandra, Doddaballapura Main Road, Doddaballapura",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Indian Food Restaurants near Railway Station",
+      "snippet": "Indian Restaurants in Railway Station Doddaballapur Doddaballapur , Bangalore ; Name, Alankar Paradise · Annapurna Restaurant ; Address, Basettihalli, Bangalore - ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.tripadvisor.co.nz",
+      "name": "Sri Ganesh Grand - Doddaballapur Restaurants - Tripadvisor",
+      "snippet": "This restaurant is conveniently located just beside the highway SH-9 between Doddaballapur and yelahanka just after crossing Columbia Asia Hospital. lunch and ...",
+      "host": "www.tripadvisor.co.nz",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.instagram.com",
+      "name": "Doddaballapur Restaurant Reviews",
+      "snippet": "Here are some top-rated restaurants in Doddaballapur with their latest reviews: - VRB Hotel and Restaurant has a 4.3-star rating with 228 reviews.",
+      "host": "www.instagram.com",
+      "classification": "instagram"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

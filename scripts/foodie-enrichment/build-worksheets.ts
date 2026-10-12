@@ -28,13 +28,15 @@ import type {
 const ROOT = process.cwd();
 const HERE = join(ROOT, "scripts", "foodie-enrichment");
 const EVIDENCE_PHOTOS = join(HERE, "evidence", "photos");
+const EVIDENCE_PHOTOS_DEEP = join(HERE, "evidence", "photos-deep");
 const EVIDENCE_MENUS = join(HERE, "evidence", "menus");
 const OUT = join(HERE, "worksheets");
 
-function loadEvidence<T>(dir: string): PlaceEvidence<T>[] {
+function loadEvidence<T>(dir: string, prefix: string | null = null): PlaceEvidence<T>[] {
   const out: PlaceEvidence<T>[] = [];
   for (const f of readdirSync(dir)) {
     if (!f.endsWith(".json")) continue;
+    if (prefix && !f.startsWith(prefix)) continue;
     try {
       out.push(JSON.parse(readFileSync(join(dir, f), "utf8")) as PlaceEvidence<T>);
     } catch {
@@ -44,24 +46,56 @@ function loadEvidence<T>(dir: string): PlaceEvidence<T>[] {
   return out;
 }
 
+/**
+ * Corridor identity gate (worksheet-level, independent of the researcher's
+ * own gate — defense in depth). A photo candidate may only ever become SQL
+ * when the SOURCE TEXT carries a corridor location token (doddaballapur /
+ * doddaballapura / nagadenahalli / gitam / the place's own locality). Same
+ * name alone is NOT identity: "Udupi Upahar, Wilson Garden, Bangalore" is a
+ * different business from "Udupi Upahar, Kasaba Police Station Road,
+ * Doddaballapur". Candidates failing this gate are downgraded to
+ * needs_human_review with the reason recorded — never silently dropped.
+ */
+function corridorIdentityOk(row: PhotoCandidate): boolean {
+  const tokens = ["doddaballapur", "doddaballapura", "nagadenahalli", "gitam"];
+  const haystack = `${row.matchNotes} ${row.description ?? ""}`.toLowerCase();
+  return tokens.some((t) => haystack.includes(t));
+}
+
 function main() {
   const photos = loadEvidence<PhotoCandidate>(EVIDENCE_PHOTOS);
+  // Deep second pass (research-photos-deep.ts) — commons-*/openverse-* files
+  // carry candidates; other prefixes (townwide summaries, web scans) differ in
+  // shape and are excluded.
+  const deepPhotos = [
+    ...loadEvidence<PhotoCandidate>(EVIDENCE_PHOTOS_DEEP, "commons-"),
+    ...loadEvidence<PhotoCandidate>(EVIDENCE_PHOTOS_DEEP, "openverse-"),
+  ].filter((e) => Array.isArray((e as unknown as { candidates?: unknown }).candidates));
   const menus = loadEvidence<DishCandidate>(EVIDENCE_MENUS);
 
   // ---- photos ---------------------------------------------------------------
   const photoRows: PhotoWorksheetRow[] = [];
   const seenUrls = new Map<string, string>(); // normalized url -> first key
   const norm = (u: string) => u.trim().replace(/^https?:\/\//, "").toLowerCase();
-  const sortedPhotoCandidates = photos
+  const cleanUrl = (u: string) => u.replace(/\?utm_source=[^\s]*$/, ""); // strip Commons imageinfo utm params
+  const sortedPhotoCandidates = [...photos, ...deepPhotos]
     .flatMap((p) => p.candidates)
     .sort((a, b) =>
       a.restaurantName.localeCompare(b.restaurantName) || a.imageUrl.localeCompare(b.imageUrl)
     );
-  for (const c of sortedPhotoCandidates) {
+  let corridorDowngraded = 0;
+  for (const c0 of sortedPhotoCandidates) {
+    const c = { ...c0, imageUrl: cleanUrl(c0.imageUrl) };
     const key = `${c.restaurantId}|${norm(c.imageUrl)}`;
     const first = seenUrls.get(norm(c.imageUrl));
-    const verdict: PhotoWorksheetRow["verdict"] =
+    let verdict: PhotoWorksheetRow["verdict"] =
       c.matchKind === "exact" && c.license.trim() ? "approved_machine" : "needs_human_review";
+    if (verdict === "approved_machine" && !corridorIdentityOk(c)) {
+      verdict = "needs_human_review";
+      corridorDowngraded++;
+      c.matchKind = "fuzzy";
+      c.matchNotes += " · WORKSHEET GATE: no corridor location token — same-name match is NOT this place";
+    }
     photoRows.push({ ...c, verdict, duplicateOf: first ? first : null });
     if (!first) seenUrls.set(norm(c.imageUrl), key);
   }
@@ -99,6 +133,7 @@ function main() {
           approvedMachine: approved.length,
           needsHumanReview: photoRows.filter((r) => r.verdict === "needs_human_review").length,
           duplicatesSkipped: photoRows.filter((r) => r.duplicateOf).length,
+          corridorDowngraded,
         },
         rows: photoRows,
       },

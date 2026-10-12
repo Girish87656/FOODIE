@@ -1,0 +1,27 @@
+{
+  "restaurantId": "47faeb3d-806b-5dd8-9f65-9b3bfaf271a2",
+  "restaurantName": "Royal Ruchis",
+  "queries": [
+    "Royal Ruchis",
+    "Royal Ruchis Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "47faeb3d-806b-5dd8-9f65-9b3bfaf271a2",
+      "restaurantName": "Royal Ruchis",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/The_Royal_Ruchi%2C_Abbots_Bromley.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=79365627",
+      "license": "BY-SA 2.0",
+      "attribution": "Michael Garlick",
+      "matchKind": "exact",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=79365627",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"The Royal Ruchi, Abbots Bromley\" vs place \"Royal Ruchis\" → exact · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

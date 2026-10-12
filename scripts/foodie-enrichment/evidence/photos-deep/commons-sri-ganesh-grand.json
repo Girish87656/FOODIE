@@ -1,0 +1,31 @@
+{
+  "restaurantId": "60cc569b-8eea-480d-8f92-f854bdddb87b",
+  "restaurantName": "Sri Ganesh Grand",
+  "queries": [
+    "Sri Ganesh Grand Doddaballapura",
+    "Sri Ganesh Grand",
+    "Sri Ganesh Grand Bashettihalli"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "60cc569b-8eea-480d-8f92-f854bdddb87b",
+      "restaurantName": "Sri Ganesh Grand",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Pune_Poona_1911_map.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pune_Poona_1911_map.jpg",
+      "license": "No restrictions",
+      "attribution": "Internet Archive Book Images",
+      "matchKind": "lead",
+      "mime": "image/jpeg",
+      "width": 1596,
+      "height": 1970,
+      "licenseUrl": "https://www.flickr.com/commons/usage/",
+      "description": "Identifier : handbooktravelle00john Title : A handbook for travellers in India, Burma, and Ceylon . Year : 1911 ( 1910s ) Authors : John Murray (Firm) Subjects : India -- Guidebooks Burma -- Guidebooks Sri Lanka -- Guidebooks Publisher : Lo",
+      "matchNotes": "Commons file \"File:Pune Poona 1911 map.jpg\" vs place \"Sri Ganesh Grand\" → lead · license No restrictions · desc: Identifier : handbooktravelle00john Title : A handbook for travellers in India, Burma, and Ceylon . Year : 1911 ( 1910s ",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

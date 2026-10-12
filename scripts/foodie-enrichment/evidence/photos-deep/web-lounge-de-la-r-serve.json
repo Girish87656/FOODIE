@@ -1,0 +1,53 @@
+{
+  "place": {
+    "id": "4923568a-4b62-5507-b246-523ad25b001c",
+    "name": "Lounge de La Réserve"
+  },
+  "query": "\"Lounge de La Réserve\" Nagadenahalli/Moparahalli corridor",
+  "hits": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov",
+      "name": "Regeneration of commercial nucleic acid extraction",
+      "snippet": "by NB Siddappa · 2007 · Cited by 46 — Authors Nagadenahalli B Siddappa 1. We report here an efficient strategy to regenerate diverse commercial columns for several rounds",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.accuweather.com/nagadenahalli",
+      "name": "Nagadenahalli, Karnataka, India Weather Forecast",
+      "snippet": "Nagadenahalli , Karnataka, India Weather Forecast, with current conditions, wind, air quality, Current Weather 10:24 PM 73°F Partly cloudy RealFeel® 71°",
+      "host": "www.accuweather.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://dash.harvard.edu/entities/person",
+      "name": "Person: Siddappa, Nagadenahalli B.",
+      "snippet": "Siddappa, Nagadenahalli B. Neutralizing antibodies have been shown to protect macaques against SHIV challenge.",
+      "host": "dash.harvard.edu",
+      "classification": "other"
+    },
+    {
+      "url": "https://globalyoungacademy.net/nbsiddappa",
+      "name": "Nagadenahalli B. Siddappa",
+      "snippet": "Currently, he is an Instructor in Medicine at Harvard Medical School. He is a recipient of several young investigator awards including Indian National Science ... Read more",
+      "host": "globalyoungacademy.net",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.tandfonline.com",
+      "name": "Regeneration of Commercial Nucleic Acid Extraction",
+      "snippet": "by NB Siddappa · 2007 · Cited by 46 — Nagadenahalli B. We report here an efficient strategy to regenerate diverse commercial columns for several rounds without altering the binding capacity of the ...",
+      "host": "www.tandfonline.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://en-gb.topographic-map.com/Nagadenahalli",
+      "name": "Nagadenahalli topographic maps, elevation, terrain",
+      "snippet": "Visualization and sharing of free topographic maps. Nagadenahalli topographic maps, elevation, terrain. Click on a map to view its topography, its elevation ...",
+      "host": "en-gb.topographic-map.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

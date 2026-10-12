@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "0adc069c-6b6b-5907-84c4-d5b8f07a5e40",
+    "name": "Kiran Tiffin Room"
+  },
+  "query": "\"Kiran Tiffin Room\" Kasbhag Road",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Tiffin Services With Pre Ordering Required Bangalore",
+      "snippet": "17 Tiffin Services With Pre Ordering Required in K Narayanapura, Bangalore. Find ✓Tiffin Services in K Narayanapura, Bangalore. Get Phone Numbers, Address, ...",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://yandex.com",
+      "name": "Bangalore Tiffin Room - Maps",
+      "snippet": "Bangalore Tiffin Room State of Maharashtra, Pune, ☎️ +91 7022 15 51 62. 62 Business hours Closed until tomorrow",
+      "host": "yandex.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

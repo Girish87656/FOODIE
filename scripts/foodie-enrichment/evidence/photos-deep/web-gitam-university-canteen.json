@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "7259037f-932d-4c04-91ef-bbf948a387b9",
+    "name": "GITAM University Canteen"
+  },
+  "query": "\"GITAM University Canteen\" GITAM campus",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Epicurus - Multi Cuisine Restaurant in",
+      "snippet": "Gitam University Canteen · Amigos Gitam · Abhiram Food Court · Amigos Cafe · Hotel Kesari Grand · Hotel Jb Bhavan · Brundavana Family Daba. Festival & Events. Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://housing.com",
+      "name": "Flats for rent without brokerage in Byradenahalli, Bengaluru",
+      "snippet": "Aug 12, 2026 — ... Gitam University Canteen - 5.8 km. R Hanumantha Gowda Complex- 5.6 km. Updated. 1w ago. Chat Contact. Greshaph. Owner. 2.67 km away. Request ... Read more",
+      "host": "housing.com",
+      "classification": "other"
+    },
+    {
+      "url": "http://www.onefivenine.com",
+      "name": "Bannimangala Village - Bangalore Rural",
+      "snippet": "Gitam University. Canteen . Byradenahalli; Karnataka 561205; India 3.5 KM distance Detail. Udupi Canteen. Byradenahalli; Karnataka 561205; India 3.6 KM distance ... Read more",
+      "host": "www.onefivenine.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

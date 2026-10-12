@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "ce77ff35-e0fb-51b9-b658-d02a362da85e",
+    "name": "Palav Ramu Hotel"
+  },
+  "query": "\"Palav Ramu Hotel\" Doddaballapura bus stand area",
+  "hits": [
+    {
+      "url": "https://www.facebook.com/posts",
+      "name": "Palav Ramu Hotel, 7GVR+GP3, Doddaballapura, Karnataka",
+      "snippet": "Location: Palav Ramu Hotel , 7GVR+GP3, Doddaballapura , Karnataka 561203. ... bus stand Price :- ₹20/- vada ₹10/- each #myblr ... doddaballapura Need ...",
+      "host": "www.facebook.com",
+      "classification": "facebook"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Restaurants Having Lunch in Doddaballapur, Bangalore",
+      "snippet": "Palav Ramu Hotel , Doddaballapura , Doddaballapur , Bangalore - 561203, Doddaballapur , Bangalore - 561203 (Near Old Bus Stand ), Bengaluru, Doddaballapur Road ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

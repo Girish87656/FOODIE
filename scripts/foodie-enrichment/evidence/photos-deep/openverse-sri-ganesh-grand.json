@@ -1,0 +1,42 @@
+{
+  "restaurantId": "60cc569b-8eea-480d-8f92-f854bdddb87b",
+  "restaurantName": "Sri Ganesh Grand",
+  "queries": [
+    "Sri Ganesh Grand",
+    "Sri Ganesh Grand Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "60cc569b-8eea-480d-8f92-f854bdddb87b",
+      "restaurantName": "Sri Ganesh Grand",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/3293/2815941390_f82b7f360f_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/31852645@N00/2815941390",
+      "license": "BY 2.0",
+      "attribution": "luigi morante",
+      "matchKind": "exact",
+      "licenseUrl": "https://www.flickr.com/photos/31852645@N00/2815941390",
+      "description": "openverse source=flickr tags=2008parisfrance,ganeshfestivalaugust31,passionphotography,travelerphotos,ysplix,annual",
+      "matchNotes": "Openverse \"Ganesh Festival\" vs place \"Sri Ganesh Grand\" → exact · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "60cc569b-8eea-480d-8f92-f854bdddb87b",
+      "restaurantName": "Sri Ganesh Grand",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ganesh_Festival_%282815941390%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=146453092",
+      "license": "BY 2.0",
+      "attribution": "Luigi Morante from Paris, France",
+      "matchKind": "exact",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=146453092",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Ganesh Festival (2815941390)\" vs place \"Sri Ganesh Grand\" → exact · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

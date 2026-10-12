@@ -1,0 +1,42 @@
+{
+  "restaurantId": "4923568a-4b62-5507-b246-523ad25b001c",
+  "restaurantName": "Lounge de La Réserve",
+  "queries": [
+    "Lounge de La Réserve",
+    "Lounge de La Réserve Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "4923568a-4b62-5507-b246-523ad25b001c",
+      "restaurantName": "Lounge de La Réserve",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/8312/28941736651_44c2c650cd_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/72746018@N00/28941736651",
+      "license": "BY 2.0",
+      "attribution": "dalbera",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/72746018@N00/28941736651",
+      "description": "openverse source=flickr tags=allemagne,charlesrayeames,dalbera,herzogdemeuron,matériaux,matu00e9riaux",
+      "matchNotes": "Openverse \"Les archives du Vitra Design Museum (Weil am Rhein, Allemagne)\" vs place \"Lounge de La Réserve\" → lead · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "4923568a-4b62-5507-b246-523ad25b001c",
+      "restaurantName": "Lounge de La Réserve",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/4743/39614626281_4f5d56a425_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/21065622@N08/39614626281",
+      "license": "BY-NC-SA 2.0 (NOT permissive for reuse)",
+      "attribution": "Matt@PEK",
+      "matchKind": "exact",
+      "licenseUrl": "https://www.flickr.com/photos/21065622@N08/39614626281",
+      "description": "openverse source=flickr tags=airport,alsafwa,doh,firstclass,lounge,oneworld",
+      "matchNotes": "Openverse \"Al Safwa First Lounge - Qatar Airways\" vs place \"Lounge de La Réserve\" → exact · license BY-NC-SA 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

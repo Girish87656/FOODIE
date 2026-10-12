@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "9d2bef79-294a-5dc6-b5a3-95738837e70b",
+    "name": "M M Biriyani Grand"
+  },
+  "query": "\"M M Biriyani Grand\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "M M Biriyani Grand, Doddaballapura Locality order online",
+      "snippet": "Order food online from M M Biriyani Grand , Doddaballapura Locality, Doddaballapura . Get great offers and super fast food delivery when you order food online ...",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://magicpin.in",
+      "name": "Best South Indian Restaurants Near You in Doddaballapur",
+      "snippet": "M M Biriyani Grand · Budget Eats, ₹450 for two. Doddaballapur , Bangalore ·. Open Now: gray arrow. Cuisines: Biryani · South Indian ... Read more",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

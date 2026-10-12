@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "bf44af7e-518e-56be-b34c-61ab5b3a4dc8",
+    "name": "Rainbow Huts Family Restaurant"
+  },
+  "query": "\"Rainbow Huts Family Restaurant\" Bashettihalli",
+  "hits": [
+    {
+      "url": "https://magicpin.in",
+      "name": "Photos of Rainbow huts family restaurant - Bashettihalli",
+      "snippet": "Photos — Rainbow huts family restaurant , Bashettihalli , Bangalore. Store, food, ambience & customer shots. Ratings & review snapshot below.",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Amigos Gitam in Kodihalli Village,Bangalore - Restaurants",
+      "snippet": "Restaurants in Bashettihalli · Restaurants in Vishwanathapura · Restaurants in ... Rainbow Huts Family Restaurant · Amigos Cafe · Gowdru Hindu Military Hotel. Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "44ceec50-3545-5a34-a17e-c20a5e5d64e0",
+    "name": "Abhis Food Court"
+  },
+  "query": "\"Abhis Food Court\" Doddaballapura Railway Station / Scout Camp Road",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Breakfast Restaurants in Doddaballapur, Bangalore - Page 2",
+      "snippet": "Good food and staff, and had a wide variety of spreads Food was really great especially vegetarian recipes.. loved it... Nice ambience and friendly staff. Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Order from Abhi's Cafe online in Bangalore",
+      "snippet": "35-40 mins Fast Food, North Indian, Chinese, Biryani, rolls, Thalis, Customers can order their favorite dishes online and enjoy doorstep delivery.",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

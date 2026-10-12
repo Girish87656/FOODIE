@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "cbcd6b35-43dd-50aa-990b-64ebff397e69",
+    "name": "Kelvin Scale - Absolute Ice Creams"
+  },
+  "query": "\"Kelvin Scale - Absolute Ice Creams\" Doddaballapura Railway Station / Scout Camp Rd",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Kelvin Scale - Natural Ice Creams & Waffle, New BEL Road",
+      "snippet": "Kelvin Scale - Natural Ice Creams & Waffle ... Temporarily closed, will be back soon! 10 km · Restaurant Card ... Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.facebook.com",
+      "name": "Kelvin scale Absolute Ice Cream - Home",
+      "snippet": "Kelvin scale Absolute Ice Cream. 1 was here. Local business.",
+      "host": "www.facebook.com",
+      "classification": "facebook"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,34 @@
+{
+  "place": {
+    "id": "56958113-8fec-5dff-8ab3-73d15c24e5ea",
+    "name": "Cafe Aaraike"
+  },
+  "query": "\"Cafe Aaraike\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Cafe Aaraike Dining Reviews - Chikkaballapur Locality",
+      "snippet": "Reviews of Cafe Aaraike Chikkaballapur Locality; see all unbiased reviews of Cafe Aaraike Chikkaballapur for delivery and dining on Zomato.",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best North Indian Restaurants With Outdoor Services in",
+      "snippet": "20 North Indian Restaurants With Outdoor Services in Doddaballapur , Bangalore. authentic Bengali cuisine. usually available for catering.",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://magicpin.in",
+      "name": "Night Out Cafe Reviews - Doddaballapur Road",
+      "snippet": "The ambiance is not over the top but is decent. It offers a separate smoking section and also has outdoor seating arrangements. The menu covers North Indian. Read more",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [
+    "rate-limited (1)"
+  ],
+  "retrievedOn": "2026-10-12"
+}

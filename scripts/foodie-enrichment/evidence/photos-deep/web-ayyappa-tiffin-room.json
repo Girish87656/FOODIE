@@ -1,0 +1,39 @@
+{
+  "place": {
+    "id": "02a34d5f-75cd-4dfc-bc4d-989e5ea7d3c5",
+    "name": "Ayyappa Tiffin Room"
+  },
+  "query": "\"Ayyappa Tiffin Room\" Doddaballapura Railway Station",
+  "hits": [
+    {
+      "url": "https://yandex.com",
+      "name": "Ayyappa Tiffin Room, restaurant, State of Karnataka",
+      "snippet": "Restaurant Ayyappa Tiffin Room State of Karnataka, ☎️ +91 8088 59 99 99. View working hours. Get directions in Yandex Maps.",
+      "host": "yandex.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.facebook.com",
+      "name": "Doddaballapur Famous Food",
+      "snippet": "... station's ... Recently I visited this place 'Shree Ayyappa Tiffin Room ' in Doddaballapur , Karnataka. ... Ayyappa Tiffin Room , near Railway Station , ...",
+      "host": "www.facebook.com",
+      "classification": "facebook"
+    },
+    {
+      "url": "https://avacasa.life",
+      "name": "Rewild Doddaballapura - Karnataka",
+      "snippet": "Ayyappa Tiffin Room , 4.2, 2.18 km, Cuisine: Vegetarian. Located near Doddaballapur railway station . Green Tribes Family Restaurant, 3.8, 25.5 km, Cuisine: North ... Read more",
+      "host": "avacasa.life",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.instagram.com",
+      "name": "Full fast 💯 Video by @trio_vlog123 #explor#doddaballapu#",
+      "snippet": "Ayyappa Tiffin Room , near Railway Station , Doddaballapura Tag someone who loves traditional Karnataka food! #AyyappaTiffinRoom #DoddaballapuraFood ...",
+      "host": "www.instagram.com",
+      "classification": "instagram"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

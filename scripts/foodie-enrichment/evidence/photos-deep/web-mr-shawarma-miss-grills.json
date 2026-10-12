@@ -1,0 +1,48 @@
+{
+  "place": {
+    "id": "3575df9b-deda-5b04-8813-9093c0a140d9",
+    "name": "Mr Shawarma Miss Grills"
+  },
+  "query": "\"Mr Shawarma Miss Grills\" Doddaballapura Railway Station / Scout Camp Rd",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Menu of Mr. Shawarma & Miss Grills, BTM, Bangalore",
+      "snippet": "Shawarma & Miss Grills. Lebanese. 688, 7th Main Road , 10th Cross Road , Btm 2nd Stage, BTM, Bangalore. Open now12midnight – 2am, 12noon – 12midnight (Today) ... Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.district.in",
+      "name": "Mr. Shawarma & Miss Grills | Sarjapur Road, Bangalore",
+      "snippet": "Shawarma & Miss Grills. Survey 26/6, Sarjapura Main Road , Near Fresica Super Market, Sarjapur Road , Bangalore. See all outlets. Get directions · +918317497220. Read more",
+      "host": "www.district.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "2 Photos of Mr Shawarma & Miss Grills in Bellary",
+      "snippet": "2 Photos of Mr Shawarma & Miss Grills in Bellary Cantonment, Bellary Rated 4.2 based on 42 Customer Reviews and Ratings with 2 Photos.",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Mr. Shawarma & Miss Grills",
+      "snippet": "Mr. Shawarma & Miss Grills. 14368.3 km • Sarjapur Road , Bangalore. outlets. Lebanese | ₹300 for two. 4.0. Google. 35 ratings. Closed,. Opens at 11:30AM. Read more",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.favhiker.com",
+      "name": "Mr Shawarma & Miss Grills, Bengaluru",
+      "snippet": "Details. Timings: See hours. Address: 141-133, 10th Main Rd , Sector 6, HSR Layout, Bengaluru, Karnataka 560102, India. Directions Save. Been here? Add the dish ... Read more",
+      "host": "www.favhiker.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [
+    "rate-limited (3)"
+  ],
+  "retrievedOn": "2026-10-12"
+}

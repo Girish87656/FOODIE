@@ -1,0 +1,57 @@
+{
+  "restaurantId": "486981ad-76a7-581a-ad67-db33f4785c7c",
+  "restaurantName": "Sandwich Wallas",
+  "queries": [
+    "Sandwich Wallas",
+    "Sandwich Wallas Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "486981ad-76a7-581a-ad67-db33f4785c7c",
+      "restaurantName": "Sandwich Wallas",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/4016/4357304568_2545b28cf3.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/56252733@N00/4357304568",
+      "license": "BY-NC-ND 2.0 (NOT permissive for reuse)",
+      "attribution": "Meanest Indian",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/56252733@N00/4357304568",
+      "description": "openverse source=flickr tags=bicycle,cycle,delhi,india,jugaad,men",
+      "matchNotes": "Openverse \"Mobile Fix\" vs place \"Sandwich Wallas\" → lead · license BY-NC-ND 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "486981ad-76a7-581a-ad67-db33f4785c7c",
+      "restaurantName": "Sandwich Wallas",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/5284/5309716391_811d70aa14_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/89932500@N00/5309716391",
+      "license": "BY-NC-SA 2.0 (NOT permissive for reuse)",
+      "attribution": "minnepixel",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/89932500@N00/5309716391",
+      "description": "openverse source=flickr tags=breakfast,breakfastsandwich,cheese,chicago,eggs,goudacheese",
+      "matchNotes": "Openverse \"The Sheffield\" vs place \"Sandwich Wallas\" → lead · license BY-NC-SA 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "486981ad-76a7-581a-ad67-db33f4785c7c",
+      "restaurantName": "Sandwich Wallas",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/7013/6408066741_966c0ca501.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/54497431@N05/6408066741",
+      "license": "BY-NC-ND 2.0 (NOT permissive for reuse)",
+      "attribution": "Peter L Barker",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/54497431@N05/6408066741",
+      "description": "openverse source=flickr tags=dehli,fastfood,food,india,olddelhii,streetfood",
+      "matchNotes": "Openverse \"Fast food walla\" vs place \"Sandwich Wallas\" → lead · license BY-NC-ND 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

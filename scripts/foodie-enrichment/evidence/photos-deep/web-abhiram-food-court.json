@@ -1,0 +1,18 @@
+{
+  "place": {
+    "id": "c3936dec-2b09-471c-a050-6bebbd1583aa",
+    "name": "Abhiram Food Court"
+  },
+  "query": "\"Abhiram Food Court\" Moparahalli",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Abis Kitchen in Amruthahalli,Bangalore - Order Food Online",
+      "snippet": "No 304, 7th B Cross, Jakkur Post, Jakkur Layout, Bangalore, Yelahanka, B.B.M.P North, Amruthahalli, Bangalore-560092, Karnataka. DirectionCopy. Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

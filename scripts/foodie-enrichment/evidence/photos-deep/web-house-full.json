@@ -1,0 +1,53 @@
+{
+  "place": {
+    "id": "7253deaf-15cc-504d-a9cb-dd75b86589dd",
+    "name": "House Full"
+  },
+  "query": "\"House Full\" Muthasandra",
+  "hits": [
+    {
+      "url": "https://www.district.in",
+      "name": "House Full | Doddaballapura Locality",
+      "snippet": "... -Chinese, Hyderabadi. Location. Restaurant Location Map. House Full . 219/14/4B1, Muthasandra , Doddaballapura Locality, Doddaballapura. Get directions · + ... Read more",
+      "host": "www.district.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://magicpin.in",
+      "name": "House Full, Doddaballapur, Bangalore",
+      "snippet": "Address. 219/14/4B1, Muthasandra , Doddaballapura Locality, Doddaballapura ... House Full Rating And Reviews House Full Menu House Full Food Menu House Full Images. Read more",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com",
+      "name": "House Full Dining Reviews - Doddaballapura Locality",
+      "snippet": "House Full . Biryani, North Indian, Andhra, Chinese, Rolls. 219/14/4B1, Muthasandra , Doddaballapura Locality, Doddaballapura. House Full Dining Reviews. No ... Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://bangaloremirror.indiatimes.com",
+      "name": "A house full of memories",
+      "snippet": "Sep 2, 2009 — A house full of memories ... In 1978, Rajkumar's dream of buying a house in Bangalore was fulfilled, thanks to the producer of his first film ' ... Read more",
+      "host": "bangaloremirror.indiatimes.com",
+      "classification": "news"
+    },
+    {
+      "url": "https://www.indiatoday.in",
+      "name": "'House full': As bodies pile up, out of space crematorium",
+      "snippet": "May 3, 2021 — A crematorium in Karnataka's Chamrajpet put up a \" house full \" signboard outside the facility due to the lack of space as the Covid-19 deaths ...",
+      "host": "www.indiatoday.in",
+      "classification": "news"
+    },
+    {
+      "url": "https://www.99acres.com",
+      "name": "House for Sale in Marathahalli, Bangalore",
+      "snippet": "Excellent site or independent house for sale in marthahalli ,excellent location ,10 k/ sft, site west facing, main door north, corner house. Full white. Read more",
+      "host": "www.99acres.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

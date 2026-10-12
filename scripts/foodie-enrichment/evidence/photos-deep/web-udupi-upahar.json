@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "e0ca1a06-5e3a-5bf6-8757-763489a6c42c",
+    "name": "Udupi Upahar"
+  },
+  "query": "\"Udupi Upahar\" Doddaballapura town",
+  "hits": [],
+  "errors": [
+    "rate-limited (2)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+    "name": "Ayodhya Grand"
+  },
+  "query": "\"Ayodhya Grand\" Doddaballapura outskirts (NH-44 south)",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "4806 Reviews for Ayodhya Grand in Nagarbhavi, Bangalore",
+      "snippet": "Ayodhya Grand in Nagarbhavi, Bangalore currently holds an average rating of 3.9 based on user reviews. Checking reviews before visiting or availing services is ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.agoda.com",
+      "name": "Best Price on Hotel Ayodhya Inn in Lokapur + Reviews!",
+      "snippet": "Ayodhya grand , Lokapur, Lokapur, Karnataka, India, 587122 ; Standard Double Room. 19 m²/205 ft² · 1 double bed ; Deluxe Room. 19 m²/205 ft² · 1 double bed ; Suite ... Read more",
+      "host": "www.agoda.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.booking.com",
+      "name": "Ayodhya Guest House, Hampi (updated prices 2026)",
+      "snippet": "Ayodhya Guest House features accommodations in Hampi. offers a terrace and free WiFi, 20 mi from Jindal Vijaynagar Airport.",
+      "host": "www.booking.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

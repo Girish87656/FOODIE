@@ -1,0 +1,12 @@
+{
+  "place": {
+    "id": "de7b293e-2035-54b3-8fd1-4ed711b81602",
+    "name": "Shahi Kitchen"
+  },
+  "query": "\"Shahi Kitchen\" Doddaballapura town (north edge)",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Shahi Kitchen\\\\\\\" Doddaballapura town (north edge)\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Shahi Kitchen\\\\\\\" Doddaballapura town (north edge)\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

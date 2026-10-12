@@ -1,0 +1,46 @@
+{
+  "place": {
+    "id": "fe248fda-3d41-42a6-a8df-efbd165b9427",
+    "name": "Priyanka Tiffen Center"
+  },
+  "query": "\"Priyanka Tiffen Center\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org",
+      "name": "Doddaballapura",
+      "snippet": "Doddaballapur is about 40 km from Bengaluru towards North on Bengaluru-Hindupur state highway (SH-9). This town is known for weaving silk Sarees. Majority ... Read more",
+      "host": "en.wikipedia.org",
+      "classification": "other"
+    },
+    {
+      "url": "http://www.doddaballapur.tpa.gov.in",
+      "name": "Doddaballapur Planning Authority: Home",
+      "snippet": "Sep 3, 2026 — Doddaballapur Planning AuthorityOfficial Website of Government. The Town Planner, TPA, Doddaballapura, Phone: 080-29562046 |e-mail: dpa.dbpura ...",
+      "host": "www.doddaballapur.tpa.gov.in",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.hdfc.bank.in",
+      "name": "HDFC Bank - Doddaballapur",
+      "snippet": "Doddaballapur Address - 18001601 Hours - 10:00 AM - 04:00 PM (Closed Now) 2nd and 4th Saturday. HDFC Bank is one of India's leading private banks",
+      "host": "www.hdfc.bank.in",
+      "classification": "other"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov",
+      "name": "Microneedling with dermaroller",
+      "snippet": "by S Doddaballapur · 2009 · Cited by 342 — Microneedling with dermaroller is a new treatment modality for the treatment of scars, especially acne scars, stretch marks, wrinkles, and for facial ...",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.tripadvisor.com",
+      "name": "Near Doddaballapur. Nice Resort. - Review of The Country",
+      "snippet": "This is a resort run by the Country Club group on Hindupur highway near Doddaballapur town . It has both cottages and rooms and offers good service.",
+      "host": "www.tripadvisor.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

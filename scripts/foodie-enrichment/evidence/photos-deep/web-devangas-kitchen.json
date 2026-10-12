@@ -1,0 +1,69 @@
+{
+  "place": {
+    "id": "35be7c22-4186-5701-89d4-5967974acbfb",
+    "name": "Devangas Kitchen"
+  },
+  "query": "\"Devangas Kitchen\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.north.com",
+      "name": "North: Merchant services & payment technology powerhouse",
+      "snippet": "Elevate your transactions with North's advanced POS & merchant services. Aim high! Go North ! Explore our POS & payment processing solutions.",
+      "host": "www.north.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.nisd.net",
+      "name": "Northside Independent School District | San Antonio, TX",
+      "snippet": "Northside ISD has both high school and middle school magnet schools, which offer specialized academic focuses in addition to the standard curriculum. Learn more ... Read more",
+      "host": "www.nisd.net",
+      "classification": "other"
+    },
+    {
+      "url": "https://northactionsports.com",
+      "name": "North Kiteboarding | North Foils | North Windsurfing",
+      "snippet": "As a Club North Member, we cover you on the water in all conditions and offer exclusive access and experiences for you to make the most out of your rides. Read more",
+      "host": "northactionsports.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.ncdhhs.gov/divisions",
+      "name": "North Carolina Assistive Technology Program",
+      "snippet": "This page includes an explanation of NCATP's mission with links to NCATP services, training opportunities, major events, best practices, staff, centers, ...",
+      "host": "www.ncdhhs.gov",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.rogerebert.com/reviews/north-1994",
+      "name": "North movie review & film summary",
+      "snippet": "“ North ” is a bad film – one of the worst movies ever made. But it is not by a bad filmmaker, and must represent some sort of lapse from which Reiner will ... Read more",
+      "host": "www.rogerebert.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.ic.nc.gov/workers-compensation-claims",
+      "name": "Employers | North Carolina Industrial Commission - NC.gov",
+      "snippet": "A business covered by the North Carolina Workers' Compensation Act, Chapter 97 of the North Carolina General Statutes, is required by law to obtain workers' ... Read more",
+      "host": "www.ic.nc.gov",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.northitalia.com",
+      "name": "North Italia: Handmade Pasta | Handmade Pizza",
+      "snippet": "At North Italia, we offer everything from delicious, hand-tossed pizzas and homemade pasta made daily, to crave-worthy appetizers and seasonal entrees, all ... Read more",
+      "host": "www.northitalia.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.ncsu.edu",
+      "name": "NC State University",
+      "snippet": "An NC State education is the key to whatever door you want to open. We offer more than 100 undergraduate majors and more than 200 master's and doctoral programs ... Read more",
+      "host": "www.ncsu.edu",
+      "classification": "other"
+    }
+  ],
+  "errors": [
+    "rate-limited (2)"
+  ],
+  "retrievedOn": "2026-10-12"
+}

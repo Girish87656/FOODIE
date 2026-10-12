@@ -1,0 +1,72 @@
+{
+  "restaurantId": "e0ca1a06-5e3a-5bf6-8757-763489a6c42c",
+  "restaurantName": "Udupi Upahar",
+  "queries": [
+    "Udupi Upahar",
+    "Udupi Upahar Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "e0ca1a06-5e3a-5bf6-8757-763489a6c42c",
+      "restaurantName": "Udupi Upahar",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Mosambi_juice_at_Udupi_Upahar%2C_Wilson_Garden%2C_Bangalore_%282025-09-19%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=176159339",
+      "license": "BY-SA 4.0",
+      "attribution": "Contrapunctus-1",
+      "matchKind": "exact",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=176159339",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Mosambi juice at Udupi Upahar, Wilson Garden, Bangalore (2025-09-19)\" vs place \"Udupi Upahar\" → exact · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "e0ca1a06-5e3a-5bf6-8757-763489a6c42c",
+      "restaurantName": "Udupi Upahar",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Rava_onion_masala_dosa_at_Udupi_Upahar%2C_Wilson_Garden%2C_Bangalore_%282025-09-19%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=176159338",
+      "license": "BY-SA 4.0",
+      "attribution": "Contrapunctus-1",
+      "matchKind": "exact",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=176159338",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Rava onion masala dosa at Udupi Upahar, Wilson Garden, Bangalore (2025-09-19)\" vs place \"Udupi Upahar\" → exact · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "e0ca1a06-5e3a-5bf6-8757-763489a6c42c",
+      "restaurantName": "Udupi Upahar",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Idli_at_Udupi_Upahar%2C_Wilson_Garden%2C_Bangalore_%282025-09-19%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=176159334",
+      "license": "BY-SA 4.0",
+      "attribution": "Contrapunctus-1",
+      "matchKind": "exact",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=176159334",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Idli at Udupi Upahar, Wilson Garden, Bangalore (2025-09-19)\" vs place \"Udupi Upahar\" → exact · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "e0ca1a06-5e3a-5bf6-8757-763489a6c42c",
+      "restaurantName": "Udupi Upahar",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Idli-sambar_and_coffee_at_Udupi_Upahar%2C_Wilson_Garden%2C_Bangalore_%282025-09-19%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=176159342",
+      "license": "BY-SA 4.0",
+      "attribution": "Contrapunctus-1",
+      "matchKind": "exact",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=176159342",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Idli-sambar and coffee at Udupi Upahar, Wilson Garden, Bangalore (2025-09-19)\" vs place \"Udupi Upahar\" → exact · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

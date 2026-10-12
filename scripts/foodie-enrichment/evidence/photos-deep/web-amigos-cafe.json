@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "973a6f0e-fd38-42c3-a4a7-369713091735",
+    "name": "Amigos Cafe"
+  },
+  "query": "\"Amigos Cafe\" Nagadenahalli",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "10 Photos of Garuda Cafe Restaurant in Adhinarayanahosahall",
+      "snippet": "Restaurants in Nagadenahalii · Restaurants in Nagadenahalli · Restaurants in ... Amigos Cafe · Hotel Kesari Grand · Hotel Jb Bhavan · Brundavana Family Daba.",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.snapchat.com",
+      "name": "The Shri Cafe and Restaurant",
+      "snippet": "Address NH 648 , Doddaballapur Main Road Nagadenahalli ... AMIGOS Cafe . Café. Closed.",
+      "host": "www.snapchat.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://propertywala.com",
+      "name": "Bulwark Northern Boulevard - Devanahalli, Bangalore",
+      "snippet": "Sep 20, 2026 — Amigos Cafe (<4km). Hotels & Guest Houses. Annapoorneshwari Hotel (<1km); Marthoma Mission Beerasandra (<2km); Shri Morarji Desai Hostel (<3km) ... Read more",
+      "host": "propertywala.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

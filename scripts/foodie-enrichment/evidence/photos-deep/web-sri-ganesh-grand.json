@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "60cc569b-8eea-480d-8f92-f854bdddb87b",
+    "name": "Sri Ganesh Grand"
+  },
+  "query": "\"Sri Ganesh Grand\" Bashettihalli",
+  "hits": [],
+  "errors": [
+    "rate-limited (1)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "af6c792a-a6f0-5643-9b8b-9003b2b8b2dd",
+    "name": "Sri Vinayaka Food Point"
+  },
+  "query": "\"Sri Vinayaka Food Point\" Doddaballapura Railway Station",
+  "hits": [],
+  "errors": [
+    "rate-limited (2)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

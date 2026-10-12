@@ -1,0 +1,39 @@
+{
+  "place": {
+    "id": "55422d8b-8ae5-5082-97ab-85b7870ae1dc",
+    "name": "Hotel Bindushree Family Restaurant"
+  },
+  "query": "\"Hotel Bindushree Family Restaurant\" Bashettihalli",
+  "hits": [
+    {
+      "url": "https://www.makemytrip.com",
+      "name": "Hotels in Bommanahalli with Restaurant - Get Upto 70",
+      "snippet": "Choose from Restaurant in Bommanahalli, Bangalore & save up to 60% on hotels with Restaurant booking online. Compare Bangalore Restaurant on price, reviews, ...",
+      "host": "www.makemytrip.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Nandhini Deluxe Restaurant in Sankey Road,Bangalore",
+      "snippet": "Restaurant specializing in authentic Andhra cuisine, offering delightful dining experiences and signature masala blends. Address. No.12, Palace Logde Building, ...",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://yandex.com",
+      "name": "Hotel Bindu Saviruchi, restaurant, State of Karnataka",
+      "snippet": "Restaurant Hotel Bindu Saviruchi State of Karnataka, Bengaluru, Chord Road, ☎️ +91 9480 40 96 81. View working hours. Get directions in Yandex Maps.",
+      "host": "yandex.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://magicpin.in",
+      "name": "Shree Dhaba & Restaurant, Bashettihalli, Bangalore",
+      "snippet": "Shree Dhaba & Restaurant is a food and dining establishment based in Bashettihalli , Bangalore. Guests can explore different food choices here.",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

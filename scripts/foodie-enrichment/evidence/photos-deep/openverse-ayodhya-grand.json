@@ -1,0 +1,72 @@
+{
+  "restaurantId": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+  "restaurantName": "Ayodhya Grand",
+  "queries": [
+    "Ayodhya Grand",
+    "Ayodhya Grand Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+      "restaurantName": "Ayodhya Grand",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/3107/2875103260_a5a062b686_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/12741142@N04/2875103260",
+      "license": "BY-SA 2.0",
+      "attribution": "Uttkarsh",
+      "matchKind": "exact",
+      "licenseUrl": "https://www.flickr.com/photos/12741142@N04/2875103260",
+      "description": "openverse source=flickr tags=ayodhya,creativecommons,diwali,hanuman,hinduism,india",
+      "matchNotes": "Openverse \"Sri Ram's return to Ayodhya by Pushpak Vimaan @ISKON Temple, New Delhi\" vs place \"Ayodhya Grand\" → exact · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+      "restaurantName": "Ayodhya Grand",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/3238/2341324803_c035cac068_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/57576359@N00/2341324803",
+      "license": "BY-NC-ND 2.0 (NOT permissive for reuse)",
+      "attribution": "Mellagi",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/57576359@N00/2341324803",
+      "description": "openverse source=flickr tags=benares,ganga,ganges,hindu,hinduism,india",
+      "matchNotes": "Openverse \"River Ganges\" vs place \"Ayodhya Grand\" → lead · license BY-NC-ND 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+      "restaurantName": "Ayodhya Grand",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Temple_437.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=161170558",
+      "license": "BY-SA 4.0",
+      "attribution": "AmanAgrahari01",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=161170558",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Temple 437\" vs place \"Ayodhya Grand\" → lead · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "c4d830c9-4131-5dc0-a87e-7b66a120fbdd",
+      "restaurantName": "Ayodhya Grand",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/SRI_RAMA_PATTABHIKSHEKAM_WP.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=155071207",
+      "license": "BY-SA 4.0",
+      "attribution": "YECHARAN TATVAMASI",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=155071207",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"SRI RAMA PATTABHIKSHEKAM WP\" vs place \"Ayodhya Grand\" → lead · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

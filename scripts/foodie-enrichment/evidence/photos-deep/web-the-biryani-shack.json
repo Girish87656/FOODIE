@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "3f25ba72-4d39-400b-aebb-ca303a7bdfd2",
+    "name": "The Biryani Shack"
+  },
+  "query": "\"The Biryani Shack\" Heggadahalli",
+  "hits": [],
+  "errors": [
+    "rate-limited (2)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

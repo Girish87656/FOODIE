@@ -1,0 +1,32 @@
+{
+  "place": {
+    "id": "3bd61d56-dcb2-5dfe-983c-e74444ad219e",
+    "name": "Spicy Bowl"
+  },
+  "query": "\"Spicy Bowl\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org",
+      "name": "Town",
+      "snippet": "A town is a type of a human settlement, generally larger than a village but smaller than a city . Clear sky afternoon on the Ipswich. Old Town of Porvoo in ... Read more",
+      "host": "en.wikipedia.org",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.imdb.com",
+      "name": "The Town (2010)",
+      "snippet": "A proficient group of thieves rob a bank and hold the manager hostage. Things begin to get complicated when one of the crew members falls in love with her. Read more",
+      "host": "www.imdb.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://podcasts.apple.com",
+      "name": "The Town with Matthew Belloni - Podcast",
+      "snippet": "Multiple times each week, Matt is joined by major executives, dealmakers, and journalists, to discuss what is getting made and why, who is winning and losing, ... Read more",
+      "host": "podcasts.apple.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

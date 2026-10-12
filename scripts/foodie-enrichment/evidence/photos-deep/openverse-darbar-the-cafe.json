@@ -1,0 +1,72 @@
+{
+  "restaurantId": "f2b0c4f8-bc5e-551f-a111-53368334f938",
+  "restaurantName": "Darbar The Cafe",
+  "queries": [
+    "Darbar The Cafe",
+    "Darbar The Cafe Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "f2b0c4f8-bc5e-551f-a111-53368334f938",
+      "restaurantName": "Darbar The Cafe",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/391/19799257624_9c11ceeeb2_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/95914901@N08/19799257624",
+      "license": "BY-SA 2.0",
+      "attribution": "joegoauk73",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/95914901@N08/19799257624",
+      "description": "openverse source=flickr tags=goa,joegoauk,panaji,panjim",
+      "matchNotes": "Openverse \"Panaji City\" vs place \"Darbar The Cafe\" → lead · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "f2b0c4f8-bc5e-551f-a111-53368334f938",
+      "restaurantName": "Darbar The Cafe",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/428/20421884705_bc05cda840_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/95914901@N08/20421884705",
+      "license": "BY-SA 2.0",
+      "attribution": "joegoauk73",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/95914901@N08/20421884705",
+      "description": "openverse source=flickr tags=goa,joegoauk,panaji,panjim",
+      "matchNotes": "Openverse \"Panaji City\" vs place \"Darbar The Cafe\" → lead · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "f2b0c4f8-bc5e-551f-a111-53368334f938",
+      "restaurantName": "Darbar The Cafe",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/550/20413245462_6a7ac5c3e0_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/95914901@N08/20413245462",
+      "license": "BY-SA 2.0",
+      "attribution": "joegoauk73",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/95914901@N08/20413245462",
+      "description": "openverse source=flickr tags=goa,joegoauk,panaji,panjim",
+      "matchNotes": "Openverse \"Panaji City\" vs place \"Darbar The Cafe\" → lead · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "f2b0c4f8-bc5e-551f-a111-53368334f938",
+      "restaurantName": "Darbar The Cafe",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Mainul_Standing.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=126677337",
+      "license": "BY-SA 4.0",
+      "attribution": "Mainul03",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=126677337",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Mainul Standing\" vs place \"Darbar The Cafe\" → lead · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

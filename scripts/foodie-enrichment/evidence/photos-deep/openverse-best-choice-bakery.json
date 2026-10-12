@@ -1,0 +1,102 @@
+{
+  "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+  "restaurantName": "Best Choice Bakery",
+  "queries": [
+    "Best Choice Bakery",
+    "Best Choice Bakery Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+      "restaurantName": "Best Choice Bakery",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/2808/9209550065_ddb460a977_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/62586117@N05/9209550065",
+      "license": "BY-NC-ND 2.0 (NOT permissive for reuse)",
+      "attribution": "Neil. Moralee",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/62586117@N05/9209550065",
+      "description": "openverse source=flickr tags=baked,baker,bakery,baseball,black,cap",
+      "matchNotes": "Openverse \"Fresh Every Day.\" vs place \"Best Choice Bakery\" → lead · license BY-NC-ND 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+      "restaurantName": "Best Choice Bakery",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/105/314983111_5985ea4614_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/48889077511@N01/314983111",
+      "license": "BY 2.0",
+      "attribution": "iMorpheus",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/48889077511@N01/314983111",
+      "description": "openverse source=flickr tags=bread,dailylife,food,japan,pastry,tokyo",
+      "matchNotes": "Openverse \"A Roll.\" vs place \"Best Choice Bakery\" → lead · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+      "restaurantName": "Best Choice Bakery",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/1785/28124687937_0119c09bc5_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/143641059@N08/28124687937",
+      "license": "BY-SA 2.0",
+      "attribution": "Northwest Retail",
+      "matchKind": "exact",
+      "licenseUrl": "https://www.flickr.com/photos/143641059@N08/28124687937",
+      "description": "openverse source=flickr tags=",
+      "matchNotes": "Openverse \"Bakery and Seafood\" vs place \"Best Choice Bakery\" → exact · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+      "restaurantName": "Best Choice Bakery",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/2088/2365848178_b1d095270c_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/52039665@N00/2365848178",
+      "license": "BY-NC 2.0 (NOT permissive for reuse)",
+      "attribution": "ms sdb",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/52039665@N00/2365848178",
+      "description": "openverse source=flickr tags=baking,cooking,cross,easter,hotcrossbuns,wellington",
+      "matchNotes": "Openverse \"Dough Rise Easter 2008, Wellington\" vs place \"Best Choice Bakery\" → lead · license BY-NC 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+      "restaurantName": "Best Choice Bakery",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/7227/27269253583_9fa43501e4.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/18337581@N05/27269253583",
+      "license": "PDM 1.0",
+      "attribution": "Rupert Essinger",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/18337581@N05/27269253583",
+      "description": "openverse source=flickr tags=",
+      "matchNotes": "Openverse \"Jimbo's Natural Food Grocer\" vs place \"Best Choice Bakery\" → lead · license PDM 1.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "8c0ba5e7-e5e1-507d-9f93-e2377d88cba4",
+      "restaurantName": "Best Choice Bakery",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Winnipeg_%286408655077%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=66245962",
+      "license": "BY 2.0",
+      "attribution": "Herb Neufeld",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=66245962",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"File:Winnipeg (6408655077).jpg\" vs place \"Best Choice Bakery\" → lead · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

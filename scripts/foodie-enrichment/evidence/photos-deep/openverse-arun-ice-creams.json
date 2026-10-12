@@ -1,0 +1,87 @@
+{
+  "restaurantId": "6e041f97-ead9-5c01-8a17-82fa2de8ff7e",
+  "restaurantName": "Arun Ice Creams",
+  "queries": [
+    "Arun Ice Creams",
+    "Arun Ice Creams Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "6e041f97-ead9-5c01-8a17-82fa2de8ff7e",
+      "restaurantName": "Arun Ice Creams",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/5314/14120502462_fa361dbdc3_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/33297917@N07/14120502462",
+      "license": "BY 2.0",
+      "attribution": "Joseph Jayanth",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/33297917@N07/14120502462",
+      "description": "openverse source=flickr tags=pondichery,pondy,travel",
+      "matchNotes": "Openverse \"arun ice cream yellow\" vs place \"Arun Ice Creams\" → lead · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "6e041f97-ead9-5c01-8a17-82fa2de8ff7e",
+      "restaurantName": "Arun Ice Creams",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Arun_ice_cream.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=119093071",
+      "license": "BY-SA 4.0",
+      "attribution": "Yesodhasekar",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=119093071",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Arun ice cream\" vs place \"Arun Ice Creams\" → lead · license BY-SA 4.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "6e041f97-ead9-5c01-8a17-82fa2de8ff7e",
+      "restaurantName": "Arun Ice Creams",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/2395/2377188722_7fb9845ce5_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/85914824@N00/2377188722",
+      "license": "BY-NC 2.0 (NOT permissive for reuse)",
+      "attribution": "srini091",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/85914824@N00/2377188722",
+      "description": "openverse source=flickr tags=",
+      "matchNotes": "Openverse \"Brunei\" vs place \"Arun Ice Creams\" → lead · license BY-NC 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "6e041f97-ead9-5c01-8a17-82fa2de8ff7e",
+      "restaurantName": "Arun Ice Creams",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/5454/9339063658_dc61ef25a3_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/69268105@N06/9339063658",
+      "license": "BY-NC-SA 2.0 (NOT permissive for reuse)",
+      "attribution": "yellowshuttle",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/69268105@N06/9339063658",
+      "description": "openverse source=flickr tags=iphotooriginal,raw",
+      "matchNotes": "Openverse \"We had space for ice cream (spaghetti eis, in Arun's case)\" vs place \"Arun Ice Creams\" → lead · license BY-NC-SA 2.0 · EXCLUDED: license not in cc0/pdm/by/by-sa",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "6e041f97-ead9-5c01-8a17-82fa2de8ff7e",
+      "restaurantName": "Arun Ice Creams",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/4137/4942634820_b06fc46126_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/45518683@N04/4942634820",
+      "license": "BY 2.0",
+      "attribution": "heyitsopower",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/45518683@N04/4942634820",
+      "description": "openverse source=flickr tags=opower,picnicopowerpicnic,adult,coffee,drink,facial expression",
+      "matchNotes": "Openverse \"Arun discovers the ice cream bar has just opened.\" vs place \"Arun Ice Creams\" → lead · license BY 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "8836aebf-37ec-586a-9f3c-661f0e28a2ac",
+    "name": "Mallu Hindu Military Hotel"
+  },
+  "query": "\"Mallu Hindu Military Hotel\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Karnataka Hindu Military Hotel in Kadabagere,Bangalore",
+      "snippet": "Located in the vibrant heart of Kadabagere, Open from Monday:- 11:00 am - 11:00 pm, Sunday:- 11:00 am - 11:00 pm, breakfast, lunch, and dinner,",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.zomato.com",
+      "name": "Karnataka Hindu Military Hotel - Rajarajeshwari Nagar",
+      "snippet": "Karnataka Hindu Military Hotel ; Chicken Kabab. ₹170 ; Chicken Fry Dry. ₹170 ; Mutton Fry Dry. ₹250 ; Head Mutton Fry Dry. ₹180 ; Mutton Chaap Fry Dry. ₹260. Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

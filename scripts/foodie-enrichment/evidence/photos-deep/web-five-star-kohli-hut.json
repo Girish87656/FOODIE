@@ -1,0 +1,39 @@
+{
+  "place": {
+    "id": "8fcffd2d-72a2-53ff-8a3b-093b3d292601",
+    "name": "Five Star Kohli Hut"
+  },
+  "query": "\"Five Star Kohli Hut\" Scout Camp Road",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Five Star & Koli Hut Dining Reviews - Anantapur Locality",
+      "snippet": "Door No 13-2-205, Beside Shishucare Hospital, Srinivas Nagar, Anantapur Locality, Anantapur. Five Star & Koli Hut Dining Reviews. No Reviews Graphic ... Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.district.in",
+      "name": "Five Star & Koli Hut | Anantapur Locality,",
+      "snippet": "Door No 13-2-205, Beside Shishucare Hospital, Srinivas Nagar, Anantapur Locality, Anantapur. ₹200 for two. Closed • Opens at 5:45 PM. Directions Read more",
+      "host": "www.district.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "10 Reviews for Five Star Koli Hut in Melvisharam, Ranipet",
+      "snippet": "Five Star Koli Hut Reviews in Melvisharam, Ranipet. Five Star Koli Hut in Melvisharam, Ranipet currently holds an average rating of 3.9 based on user reviews. Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.tripadvisor.in",
+      "name": "FIVE STAR CHICKEN AND KOLI HUT, Dharmavaram",
+      "snippet": "Five Star Chicken And Koli Hut, Dharmavaram: Contact Call Location Dharmavaram, Ap, India, Dharmavaram 515671 India",
+      "host": "www.tripadvisor.in",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

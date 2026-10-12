@@ -1,0 +1,46 @@
+{
+  "place": {
+    "id": "35e3c89e-0bd6-5dff-9590-0849a565d0c2",
+    "name": "Burger Time"
+  },
+  "query": "\"Burger Time\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Burger Time Dining Reviews - Doddaballapura Locality",
+      "snippet": "Reviews of Burger Time Doddaballapura Locality; see all unbiased reviews of Burger Time Doddaballapura for delivery and dining on Zomato.",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Order from Best Burger in town online in Doddaballapura",
+      "snippet": "Shop no 17 doddaballapur next to Raj Kamal theatre doddaballapur Twon , Doddaballapura Town,Doddaballapura ,Bangalore Rural,Karnataka-561203 ... Burger Time · Momo ... Read more",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.district.in",
+      "name": "Burger Time | Doddaballapura Locality",
+      "snippet": "Restaurant Location Map. Burger Time . Shop 17, Raj Kamal Theater, Near Doddaballapur Town, Doddaballapura Locality, Doddaballapura . Get directions · + ... Read more",
+      "host": "www.district.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Burger Joints Restaurants in Doddaballapur, Bangalore",
+      "snippet": "Burger Time · 38 Ratings. 2nd Main Doddaballapur ; Burger Point · 510 Ratings. Near Raj Kamal Theater Doddaballapur ; Cafe 66 · 56 Ratings. Taluk Office Road ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://restaurant-guru.in",
+      "name": "Top 7 restaurants in Doddaballapura, october 2026",
+      "snippet": "Pizza restaurants in Doddaballapura · Pizza Palace · BURGER TIME · Pizza 119 · Creamery Cafe · Zone 43 Cafe · Rahul's Pizza, Pachmarhi · Kitchen 30 · Bentoz Pizza. Read more",
+      "host": "restaurant-guru.in",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

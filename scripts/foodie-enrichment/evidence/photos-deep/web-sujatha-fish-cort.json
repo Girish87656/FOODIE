@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "7fff391d-305e-54bf-94c2-2508d7648973",
+    "name": "Sujatha Fish Cort"
+  },
+  "query": "\"Sujatha Fish Cort\" Doddaballapura town",
+  "hits": [],
+  "errors": [
+    "rate-limited (1)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

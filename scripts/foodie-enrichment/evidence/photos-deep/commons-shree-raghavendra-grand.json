@@ -1,0 +1,31 @@
+{
+  "restaurantId": "ca6e9976-16e3-5e53-96c6-edbc0ec243db",
+  "restaurantName": "Shree Raghavendra Grand",
+  "queries": [
+    "Shree Raghavendra Grand Doddaballapura",
+    "Shree Raghavendra Grand",
+    "Shree Raghavendra Grand Doddaballapura town"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "ca6e9976-16e3-5e53-96c6-edbc0ec243db",
+      "restaurantName": "Shree Raghavendra Grand",
+      "sourceKind": "wikimedia_commons",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Molageri_Temple_Devaragadde_Manki_Ritual.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Molageri_Temple_Devaragadde_Manki_Ritual.jpg",
+      "license": "Public domain",
+      "attribution": "Raghavendra Mahale",
+      "matchKind": "lead",
+      "mime": "image/jpeg",
+      "width": 720,
+      "height": 334,
+      "licenseUrl": null,
+      "description": "Ritual at Molageri Temple, Manki. This shows the Parivara Devaru and the heritage of the Mahale family. This is the image of Parivara Devaru of Molageri Temple in Manki Near Manki Mavinakatta it's a decorative image of all the gods on the d",
+      "matchNotes": "Commons file \"File:Molageri Temple Devaragadde Manki Ritual.jpg\" vs place \"Shree Raghavendra Grand\" → lead · license Public domain · desc: Ritual at Molageri Temple, Manki. This shows the Parivara Devaru and the heritage of the Mahale family. This is the imag",
+      "retrievedOn": "2026-10-12",
+      "tierB": "commons-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

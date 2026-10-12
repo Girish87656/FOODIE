@@ -1,0 +1,39 @@
+{
+  "place": {
+    "id": "00b2d921-9f72-569c-9081-01fd1321d277",
+    "name": "Sizzlly Chicken"
+  },
+  "query": "\"Sizzlly Chicken\" Doddaballapura town",
+  "hits": [
+    {
+      "url": "https://www.zomato.com",
+      "name": "Sizzlly Chicken, Doddaballapura Locality order online",
+      "snippet": "Sizzlly Chicken ; Veg Regular Burger. ₹93 ; Paneer Cheese Burger. ₹123 ; Chicken Burger. ₹112 ; Fried Chicken Burger. ₹136 ; Special Chicken Burger. ₹149. Read more",
+      "host": "www.zomato.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Chicken Sandwich serving restaurants in Doddaballapur",
+      "snippet": "Name, Sizzlly Chicken · Burger Time · Snacks Joint ; Address, Veerbadranapalla, Aralumallige, Doddaballapur , Bangalore - 561203 (Opposite Kongadiyappa College) ...",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Best Sizzlly Chicken Restaurants in Bangalore",
+      "snippet": "Explore The Best Sizzlly Chicken Restaurants In Bangalore. View Menus, Photos, Ratings, Reviews Or Order Online And Enjoy Mouth-watering Sizzlly Chicken .",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://chotu.com",
+      "name": "Fresh Chicken Near You in Rt Nagar | Order from Local Shops",
+      "snippet": "Sizzlly Chicken . Shop No 1 Veerbadranapalla, Opposite Kongadiyappa College, Aralumallige, Karnataka 561203, India. Order Now. Read more",
+      "host": "chotu.com",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

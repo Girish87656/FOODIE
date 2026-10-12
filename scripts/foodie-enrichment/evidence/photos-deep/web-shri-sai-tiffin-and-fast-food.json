@@ -1,0 +1,12 @@
+{
+  "place": {
+    "id": "72e69a34-c801-5d38-b19c-77f647d2d4b5",
+    "name": "Shri Sai Tiffin And Fast Food"
+  },
+  "query": "\"Shri Sai Tiffin And Fast Food\" Doddaballapura town (north edge)",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Shri Sai Tiffin And Fast Food\\\\\\\" Doddaballapura town (north edge)\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Shri Sai Tiffin And Fast Food\\\\\\\" Doddaballapura town (north edge)\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

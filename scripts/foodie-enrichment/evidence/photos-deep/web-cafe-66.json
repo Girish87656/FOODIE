@@ -1,0 +1,53 @@
+{
+  "place": {
+    "id": "8b5f32a4-7e35-5119-8cb5-2cfba5f2e746",
+    "name": "Cafe 66"
+  },
+  "query": "\"Cafe 66\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org",
+      "name": "Doddaballapura",
+      "snippet": "Doddaballapura is a city and the district headquarters of Bengaluru North district in the state of Karnataka, India. It is an industrial city",
+      "host": "en.wikipedia.org",
+      "classification": "other"
+    },
+    {
+      "url": "https://maps.apple.com",
+      "name": "Doddaballapura, Karnataka, India - Map & Directions",
+      "snippet": "View details about Doddaballapura , Karnataka, India on Apple Maps. Address, driving directions, images, nearby attractions and more.",
+      "host": "maps.apple.com",
+      "classification": "other"
+    },
+    {
+      "url": "http://www.doddaballapur.tpa.gov.in",
+      "name": "Home | Doddaballapur Planning Authority",
+      "snippet": "Sep 3, 2026 — AuthorityOfficial Website of Government of Karnataka. The Town Planner, TPA, Doddaballapura , Phone: 080-29562046 |e-mail: dpa.dbpura2018@gmail. ...",
+      "host": "www.doddaballapur.tpa.gov.in",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.iqair.com",
+      "name": "Doddaballapura Air Quality Index (AQI) and India",
+      "snippet": "Doddaballapura Air Quality Index (AQI) is now Moderate. Get real-time, historical and forecast PM2.5 and weather data. Read the air pollution in Doddaba...",
+      "host": "www.iqair.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.guestreservations.com",
+      "name": "The Fiori Resort Doddaballapura",
+      "snippet": "The property is located at Nh-207, Doddaballapura The Fiori Resort in Devanhalli. Check-in begins at 2:00 PM and check-out is at 11:00 AM",
+      "host": "www.guestreservations.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://ksrtc.karnataka.gov.in",
+      "name": "From To 1 Doddaballapura Kolar Express Vijayapura 6.45",
+      "snippet": "Note: Doddaballapur to Bengaluru Cauvery Bhavan Ordinary services are in operation. Doddaballapura Bus Stand. Bus Stand Contact No 7760992685. Sl. No. Via. Read more 1 page",
+      "host": "ksrtc.karnataka.gov.in",
+      "classification": "other"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

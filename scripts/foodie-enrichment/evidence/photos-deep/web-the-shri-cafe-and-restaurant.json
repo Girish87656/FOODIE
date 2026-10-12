@@ -1,0 +1,13 @@
+{
+  "place": {
+    "id": "e284c166-73f3-5729-a322-92860fcd67da",
+    "name": "The Shri Cafe and Restaurant"
+  },
+  "query": "\"The Shri Cafe and Restaurant\" Nagadenahalli",
+  "hits": [],
+  "errors": [
+    "rate-limited (1)",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-12"
+}

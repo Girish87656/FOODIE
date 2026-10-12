@@ -1,0 +1,57 @@
+{
+  "restaurantId": "3a223ad9-b241-5481-a515-4d60e9b4d35b",
+  "restaurantName": "The Brothers Adda",
+  "queries": [
+    "The Brothers Adda",
+    "The Brothers Adda Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "3a223ad9-b241-5481-a515-4d60e9b4d35b",
+      "restaurantName": "The Brothers Adda",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Rare_aureus_of_Titus_%28obverse%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=148698614",
+      "license": "BY-SA 2.5",
+      "attribution": "CNG",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=148698614",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Rare aureus of Titus (obverse)\" vs place \"The Brothers Adda\" → lead · license BY-SA 2.5",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "3a223ad9-b241-5481-a515-4d60e9b4d35b",
+      "restaurantName": "The Brothers Adda",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Rare_solidus_of_Julian_as_Caesar.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=148427557",
+      "license": "BY-SA 2.5",
+      "attribution": "CNG",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=148427557",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Rare solidus of Julian as Caesar\" vs place \"The Brothers Adda\" → lead · license BY-SA 2.5",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    },
+    {
+      "restaurantId": "3a223ad9-b241-5481-a515-4d60e9b4d35b",
+      "restaurantName": "The Brothers Adda",
+      "sourceKind": "openverse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Rare_aureus_of_Titus.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=148698604",
+      "license": "BY-SA 2.5",
+      "attribution": "CNG",
+      "matchKind": "lead",
+      "licenseUrl": "https://commons.wikimedia.org/w/index.php?curid=148698604",
+      "description": "openverse source=wikimedia tags=",
+      "matchNotes": "Openverse \"Rare aureus of Titus\" vs place \"The Brothers Adda\" → lead · license BY-SA 2.5",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

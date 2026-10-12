@@ -1,0 +1,25 @@
+{
+  "place": {
+    "id": "bd17aca9-8a48-5926-b353-e5027c73a540",
+    "name": "DREAM CAFE"
+  },
+  "query": "\"DREAM CAFE\" Doddaballapura town (north edge)",
+  "hits": [
+    {
+      "url": "https://www.instagram.com",
+      "name": "Nature Paradise Doddaballapura",
+      "snippet": "Oct 12, 2025 — Buy any 2 and get French fries for free in Dream Cafe at Doddaballapura Dream Cafe · indianfoodhunting's profile picture. indianfoodhun... 233K. Read more",
+      "host": "www.instagram.com",
+      "classification": "instagram"
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Egg Roll serving restaurants in Rajanukunte, Bangalore",
+      "snippet": "Dream Cafe Air Force Station Yelahanka, bangalore. Dream Cafe . 3.86 Ratings. Bb Road air force station yelahanka. Fast Food. Open until 10:00 pm. Call Now Order ... Read more",
+      "host": "www.justdial.com",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

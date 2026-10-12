@@ -1,0 +1,46 @@
+{
+  "place": {
+    "id": "5218d019-a529-400b-81db-6acac7450faa",
+    "name": "Chickpet Donne Biryani House"
+  },
+  "query": "\"Chickpet Donne Biryani House\" Doddaballapura",
+  "hits": [
+    {
+      "url": "https://magicpin.in",
+      "name": "Chickpet Donne Biryani House, Bashettihalli, Bangalore",
+      "snippet": "Chickpet Donne Biryani House is a F&B-Casual Dining outlet located in the heart of Bangalore. It offers a wide variety of delicious and authentic South.",
+      "host": "magicpin.in",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.facebook.com",
+      "name": "Donne Biryani in Chickpet",
+      "snippet": "Chickpet Donne Biriyani House in Doddaballapura is a popular spot for boneless chicken donne biryani near Chickpet ... Chickpet Donne Biryani House - Serves ... Read more",
+      "host": "www.facebook.com",
+      "classification": "facebook"
+    },
+    {
+      "url": "https://www.favhiker.com",
+      "name": "Chickpet Donne Biryani House - Since 1975, Bengaluru —",
+      "snippet": "Chickpet Donne Biryani House - Since 1975 Doddaballapura , Bengaluru. Ratings, reviews, photos, location & the best dishes to try, from real explorers on ...",
+      "host": "www.favhiker.com",
+      "classification": "other"
+    },
+    {
+      "url": "https://www.swiggy.com",
+      "name": "Best Chickpet Donne Biryani House Restaurants In",
+      "snippet": "Best Chickpet Donne Biryani House Restaurants in Bangalore ; Donne Chicken Biryani. ₹200. 4.3 ; Donne Biryani Rice. ₹120. 3.9 ; Donne Egg Biryani. ₹140. 4.6. Read more",
+      "host": "www.swiggy.com",
+      "classification": "listing-platform"
+    },
+    {
+      "url": "https://www.tripadvisor.ca",
+      "name": "Chickpet Donne Biryani House - Bengaluru Restaurants",
+      "snippet": "Chickpet Donne Biryani House , Bengaluru: See 6 unbiased reviews of Chickpet Donne Biryani House , rated 2.8 of 5 on Tripadvisor and ranked #4155 of 4267 ...",
+      "host": "www.tripadvisor.ca",
+      "classification": "listing-platform"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}

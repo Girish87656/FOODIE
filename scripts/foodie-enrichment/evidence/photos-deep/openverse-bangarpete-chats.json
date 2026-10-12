@@ -1,0 +1,27 @@
+{
+  "restaurantId": "9092a7b0-9e5d-5594-a9be-c259dd1af118",
+  "restaurantName": "Bangarpete Chats",
+  "queries": [
+    "Bangarpete Chats",
+    "Bangarpete Chats Bengaluru"
+  ],
+  "candidates": [
+    {
+      "restaurantId": "9092a7b0-9e5d-5594-a9be-c259dd1af118",
+      "restaurantName": "Bangarpete Chats",
+      "sourceKind": "openverse",
+      "imageUrl": "https://live.staticflickr.com/4139/4901765064_fcf8033941_b.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/27526538@N07/4901765064",
+      "license": "BY-SA 2.0",
+      "attribution": "mynameisharsha",
+      "matchKind": "lead",
+      "licenseUrl": "https://www.flickr.com/photos/27526538@N07/4901765064",
+      "description": "openverse source=flickr tags=3gs,apple,bangalore,bangarpet,cameraphone,chats",
+      "matchNotes": "Openverse \"Bangarpet Pani Puris\" vs place \"Bangarpete Chats\" → lead · license BY-SA 2.0",
+      "retrievedOn": "2026-10-12",
+      "tierB": "openverse-deep"
+    }
+  ],
+  "errors": [],
+  "retrievedOn": "2026-10-12"
+}
