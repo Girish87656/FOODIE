@@ -43,6 +43,18 @@
 -- drift and still aborts. Single-record payload, baseline-name check,
 -- triple-guarded insert and every postflight honesty guard are unchanged.
 --
+-- REV 3 (2026-10-12): POSTFLIGHT PROXIMITY REPORT FIX (validation-only fix,
+-- payload unchanged). The postflight proximity report referenced a
+-- non-existent 'coordinates' column; public.restaurants carries
+-- latitude/longitude (supabase/schema.sql + migration-005), so the DO block
+-- raised 'column a.coordinates does not exist' and EVERY run rolled back
+-- before commit — the batch could never apply. The report now computes
+-- great-circle distance in metres with the same clamped spherical-law-of-
+-- cosines formula as batch-005's postflight 2.5 (R = 6,371,000 m; pairs
+-- within 200 m are notice-only, never an error). All preflight/postflight
+-- guards, transaction boundaries and the single-record payload are
+-- byte-identical to REV 2.
+--
 -- WORKSHEET SHA256: c9f648ff576fdcb4dfa5e1bca946f9d9f4a0706d16dfb13e79e9ee7f3691c490
 -- BASELINE SNAPSHOT SHA256: c5bc2813b626a20c0755f3de3cee38acde4b1e802eb657b1bcfa8ac13a2e2a56
 -- ============================================================================
@@ -178,14 +190,30 @@ begin
     raise exception 'POSTFLIGHT FAIL: % row(s) with non-zero aggregates — the import must never touch aggregates', bad_state;
   end if;
 
-  -- proximity report (human eyeballing, NOT an error)
-  select string_agg(format('%s <-> %s (%s m)', a.name, b.name, round((a.coordinates <-> b.coordinates)::numeric * 111195)), E'\n')
+  -- proximity report (human eyeballing, NOT an error). REV 3: computes
+  -- great-circle metres from the REAL latitude/longitude columns using the
+  -- same clamped spherical-law-of-cosines formula as batch-005 postflight
+  -- 2.5 (R = 6,371,000 m). The previous draft referenced a 'coordinates'
+  -- column which public.restaurants does not have — that reference raised
+  -- 'column does not exist' inside this DO block and would have rolled back
+  -- every run before commit. Notice-only: proximity never fails the import.
+  select string_agg(format('%s <-> %s (%s m)', a.name, b.name, round((
+           6371000 * acos(least(1, greatest(-1,
+             sin(radians(a.latitude)) * sin(radians(b.latitude)) +
+             cos(radians(a.latitude)) * cos(radians(b.latitude)) *
+             cos(radians(b.longitude) - radians(a.longitude))
+           )))
+         )::numeric)), E'\n')
   into close_pairs
   from public.restaurants a
   join public.restaurants b
     on a.id < b.id
-   and a.coordinates is not null and b.coordinates is not null
-   and (a.coordinates <-> b.coordinates) * 111195 < 200;
+   and a.latitude is not null and b.latitude is not null
+   and (6371000 * acos(least(1, greatest(-1,
+          sin(radians(a.latitude)) * sin(radians(b.latitude)) +
+          cos(radians(a.latitude)) * cos(radians(b.latitude)) *
+          cos(radians(b.longitude) - radians(a.longitude))
+        )))) < 200;
   if close_pairs is not null then
     raise notice 'POSTFLIGHT: rows within 200 m of each other (directory pins in dense streets — eyeball, do not merge):%— see query below', E'\n' || coalesce(close_pairs, '');
   else
