@@ -1484,3 +1484,20 @@ Work Log:
 
 Stage Summary:
 - Publication still blocked on user-side authorization timing (or credentials on an authenticated machine). Two ready paths: (a) say "go" → fresh device code → authorize in browser → I push immediately; (b) take /home/z/foodie-publish/ artifacts to any authenticated machine → fetch bundle + push (or git am). No force-push, no history rewrite, remote untouched at a70c4bf.
+
+---
+Task ID: publish-success-device-auth
+Agent: Z.ai Code (main)
+Task: Fresh device code → user authorization → push main → verify remote SHA → check Vercel deployment → verify production. No force-push; no production DB changes.
+
+Work Log:
+- Device flow (documented RFC 8628, official gh client_id): fresh code AE54-C761 issued and shown; user authorized at github.com/login/device as Girish87656; poll caught AUTH SUCCESS within the first window. Token handled safely: written chmod-600 to /tmp, piped into `gh auth login --with-token`, file removed immediately — NEVER printed or logged.
+- Sandbox resilience note: ~/.local/bin (gh binary) had been wiped between sessions and the first post-auth step hit command-not-found AFTER the token was already received; binary reinstalled from the official release, login completed with the held token — no re-authentication needed, no secrets exposed.
+- `gh auth status`: logged in as Girish87656 (active), scopes read:org/repo/workflow (output token-redacted). Write access verified via `gh api repos/Girish87656/FOODIE --jq .permissions` → push:true.
+- PUSH: `git push origin main` → "a70c4bf..8e1981c main -> main", exit 0, normal fast-forward. origin/main = 8e1981cb50037d2b38768d557281b6bf4bcaa3be == local HEAD. No force, no rewrite.
+- VERCEL: commit status for 8e1981c went pending → SUCCESS; GitHub deployment record created for Production, sha 8e1981cb (2026-10-13T14:24:56Z). Existing project "foodie" untouched; env vars untouched; no new project.
+- PRODUCTION VERIFIED on the new build (foodie-arjun-123b.vercel.app): detail API now exposes per-dish sourceUrl (old build stripped it) — Abhis Food Court 5 dishes ₹80/₹80/₹70/₹60/₹60 all with magicpin sourceUrls; Biryani Darbhar 6 dishes ₹200/₹190/₹190/₹180/₹199/₹300 with justdial+-zomato sourceUrls. Browser (logged-in, disclosed throwaway account): "Items & prices from published listing: … magicpin.in" provenance line NOW RENDERS (absent on the old build), Unverified listing chip intact, honest photo empty states, Get Directions + call actions, 0 page errors, 0 console errors.
+- Supabase data: untouched (read-only probes only). No SQL executed.
+
+Stage Summary:
+- PUBLICATION COMPLETE: 9 commits published (a70c4bf → 8e1981c), Vercel deployed 8e1981cb, provenance UI live in production, all honesty guardrails verified in the browser. Photo set remains honestly empty (344 candidates / 0 identity-approved, evidence in photos-deep). Remaining known state: web-tier 74/77 coverage (3 places rate-limit-blocked, documented).
