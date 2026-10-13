@@ -1,0 +1,186 @@
+"use client";
+
+/**
+ * DestinationScreen — one destination and the foods it is famous for
+ * (Destination → Famous Foods step of the discovery flow).
+ *
+ * Shows only REAL curated data: the destination header (name / region /
+ * short factual description) and its destination-food cards. When nothing
+ * has been curated yet, the screen says so honestly — nothing is invented.
+ */
+
+import { useEffect } from "react";
+import { ArrowLeft, Compass, RefreshCw, SearchX } from "lucide-react";
+import { useFoodieStore } from "@/lib/foodie/store";
+import { useDestinationDetail } from "@/lib/foodie/data/useDestinationFeed";
+import { DestinationFoodBadge } from "../DestinationFoodBadge";
+import { Skeleton } from "@/components/ui/skeleton";
+
+export function DestinationScreen() {
+  const destinationId = useFoodieStore((s) => s.selectedDestinationId);
+  const screen = useFoodieStore((s) => s.screen);
+  const backFromDestination = useFoodieStore((s) => s.backFromDestination);
+  const openDestinationFood = useFoodieStore((s) => s.openDestinationFood);
+
+  const detail = useDestinationDetail(destinationId);
+
+  // No selection → there is nothing honest to show; return home. The screen
+  // check keeps this guard from firing while this screen is merely EXITING
+  // (AnimatePresence keeps it mounted during the transition).
+  useEffect(() => {
+    if (!destinationId && screen === "destination") backFromDestination();
+  }, [destinationId, screen, backFromDestination]);
+
+  if (!destinationId || screen !== "destination") return null;
+
+  return (
+    <div className="relative flex h-full flex-col bg-background">
+      {/* ---------------- top bar ---------------- */}
+      <header className="z-10 shrink-0 border-b border-border/50 bg-background/95 px-4 pb-3 pt-4 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={backFromDestination}
+            aria-label="Back to Home"
+            className="grid size-9 shrink-0 place-items-center rounded-full border border-border bg-card shadow-sm transition-colors hover:bg-accent"
+          >
+            <ArrowLeft className="size-4" aria-hidden="true" />
+          </button>
+          <span className="text-[10.5px] font-bold uppercase tracking-wider text-muted-foreground">
+            Destination
+          </span>
+        </div>
+      </header>
+
+      {/* ---------------- content ---------------- */}
+      <main className="thin-scrollbar flex-1 overflow-y-auto pb-10" role="main">
+        {detail.status === "loading" && (
+          <div className="px-5 pt-5" aria-busy="true" aria-live="polite" aria-label="Loading destination">
+            <Skeleton className="h-7 w-2/3" />
+            <Skeleton className="mt-2 h-4 w-1/3" />
+            <Skeleton className="mt-4 h-16 w-full rounded-2xl" />
+            <div className="mt-6 space-y-2.5">
+              {[0, 1].map((i) => (
+                <Skeleton key={i} className="h-24 w-full rounded-2xl" />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {detail.status === "error" && (
+          <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-rose-200 bg-rose-50/50 px-6 py-12 text-center">
+            <SearchX className="size-10 text-rose-300" aria-hidden="true" />
+            <p className="mt-3 text-[15px] font-bold text-foreground">Couldn&apos;t load this destination</p>
+            <p className="mt-1 max-w-[260px] text-[13px] leading-snug text-muted-foreground">
+              {detail.error ?? "Something went wrong while fetching this destination."}
+            </p>
+            <button
+              type="button"
+              onClick={detail.reload}
+              className="mt-4 flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-white shadow-md shadow-orange-600/25 transition-all hover:bg-primary/90 active:scale-95"
+            >
+              <RefreshCw className="size-3.5" aria-hidden="true" />
+              Try again
+            </button>
+          </div>
+        )}
+
+        {detail.status === "ready" && !detail.destination && (
+          <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-12 text-center">
+            <SearchX className="size-10 text-stone-300" aria-hidden="true" />
+            <p className="mt-3 text-[15px] font-bold text-foreground">Destination not found</p>
+            <p className="mt-1 max-w-[260px] text-[13px] leading-snug text-muted-foreground">
+              This destination doesn&apos;t exist or isn&apos;t active in Foodie&apos;s database.
+            </p>
+          </div>
+        )}
+
+        {detail.status === "ready" && detail.destination && (
+          <>
+            <section className="px-5 pt-5">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-primary">
+                {detail.destination.region ?? detail.destination.country}
+              </p>
+              <h1 className="mt-1 text-2xl font-extrabold tracking-tight text-foreground">
+                {detail.destination.name}
+              </h1>
+              {detail.destination.description && (
+                <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
+                  {detail.destination.description}
+                </p>
+              )}
+            </section>
+
+            <section className="mt-6">
+              <div className="px-5">
+                <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
+                  <span aria-hidden="true">🍛</span> Famous &amp; local foods
+                </h2>
+                <p className="mt-0.5 text-[12.5px] text-muted-foreground">
+                  What this place is genuinely known for — source-backed, never padded
+                </p>
+              </div>
+
+              {detail.foods.length === 0 ? (
+                <div className="mx-5 mt-4 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-10 text-center">
+                  <Compass className="size-9 text-stone-300" aria-hidden="true" />
+                  <p className="mt-3 text-[15px] font-bold text-foreground">
+                    No foods curated for this destination yet
+                  </p>
+                  <p className="mt-1 max-w-[280px] text-[13px] leading-snug text-muted-foreground">
+                    Foodie only lists destination foods that are backed by real sources —
+                    check back after the next curated data pass.
+                  </p>
+                </div>
+              ) : (
+                <div className="mt-4 space-y-2.5 px-5">
+                  {detail.foods.map((food) => (
+                    <button
+                      key={food.id}
+                      type="button"
+                      onClick={() => openDestinationFood(food.id, detail.destination!.id)}
+                      className="flex w-full items-stretch gap-3 rounded-2xl border border-border/60 bg-card p-3 text-left shadow-sm transition-all hover:border-primary/40 hover:shadow-md active:scale-[0.99]"
+                      aria-label={`Explore ${food.name}`}
+                    >
+                      {food.imageUrl ? (
+                        <img
+                          src={food.imageUrl}
+                          alt={food.name}
+                          loading="lazy"
+                          className="size-[76px] shrink-0 rounded-xl object-cover"
+                        />
+                      ) : (
+                        <span
+                          className="grid size-[76px] shrink-0 place-items-center rounded-xl bg-orange-50 text-2xl"
+                          aria-hidden="true"
+                        >
+                          🍽️
+                        </span>
+                      )}
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-center gap-2">
+                          <span className="truncate text-[14.5px] font-bold text-foreground">
+                            {food.name}
+                          </span>
+                          <DestinationFoodBadge designation={food.designation} />
+                        </span>
+                        {food.description && (
+                          <span className="mt-0.5 line-clamp-2 block text-[12.5px] leading-snug text-muted-foreground">
+                            {food.description}
+                          </span>
+                        )}
+                        <span className="mt-1.5 inline-flex items-center gap-1 text-[11.5px] font-bold text-primary">
+                          Explore places <span aria-hidden="true">→</span>
+                        </span>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </section>
+          </>
+        )}
+      </main>
+    </div>
+  );
+}
