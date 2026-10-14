@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Nanjundeshwara Bakery & Sweets - Bangalore",
+    "area": "gitam"
+  },
+  "query": "Nanjundeshwara Bakery & Sweets - Bangalore, Doddaballapura",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+  "retrievedOn": "2026-10-14"
+}

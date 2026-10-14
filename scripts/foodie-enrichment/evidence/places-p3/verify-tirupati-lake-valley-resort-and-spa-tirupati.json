@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Lake Valley Resort and Spa Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.makemytrip.com/hotels/lake_valley_resort_and_spa_tirupati-details-tirupati.html"
+  },
+  "query": "\"Lake Valley Resort and Spa Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.makemytrip.com/hotels/lake_valley_resort_and_spa_tirupati-details-tirupati.html",
+      "name": "Lake Valley Resort and Spa Tirupati",
+      "snippet": "Lake Valley Resort and Spa Tirupati is situated at - 1-1 Bhakarapata, tirupati road, chinnagottiigallu mandal 517194, Tirupati , India, - 1-1 Bhakarapata, ... Read more",
+      "host": "www.makemytrip.com",
+      "kind": "makemytrip"
+    },
+    {
+      "url": "https://www.expedia.com/Vayalipad-Hotels-Lake-Valley-Resort-And-Spa.h96483780.Hotel-Information",
+      "name": "Lake Valley Resort and Spa, Tirupati",
+      "snippet": "Location ... A rooftop terrace, a garden, and dry cleaning/laundry services are just a few of the amenities provided at Lake Valley Resort and Spa, Tirupati . Read more",
+      "host": "www.expedia.com",
+      "kind": null
+    },
+    {
+      "url": "https://en.planetofhotels.com/india/tirupati/lake-valley-resort-and-spa-tirupati",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona",
+      "snippet": "Book Lake Valley Resort and Spa Tirupati , 27 kms from Talakona Waterfall (4-star), India. Read reviews and choose a room with planetofhotels.com.",
+      "host": "en.planetofhotels.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 kms from",
+      "snippet": "Located in Tirupati , Lake Valley Resort and Spa Tirupati , 27 kms from Talakona Waterfall features a garden.",
+      "host": "www.booking.com",
+      "kind": "booking"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g27437589-d34526183-Reviews-Lake_Valley_Resort_and_Spa_Tirupati-Chittecherla_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Lake Valley Resort and Spa, Tirupati - Chittecherla",
+      "snippet": "Lake Valley Resort and Spa, Tirupati ... Location . Chittecherla 517194 India. Getting there. Tirupati Airport 25 mi. Cuddapah Airport 66 mi ... LOCATION . India ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.hotels.com/ho3088480960/lake-valley-resort-and-spa-vayalipad-india",
+      "name": "Lake Valley Resort and Spa, Tirupati , Chinnagottigallu",
+      "snippet": "Lake Valley Resort and Spa, Tirupati is located on the boardwalk/promenade. Popular attractions include Srivari Mettu Temple, which is 24 minutes away by car. Read more",
+      "host": "www.hotels.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Lake Valley Resort and Spa Tirupati :: Lake Valley Resort and Spa Tirupati is situated at - 1-1 Bhakarapata, tirupati road, chinnagottiigallu mandal 517194, Tirupati , India, - 1-1 Bhakarapata, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

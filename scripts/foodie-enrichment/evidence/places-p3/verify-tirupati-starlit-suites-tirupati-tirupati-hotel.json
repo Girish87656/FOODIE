@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel",
+    "area": "tirupati",
+    "sourceUrl": "https://www.makemytrip.com/hotels/starlit_suites_tirupati-details-tirupati.html"
+  },
+  "query": "\"Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.makemytrip.com/hotels/starlit_suites_tirupati-details-tirupati.html",
+      "name": "Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel",
+      "snippet": "Location is good and near to RTC. Can be maintained more than what was present. Read All Reviews. Property Rules at Starlit Suites Tirupati . Read more",
+      "host": "www.makemytrip.com",
+      "kind": "makemytrip"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel :: Location is good and near to RTC. Can be maintained more than what was present. Read All Reviews. Property Rules at Starlit Suites Tirupati . Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

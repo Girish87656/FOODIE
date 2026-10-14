@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "THE 10 BEST Family Restaurants in Tirupati (UPDATED",
+    "area": "tirupati",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurants-g297587-zfp5-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"THE 10 BEST Family Restaurants in Tirupati (UPDATED\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-zfp5-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Family Restaurants in Tirupati (UPDATED",
+      "snippet": "1. Vyom, Ekante' Bliss, Tirupati - Ihcl Seleqtions. 4.5. 4.5 of 5 bubbles · 2. Zodiac. 4.5. 4.5 of 5 bubbles · 3. Rainbow - Pure Vegitarian - ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": "tripadvisor"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

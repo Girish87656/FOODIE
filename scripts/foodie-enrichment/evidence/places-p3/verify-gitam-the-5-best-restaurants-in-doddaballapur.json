@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "THE 5 BEST Restaurants in Doddaballapur",
+    "area": "gitam",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurants-g1675597-Doddaballapur_Bangalore_Rural_District_Karnataka.html"
+  },
+  "query": "\"THE 5 BEST Restaurants in Doddaballapur\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g1675597-Doddaballapur_Bangalore_Rural_District_Karnataka.html",
+      "name": "THE 5 BEST Restaurants in Doddaballapur",
+      "snippet": "THE 5 BEST Restaurants in Doddaballapur. AsiaIndiaKarnatakaBangalore Rural DistrictDoddaballapurDoddaballapur Restaurants. Doddaballapur. Doddaballapur Tourism ...",
+      "host": "www.tripadvisor.com",
+      "kind": "tripadvisor"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

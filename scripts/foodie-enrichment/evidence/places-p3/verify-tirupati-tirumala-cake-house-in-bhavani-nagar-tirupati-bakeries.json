@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries",
+    "area": "tirupati",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Cake-House-Opposite-Mahathi-Imaging-Diagnostics-Bhavani-Nagar/9999PX877-X877-240624122548-K3R9_BZDET"
+  },
+  "query": "\"Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-14"
+}

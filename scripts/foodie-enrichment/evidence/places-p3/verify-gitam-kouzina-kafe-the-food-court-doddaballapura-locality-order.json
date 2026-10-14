@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+    "area": "gitam",
+    "sourceUrl": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality"
+  },
+  "query": "\"Kouzina Kafe - The Food Court, Doddaballapura Locality order\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality",
+      "snippet": "Kouzina Kafe - The Food Court ; Chicken Popcorn Loaded Fries. ₹349 ; Cheese Blast Burger. ₹229 ; Crispy Chicken Burger. ₹139 ; Fiery Chicken Burger. ₹299.",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+      "snippet": "ऑर्डर फूड ऑनलाइन से Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura > और zomato पर शानदार ऑफर और ...",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/tr/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+      "snippet": "Check out Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura on Zomato for great deals, ratings, reviews and more!",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

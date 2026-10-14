@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "name": "Tamil Restaurants in Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.zomato.com/tirupati/restaurants/tamil"
+  },
+  "query": "\"Tamil Restaurants in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/restaurants/tamil",
+      "name": "Tamil Restaurants in Tirupati",
+      "snippet": "Tamil Restaurants in Tirupati · Madras Tiffin Centre · Midhunam Pure Veg Restaurant · Amma Chethi Vanta or Cloud Kitchen · Raghvendra Kitchen · Curry Home By Shero.",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tamil-Restaurants/nct-10470650",
+      "name": "Best Tamil Restaurants in Tirupati - Order Food Online",
+      "snippet": "Best Tamil Restaurants in Tirupati - Order Food Online · Yaa Mohaideen Biryani · Sundari Akka Kadai (Best Fish Lunch) · Madras Machan's · Astoria Veg · Kovai Alankar ...",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tamil-Restaurants/nct-10470650/page-2",
+      "name": "Tamil Restaurants in Tirupati - Page 2",
+      "snippet": "Tamil Restaurants in Tirupati - Page 2 · Sri Kitchen · Madurai Parotta House · Budget Saapadu · Madras Meal Company · Curry Hub · Murukku Meesai Mess · VV Biryanis.",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tamil-Restaurants/nct-10470650/page-3",
+      "name": "Tamil Restaurants in Tirupati - Page 3",
+      "snippet": "Tamil Restaurants in Tirupati - Page 3 ; Sri Restaurant · 397 Ratings. Ranipet,Arakkonam. Upto ₹ 500. Opens at 12:45 PM. Very nice and delicious food with ...",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

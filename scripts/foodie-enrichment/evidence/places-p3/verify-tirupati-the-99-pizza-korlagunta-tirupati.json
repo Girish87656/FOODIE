@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "The 99 Pizza, Korlagunta, Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49?srsltid=AU7gw4V9GvJ4EEemtEujoLR6VYlB-HMQvpN9Z2B70KEF9f7EOSqLIMSR"
+  },
+  "query": "\"The 99 Pizza, Korlagunta, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49?srsltid=AU7gw4Wmg-SwGiCo6j4ilIhPSxhqeKQ6q0JBFAdfun5FHJaW7j7Hsvko",
+      "name": "The 99 Pizza, Korlagunta, Tirupati",
+      "snippet": "... road Abbanna Colony, Tirupathi - 517501,ANDHRA PRADESH, Korlagunta, Tirupati ... The 99 Pizza, Korlagunta, Tirupati The 99 Pizza ReviewsThe 99 Pizza Customer ... Read more",
+      "host": "magicpin.in",
+      "kind": "magicpin"
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49/vouchers?srsltid=AU7gw4UbDtU39BpeTusDbRsNvXjn7jHllOt0x9jFY7XxOH58uIL8jJpZ",
+      "name": "The 99 Pizza, Korlagunta, Tirupati",
+      "snippet": "... The 99 Pizza, Korlagunta, Tirupati The 99 Pizza ReviewsThe 99 Pizza Customer ... Registered Office Address : Plot No.379 & 380, Sector - 29, Near IFFCO ... Read more",
+      "host": "magicpin.in",
+      "kind": "magicpin"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "The 99 Pizza, Korlagunta, Tirupati :: ... road Abbanna Colony, Tirupathi - 517501,ANDHRA PRADESH, Korlagunta, Tirupati ... The 99 Pizza, Korlagunta, Tirupati The 99 Pizza ReviewsThe 99 Pizza Customer ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

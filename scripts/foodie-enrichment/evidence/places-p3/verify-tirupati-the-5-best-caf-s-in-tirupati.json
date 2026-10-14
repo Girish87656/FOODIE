@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "THE 5 BEST Cafés in Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurants-g297587-c8-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"THE 5 BEST Cafés in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-c8-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 5 BEST Cafés in Tirupati (Updated 2026)",
+      "snippet": "1. Cake Room · (4 reviews). Cafe ; 2. Hot Spot Restaurants · (2 reviews). Italian, American ; 3. 7th Heaven · (1 review). Cafe ; 4. Gurunanak ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": "tripadvisor"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

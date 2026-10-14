@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "THE 10 BEST Restaurants in Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurants-g297587-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"THE 10 BEST Restaurants in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Restaurants in Tirupati",
+      "snippet": "Idli Factory · Dojin Smart Restuarant · Papa Johns Pizza Restaurant. THE 10 BEST Restaurants in Tirupati. Asia ...",
+      "host": "www.tripadvisor.com",
+      "kind": "tripadvisor"
+    },
+    {
+      "url": "https://www.treebo.com/blog/top-10-restaurants-in-tirupati",
+      "name": "The 10 Best Restaurants in Tirupati: From Fine Dining to",
+      "snippet": "The 10 Best Restaurants in Tirupati: From Fine Dining to Casual Eats · 1. Woodside Restaurant and Rooms · 2. Vrinda Restaurant · 3. Di Table 9 ...",
+      "host": "www.treebo.com",
+      "kind": "treebo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JwBEGAd8MFk",
+      "name": "Best Veg Restaurant in Tirupati || #tirupati #food",
+      "snippet": "... tirupati,best restaurants in tirupati,restaurants in tirupati ... the 10 best restaurants in tirupati,vegetarian hotel in tirupati,veg ...",
+      "host": "www.youtube.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=aS1SacXPRRc",
+      "name": "PS4 Special Meals | Best Vegetarian Hotel | Foodie Addict",
+      "snippet": "... tirupati The 10 best restaurants in tirupati Best restaurants to visit in ... tirupati Aadhan food Aadhan food and travel Satya food videos ...",
+      "host": "www.youtube.com",
+      "kind": null
+    },
+    {
+      "url": "https://wanderlog.com/list/geoCategory/1799145/best-places-for-pasta-in-tirupati",
+      "name": "The 10 best places for pasta in Tirupati",
+      "snippet": "Treebo Blog: The 10 Best Restaurants in Tirupati: From Fine Dining to Casual Eats. Indulge in the restaurant's reasonably priced, flavorful Indian food, for ...",
+      "host": "wanderlog.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.youtube.com/shorts/SAQM2IQgLA4",
+      "name": "#Tirupathi Best Restaurant #restaurantfind #hiddengems",
+      "snippet": "... tirupati,best vegetarian hotel in tirupati,the 10 best restaurants in tirupati,best restaurant in tirupati,food.",
+      "host": "www.youtube.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

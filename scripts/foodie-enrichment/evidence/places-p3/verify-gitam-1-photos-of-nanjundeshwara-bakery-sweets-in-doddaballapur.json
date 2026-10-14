@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "1 Photos of Nanjundeshwara Bakery & Sweets in Doddaballapur",
+    "area": "gitam",
+    "sourceUrl": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET/photos"
+  },
+  "query": "\"1 Photos of Nanjundeshwara Bakery & Sweets in Doddaballapur\" Doddaballapura address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"1 Photos of Nanjundeshwara Bakery \\u0026 Sweets in Doddaballapur\\\\\\\" Doddaballapura address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"1 Photos of Nanjundeshwara Bakery \\u0026 Sweets in Doddaballapur\\\\\\\" Doddaballapura address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-14"
+}

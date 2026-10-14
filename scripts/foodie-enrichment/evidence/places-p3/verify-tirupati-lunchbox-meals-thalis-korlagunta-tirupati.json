@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Lunchbox - Meals & Thalis, Korlagunta, Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Lunchbox-Meals-and-Thalis/store/56a6b1/vouchers?srsltid=AU7gw4UPZii9EsRY7yHSEjaCfCabuY-VeIBHzfVlLeib9SIHA7rh0SHV"
+  },
+  "query": "\"Lunchbox - Meals & Thalis, Korlagunta, Tirupati\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Lunchbox - Meals \\u0026 Thalis, Korlagunta, Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Lunchbox - Meals \\u0026 Thalis, Korlagunta, Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-14"
+}

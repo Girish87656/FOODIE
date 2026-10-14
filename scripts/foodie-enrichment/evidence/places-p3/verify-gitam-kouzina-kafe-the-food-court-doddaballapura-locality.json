@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality",
+    "area": "gitam",
+    "sourceUrl": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order"
+  },
+  "query": "\"Kouzina Kafe - The Food Court, Doddaballapura Locality\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality",
+      "snippet": "Check out Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura on Zomato for great deals, ratings, reviews and more!",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews?amp=1",
+      "name": "Reviews of Kouzina Kafe - The Food Court, Doddaballapura",
+      "snippet": "Reviews of Kouzina Kafe - The Food Court Doddaballapura Locality; see all ... Shake. 7, Khatha 4464/11/1A, 4465/11/1A, 4466/11/1A, 3rd Ward, Rojipura, ...",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+      "snippet": "ऑर्डर फूड ऑनलाइन से Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura > और zomato पर शानदार ऑफर और ...",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

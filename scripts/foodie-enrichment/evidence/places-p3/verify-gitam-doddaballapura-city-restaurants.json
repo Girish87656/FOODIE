@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Doddaballapura City restaurants",
+    "area": "gitam",
+    "sourceUrl": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants"
+  },
+  "query": "\"Doddaballapura City restaurants\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants",
+      "name": "Doddaballapura City restaurants",
+      "snippet": "Doddaballapura City Restaurants · Lotus Gardenia · WarmOven Cake & Desserts · The Brothers Adda · House Full · Chickpet Donne Biryani House · Sri Vinayaka Food Point. Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants/south-indian",
+      "name": "Doddaballapura City Restaurants",
+      "snippet": "Doddaballapura City Restaurants · Durgashree Samruddhi Garden · Shri Manjunatha Grand Veg · Sri Nandi Utsav · Home Food The Cloud Kitchen · Davanagere Benne Dose ...",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants/rolls",
+      "name": "Doddaballapura City Restaurants",
+      "snippet": "Doddaballapura City Restaurants · Appu Rolls · House Full · Kouzina Kafe - The Food Court · Kolkata Famous Kati Roll · The Hungry Adda Restaurant · Kitchen 30 · Home ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/doddaballapura/homes-kitchen-doddaballapura-locality/order",
+      "name": "Home's Kitchen, Doddaballapura Locality order online",
+      "snippet": "... Doddaballapura City restaurants , in Doddaballapura , near me, in Doddaballapura City, in Doddaballapura Locality, in Doddaballapura , near me, in Doddaballapura ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/bangalore/u-turn-paradise-yelahanka?amp=1",
+      "name": "U Turn Paradise, Doddaballapura Locality order online",
+      "snippet": "... Doddaballapura City restaurants , Casual Dining in Doddaballapura , Casual Dining near me, Casual Dining in Doddaballapura City, Casual Dining in Doddaballapura ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants/bakeries",
+      "name": "Doddaballapura City Restaurants",
+      "snippet": "Doddaballapura City Restaurants · Rajashree Veg And Non-Veg Family Restaurant · WarmOven Cake & Desserts · VRB HOTEL FAMILY RESTAURANT · Chickpet Donne Biryani ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Home's Kitchen, Doddaballapura Locality order online :: ... Doddaballapura City restaurants , in Doddaballapura , near me, in Doddaballapura City, in Doddaballapura Locality, in Doddaballapura , near me, in Doddaballapura ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

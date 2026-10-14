@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tirupati Restaurants",
+    "area": "tirupati",
+    "sourceUrl": "https://www.zomato.com/tirupati/order-food-online"
+  },
+  "query": "\"Tirupati Restaurants\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Restaurants in Tirupati",
+      "snippet": "Best Dining in Tirupati , Chittoor District: See 1796 Tripadvisor traveler reviews of 125 Tirupati restaurants and search by cuisine, price, location, ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/restaurants",
+      "name": "Restaurants in Tirupati",
+      "snippet": "Tirupati Restaurants · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Di Table 9 · Kakinada Subbbayya Gari Hotel · Leo 9 Biryani House · Hotel Bhimas · Bhimas ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants/nct-10408936",
+      "name": "Restaurants in Tirupati - Best Restaurants near me",
+      "snippet": "... 2255 Restaurants in Tirupati . Get Menu, Photos, Prices, Cuisines, Phone Numbers, Address , Reviews, Ratings for Top Tirupati Restaurants Nearby on Justdial.",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    },
+    {
+      "url": "https://www.tajhotels.com/en-in/hotels/taj-tirupati/restaurants",
+      "name": "Best Restaurants in Tirupati",
+      "snippet": "Home/ hotels/ taj tirupati/ Restaurants . share-image. SHARE. Restaurants at. Taj ... Enter your email Address . SUBSCRIBE. FOR BOOKINGS CONTACT. 1-800-111-825 ... Read more",
+      "host": "www.tajhotels.com",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.eazydiner.com/tirupati/restaurants",
+      "name": "Checkout Best Restaurants in Tirupati | Get Upto 50% Off",
+      "snippet": "List of the exclusive restaurants in Tirupati , Vivaha Bhojanambu Ashok Nagar, Tirupati , Restaurant Tata Nagar, Tirupati Mandi, Tirupati Maurya Ramee Guestline ...",
+      "host": "www.eazydiner.com",
+      "kind": "eazydiner"
+    },
+    {
+      "url": "https://www.paihotels.com/viceroy-tirupati/restaurants/restaurants.html",
+      "name": "Restaurants | Hotel Pai Viceroy, Tirupati",
+      "snippet": "Home > Hotel Pai Viceroy, Tirupati > Restaurants > Restaurants. Restaurants at Hotel Pai Viceroy, Tirupati . DINE AMIDST DIVINITY IN TIRUPATI . At Hotel Pai ... Read more",
+      "host": "www.paihotels.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Restaurants in Tirupati - Best Restaurants near me :: ... 2255 Restaurants in Tirupati . Get Menu, Photos, Prices, Cuisines, Phone Numbers, Address , Reviews, Ratings for Top Tirupati Restaurants Nearby on Justdial.",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "name": "Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel",
+    "area": "tirupati",
+    "sourceUrl": "https://www.makemytrip.com/hotels/tirupati_lodge_pvt_ltd-details-siliguri.html"
+  },
+  "query": "\"Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.makemytrip.com/hotels/tirupati_lodge_pvt_ltd-details-siliguri.html",
+      "name": "Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel",
+      "snippet": "Tirupati Lodge pvt ltd is situated at Ramnagar colony, Near NJP Station, Siliguri 2 MINUTES WALKING FROM NJP STATION, offering convenient access to 255 in ...",
+      "host": "www.makemytrip.com",
+      "kind": "makemytrip"
+    },
+    {
+      "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6g8QChgPEgcI6g8QChgQGAEyAhAAKgkKBToDTlBSGgA&rp=OAFIAsICHCIaDQAAhEQSEwjXqdCKp6mXAxVruVoFHRNnLKM&ap=MAA&ei=8_POasz_DaSI5LcPubymmAs&ved=2ahUKEwiMxYjPxbiXAxUkBPkAHTmeCbMQkdkIegQIBBBw",
+      "name": "Tirupati Lodge - Google hotels",
+      "snippet": "Tirupati Lodge pvt ltd BOOK Siliguri Hotel . Close to Siliguri Junction Railway Station, this incredible property offers well-appointed rooms, a lavish ... Read more",
+      "host": "www.google.com.np",
+      "kind": null
+    },
+    {
+      "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&un=1&g2lb=4207876%2C4208993%2C4220293%2C4223281%2C4242898%2C4245928%2C4251619%2C4253230%2C4254308%2C4256748%2C4258168%2C4250437%2C4251518%2C4253015&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESCgoCCAMKAggDEAAaUwo1EjEyJTB4MzllNDQxMTRmNTQ0MWRjZDoweGRlYjVjNDcwMjA2M2VkZmY6CFNpbGlndXJpGgASGhIUCgcI6g8QAhgCEgcI6g8QAhgDGAEyAhAAKgkKBToDTlBSGgA&rp=OAFIAg&ap=MACIAQI&ei=cq1jYquNKofllsYPy7ukmA4&ved=2ahUKEwjfiI-v4bOSAxVmjhcHHcs0BegQkdkIegQIBBBs",
+      "name": "Tirupati Lodge - Google hotels",
+      "snippet": "Tirupati Lodge pvt ltd BOOK Siliguri Hotel . Close to Siliguri Junction Railway Station, this incredible property offers well-appointed rooms, a lavish ...",
+      "host": "www.google.com.np",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel :: Tirupati Lodge pvt ltd is situated at Ramnagar colony, Near NJP Station, Siliguri 2 MINUTES WALKING FROM NJP STATION, offering convenient access to 255 in ...",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

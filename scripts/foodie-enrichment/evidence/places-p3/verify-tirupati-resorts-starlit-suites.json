@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Resorts - Starlit Suites",
+    "area": "tirupati",
+    "sourceUrl": "https://prospectcicd.clubmahindra.com/our-resorts/starlit-suites"
+  },
+  "query": "\"Resorts - Starlit Suites\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.clubmahindra.com/our-resorts/starlit-suites",
+      "name": "Starlit Suites Resorts in Tirupati, Andhra Pradesh",
+      "snippet": "Equipped with spacious suites, a rooftop pool, cafe, restaurant and fitness centre, this Club Mahindra associate property offers unmatched hospitality and ...",
+      "host": "www.clubmahindra.com",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotels-g297585-c2-Andhra_Pradesh-Hotels.html",
+      "name": "THE 10 BEST Andhra Pradesh Bed and Breakfasts 2026",
+      "snippet": "Tirupati · Krishna District · Vijayawada · East Godavari District ... ResortsStarlit Suites Tirupati Hotel SK'sHotel Mookambika Comforts ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/Hotel_Review-g2237481-d27799285-Reviews-Tara_Resort_Nakae_Renu-Renu_Nakhon_Nakhon_Phanom_Province.html",
+      "name": "TARA RESORT NAKAE RENU (Renu Nakhon) - Hotel",
+      "snippet": "Name/ address in local language. Reviews. Tips/Q&A All reviews. Write a ... ResortsStarlit Suites Tirupati Hukam's Lalit MahalHotel SapphireSuvarna Eco ...",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com.tw/Hotels-g293860-oa30-zfc3-India-Hotels.html",
+      "name": "印度10 家最佳3 星級飯店",
+      "snippet": "Starlit Suites Tirupati . 4.6. 4.6 分(共5 分). (222). 印度3 星級飯店物超所值 ... ResortsStarlit Suites Tirupati Hilton Garden Inn LucknowVITS Kamats Resort ...",
+      "host": "www.tripadvisor.com.tw",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/HotelsNear-g1435712-d6560965-zff8-Santuario_De_La_Virgen_De_La_Hoz-Corduente_Province_of_Guadalajara_Castile_La_Mancha.html",
+      "name": "THE 10 BEST Resorts near Santuario De La Virgen De La Hoz",
+      "snippet": "... ResortsStarlit Suites Tirupati Trident, Agra. Popular Hotel Categories. Popular HostelsPopular Singles ResortsPopular Boutique Hotels ...",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/Hotel_Feature-g56003-d12339696-zft1-Le_Meridien_Houston_Downtown.html",
+      "name": "Le Méridien Houston Downtown Rooms: Pictures & Reviews",
+      "snippet": "The location is just perfect too,within walking distance of everything ... ResortsStarlit Suites Tirupati Regenta Central SrinagarKichu ResortLake Song ...",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "THE 10 BEST Resorts near Santuario De La Virgen De La Hoz :: ... ResortsStarlit Suites Tirupati Trident, Agra. Popular Hotel Categories. Popular HostelsPopular Singles ResortsPopular Boutique Hotels ...",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Holiday Inn Tirupati Tirumala",
+    "area": "tirupati",
+    "sourceUrl": "https://www.agoda.com/en-ca/holiday-inn-tirupati-tirumala-h24856194/hotel/tirupati-in.html"
+  },
+  "query": "\"Holiday Inn Tirupati Tirumala\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail",
+      "name": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts",
+      "snippet": "Near Tirupati International Airport, Sri Kalahasti Road, Renigunta, Tirupati Tirupati ... Holiday Inn Tirupati Tirumala is conveniently located near Tirupati ... Read more",
+      "host": "www.ihg.com",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail/amenities",
+      "name": "Holiday Inn Tirupati Tirumala AMENITIES - IHG Hotels & Resorts",
+      "snippet": "Holiday Inn Tirupati Tirumala offers Free Internet & restaurants and bars on-site. Kids stay and eat free at Holiday Inn Tirupati Tirumala .",
+      "host": "www.ihg.com",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g297587-d10687678-Reviews-Holiday_Inn_Tirupati_Tirumala-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "HOLIDAY INN TIRUPATI TIRUMALA - Updated 2026",
+      "snippet": "HOLIDAY INN TIRUPATI TIRUMALA - Updated 2026. AsiaIndiaAndhra PradeshChittoor District TirupatiTirupati Hotels Holiday Inn Tirupati Tirumala . Tirupati . Tirupati ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.businesstravelnews.com/Hotels/Tirupati-India/Holiday-Inn-Tirupati-Tirumala-p59318780",
+      "name": "Holiday Inn Tirupati Tirumala - Hotels",
+      "snippet": "Holiday Inn Tirupati Tirumala · Year Built: 2016 · Check in Time: 2:00 PM · Check out Time: 12:00 PM · Chain: Holiday Inn Hotels · Chain Website: www.holidayinn.com/. Read more",
+      "host": "www.businesstravelnews.com",
+      "kind": null
+    },
+    {
+      "url": "https://amimagazine.global/Meeting-Event-Venues/Tirupati-India/Convention-Hotel/Holiday-Inn-Tirupati-Tirumala-p58059970",
+      "name": "Holiday Inn Tirupati Tirumala - Tirupati, India",
+      "snippet": "Holiday Inn Tirupati Tirumala - Tirupati , India ; Key Facts. Address : Near Tirupati International Airport Tirupati , India 517520; Phone: 91 877-227-5155 ... Read more",
+      "host": "amimagazine.global",
+      "kind": null
+    },
+    {
+      "url": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail/local-guide-whats-nearby",
+      "name": "Things to do in Tirupati near Holiday Inn Tirupati Tirumala",
+      "snippet": "View attractions and local restaurants near Holiday Inn Tirupati Tirumala in Tirupati .",
+      "host": "www.ihg.com",
+      "kind": "official"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts :: Near Tirupati International Airport, Sri Kalahasti Road, Renigunta, Tirupati Tirupati ... Holiday Inn Tirupati Tirumala is conveniently located near Tirupati ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

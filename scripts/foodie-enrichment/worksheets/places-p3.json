@@ -1,0 +1,1917 @@
+{
+  "summary": {
+    "retrievedOn": "2026-10-14",
+    "total": 35,
+    "byArea": {
+      "tirupati": 25,
+      "gitam": 10
+    },
+    "byCategory": {
+      "hotel": 11,
+      "bakery_sweets": 3,
+      "restaurant": 21
+    },
+    "areaConfirmed": 29,
+    "geocoded": 0,
+    "note": "rows are candidates with recorded evidence; only area-confirmed rows with reviewed identity enter a generated SQL batch, after explicit human approval"
+  },
+  "rows": [
+    {
+      "area": "tirupati",
+      "name": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts",
+      "category": "hotel",
+      "tags": [
+        "resort"
+      ],
+      "sourceUrl": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail",
+      "sourceKind": "official",
+      "evidenceUrl": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChkIuMbu8t2S7bJ-Gg0vZy8xMWc2d3lweHB6EAE?hl=en&gl=np&un=1&g2lb=4207876%2C4208993%2C4220293%2C4223281%2C4242898%2C4245928%2C4251619%2C4253230%2C4254308%2C4256748%2C4258168%2C4250437%2C4251518%2C4253015&gsas=1&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaBAoCGgAqBAoAGgA&sa=X&rp=OAFIAg&ap=MAE&ei=LDpoadOpJK-u3ugPkNev2QI&ved=2ahUKEwiM19ze3tySAxU1K_kAHbOMHlsQkdkIegUIBBDWAQ",
+            "name": "Hotel TIRUPATI HOLIDAY INN - Google hotels",
+            "snippet": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts . Conveniently located on National Highway 205 at Renigunta Junction in a temple town of Tirupati ...",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChkIuMbu8t2S7bJ-Gg0vZy8xMWc2d3lweHB6EAE?*=/entity/ChkIocnqmO7x3u2BARoML2cvMXB0dzRtbTIyEAE&g2lb=4207876,4208993,4223281,4242898,4248641,4251619,4253230,4250436,4253015&hl=en&gl=np&un=0&rp=OAFAAEgCwgIcIhoNACAtRRITCOrmm67ls5IDFWy_qwcdf_gTAQ&ictx=1&tcfs=EhoaGAoKMjAxOS0wNC0yMhIKMjAxOS0wNC0yM1IA&utm_campaign=sharing&utm_medium=link&utm_source=htls&sa=X&ts=CAESCgoCCAMKAggDEAAaVwo5EjUyJTB4MzllYjE5MDliZjk5Nzk1NzoweDY0NGZmNmU3MWFhOTA2MmY6DERpbGxpIEJhemFhchoAEhoSFAoHCOoPEAIYBBIHCOoPEAIYBRgBMgIQACoJCgU6A05QUhoA&ap=MAA&ei=m7EpYdm_C_KrlsYPubWuuAw&ei=sziDafTQMJyz5LcPmf-LuAU&ved=2ahUKEwi09tW_6L-SAxWcGfkAHZn_AlcQkdkIegUIBBDIAQ",
+            "name": "Hotel TIRUPATI HOLIDAY INN - Google",
+            "snippet": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts . Conveniently located on National Highway 205 at Renigunta Junction in a temple town of Tirupati ... Read more",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChkIuMbu8t2S7bJ-Gg0vZy8xMWc2d3lweHB6EAE?hl=en&gl=np&un=1&g2lb=4207876,4208993,4220293,4223281,4242898,4245928,4251619,4253230,4254308,4256748,4258168,4250437,4251518,4253015&gsas=1&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESABpRCjMSMTIlMHgzOWViMTkwZjRhMGI0OTA5OjB4YjY0M2M4MzMxOTExMjMyODoISGF0dGlzYXISGhIUCgcI5Q8QBBgTEgcI5Q8QBBgUGAEyAhAAKg8KCygBSgIgAToDTlBSGgA&sa=X&rp=SAI&ap=MAA&ei=52_iYvSnBpWi3AGQ2JLwBQ&ei=ipanabiNLdqy5LcPouvooAg&ei=G2WoaeX-HdSD6OEPp_zagAw&ved=2ahUKEwil-JqG3IaTAxXUAToGHSe-FsAQkdkIegUIBBDCAQ",
+            "name": "Hotel TIRUPATI HOLIDAY INN - Google hotels",
+            "snippet": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts . Conveniently located on National Highway 205 at Renigunta Junction in a temple town of Tirupati , On ...",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChkIuMbu8t2S7bJ-Gg0vZy8xMWc2d3lweHB6EAE?hl=en&gl=np&un=1&g2lb=4207876%2C4208993%2C4220293%2C4223281%2C4242898%2C4245928%2C4251619%2C4253230%2C4254308%2C4256748%2C4258168%2C4250437%2C4251518%2C4253015&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaBAoCGgAqBAoAGgA&rp=OAFIAg&ap=MACIAQI&ei=FhB-aYn0IsTz8LAP4_WyoAc&ved=2ahUKEwjdm86WnsCSAxU-CvkAHQnrJP0QkdkIegUIBBDIAQ",
+            "name": "Hotel TIRUPATI HOLIDAY INN - Google",
+            "snippet": "Hotel TIRUPATI HOLIDAY INN. 3.1. (96)·3-star hotel. Call ... Web results. https://www.ihg.com. Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts . Read more",
+            "host": "www.google.com.np",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from official listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 kms from",
+      "category": "hotel",
+      "tags": [
+        "resort"
+      ],
+      "sourceUrl": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html",
+      "sourceKind": "booking",
+      "evidenceUrl": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Lake Valley Resort and Spa Tirupati, 27 Kms from :: Lake Valley Resort and Spa Tirupati, 27 Kms from Talakona Waterfall. Tirupati Road Opposite HP Petrol Pump Bhakarapeta, Chittoor District, Andhra Pradesh, ... Read more",
+        "hits": [
+          {
+            "url": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 kms from",
+            "snippet": "Located in Tirupati , Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall features a garden.",
+            "host": "www.booking.com",
+            "kind": "booking"
+          },
+          {
+            "url": "https://en.planetofhotels.com/india/tirupati/lake-valley-resort-and-spa-tirupati",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona",
+            "snippet": "Book Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall (4-star), India. Read reviews and choose a room with planetofhotels.com.",
+            "host": "en.planetofhotels.com",
+            "kind": null
+          },
+          {
+            "url": "https://us.trip.com/hotels/chittoor-hotel-detail-111550610/lake-valley-resort-and-spa-tirupati-27-kms-from-talakona-waterfall",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 Kms from",
+            "snippet": "Lake Valley Resort and Spa Tirupati, 27 Kms from Talakona Waterfall. Tirupati Road Opposite HP Petrol Pump Bhakarapeta, Chittoor District, Andhra Pradesh, ... Read more",
+            "host": "us.trip.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.agoda.com/lake-valley-resort-and-spa-tirupati/hotel/tirupati-in.html",
+            "name": "Best Price on Lake Valley Resort and Spa Tirupati, 27 kms",
+            "snippet": "Lobby, Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall in Tirupati ... 6.7. Location rating, 7.5. Image of Suite with Balcony 0; Image of ... Read more",
+            "host": "www.agoda.com",
+            "kind": "agoda"
+          },
+          {
+            "url": "https://www.skyscanner.qa/hotels/india/tirupati-hotels/lake-valley-resort-and-spa-tirupati%2C-27-kms-from-talakona-waterfall/ht-216657870",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 Kms From Talakona",
+            "snippet": "Located in Tirupati , 43 km from Renigunta Junction, Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall provides accommodation with a garden ... Read more",
+            "host": "www.skyscanner.qa",
+            "kind": null
+          },
+          {
+            "url": "https://www.vacationrenter.com/en-au/p/401034711",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona",
+            "snippet": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall · Resort in Andhra Pradesh · About this resort · Amenities · Map of Andhra Pradesh · Available ...",
+            "host": "www.vacationrenter.com",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from booking listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Starlit Suites Resorts in Tirupati, Andhra Pradesh",
+      "category": "hotel",
+      "tags": [
+        "resort"
+      ],
+      "sourceUrl": "https://www.clubmahindra.com/our-resorts/starlit-suites",
+      "sourceKind": "official",
+      "evidenceUrl": "https://www.clubmahindra.com/our-resorts/starlit-suites",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.clubmahindra.com/our-resorts/starlit-suites",
+            "name": "Starlit Suites Resorts in Tirupati, Andhra Pradesh",
+            "snippet": "Equipped with spacious suites, a rooftop pool, cafe, restaurant and fitness centre, 24 Hours Front Desk",
+            "host": "www.clubmahindra.com",
+            "kind": "official"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from official listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Bakery Restaurants in Tirupati",
+      "category": "bakery_sweets",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/tirupati/restaurants/bakery",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/tirupati/restaurants/bakery",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Best Bakery Restaurants Near You in Tirupati, Tirupati :: Best Bakery Restaurants Near You in Tirupati , Tirupati Look for Best Bakery Restaurants in Tirupati ; Baskin Robbins ; Just Bake ; Manasa Cakewala · Cuisines:.",
+        "hits": [
+          {
+            "url": "https://www.zomato.com/tirupati/restaurants/bakery",
+            "name": "Bakery Restaurants in Tirupati",
+            "snippet": "Bakery Restaurants in Tirupati · Ovenfresh Cakes & Desserts · Kakinada Subbbayya Gari Hotel · The Dessert Heaven - Pastry, Brownie and Cakes · FB Cakes · Hotel Orion. Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.swiggy.com/city/tirupati/bakery-dish-restaurants",
+            "name": "Best Bakery Restaurants In Tirupati 2026 | Order Online",
+            "snippet": "Explore The Best Bakery Restaurants In Tirupati . View Menus, Photos, Ratings, Reviews Or Order Online And Enjoy Mouth-watering Bakery.",
+            "host": "www.swiggy.com",
+            "kind": null
+          },
+          {
+            "url": "https://magicpin.in/india/Tirupati/Tirupati/Restaurant/Bakery/?srsltid=AU7gw4XcKpOw09aVmdluzyhdxUc0JMLMct64wO0pzQ2Cfg0BDCRD9KN-",
+            "name": "Best Bakery Restaurants Near You in Tirupati, Tirupati",
+            "snippet": "Best Bakery Restaurants Near You in Tirupati , Tirupati Look for Best Bakery Restaurants in Tirupati ; Baskin Robbins ; Just Bake ; Manasa Cakewala · Cuisines:.",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          },
+          {
+            "url": "https://www.zomato.com/tirupati/tirumala-bakery-srinivasa-nagar/reviews",
+            "name": "Reviews of Tirumala Bakery, Srinivasa Nagar, Tirupati",
+            "snippet": "... Tirupati City restaurants, Bakery Restaurants in Tirupati , Bakery near me, Bakery Restaurants in Srinivasa Nagar, Order food online in Srinivasa Nagar ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/tirupati/dolcericco-by-ve-kitchen-korlagunta/order",
+            "name": "Dolcericco By Ve Kitchen, Korlagunta order online",
+            "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Korlagunta restaurants, Best Korlagunta restaurants, Tirupati City restaurants, Bakery Restaurants in Tirupati ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://magicpin.in/india/Tirupati/Renigunta-Road/Restaurant/Bakery/?srsltid=AU7gw4XGfw-KFQNvb6ivA5ZSSKlBsQHgNUOjRsaBqVevKuSYEwED1Gi0",
+            "name": "Best Bakery Restaurants Near You in Renigunta Road, Tirupati",
+            "snippet": "Best Bakery Restaurants Near You in Renigunta Road, Tirupati Look for Best Bakery Restaurants in Tirupati · Joy Bakers · Mad4 · WarmOven Cake & Desserts · Kouzina ...",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Holiday Inn Tirupati Tirumala",
+      "category": "hotel",
+      "tags": [],
+      "sourceUrl": "https://www.agoda.com/en-ca/holiday-inn-tirupati-tirumala-h24856194/hotel/tirupati-in.html",
+      "sourceKind": "agoda",
+      "evidenceUrl": "https://www.agoda.com/en-ca/holiday-inn-tirupati-tirumala-h24856194/hotel/tirupati-in.html",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts :: Near Tirupati International Airport, Sri Kalahasti Road, Renigunta, Tirupati Tirupati ... Holiday Inn Tirupati Tirumala is conveniently located near Tirupati ... Read more",
+        "hits": [
+          {
+            "url": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail",
+            "name": "Holiday Inn Tirupati Tirumala - IHG Hotels & Resorts",
+            "snippet": "Near Tirupati International Airport, Sri Kalahasti Road, Renigunta, Tirupati Tirupati ... Holiday Inn Tirupati Tirumala is conveniently located near Tirupati ... Read more",
+            "host": "www.ihg.com",
+            "kind": "official"
+          },
+          {
+            "url": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail/amenities",
+            "name": "Holiday Inn Tirupati Tirumala AMENITIES - IHG Hotels & Resorts",
+            "snippet": "Holiday Inn Tirupati Tirumala offers Free Internet & restaurants and bars on-site. Kids stay and eat free at Holiday Inn Tirupati Tirumala .",
+            "host": "www.ihg.com",
+            "kind": "official"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Hotel_Review-g297587-d10687678-Reviews-Holiday_Inn_Tirupati_Tirumala-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+            "name": "HOLIDAY INN TIRUPATI TIRUMALA - Updated 2026",
+            "snippet": "HOLIDAY INN TIRUPATI TIRUMALA - Updated 2026. AsiaIndiaAndhra PradeshChittoor District TirupatiTirupati Hotels Holiday Inn Tirupati Tirumala . Tirupati . Tirupati ... Read more",
+            "host": "www.tripadvisor.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.businesstravelnews.com/Hotels/Tirupati-India/Holiday-Inn-Tirupati-Tirumala-p59318780",
+            "name": "Holiday Inn Tirupati Tirumala - Hotels",
+            "snippet": "Holiday Inn Tirupati Tirumala · Year Built: 2016 · Check in Time: 2:00 PM · Check out Time: 12:00 PM · Chain: Holiday Inn Hotels · Chain Website: www.holidayinn.com/. Read more",
+            "host": "www.businesstravelnews.com",
+            "kind": null
+          },
+          {
+            "url": "https://amimagazine.global/Meeting-Event-Venues/Tirupati-India/Convention-Hotel/Holiday-Inn-Tirupati-Tirumala-p58059970",
+            "name": "Holiday Inn Tirupati Tirumala - Tirupati, India",
+            "snippet": "Holiday Inn Tirupati Tirumala - Tirupati , India ; Key Facts. Address : Near Tirupati International Airport Tirupati , India 517520; Phone: 91 877-227-5155 ... Read more",
+            "host": "amimagazine.global",
+            "kind": null
+          },
+          {
+            "url": "https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail/local-guide-whats-nearby",
+            "name": "Things to do in Tirupati near Holiday Inn Tirupati Tirumala",
+            "snippet": "View attractions and local restaurants near Holiday Inn Tirupati Tirumala in Tirupati .",
+            "host": "www.ihg.com",
+            "kind": "official"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from agoda listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Lake Valley Resort and Spa Tirupati",
+      "category": "hotel",
+      "tags": [
+        "resort"
+      ],
+      "sourceUrl": "https://www.makemytrip.com/hotels/lake_valley_resort_and_spa_tirupati-details-tirupati.html",
+      "sourceKind": "makemytrip",
+      "evidenceUrl": "https://www.makemytrip.com/hotels/lake_valley_resort_and_spa_tirupati-details-tirupati.html",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Lake Valley Resort and Spa Tirupati :: Lake Valley Resort and Spa Tirupati is situated at - 1-1 Bhakarapata, tirupati road, chinnagottiigallu mandal 517194, Tirupati , India, - 1-1 Bhakarapata, ... Read more",
+        "hits": [
+          {
+            "url": "https://www.makemytrip.com/hotels/lake_valley_resort_and_spa_tirupati-details-tirupati.html",
+            "name": "Lake Valley Resort and Spa Tirupati",
+            "snippet": "Lake Valley Resort and Spa Tirupati is situated at - 1-1 Bhakarapata, tirupati road, chinnagottiigallu mandal 517194, Tirupati , India, - 1-1 Bhakarapata, ... Read more",
+            "host": "www.makemytrip.com",
+            "kind": "makemytrip"
+          },
+          {
+            "url": "https://www.expedia.com/Vayalipad-Hotels-Lake-Valley-Resort-And-Spa.h96483780.Hotel-Information",
+            "name": "Lake Valley Resort and Spa, Tirupati",
+            "snippet": "Location ... A rooftop terrace, a garden, and dry cleaning/laundry services are just a few of the amenities provided at Lake Valley Resort and Spa, Tirupati . Read more",
+            "host": "www.expedia.com",
+            "kind": null
+          },
+          {
+            "url": "https://en.planetofhotels.com/india/tirupati/lake-valley-resort-and-spa-tirupati",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona",
+            "snippet": "Book Lake Valley Resort and Spa Tirupati , 27 kms from Talakona Waterfall (4-star), India. Read reviews and choose a room with planetofhotels.com.",
+            "host": "en.planetofhotels.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html",
+            "name": "Lake Valley Resort and Spa Tirupati, 27 kms from",
+            "snippet": "Located in Tirupati , Lake Valley Resort and Spa Tirupati , 27 kms from Talakona Waterfall features a garden.",
+            "host": "www.booking.com",
+            "kind": "booking"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Hotel_Review-g27437589-d34526183-Reviews-Lake_Valley_Resort_and_Spa_Tirupati-Chittecherla_Chittoor_District_Andhra_Pradesh.html",
+            "name": "Lake Valley Resort and Spa, Tirupati - Chittecherla",
+            "snippet": "Lake Valley Resort and Spa, Tirupati ... Location . Chittecherla 517194 India. Getting there. Tirupati Airport 25 mi. Cuddapah Airport 66 mi ... LOCATION . India ...",
+            "host": "www.tripadvisor.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.hotels.com/ho3088480960/lake-valley-resort-and-spa-vayalipad-india",
+            "name": "Lake Valley Resort and Spa, Tirupati , Chinnagottigallu",
+            "snippet": "Lake Valley Resort and Spa, Tirupati is located on the boardwalk/promenade. Popular attractions include Srivari Mettu Temple, which is 24 minutes away by car. Read more",
+            "host": "www.hotels.com",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from makemytrip listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel",
+      "category": "hotel",
+      "tags": [],
+      "sourceUrl": "https://www.makemytrip.com/hotels/starlit_suites_tirupati-details-tirupati.html",
+      "sourceKind": "makemytrip",
+      "evidenceUrl": "https://www.makemytrip.com/hotels/starlit_suites_tirupati-details-tirupati.html",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel :: Location is good and near to RTC. Can be maintained more than what was present. Read All Reviews. Property Rules at Starlit Suites Tirupati . Read more",
+        "hits": [
+          {
+            "url": "https://www.makemytrip.com/hotels/starlit_suites_tirupati-details-tirupati.html",
+            "name": "Starlit Suites Tirupati 𝗕𝗢𝗢𝗞 Tirupati Hotel",
+            "snippet": "Location is good and near to RTC. Can be maintained more than what was present. Read All Reviews. Property Rules at Starlit Suites Tirupati . Read more",
+            "host": "www.makemytrip.com",
+            "kind": "makemytrip"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from makemytrip listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Resorts - Starlit Suites",
+      "category": "hotel",
+      "tags": [
+        "resort"
+      ],
+      "sourceUrl": "https://prospectcicd.clubmahindra.com/our-resorts/starlit-suites",
+      "sourceKind": "official",
+      "evidenceUrl": "https://prospectcicd.clubmahindra.com/our-resorts/starlit-suites",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "THE 10 BEST Resorts near Santuario De La Virgen De La Hoz :: ... ResortsStarlit Suites Tirupati Trident, Agra. Popular Hotel Categories. Popular HostelsPopular Singles ResortsPopular Boutique Hotels ...",
+        "hits": [
+          {
+            "url": "https://www.clubmahindra.com/our-resorts/starlit-suites",
+            "name": "Starlit Suites Resorts in Tirupati, Andhra Pradesh",
+            "snippet": "Equipped with spacious suites, a rooftop pool, cafe, restaurant and fitness centre, this Club Mahindra associate property offers unmatched hospitality and ...",
+            "host": "www.clubmahindra.com",
+            "kind": "official"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Hotels-g297585-c2-Andhra_Pradesh-Hotels.html",
+            "name": "THE 10 BEST Andhra Pradesh Bed and Breakfasts 2026",
+            "snippet": "Tirupati · Krishna District · Vijayawada · East Godavari District ... ResortsStarlit Suites Tirupati Hotel SK'sHotel Mookambika Comforts ...",
+            "host": "www.tripadvisor.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.tripadvisor.in/Hotel_Review-g2237481-d27799285-Reviews-Tara_Resort_Nakae_Renu-Renu_Nakhon_Nakhon_Phanom_Province.html",
+            "name": "TARA RESORT NAKAE RENU (Renu Nakhon) - Hotel",
+            "snippet": "Name/ address in local language. Reviews. Tips/Q&A All reviews. Write a ... ResortsStarlit Suites Tirupati Hukam's Lalit MahalHotel SapphireSuvarna Eco ...",
+            "host": "www.tripadvisor.in",
+            "kind": null
+          },
+          {
+            "url": "https://www.tripadvisor.com.tw/Hotels-g293860-oa30-zfc3-India-Hotels.html",
+            "name": "印度10 家最佳3 星級飯店",
+            "snippet": "Starlit Suites Tirupati . 4.6. 4.6 分(共5 分). (222). 印度3 星級飯店物超所值 ... ResortsStarlit Suites Tirupati Hilton Garden Inn LucknowVITS Kamats Resort ...",
+            "host": "www.tripadvisor.com.tw",
+            "kind": null
+          },
+          {
+            "url": "https://www.tripadvisor.in/HotelsNear-g1435712-d6560965-zff8-Santuario_De_La_Virgen_De_La_Hoz-Corduente_Province_of_Guadalajara_Castile_La_Mancha.html",
+            "name": "THE 10 BEST Resorts near Santuario De La Virgen De La Hoz",
+            "snippet": "... ResortsStarlit Suites Tirupati Trident, Agra. Popular Hotel Categories. Popular HostelsPopular Singles ResortsPopular Boutique Hotels ...",
+            "host": "www.tripadvisor.in",
+            "kind": null
+          },
+          {
+            "url": "https://www.tripadvisor.in/Hotel_Feature-g56003-d12339696-zft1-Le_Meridien_Houston_Downtown.html",
+            "name": "Le Méridien Houston Downtown Rooms: Pictures & Reviews",
+            "snippet": "The location is just perfect too,within walking distance of everything ... ResortsStarlit Suites Tirupati Regenta Central SrinagarKichu ResortLake Song ...",
+            "host": "www.tripadvisor.in",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from official listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo",
+      "category": "hotel",
+      "tags": [
+        "lodge"
+      ],
+      "sourceUrl": "https://www.tirupatilodge.com",
+      "sourceKind": "official",
+      "evidenceUrl": "https://www.tirupatilodge.com",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo :: Address : Bojoghari, Lower Road, Gangtok, Sikkim-737103 Phone Number: 89184 67670/ 79085 28792. Multi-purpose location near NJP railway station",
+        "hits": [
+          {
+            "url": "https://www.tirupatilodge.com",
+            "name": "Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo",
+            "snippet": "Address : Bojoghari, Lower Road, Gangtok, Sikkim-737103 Phone Number: 89184 67670/ 79085 28792. Multi-purpose location near NJP railway station",
+            "host": "www.tirupatilodge.com",
+            "kind": "official"
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&gsas=1&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaBAoCGgAqBAoAGgA&ap=MAGIAQI&rp=OAFIAsICHCIaDQBAn0QSEwirnfmozJmXAxUDu1oFHc3bDb0&sa=X&ei=1zfKaom1KbLm8LAPnK3PgQI&ved=2ahUKEwiNwYXl16-XAxUmOxwAHQn-L5QQkdkIegUIBBCzAQ",
+            "name": "Tirupati Lodge - Google hotels",
+            "snippet": "Web results. https://www. tirupatilodge .com. Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo Bhava, and ... When you stay with us at Tirupati , you ... Read more",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/Majhitar/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6g8QChgCEgcI6g8QChgDGAEyAhAAKgkKBToDTlBSGgA&rp=OAFIAsICHCIaDQCA-kQSEwiU-5a75oqXAxWVmFoFHWYmDbQ&ap=MAA&ved=2ahUKEwiNyI-HyZqXAxX1HRwAHfmkFzMQkdkIegQIBBBs",
+            "name": "Tirupati Lodge - Google hotels",
+            "snippet": "Tirupati Lodge. 3.4. (2.5K)·2-star hotel. Call ... Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo Bhava, and ... Read more",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6g8QChgPEgcI6g8QChgQGAEyAhAAKgkKBToDTlBSGgA&rp=OAFIAsICHCIaDQAAhEQSEwjXqdCKp6mXAxVruVoFHRNnLKM&ap=MAA&ei=8_POasz_DaSI5LcPubymmAs&ved=2ahUKEwiMxYjPxbiXAxUkBPkAHTmeCbMQkdkIegQIBBBw",
+            "name": "Tirupati Lodge - Google hotels",
+            "snippet": "Web results. https://www. tirupatilodge .com. Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo Bhava, and ... When you stay with us at Tirupati , you ... Read more",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.pk/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?q=dhupguri%20hotels&utm_campaign=sharing&utm_medium=link&utm_source=htls&sa=X&ts=CAEaIAoCGgASGhIUCgcI6g8QChgHEgcI6g8QChgIGAEyAhAAKgkKBToDVVNEGgA&ap=ugEGcHJpY2Vz",
+            "name": "Tirupati Lodge – Google hotels",
+            "snippet": "Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo Bhava, and ... When you stay with us at Tirupati , you enjoy – · Multi-purpose location near NJP ...",
+            "host": "www.google.com.pk",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?g2lb=4208993,4223281,4253230,4253565,4254308,4258168,4260007,4274032,4276660,4280051,4282211,4282357,4282366,4282376,4288707,4289413,4291191,4292002,4265427,4270859,4272931&hl=en&gl=np&un=1&rp=OAFAAEgC&ictx=1&tcfs=EhoaGAoKMjAxOS0wOC0xORIKMjAxOS0wOC0yMFIA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6g8QBxgZEgcI6g8QBxgaGAEyAhAAKgkKBToDTlBSGgA&ap=MAC6AQZwcmljZXM&sa=X&ei=JnRjat6MMbHblsYPs5LhmAw&ei=nLVjauXwJN-hlsYPm9eSuQo&ved=2ahUKEwjlrrOP_-uVAxXfkMUCHZurJKcQkdkIegUIBBCmAQ",
+            "name": "Tirupati Lodge - Google hotels",
+            "snippet": "Tirupati Lodge Pvt. Ltd. - our prime purpose – Atithi Devo Bhava, and ... When you stay with us at Tirupati , you enjoy – · Multi-purpose location near NJP ...",
+            "host": "www.google.com.np",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from official listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirupati Lodge NJP, Siliguri",
+      "category": "hotel",
+      "tags": [
+        "lodge"
+      ],
+      "sourceUrl": "https://www.booking.com/hotel/in/tirupati-siliguri.html",
+      "sourceKind": "booking",
+      "evidenceUrl": "https://www.booking.com/hotel/in/tirupati-siliguri.html",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Tirupati Lodge NJP, Siliguri (updated prices 2027) :: Located 8.7 mi from Bagdogra International Airport, the hotel is near NJP Railway Station. Public transport … 2.3 mi from the center of Siliguri.",
+        "hits": [
+          {
+            "url": "https://www.booking.com/hotel/in/tirupati-siliguri.html",
+            "name": "Tirupati Lodge NJP, Siliguri (updated prices 2027)",
+            "snippet": "Located 8.7 mi from Bagdogra International Airport, the hotel is near NJP Railway Station. Public transport … 2.3 mi from the center of Siliguri.",
+            "host": "www.booking.com",
+            "kind": "booking"
+          },
+          {
+            "url": "https://www.trivago.com/en-US/oar/hotel-tirupati-lodge-njp-siliguri?search=100-16708788",
+            "name": "Hotel Tirupati Lodge NJP, Siliguri, India",
+            "snippet": "Where is Tirupati Lodge NJP located? Tirupati Lodge NJP is located at RAMNAGAR COLONY, Near NJP Railway Station Njp station Road, 734007, Siliguri, ...",
+            "host": "www.trivago.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.adanione.com/india-hotels/tirupati-lodge-njp-dabgram-siliguri-3930882",
+            "name": "Tirupati Lodge NJP Siliguri - Hotel Price, Reviews, Photos",
+            "snippet": "Check all hotel photos, reviews, addresses , amenities and cancellation policy ... Tirupati Lodge NJP, Siliguri , West Bengal, India, 734007. View on Map. google. Read more",
+            "host": "www.adanione.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.rome2rio.com/s/Tirupati-Lodge-NJP-Siliguri/Nepal",
+            "name": "Tirupati Lodge NJP, Siliguri to Nepal - 4 ways to travel via train,",
+            "snippet": "There are 4 ways to get from Tirupati Lodge NJP, Siliguri to Nepal by train, plane, car, or bus. Select an option below to see step-by-step directions and ...",
+            "host": "www.rome2rio.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.hotel.com.au/siliguri/tirupati-lodge-njp.htm",
+            "name": "Hotel Tirupati Lodge NJP - Siliguri",
+            "snippet": "Book Tirupati Lodge NJP, Siliguri with the 100% Australian owned Hotel. ... Hotel Tirupati Lodge NJP. RAMNAGAR COLONY, Near NJP Railway Station Njp station Road, ... Read more",
+            "host": "www.hotel.com.au",
+            "kind": null
+          },
+          {
+            "url": "https://en.planetofhotels.com/india/siliguri/tirupati-lodge-njp",
+            "name": "Tirupati Lodge NJP - Siliguri, India - Planet of Hotels",
+            "snippet": "Hotel is located in 4 km from the centre. Njp station Road, Siliguri, India. Located just a 12-minute walk from New Jalpaiguri Station … in the Ramnagar Colony ...",
+            "host": "en.planetofhotels.com",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from booking listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel",
+      "category": "hotel",
+      "tags": [
+        "lodge"
+      ],
+      "sourceUrl": "https://www.makemytrip.com/hotels/tirupati_lodge_pvt_ltd-details-siliguri.html",
+      "sourceKind": "makemytrip",
+      "evidenceUrl": "https://www.makemytrip.com/hotels/tirupati_lodge_pvt_ltd-details-siliguri.html",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel :: Tirupati Lodge pvt ltd is situated at Ramnagar colony, Near NJP Station, Siliguri 2 MINUTES WALKING FROM NJP STATION, offering convenient access to 255 in ...",
+        "hits": [
+          {
+            "url": "https://www.makemytrip.com/hotels/tirupati_lodge_pvt_ltd-details-siliguri.html",
+            "name": "Tirupati Lodge pvt ltd 𝗕𝗢𝗢𝗞 Siliguri Hotel",
+            "snippet": "Tirupati Lodge pvt ltd is situated at Ramnagar colony, Near NJP Station, Siliguri 2 MINUTES WALKING FROM NJP STATION, offering convenient access to 255 in ...",
+            "host": "www.makemytrip.com",
+            "kind": "makemytrip"
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6g8QChgPEgcI6g8QChgQGAEyAhAAKgkKBToDTlBSGgA&rp=OAFIAsICHCIaDQAAhEQSEwjXqdCKp6mXAxVruVoFHRNnLKM&ap=MAA&ei=8_POasz_DaSI5LcPubymmAs&ved=2ahUKEwiMxYjPxbiXAxUkBPkAHTmeCbMQkdkIegQIBBBw",
+            "name": "Tirupati Lodge - Google hotels",
+            "snippet": "Tirupati Lodge pvt ltd BOOK Siliguri Hotel . Close to Siliguri Junction Railway Station, this incredible property offers well-appointed rooms, a lavish ... Read more",
+            "host": "www.google.com.np",
+            "kind": null
+          },
+          {
+            "url": "https://www.google.com.np/travel/hotels/entity/ChoIzNO90r78pri3ARoNL2cvMTFjbnNtcmdkdBAB?hl=en&gl=np&un=1&g2lb=4207876%2C4208993%2C4220293%2C4223281%2C4242898%2C4245928%2C4251619%2C4253230%2C4254308%2C4256748%2C4258168%2C4250437%2C4251518%2C4253015&gsas=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESCgoCCAMKAggDEAAaUwo1EjEyJTB4MzllNDQxMTRmNTQ0MWRjZDoweGRlYjVjNDcwMjA2M2VkZmY6CFNpbGlndXJpGgASGhIUCgcI6g8QAhgCEgcI6g8QAhgDGAEyAhAAKgkKBToDTlBSGgA&rp=OAFIAg&ap=MACIAQI&ei=cq1jYquNKofllsYPy7ukmA4&ved=2ahUKEwjfiI-v4bOSAxVmjhcHHcs0BegQkdkIegQIBBBs",
+            "name": "Tirupati Lodge - Google hotels",
+            "snippet": "Tirupati Lodge pvt ltd BOOK Siliguri Hotel . Close to Siliguri Junction Railway Station, this incredible property offers well-appointed rooms, a lavish ...",
+            "host": "www.google.com.np",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from makemytrip listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirupati Lodge pvt ltd Siliguri - Reviews, Photos & Offer",
+      "category": "hotel",
+      "tags": [
+        "lodge"
+      ],
+      "sourceUrl": "https://www.goibibo.com/hotels/tirupati-lodge-pvt-ltd-hotel-in-siliguri-7325237483073328756",
+      "sourceKind": "goibibo",
+      "evidenceUrl": "https://www.goibibo.com/hotels/tirupati-lodge-pvt-ltd-hotel-in-siliguri-7325237483073328756",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Tirupati Lodge pvt ltd Siliguri - Reviews, Photos & Offer :: Address , Ramnagar colony, Near NJP Station, Siliguri 2 MINUTES WALKING FROM NJP STATION. Check-out, 12 PM. Check-in, 12 PM. Hotels by Locality in Siliguri. Hill ... Read more",
+        "hits": [
+          {
+            "url": "https://www.goibibo.com/hotels/tirupati-lodge-pvt-ltd-hotel-in-siliguri-7325237483073328756",
+            "name": "Tirupati Lodge pvt ltd Siliguri - Reviews, Photos & Offer",
+            "snippet": "Address , Ramnagar colony, Near NJP Station, Siliguri 2 MINUTES WALKING FROM NJP STATION. Check-out, 12 PM. Check-in, 12 PM. Hotels by Locality in Siliguri. Hill ... Read more",
+            "host": "www.goibibo.com",
+            "kind": "goibibo"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from goibibo listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Street Food in Nandi Circle, Tirupati - Khau Galli",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Street-Food-in-Nandi-Circle/nct-10944733",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Tirupati/Street-Food-in-Nandi-Circle/nct-10944733",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Street Food in Nandi Circle, Tirupati - Khau Galli :: Best Street Food in Nandi Circle, Tirupati - Khau Galli ; Shakes N Fries. 4.2827 Ratings. 12/5/562 Skd Nagar Mangalam Tirupati Tilak Road - 2.41 km. Open until ... Read more",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Tirupati/Street-Food-in-Nandi-Circle/nct-10944733",
+            "name": "Street Food in Nandi Circle, Tirupati - Khau Galli",
+            "snippet": "Best Street Food in Nandi Circle, Tirupati - Khau Galli ; Shakes N Fries. 4.2827 Ratings. 12/5/562 Skd Nagar Mangalam Tirupati Tilak Road - 2.41 km. Open until ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirupati Foods in Tilak Road,Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Foods-Near-Muncipal-Office-Tilak-Road/9999PX877-X877-160426145150-G6I2_BZDET",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Tirupati/Tirupati-Foods-Near-Muncipal-Office-Tilak-Road/9999PX877-X877-160426145150-G6I2_BZDET",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "1 Photos of Tirupati Foods in Tilak Road, Tirupati :: 1 Photos of Tirupati Foods in Tilak Road, Tirupati Rated 5.0 based on 1 Customer Reviews and Ratings with 1 Photos. Visit Justdial for Address , ...",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Tirupati/Tirupati-Foods-Near-Muncipal-Office-Tilak-Road/9999PX877-X877-160426145150-G6I2_BZDET/photos",
+            "name": "1 Photos of Tirupati Foods in Tilak Road, Tirupati",
+            "snippet": "1 Photos of Tirupati Foods in Tilak Road, Tirupati Rated 5.0 based on 1 Customer Reviews and Ratings with 1 Photos. Visit Justdial for Address , ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Tirupati-Foods-Near-Muncipal-Office-Tilak-Road/9999PX877-X877-160426145150-G6I2_BZDET",
+            "name": "Tirupati Foods in Tilak Road,Tirupati",
+            "snippet": "Tirupati Foods in Tilak Road,Tirupati well known for Food Delivery In Trains in Tirupati . Rated 5.0 based on 1 Customer Reviews and Ratings with 1 Photos.",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Cake-House-Opposite-Mahathi-Imaging-Diagnostics-Bhavani-Nagar/9999PX877-X877-240624122548-K3R9_BZDET",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Tirupati/Tirumala-Cake-House-Opposite-Mahathi-Imaging-Diagnostics-Bhavani-Nagar/9999PX877-X877-240624122548-K3R9_BZDET",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "addressEvidence": null,
+        "hits": [],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "AREA NOT CONFIRMED — candidate excluded from SQL"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Birthday Cake in Tirupati - Delicious, Customizable Treats",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Birthday-Cake/jdm-1009336-ent-5-6617716",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/jdmart/Tirupati/Birthday-Cake/jdm-1009336-ent-5-6617716",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.justdial.com/jdmart/Tirupati/Cakes-In-Birthday/jdm-1009336-ent-5-6617716",
+            "name": "Birthday Cake in Tirupati - Delicious, Customizable Treats for All",
+            "snippet": "Celebrate with a stunning Birthday Cake in Tirupati . Choose from various sizes and flavors. Top Rated Verified Sellers on JD Mart, India's B2B Marketplace.",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Ni Cake world in Gandhi Road,Tirupati - Bakeries",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Ni-Cake-world-Gandhi-Road/9999PX877-X877-220612015640-F1X6_BZDET",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Tirupati/Ni-Cake-world-Gandhi-Road/9999PX877-X877-220612015640-F1X6_BZDET",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Ni Cake world in Gandhi Road,Tirupati - Bakeries :: Ni Cake world in Gandhi Road,Tirupati well known for Bakeries in Tirupati . Rated 5.0 based on 281 Customer Reviews and Ratings with 163 Photos.",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Tirupati/Ni-Cake-world-Gandhi-Road/9999PX877-X877-220612015640-F1X6_BZDET",
+            "name": "Ni Cake world in Gandhi Road,Tirupati - Bakeries",
+            "snippet": "Ni Cake world in Gandhi Road,Tirupati well known for Bakeries in Tirupati . Rated 5.0 based on 281 Customer Reviews and Ratings with 163 Photos.",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirupati Restaurants",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/tirupati/order-food-online",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/tirupati/order-food-online",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Restaurants in Tirupati - Best Restaurants near me :: ... 2255 Restaurants in Tirupati . Get Menu, Photos, Prices, Cuisines, Phone Numbers, Address , Reviews, Ratings for Top Tirupati Restaurants Nearby on Justdial.",
+        "hits": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurants-g297587-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+            "name": "THE 10 BEST Restaurants in Tirupati",
+            "snippet": "Best Dining in Tirupati , Chittoor District: See 1796 Tripadvisor traveler reviews of 125 Tirupati restaurants and search by cuisine, price, location, ...",
+            "host": "www.tripadvisor.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.zomato.com/tirupati/restaurants",
+            "name": "Restaurants in Tirupati",
+            "snippet": "Tirupati Restaurants · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Di Table 9 · Kakinada Subbbayya Gari Hotel · Leo 9 Biryani House · Hotel Bhimas · Bhimas ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Restaurants/nct-10408936",
+            "name": "Restaurants in Tirupati - Best Restaurants near me",
+            "snippet": "... 2255 Restaurants in Tirupati . Get Menu, Photos, Prices, Cuisines, Phone Numbers, Address , Reviews, Ratings for Top Tirupati Restaurants Nearby on Justdial.",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.tajhotels.com/en-in/hotels/taj-tirupati/restaurants",
+            "name": "Best Restaurants in Tirupati",
+            "snippet": "Home/ hotels/ taj tirupati/ Restaurants . share-image. SHARE. Restaurants at. Taj ... Enter your email Address . SUBSCRIBE. FOR BOOKINGS CONTACT. 1-800-111-825 ... Read more",
+            "host": "www.tajhotels.com",
+            "kind": "official"
+          },
+          {
+            "url": "https://www.eazydiner.com/tirupati/restaurants",
+            "name": "Checkout Best Restaurants in Tirupati | Get Upto 50% Off",
+            "snippet": "List of the exclusive restaurants in Tirupati , Vivaha Bhojanambu Ashok Nagar, Tirupati , Restaurant Tata Nagar, Tirupati Mandi, Tirupati Maurya Ramee Guestline ...",
+            "host": "www.eazydiner.com",
+            "kind": "eazydiner"
+          },
+          {
+            "url": "https://www.paihotels.com/viceroy-tirupati/restaurants/restaurants.html",
+            "name": "Restaurants | Hotel Pai Viceroy, Tirupati",
+            "snippet": "Home > Hotel Pai Viceroy, Tirupati > Restaurants > Restaurants. Restaurants at Hotel Pai Viceroy, Tirupati . DINE AMIDST DIVINITY IN TIRUPATI . At Hotel Pai ... Read more",
+            "host": "www.paihotels.com",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Food Delivery Restaurants in Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/tirupati/restaurants?category=1",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/tirupati/restaurants?category=1",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Top Diet Food Delivery Restaurants in Annamaiah Circle :: Tirupati Home Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Annamaiah Circle2+ Listings ... Address ... Read more",
+        "hits": [
+          {
+            "url": "https://www.zomato.com/tirupati/restaurants?category=1",
+            "name": "Food Delivery Restaurants in Tirupati",
+            "snippet": "Food Delivery Restaurants in Tirupati · Tirupati Fast Foods · Hoskote 4 AM Biryani · Appu Family Restaurant · Bangalore Biryani · Sathvik Fast Food · Phoenix Pizza. Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurants-g297587-zfp19-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+            "name": "THE 5 BEST Delivery Restaurants in Tirupati (UPDATED 2026)",
+            "snippet": "Best Food Delivery Restaurants in Tirupati , Chittoor District: Find Tripadvisor traveler reviews of THE BEST Tirupati Food Delivery Restaurants and search ...",
+            "host": "www.tripadvisor.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.swiggy.com/city/tirupati/non-veg-order-online",
+            "name": "Best Non Veg Online Food Delivery Restaurants In Tirupati",
+            "snippet": "Order Non Veg Food Online in Tirupati ; A2B - Adyar Ananda Bhavan. 4.3 ; Starbucks Coffee. 4.3 ; Burger King. 4.2 ; KFC. 4.1 ; DI Andhra Tiffins. 4.3 ... Read more",
+            "host": "www.swiggy.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Diet-Food-Delivery-Restaurants-in-Annamaiah-Circle/nct-11960446",
+            "name": "Top Diet Food Delivery Restaurants in Annamaiah Circle",
+            "snippet": "Tirupati Home Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Annamaiah Circle2+ Listings ... Address ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.zomato.com/tirupati/delivery",
+            "name": "Order Food Online from Delivery Restaurants in Tirupati",
+            "snippet": "Food Delivery Restaurants in Tirupati · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · The Paradise · Kakinada Subbbayya Gari Hotel · Di Table 9 · Bawarchi By ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.tripadvisor.com/RestaurantsNear-g297587-d4145756-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+            "name": "THE 10 BEST Restaurants Near Tirupati Station",
+            "snippet": "Breakfast Restaurants in Tirupati Lunch Restaurants in Tirupati Dinner Restaurants in TirupatiFood Delivery Restaurants in Tirupati ... Read more",
+            "host": "www.tripadvisor.com",
+            "kind": null
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tirumala Restaurants, Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/tirupati/tirumala-restaurants/south-indian",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/tirupati/tirumala-restaurants/south-indian",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Tirumala Restaurants, Tirupati :: Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Cuisines. Tirumala Restaurants, Tirupati . Restaurant Card. ₹100 OFF. Hot Star Pizza Corner. Read more",
+        "hits": [
+          {
+            "url": "https://www.zomato.com/tirupati/tirumala-restaurants",
+            "name": "Tirumala Restaurants, Tirupati",
+            "snippet": "Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Cuisines. Tirumala Restaurants, Tirupati . Restaurant Card. ₹100 OFF. Hot Star Pizza Corner. Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.facebook.com/61568616722720/videos/price-kocham-akkavu-but-tasty-baganey-undi-navivdeyam-restaurant-ttd-tirumala-fo/2533013170506644",
+            "name": "Price kocham akkavu but tasty baganey undi Navivdeyam",
+            "snippet": "... Tirumala Restaurants, Tirupati Restaurants, TTD Tirumala, Tirumala ... Every Tirupati trip deserves a delicious meal Tirupati food, Tirupati lunch ...",
+            "host": "www.facebook.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.zomato.com/tirupati/saravana-bhavan-pure-veg-restaurant-tirumala/order",
+            "name": "Saravana Bhavan Pure Veg Restaurant - Tirumala",
+            "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Tirumala restaurants, Best Tirumala restaurants, Tirupati City restaurants, in Tirupati , near me, in Tirumala ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Tamil Restaurants in Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/tirupati/restaurants/tamil",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/tirupati/restaurants/tamil",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.zomato.com/tirupati/restaurants/tamil",
+            "name": "Tamil Restaurants in Tirupati",
+            "snippet": "Tamil Restaurants in Tirupati · Madras Tiffin Centre · Midhunam Pure Veg Restaurant · Amma Chethi Vanta or Cloud Kitchen · Raghvendra Kitchen · Curry Home By Shero.",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Tamil-Restaurants/nct-10470650",
+            "name": "Best Tamil Restaurants in Tirupati - Order Food Online",
+            "snippet": "Best Tamil Restaurants in Tirupati - Order Food Online · Yaa Mohaideen Biryani · Sundari Akka Kadai (Best Fish Lunch) · Madras Machan's · Astoria Veg · Kovai Alankar ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Tamil-Restaurants/nct-10470650/page-2",
+            "name": "Tamil Restaurants in Tirupati - Page 2",
+            "snippet": "Tamil Restaurants in Tirupati - Page 2 · Sri Kitchen · Madurai Parotta House · Budget Saapadu · Madras Meal Company · Curry Hub · Murukku Meesai Mess · VV Biryanis.",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Tamil-Restaurants/nct-10470650/page-3",
+            "name": "Tamil Restaurants in Tirupati - Page 3",
+            "snippet": "Tamil Restaurants in Tirupati - Page 3 ; Sri Restaurant · 397 Ratings. Ranipet,Arakkonam. Upto ₹ 500. Opens at 12:45 PM. Very nice and delicious food with ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Outlets in Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://magicpin.in/india/Tirupati/?srsltid=AU7gw4Vzk76nxrsCdPAY_wafUqn2W8I4x7iFxVHupSVBDmO2565noKc3",
+      "sourceKind": "magicpin",
+      "evidenceUrl": "https://magicpin.in/india/Tirupati/?srsltid=AU7gw4Vzk76nxrsCdPAY_wafUqn2W8I4x7iFxVHupSVBDmO2565noKc3",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Top Trending Outlets in Tirupati near me :: Best Trending Outlets in Tirupati - Order Food Online · N & H ENTERPRISES SNACKS & JUICES Opposite Icici Bank Mahalingapuram Nungambakkam, chennai · Ooveva The In ...",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Tirupati/Trending-Outlets/nct-11361224",
+            "name": "Top Trending Outlets in Tirupati near me",
+            "snippet": "Best Trending Outlets in Tirupati - Order Food Online · N & H ENTERPRISES SNACKS & JUICES Opposite Icici Bank Mahalingapuram Nungambakkam, chennai · Ooveva The In ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.holidify.com/pages/malls-in-tirupati-3082.html",
+            "name": "7 Malls in Tirupati For Shopping, Food and Entertainment!",
+            "snippet": "... outlets in Tirupati . The paintings have these mythological themes as designs on them. The Tirumala Tirupati Devasthanam also has a publication department ... Read more",
+            "host": "www.holidify.com",
+            "kind": null
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Tirupati",
+            "name": "Tirupati",
+            "snippet": "Major brands of automobile, textile, mobile, electrical and electronic companies have their outlets in Tirupati . APIIC Industrial Park is located at ... Read more",
+            "host": "en.wikipedia.org",
+            "kind": null
+          },
+          {
+            "url": "https://magicpin.in/india/Tirupati/Tirupati/?srsltid=AU7gw4VmxQkxF_GD1PvgR19LOHUt40BYmw3ZrLmGMT8dOR4Uf4RM8clG",
+            "name": "Outlets in Tirupati, Tirupati",
+            "snippet": "Best Outlets Near You in Tirupati , Tirupati Look for Best Outlets in Tirupati · Aerteksmart. Save1002% · Aerteksmart. Electronics Online. 3.5. The Mad Nose.",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          },
+          {
+            "url": "https://www.facebook.com/tirupathifoodiee/videos/one-of-the-oldest-biryani-outlets-in-tirupati-famous-for-its-authentic-ambur-sty/791150476725490",
+            "name": "One of the oldest biryani outlets in Tirupati, famous for its",
+            "snippet": "One of the oldest biryani outlets in Tirupati , famous for its authentic Ambur-style biryani. Biryani Price 110 Timings: 11 AM – 11 PM ...",
+            "host": "www.facebook.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Reliance-Trends/nct-11079840",
+            "name": "Reliance Trends in Tirupati - Clothing Stores near me",
+            "snippet": "Shops in Tirupati . Get Phone Numbers, Address ... Reliance Trends outlets in Tirupati are typically located in shopping malls or busy commercial areas. Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from magicpin listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Lunchbox - Meals & Thalis, Korlagunta, Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Lunchbox-Meals-and-Thalis/store/56a6b1/vouchers?srsltid=AU7gw4UPZii9EsRY7yHSEjaCfCabuY-VeIBHzfVlLeib9SIHA7rh0SHV",
+      "sourceKind": "magicpin",
+      "evidenceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Lunchbox-Meals-and-Thalis/store/56a6b1/vouchers?srsltid=AU7gw4UPZii9EsRY7yHSEjaCfCabuY-VeIBHzfVlLeib9SIHA7rh0SHV",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "addressEvidence": null,
+        "hits": [],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from magicpin listing (title area-gated)",
+        "AREA NOT CONFIRMED — candidate excluded from SQL"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "Ps4 Restaurant, Tirupati, Korlagunta, Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Ps4-Restaurant,-Tirupati/store/9975ab?srsltid=AU7gw4X4UTFCrBc9J4GIhgJaHuAIo-ZC-Y25bOYp1986_r9cZrZkwBoo",
+      "sourceKind": "magicpin",
+      "evidenceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Ps4-Restaurant,-Tirupati/store/9975ab?srsltid=AU7gw4X4UTFCrBc9J4GIhgJaHuAIo-ZC-Y25bOYp1986_r9cZrZkwBoo",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Ps4-Restaurant,-Tirupati/store/9975ab?srsltid=AU7gw4VI3xd1b1UYjHRRuf19TkFbsVsvQsFan0xX5Ldp-NP0FN2ikyBZ",
+            "name": "Ps4 Restaurant, Tirupati, Korlagunta, Tirupati",
+            "snippet": "Address . Jcqh+X5P. Copy Direction. HoursOpen · 10:00 AM – 8:00 PM. Phone ... Ps4 Restaurant, Tirupati, Korlagunta, Tirupati Ps4 Restaurant, Tirupati ... Read more",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          },
+          {
+            "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Ps4-Restaurant,-Tirupati/store/9975ab/reviews?mxStickyTabs=1&srsltid=AU7gw4UWLiDFD1MUt3r7Cu2WXdmhUf5_kVLHXAuEd1Ggd0SyodZDSaj8",
+            "name": "Reviews & ratings of Ps4 Restaurant, Tirupati, Korlagunta",
+            "snippet": "Reviews & posts — Ps4 Restaurant, Tirupati, Korlagunta, Tirupati . 1–5☆ customer feedback, photos, and threads on magicpin.",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          },
+          {
+            "url": "https://magicpin.in/sitemap/Tirupati/Korlagunta/Restaurant/?srsltid=AU7gw4UMn-Ez9y9zwGGC5aI0XsekuCJDvNFB1MA_94Z9AsTaaF3TDWtp",
+            "name": "Korlagunta, Tirupati Sitemap",
+            "snippet": "Merchants in Korlagunta, Tirupati : Look for merchants in Korlagunta, Tirupati or across Tirupati ... Ps4 Restaurant, Tirupati Korlagunta, Tirupati ... Registered ...",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from magicpin listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "tirupati",
+      "name": "The 99 Pizza, Korlagunta, Tirupati",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49?srsltid=AU7gw4V9GvJ4EEemtEujoLR6VYlB-HMQvpN9Z2B70KEF9f7EOSqLIMSR",
+      "sourceKind": "magicpin",
+      "evidenceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49?srsltid=AU7gw4V9GvJ4EEemtEujoLR6VYlB-HMQvpN9Z2B70KEF9f7EOSqLIMSR",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "The 99 Pizza, Korlagunta, Tirupati :: ... road Abbanna Colony, Tirupathi - 517501,ANDHRA PRADESH, Korlagunta, Tirupati ... The 99 Pizza, Korlagunta, Tirupati The 99 Pizza ReviewsThe 99 Pizza Customer ... Read more",
+        "hits": [
+          {
+            "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49?srsltid=AU7gw4Wmg-SwGiCo6j4ilIhPSxhqeKQ6q0JBFAdfun5FHJaW7j7Hsvko",
+            "name": "The 99 Pizza, Korlagunta, Tirupati",
+            "snippet": "... road Abbanna Colony, Tirupathi - 517501,ANDHRA PRADESH, Korlagunta, Tirupati ... The 99 Pizza, Korlagunta, Tirupati The 99 Pizza ReviewsThe 99 Pizza Customer ... Read more",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          },
+          {
+            "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49/vouchers?srsltid=AU7gw4UbDtU39BpeTusDbRsNvXjn7jHllOt0x9jFY7XxOH58uIL8jJpZ",
+            "name": "The 99 Pizza, Korlagunta, Tirupati",
+            "snippet": "... The 99 Pizza, Korlagunta, Tirupati The 99 Pizza ReviewsThe 99 Pizza Customer ... Registered Office Address : Plot No.379 & 380, Sector - 29, Near IFFCO ... Read more",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from magicpin listing (title area-gated)"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Desi Family Dhaba And Restaurant in Nagadenahalii",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli-Nagadenahalii/080PXX80-XX80-251105213416-R8X7_BZDET",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli-Nagadenahalii/080PXX80-XX80-251105213416-R8X7_BZDET",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "addressEvidence": null,
+        "hits": [],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "AREA NOT CONFIRMED — candidate excluded from SQL"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Nanjundeshwara Bakery & Sweets - Bangalore",
+      "category": "bakery_sweets",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET",
+            "name": "Nanjundeshwara Bakery & Sweets - Bangalore",
+            "snippet": "... Address , Contact Number, Reviews & Ratings, Photos, Maps of ... Nanjundeshwara Bakery & Sweets, Bangalore , DoddaballapurBakeries - 1. 1 Photo. Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET/photos",
+            "name": "1 Photos of Nanjundeshwara Bakery & Sweets in Doddaballapur",
+            "snippet": "... Address , Contact Number, Reviews & Ratings ... Nanjundeshwara Bakery & Sweets, Bangalore , DoddaballapurBakeries - 1 ... Bakeries in Doddaballapur · Bakeries in ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Doddaballapura))"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Doddaballapura City restaurants",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Home's Kitchen, Doddaballapura Locality order online :: ... Doddaballapura City restaurants , in Doddaballapura , near me, in Doddaballapura City, in Doddaballapura Locality, in Doddaballapura , near me, in Doddaballapura ... Read more",
+        "hits": [
+          {
+            "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants",
+            "name": "Doddaballapura City restaurants",
+            "snippet": "Doddaballapura City Restaurants · Lotus Gardenia · WarmOven Cake & Desserts · The Brothers Adda · House Full · Chickpet Donne Biryani House · Sri Vinayaka Food Point. Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants/south-indian",
+            "name": "Doddaballapura City Restaurants",
+            "snippet": "Doddaballapura City Restaurants · Durgashree Samruddhi Garden · Shri Manjunatha Grand Veg · Sri Nandi Utsav · Home Food The Cloud Kitchen · Davanagere Benne Dose ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants/rolls",
+            "name": "Doddaballapura City Restaurants",
+            "snippet": "Doddaballapura City Restaurants · Appu Rolls · House Full · Kouzina Kafe - The Food Court · Kolkata Famous Kati Roll · The Hungry Adda Restaurant · Kitchen 30 · Home ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/doddaballapura/homes-kitchen-doddaballapura-locality/order",
+            "name": "Home's Kitchen, Doddaballapura Locality order online",
+            "snippet": "... Doddaballapura City restaurants , in Doddaballapura , near me, in Doddaballapura City, in Doddaballapura Locality, in Doddaballapura , near me, in Doddaballapura ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/bangalore/u-turn-paradise-yelahanka?amp=1",
+            "name": "U Turn Paradise, Doddaballapura Locality order online",
+            "snippet": "... Doddaballapura City restaurants , Casual Dining in Doddaballapura , Casual Dining near me, Casual Dining in Doddaballapura City, Casual Dining in Doddaballapura ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/doddaballapura/doddaballapura-city-restaurants/bakeries",
+            "name": "Doddaballapura City Restaurants",
+            "snippet": "Doddaballapura City Restaurants · Rajashree Veg And Non-Veg Family Restaurant · WarmOven Cake & Desserts · VRB HOTEL FAMILY RESTAURANT · Chickpet Donne Biryani ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Doddaballapura))"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Categories of Desi Family Dhaba And Restaurant in",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli/080PXX80-XX80-251105213416-R8X7_BZDET/categories",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli/080PXX80-XX80-251105213416-R8X7_BZDET/categories",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli/080PXX80-XX80-251105213416-R8X7_BZDET/categories",
+            "name": "Categories of Desi Family Dhaba And Restaurant in",
+            "snippet": "Categories of Desi Family Dhaba And Restaurant in Nagadenahalii, Bangalore ; JD Guides. IFSC Code: SBIN0006794, MICR Code, A E MARKET STATE BANK OF INDIA · IFSC ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "AREA NOT CONFIRMED — candidate excluded from SQL"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "1 Photos of Nanjundeshwara Bakery & Sweets in Doddaballapur",
+      "category": "bakery_sweets",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET/photos",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET/photos",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "addressEvidence": null,
+        "hits": [],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "AREA NOT CONFIRMED — candidate excluded from SQL"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Kolkata Sweet & Foods in Doddaballapur,Bangalore",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET",
+      "sourceKind": "justdial",
+      "evidenceUrl": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": "Categories of Kolkata Sweet & Foods in Doddaballapur, Bangalore :: Kolkata Sweet & Foods in Doddaballapur, Bangalore is located Near Provident Welworth City. 4. Can I get sugar-free sweets too? Many Sweet Shops ...",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET/categories",
+            "name": "Categories of Kolkata Sweet & Foods in Doddaballapur, Bangalore",
+            "snippet": "Kolkata Sweet & Foods in Doddaballapur, Bangalore is located Near Provident Welworth City. 4. Can I get sugar-free sweets too? Many Sweet Shops ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET/photos",
+            "name": "Kolkata Sweet & Foods - Doddaballapur, Bangalore",
+            "snippet": "Kolkata Sweet & Foods in Doddaballapur, Bangalore is located Near Provident Welworth City. 4. Can I get sugar-free sweets too? Many Sweet Shops provide sugar- ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from justdial listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Doddaballapura))"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+            "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality",
+            "snippet": "Check out Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura on Zomato for great deals, ratings, reviews and more!",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews?amp=1",
+            "name": "Reviews of Kouzina Kafe - The Food Court, Doddaballapura",
+            "snippet": "Reviews of Kouzina Kafe - The Food Court Doddaballapura Locality; see all ... Shake. 7, Khatha 4464/11/1A, 4465/11/1A, 4466/11/1A, 3rd Ward, Rojipura, ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality",
+            "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+            "snippet": "ऑर्डर फूड ऑनलाइन से Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura > और zomato पर शानदार ऑफर और ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Doddaballapura))"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Reviews of Kouzina Kafe - The Food Court, Doddaballapura",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews?amp=1",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews?amp=1",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.zomato.com/gu/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews",
+            "name": "Reviews of Kouzina Kafe - The Food Court, Doddaballapura",
+            "snippet": "Reviews of Kouzina Kafe - The Food Court Doddaballapura Locality; see all unbiased reviews of Kouzina Kafe - The Food Court Doddaballapura for delivery and ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Doddaballapura))"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "addressEvidence": null,
+        "hits": [
+          {
+            "url": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+            "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality",
+            "snippet": "Kouzina Kafe - The Food Court ; Chicken Popcorn Loaded Fries. ₹349 ; Cheese Blast Burger. ₹229 ; Crispy Chicken Burger. ₹139 ; Fiery Chicken Burger. ₹299.",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/hi/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality",
+            "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+            "snippet": "ऑर्डर फूड ऑनलाइन से Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura > और zomato पर शानदार ऑफर और ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/tr/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/order",
+            "name": "Kouzina Kafe - The Food Court, Doddaballapura Locality order",
+            "snippet": "Check out Kouzina Kafe - The Food Court, Doddaballapura Locality, Doddaballapura on Zomato for great deals, ratings, reviews and more!",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          }
+        ],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": true,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": "no result with area token (0 candidates, all outside Doddaballapura)",
+        "retrievedOn": "2026-10-14"
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Doddaballapura))"
+      ]
+    },
+    {
+      "area": "gitam",
+      "name": "Home's Kitchen Dining Reviews - Doddaballapura Locality",
+      "category": "restaurant",
+      "tags": [],
+      "sourceUrl": "https://www.zomato.com/doddaballapura/homes-kitchen-doddaballapura-locality/reviews",
+      "sourceKind": "zomato",
+      "evidenceUrl": "https://www.zomato.com/doddaballapura/homes-kitchen-doddaballapura-locality/reviews",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "addressEvidence": null,
+        "hits": [],
+        "errors": [],
+        "retrievedOn": "2026-10-14"
+      },
+      "geocode": {
+        "queried": false,
+        "lat": null,
+        "lng": null,
+        "displayName": null,
+        "osmType": null,
+        "areaConfirmed": false,
+        "note": null,
+        "retrievedOn": null
+      },
+      "review": "needs_human_review",
+      "reviewNotes": [
+        "extracted from zomato listing (title area-gated)",
+        "verification rate-limited (skipped run)",
+        "AREA NOT CONFIRMED — candidate excluded from SQL"
+      ]
+    }
+  ]
+}

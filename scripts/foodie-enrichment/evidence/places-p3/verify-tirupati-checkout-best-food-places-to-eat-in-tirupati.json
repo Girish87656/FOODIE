@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "name": "Checkout Best Food Places To Eat In Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.zomato.com/tirupati"
+  },
+  "query": "\"Checkout Best Food Places To Eat In Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati",
+      "name": "Checkout Best Food Places To Eat In Tirupati",
+      "snippet": "Best Food in Tirupati · Hyderabad Biryani House · Cravings Kitchen · Burger King · Five Star · Domino's Pizza · Pizza Hut · Charminar Restaurant · Sathvik Fast Food.",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/tirupati?lang=vi",
+      "name": "Checkout Best Food Places To Eat In Tirupati",
+      "snippet": "Best Food in Tirupati · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Di Andhra Tiffins · Midhunam Pure Veg Restaurant · Springs Hotel · Hotel Orion · Five Star.",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/tirupati?lang=it&city_id=11323&user_lang_change=1",
+      "name": "Checkout Best Food Places To Eat In Tirupati",
+      "snippet": "Checkout the highest-rated restaurants in Tirupati. Di Andhra Spice Family Restaurant. Subbbayya Gari Hotel Kakinada Subbbayya Gari Hotel",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

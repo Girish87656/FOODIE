@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Bakery Restaurants in Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.zomato.com/tirupati/restaurants/bakery"
+  },
+  "query": "\"Bakery Restaurants in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/restaurants/bakery",
+      "name": "Bakery Restaurants in Tirupati",
+      "snippet": "Bakery Restaurants in Tirupati · Ovenfresh Cakes & Desserts · Kakinada Subbbayya Gari Hotel · The Dessert Heaven - Pastry, Brownie and Cakes · FB Cakes · Hotel Orion. Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/bakery-dish-restaurants",
+      "name": "Best Bakery Restaurants In Tirupati 2026 | Order Online",
+      "snippet": "Explore The Best Bakery Restaurants In Tirupati . View Menus, Photos, Ratings, Reviews Or Order Online And Enjoy Mouth-watering Bakery.",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/india/Tirupati/Tirupati/Restaurant/Bakery/?srsltid=AU7gw4XcKpOw09aVmdluzyhdxUc0JMLMct64wO0pzQ2Cfg0BDCRD9KN-",
+      "name": "Best Bakery Restaurants Near You in Tirupati, Tirupati",
+      "snippet": "Best Bakery Restaurants Near You in Tirupati , Tirupati Look for Best Bakery Restaurants in Tirupati ; Baskin Robbins ; Just Bake ; Manasa Cakewala · Cuisines:.",
+      "host": "magicpin.in",
+      "kind": "magicpin"
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tirumala-bakery-srinivasa-nagar/reviews",
+      "name": "Reviews of Tirumala Bakery, Srinivasa Nagar, Tirupati",
+      "snippet": "... Tirupati City restaurants, Bakery Restaurants in Tirupati , Bakery near me, Bakery Restaurants in Srinivasa Nagar, Order food online in Srinivasa Nagar ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/dolcericco-by-ve-kitchen-korlagunta/order",
+      "name": "Dolcericco By Ve Kitchen, Korlagunta order online",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Korlagunta restaurants, Best Korlagunta restaurants, Tirupati City restaurants, Bakery Restaurants in Tirupati ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://magicpin.in/india/Tirupati/Renigunta-Road/Restaurant/Bakery/?srsltid=AU7gw4XGfw-KFQNvb6ivA5ZSSKlBsQHgNUOjRsaBqVevKuSYEwED1Gi0",
+      "name": "Best Bakery Restaurants Near You in Renigunta Road, Tirupati",
+      "snippet": "Best Bakery Restaurants Near You in Renigunta Road, Tirupati Look for Best Bakery Restaurants in Tirupati · Joy Bakers · Mad4 · WarmOven Cake & Desserts · Kouzina ...",
+      "host": "magicpin.in",
+      "kind": "magicpin"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Best Bakery Restaurants Near You in Tirupati, Tirupati :: Best Bakery Restaurants Near You in Tirupati , Tirupati Look for Best Bakery Restaurants in Tirupati ; Baskin Robbins ; Just Bake ; Manasa Cakewala · Cuisines:.",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

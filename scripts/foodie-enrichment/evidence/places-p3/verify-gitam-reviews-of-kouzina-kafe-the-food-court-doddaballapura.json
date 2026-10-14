@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Reviews of Kouzina Kafe - The Food Court, Doddaballapura",
+    "area": "gitam",
+    "sourceUrl": "https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews?amp=1"
+  },
+  "query": "\"Reviews of Kouzina Kafe - The Food Court, Doddaballapura\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/gu/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality/reviews",
+      "name": "Reviews of Kouzina Kafe - The Food Court, Doddaballapura",
+      "snippet": "Reviews of Kouzina Kafe - The Food Court Doddaballapura Locality; see all unbiased reviews of Kouzina Kafe - The Food Court Doddaballapura for delivery and ...",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

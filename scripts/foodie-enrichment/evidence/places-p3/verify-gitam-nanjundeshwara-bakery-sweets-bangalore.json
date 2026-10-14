@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "Nanjundeshwara Bakery & Sweets - Bangalore",
+    "area": "gitam",
+    "sourceUrl": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET"
+  },
+  "query": "\"Nanjundeshwara Bakery & Sweets - Bangalore\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET",
+      "name": "Nanjundeshwara Bakery & Sweets - Bangalore",
+      "snippet": "... Address , Contact Number, Reviews & Ratings, Photos, Maps of ... Nanjundeshwara Bakery & Sweets, Bangalore , DoddaballapurBakeries - 1. 1 Photo. Read more",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    },
+    {
+      "url": "https://www.justdial.com/Bangalore/Nanjundeshwara-Bakery-Sweets-Doddaballapur/080PXX80-XX80-141023151346-K8U4_BZDET/photos",
+      "name": "1 Photos of Nanjundeshwara Bakery & Sweets in Doddaballapur",
+      "snippet": "... Address , Contact Number, Reviews & Ratings ... Nanjundeshwara Bakery & Sweets, Bangalore , DoddaballapurBakeries - 1 ... Bakeries in Doddaballapur · Bakeries in ...",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

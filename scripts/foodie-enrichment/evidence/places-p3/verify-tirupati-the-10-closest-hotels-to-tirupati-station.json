@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "THE 10 CLOSEST Hotels to Tirupati Station",
+    "area": "tirupati",
+    "sourceUrl": "https://www.tripadvisor.com/HotelsNear-g297587-d4145756-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"THE 10 CLOSEST Hotels to Tirupati Station\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/HotelsNear-g297587-d4145756-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 CLOSEST Hotels to Tirupati Station (2026)",
+      "snippet": "THE 10 CLOSEST Hotels to Tirupati Station. Hotels near Tirupati ... The location is very near to Tirupati Railway station. Basic ...",
+      "host": "www.tripadvisor.com",
+      "kind": "tripadvisor"
+    },
+    {
+      "url": "https://www.tripadvisor.in/HotelsNear-g297587-d4145756-oa90-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 CLOSEST Hotels to Tirupati Station",
+      "snippet": "THE 10 CLOSEST Hotels to Tirupati Station ... very serene location and the best staff ... Tirupati PhotosTirupati Map. Hotels. All ...",
+      "host": "www.tripadvisor.in",
+      "kind": "tripadvisor"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "THE 10 CLOSEST Hotels to Tirupati Station (2026) :: THE 10 CLOSEST Hotels to Tirupati Station. Hotels near Tirupati ... The location is very near to Tirupati Railway station. Basic ...",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

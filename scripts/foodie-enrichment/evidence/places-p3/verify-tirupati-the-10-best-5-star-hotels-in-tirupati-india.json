@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "The 10 best 5-star hotels in Tirupati, India",
+    "area": "tirupati",
+    "sourceUrl": "https://www.booking.com/fivestars/city/in/tirupati.html"
+  },
+  "query": "\"The 10 best 5-star hotels in Tirupati, India\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"The 10 best 5-star hotels in Tirupati, India\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"The 10 best 5-star hotels in Tirupati, India\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-14"
+}

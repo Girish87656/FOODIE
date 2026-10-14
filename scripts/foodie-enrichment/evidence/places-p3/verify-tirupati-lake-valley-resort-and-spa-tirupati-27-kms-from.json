@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Lake Valley Resort and Spa Tirupati, 27 kms from",
+    "area": "tirupati",
+    "sourceUrl": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html"
+  },
+  "query": "\"Lake Valley Resort and Spa Tirupati, 27 kms from\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.booking.com/hotel/in/lake-valley-resort-and-spa.html",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 kms from",
+      "snippet": "Located in Tirupati , Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall features a garden.",
+      "host": "www.booking.com",
+      "kind": "booking"
+    },
+    {
+      "url": "https://en.planetofhotels.com/india/tirupati/lake-valley-resort-and-spa-tirupati",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona",
+      "snippet": "Book Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall (4-star), India. Read reviews and choose a room with planetofhotels.com.",
+      "host": "en.planetofhotels.com",
+      "kind": null
+    },
+    {
+      "url": "https://us.trip.com/hotels/chittoor-hotel-detail-111550610/lake-valley-resort-and-spa-tirupati-27-kms-from-talakona-waterfall",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 Kms from",
+      "snippet": "Lake Valley Resort and Spa Tirupati, 27 Kms from Talakona Waterfall. Tirupati Road Opposite HP Petrol Pump Bhakarapeta, Chittoor District, Andhra Pradesh, ... Read more",
+      "host": "us.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.agoda.com/lake-valley-resort-and-spa-tirupati/hotel/tirupati-in.html",
+      "name": "Best Price on Lake Valley Resort and Spa Tirupati, 27 kms",
+      "snippet": "Lobby, Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall in Tirupati ... 6.7. Location rating, 7.5. Image of Suite with Balcony 0; Image of ... Read more",
+      "host": "www.agoda.com",
+      "kind": "agoda"
+    },
+    {
+      "url": "https://www.skyscanner.qa/hotels/india/tirupati-hotels/lake-valley-resort-and-spa-tirupati%2C-27-kms-from-talakona-waterfall/ht-216657870",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 Kms From Talakona",
+      "snippet": "Located in Tirupati , 43 km from Renigunta Junction, Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall provides accommodation with a garden ... Read more",
+      "host": "www.skyscanner.qa",
+      "kind": null
+    },
+    {
+      "url": "https://www.vacationrenter.com/en-au/p/401034711",
+      "name": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona",
+      "snippet": "Lake Valley Resort and Spa Tirupati, 27 kms from Talakona Waterfall · Resort in Andhra Pradesh · About this resort · Amenities · Map of Andhra Pradesh · Available ...",
+      "host": "www.vacationrenter.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Lake Valley Resort and Spa Tirupati, 27 Kms from :: Lake Valley Resort and Spa Tirupati, 27 Kms from Talakona Waterfall. Tirupati Road Opposite HP Petrol Pump Bhakarapeta, Chittoor District, Andhra Pradesh, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

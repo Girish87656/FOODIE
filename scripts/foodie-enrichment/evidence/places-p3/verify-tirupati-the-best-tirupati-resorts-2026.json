@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "THE BEST Tirupati Resorts 2026",
+    "area": "tirupati",
+    "sourceUrl": "https://www.tripadvisor.com/Hotels-g297587-zff8-Tirupati_Chittoor_District_Andhra_Pradesh-Hotels.html"
+  },
+  "query": "\"THE BEST Tirupati Resorts 2026\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Hotels-g297587-zff8-Tirupati_Chittoor_District_Andhra_Pradesh-Hotels.html",
+      "name": "THE BEST Tirupati Resorts 2026 (with Prices)",
+      "snippet": "1. Marasa Sarovar Premiere. Reva Resorts and Holiday Homes 28.3 miles from Tirupati . Sarovar Premiere. Guestline Hotel - Tirupati Skylar",
+      "host": "www.tripadvisor.com",
+      "kind": "tripadvisor"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Starlit Suites Resorts in Tirupati, Andhra Pradesh",
+    "area": "tirupati",
+    "sourceUrl": "https://www.clubmahindra.com/our-resorts/starlit-suites"
+  },
+  "query": "\"Starlit Suites Resorts in Tirupati, Andhra Pradesh\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.clubmahindra.com/our-resorts/starlit-suites",
+      "name": "Starlit Suites Resorts in Tirupati, Andhra Pradesh",
+      "snippet": "Equipped with spacious suites, a rooftop pool, cafe, restaurant and fitness centre, 24 Hours Front Desk",
+      "host": "www.clubmahindra.com",
+      "kind": "official"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "name": "Tirumala Restaurants, Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.zomato.com/tirupati/tirumala-restaurants/south-indian"
+  },
+  "query": "\"Tirumala Restaurants, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/tirumala-restaurants",
+      "name": "Tirumala Restaurants, Tirupati",
+      "snippet": "Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Cuisines. Tirumala Restaurants, Tirupati . Restaurant Card. ₹100 OFF. Hot Star Pizza Corner. Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.facebook.com/61568616722720/videos/price-kocham-akkavu-but-tasty-baganey-undi-navivdeyam-restaurant-ttd-tirumala-fo/2533013170506644",
+      "name": "Price kocham akkavu but tasty baganey undi Navivdeyam",
+      "snippet": "... Tirumala Restaurants, Tirupati Restaurants, TTD Tirumala, Tirumala ... Every Tirupati trip deserves a delicious meal Tirupati food, Tirupati lunch ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/saravana-bhavan-pure-veg-restaurant-tirumala/order",
+      "name": "Saravana Bhavan Pure Veg Restaurant - Tirumala",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Tirumala restaurants, Best Tirumala restaurants, Tirupati City restaurants, in Tirupati , near me, in Tirumala ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirumala Restaurants, Tirupati :: Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Cuisines. Tirumala Restaurants, Tirupati . Restaurant Card. ₹100 OFF. Hot Star Pizza Corner. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

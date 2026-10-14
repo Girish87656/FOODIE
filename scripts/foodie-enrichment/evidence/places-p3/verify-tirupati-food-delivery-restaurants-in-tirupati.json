@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Food Delivery Restaurants in Tirupati",
+    "area": "tirupati",
+    "sourceUrl": "https://www.zomato.com/tirupati/restaurants?category=1"
+  },
+  "query": "\"Food Delivery Restaurants in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/restaurants?category=1",
+      "name": "Food Delivery Restaurants in Tirupati",
+      "snippet": "Food Delivery Restaurants in Tirupati · Tirupati Fast Foods · Hoskote 4 AM Biryani · Appu Family Restaurant · Bangalore Biryani · Sathvik Fast Food · Phoenix Pizza. Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-zfp19-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 5 BEST Delivery Restaurants in Tirupati (UPDATED 2026)",
+      "snippet": "Best Food Delivery Restaurants in Tirupati , Chittoor District: Find Tripadvisor traveler reviews of THE BEST Tirupati Food Delivery Restaurants and search ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/non-veg-order-online",
+      "name": "Best Non Veg Online Food Delivery Restaurants In Tirupati",
+      "snippet": "Order Non Veg Food Online in Tirupati ; A2B - Adyar Ananda Bhavan. 4.3 ; Starbucks Coffee. 4.3 ; Burger King. 4.2 ; KFC. 4.1 ; DI Andhra Tiffins. 4.3 ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Diet-Food-Delivery-Restaurants-in-Annamaiah-Circle/nct-11960446",
+      "name": "Top Diet Food Delivery Restaurants in Annamaiah Circle",
+      "snippet": "Tirupati Home Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Annamaiah Circle2+ Listings ... Address ... Read more",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/delivery",
+      "name": "Order Food Online from Delivery Restaurants in Tirupati",
+      "snippet": "Food Delivery Restaurants in Tirupati · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · The Paradise · Kakinada Subbbayya Gari Hotel · Di Table 9 · Bawarchi By ... Read more",
+      "host": "www.zomato.com",
+      "kind": "zomato"
+    },
+    {
+      "url": "https://www.tripadvisor.com/RestaurantsNear-g297587-d4145756-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Restaurants Near Tirupati Station",
+      "snippet": "Breakfast Restaurants in Tirupati Lunch Restaurants in Tirupati Dinner Restaurants in TirupatiFood Delivery Restaurants in Tirupati ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Top Diet Food Delivery Restaurants in Annamaiah Circle :: Tirupati Home Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Tirupati Diet Food Delivery Restaurants in Annamaiah Circle2+ Listings ... Address ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

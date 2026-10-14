@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Desi Family Dhaba And Restaurant in Nagadenahalii",
+    "area": "gitam",
+    "sourceUrl": "https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli-Nagadenahalii/080PXX80-XX80-251105213416-R8X7_BZDET"
+  },
+  "query": "\"Desi Family Dhaba And Restaurant in Nagadenahalii\" Doddaballapura address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Desi Family Dhaba And Restaurant in Nagadenahalii\\\\\\\" Doddaballapura address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Desi Family Dhaba And Restaurant in Nagadenahalii\\\\\\\" Doddaballapura address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-14"
+}

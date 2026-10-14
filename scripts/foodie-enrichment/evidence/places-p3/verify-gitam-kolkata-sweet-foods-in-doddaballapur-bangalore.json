@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "Kolkata Sweet & Foods in Doddaballapur,Bangalore",
+    "area": "gitam",
+    "sourceUrl": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET"
+  },
+  "query": "\"Kolkata Sweet & Foods in Doddaballapur,Bangalore\" Doddaballapura address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET/categories",
+      "name": "Categories of Kolkata Sweet & Foods in Doddaballapur, Bangalore",
+      "snippet": "Kolkata Sweet & Foods in Doddaballapur, Bangalore is located Near Provident Welworth City. 4. Can I get sugar-free sweets too? Many Sweet Shops ...",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    },
+    {
+      "url": "https://www.justdial.com/Bangalore/Kolkata-Sweet-Foods-Near-Provident-Welworth-City-Doddaballapur/080PXX80-XX80-160603112528-W9N4_BZDET/photos",
+      "name": "Kolkata Sweet & Foods - Doddaballapur, Bangalore",
+      "snippet": "Kolkata Sweet & Foods in Doddaballapur, Bangalore is located Near Provident Welworth City. 4. Can I get sugar-free sweets too? Many Sweet Shops provide sugar- ... Read more",
+      "host": "www.justdial.com",
+      "kind": "justdial"
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Categories of Kolkata Sweet & Foods in Doddaballapur, Bangalore :: Kolkata Sweet & Foods in Doddaballapur, Bangalore is located Near Provident Welworth City. 4. Can I get sugar-free sweets too? Many Sweet Shops ...",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tirupati Lodge NJP, Siliguri",
+    "area": "tirupati",
+    "sourceUrl": "https://www.booking.com/hotel/in/tirupati-siliguri.html"
+  },
+  "query": "\"Tirupati Lodge NJP, Siliguri\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.booking.com/hotel/in/tirupati-siliguri.html",
+      "name": "Tirupati Lodge NJP, Siliguri (updated prices 2027)",
+      "snippet": "Located 8.7 mi from Bagdogra International Airport, the hotel is near NJP Railway Station. Public transport … 2.3 mi from the center of Siliguri.",
+      "host": "www.booking.com",
+      "kind": "booking"
+    },
+    {
+      "url": "https://www.trivago.com/en-US/oar/hotel-tirupati-lodge-njp-siliguri?search=100-16708788",
+      "name": "Hotel Tirupati Lodge NJP, Siliguri, India",
+      "snippet": "Where is Tirupati Lodge NJP located? Tirupati Lodge NJP is located at RAMNAGAR COLONY, Near NJP Railway Station Njp station Road, 734007, Siliguri, ...",
+      "host": "www.trivago.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.adanione.com/india-hotels/tirupati-lodge-njp-dabgram-siliguri-3930882",
+      "name": "Tirupati Lodge NJP Siliguri - Hotel Price, Reviews, Photos",
+      "snippet": "Check all hotel photos, reviews, addresses , amenities and cancellation policy ... Tirupati Lodge NJP, Siliguri , West Bengal, India, 734007. View on Map. google. Read more",
+      "host": "www.adanione.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.rome2rio.com/s/Tirupati-Lodge-NJP-Siliguri/Nepal",
+      "name": "Tirupati Lodge NJP, Siliguri to Nepal - 4 ways to travel via train,",
+      "snippet": "There are 4 ways to get from Tirupati Lodge NJP, Siliguri to Nepal by train, plane, car, or bus. Select an option below to see step-by-step directions and ...",
+      "host": "www.rome2rio.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.hotel.com.au/siliguri/tirupati-lodge-njp.htm",
+      "name": "Hotel Tirupati Lodge NJP - Siliguri",
+      "snippet": "Book Tirupati Lodge NJP, Siliguri with the 100% Australian owned Hotel. ... Hotel Tirupati Lodge NJP. RAMNAGAR COLONY, Near NJP Railway Station Njp station Road, ... Read more",
+      "host": "www.hotel.com.au",
+      "kind": null
+    },
+    {
+      "url": "https://en.planetofhotels.com/india/siliguri/tirupati-lodge-njp",
+      "name": "Tirupati Lodge NJP - Siliguri, India - Planet of Hotels",
+      "snippet": "Hotel is located in 4 km from the centre. Njp station Road, Siliguri, India. Located just a 12-minute walk from New Jalpaiguri Station … in the Ramnagar Colony ...",
+      "host": "en.planetofhotels.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirupati Lodge NJP, Siliguri (updated prices 2027) :: Located 8.7 mi from Bagdogra International Airport, the hotel is near NJP Railway Station. Public transport … 2.3 mi from the center of Siliguri.",
+  "errors": [],
+  "retrievedOn": "2026-10-14"
+}
