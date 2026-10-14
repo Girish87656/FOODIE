@@ -1539,3 +1539,19 @@ Work Log:
 
 Stage Summary:
 - PUBLISHED & VERIFIED: origin/main = 75640dc (fast-forward), Vercel Production deployed 75640dc1 (success), and the new production build passes the full two-area E2E — destination architecture, Tirupati Laddu, honest empty states, corridor menus with per-dish provenance, filters/sort/search, mobile clean, zero errors. Batch-009 (9 Tirupati + 5 GITAM-corridor rows + Tirupati description enrichment) is fully reviewed with live-DB collision/baseline guards all green and is ONE user approval away from execution — nothing was written to production beyond the disclosed test account.
+
+---
+Task ID: batch009-export-only-no-execution
+Agent: Z.ai Code (main)
+Task: Export the EXACT current supabase/insert-batch-009-p3-places.sql as a downloadable attachment together with the complete research worksheet and source evidence manifest. Do NOT execute the SQL; report SHA-256/lines/bytes; confirm no database writes.
+
+Work Log:
+- BATCH-009 NOT EXECUTED — instruction respected. Zero database writes of any kind during this export.
+- INTEGRITY: working-tree SQL verified byte-identical to git HEAD (4d06af5) — git diff empty; sha256sum(working tree) == sha256sum(git show HEAD:…) = 79b892d9103320e7a232425e5a1ec295ee34d2cec9366c8cde174724a232b8ee; 491 lines; 22,155 bytes. File NOT regenerated/modified/truncated — copies made with cp and proven identical with cmp.
+- EXPORT PACK (public/foodie-export/ + ZIP, git-excluded via .git/info/exclude, 76 files): sql/insert-batch-009-p3-places.sql (byte-exact); worksheet/places-p3.json (COMPLETE worksheet — all 35 researched candidates, byte-exact, 3382bb76…); worksheet/approved-14-rows.json (DERIVED, clearly labeled: the 14 approved rows with per-row provenance/evidence/worksheet cross-reference/evidence-file mapping, built by read-only parsing of gen-insert-batch-009.ts ROWS + the worksheet; every row matched, 9 Tirupati + 5 GITAM); generator/gen-insert-batch-009.ts (byte-exact — documents all 14 approvals + 21 exclusions incl. Epicruise/Hangouts identity negatives); pipeline/research-places-p3.ts (byte-exact); evidence/places-p3/ — all 69 raw evidence JSONs byte-exact; MANIFEST.sha256 (75 entries, sha256sum -c verifiable); README.md (status PROPOSED/NOT EXECUTED, verification instructions, guard summary).
+- ZIP: foodie-batch009-review-pack.zip = 76321aa3c97ea97fe414b3f9e46d638537d85c37d32d091853711bb478e54739 (unzip -t: no errors).
+- DELIVERY VERIFICATION: all five individually served files (zip, sql, worksheet, extract, manifest) downloaded back over HTTP from the dev server and cmp-verified BYTE-IDENTICAL to the staged copies.
+- NO-WRITE PROOF (read-only PostgREST GETs only): restaurants count 0-0/77, dishes 0-0/25, p3-research-import marker rows = 0 — exactly the pre-export audited state. No auth.rows created this session either.
+
+Stage Summary:
+- Batch-009 delivered for review, byte-exact and checksum-verified, execution still blocked pending explicit user approval; live database untouched at 77 restaurants / 25 menu items / 0 marker rows.
