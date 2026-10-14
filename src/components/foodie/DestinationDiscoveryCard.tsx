@@ -35,10 +35,11 @@
  */
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { MapPin, RefreshCw, Search, X } from "lucide-react";
+import { ArrowRight, MapPin, RefreshCw, X } from "lucide-react";
 import { haversineKm } from "@/lib/foodie/location";
 import type { GeoPosition } from "@/lib/foodie/types";
 import type { Destination, DestinationFood, DestinationFoodDesignation } from "@/lib/foodie/types";
+import { useFoodieStore } from "@/lib/foodie/store";
 import { useLocationStore } from "@/lib/foodie/locationStore";
 import {
   useDestinationFoods,
@@ -116,7 +117,7 @@ function sortFoods(foods: readonly DestinationFood[]): DestinationFood[] {
   });
 }
 
-export function DestinationDiscoveryCard({ className, onFindFoodPlaces }: { className?: string; /** Destination → Famous Food → Places handoff: search the REAL place pool for a food's name (honest empty state when nothing matches). */ onFindFoodPlaces?: (foodName: string) => void }) {
+export function DestinationDiscoveryCard({ className }: { className?: string }) {
   const { status, destinations } = useDestinations();
   // Read-only subscription — this component never writes location state.
   const origin = useLocationStore((s) => s.origin);
@@ -197,7 +198,6 @@ export function DestinationDiscoveryCard({ className, onFindFoodPlaces }: { clas
             onRetryFoods={foodsState.reload}
             onAutoCollapse={dismiss}
             onDismiss={dismiss}
-            onFindFoodPlaces={onFindFoodPlaces}
           />
         </div>
       )}
@@ -251,7 +251,6 @@ function FamousHereCard({
   onRetryFoods,
   onAutoCollapse,
   onDismiss,
-  onFindFoodPlaces,
 }: {
   source: "detected" | "selected";
   destination: Destination;
@@ -261,8 +260,9 @@ function FamousHereCard({
   onRetryFoods: () => void;
   onAutoCollapse: () => void;
   onDismiss: () => void;
-  onFindFoodPlaces?: (foodName: string) => void;
 }) {
+  const openDestination = useFoodieStore((s) => s.openDestination);
+  const openDestinationFood = useFoodieStore((s) => s.openDestinationFood);
   // Auto-collapse — one timer per PRESENTATION INSTANCE: the parent keys
   // this component by presentation.key, so every show event remounts it and
   // restarts the timer. setState fires from the timeout callback (async),
@@ -284,6 +284,18 @@ function FamousHereCard({
             {destination.name}
             {destination.region ? `, ${destination.region}` : ""}
           </p>
+          <button
+            type="button"
+            onClick={() => {
+              onDismiss();
+              openDestination(destination.id);
+            }}
+            aria-label={`Open the ${destination.name} destination page`}
+            className="mt-1 inline-flex items-center gap-1 rounded-full bg-white/80 px-2.5 py-1 text-[10.5px] font-bold text-primary shadow-sm transition-all hover:bg-white active:scale-95"
+          >
+            Explore destination
+            <ArrowRight className="size-3" aria-hidden="true" />
+          </button>
           {destination.description && (
             <p className="mt-0.5 line-clamp-2 text-[12px] leading-snug text-muted-foreground">
               {destination.description}
@@ -330,12 +342,6 @@ function FamousHereCard({
       ) : (
         <ul className="mt-3 space-y-2">
           {foods.map((f) => {
-            const findPlaces = onFindFoodPlaces
-              ? () => {
-                  onFindFoodPlaces(f.name);
-                  onDismiss();
-                }
-              : undefined;
             return (
               <li key={f.id} className="rounded-2xl bg-white/80 px-3 py-2.5 shadow-sm">
                 <div className="flex items-center justify-between gap-2">
@@ -358,17 +364,18 @@ function FamousHereCard({
                     {f.description}
                   </p>
                 )}
-                {findPlaces && (
-                  <button
-                    type="button"
-                    onClick={findPlaces}
-                    aria-label={`Search Foodie for places serving ${f.name}`}
-                    className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-white px-3 py-1.5 text-[11.5px] font-bold text-primary shadow-sm transition-all hover:bg-orange-50 active:scale-95"
-                  >
-                    <Search className="size-3" aria-hidden="true" />
-                    Find places
-                  </button>
-                )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    onDismiss();
+                    openDestinationFood(f.id, destination.id);
+                  }}
+                  aria-label={`Explore places serving ${f.name}`}
+                  className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-white px-3 py-1.5 text-[11.5px] font-bold text-primary shadow-sm transition-all hover:bg-orange-50 active:scale-95"
+                >
+                  <MapPin className="size-3" aria-hidden="true" />
+                  Explore places
+                </button>
               </li>
             );
           })}

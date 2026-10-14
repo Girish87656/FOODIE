@@ -191,6 +191,28 @@ export async function getSupabaseRestaurantsByCategory(category: string): Promis
     .filter(isDiscoverable);
 }
 
+/**
+ * Every discoverable place recorded in ONE city (case-insensitive match on
+ * restaurants.city). The reusable multi-area primitive: a destination is
+ * browsed through its own city rows — never a hardcoded place list. Used by
+ * /api/destinations/[id]/places (Prototype 3 Area A: Tirupati).
+ */
+export async function getSupabaseRestaurantsByCity(city: string): Promise<Place[]> {
+  const safe = city.trim();
+  if (!safe) return [];
+  const sb = requireClient();
+  const { data, error } = await sb
+    .from("restaurants")
+    .select("*")
+    .ilike("city", safe)
+    .order("rating", { ascending: false })
+    .limit(200);
+  if (error) throw new Error(error.message);
+  return ((data ?? []) as RestaurantRow[])
+    .map((row) => restaurantRowToPlace(row))
+    .filter(isDiscoverable);
+}
+
 export async function searchSupabaseRestaurants(query: string): Promise<Place[]> {
   const sb = requireClient();
   // PostgREST `.or()` treats `,` `(` `)` as syntax — strip them along with
@@ -277,6 +299,48 @@ export async function getSupabaseDestinationFoods(destinationId: string): Promis
     .order("name", { ascending: true });
   if (error) throw new Error(error.message);
   return ((data ?? []) as DestinationFoodRow[]).map(destinationFoodRowToFood);
+}
+
+/**
+ * ONE destination food plus the CURATED places serving it.
+ *
+ * Honesty rules (migration-004): places come ONLY from explicit
+ * `destination_food_places` links — never inferred from category, name or
+ * cuisine similarity. An unknown food id yields food:null (the route turns
+ * that into a 404); a known food with zero links yields an honest empty
+ * list. Random nearby restaurants are NEVER substituted.
+ */
+export async function getSupabaseDestinationFoodPlaces(
+  foodId: string
+): Promise<{ food: DestinationFood | null; places: Place[] }> {
+  if (!isUuid(foodId)) return { food: null, places: [] };
+  const sb = requireClient();
+
+  const foodRes = await sb
+    .from("destination_foods")
+    .select("*")
+    .eq("id", foodId)
+    .maybeSingle();
+  if (foodRes.error) throw new Error(foodRes.error.message);
+  if (!foodRes.data) return { food: null, places: [] };
+  const food = destinationFoodRowToFood(foodRes.data as DestinationFoodRow);
+
+  // Inner join to restaurants via the FK — PostgREST returns the linked
+  // restaurant row nested under `restaurants` for each link row.
+  const linkRes = await sb
+    .from("destination_food_places")
+    .select("*, restaurants(*)")
+    .eq("destination_food_id", foodId)
+    .order("created_at", { ascending: true });
+  if (linkRes.error) throw new Error(linkRes.error.message);
+
+  const places = ((linkRes.data ?? []) as Array<{ restaurants: RestaurantRow | null }>)
+    .map((row) => row.restaurants)
+    .filter((r): r is RestaurantRow => r != null)
+    .map((row) => restaurantRowToPlace(row))
+    .filter(isDiscoverable);
+
+  return { food, places };
 }
 
 /* ------------------------------------------------------------------ */

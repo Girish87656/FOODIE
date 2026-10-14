@@ -231,6 +231,34 @@ export interface DestinationFoodsResponse {
   notice?: string;
 }
 
+/**
+ * GET /api/destination-foods/[id]/places — one destination food plus the
+ * CURATED real places serving it (evidence-gated `destination_food_places`
+ * links; migration-004). `food` is null when the id is unknown (the route
+ * turns that into a 404); zero links is an honest empty list.
+ */
+export interface DestinationFoodPlacesResponse {
+  mode: DataMode;
+  food: DestinationFood | null;
+  places: Place[];
+  notice?: string;
+}
+
+/**
+ * GET /api/destinations/[id]/places — every discoverable place recorded in
+ * the destination's OWN city (restaurants.city matched case-insensitively
+ * against destinations.name). This is the reusable multi-area browser: the
+ * same query serves Tirupati (Area A) and any future destination without
+ * hardcoding a city anywhere. `destination` is null when the id is unknown.
+ * Zero rows is an honest empty state — nothing is ever substituted.
+ */
+export interface DestinationPlacesResponse {
+  mode: DataMode;
+  destination: Destination | null;
+  places: Place[];
+  notice?: string;
+}
+
 /** Hard limits shared by the client form, the write layer and the DB check. */
 export const REVIEW_TEXT_MIN_LENGTH = 1;
 export const REVIEW_TEXT_MAX_LENGTH = 2000;

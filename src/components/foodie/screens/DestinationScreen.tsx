@@ -10,19 +10,38 @@
  */
 
 import { useEffect } from "react";
-import { ArrowLeft, Compass, RefreshCw, SearchX } from "lucide-react";
+import { ArrowLeft, Compass, MapPin, RefreshCw, SearchX } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
-import { useDestinationDetail } from "@/lib/foodie/data/useDestinationFeed";
+import {
+  useDestinationDetail,
+  useDestinationPlaces,
+} from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
+import { ListRow } from "../PlaceCards";
 import { Skeleton } from "@/components/ui/skeleton";
+import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
+import { useLocationStore } from "@/lib/foodie/locationStore";
+import { haversineKm } from "@/lib/foodie/location";
 
 export function DestinationScreen() {
   const destinationId = useFoodieStore((s) => s.selectedDestinationId);
   const screen = useFoodieStore((s) => s.screen);
   const backFromDestination = useFoodieStore((s) => s.backFromDestination);
   const openDestinationFood = useFoodieStore((s) => s.openDestinationFood);
+  const openPlace = useFoodieStore((s) => s.openPlace);
 
   const detail = useDestinationDetail(destinationId);
+  const placesFeed = useDestinationPlaces(destinationId);
+  const origin = useLocationStore((s) => s.origin);
+
+  // Real distance from the user's actual origin — the same Haversine rule as
+  // every other list. Coordinate-less places keep NO distance and show their
+  // honest "Location pending verification" state instead of a guessed number.
+  const annotatedPlaces = placesFeed.places.map<PlaceMaybeWithDistance>((p) =>
+    p.latitude != null && p.longitude != null
+      ? { ...p, distanceKm: haversineKm(origin, { lat: p.latitude, lng: p.longitude }) }
+      : p
+  );
 
   // No selection → there is nothing honest to show; return home. The screen
   // check keeps this guard from firing while this screen is merely EXITING
@@ -174,6 +193,69 @@ export function DestinationScreen() {
                         </span>
                       </span>
                     </button>
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* ---------------- places in this destination ---------------- */}
+            {/* The reusable multi-area browser: every discoverable place
+                recorded in this destination's OWN city (Area A: Tirupati
+                hotels, restaurants, cafés…). Nothing is hardcoded and zero
+                rows render the honest "not curated yet" state — places from
+                other cities are never mixed in. */}
+            <section className="mt-6">
+              <div className="px-5">
+                <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
+                  <MapPin className="size-4 text-primary" aria-hidden="true" /> Places in{" "}
+                  {detail.destination.name}
+                </h2>
+                <p className="mt-0.5 text-[12.5px] text-muted-foreground">
+                  Verified listings for this area — hotels, eateries and more
+                </p>
+              </div>
+
+              {placesFeed.status === "loading" && (
+                <div className="mt-4 space-y-2.5 px-5" aria-busy="true" aria-live="polite">
+                  {[0, 1].map((i) => (
+                    <Skeleton key={i} className="h-20 w-full rounded-2xl" />
+                  ))}
+                </div>
+              )}
+
+              {placesFeed.status === "error" && (
+                <div className="mx-5 mt-4 rounded-3xl border border-dashed border-rose-200 bg-rose-50/50 px-6 py-8 text-center">
+                  <p className="text-[13.5px] font-bold text-foreground">
+                    Couldn&apos;t load places for this destination
+                  </p>
+                  <button
+                    type="button"
+                    onClick={placesFeed.reload}
+                    className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-[12.5px] font-bold text-white shadow-md shadow-orange-600/25 transition-all hover:bg-primary/90 active:scale-95"
+                  >
+                    <RefreshCw className="size-3.5" aria-hidden="true" />
+                    Try again
+                  </button>
+                </div>
+              )}
+
+              {placesFeed.status === "ready" && placesFeed.places.length === 0 && (
+                <div className="mx-5 mt-4 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-10 text-center">
+                  <Compass className="size-9 text-stone-300" aria-hidden="true" />
+                  <p className="mt-3 text-[15px] font-bold text-foreground">
+                    No places recorded in {detail.destination.name} yet
+                  </p>
+                  <p className="mt-1 max-w-[280px] text-[13px] leading-snug text-muted-foreground">
+                    Foodie lists only verified listings — the next curated data pass
+                    will add this area&apos;s places.
+                  </p>
+                </div>
+              )}
+
+              {placesFeed.status === "ready" && placesFeed.places.length > 0 && (
+                <div className="mt-4 space-y-2.5 px-5">
+                  {annotatedPlaces.map((p) => (
+                    <ListRow key={p.id} place={p} onSelect={openPlace} />
                   ))}
                 </div>
               )}

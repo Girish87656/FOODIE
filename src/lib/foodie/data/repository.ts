@@ -12,7 +12,9 @@
  */
 
 import type {
+  DestinationFoodPlacesResponse,
   DestinationFoodsResponse,
+  DestinationPlacesResponse,
   DestinationsResponse,
   NearbyRestaurantsResponse,
   RestaurantDetailResponse,
@@ -124,5 +126,27 @@ export async function getDestinations(): Promise<DestinationsResponse> {
 export async function getDestinationFoods(destinationId: string): Promise<DestinationFoodsResponse> {
   return request<DestinationFoodsResponse>(
     `/api/destinations/${encodeURIComponent(destinationId)}/foods`
+  );
+}
+
+/**
+ * One destination food plus its CURATED places (evidence-gated links).
+ * A 404 (unknown food id) throws a DataAccessError; zero links is an
+ * honest empty list — nothing is ever substituted.
+ */
+export async function getDestinationFoodPlaces(foodId: string): Promise<DestinationFoodPlacesResponse> {
+  return request<DestinationFoodPlacesResponse>(
+    `/api/destination-foods/${encodeURIComponent(foodId)}/places`
+  );
+}
+
+/**
+ * Every discoverable place recorded in a destination's OWN city — the
+ * reusable multi-area browser. A 404 (unknown destination id) throws;
+ * zero rows is an honest empty state.
+ */
+export async function getDestinationPlaces(destinationId: string): Promise<DestinationPlacesResponse> {
+  return request<DestinationPlacesResponse>(
+    `/api/destinations/${encodeURIComponent(destinationId)}/places`
   );
 }

@@ -12,6 +12,8 @@ import { EatingWithContextScreen } from "./screens/EatingWithContextScreen";
 import { PreferencesScreen } from "./screens/PreferencesScreen";
 import { HomeScreen } from "./screens/HomeScreen";
 import { PlaceDetailScreen } from "./screens/PlaceDetailScreen";
+import { DestinationScreen } from "./screens/DestinationScreen";
+import { DestinationFoodScreen } from "./screens/DestinationFoodScreen";
 
 const SCREENS: Record<Screen, React.ComponentType> = {
   splash: SplashScreen,
@@ -20,6 +22,8 @@ const SCREENS: Record<Screen, React.ComponentType> = {
   "onboarding-prefs": PreferencesScreen,
   home: HomeScreen,
   detail: PlaceDetailScreen,
+  destination: DestinationScreen,
+  food: DestinationFoodScreen,
 };
 
 /** Desktop-only side branding shown next to the phone mockup */
@@ -75,7 +79,7 @@ export function FoodieApp() {
   // Keep the browser tab title honest with the current context
   useEffect(() => {
     document.title =
-      screen === "home" || screen === "detail"
+      screen === "home" || screen === "detail" || screen === "destination" || screen === "food"
         ? "Foodie — Discover"
         : "Foodie — Your Personal Food Companion";
   }, [screen]);

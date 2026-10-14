@@ -14,7 +14,9 @@
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import type {
   DataMode,
+  DestinationFoodPlacesResponse,
   DestinationFoodsResponse,
+  DestinationPlacesResponse,
   DestinationsResponse,
   NearbyRestaurantsResponse,
   RestaurantDetailResponse,
@@ -152,6 +154,49 @@ export async function loadDestinationFoods(destinationId: string): Promise<Desti
     }
   }
   return { mode: "demo", destination: null, foods: [], notice: DEMO_MODE_NOTICE };
+}
+
+/**
+ * One destination food plus its CURATED places (evidence-gated links).
+ * `food: null` → the route responds 404; zero links is an honest empty list
+ * (random nearby restaurants are NEVER substituted — migration-004 rule).
+ * There is deliberately NO demo fallback: fabricating "places serving X"
+ * would break the honesty contract, so failures yield an empty list + notice.
+ */
+export async function loadDestinationFoodPlaces(
+  foodId: string
+): Promise<DestinationFoodPlacesResponse> {
+  if (isSupabaseConfigured()) {
+    try {
+      const result = await supabase.getSupabaseDestinationFoodPlaces(foodId);
+      return { mode: "supabase", ...result };
+    } catch (error) {
+      console.error("[foodie/data] Supabase destination-food-places query failed:", error);
+      return { mode: "supabase", food: null, places: [], notice: SUPABASE_ERROR_NOTICE };
+    }
+  }
+  return { mode: "demo", food: null, places: [], notice: DEMO_MODE_NOTICE };
+}
+
+/**
+ * Every discoverable place recorded in a destination's OWN city — the
+ * reusable multi-area browser behind the destination screen (Area A:
+ * Tirupati). `destination: null` → the route responds 404; zero rows is an
+ * honest empty state until verified data is curated for that city.
+ */
+export async function loadDestinationPlaces(destinationId: string): Promise<DestinationPlacesResponse> {
+  if (isSupabaseConfigured()) {
+    try {
+      const destination = await supabase.getSupabaseDestination(destinationId);
+      if (!destination) return { mode: "supabase", destination: null, places: [] };
+      const places = await supabase.getSupabaseRestaurantsByCity(destination.name);
+      return { mode: "supabase", destination, places };
+    } catch (error) {
+      console.error("[foodie/data] Supabase destination-places query failed:", error);
+      return { mode: "supabase", destination: null, places: [], notice: SUPABASE_ERROR_NOTICE };
+    }
+  }
+  return { mode: "demo", destination: null, places: [], notice: DEMO_MODE_NOTICE };
 }
 
 /**

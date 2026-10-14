@@ -541,17 +541,9 @@ export function HomeScreen() {
             </motion.section>
 
             {/* destination discovery — Famous here card + destination chips.
-                Tapping a famous food hands off to the real search pool
-                (honest results or honest empty state — never invented). */}
-            <DestinationDiscoveryCard
-              className="mt-4"
-              onFindFoodPlaces={(foodName) => {
-                setSearchQuery(foodName);
-                document
-                  .querySelector("main")
-                  ?.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            />
+                Tapping a famous food opens the destination-food screen
+                (curated places, honest empty state — never invented). */}
+            <DestinationDiscoveryCard className="mt-4" />
 
             {dbEmpty ? (
               <EmptyDatabaseCard mode={feed.mode} />
