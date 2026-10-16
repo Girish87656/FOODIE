@@ -1,0 +1,646 @@
+diff --git a/supabase/insert-batch-009-p3-places.sql b/supabase/review-candidates/insert-batch-009-p3-places-revised.sql
+index fd337e5..001f98b 100644
+--- a/supabase/insert-batch-009-p3-places.sql
++++ b/supabase/review-candidates/insert-batch-009-p3-places-revised.sql
+@@ -1,54 +1,124 @@
+ -- ============================================================================
+--- Foodie — INSERT BATCH 009: Prototype 3 verified places (14 rows)
+---             Area A: Tirupati, Andhra Pradesh (9)
+---             Area B expansion: GITAM–Doddaballapura corridor (5)
++-- Foodie — INSERT BATCH 009 (REV 2 REVIEW CANDIDATE): Prototype 3 researched
++--          places (9 rows) — Area A: Tirupati, Andhra Pradesh (6)
++--          + Area B expansion: GITAM–Doddaballapura corridor (3)
+ -- ----------------------------------------------------------------------------
+--- STATUS:  PROPOSED — generated from worksheets/places-p3.json + the documented
+---          human-review decisions in scripts/foodie-enrichment/gen-insert-batch-009.ts.
+---          The research pipeline has NO database write path: this file runs ONLY
+---          via Supabase Dashboard -> SQL Editor after explicit user approval.
+---          Re-runs are no-ops? NO — fixed ids make a partial re-run FAIL the
+---          preflight duplicate guard and abort (by design: nothing partial).
++-- FILE STATUS: REVIEW CANDIDATE — PROPOSED, NOT EXECUTED, NOT APPROVED.
++--   This file lives in supabase/review-candidates/ and does NOT overwrite the
++--   original supabase/insert-batch-009-p3-places.sql (untouched, hash-verified).
++--   Unified diff vs original: supabase/review-candidates/insert-batch-009-p3-places-revised.diff
++--   Review report:            supabase/review-candidates/insert-batch-009-p3-places-review.md
+ --
+--- HONESTY CONTRACT (identical to batches 005-008):
++-- WHY REV 2 (audit-driven revision of the 14-row REV 1 batch):
++--   9 of the 14 reviewed rows are RETAINED; 5 rows are HELD OUT because their
++--   captured evidence does not adequately support the stored city/address
++--   (no data was changed to force-fit them; no evidence was silently resolved):
++--     HELD OUT (id / name / primary reason):
++--       82d96f9c-4e2b-553b-9e4e-daa34b52499e  Lake Valley Resort and Spa
++--         Evidence points to Bhakarapeta / Chinnagottigallu mandal 517194,
++--         Chittoor district (makemytrip "chinnagottiigallu mandal 517194",
++--         trip.com "Bhakarapeta, Chittoor District", tripadvisor
++--         "Chittecherla 517194", hotels.com "Chinnagottigallu"); the stored
++--         city 'Tirupati' and the "Talakona Road" address element are NOT
++--         adequately supported. Held until location + geographic
++--         classification are resolved.
++--       4b931ad7-85af-5261-800f-9305d38ad281  Tirumala Cake House
++--         Worksheet: "AREA NOT CONFIRMED"; identity verification returned
++--         zero search results. Held until identity/area is established.
++--       a3afcb24-f111-5f01-b56b-cec6a450dc64  Lunchbox - Meals & Thalis
++--         Worksheet: "AREA NOT CONFIRMED"; evidence is URL/title-level only.
++--         Held until identity/area is established.
++--       8f5b6b55-4ce9-5dda-810b-137fb2667ab6  Desi Family Dhaba And Restaurant
++--         Worksheet: "AREA NOT CONFIRMED"; proximity to GITAM/Nagadenahalli
++--         rests on a typo'd listing URL slug, not independently established.
++--         Held until location is established.
++--       9dcb300e-74d7-5843-92aa-ec3736b48c0d  Home's Kitchen
++--         Verification was rate-limited (no results); stored locality is
++--         coarser than available discovery evidence. Held until identity and
++--         location are independently established.
++--   Source artifacts for all 5 held rows are NOT deleted: worksheet
++--   scripts/foodie-enrichment/worksheets/places-p3.json, evidence
++--   scripts/foodie-enrichment/evidence/places-p3/, generator
++--   scripts/foodie-enrichment/gen-insert-batch-009.ts.
++--   Identity negatives unchanged from REV 1: Epicruise (MCA-registered
++--   trading company, not a food business) and Hangouts (a Hassan restaurant
++--   ~200 km away) remain excluded — included only IF ever verified.
++--
++-- BASELINE PRECONDITION (STALE BY CONSTRUCTION — must be revalidated):
++--   The number 77 below is a HISTORICAL value from earlier read-only probes
++--   (post-batch-008 state). It is NOT a live measurement: this revision made
++--   no database connection. Immediately BEFORE any future execution, re-run
++--   read-only probes (total count, per-city counts, marker count, name and
++--   UUID collisions, tirupati destination row) and re-confirm each PREFLIGHT
++--   expectation. If the live world differs from these preconditions, the
++--   candidate aborts by design — do NOT edit the numbers to make it pass.
++--   Derived expectations (assumptions inherited from the REV 1 audit):
++--     pre-existing restaurants        : 77  (precondition, stale)
++--     newly inserted candidate rows   : 9
++--     final expected total            : 86  (= 77 + 9, logical derivation)
++--     Tirupati final                  : 6   (= assumed 0 baseline + 6 new)
++--     Doddaballapura final            : 80  (= assumed 77 baseline + 3 new)
++--   The per-city baselines (Tirupati 0 / Doddaballapura 77) are the REV 1
++--   audited splits, carried forward as assumptions — not live values.
++--
++-- RERUN BEHAVIOR (intentionally NOT rerunnable):
++--   After one successful commit, a second run of this file FAILS PREFLIGHT
++--   (baseline no longer 77; the 9 names now exist; marker rows now 9) and
++--   aborts with ZERO writes. Nothing partial is ever written.
++--
++-- HONESTY CONTRACT (unchanged from batches 005-008 / REV 1):
+ --   * Every row carries its OWN source_url (official brand page where one
+ --     exists, else the researched listing page — which is also the menu
+ --     source link for food businesses).
+ --   * verification_status is 'unverified' on every row — an import NEVER
+ --     self-verifies; verification timestamps/booleans stay NULL.
++--   * These 9 rows are source-linked LISTINGS, not independently verified
++--     businesses; stored addresses are not field-verified.
+ --   * rating 0 = "not captured" (the UI renders no rating badge for 0).
+ --   * price_level '₹₹' is the documented neutral default where the listing
+ --     evidence carried no usable band.
+ --   * latitude/longitude NULL by design (never estimated); the UI shows the
+ --     honest "Location pending verification" state and directions work via
+ --     the name+address Google Maps search URL.
+---   * NO dish rows: no snippet carried exact item+price evidence. The
+---     place-level source link is the menu source; structured dishes land
+---     only from reviewed menu evidence in a later batch.
+---   * NO photos: no license-verified, identity-correct photo exists (344
+---     candidates / 0 approved in the deep pass; nothing fabricated here).
+---   * Epicruise and Hangouts: verified NOT to exist as food businesses in
+---     the corridor (Epicruise = a trading company per the MCA registry hit;
+---     Hangouts = a Hassan restaurant ~200 km away + unrelated hits). The
+---     requirement conditioned their inclusion on identity verification —
+---     they failed it, with the evidence recorded in the worksheet.
++--   * NO dish rows and NO photos in this batch (unchanged from REV 1).
+ --
+--- TIRUPATI DESTINATION ENRICHMENT (Part 1b): the destinations row gains
+--- verified district information + the official TTD accommodation link
+--- (tirumala.org) captured during discovery. Single-row guarded UPDATE.
++-- TIRUPATI DESTINATION ENRICHMENT (Part 1b, candidate change): the
++--   destinations row description would gain the district information + the
++--   official TTD accommodation link (tirumala.org) captured during discovery.
++--   The phrase "verified-data pilot" from REV 1 (which could misleadingly
++--   imply verified restaurant records) becomes "source-linked pilot".
++--   LIMITATION: the CURRENT live description is unknown to this revision (no
++--   database access was made); the UPDATE replaces ONLY the description of
++--   the single preflight-asserted active tirupati row. Any other description
++--   content currently live is overwritten and cannot be preserved from here.
+ --
+--- GUARDS (REV 1):
+---   PREFLIGHT  — restaurants baseline must be exactly 77 (the audited
+---                post-batch-008 state); none of the 14 names may already
+---                exist (no duplicates); no row may already carry the
+---                p3-research-import marker; the Tirupati destination row
+---                must exist.
+---   POSTFLIGHT — all 14 fixed ids present with 'unverified' status and NULL
+---                coordinates; city counts exact (Tirupati 9, Doddaballapura
+---                82); no verification timestamp/boolean set; destinations
+---                description updated exactly once. ANY violation RAISES →
+---                the trailing COMMIT becomes a full ROLLBACK; NOTHING is
+---                written.
++-- GUARDS (REV 2):
++--   PREFLIGHT  — restaurants baseline must be exactly 77 (STALE PRECONDITION,
++--                revalidate before execution); none of the 9 retained names
++--                may already exist; none of the 9 fixed UUIDs may already
++--                exist (UUID collision check is NEW in REV 2); no row may
++--                already carry the p3-research-import marker; EXACTLY ONE
++--                row with slug 'tirupati' must exist and it must be active
++--                (count-based exact-one assertion — NEW in REV 2, replacing
++--                the non-STRICT SELECT INTO probe).
++--   POSTFLIGHT — the exact 9-id set present; every row 'unverified'; every
++--                latitude/longitude NULL; every verification timestamp and
++--                boolean (last_verified_at, address_verified,
++--                coordinates_verified, hours_verified, photos_verified —
++--                columns per committed migration-005) NULL (NEW in REV 2);
++--                every row carries the p3-research-import marker and a
++--                populated source_url (NEW in REV 2); every row keeps the
++--                rating-0 / '₹₹' defaults (NEW in REV 2); totals exact
++--                (86 = 77 + 9; Tirupati 6; Doddaballapura 80); destination
++--                exactly one active 'tirupati' row carrying the proposed
++--                description. ANY violation RAISES → the trailing COMMIT
++--                never runs → full ROLLBACK; NOTHING is written.
++--   SCHEMA NOTE — guard columns come from committed project artifacts only
++--                (schema.sql, migration-001/003/005, executed batch-002's
++--                documented lat/lng ALTER). If the target database has NOT
++--                applied migration-005, the postflight fails with
++--                "column does not exist" and aborts — the conservative
++--                failure mode. No live schema was probed for this revision.
+ -- ============================================================================
+ 
+ begin;
+@@ -60,57 +130,92 @@ do $$
+ declare
+   v_count integer;
+   v_dupes integer;
++  v_id_hits integer;
+   v_markers integer;
+-  v_dest text;
++  v_dest_total integer;
++  v_dest_active integer;
++  v_dest_name text;
+ begin
+-  -- (a) baseline: exactly the audited 77-restaurant state
++  -- (a) baseline: exactly the (historically) audited 77-restaurant state.
++  --     STALE PRECONDITION — revalidate with a read-only probe immediately
++  --     before execution; never edit this number to admit a changed world.
+   select count(*) into v_count from public.restaurants;
+   if v_count <> 77 then
+-    raise exception 'PREFLIGHT FAIL: restaurants row count is %, expected exactly 77 (the audited baseline). The table changed outside this review — re-run the review before importing.', v_count;
++    raise exception 'PREFLIGHT FAIL: restaurants row count is %, expected exactly 77 (the historical post-batch-008 precondition). The table changed outside this review — re-run the full review (including per-city counts, marker and collision probes) before importing.', v_count;
+   end if;
+-  raise notice 'PREFLIGHT OK: restaurants baseline = 77.';
++  raise notice 'PREFLIGHT OK: restaurants baseline = 77 (stale precondition matched).';
+ 
+-  -- (b) no duplicates: none of the 14 names may already exist (any city)
++  -- (b) no name collisions: none of the 9 RETAINED names may already exist (any city)
+   select count(*) into v_dupes from public.restaurants
+    where lower(btrim(name)) in (
+             lower(btrim('Holiday Inn Tirupati Tirumala')),
+-            lower(btrim('Lake Valley Resort and Spa')),
+             lower(btrim('Starlit Suites')),
+             lower(btrim('Tirupati Foods')),
+             lower(btrim('Ni Cake World')),
+-            lower(btrim('Tirumala Cake House')),
+-            lower(btrim('Lunchbox - Meals & Thalis')),
+             lower(btrim('Ps4 Restaurant')),
+             lower(btrim('The 99 Pizza')),
+-            lower(btrim('Desi Family Dhaba And Restaurant')),
+             lower(btrim('Nanjundeshwara Bakery & Sweets')),
+             lower(btrim('Kolkata Sweet & Foods')),
+-            lower(btrim('Kouzina Kafe - The Food Court')),
+-            lower(btrim('Home''s Kitchen'))
++            lower(btrim('Kouzina Kafe - The Food Court'))
+    );
+   if v_dupes <> 0 then
+-    raise exception 'PREFLIGHT FAIL: % of the 14 reviewed names already exist — importing would duplicate rows. Re-run the review.', v_dupes;
++    raise exception 'PREFLIGHT FAIL: % of the 9 retained names already exist — importing would duplicate rows. Re-run the review.', v_dupes;
++  end if;
++  raise notice 'PREFLIGHT OK: no name collisions with the 9 retained rows.';
++
++  -- (c) no UUID collisions: none of the 9 fixed ids may already exist
++  --     (NEW in REV 2 — REV 1 checked names only)
++  select count(*) into v_id_hits from public.restaurants
++   where id in (
++            '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
++            '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
++            '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
++            'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
++            '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
++            'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
++            '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
++            '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
++   );
++  if v_id_hits <> 0 then
++    raise exception 'PREFLIGHT FAIL: % of the 9 fixed UUIDs already exist — the batch (or an id-colliding row) was (partially) applied before. Re-run the review.', v_id_hits;
+   end if;
+-  raise notice 'PREFLIGHT OK: no name collisions with the 14 reviewed rows.';
++  raise notice 'PREFLIGHT OK: no UUID collisions with the 9 fixed ids.';
+ 
+-  -- (c) marker hygiene: no row already carries this batch's marker
++  -- (d) marker hygiene: no row already carries this batch's marker
+   select count(*) into v_markers from public.restaurants where source = 'p3-research-import';
+   if v_markers <> 0 then
+     raise exception 'PREFLIGHT FAIL: % row(s) already carry the p3-research-import marker — the batch was (partially) applied before. Re-run the review.', v_markers;
+   end if;
+   raise notice 'PREFLIGHT OK: p3-research-import marker unused.';
+ 
+-  -- (d) the Tirupati destination row must exist for the Part 1b enrichment
+-  select name into v_dest from public.destinations where slug = 'tirupati' and is_active;
+-  if v_dest is null then
+-    raise exception 'PREFLIGHT FAIL: the active tirupati destination row is missing — destination enrichment impossible.';
++  -- (e) destination guard (REV 2): EXACTLY ONE row with slug 'tirupati'
++  --     exists, and that row is active. Count-based assertions — no
++  --     non-STRICT SELECT INTO is used as an existence/exact-one probe.
++  --     (destinations.slug is UNIQUE per committed migration-003; the total
++  --     count is asserted explicitly anyway so a schema drift that dropped
++  --     the uniqueness would still abort rather than silently pass.)
++  select count(*) into v_dest_total from public.destinations where slug = 'tirupati';
++  if v_dest_total <> 1 then
++    raise exception 'PREFLIGHT FAIL: % destination rows carry slug ''tirupati'' (expected exactly 1) — aborting before the destination enrichment.', v_dest_total;
+   end if;
+-  raise notice 'PREFLIGHT OK: tirupati destination row present (%).', v_dest;
++  select count(*) into v_dest_active from public.destinations where slug = 'tirupati' and is_active;
++  if v_dest_active <> 1 then
++    raise exception 'PREFLIGHT FAIL: the tirupati destination row is not active — destination enrichment impossible.';
++  end if;
++  -- Safe here: exact-one-ness was just asserted by count, so this SELECT
++  -- cannot return 0 or multiple rows.
++  select name into v_dest_name from public.destinations where slug = 'tirupati' and is_active;
++  raise notice 'PREFLIGHT OK: exactly one active tirupati destination row present (%).', v_dest_name;
+ end
+ $$;
+ 
+ -- ---------------------------------------------------------------------------
+--- Part 1 — INSERTS (14 reviewed rows; fixed ids; full provenance)
++-- Part 1 — INSERTS (9 RETAINED rows; fixed ids; full provenance)
++--          Field values are copied VERBATIM from the REV 1 batch (which was
++--          generated from worksheets/places-p3.json + gen-insert-batch-009.ts).
++--          All 9 remain 'unverified' with NULL coordinates, rating 0 and the
++--          neutral '₹₹' price default.
+ -- ---------------------------------------------------------------------------
+ insert into public.restaurants
+   (id, name, category, address, city, locality, latitude, longitude, rating, price_level, opening_hours, phone, tags, source, source_url, verification_status)
+@@ -133,24 +238,6 @@ values
+     'https://www.ihg.com/holidayinn/hotels/us/en/tirupati/tirhi/hoteldetail',
+     'unverified'
+   ),
+-  (
+-    '82d96f9c-4e2b-553b-9e4e-daa34b52499e'::uuid,
+-    'Lake Valley Resort and Spa',
+-    'hotel',
+-    '1-1 Bhakarapata, Talakona Road, Tirupati, Andhra Pradesh',
+-    'Tirupati',
+-    'Bhakarapata',
+-    null,          -- coordinates are NEVER estimated (see header)
+-    null,
+-    0,             -- rating not captured (UI renders no badge for 0)
+-    '₹₹',          -- documented neutral default (see header)
+-    null,
+-    null,
+-    array['resort']::text[],
+-    'p3-research-import',
+-    'https://www.makemytrip.com/hotels/lake_valley_resort_and_spa_tirupati-details-tirupati.html',
+-    'unverified'
+-  ),
+   (
+     '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
+     'Starlit Suites',
+@@ -205,42 +292,6 @@ values
+     'https://www.justdial.com/Tirupati/Ni-Cake-world-Gandhi-Road/9999PX877-X877-220612015640-F1X6_BZDET',
+     'unverified'
+   ),
+-  (
+-    '4b931ad7-85af-5261-800f-9305d38ad281'::uuid,
+-    'Tirumala Cake House',
+-    'bakery_sweets',
+-    'Opposite Mahathi Imaging Diagnostics, Bhavani Nagar, Tirupati, Andhra Pradesh',
+-    'Tirupati',
+-    'Bhavani Nagar',
+-    null,          -- coordinates are NEVER estimated (see header)
+-    null,
+-    0,             -- rating not captured (UI renders no badge for 0)
+-    '₹₹',          -- documented neutral default (see header)
+-    null,
+-    null,
+-    array['bakery']::text[],
+-    'p3-research-import',
+-    'https://www.justdial.com/Tirupati/Tirumala-Cake-House-Opposite-Mahathi-Imaging-Diagnostics-Bhavani-Nagar/9999PX877-X877-240624122548-K3R9_BZDET',
+-    'unverified'
+-  ),
+-  (
+-    'a3afcb24-f111-5f01-b56b-cec6a450dc64'::uuid,
+-    'Lunchbox - Meals & Thalis',
+-    'restaurant',
+-    'Korlagunta, Tirupati, Andhra Pradesh',
+-    'Tirupati',
+-    'Korlagunta',
+-    null,          -- coordinates are NEVER estimated (see header)
+-    null,
+-    0,             -- rating not captured (UI renders no badge for 0)
+-    '₹₹',          -- documented neutral default (see header)
+-    null,
+-    null,
+-    array['meals_thali']::text[],
+-    'p3-research-import',
+-    'https://magicpin.in/Tirupati/Korlagunta/Restaurant/Lunchbox-Meals-and-Thalis/store/56a6b1',
+-    'unverified'
+-  ),
+   (
+     '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
+     'Ps4 Restaurant',
+@@ -277,24 +328,6 @@ values
+     'https://magicpin.in/Tirupati/Korlagunta/Restaurant/The-99-Pizza/store/1756a49',
+     'unverified'
+   ),
+-  (
+-    '8f5b6b55-4ce9-5dda-810b-137fb2667ab6'::uuid,
+-    'Desi Family Dhaba And Restaurant',
+-    'restaurant',
+-    'Near GITAM University, Nagadenahalli, Doddaballapur, Karnataka',
+-    'Doddaballapura',
+-    'Nagadenahalli',
+-    null,          -- coordinates are NEVER estimated (see header)
+-    null,
+-    0,             -- rating not captured (UI renders no badge for 0)
+-    '₹₹',          -- documented neutral default (see header)
+-    null,
+-    null,
+-    array['dhaba']::text[],
+-    'p3-research-import',
+-    'https://www.justdial.com/Bangalore/Desi-Family-Dhaba-And-Restaurant-Near-Gitam-University-Nagadenahalli-Nagadenahalii/080PXX80-XX80-251105213416-R8X7_BZDET',
+-    'unverified'
+-  ),
+   (
+     '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
+     'Nanjundeshwara Bakery & Sweets',
+@@ -348,88 +381,75 @@ values
+     'p3-research-import',
+     'https://www.zomato.com/doddaballapura/kouzina-kafe-the-food-court-doddaballapura-locality',
+     'unverified'
+-  ),
+-  (
+-    '9dcb300e-74d7-5843-92aa-ec3736b48c0d'::uuid,
+-    'Home''s Kitchen',
+-    'restaurant',
+-    'Doddaballapura Locality, Doddaballapura, Karnataka',
+-    'Doddaballapura',
+-    'Doddaballapura town',
+-    null,          -- coordinates are NEVER estimated (see header)
+-    null,
+-    0,             -- rating not captured (UI renders no badge for 0)
+-    '₹₹',          -- documented neutral default (see header)
+-    null,
+-    null,
+-    '{}'::text[],
+-    'p3-research-import',
+-    'https://www.zomato.com/doddaballapura/homes-kitchen-doddaballapura-locality',
+-    'unverified'
+   )
+ ;
+ 
+ -- ---------------------------------------------------------------------------
+--- Part 1b — Tirupati destination enrichment (single guarded UPDATE)
++-- Part 1b — Tirupati destination enrichment (candidate wording change)
++--   REV 1 said "verified-data pilot"; REV 2 says "source-linked pilot" (the
++--   9 imported rows are unverified source-linked listings — the destination
++--   text must not imply verified restaurant records).
++--   LIMITATION (documented, not hidden): the CURRENT live description is
++--   unknown to this revision (no DB access). This UPDATE deliberately
++--   touches ONLY the description of the single slug='tirupati' row that the
++--   preflight proved to exist and be active. Any unrelated description
++--   content currently live is overwritten; preservation of prior text is
++--   NOT claimed. The IS DISTINCT FROM guard keeps it a no-op when the
++--   description already equals the proposed text.
+ -- ---------------------------------------------------------------------------
+ update public.destinations
+-   set description = 'Tirupati district, Andhra Pradesh — temple town at the foothills of Tirumala, home to Sri Venkateswara Temple. Official accommodation information is published by TTD at tirumala.org (AccommodationAtTirupati). Foodie''s listing here is a verified-data pilot: every place records its own source link.'
++   set description = 'Tirupati district, Andhra Pradesh — temple town at the foothills of Tirumala, home to Sri Venkateswara Temple. Official accommodation information is published by TTD at tirumala.org (AccommodationAtTirupati). Foodie''s listing here is a source-linked pilot: every place records its own source link.'
+  where slug = 'tirupati'
+    and is_active
+-   and description is distinct from 'Tirupati district, Andhra Pradesh — temple town at the foothills of Tirumala, home to Sri Venkateswara Temple. Official accommodation information is published by TTD at tirumala.org (AccommodationAtTirupati). Foodie''s listing here is a verified-data pilot: every place records its own source link.';
++   and description is distinct from 'Tirupati district, Andhra Pradesh — temple town at the foothills of Tirumala, home to Sri Venkateswara Temple. Official accommodation information is published by TTD at tirumala.org (AccommodationAtTirupati). Foodie''s listing here is a source-linked pilot: every place records its own source link.';
+ 
+ -- ---------------------------------------------------------------------------
+ -- Part 2 — POSTFLIGHT: hard guards (any violation rolls back EVERYTHING)
+ -- ---------------------------------------------------------------------------
+ do $$
+ declare
+-  v_missing integer;
++  v_present integer;
+   v_not_unverified integer;
+   v_coords integer;
++  v_verify_fields integer;
++  v_source_bad integer;
++  v_defaults_bad integer;
++  v_total integer;
+   v_tirupati integer;
+   v_doddaballapura integer;
++  v_dest_active integer;
+   v_desc text;
+ begin
+-  -- (1) all 14 fixed ids present
+-  select count(*) into v_missing from public.restaurants
++  -- (1) exactly the 9 fixed ids present (id is the PK, so count 9 = set match)
++  select count(*) into v_present from public.restaurants
+    where id in (
+             '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
+-            '82d96f9c-4e2b-553b-9e4e-daa34b52499e'::uuid,
+             '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
+             '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
+             'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
+-            '4b931ad7-85af-5261-800f-9305d38ad281'::uuid,
+-            'a3afcb24-f111-5f01-b56b-cec6a450dc64'::uuid,
+             '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
+             'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
+-            '8f5b6b55-4ce9-5dda-810b-137fb2667ab6'::uuid,
+             '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
+             '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
+-            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid,
+-            '9dcb300e-74d7-5843-92aa-ec3736b48c0d'::uuid
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
+    );
+-  if v_missing <> 14 then
+-    raise exception 'POSTFLIGHT FAIL: % of the 14 batch rows are missing after apply — the import is incomplete; the transaction will roll back and nothing is written.', v_missing;
++  if v_present <> 9 then
++    raise exception 'POSTFLIGHT FAIL: % of the 9 batch rows are present after apply (expected exactly 9) — the import is incomplete; the transaction will roll back and nothing is written.', v_present;
+   end if;
+-  raise notice 'POSTFLIGHT OK: all 14 reviewed rows are present.';
++  raise notice 'POSTFLIGHT OK: all 9 retained rows are present.';
+ 
+   -- (2) verification status untouched
+   select count(*) into v_not_unverified from public.restaurants
+    where id in (
+             '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
+-            '82d96f9c-4e2b-553b-9e4e-daa34b52499e'::uuid,
+             '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
+             '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
+             'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
+-            '4b931ad7-85af-5261-800f-9305d38ad281'::uuid,
+-            'a3afcb24-f111-5f01-b56b-cec6a450dc64'::uuid,
+             '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
+             'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
+-            '8f5b6b55-4ce9-5dda-810b-137fb2667ab6'::uuid,
+             '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
+             '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
+-            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid,
+-            '9dcb300e-74d7-5843-92aa-ec3736b48c0d'::uuid
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
+    )
+      and verification_status is distinct from 'unverified';
+   if v_not_unverified <> 0 then
+@@ -441,19 +461,14 @@ begin
+   select count(*) into v_coords from public.restaurants
+    where id in (
+             '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
+-            '82d96f9c-4e2b-553b-9e4e-daa34b52499e'::uuid,
+             '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
+             '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
+             'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
+-            '4b931ad7-85af-5261-800f-9305d38ad281'::uuid,
+-            'a3afcb24-f111-5f01-b56b-cec6a450dc64'::uuid,
+             '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
+             'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
+-            '8f5b6b55-4ce9-5dda-810b-137fb2667ab6'::uuid,
+             '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
+             '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
+-            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid,
+-            '9dcb300e-74d7-5843-92aa-ec3736b48c0d'::uuid
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
+    )
+      and (latitude is not null or longitude is not null);
+   if v_coords <> 0 then
+@@ -461,31 +476,125 @@ begin
+   end if;
+   raise notice 'POSTFLIGHT OK: no coordinates were estimated.';
+ 
+-  -- (4) exact city counts: Area A = 9 new Tirupati rows, corridor = 77 + 5
++  -- (4) verification timestamp/booleans stayed NULL — REV 2 actually checks
++  --     this (REV 1 claimed it in comments but had no such check). Column
++  --     names per committed migration-005 (last_verified_at timestamptz;
++  --     address_verified / coordinates_verified / hours_verified /
++  --     photos_verified booleans, all nullable). If migration-005 was never
++  --     applied to the target database this block fails with
++  --     "column does not exist" and aborts — the conservative outcome.
++  select count(*) into v_verify_fields from public.restaurants
++   where id in (
++            '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
++            '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
++            '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
++            'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
++            '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
++            'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
++            '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
++            '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
++   )
++     and (last_verified_at is not null
++          or address_verified is not null
++          or coordinates_verified is not null
++          or hours_verified is not null
++          or photos_verified is not null);
++  if v_verify_fields <> 0 then
++    raise exception 'POSTFLIGHT FAIL: % batch row(s) carry verification timestamp/boolean values — an import never self-verifies; rolling back.', v_verify_fields;
++  end if;
++  raise notice 'POSTFLIGHT OK: no verification timestamp/boolean fields were set.';
++
++  -- (5) provenance landed: marker + populated source_url on every batch row
++  select count(*) into v_source_bad from public.restaurants
++   where id in (
++            '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
++            '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
++            '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
++            'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
++            '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
++            'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
++            '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
++            '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
++   )
++     and (source is distinct from 'p3-research-import'
++          or source_url is null
++          or btrim(source_url) = '');
++  if v_source_bad <> 0 then
++    raise exception 'POSTFLIGHT FAIL: % batch row(s) missing the p3-research-import marker or a populated source_url; rolling back.', v_source_bad;
++  end if;
++  raise notice 'POSTFLIGHT OK: marker + source_url present on all 9 rows.';
++
++  -- (6) intended defaults: rating 0 ("not captured") and neutral '₹₹' price
++  select count(*) into v_defaults_bad from public.restaurants
++   where id in (
++            '52a44755-9abc-5ee9-ba4b-7b05d78cbc5c'::uuid,
++            '471284c4-06f5-5e5c-8584-084068be5b96'::uuid,
++            '86841bb2-f380-5918-b656-224c79aeefa2'::uuid,
++            'fbe67c10-ea4b-5090-b435-5e3e7c75e560'::uuid,
++            '8fbd7a4d-917a-57e6-bc30-5d724a952407'::uuid,
++            'a868d3a5-81e6-59d3-9a08-dbcffd4d6172'::uuid,
++            '65f0aace-1a57-5cef-a64a-1fb59a55dbb8'::uuid,
++            '8dd66b9a-62b8-5843-b2b7-df2603c9dbc6'::uuid,
++            'c03a27e8-184b-5f81-b798-1c76a4a23d39'::uuid
++   )
++     and (rating is distinct from 0
++          or price_level is distinct from '₹₹');
++  if v_defaults_bad <> 0 then
++    raise exception 'POSTFLIGHT FAIL: % batch row(s) deviate from the intended rating-0 / ''₹₹'' defaults; rolling back.', v_defaults_bad;
++  end if;
++  raise notice 'POSTFLIGHT OK: rating 0 and price ''₹₹'' on all 9 rows.';
++
++  -- (7) exact totals — clearly labelled derivations, NOT live measurements:
++  --       total           86 = 77 (precondition baseline) + 9 (this batch)
++  --       Tirupati         6 = assumed 0 baseline + 6 new (REV 1 audited
++  --                          0 + 9; with 3 Tirupati rows held out → 6)
++  --       Doddaballapura  80 = assumed 77 baseline + 3 new (REV 1 audited
++  --                          77 + 5; with 2 corridor rows held out → 80)
++  --     If the live per-city baselines ever differ from the assumptions,
++  --     this candidate aborts by design — re-run the full review instead
++  --     of editing these numbers.
++  select count(*) into v_total from public.restaurants;
+   select count(*) into v_tirupati from public.restaurants where city = 'Tirupati';
+   select count(*) into v_doddaballapura from public.restaurants where city = 'Doddaballapura';
+-  if v_tirupati <> 9 then
+-    raise exception 'POSTFLIGHT FAIL: Tirupati city count is %, expected exactly 9; rolling back.', v_tirupati;
++  if v_total <> 86 then
++    raise exception 'POSTFLIGHT FAIL: total restaurants is %, expected exactly 86 (77 baseline precondition + 9 inserted); rolling back.', v_total;
+   end if;
+-  if v_doddaballapura <> 82 then
+-    raise exception 'POSTFLIGHT FAIL: Doddaballapura city count is %, expected exactly 82 (77 audited + 5 new); rolling back.', v_doddaballapura;
++  if v_tirupati <> 6 then
++    raise exception 'POSTFLIGHT FAIL: Tirupati city count is %, expected exactly 6 (assumed 0 baseline + 6 new; 3 evidence-weak rows held out); rolling back.', v_tirupati;
+   end if;
+-  raise notice 'POSTFLIGHT OK: Tirupati = 9, Doddaballapura = 82.';
++  if v_doddaballapura <> 80 then
++    raise exception 'POSTFLIGHT FAIL: Doddaballapura city count is %, expected exactly 80 (assumed 77 baseline + 3 new; 2 evidence-weak rows held out); rolling back.', v_doddaballapura;
++  end if;
++  raise notice 'POSTFLIGHT OK: total = 86 (77 + 9), Tirupati = 6, Doddaballapura = 80.';
+ 
+-  -- (5) the destination enrichment landed exactly once
+-  select description into v_desc from public.destinations where slug = 'tirupati';
+-  if v_desc is distinct from 'Tirupati district, Andhra Pradesh — temple town at the foothills of Tirumala, home to Sri Venkateswara Temple. Official accommodation information is published by TTD at tirumala.org (AccommodationAtTirupati). Foodie''s listing here is a verified-data pilot: every place records its own source link.' then
+-    raise exception 'POSTFLIGHT FAIL: the tirupati destination description was not updated as reviewed; rolling back.';
++  -- (8) destination enrichment landed on exactly the one active row
++  select count(*) into v_dest_active from public.destinations where slug = 'tirupati' and is_active;
++  if v_dest_active <> 1 then
++    raise exception 'POSTFLIGHT FAIL: expected exactly 1 active tirupati destination row, found %; rolling back.', v_dest_active;
++  end if;
++  -- Safe here: exact-one-ness was just asserted by count.
++  select description into v_desc from public.destinations where slug = 'tirupati' and is_active;
++  if v_desc is distinct from 'Tirupati district, Andhra Pradesh — temple town at the foothills of Tirumala, home to Sri Venkateswara Temple. Official accommodation information is published by TTD at tirumala.org (AccommodationAtTirupati). Foodie''s listing here is a source-linked pilot: every place records its own source link.' then
++    raise exception 'POSTFLIGHT FAIL: the tirupati destination description was not updated as proposed; rolling back.';
+   end if;
+-  raise notice 'POSTFLIGHT OK: tirupati destination description updated.';
++  raise notice 'POSTFLIGHT OK: tirupati destination description = proposed source-linked pilot wording.';
+ end
+ $$;
+ 
+ -- ---------------------------------------------------------------------------
+ -- The file ends with COMMIT: the whole batch (preflight + inserts +
+--- postflight guards) runs atomically in one SQL-Editor session. If ANY guard
+--- fails, the exception aborts the transaction and the commit never runs —
+--- the database is left exactly as it was.
++-- destination update + postflight guards) runs atomically in one SQL-Editor
++-- session. If ANY guard fails, the exception aborts the transaction and the
++-- commit never runs — the database is left exactly as it was.
++-- A second run AFTER a successful commit aborts at preflight (baseline,
++-- name collisions, marker) — by design, nothing partial.
++--
++-- NOTHING IN THIS FILE HAS BEEN EXECUTED. This REV 2 candidate connects to
++-- no database; every count it asserts is a labelled logical derivation from
++-- the documented REV 1 baseline precondition, and must be revalidated with
++-- read-only probes immediately before any future execution.
+ -- ---------------------------------------------------------------------------
+ 
+ commit;
