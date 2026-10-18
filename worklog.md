@@ -1605,3 +1605,18 @@ Work Log:
 
 Stage Summary:
 - READ-ONLY VERIFICATION PROBE delivered and engine-verified: paste supabase/review-candidates/verify-batch-009-p3.sql into Supabase SQL Editor → 13 labelled grids readable as PRE-import (77 / 0 Tirupati / 77 Doddaballapura / 0 markers / 9 missing / description placeholder) or POST-import (86 / 6 / 80 / 9 markers / 9 present with all invariants / description = REV 2 text) states; mixed state = partial application or drift → stop and re-review. The import itself remains NOT executed and NOT approved-by-execution; next action stays with the user (SQL Editor paste of the REV 2 candidate) or a write-capable credential.
+
+---
+Task ID: batch009-compact-verify-snapshot (trace 1a14ee61d9d23281)
+Agent: Z.ai Code (main)
+Task: FOODIE Batch-009 REV 2 — user ran the 13-grid read-only probe in production SQL Editor (screenshot: §9 name probe = 14 rows, retained names absent = pre-import-consistent). Deliver UI navigation steps for the result grids + a compact ONE-statement/ONE-grid read-only state snapshot. No DB changes, no import execution, no git actions.
+
+Work Log:
+- REPO DRIFT INSPECTED (read-only) and explained: a 4th platform auto-commit c6c932e (Z User, UUID message — same benign pattern as 99e5952/c96ec87) added exactly verify-batch-009-p3.sql + the worklog entry; git now shows M flags on 6 supabase files but git diff proves MODE-ONLY churn (100644→100755, zero content lines). All reviewed hashes re-verified byte-identical: probe 828529b7…, REV 2 candidate c74e4339…, original batch 79b892d9…. Still ahead 4, nothing pushed, git state left untouched.
+- COMPACT SNAPSHOT CREATED: supabase/review-candidates/verify-batch-009-p3-compact.sql — ONE statement (WITH batch9/held SELECT), ONE row, 13 columns: restaurants_total, tirupati_places, doddaballapura_places, p3_marker_rows, batch9_present/missing + missing/present name arrays, batch9_invariant_violations (unverified/NULL-coords/rating-0/₹₹/marker/source_url), held_rows_present + names, tirupati_destination_active_rows, tirupati_description_matches_rev2 (NULL = no active tirupati row). All columns from verified repo schema; no invented names.
+- STATIC CHECKS 4/4: zero mutation keywords in comment-stripped executable text; exactly 1 statement WITH/SELECT; exactly 14 distinct UUIDs (9 expected + 5 held); REV 2 description literal byte-identical to candidate SET clause.
+- ENGINE VALIDATED (PGlite 18 WASM, harness outside repo, removed after): Supabase-shaped stub, 77-row Doddaballapura baseline, 3 destinations incl. active tirupati with live placeholder. 39/39 PASS across 4 runs: A pre-import (full expected tuple incl. missing_names = all nine, desc false); B partial 3-of-9 (80/3/77, markers 3, 3 present/6 missing — robust to missing UUIDs); C post-import simulated by harness-written statements only (reviewed import file NEVER executed) → 86/6/80, markers 9, 9/0, violations 0, held 0, desc true; D idempotent re-run byte-identical, row count unchanged.
+- NO-EXECUTION PROOF: no production DB connection; no SQL file executed against any real DB; new file only (untracked compact snapshot); reviewed files hash-unchanged; unpushed commits untouched.
+
+Stage Summary:
+- User can now (1) click through Results 1–13 tabs in the SQL Editor results panel (order = §1,§2a,§2b,§3,§4,§5,§5b,§6,§7a,§7b,§8,§8b,§9), or (2) run the compact snapshot for a single-grid go/no-go tuple: PRE=(77,0,77,0,0 present/9 missing,violations 0,held 0,dest 1,desc false) vs POST=(86,6,80,9,9/0,0,0,1,true). Anything else = mixed → stop and report. Import remains NOT executed; §9 screenshot (14 rows, retained absent) is consistent with pre-import for names only and is NOT sufficient alone — counts/markers/UUIDs still need §1–§8 or the compact row.
