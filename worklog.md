@@ -1652,3 +1652,17 @@ Work Log:
 
 Stage Summary:
 - FINAL AUDIT PASS: candidate byte-identical to the reviewed artifact (hash-proven), composition 9/5 exact, transaction + 17 guard raises intact, single-commit-at-end with no partial-commit path, no modification since review. Import still UNEXECUTED by the assistant; execution remains the user's single paste-and-run in Supabase SQL Editor followed by verify-batch-009-p3-compact.sql. No DB writes, no production access, no push, no deploy.
+
+---
+Task ID: batch009-sql-display-for-manual-exec (trace 1a14efdc80571035)
+Agent: Z.ai Code (main)
+Task: FOODIE Batch-009 REV 2 — display the complete reviewed SQL for manual execution: re-hash before display, then output the file verbatim (first line through final commit;) in one block with SQL Editor instructions, error protocol, and post-verify reminder. No execution, no production access, no file changes, no push/deploy.
+
+Work Log:
+- PRE-DISPLAY HASH (sha256sum, current bytes): c74e43399bd53eeaa3ab2aec59262c469f60f5809a83a9981271757d6e334629 ✓ (31,662 B, mtime 2026-10-16 12:38:49 UTC) — matches the expected reviewed hash exactly; git tree clean. Hash identity proves the bytes equal the full 601-line content read earlier this session, so that in-session read is the authoritative source for the verbatim display.
+- DISPLAYED: the complete file verbatim in one SQL code block (header comments, begin, preflight DO block with 5 guards, 9-tuple INSERT, guarded destination UPDATE, postflight DO block with 8 guards/17 raises, final commit) — no summarization, no reformatting; only the repo worklog.md was appended to (mandated bookkeeping, not a reviewed artifact).
+- ADVISORY GIVEN: the verified repo file remains the byte-exact authoritative source (it contains multi-byte characters ₹ and — that must survive chat rendering → clipboard → Supabase editor); if the user notices any display anomaly (truncation, missing ₹/—, wrong first/last line), fall back to opening the file and Select All → Copy. Never paste a partial script.
+- Instructions re-issued: paste whole block into Supabase Dashboard → production project → SQL Editor → New query → Run ONCE; on any error stop and report the FIRST message verbatim (no rerun, no guard edits); run verify-batch-009-p3-compact.sql only after success and compare the POST tuple (86/6/80/9 markers/9-0/0 violations/0 held/1 active/desc true).
+
+Stage Summary:
+- Complete REV 2 SQL displayed verbatim after a fresh hash match (c74e4339…6346299). The import remains UNEXECUTED by the assistant; execution is the user's single paste-and-run, followed immediately by the compact read-only probe. Production untouched from this side; no push, no deploy, no credentials.
