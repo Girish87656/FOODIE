@@ -95,7 +95,7 @@ function RailSection({
   expanded: boolean;
 }) {
   return (
-    <section className="mt-7 first:mt-5">
+    <section className="mt-8 first:mt-6">
       <SectionHeader
         title={title}
         subtitle={subtitle}
@@ -107,7 +107,7 @@ function RailSection({
       {expanded ? (
         <div className="space-y-2.5 px-5">{children}</div>
       ) : (
-        <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
+        <div className="foodie-rail flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
           {children}
         </div>
       )}
@@ -119,19 +119,26 @@ const SECTION_ICONS = {
   favorites: "❤️",
 } as const;
 
-/** Full-feed loading state — shown while the data layer fetches. */
+/** Full-feed loading state — mirrors the ready layout (search, hero, list)
+ *  so the skeleton-to-content swap doesn't jump. */
 function FeedSkeleton() {
   return (
     <div className="px-5 pt-5" aria-busy="true" aria-live="polite" aria-label="Loading places">
       <Skeleton className="h-12 w-full rounded-2xl" />
-      <Skeleton className="mt-4 h-24 w-full rounded-3xl" />
+      <div className="mt-5 flex items-center gap-3.5 rounded-3xl foodie-gradient-soft p-5">
+        <Skeleton className="size-12 shrink-0 rounded-2xl bg-white/70" />
+        <div className="min-w-0 flex-1 space-y-2">
+          <Skeleton className="h-4 w-1/2 bg-white/70" />
+          <Skeleton className="h-3 w-2/3 bg-white/70" />
+        </div>
+      </div>
       <div className="mt-6 space-y-2.5">
         {[0, 1, 2, 3].map((i) => (
           <div
             key={i}
-            className="flex items-center gap-3 rounded-2xl border border-border/50 bg-card p-2.5"
+            className="flex items-center gap-3.5 rounded-2xl border border-border/50 bg-card p-3"
           >
-            <Skeleton className="size-[76px] shrink-0 rounded-xl" />
+            <Skeleton className="size-20 shrink-0 rounded-xl" />
             <div className="min-w-0 flex-1 space-y-2">
               <Skeleton className="h-4 w-2/3" />
               <Skeleton className="h-3 w-1/2" />
@@ -151,7 +158,9 @@ function FeedSkeleton() {
 function FeedErrorCard({ error, onRetry }: { error: string | null; onRetry: () => void }) {
   return (
     <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-rose-200 bg-rose-50/50 px-6 py-12 text-center">
-      <AlertTriangle className="size-10 text-rose-300" aria-hidden="true" />
+      <span className="grid size-14 place-items-center rounded-2xl bg-rose-100/80">
+        <AlertTriangle className="size-7 text-rose-400" aria-hidden="true" />
+      </span>
       <p className="mt-3 text-[15px] font-bold text-foreground">Couldn&apos;t load restaurants</p>
       <p className="mt-1 max-w-[260px] text-[13px] leading-snug text-muted-foreground">
         {error ?? "Something went wrong while fetching places."}
@@ -173,7 +182,9 @@ function EmptyDatabaseCard({ mode }: { mode: "supabase" | "demo" | null }) {
   const supabase = mode === "supabase";
   return (
     <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-12 text-center">
-      <Database className="size-10 text-stone-300" aria-hidden="true" />
+      <span className="grid size-14 place-items-center rounded-2xl bg-stone-100">
+        <Database className="size-7 text-stone-400" aria-hidden="true" />
+      </span>
       <p className="mt-3 text-[15px] font-bold text-foreground">
         {supabase ? "No restaurants in your database yet" : "No demo places near this origin"}
       </p>
@@ -332,7 +343,8 @@ export function HomeScreen() {
   return (
     <div className="relative flex h-full flex-col bg-background">
       {/* ---------------- header ---------------- */}
-      <header className="z-10 shrink-0 border-b border-border/50 bg-background/95 px-5 pb-3 pt-5 backdrop-blur supports-[backdrop-filter]:bg-background/80 foodie-header-shadow">
+      <header className="z-10 shrink-0 border-b border-border/50 bg-background/95 px-5 pb-4 pt-5 backdrop-blur supports-[backdrop-filter]:bg-background/80 foodie-header-shadow">
+        <h1 className="sr-only">Foodie — discover food places near you</h1>
         <div className="flex items-center justify-between gap-3">
           <button
             type="button"
@@ -395,7 +407,7 @@ export function HomeScreen() {
           <AccountControls />
         </div>
 
-        <SearchBar value={searchQuery} onChange={setSearchQuery} className="mt-3.5" />
+        <SearchBar value={searchQuery} onChange={setSearchQuery} className="mt-4" />
 
         {/* discovery controls — one row of functional dropdowns.
             Every choice really drives the feed below (store-backed):
@@ -464,7 +476,9 @@ export function HomeScreen() {
               ))}
               {results.length === 0 && (
                 <div className="flex flex-col items-center rounded-2xl border border-dashed border-border bg-card/60 px-6 py-10 text-center">
-                  <SearchX className="size-9 text-stone-300" aria-hidden="true" />
+                  <span className="grid size-13 place-items-center rounded-2xl bg-stone-100">
+                    <SearchX className="size-6 text-stone-400" aria-hidden="true" />
+                  </span>
                   <p className="mt-3 text-[15px] font-bold text-foreground">Nothing matches… yet</p>
                   <p className="mt-1 text-[13px] text-muted-foreground">
                     {distanceFilterKm != null
@@ -504,17 +518,27 @@ export function HomeScreen() {
               <LocationPromptBanner onOpen={() => setLocSheetOpen(true)} />
             </div>
 
-            {/* greeting */}
+            {/* greeting — premium hero with a context emoji tile */}
             <motion.section
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mx-5 mt-4 overflow-hidden rounded-3xl foodie-gradient-soft p-4"
+              className="relative mx-5 mt-5 overflow-hidden rounded-3xl foodie-gradient-soft p-5"
             >
-              <div className="flex items-center justify-between gap-3">
+              <div
+                aria-hidden="true"
+                className="absolute -right-8 -top-10 size-32 rounded-full bg-white/50 blur-2xl"
+              />
+              <div className="relative flex items-center gap-3.5">
+                <span
+                  className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/85 text-[26px] shadow-sm"
+                  aria-hidden="true"
+                >
+                  {eatContext === "Travelling" ? "🧳" : eatContext === "Family" ? "👨‍👩‍👧" : eatContext === "Partner" ? "❤️" : eatContext === "Friends" ? "🎉" : "🍽️"}
+                </span>
                 <div className="min-w-0">
-                  <p className="text-[15px] font-extrabold tracking-tight text-foreground">
+                  <p className="truncate text-[17px] font-extrabold tracking-tight text-foreground">
                     {greeting()}
-                    {userName ? `, ${userName}` : ""}! <span aria-hidden="true">🌆</span>
+                    {userName ? `, ${userName}` : ""}!
                   </p>
                   <p className="mt-0.5 truncate text-[12.5px] text-muted-foreground">
                     {eatContext
@@ -522,16 +546,16 @@ export function HomeScreen() {
                       : "Hungry? Let's find your next favorite spot."}
                   </p>
                 </div>
-                <span className="text-3xl" aria-hidden="true">
-                  {eatContext === "Travelling" ? "🧳" : eatContext === "Family" ? "👨‍👩‍👧" : eatContext === "Partner" ? "❤️" : eatContext === "Friends" ? "🎉" : "🍽️"}
-                </span>
               </div>
               {preferences.length > 0 && (
-                <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto" aria-label="Your preferences">
+                <div
+                  className="foodie-rail relative mt-3.5 flex gap-1.5 overflow-x-auto"
+                  aria-label="Your preferences"
+                >
                   {preferredCats.map((c) => (
                     <span
                       key={c.id}
-                      className="shrink-0 rounded-full bg-white/80 px-2.5 py-1 text-[11px] font-semibold text-stone-700 shadow-sm"
+                      className="shrink-0 rounded-full border border-black/5 bg-white/85 px-2.5 py-1 text-[11px] font-semibold text-stone-700 shadow-sm"
                     >
                       {c.emoji} {c.label}
                     </span>
@@ -550,7 +574,9 @@ export function HomeScreen() {
             ) : discoveryEmpty ? (
               /* everything filtered out by the distance radius */
               <div className="mx-5 mt-6 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-12 text-center">
-                <MapPinned className="size-10 text-stone-300" aria-hidden="true" />
+                <span className="grid size-14 place-items-center rounded-2xl bg-stone-100">
+                  <MapPinned className="size-7 text-stone-400" aria-hidden="true" />
+                </span>
                 <p className="mt-3 text-[15px] font-bold text-foreground">
                   {distanceFilterKm != null
                     ? `No places within ${distanceFilterKm} km`
@@ -571,7 +597,7 @@ export function HomeScreen() {
               <>
                 {/* nearby */}
                 {nearby.length > 0 && (
-                  <section className="mt-7">
+                  <section className="mt-8">
                     <SectionHeader
                       emoji="📍"
                       title="Nearby food places"
@@ -608,14 +634,14 @@ export function HomeScreen() {
 
                 {/* local favorites */}
                 {favorites.length > 0 && (
-                  <section className="mt-7">
+                  <section className="mt-8">
                     <SectionHeader
                       emoji={SECTION_ICONS.favorites}
                       title="Local Favorites"
                       subtitle="Most loved by people around you"
                       className="px-5"
                     />
-                    <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
+                    <div className="foodie-rail flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
                       {favorites.map((p) => (
                         <WideCard key={p.id} place={p} onSelect={openPlace} />
                       ))}
@@ -625,7 +651,7 @@ export function HomeScreen() {
 
                 {/* popular */}
                 {popular.length > 0 && (
-                  <section className="mt-7">
+                  <section className="mt-8">
                     <SectionHeader
                       emoji="📈"
                       title="Popular Places"
@@ -664,7 +690,7 @@ export function HomeScreen() {
                     Hidden while a radius filter is active (an unknown distance can't satisfy
                     "within X km"); they reappear on "Any distance" and in search/category. */}
                 {distanceFilterKm == null && pending.length > 0 && (
-                  <section className="mt-7">
+                  <section className="mt-8">
                     <SectionHeader
                       emoji="⏳"
                       title="Location pending verification"

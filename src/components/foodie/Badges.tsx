@@ -15,7 +15,7 @@ export function RatingBadge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-md bg-emerald-600 px-1.5 py-0.5 text-[11px] font-bold text-white",
+        "inline-flex items-center gap-1 rounded-lg bg-emerald-600 px-1.5 py-0.5 text-[11px] font-bold text-white shadow-sm",
         className
       )}
       aria-label={`Rated ${rating} out of 5`}

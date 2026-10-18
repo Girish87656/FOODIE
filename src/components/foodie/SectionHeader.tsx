@@ -24,7 +24,7 @@ export function SectionHeader({
   return (
     <div className={cn("mb-3 flex items-end justify-between gap-3 px-4", className)}>
       <div className="min-w-0">
-        <h2 className="flex items-center gap-1.5 text-[17px] font-bold leading-tight tracking-tight text-foreground">
+        <h2 className="flex items-center gap-1.5 text-[17px] font-extrabold leading-tight tracking-tight text-foreground">
           {emoji && <span aria-hidden="true">{emoji}</span>}
           <span className="truncate">{title}</span>
         </h2>
@@ -34,7 +34,7 @@ export function SectionHeader({
         <button
           type="button"
           onClick={onAction}
-          className="flex shrink-0 items-center gap-0.5 text-[13px] font-semibold text-primary transition-opacity hover:opacity-75"
+          className="-mr-2 flex shrink-0 items-center gap-0.5 rounded-full px-2.5 py-1.5 text-[13px] font-bold text-primary transition-colors hover:bg-accent active:scale-95"
         >
           {actionLabel}
           <ChevronRight className="size-3.5" aria-hidden="true" />

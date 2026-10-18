@@ -20,12 +20,17 @@ export function SearchBar({
   return (
     <div
       className={cn(
-        "flex h-11 items-center gap-2.5 rounded-2xl border border-border/70 bg-card px-3.5 shadow-sm transition-all focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/10",
+        "flex h-12 items-center gap-2.5 rounded-2xl border border-border/70 bg-card px-3.5 shadow-sm transition-all focus-within:border-primary/50 focus-within:shadow-md focus-within:ring-4 focus-within:ring-primary/10",
         className
       )}
       role="search"
     >
-      <Search className="size-[18px] shrink-0 text-muted-foreground" aria-hidden="true" />
+      <span
+        className="grid size-7 shrink-0 place-items-center rounded-full bg-accent"
+        aria-hidden="true"
+      >
+        <Search className="size-[15px] text-primary" />
+      </span>
       <input
         type="search"
         value={value}
@@ -39,9 +44,9 @@ export function SearchBar({
           type="button"
           onClick={() => onChange("")}
           aria-label="Clear search"
-          className="grid size-5 shrink-0 place-items-center rounded-full bg-stone-200 text-stone-500 transition-colors hover:bg-stone-300"
+          className="grid size-6 shrink-0 place-items-center rounded-full bg-stone-200 text-stone-500 transition-colors hover:bg-stone-300"
         >
-          <X className="size-3" />
+          <X className="size-3.5" />
         </button>
       )}
     </div>

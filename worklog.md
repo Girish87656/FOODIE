@@ -1695,3 +1695,34 @@ Work Log:
 
 Stage Summary:
 - Phase 1 audit COMPLETE — verified-facts vs assumptions separated in the report delivered to the user. Zero writes outside this mandated worklog append; batch-009 import remains UNEXECUTED from this side; 9 unpushed commits left untouched.
+
+---
+Task ID: phaseA-0-baseline (trace 1a14f26627c63769)
+Agent: Z.ai Code (main)
+Task: Foodie controlled upgrade — Step 0 baseline verification before any edit. Read-only + this mandated worklog append.
+
+Work Log:
+- Git: repo root /home/z/my-project, branch main, HEAD b36c1cd, working tree CLEAN (status --short empty). Unpushed commits vs origin/main: 10 (the 9 previously reported + b36c1cd, a worklog-only append from the previous batch-009 REV 2 session — documented state, not unexpected). All 9 preserved. No stash entries. Remote: github.com/Girish87656/FOODIE.git.
+- Batch-009 REV 2 import status: the user has NOT reported executing/verifying the import in this session. Status recorded as UNKNOWN; production DB not accessed from this side; no assumption made.
+- Lint baseline: `bun run lint` exit 0, no output.
+- Type-check baseline: `bunx tsc --noEmit` — 0 errors in src/; 4 pre-existing errors confined to examples/ and skills/ infra scaffolding (out of app scope, untouched).
+- Dev server: already running on port 3000, GET / → 200.
+- App structure re-inspected: FoodieApp (state-routed screens), HomeScreen (736L), PlaceDetailScreen (874L), PlaceCards, SectionHeader, SearchBar, FilterBar, Badges, DestinationDiscoveryCard, globals.css (oklch orange tokens, Outfit, focus-visible ring, reduced-motion, utilities).
+
+Stage Summary:
+- BASELINE CLEAN AND RECORDED. Safety rails active: local-only, no push/deploy, no production DB access. Phase A (UI) may proceed on a clean tree.
+
+---
+Task ID: phaseA-ui-implementation (trace 1a14f26627c63769)
+Agent: Z.ai Code (main)
+Task: Foodie controlled upgrade — Phase A premium UI improvements + full validation. Local only; no push/deploy/production access.
+
+Work Log:
+- IMPLEMENTED (7 files, +157/−78 in src/): (1) globals.css — new foodie-rail utility (hidden scrollbar + scroll-padding-inline 1.25rem for snap-gutter alignment); (2) PlaceCards.tsx — ListRow image 76→80px + p-3/gap-3.5 + orange map-pin accent + aria-label "View {name}" on all three cards, CarouselCard 196→200px + h-124 image + ring polish, WideCard 240→248px/h-156 + deeper scrim + ring-1 ring-black/5, DistanceChip max-w/truncate + shadow, PlacePhoto decoding="async"; (3) SectionHeader.tsx — font-extrabold title + touch-friendly action pill (-mr-2 px-2.5 py-1.5 hover:bg-accent active:scale-95); (4) SearchBar.tsx — h-11→h-12 (44px+ touch target), search icon in tinted chip, focus-within shadow, clear button size-6; (5) Badges.tsx — RatingBadge rounded-lg + shadow-sm; (6) HomeScreen.tsx — sr-only h1, FeedSkeleton now mirrors ready layout (hero + 80px rows, reduces swap jump), greeting hero redesigned (context-emoji tile left, text-17px extrabold, decorative blur, bordered preference chips, foodie-rail), section rhythm unified mt-8 (RailSection mt-8 first:mt-6), rails → foodie-rail, all four empty/error states got icon tiles; (7) PlaceDetailScreen.tsx — hero unified 264px (carousel/placeholder/skeleton), dual readability scrims rendered ONLY when photos exist, photo counter chip "n/N" bottom-right beside existing credits chip, title 22→24px, InfoCard p-4/size-10 icons/rounded-2xl, sticky action bar top-shadow.
+- STATE/RULES PRESERVED: all stores, hooks, routes, honesty guards (DistanceChip, pending rows, NULL hours, photo-failure tiles, demo labels, verification chips) untouched; no new routes/features; bell + teaser keep their honest toasts; raw <img> kept (DB hosts are arbitrary; next/image would need dynamic remotePatterns — noted, not done).
+- VALIDATION: lint exit 0; tsc --noEmit 0 src errors (only pre-existing examples/skills infra errors); production build exit 0 (all routes compiled); browser (agent-browser, Chromium 1920/375 viewports): splash→auth render + disabled-submit validation, home (demo mode, harness below) hero/search/filters/category/distance/sort ALL drive the feed live ("1 place in Tiffin · within 3 km"), search "tiffin" → 1 result, nonsense query → honest empty state + Reset, detail screen (title/badges/chips/dishes/scrims-conditional-on-photos), AI assistant grounded answer end-to-end (demo data, honest "Location pending verification" chip), reviews section honest empty + demo notice, focus-visible ring verified on bell, mobile 375px full-bleed verified, desktop phone-frame + side panel verified, ZERO page errors/console errors.
+- AUTH GATE + TEST HARNESS: local env has NO Supabase config (only unrelated DATABASE_URL), so the auth-gated home is unreachable via real login; signing up would WRITE to production Supabase auth — forbidden. Used a temporary initial-screen change (splash→home) to exercise the REAL UI on the REAL labelled-demo data path, then fully reverted (rg TEMP-TEST-HARNESS = clean; store.ts absent from final diff).
+- NOT RUN / LIMITS: real-account auth flow (would write production), destination/destination-food screens (demo dataset has zero destinations — chips honestly hidden), photo carousel counter with real photos (demo dataset photos: [] ×7; code-inspected only), reviews CRUD write (needs session).
+
+Stage Summary:
+- PHASE A COMPLETE AND VERIFIED. 7 UI files changed, 0 logic/state files changed, harness reverted, no secrets in diff (scanned), 9+1 unpushed commits untouched, no push/deploy/production access. Awaiting user report review before Phase B per phase gate.

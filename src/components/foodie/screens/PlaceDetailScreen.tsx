@@ -51,7 +51,7 @@ function DetailSkeleton() {
       aria-live="polite"
       aria-label="Loading place details"
     >
-      <Skeleton className="h-[260px] w-full shrink-0 rounded-none" />
+      <Skeleton className="h-[264px] w-full shrink-0 rounded-none" />
       <div className="flex-1 space-y-3 px-5 pt-4">
         <Skeleton className="h-6 w-2/3" />
         <Skeleton className="h-4 w-1/2" />
@@ -87,11 +87,11 @@ function InfoCard({
     neutral: "bg-stone-100 text-stone-400",
   }[tone];
   const className =
-    "flex items-start gap-3 rounded-2xl border border-border/70 bg-card p-3.5 shadow-sm";
+    "flex items-start gap-3.5 rounded-2xl border border-border/70 bg-card p-4 shadow-sm";
   if (as === "a" && href) {
     return (
       <a href={href} aria-label={ariaLabel} className={cn(className, "transition-colors hover:bg-accent/70 active:bg-accent")}>
-        <span className={cn("grid size-9 shrink-0 place-items-center rounded-xl", toneClasses)}>
+        <span className={cn("grid size-10 shrink-0 place-items-center rounded-2xl", toneClasses)}>
           {icon}
         </span>
         {children}
@@ -100,7 +100,7 @@ function InfoCard({
   }
   return (
     <div className={className}>
-      <span className={cn("grid size-9 shrink-0 place-items-center rounded-xl", toneClasses)}>
+      <span className={cn("grid size-10 shrink-0 place-items-center rounded-2xl", toneClasses)}>
         {icon}
       </span>
       {children}
@@ -291,12 +291,12 @@ export function PlaceDetailScreen() {
       <div className="relative shrink-0">
         {place.photos.length === 0 ? (
           /* no photos in the database yet — honest gradient placeholder */
-          <div className="grid h-[260px] w-full place-items-center bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
+          <div className="grid h-[264px] w-full place-items-center bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
             <UtensilsCrossed className="size-14 text-orange-300" aria-hidden="true" />
           </div>
         ) : (
           <div
-            className="no-scrollbar flex h-[260px] snap-x snap-mandatory overflow-x-auto"
+            className="no-scrollbar flex h-[264px] snap-x snap-mandatory overflow-x-auto"
             onScroll={(e) => {
               const el = e.currentTarget;
               setPhotoIdx(Math.round(el.scrollLeft / el.clientWidth));
@@ -321,6 +321,7 @@ export function PlaceDetailScreen() {
                     alt={`${place.name} photo ${i + 1}`}
                     className="h-full w-full object-cover"
                     loading={i === 0 ? "eager" : "lazy"}
+                    decoding="async"
                     onError={() => markPhotoFailed(src)}
                   />
                   {(() => {
@@ -338,6 +339,22 @@ export function PlaceDetailScreen() {
               )
             )}
           </div>
+        )}
+
+        {/* readability scrims for the overlay controls (back button, badges,
+            dots and counter) — pure decoration, never interactive. Only over
+            real photos; the light placeholder needs no darkening. */}
+        {place.photos.length > 0 && (
+          <>
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/35 to-transparent"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/30 to-transparent"
+            />
+          </>
         )}
 
         <button
@@ -360,19 +377,27 @@ export function PlaceDetailScreen() {
           )}
         </div>
 
-        {/* photo dots */}
+        {/* photo dots + position counter */}
         {place.photos.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5" aria-hidden="true">
-            {place.photos.map((src, i) => (
-              <span
-                key={src}
-                className={cn(
-                  "size-1.5 rounded-full transition-all",
-                  i === photoIdx ? "w-4 bg-white" : "bg-white/50"
-                )}
-              />
-            ))}
-          </div>
+          <>
+            <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5" aria-hidden="true">
+              {place.photos.map((src, i) => (
+                <span
+                  key={src}
+                  className={cn(
+                    "size-1.5 rounded-full transition-all",
+                    i === photoIdx ? "w-4 bg-white" : "bg-white/50"
+                  )}
+                />
+              ))}
+            </div>
+            <span
+              aria-hidden="true"
+              className="absolute bottom-2.5 right-4 rounded-full bg-black/45 px-2 py-0.5 text-[10.5px] font-bold text-white backdrop-blur-sm"
+            >
+              {photoIdx + 1}/{place.photos.length}
+            </span>
+          </>
         )}
       </div>
 
@@ -382,7 +407,7 @@ export function PlaceDetailScreen() {
           {/* name */}
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <h1 className="text-[22px] font-extrabold leading-tight tracking-tight text-foreground">
+              <h1 className="text-[24px] font-extrabold leading-tight tracking-tight text-foreground">
                 {place.name}
               </h1>
               {place.tagline && (
@@ -810,7 +835,7 @@ export function PlaceDetailScreen() {
 
       {/* ---------------- sticky actions ---------------- */}
       <div
-        className="shrink-0 border-t border-border/60 bg-background/95 p-4 backdrop-blur"
+        className="shrink-0 border-t border-border/60 bg-background/95 p-4 backdrop-blur shadow-[0_-12px_32px_-24px_rgba(0,0,0,0.35)]"
         style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}
       >
         <div className="flex gap-2.5">

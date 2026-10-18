@@ -150,6 +150,18 @@
   }
 }
 
+/* discovery card rails: hidden scrollbar + snap gutter alignment.
+   scroll-padding-inline (1.25rem = px-5) makes snap-start cards line up
+   with the page gutter instead of jamming against the frame edge. */
+@utility foodie-rail {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-padding-inline: 1.25rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* Foodie brand gradient */
 @utility foodie-gradient {
   background: linear-gradient(135deg, oklch(0.705 0.213 47.604), oklch(0.646 0.222 41.116) 55%, oklch(0.577 0.245 27.325));

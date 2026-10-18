@@ -27,7 +27,7 @@ function DistanceChip({
   return (
     <span
       className={cn(
-        "whitespace-nowrap rounded-full bg-black/55 px-2 py-0.5 text-[10px] font-medium text-white backdrop-blur-sm",
+        "max-w-[85%] truncate whitespace-nowrap rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white shadow-sm backdrop-blur-sm",
         className
       )}
     >
@@ -91,7 +91,15 @@ function PlacePhoto({
       </div>
     );
   }
-  return <img src={src} alt={alt} loading="lazy" className={className} />;
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className={className}
+    />
+  );
 }
 
 function PlaceMeta({ place, className }: { place: PlaceMaybeWithDistance; className?: string }) {
@@ -110,9 +118,10 @@ export function CarouselCard({ place, onSelect }: PlaceCardBase) {
     <button
       type="button"
       onClick={() => onSelect(place.id)}
-      className="group w-[196px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border/60 bg-card text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-primary"
+      aria-label={`View ${place.name}`}
+      className="group w-[200px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border/60 bg-card text-left shadow-sm ring-1 ring-transparent transition-all hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-primary"
     >
-      <div className="relative h-[118px] w-full overflow-hidden">
+      <div className="relative h-[124px] w-full overflow-hidden">
         <PlacePhoto
           src={place.photos[0]}
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
@@ -137,10 +146,12 @@ export function CarouselCard({ place, onSelect }: PlaceCardBase) {
         </div>
         <PlaceMeta place={place} />
         {place.costForTwo != null && (
-          <div className="flex items-center gap-1 pt-0.5 text-[12px] font-semibold text-stone-600">
+          <div className="flex items-center gap-1.5 pt-0.5 text-[11.5px] font-semibold text-stone-600">
             <span className="text-primary">{place.priceRange}</span>
-            <span className="text-stone-300">|</span>
-            <span>₹{place.costForTwo.toLocaleString("en-IN")} for two</span>
+            <span className="text-stone-300" aria-hidden="true">
+              |
+            </span>
+            <span className="truncate">₹{place.costForTwo.toLocaleString("en-IN")} for two</span>
           </div>
         )}
       </div>
@@ -156,7 +167,8 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
     <button
       type="button"
       onClick={() => onSelect(place.id)}
-      className="group flex w-full items-center gap-3 rounded-2xl border border-border/60 bg-card p-2.5 text-left shadow-sm transition-all hover:border-primary/30 hover:shadow-md focus-visible:ring-2 focus-visible:ring-primary"
+      aria-label={`View ${place.name}`}
+      className="group flex w-full items-center gap-3.5 rounded-2xl border border-border/60 bg-card p-3 text-left shadow-sm transition-all hover:border-primary/30 hover:shadow-md focus-visible:ring-2 focus-visible:ring-primary"
     >
       {typeof rank === "number" && (
         <span
@@ -169,7 +181,7 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
           {rank}
         </span>
       )}
-      <div className="relative size-[76px] shrink-0 overflow-hidden rounded-xl">
+      <div className="relative size-20 shrink-0 overflow-hidden rounded-xl">
         <PlacePhoto
           src={place.photos[0]}
           alt={`${place.name} — ${place.cuisines.join(", ")}`}
@@ -180,14 +192,14 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-center justify-between gap-2">
-          <h3 className="truncate text-[14.5px] font-bold text-foreground">{place.name}</h3>
+          <h3 className="truncate text-[15px] font-bold text-foreground">{place.name}</h3>
           <RatingBadge rating={place.rating} />
         </div>
         <PlaceMeta place={place} className="mt-0.5" />
         <div className="mt-1 flex items-center gap-2 text-[11.5px] text-muted-foreground">
           {place.distanceKm != null ? (
             <span className="flex shrink-0 items-center gap-0.5 font-semibold text-stone-600">
-              <MapPin className="size-3 shrink-0" aria-hidden="true" />
+              <MapPin className="size-3 shrink-0 text-primary/70" aria-hidden="true" />
               {formatDistance(place.distanceKm)}
             </span>
           ) : (
@@ -196,12 +208,12 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
               Location pending verification
             </span>
           )}
-          <span className="min-w-0 truncate">
-            {place.area}
-          </span>
+          <span className="min-w-0 truncate">{place.area}</span>
           {place.priceRange && (
             <>
-              <span className="shrink-0 text-stone-300">•</span>
+              <span className="shrink-0 text-stone-300" aria-hidden="true">
+                •
+              </span>
               <span className="shrink-0 font-semibold text-primary">{place.priceRange}</span>
             </>
           )}
@@ -219,9 +231,10 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
     <button
       type="button"
       onClick={() => onSelect(place.id)}
-      className="group relative w-[240px] shrink-0 snap-start overflow-hidden rounded-2xl text-left shadow-md transition-all hover:-translate-y-0.5 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-primary"
+      aria-label={`View ${place.name}`}
+      className="group relative w-[248px] shrink-0 snap-start overflow-hidden rounded-2xl text-left shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-primary"
     >
-      <div className="relative h-[150px] w-full">
+      <div className="relative h-[156px] w-full">
         <PlacePhoto
           src={place.photos[0]}
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
@@ -229,12 +242,9 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
           iconClassName="size-8"
           category={place.categoryIds[0]}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-        <DistanceChip
-          place={place}
-          className="absolute right-2 top-2"
-        />
-        <div className="absolute inset-x-0 bottom-0 space-y-1 p-3">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+        <DistanceChip place={place} className="absolute right-2 top-2" />
+        <div className="absolute inset-x-0 bottom-0 space-y-1 p-3.5">
           <div className="flex items-center gap-2">
             <RatingBadge rating={place.rating} />
             {place.ratingCount > 0 && (
@@ -246,7 +256,8 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
           </div>
           <h3 className="truncate text-[15px] font-bold text-white">{place.name}</h3>
           <p className="truncate text-[11.5px] text-white/75">
-            {place.cuisines.join(" · ")}{place.priceRange ? ` · ${place.priceRange}` : ""}
+            {place.cuisines.join(" · ")}
+            {place.priceRange ? ` · ${place.priceRange}` : ""}
           </p>
         </div>
       </div>
