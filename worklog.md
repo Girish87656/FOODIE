@@ -1679,3 +1679,19 @@ Work Log:
 
 Stage Summary:
 - Compact probe re-confirmed read-only and displayed verbatim for the user's post-import verification run. Import remains UNEXECUTED by the assistant; no production access, no push, no deploy.
+
+---
+Task ID: phase1-readonly-audit (trace 1a14f198f324c57d)
+Agent: Z.ai Code (main)
+Task: Foodie upgrade Phase 1 — full read-only repository audit (10 areas). No file modifications, no DB access, no push/deploy.
+
+Work Log:
+- Git (read-only): tree clean; main @ 0e89193, ahead origin/main 9 unpushed (ced6485/c6c932e/8a88799/c96ec87 = batch-009 review artifacts + probes, 99e5952 = evidence JSONs, ecc02c9/ea726e1/912ab24/0e89193 = worklog-only). Backups: backup/local-main-d3b419a, backup/pre-github-history. .env untracked/ignored; 761 tracked files. Nothing altered.
+- App verified: Next.js 16.1.1 + React 19 + TS 5 strict + Tailwind 4 (oklch orange, Outfit) + shadcn/ui; single route / → FoodieApp (state-routed screens splash/auth/onboarding×2/home/detail/destination/food); API routes /api/restaurants/*, /api/destinations*, /api/destination-foods/*, /api/assistant/chat.
+- Data layer verified end-to-end: supabase/schema.sql + migrations 001–007 (tables restaurants/dishes/reviews/restaurant_photos/destinations/destination_foods/destination_food_places + nearby_restaurants RPC + RLS); serverRepository dispatch (Supabase ↔ labelled demo fallback); browser-client-only auth + review writes.
+- Features confirmed present: Supabase Auth, reviews CRUD (RLS), destination discovery, AI assistant (z-ai sdk, server-side), location (GPS/manual/test), PWA manifest. Confirmed ABSENT: bookings, saved places, notifications (bell is stub), profiles, next-auth usage, prisma usage (scaffold only).
+- Tooling: eslint 9 (many rules off), no app test suite (tests/ = infra scripts), typescript.ignoreBuildErrors=true (risk), standalone build; deploy = Vercel git integration (assumption, no vercel.json).
+- HomeScreen (736 L) / PlaceDetailScreen (873 L) read fully; design issues catalogued (stubs, monolith components, client-side merge of two feeds, no bottom nav, no URL routing, raw <img>).
+
+Stage Summary:
+- Phase 1 audit COMPLETE — verified-facts vs assumptions separated in the report delivered to the user. Zero writes outside this mandated worklog append; batch-009 import remains UNEXECUTED from this side; 9 unpushed commits left untouched.
