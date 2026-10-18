@@ -1,0 +1,583 @@
+/**
+ * gen-insert-batch-010.ts — Phase B (p4) review-candidate generator.
+ *
+ * Emits: supabase/review-candidates/insert-batch-010-p4-places.sql
+ *   REVIEW CANDIDATE — never executed by this repo; the file is for the
+ *   human reviewer to paste into the Supabase SQL Editor after re-running
+ *   the read-only probes.
+ *
+ * Batch-010 = 6 Tirupati LODGING-HOTEL rows (category 'hotel'), researched
+ * with fetched OFFICIAL property pages (worksheet places-p4.json, evidence
+ * under evidence/places-p4-hotels/). All 10 researched ATTRACTIONS are held
+ * out (no 'attraction' category exists in the 7-value category constraint —
+ * a schema decision is required first; see worksheet + review report).
+ *
+ * Conventions carried over from batch-009 (REV 2):
+ *   * deterministic ids: uuid5(foodie-p4:<city>:<name>) over the SAME fixed
+ *     project namespace as batch-009 (RFC-4122 v5 formatting, sha1-based —
+ *     matches gen-insert-batch-009.ts byte-for-byte, including its quirk of
+ *     hashing the namespace hex characters as ASCII bytes);
+ *   * verification_status 'unverified' on every row (an import never
+ *     self-verifies); last_verified_at/address_verified/coordinates_verified/
+ *     hours_verified/photos_verified all NULL;
+ *   * latitude/longitude NULL (never estimated); rating 0 ("not captured");
+ *     price_level '₹₹' (documented neutral default); opening_hours/phone NULL
+ *     (not captured from evidence — no stale contact data);
+ *   * every row carries its own source marker ('p4-research-import') and a
+ *     populated source_url (the fetched official property page).
+ *
+ * NEW in batch-010 (review-driven):
+ *   * WORLD-CONDITIONAL preflight: the import status of batch-009 REV 2 is
+ *     UNKNOWN, so the candidate detects the live world itself — it accepts
+ *     exactly two consistent starting states (batch-009 fully absent = the
+ *     audited 77-row state, or fully present = the audited 86-row state) and
+ *     aborts on ANY drift (partial batch-009, changed totals, extra Tirupati
+ *     rows, name/uuid collisions, partial self-apply).
+ *   * IDEMPOTENT rerun: after one successful commit, a rerun detects all 6
+ *     ids present, makes NO changes, and exits through the same postflight
+ *     assertions. Name/UUID collisions and partial application always abort
+ *     with zero writes.
+ *   * The tirupati destination DESCRIPTION is deliberately NOT touched by
+ *     this batch (batch-009 REV 2 owns that one-row enrichment; stacking a
+ *     second description overwrite here would risk clobbering reviewed text).
+ */
+
+import { writeFileSync } from "fs";
+import { createHash } from "crypto";
+import { join } from "path";
+
+const ROOT = process.cwd();
+
+/** Deterministic UUIDv5-style id (sha1, RFC-4122 v5 formatting). */
+const NAMESPACE = "6d3a0f5e-7b1c-4a2e-9d84-2f6a1c9e0b31"; // foodie/p3-places (fixed project namespace)
+function uuid5(name: string): string {
+  const h = createHash("sha1")
+    .update(NAMESPACE.replace(/-/g, ""))
+    .update(name)
+    .digest("hex");
+  const u = [
+    h.slice(0, 8),
+    h.slice(8, 12),
+    `5${h.slice(13, 16)}`,
+    ((parseInt(h.slice(16, 18), 16) & 0x3f) | 0x80).toString(16).padStart(2, "0") + h.slice(18, 20),
+    h.slice(20, 32),
+  ].join("-");
+  return u;
+}
+
+function sq(s: string): string {
+  return `'${s.replace(/'/g, "''")}'`;
+}
+
+interface Row {
+  name: string;
+  category: string;
+  address: string;
+  city: string;
+  locality: string;
+  tags: string[];
+  sourceUrl: string;
+  evidence: string;
+}
+
+// The 6 INSERT_CANDIDATE rows from worksheets/places-p4.json (verified verbatim
+// against the raw evidence files on 2026-10-18; addresses stored EXACTLY at the
+// level the fetched official page supports — nothing invented, nothing extended).
+const ROWS: Row[] = [
+  {
+    name: "Marasa Sarovar Premiere",
+    category: "hotel",
+    address: "Upadhyaya Nagar, Karakambadi Road, Tirupati, Andhra Pradesh 517507",
+    city: "Tirupati",
+    locality: "Upadhyaya Nagar",
+    tags: ["lodging", "brand_chain"],
+    sourceUrl: "https://www.sarovarhotels.com/marasa-sarovar-premiere-tirupati-hotels",
+    evidence: "official sarovarhotels.com property page (fetched 2026-10-18): name, 'Upadhyaya Nagar, Karakambadi Road, Tirupati - 517507 Andhra Pradesh', '121 spacious rooms across 3 categories'",
+  },
+  {
+    name: "Fortune Select Grand Ridge",
+    category: "hotel",
+    address: "Shilparamam, Tiruchanoor Road, Tirupati, Andhra Pradesh 517501",
+    city: "Tirupati",
+    locality: "Shilparamam",
+    tags: ["lodging", "brand_chain"],
+    sourceUrl: "https://www.itchotels.com/in/en/fortuneselectgrandridge-tirupati",
+    evidence: "official itchotels.com property page (fetched 2026-10-18): name, 'Shilparamam, Tiruchanoor Road Tirupati - 517 501, Andhra Pradesh' (PIN spacing variant '517 501' = 517501), Deluxe Room accommodation section",
+  },
+  {
+    name: "Ramee Guestline Hotel",
+    category: "hotel",
+    address: "14/37 Karakambadi Rd, Mangalam, Tirupati, Andhra Pradesh 517507",
+    city: "Tirupati",
+    locality: "Mangalam",
+    tags: ["lodging", "brand_chain"],
+    sourceUrl: "https://rameehotels.com/ramee-guestline-hotel-tirupati",
+    evidence: "official rameehotels.com served JSON-LD LodgingBusiness (fetched 2026-10-18): name 'Ramee Guestline Hotel, Tirupati' (stored name drops the trailing city suffix), streetAddress '14/37 Karakambadi Rd, Mangalam, Tirupati, Andhra Pradesh 517507, India' (', India' dropped), brand 'Ramee Group of Hotels'",
+  },
+  {
+    name: "Ekante Bliss",
+    category: "hotel",
+    address: "19-3-45, Near Ramanuja Circle, Renigunta Rd, Tirupati, Andhra Pradesh 517501",
+    city: "Tirupati",
+    locality: "Renigunta Road",
+    tags: ["lodging", "brand_chain"],
+    sourceUrl: "https://www.seleqtionshotels.com/en-in/hotels/ekante-bliss-tirupati",
+    evidence: "official seleqtionshotels.com property page (fetched 2026-10-18): 'Ekante Bliss, Tirupati - IHCL SeleQtions' (stored name drops city + brand suffixes; extraction renders no diacritic), JSON-LD streetAddress '19-3-45, Near Ramanuja Circle, Renigunta Rd' + addressLocality 'Tirupati' + postalCode '517501', '113 Rooms & 5 Suites'",
+  },
+  {
+    name: "Kalyan Residency",
+    category: "hotel",
+    address: "No.177, Tata Nagar Rd, Near Central Bus Stand, Tata Nagar, Tirupati, Andhra Pradesh 517501",
+    city: "Tirupati",
+    locality: "Tata Nagar",
+    tags: ["lodging"],
+    sourceUrl: "https://kalyanresidency.com",
+    evidence: "official kalyanresidency.com (fetched 2026-10-18): 'Kalyan Residency is an elegant 3 star hotel with 58 well appointed rooms' (star self-claim NOT stored), address 'No.177, Tata Nagar Rd, Near Central Bus Stand, Tata Nagar, Tirupati, Andhra Pradesh 517501, India' (', India' dropped). PIN conflict with the hotel's own Facebook (517502 'T.P. Area') — official site wins",
+  },
+  {
+    name: "Minerva Grand Tirupati",
+    category: "hotel",
+    address: "Renigunta Road, Tirupati, Andhra Pradesh",
+    city: "Tirupati",
+    locality: "Renigunta Road",
+    tags: ["lodging", "brand_chain"],
+    sourceUrl: "https://www.minervahotels.in/tirupati-renigunta-road",
+    evidence: "official minervahotels.in property page (fetched 2026-10-18): headings 'Minerva Grand Tirupati', '69 luxurious rooms & suites', locator 'Renigunta Road - Tirupati', chain 'Minerva Group of Hotels'. Address stored DELIBERATELY at locality level — the official page publishes no street address; third-party street addresses were NOT adopted",
+  },
+];
+
+// The 9 batch-009 REV 2 retained ids — used ONLY as the world-detection probe
+// (verbatim from supabase/review-candidates/insert-batch-009-p3-places-revised.sql).
+const BATCH9_IDS = [
+  "52a44755-9abc-5ee9-ba4b-7b05d78cbc5c",
+  "471284c4-06f5-5e5c-8584-084068be5b96",
+  "86841bb2-f380-5918-b656-224c79aeefa2",
+  "fbe67c10-ea4b-5090-b435-5e3e7c75e560",
+  "8fbd7a4d-917a-57e6-bc30-5d724a952407",
+  "a868d3a5-81e6-59d3-9a08-dbcffd4d6172",
+  "65f0aace-1a57-5cef-a64a-1fb59a55dbb8",
+  "8dd66b9a-62b8-5843-b2b7-df2603c9dbc6",
+  "c03a27e8-184b-5f81-b798-1c76a4a23d39",
+];
+
+const MARKER = "p4-research-import";
+
+const MY_IDS = ROWS.map((r) => uuid5(`foodie-p4:${r.city}:${r.name}`));
+
+const idList = (ids: string[]) => ids.map((id) => `            '${id}'::uuid`).join(",\n");
+const nameList = (rows: Row[]) => rows.map((r) => `            lower(btrim(${sq(r.name)}))`).join(",\n");
+
+const insertTuples = ROWS.map(
+  (r) => `  (
+    '${uuid5(`foodie-p4:${r.city}:${r.name}`)}'::uuid,
+    ${sq(r.name)},
+    ${sq(r.category)},
+    ${sq(r.address)},
+    ${sq(r.city)},
+    ${sq(r.locality)},
+    null,          -- coordinates are NEVER estimated (see header)
+    null,
+    0,             -- rating not captured (UI renders no badge for 0)
+    '₹₹',          -- documented neutral default (see header)
+    null,
+    null,
+    array[${r.tags.map((t) => `'${t}'`).join(", ")}]::text[],
+    '${MARKER}',
+    ${sq(r.sourceUrl)},
+    'unverified'
+  )`,
+).join(",\n");
+
+const perRowIdComment = ROWS.map((r) => `--   ${uuid5(`foodie-p4:${r.city}:${r.name}`)}  ${r.name}`).join("\n");
+
+const HEADER = `-- ============================================================================
+-- Foodie — INSERT BATCH 010 (p4): Phase B researched Tirupati LODGING HOTELS
+--          (6 rows, city 'Tirupati') — REVIEW CANDIDATE
+-- ----------------------------------------------------------------------------
+-- FILE STATUS: REVIEW CANDIDATE — PROPOSED, NOT EXECUTED, NOT APPROVED.
+--   Generated by scripts/foodie-enrichment/gen-insert-batch-010.ts from
+--   scripts/foodie-enrichment/worksheets/places-p4.json (19 researched rows).
+--   Evidence: scripts/foodie-enrichment/evidence/places-p4-hotels/ (18 raw
+--   CLI JSON files + research-notes-hotels.md, all fetched 2026-10-18) and
+--   scripts/foodie-enrichment/evidence/places-p4-attractions/ (19 files).
+--   Review report: supabase/review-candidates/insert-batch-010-p4-places-review.md
+--   Read-only state probe: supabase/review-candidates/verify-batch-009-p3-compact.sql
+--   (batch-009 world) — re-run it BEFORE executing this file.
+--
+-- WHAT THIS BATCH CONTAINS (6 rows, ALL category 'hotel', city 'Tirupati'):
+${perRowIdComment}
+--   Every row: verification_status 'unverified'; latitude/longitude NULL
+--   (never estimated); rating 0 ("not captured"); price_level '₹₹' (neutral
+--   default); opening_hours NULL; phone NULL; source '${MARKER}'; source_url
+--   = the fetched OFFICIAL property page (retrieved 2026-10-18).
+--
+-- WHAT IS DELIBERATELY NOT HERE:
+--   * ALL 10 researched Tirupati/Tirumala ATTRACTIONS (Sri Venkateswara
+--     Swamy Temple, Sri Padmavathi Ammavari Temple, Sri Govindaraja Swamy
+--     Temple, Sri Kapilatheertham Temple, Sri Kalyana Venkateswara Swamy
+--     Temple, ISKCON Tirupati, Natural Arch/Silathoranam, Talakona
+--     Waterfall, Chandragiri Fort, Sri Venkateswara Zoological Park):
+--     HELD OUT because restaurants.category allows ONLY restaurant|hotel|
+--     tiffin|cafe|fast_food|street_food|bakery_sweets (migration-001) —
+--     storing a temple/fort/waterfall under a food category would be
+--     dishonest. They are fully researched in the worksheet + evidence and
+--     become importable the moment the owner approves a schema change.
+--   * Hotel Nivaara Tirupati (identity conflict: its domain rebranded from
+--     'PLR Grand'; owner page contradicts current site), Hotel PLR Grand
+--     (superseded brand), Hotel Bhimas (no live official site): all
+--     HELD OUT — see review report for re-consideration criteria.
+--   * No dish rows, no photos, no destination description changes (the
+--     tirupati destination row is NOT touched by this batch).
+--
+-- HONESTY CONTRACT (unchanged from batches 005-009):
+--   * verification_status 'unverified' on every row — an import NEVER
+--     self-verifies; verification timestamps/booleans stay NULL.
+--   * rating 0 = "not captured" (the UI renders no rating badge for 0).
+--   * price_level '₹₹' is the documented neutral default; the schema has no
+--     star-rating / nightly-price / check-in / amenities fields, and none
+--     were invented (see review report §schema-limits).
+--   * Addresses are stored EXACTLY at the level the fetched official page
+--     supports (Minerva Grand Tirupati deliberately locality-level — its
+--     official page publishes no street address).
+--   * 'lodging' tag disambiguates from the older 'hotel = meals place'
+--     usage; 'brand_chain' appears only where the chain is evidenced on the
+--     official page (Kalyan Residency: standalone, no chain evidence).
+--
+-- WORLD-CONDITIONAL + IDEMPOTENT (NEW in batch-010):
+--   The import status of batch-009 REV 2 is UNKNOWN to this candidate. The
+--   preflight therefore accepts EXACTLY two consistent starting worlds and
+--   aborts on any drift:
+--     PRE  world: the 9 batch-009 ids absent  → baseline 77 rows,
+--                 Tirupati 0, Doddaballapura 77, p3 marker 0
+--     POST world: the 9 batch-009 ids present → baseline 86 rows,
+--                 Tirupati 6,  Doddaballapura 80, p3 marker 9
+--     anything else (partial batch-009, different totals, extra Tirupati or
+--     Doddaballapura rows) → EXCEPTION, ZERO writes.
+--   Rerun behaviour: after ONE successful commit, a rerun detects all 6 of
+--   this batch's ids already present, makes NO changes (the insert is
+--   skipped), and exits through the same postflight assertions — the count
+--   expectations are STATE-AWARE (world × state):
+--     PRE  + fresh   → total 77, Tirupati 0
+--     PRE  + applied → total 83, Tirupati 6
+--     POST + fresh   → total 86, Tirupati 6
+--     POST + applied → total 92, Tirupati 12
+--   Name or UUID collisions and partial self-apply (1-5 of 6 ids) always
+--   abort with ZERO writes. The baseline numbers are audited preconditions —
+--   never edit them to admit a changed world; aborting IS the guard.
+--
+-- GUARDS:
+--   PREFLIGHT  — batch-009 world must be fully pre- or post-state; self-apply
+--                state must be fully fresh (0/6 ids) or fully applied (6/6);
+--                name conflicts (this batch's 6 names on rows OTHER than the
+--                6 fixed ids) must be 0; marker count must match the state;
+--                per-city + total counts must match the audited world;
+--                EXACTLY ONE active destination row with slug 'tirupati'.
+--   POSTFLIGHT — the exact 6-id set present; every row 'unverified'; every
+--                latitude/longitude NULL; every verification field NULL
+--                (last_verified_at, address_verified, coordinates_verified,
+--                hours_verified, photos_verified per committed migration-005
+--                — if migration-005 was never applied, postflight fails with
+--                "column does not exist" and aborts, the conservative mode);
+--                every row carries the '${MARKER}' marker and a populated
+--                source_url; every row keeps rating-0 / '₹₹' / category
+--                'hotel' / NULL hours / NULL phone; end-state totals exact
+--                per world (PRE → 83 = 77 + 6, Tirupati 6; POST → 92 = 86 + 6,
+--                Tirupati 12); destination still exactly-one-active.
+--   The file ends with COMMIT: preflight + (conditional) inserts +
+--   postflight run atomically in one SQL-Editor session; ANY guard failure
+--   aborts the transaction and NOTHING is written.
+-- ============================================================================
+
+begin;
+`;
+
+const PREFLIGHT = `
+-- ---------------------------------------------------------------------------
+-- Part 0 — PREFLIGHT (world detection + drift/collision guards + the
+--          CONDITIONAL insert; aborts before any write when anything is off)
+-- ---------------------------------------------------------------------------
+do $batch010$
+declare
+  v_dupes integer;
+  v_batch9 integer;
+  v_applied integer;
+  v_markers integer;
+  v_total integer;
+  v_tirupati integer;
+  v_doddaballapura integer;
+  v_dest_total integer;
+  v_dest_active integer;
+  v_world text;
+  v_state text;
+  v_exp_total integer;
+  v_exp_tirupati integer;
+  v_exp_doddaballapura integer;
+begin
+  -- (a) batch-009 world detection: the 9 REV 2 retained ids must be fully
+  --     absent (PRE) or fully present (POST); anything else is drift.
+  select count(*) into v_batch9 from public.restaurants
+   where id in (
+${idList(BATCH9_IDS)}
+   );
+  if v_batch9 = 0 then
+    v_world := 'PRE-batch-009';
+    v_exp_total := 77;  -- audited post-batch-008 baseline (stale precondition)
+    v_exp_tirupati := 0;
+    v_exp_doddaballapura := 77;
+  elsif v_batch9 = 9 then
+    v_world := 'POST-batch-009';
+    v_exp_total := 86;  -- 77 baseline + 9 retained REV 2 rows
+    v_exp_tirupati := 6;
+    v_exp_doddaballapura := 80;
+  else
+    raise exception 'PREFLIGHT FAIL: % of the 9 batch-009 ids are present (expected 0 or 9) — batch-009 was (partially) applied or its rows changed. Resolve the batch-009 state FIRST (run verify-batch-009-p3-compact.sql); this batch cannot proceed on a drifted world.', v_batch9;
+  end if;
+  raise notice 'PREFLIGHT OK: batch-009 world = % (9-id probe = %).', v_world, v_batch9;
+
+  -- (b) self-apply state: 0 of the 6 fixed ids (fresh) or all 6 (applied);
+  --     1-5 means a partial self-apply — drift, abort.
+  select count(*) into v_applied from public.restaurants
+   where id in (
+${idList(MY_IDS)}
+   );
+  if v_applied = 0 then
+    v_state := 'FRESH';
+  elsif v_applied = 6 then
+    v_state := 'ALREADY-APPLIED';
+  else
+    raise exception 'PREFLIGHT FAIL: % of this batch''s 6 fixed ids already exist — a partial self-apply. Re-run the review; do NOT re-import over a partial state.', v_applied;
+  end if;
+  raise notice 'PREFLIGHT OK: batch-010 state = % (6-id probe = %).', v_state, v_applied;
+
+  -- (c) no name conflicts: this batch's 6 names must not exist on any row
+  --     OTHER than the 6 fixed ids (exact-name duplicates would mislead
+  --     discovery; a rerun must never duplicate rows).
+  select count(*) into v_dupes from public.restaurants
+   where lower(btrim(name)) in (
+${nameList(ROWS)}
+   )
+     and id not in (
+${idList(MY_IDS)}
+   );
+  if v_dupes <> 0 then
+    raise exception 'PREFLIGHT FAIL: % row(s) already use this batch''s names (on other ids) — importing would duplicate listings. Re-run the review.', v_dupes;
+  end if;
+  raise notice 'PREFLIGHT OK: no name conflicts with the 6 batch rows.';
+
+  -- (d) marker hygiene: 'p4-research-import' must be unused when fresh and
+  --     present on exactly the 6 batch rows when already applied.
+  select count(*) into v_markers from public.restaurants where source = '${MARKER}';
+  if v_state = 'FRESH' and v_markers <> 0 then
+    raise exception 'PREFLIGHT FAIL: % row(s) already carry the ${MARKER} marker while the batch ids are absent — unknown provenance state; re-run the review.', v_markers;
+  end if;
+  if v_state = 'ALREADY-APPLIED' and v_markers <> 6 then
+    raise exception 'PREFLIGHT FAIL: % row(s) carry the ${MARKER} marker, expected exactly 6 in the already-applied state; re-run the review.', v_markers;
+  end if;
+  raise notice 'PREFLIGHT OK: ${MARKER} marker consistent with state %.', v_state;
+
+  -- (e) per-city + total counts must match the audited world AND self-apply
+  --     state exactly (STALE PRECONDITIONS — revalidate with read-only probes
+  --     first; never edit these numbers to admit a changed world: aborting IS
+  --     the guard). Expectations are STATE-AWARE so a successful rerun (the
+  --     ALREADY-APPLIED state) passes through the same guard honestly.
+  if v_state = 'ALREADY-APPLIED' then
+    v_exp_total := v_exp_total + 6;       -- this batch's rows already in
+    v_exp_tirupati := v_exp_tirupati + 6;
+  end if;
+  select count(*) into v_total from public.restaurants;
+  select count(*) into v_tirupati from public.restaurants where city = 'Tirupati';
+  select count(*) into v_doddaballapura from public.restaurants where city = 'Doddaballapura';
+  if v_total <> v_exp_total then
+    raise exception 'PREFLIGHT FAIL: restaurants total is %, expected exactly % in the % world. The table changed outside this review — re-run the full review before importing.', v_total, v_exp_total, v_world;
+  end if;
+  if v_tirupati <> v_exp_tirupati then
+    raise exception 'PREFLIGHT FAIL: Tirupati city count is %, expected exactly % in the % world. Extra or missing Tirupati rows are drift — re-run the full review.', v_tirupati, v_exp_tirupati, v_world;
+  end if;
+  if v_doddaballapura <> v_exp_doddaballapura then
+    raise exception 'PREFLIGHT FAIL: Doddaballapura city count is %, expected exactly % in the % world — re-run the full review.', v_doddaballapura, v_exp_doddaballapura, v_world;
+  end if;
+  raise notice 'PREFLIGHT OK: total = %, Tirupati = %, Doddaballapura = % (world %).', v_total, v_tirupati, v_doddaballapura, v_world;
+
+  -- (f) destination guard: EXACTLY ONE row with slug 'tirupati' must exist
+  --     and it must be active (count-based exact-one assertion; destinations
+  --     slug is UNIQUE per committed migration-003).
+  select count(*) into v_dest_total from public.destinations where slug = 'tirupati';
+  if v_dest_total <> 1 then
+    raise exception 'PREFLIGHT FAIL: % destination rows carry slug ''tirupati'' (expected exactly 1) — aborting.', v_dest_total;
+  end if;
+  select count(*) into v_dest_active from public.destinations where slug = 'tirupati' and is_active;
+  if v_dest_active <> 1 then
+    raise exception 'PREFLIGHT FAIL: the tirupati destination row is not active — aborting.';
+  end if;
+  raise notice 'PREFLIGHT OK: exactly one active tirupati destination row present.';
+
+  -- (g) THE CONDITIONAL INSERT — only in the FRESH state; an already-applied
+  --     rerun makes NO changes and falls through to the postflight.
+  if v_state = 'FRESH' then
+    insert into public.restaurants
+      (id, name, category, address, city, locality, latitude, longitude, rating, price_level, opening_hours, phone, tags, source, source_url, verification_status)
+    values
+${insertTuples};
+    raise notice 'INSERT OK: 6 batch-010 rows inserted.';
+  else
+    raise notice 'RERUN DETECTED: batch-010 already applied — making NO changes (idempotent exit).';
+  end if;
+end
+$batch010$;
+`;
+
+const POSTFLIGHT = `
+-- ---------------------------------------------------------------------------
+-- Part 2 — POSTFLIGHT: hard guards (any violation rolls back EVERYTHING;
+--          runs on BOTH a fresh apply and an idempotent rerun)
+-- ---------------------------------------------------------------------------
+do $pf010$
+declare
+  v_batch9 integer;
+  v_present integer;
+  v_bad integer;
+  v_total integer;
+  v_tirupati integer;
+  v_doddaballapura integer;
+  v_dest_active integer;
+  v_exp_total integer;
+  v_exp_tirupati integer;
+  v_exp_doddaballapura integer;
+begin
+  -- (1) world re-detection (same probe as preflight)
+  select count(*) into v_batch9 from public.restaurants
+   where id in (
+${idList(BATCH9_IDS)}
+   );
+  if v_batch9 = 0 then
+    v_exp_total := 83;  -- 77 (audited baseline) + 6 (this batch)
+    v_exp_tirupati := 6;
+    v_exp_doddaballapura := 77;
+  elsif v_batch9 = 9 then
+    v_exp_total := 92;  -- 86 (77 + 9 batch-009) + 6 (this batch)
+    v_exp_tirupati := 12;
+    v_exp_doddaballapura := 80;
+  else
+    raise exception 'POSTFLIGHT FAIL: batch-009 world changed mid-transaction (% of 9 ids) — rolling back.', v_batch9;
+  end if;
+
+  -- (2) exactly the 6 fixed ids present (id is the PK, count 6 = set match)
+  select count(*) into v_present from public.restaurants
+   where id in (
+${idList(MY_IDS)}
+   );
+  if v_present <> 6 then
+    raise exception 'POSTFLIGHT FAIL: % of the 6 batch rows are present (expected exactly 6); rolling back.', v_present;
+  end if;
+  raise notice 'POSTFLIGHT OK: all 6 batch rows are present.';
+
+  -- (3) trust fields: 'unverified', no self-verification (migration-005 columns)
+  select count(*) into v_bad from public.restaurants
+   where id in (
+${idList(MY_IDS)}
+   )
+     and (verification_status is distinct from 'unverified'
+          or last_verified_at is not null
+          or address_verified is not null
+          or coordinates_verified is not null
+          or hours_verified is not null
+          or photos_verified is not null);
+  if v_bad <> 0 then
+    raise exception 'POSTFLIGHT FAIL: % batch row(s) deviate from unverified/NULL-verification semantics; rolling back.', v_bad;
+  end if;
+  raise notice 'POSTFLIGHT OK: every batch row unverified, verification fields NULL.';
+
+  -- (4) coordinates stayed NULL (never estimated)
+  select count(*) into v_bad from public.restaurants
+   where id in (
+${idList(MY_IDS)}
+   )
+     and (latitude is not null or longitude is not null);
+  if v_bad <> 0 then
+    raise exception 'POSTFLIGHT FAIL: % batch row(s) carry coordinates — imports never estimate them; rolling back.', v_bad;
+  end if;
+  raise notice 'POSTFLIGHT OK: no coordinates were estimated.';
+
+  -- (5) provenance landed: marker + populated source_url on every batch row
+  select count(*) into v_bad from public.restaurants
+   where id in (
+${idList(MY_IDS)}
+   )
+     and (source is distinct from '${MARKER}'
+          or source_url is null
+          or btrim(source_url) = '');
+  if v_bad <> 0 then
+    raise exception 'POSTFLIGHT FAIL: % batch row(s) missing the ${MARKER} marker or a populated source_url; rolling back.', v_bad;
+  end if;
+  raise notice 'POSTFLIGHT OK: marker + source_url present on all 6 rows.';
+
+  -- (6) intended defaults: category 'hotel', rating 0, neutral '₹₹', NULL hours/phone
+  select count(*) into v_bad from public.restaurants
+   where id in (
+${idList(MY_IDS)}
+   )
+     and (category is distinct from 'hotel'
+          or rating is distinct from 0
+          or price_level is distinct from '₹₹'
+          or opening_hours is not null
+          or phone is not null);
+  if v_bad <> 0 then
+    raise exception 'POSTFLIGHT FAIL: % batch row(s) deviate from the intended hotel/rating-0/₹₹/NULL-hours/NULL-phone defaults; rolling back.', v_bad;
+  end if;
+  raise notice 'POSTFLIGHT OK: category hotel, rating 0, price ₹₹, hours/phone NULL on all 6 rows.';
+
+  -- (7) exact end-state totals per world (labelled derivations, NOT live
+  --     measurements of anything beyond what preflight already asserted):
+  --       PRE  world:  total 83  = 77 (audited baseline) + 6 (this batch)
+  --                    Tirupati 6  = 0 + 6;  Doddaballapura 77 (unchanged)
+  --       POST world:  total 92  = 86 (77 + 9 batch-009) + 6 (this batch)
+  --                    Tirupati 12 = 6 + 6;  Doddaballapura 80 (unchanged)
+  select count(*) into v_total from public.restaurants;
+  select count(*) into v_tirupati from public.restaurants where city = 'Tirupati';
+  select count(*) into v_doddaballapura from public.restaurants where city = 'Doddaballapura';
+  if v_total <> v_exp_total then
+    raise exception 'POSTFLIGHT FAIL: total restaurants is %, expected exactly %; rolling back.', v_total, v_exp_total;
+  end if;
+  if v_tirupati <> v_exp_tirupati then
+    raise exception 'POSTFLIGHT FAIL: Tirupati city count is %, expected exactly %; rolling back.', v_tirupati, v_exp_tirupati;
+  end if;
+  if v_doddaballapura <> v_exp_doddaballapura then
+    raise exception 'POSTFLIGHT FAIL: Doddaballapura city count is %, expected exactly %; rolling back.', v_doddaballapura, v_exp_doddaballapura;
+  end if;
+  raise notice 'POSTFLIGHT OK: total = %, Tirupati = %, Doddaballapura = %.', v_total, v_tirupati, v_doddaballapura;
+
+  -- (8) destination: still exactly one ACTIVE tirupati row. This batch does
+  --     NOT modify the destination (batch-009 REV 2 owns that enrichment).
+  select count(*) into v_dest_active from public.destinations where slug = 'tirupati' and is_active;
+  if v_dest_active <> 1 then
+    raise exception 'POSTFLIGHT FAIL: expected exactly 1 active tirupati destination row, found %; rolling back.', v_dest_active;
+  end if;
+  raise notice 'POSTFLIGHT OK: tirupati destination untouched and active.';
+end
+$pf010$;
+`;
+
+const FOOTER = `
+-- ---------------------------------------------------------------------------
+-- The file ends with COMMIT: preflight + (conditional) inserts + postflight
+-- run atomically in one SQL-Editor session. If ANY guard fails, the
+-- exception aborts the transaction, the commit never runs, and the database
+-- is left exactly as it was. A rerun AFTER one successful commit detects the
+-- already-applied state, makes NO changes, and passes the same postflight.
+--
+-- NOTHING IN THIS FILE HAS BEEN EXECUTED. This candidate connects to no
+-- database; every count it asserts is a labelled logical derivation from the
+-- documented audited baselines (77 pre / 86 post batch-009) and must be
+-- revalidated with the read-only probes immediately before any execution.
+-- ============================================================================
+
+commit;
+`;
+
+const finalSql = HEADER + PREFLIGHT + POSTFLIGHT + FOOTER;
+
+const out = join(ROOT, "supabase", "review-candidates", "insert-batch-010-p4-places.sql");
+writeFileSync(out, finalSql);
+console.log(`[gen-010] wrote ${out} (${ROWS.length} rows)`);
+console.log("[gen-010] ids:");
+for (const r of ROWS) console.log(`   ${uuid5(`foodie-p4:${r.city}:${r.name}`)}  ${r.name}`);

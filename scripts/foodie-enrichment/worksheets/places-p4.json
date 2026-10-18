@@ -1,0 +1,525 @@
+{
+  "summary": {
+    "retrievedOn": "2026-10-18",
+    "phase": "Phase B (Tirupati data quality & research) — Step 3 research + Step 4 review-candidate preparation",
+    "taskAgents": {
+      "3-a": "attractions research — evidence scripts/foodie-enrichment/evidence/places-p4-attractions/ (19 raw JSON + research-notes-attractions.md)",
+      "3-b": "hotels research — evidence scripts/foodie-enrichment/evidence/places-p4-hotels/ (18 raw JSON + research-notes-hotels.md)"
+    },
+    "total": 19,
+    "byArea": { "tirupati": 19 },
+    "byCategory": { "hotel": 9, "attraction_held_out": 10 },
+    "disposition": { "insert_candidate": 6, "held_out": 13 },
+    "note": "rows are research candidates with recorded evidence and per-field support maps; only lodging-hotel rows with a fetched OFFICIAL property page and a source-supported address enter the generated batch-010 SQL review candidate. ALL 10 attractions are held out: the restaurants.category constraint (7 values) has no 'attraction' category — a schema decision by the human owner is required first. Nothing here is DB-verified; every inserted row stays verification_status='unverified'."
+  },
+  "schemaBlocker": {
+    "attractions": "restaurants.category CHECK allows only restaurant|hotel|tiffin|cafe|fast_food|street_food|bakery_sweets (migration-001). Storing a temple/fort/waterfall under a food category would be dishonest. All attraction rows below are HELD OUT until the owner approves a schema change (new category or separate table).",
+    "hotels": "No schema fields exist for star rating, check-in/check-out, room types, structured amenities, nightly price, or booking links. source_url is provenance (not a booking URL). price_level '₹₹' is the documented neutral default (its brackets are cost-for-two oriented); rating stays 0 ('not captured'). Unsupported hotel fields are therefore NOT stored."
+  },
+  "rows": [
+    {
+      "area": "tirupati",
+      "name": "Marasa Sarovar Premiere",
+      "category": "hotel",
+      "tags": ["lodging", "brand_chain"],
+      "sourceUrl": "https://www.sarovarhotels.com/marasa-sarovar-premiere-tirupati-hotels",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-sarovarhotels-marasa-sarovar-premiere-tirupati.json",
+      "address": "Upadhyaya Nagar, Karakambadi Road, Tirupati, Andhra Pradesh 517507",
+      "locality": "Upadhyaya Nagar",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "official page contact block: \"Upadhyaya Nagar, Karakambadi Road, Tirupati - 517507 Andhra Pradesh\" (verbatim; comma/pin normalization only)",
+        "identityEvidence": "page headline \"Marasa Sarovar Premiere, Tirupati - A 5 Star Hotel in Tirupati\"; title \"Marasa Sarovar Premiere | Tirupati Hotel | Tirumala Hotels\"",
+        "lodgingEvidence": "\"121 spacious rooms across 3 categories\" (official facilities block)",
+        "chainEvidence": "official page served on the Sarovar Hotels platform (sarovarhotels.com)",
+        "fieldSupport": { "name": true, "address": true, "locality": true, "lodging": true, "chain": true, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://www.sarovarhotels.com/marasa-sarovar-premiere-tirupati-hotels", "name": "Marasa Sarovar Premiere | Tirupati Hotel | Tirumala Hotels", "host": "www.sarovarhotels.com", "kind": "official" }
+        ]
+      },
+      "conflicts": "Hint domain marasasarovar.com is dead (DNS, 2 failed fetches 2026-10-18); evidence taken from the working sarovarhotels.com official property page. Third-party spelling variant 'Upadhaya'.",
+      "status": "verified (identity + address, official fetched page)",
+      "disposition": "INSERT_CANDIDATE"
+    },
+    {
+      "area": "tirupati",
+      "name": "Fortune Select Grand Ridge",
+      "category": "hotel",
+      "tags": ["lodging", "brand_chain"],
+      "sourceUrl": "https://www.itchotels.com/in/en/fortuneselectgrandridge-tirupati",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-itchotels-fortune-select-grand-ridge-tirupati.json",
+      "address": "Shilparamam, Tiruchanoor Road, Tirupati, Andhra Pradesh 517501",
+      "locality": "Shilparamam",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "official page: \"Shilparamam, Tiruchanoor Road Tirupati - 517 501, Andhra Pradesh\" (verbatim; PIN '517 501' = 517501, spacing variant only)",
+        "identityEvidence": "official page headline \"Fortune Select Grand Ridge, Tirupati\" on the ITC Hotels site (itchotels.com)",
+        "lodgingEvidence": "Accommodation section with \"Deluxe Room\" inventory on the official page",
+        "chainEvidence": "Fortune is an ITC Hotels brand; page served on itchotels.com",
+        "fieldSupport": { "name": true, "address": true, "locality": true, "lodging": true, "chain": true, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://www.itchotels.com/in/en/fortuneselectgrandridge-tirupati", "name": "Fortune Select Grand Ridge, Tirupati - ITC Hotels", "host": "www.itchotels.com", "kind": "official" }
+        ]
+      },
+      "conflicts": "fortunehotels.in legacy domain hint returned only a dining-subpage snippet this session; itchotels.com is the current official brand site and is used as source_url.",
+      "status": "verified (identity + address, official fetched page)",
+      "disposition": "INSERT_CANDIDATE"
+    },
+    {
+      "area": "tirupati",
+      "name": "Ramee Guestline Hotel",
+      "category": "hotel",
+      "tags": ["lodging", "brand_chain"],
+      "sourceUrl": "https://rameehotels.com/ramee-guestline-hotel-tirupati",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-rameehotels-guestline-tirupati.json",
+      "address": "14/37 Karakambadi Rd, Mangalam, Tirupati, Andhra Pradesh 517507",
+      "locality": "Mangalam",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "official page served JSON-LD schema.org block (verbatim): \"streetAddress\":\"14/37 Karakambadi Rd, Mangalam, Tirupati, Andhra Pradesh 517507, India\" (trailing ', India' dropped for DB address, country is implied)",
+        "identityEvidence": "JSON-LD name \"Ramee Guestline Hotel, Tirupati\"; page title \"Ramee Guestline Tirupati - official website\"; stored name drops the trailing city suffix (city lives in the city column, batch-009 naming style)",
+        "lodgingEvidence": "JSON-LD @type \"LodgingBusiness\", brand \"Ramee Group of Hotels\", priceRange \"$$-$$$\" served by the official page",
+        "chainEvidence": "JSON-LD brand: \"Ramee Group of Hotels\"",
+        "fieldSupport": { "name": true, "address": true, "locality": true, "lodging": true, "chain": true, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://rameehotels.com/ramee-guestline-hotel-tirupati", "name": "Ramee Guestline Tirupati - Official Site", "host": "rameehotels.com", "kind": "official" }
+        ]
+      },
+      "conflicts": "React SPA: visual body not text-extractable; evidence is the first-party served JSON-LD (still official markup). Third-party locality variance: EaseMyTrip 'Akkarampalle' vs official 'Mangalam' — official wins. Legacy TripAdvisor name 'Ramee Guestline Days Hotel' (older branding, not adopted). JSON-LD also carries telephone '+91 9505504406' — NOT stored (phone kept NULL per batch-009 convention).",
+      "status": "verified (identity + address via official JSON-LD)",
+      "disposition": "INSERT_CANDIDATE"
+    },
+    {
+      "area": "tirupati",
+      "name": "Ekante Bliss",
+      "category": "hotel",
+      "tags": ["lodging", "brand_chain"],
+      "sourceUrl": "https://www.seleqtionshotels.com/en-in/hotels/ekante-bliss-tirupati",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-seleqtionshotels-ekante-bliss-tirupati.json",
+      "address": "19-3-45, Near Ramanuja Circle, Renigunta Rd, Tirupati, Andhra Pradesh 517501",
+      "locality": "Renigunta Road",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "official page JSON-LD (verbatim): \"streetAddress\":\"19-3-45, Near Ramanuja Circle, Renigunta Rd\", \"addressLocality\":\"Tirupati\", \"postalCode\":\"517501\"; visible contact block also shows \"Tirupati, Andhra Pradesh\"",
+        "identityEvidence": "official page: \"Ekante Bliss, Tirupati - IHCL SeleQtions\" (page headline/title); stored name drops the trailing city + brand suffixes",
+        "lodgingEvidence": "\"113 Rooms &amp; 5 Suites\" on the official page",
+        "chainEvidence": "IHCL SeleQtions brand (seleqtionshotels.com official brand site)",
+        "fieldSupport": { "name": true, "address": true, "locality": true, "lodging": true, "chain": true, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://www.seleqtionshotels.com/en-in/hotels/ekante-bliss-tirupati", "name": "Ekante Bliss, Tirupati - IHCL SeleQtions | Luxury Hotel", "host": "www.seleqtionshotels.com", "kind": "official" }
+        ]
+      },
+      "conflicts": "SHORTLIST NAME WAS STALE: shortlist said 'Bliss Hotel Tirupati'; the current IHCL property (opened under SeleQtions, corroborated Feb-2024 opening news) is 'Ekante Bliss'. Text extraction renders the name WITHOUT the diacritic ('Ekante'); the brand's rendered page may show 'Ekanté' — the extracted form is stored (as-evidence). Room prices visible on the page were labelled NOT-FOR-DB.",
+      "status": "verified (identity + address, official fetched page)",
+      "disposition": "INSERT_CANDIDATE"
+    },
+    {
+      "area": "tirupati",
+      "name": "Kalyan Residency",
+      "category": "hotel",
+      "tags": ["lodging"],
+      "sourceUrl": "https://kalyanresidency.com",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-kalyanresidency-home.json",
+      "address": "No.177, Tata Nagar Rd, Near Central Bus Stand, Tata Nagar, Tirupati, Andhra Pradesh 517501",
+      "locality": "Tata Nagar",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "official page (verbatim): \"No.177, Tata Nagar Rd, Near Central Bus Stand, Tata Nagar, Tirupati, Andhra Pradesh 517501, India\" (trailing ', India' dropped for DB address)",
+        "identityEvidence": "official page: \"Kalyan Residency is an elegant 3 star hotel with 58 well appointed rooms\" (self-description; the '3 star' self-claim is NOT stored)",
+        "lodgingEvidence": "\"58 well appointed rooms\" on the official page",
+        "chainEvidence": "none found — standalone property (hence no brand_chain tag)",
+        "fieldSupport": { "name": true, "address": true, "locality": true, "lodging": true, "chain": false, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://kalyanresidency.com", "name": "Kalyan Residency Hotel Tirupati | Book Tirupati Hotel Online", "host": "kalyanresidency.com", "kind": "official" }
+        ]
+      },
+      "conflicts": "PIN conflict: the hotel's own Facebook page says 'T.P. Area, 517502' vs the official site 'Tata Nagar, 517501' — official site wins, flagged for the reviewer.",
+      "status": "verified (identity + address, official fetched page)",
+      "disposition": "INSERT_CANDIDATE"
+    },
+    {
+      "area": "tirupati",
+      "name": "Minerva Grand Tirupati",
+      "category": "hotel",
+      "tags": ["lodging", "brand_chain"],
+      "sourceUrl": "https://www.minervahotels.in/tirupati-renigunta-road",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-minervahotels-tirupati-renigunta-road.json",
+      "address": "Renigunta Road, Tirupati, Andhra Pradesh",
+      "locality": "Renigunta Road",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "official page locator heading \"Renigunta Road - Tirupati\" (page title: \"Destination – Tirupati – Renigunta Road - Minerva Group of Hotels - …\"). NO street-level address is published on the official page — the stored address is deliberately locality-level ONLY.",
+        "identityEvidence": "body headings \"Minerva Grand Tirupati\" (×3 on the official page)",
+        "lodgingEvidence": "\"69 luxurious rooms &amp; suites\" on the official page",
+        "chainEvidence": "\"Minerva Group of Hotels\" (Hyderabad | Secunderabad | …) in the official page title",
+        "fieldSupport": { "name": true, "address": "locality-level only", "locality": true, "lodging": true, "chain": true, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://www.minervahotels.in/tirupati-renigunta-road", "name": "Destination – Tirupati – Renigunta Road - Minerva Group of Hotels", "host": "www.minervahotels.in", "kind": "official" }
+        ]
+      },
+      "conflicts": "Third-party street addresses (MakeMyTrip 'Near Railway Flyover… 517501', meetings-conventions pages) were snippet-only and were NOT adopted — the DB address stays at the level the official page supports.",
+      "status": "partially_verified (identity + lodging + locality official; no official street address)",
+      "disposition": "INSERT_CANDIDATE — address stored at locality level, nothing invented"
+    },
+    {
+      "area": "tirupati",
+      "name": "Hotel Nivaara Tirupati",
+      "category": "hotel",
+      "tags": ["lodging"],
+      "sourceUrl": "https://www.hotelplrgrand.com",
+      "sourceKind": "official (identity in conflict)",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-hotelplrgrand-home.json",
+      "address": "Next to APSRTC Central Bus Station, Tirupati, Andhra Pradesh 517501",
+      "locality": "Near APSRTC Central Bus Station",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": "served JSON-LD @type \"Hotel\" + footer address \"Next to APSRTC Central Bus Station, Tirupati - 517501, AP, India\" on the site at the hotelplrgrand.com domain",
+        "identityEvidence": "CONFLICT: the domain now serves a site branding the property \"Hotel Nivaara\" (\"Ninety premium rooms…\"; JSON-LD Hotel; refs nivaarahotels.com) with ZERO 'PLR' occurrences, while the owner group page (plrprojects.com/plrgrand.html, also fetched) still lists \"PLR Grand Hotel\" citing the SAME domain",
+        "lodgingEvidence": "\"Ninety premium rooms in two crafted typologies\"",
+        "chainEvidence": "nivaarahotels.com referenced; ownership continuity between 'PLR Grand' and 'Hotel Nivaara' UNPROVEN from fetched sources",
+        "fieldSupport": { "name": "conflicted", "address": true, "locality": true, "lodging": true, "chain": "unproven", "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": [
+          { "url": "https://www.hotelplrgrand.com", "name": "Hotel Nivaara (served at the hotelplrgrand.com domain)", "host": "www.hotelplrgrand.com", "kind": "official-but-conflicted" },
+          { "url": "https://www.plrprojects.com/plrgrand.html", "name": "PLR Grand Hotel (owner group page)", "host": "www.plrprojects.com", "kind": "official-owner" }
+        ]
+      },
+      "conflicts": "Two first-party sources contradict each other on the CURRENT brand name. Re-consideration criteria: a live official page AND the owner-group page agree on the property's current name (or an owner statement of the rebrand).",
+      "status": "unverified (identity conflict)",
+      "disposition": "HELD_OUT — identity conflict"
+    },
+    {
+      "area": "tirupati",
+      "name": "Hotel PLR Grand",
+      "category": "hotel",
+      "tags": [],
+      "sourceUrl": "https://www.plrprojects.com/plrgrand.html",
+      "sourceKind": "official-owner (superseded brand)",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/page-plrprojects-plrgrand.json",
+      "address": null,
+      "locality": null,
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": "partial (owner page says Tirupati hotel; its own cited domain now brands 'Hotel Nivaara')",
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": null,
+        "identityEvidence": "owner group page still lists \"PLR Grand Hotel\" (100 rooms) citing hotelplrgrand.com — but that domain now serves 'Hotel Nivaara'",
+        "lodgingEvidence": "owner page describes hotel rooms (100 rooms)",
+        "fieldSupport": { "name": "superseded", "address": false, "locality": false, "lodging": true, "chain": true, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": []
+      },
+      "conflicts": "Same investigation as 'Hotel Nivaara Tirupati' — recorded separately so neither name is silently merged or dropped.",
+      "status": "unverified (brand superseded on its own domain)",
+      "disposition": "HELD_OUT — merge-conflict with Nivaara candidate"
+    },
+    {
+      "area": "tirupati",
+      "name": "Hotel Bhimas",
+      "category": "hotel",
+      "tags": [],
+      "sourceUrl": null,
+      "sourceKind": null,
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-hotels/search-bhimas-group-alternate-domains.json",
+      "address": null,
+      "locality": null,
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": false,
+        "retrievedOn": "2026-10-18",
+        "addressEvidence": null,
+        "identityEvidence": "no live official website found: hotelbhimas.com DNS-dead (2 failed page_reader attempts); bhimasresidency.com fetched = GoDaddy expired/parked page; alternate-domain search surfaced only booking portals/Facebook/MCA registry",
+        "lodgingEvidence": null,
+        "fieldSupport": { "name": false, "address": false, "locality": false, "lodging": false, "chain": false, "coordinates": false, "rating": false, "prices": false, "hours": false, "phone": false },
+        "hits": []
+      },
+      "conflicts": "Well-known legacy property but NO live official source this session. Re-consideration criteria: an official property domain returns and is fetched successfully.",
+      "status": "unverified",
+      "disposition": "HELD_OUT — no live official source"
+    },
+    {
+      "area": "tirupati",
+      "name": "Sri Venkateswara Swamy Temple",
+      "category": "attraction",
+      "placeType": "temple",
+      "tags": [],
+      "sourceUrl": "https://www.tirumala.org/TTDTempleHistory.aspx",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-tirumala-org-temple-history.json",
+      "address": null,
+      "locality": "Tirumala",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "tirumala.org menu block 'At Tirumala' → 'Sri Venkateswara Swamy Temple'; TTDTempleHistory.aspx body quote recorded in notes",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": false, "hours": false, "fees": false },
+        "hits": [
+          { "url": "https://www.tirumala.org", "name": "Tirumala Tirupati Devasthanams Official Website", "host": "www.tirumala.org", "kind": "official" },
+          { "url": "https://whc.unesco.org/en/tentativelists/6894", "name": "UNESCO WHC tentative list (corroboration)", "host": "whc.unesco.org", "kind": "intergovernmental" }
+        ]
+      },
+      "conflicts": "None on name ('Tirumala Venkateswara Temple' is the UNESCO phrasing of the same temple).",
+      "status": "verified (name/existence/locality)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Sri Padmavathi Ammavari Temple",
+      "category": "attraction",
+      "placeType": "temple",
+      "tags": [],
+      "sourceUrl": "https://ttdevasthanams.ap.gov.in/temples",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-ttdevasthanams-aptmp-temples.json",
+      "address": null,
+      "locality": "Tiruchanoor",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "TTD booking portal listing 'Sri Padmavathi Ammavari Temple, Tiruchanoor'; tirumala.org PatAtThiruchanoorSevas.aspx section; district page locality sentence quoted in notes",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": false, "hours": "displayed close-time only, NOT stored", "fees": false },
+        "hits": [
+          { "url": "https://www.tirumala.org/PatAtThiruchanoorSevas.aspx", "name": "Sri Padmavathi Ammavari Temple — TTD", "host": "www.tirumala.org", "kind": "official" }
+        ]
+      },
+      "conflicts": "Spelling: TTD 'Tiruchanoor' vs district site 'Tiruchanur' — TTD spelling recommended if ever stored.",
+      "status": "verified (name/locality)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Sri Govindaraja Swamy Temple",
+      "category": "attraction",
+      "placeType": "temple",
+      "tags": [],
+      "sourceUrl": "https://tirupati.ap.gov.in/religious-tourism",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-tirupati-ap-gov-in-religious-tourism.json",
+      "address": null,
+      "locality": "Tirupati city",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "TTD portal listing 'Sri Govindaraja Swamy Temple, Tirupati'; district page: 'situated at the heart of the Tirupati city… consecrated in the year 1130 AD by Saint Ramanujacharya'",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": false, "hours": false, "fees": false },
+        "hits": [
+          { "url": "https://ttdevasthanams.ap.gov.in/temples", "name": "TTD Official Booking Portal — temples", "host": "ttdevasthanams.ap.gov.in", "kind": "official" }
+        ]
+      },
+      "conflicts": "Orthography only: Govindaraja Swamy / Govindarajaswamy / Govindarajaswami across official sources.",
+      "status": "verified (name/existence/locality)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Sri Kapilatheertham Temple",
+      "category": "attraction",
+      "placeType": "temple+theertham",
+      "tags": [],
+      "sourceUrl": "https://ttdevasthanams.ap.gov.in/temples",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-ttdevasthanams-aptmp-temples.json",
+      "address": null,
+      "locality": "Tirupati (foot of Tirumala hills / Seshachalam)",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "TTD portal listing 'Sri Kapilatheertham Temple, Tirupati'; district page 'Kapila Theertham is a famous Saivite Temple and Theertham, located at Tirupati…' (full quote in notes)",
+        "fieldSupport": { "name": "partially (3+ official variants)", "locality": true, "address": false, "coordinates": false, "hours": false, "fees": false },
+        "hits": [
+          { "url": "https://tirupati.ap.gov.in/religious-tourism", "name": "Tirupati District — Religious Tourism", "host": "tirupati.ap.gov.in", "kind": "official" }
+        ]
+      },
+      "conflicts": "Canonical spelling unresolved: TTD portal 'Sri Kapilatheertham Temple' vs district 'Kapila Theertham' vs tirumala.org nav 'Sri Kapliswaraswamy Temple' (identity match of the last variant not independently confirmed).",
+      "status": "partially_verified (canonical spelling)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Sri Kalyana Venkateswara Swamy Temple",
+      "category": "attraction",
+      "placeType": "temple",
+      "tags": [],
+      "sourceUrl": "https://tirupati.ap.gov.in/religious-tourism",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-tirupati-ap-gov-in-religious-tourism.json",
+      "address": null,
+      "locality": "Srinivasa Mangapuram (about 10 km west of Tirupati city, per district page)",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "identical spelling on TTD portal ('Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram') and district page (ASI-protected, maintained by TTD since 1967)",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": false, "hours": false, "fees": false },
+        "hits": [
+          { "url": "https://ttdevasthanams.ap.gov.in/temples", "name": "TTD Official Booking Portal — temples", "host": "ttdevasthanams.ap.gov.in", "kind": "official" }
+        ]
+      },
+      "conflicts": "Distinct from 'Kalyana Venkateswara Temple, Narayanavanam' (different temple on the same district page) — do not conflate.",
+      "status": "verified (name/locality)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "ISKCON Tirupati",
+      "category": "attraction",
+      "placeType": "religious_site",
+      "tags": [],
+      "sourceUrl": "https://iskcontirupati.info/about-iskcon-tirupati",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-iskcontirupati-info-about.json",
+      "address": "Hare Krishna Land, Hare Krishna Road, Vinayaka Nagar, Tirupati - 517507. Andhra Pradesh.",
+      "locality": "Hare Krishna Road, Vinayaka Nagar",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "official about page title/branding 'ISKCON Tirupati'; footer address verbatim; on-site Govinda vegetarian restaurant + Goshala mentioned",
+        "fieldSupport": { "name": true, "locality": true, "address": "footer address line (official site)", "coordinates": false, "hours": "page display quote only, NOT stored", "fees": false },
+        "hits": []
+      },
+      "conflicts": "Official about page never uses the phrasing 'Sri Venkateswara Temple' (0 occurrences) — canonical 'ISKCON Tirupati'. Domain verified as .info (not .com). NOTE: ISKCON also operates the Govinda restaurant on site — a future FOOD-category candidate could reference it, but that is a separate research item.",
+      "status": "verified (name/existence/address line)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Natural Arch, Tirumala hills (Silathoranam)",
+      "category": "attraction",
+      "placeType": "viewpoint/geo-heritage",
+      "tags": [],
+      "sourceUrl": "https://whc.unesco.org/en/tentativelists/6894",
+      "sourceKind": "intergovernmental",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-unesco-tentative-natural-heritage-tirumala-hills.json",
+      "address": null,
+      "locality": "Tirumala hills, ~1 km north of the temple, near Chakra Teertham",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "UNESCO: 'The Natural Arch of Tirumala Hills, also known as Silathoranam, is a unique rock formation located near the Tirumala Venkateswara Temple in Andhra Pradesh, India.'; district page corroborates 1 km north / Chakra Teertham; UNESCO publishes DMS coordinates '13°41′14″N 79°20′25″ E'",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": "UNESCO-published DMS (would need schema-approved conversion; moot while held out)", "hours": false, "fees": false },
+        "hits": [
+          { "url": "https://tirupati.ap.gov.in/religious-tourism", "name": "Tirupati District — Religious Tourism", "host": "tirupati.ap.gov.in", "kind": "official" }
+        ]
+      },
+      "conflicts": "None on identity.",
+      "status": "verified (name/existence/coarse location)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Talakona Waterfall",
+      "category": "attraction",
+      "placeType": "waterfall",
+      "tags": [],
+      "sourceUrl": "https://tirupati.ap.gov.in/forest-tourism",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-tirupati-ap-gov-in-forest-tourism.json",
+      "address": null,
+      "locality": "Yerravaripalem, Sri Venkateswara National Park, Tirupati District",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "district heading 'Talakona Waterfall, Yerravaripalem'; body: 'The Talakona waterfall is in Sri Venkateswara National Park, Tirupati District… 270 feet-fall… highest waterfall in the Andhra pradesh state… Lord Siddheswara Swamy Temple… close to the waterfall'",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": false, "hours": false, "fees": false },
+        "hits": []
+      },
+      "conflicts": "Travel-portal titles say 'Chittoor District' (pre-reorganization naming); official district page says Tirupati District — reorganization artifact, not an identity conflict.",
+      "status": "verified (name/locality)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Chandragiri Fort",
+      "category": "attraction",
+      "placeType": "fort",
+      "tags": [],
+      "sourceUrl": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort",
+      "sourceKind": "official (Ministry of Tourism)",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-incredible-india-chandragiri-fort.json",
+      "address": null,
+      "locality": "Chandragiri, Tirupati district",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "Incredible India 'Explore the Historic Chandragiri Fort in Tirupati'; district heading 'Vijayanagar Empire (Chandragiri Fort), Chandragiri'; Raja Mahal now an archaeological museum (district page)",
+        "fieldSupport": { "name": true, "locality": true, "address": false, "coordinates": false, "hours": false, "fees": false, "construction_date": "CONFLICTING — not stored" },
+        "hits": [
+          { "url": "https://tirupati.ap.gov.in/religious-tourism", "name": "Tirupati District — Religious Tourism", "host": "tirupati.ap.gov.in", "kind": "official" }
+        ]
+      },
+      "conflicts": "Construction date: Incredible India 'Built in the 11th century' vs district page Vijayanagara-period account with no construction date — unresolved; no date to store.",
+      "status": "verified (name/existence/locality); dates partially_verified",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    },
+    {
+      "area": "tirupati",
+      "name": "Sri Venkateswara Zoological Park",
+      "category": "attraction",
+      "placeType": "zoo",
+      "tags": [],
+      "sourceUrl": "https://tirupati.ap.gov.in/forest-tourism",
+      "sourceKind": "official",
+      "evidenceUrl": "scripts/foodie-enrichment/evidence/places-p4-attractions/page-tirupati-ap-gov-in-forest-tourism.json",
+      "address": null,
+      "locality": "Tirupati, Andhra Pradesh",
+      "city": "Tirupati",
+      "verification": {
+        "queried": true,
+        "areaConfirmed": true,
+        "retrievedOn": "2026-10-18",
+        "identityEvidence": "district: 'Sri Venkateswara Zoological Park is a zoo in Tirupati, Andhra Pradesh… started on 29 September 1987… managed by the Andhra Pradesh Forest Department. Website Link: https://tirupatizoo.com/'; zoo site title 'Sri Venkateswara Zoological Park Tirupati'",
+        "fieldSupport": { "name": true, "locality": "city-level only", "address": false, "coordinates": false, "hours": false, "fees": false },
+        "hits": [
+          { "url": "https://tirupatizoo.com/", "name": "Sri Venkateswara Zoological Park Tirupati (official site)", "host": "tirupatizoo.com", "kind": "official" }
+        ]
+      },
+      "conflicts": "District page's 'second largest zoo in Asia' / species-count claims are unverified portal-style text — flagged, NOT adoptable. Zoo homepage fetched did not expose an address block.",
+      "status": "verified (name/existence/city locality)",
+      "disposition": "HELD_OUT — no 'attraction' category in schema"
+    }
+  ]
+}
