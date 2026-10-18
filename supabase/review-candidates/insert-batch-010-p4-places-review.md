@@ -99,3 +99,17 @@ Engine note: PGlite ran on Node v24 (Bun was killed by the sandbox memory cgroup
 - Research: Task 3-a (attractions) and 3-b (hotels) subagents — evidence JSONs + notes files listed in the worksheet; every insert-critical quote re-verified by the orchestrator against the raw evidence (addresses, names, lodging, JSON-LD blocks).
 - Generation: `gen-insert-batch-010.ts` (deterministic; re-running it reproduces the identical file).
 - Review: this report + engine validation; the final paste-and-run remains the user's single action.
+
+---
+
+## ADDENDUM (Phase D, Gate 1 — 2026-10-18): STATUS = SUPERSEDED FOR LODGING DATA
+
+**This candidate's SQL file is UNCHANGED and still UNEXECUTED** — byte-identical to the SHA-256 recorded above (`720f00827b3eca7e4a94e2c36aa365a7e1e738c5c531a8a64ee0e12b65b645b0`). No statement in `insert-batch-010-p4-places.sql` has ever run against any database.
+
+**Direction change (owner-approved, Phase D):** lodging hotels will NOT be imported into the food-category system (`restaurants.category 'hotel'` keeps its existing local "meals place" meaning). The owner approved a **separate `public.places` model** (place types temple | waterfall | fort | zoo | natural_arch | other | **hotel** — lodging) with a separate app domain (`PointOfInterest`) and detail screen.
+
+**Consequence for this batch:** the six lodging rows it targets at `public.restaurants` are **superseded by direction**. They are NOT lost: the underlying research (worksheet rows, official-page evidence JSONs, uuid5 ids, verified addresses) carries over unchanged, and a future batch (post-Gate-2) will re-emit the same evidence-curated rows into `public.places` with `place_type='hotel'` — dropping the food-only `rating 0` / `price_level '₹₹'` defaults that no longer apply, and keeping verification fields NULL (imports never self-verify).
+
+**Do NOT execute this file** unless the owner separately and explicitly revives the restaurants-targeted direction. The structural guards in the file remain valid, but its PRE-world numbers are already stale-baseline-guarded and would abort on a changed world — re-run the review first if ever revived.
+
+The 10 held-out attraction rows referenced by this batch's worksheet were always destined for a schema change and are likewise planned for the future `public.places` batch (Gate 2 pending). The three held-out hotels (Nivaara / PLR Grand / Bhimas) remain held out for unchanged evidence reasons.
