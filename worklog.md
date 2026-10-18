@@ -1666,3 +1666,16 @@ Work Log:
 
 Stage Summary:
 - Complete REV 2 SQL displayed verbatim after a fresh hash match (c74e4339…6346299). The import remains UNEXECUTED by the assistant; execution is the user's single paste-and-run, followed immediately by the compact read-only probe. Production untouched from this side; no push, no deploy, no credentials.
+
+---
+Task ID: batch009-compact-probe-display (trace 1a14f0a4c6d75879)
+Agent: Z.ai Code (main)
+Task: FOODIE Batch-009 — display the existing compact read-only verification probe verbatim for post-import use, with a read-only safety confirmation. No file changes, no invented query, no execution, no production access.
+
+Work Log:
+- FILE LOCATED: supabase/review-candidates/verify-batch-009-p3-compact.sql exists (committed ced6485; SHA-256 a1eaf4c2539fcb4d5f72180643adf17ac8a1ec990e6299df560c785240683987 recorded earlier this session) and was re-read fresh in full (106 lines).
+- READ-ONLY PROOF (two greps): (a) anchored statement-start scan found exactly TWO statement tokens — with@61 and select@81 — i.e. exactly ONE statement (WITH batch9/held CTEs → SELECT, single terminating ';' at line 106); (b) keyword-anywhere scan for insert/update/delete/alter/drop/truncate/create/grant/revoke/upsert found 5 hits, ALL on '--' comment lines (10/11 SAFETY note, 19 filename reference, 21 historical ALTER note). Zero executable write statements; reads only FROM/JOIN public.restaurants + public.destinations.
+- DISPLAYED: complete file verbatim in one SQL block (header + WITH...SELECT), no reformatting; covers all 9 requested checks (total / Tirupati / Doddaballapura / marker / present+missing / invariant violations / held-out / active destination / description match). Repo worklog.md only file touched (mandated bookkeeping).
+
+Stage Summary:
+- Compact probe re-confirmed read-only and displayed verbatim for the user's post-import verification run. Import remains UNEXECUTED by the assistant; no production access, no push, no deploy.
