@@ -1636,3 +1636,19 @@ Work Log:
 
 Stage Summary:
 - EXECUTION CLEARANCE ISSUED for supabase/review-candidates/insert-batch-009-p3-places-revised.sql @ SHA-256 c74e43399bd53eeaa3ab2aec59262c469f60f5809a83a9981271757d6e334629: all hashes match the reviewed values, full structural review passes, preflight expectations freshly live-confirmed by the user's own read-only probe, 9 retained / 5 held-out verified in-file. The import remains UNEXECUTED by the assistant — the single paste-and-run in Supabase SQL Editor is the user's action, followed immediately by the compact probe. Production DB untouched from this side; no push, no deploy, no credentials handled.
+
+---
+Task ID: batch009-final-preexec-audit (trace 1a14ef8306439c39)
+Agent: Z.ai Code (main)
+Task: FOODIE Batch-009 REV 2 — final pre-execution audit. Recalculate both file hashes from current bytes, re-prove 9-retained/5-held composition, transaction integrity, exception-abort semantics, and that the candidate is unmodified. Read-only; no SQL execution, no production access, no push/deploy.
+
+Work Log:
+- HASHES (sha256sum, current bytes): candidate c74e43399bd53eeaa3ab2aec59262c469f60f5809a83a9981271757d6e334629 ✓ (31,662 B); original 79b892d9103320e7a232425e5a1ec295ee34d2cec9366c8cde174724a232b8ee ✓ (22,155 B); review report 7181ecead129c3c1e889bb485950a0f106390131bac67e42b5debf501caa9d89 ✓.
+- GIT: tree clean (status --short empty); HEAD advanced ced6485 → ecc02c9, a platform auto-commit touching ONLY worklog.md (+16, my previous audit entry). Reviewed artifacts untouched; now ahead 6 unpushed; nothing pushed.
+- COMPOSITION PROVEN BY GREP: 9 retained UUIDs = exactly 72 occurrences = 8 reference sites × 9 (preflight(c) 170-178; INSERT tuples 224-368; postflight id-lists 426-434/444-452/463-471/488-496/511-519/532-540). 5 held UUIDs = exactly 5 occurrences, ALL on '--' header comment lines 17/25/28/31/35; zero executable occurrences.
+- STRUCTURE PROVEN BY ANCHORED GREP: executable statement starts are exactly begin@124 → do $$@129 (preflight) → insert@220 → update@400 → do $$@409 (postflight) → commit@600 (plpgsql inner begin@138/422 are block bodies). Exactly ONE commit, last statement, after all guards; no delete/drop/alter/truncate/create/grant/revoke anywhere; no intermediate or partial commit path.
+- EXCEPTION SEMANTICS: all 17 'raise exception' statements located and all lie inside the two DO blocks between begin@124 and commit@600 (6 preflight: baseline-77/name/UUID/marker/dest-exact-one/dest-active; 11 postflight across 8 guards — guard (7) totals has three raises 562/565/568). Any one aborts the transaction; the trailing commit never applies (standard aborted-transaction semantics), matching the PGlite 13/13 engine validation (incl. zero-write negatives and rerun-aborts-at-preflight).
+- VERDICT: 5/5 requested checks PASS. Manual execution checklist re-issued unchanged.
+
+Stage Summary:
+- FINAL AUDIT PASS: candidate byte-identical to the reviewed artifact (hash-proven), composition 9/5 exact, transaction + 17 guard raises intact, single-commit-at-end with no partial-commit path, no modification since review. Import still UNEXECUTED by the assistant; execution remains the user's single paste-and-run in Supabase SQL Editor followed by verify-batch-009-p3-compact.sql. No DB writes, no production access, no push, no deploy.
