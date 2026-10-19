@@ -13,13 +13,19 @@ import { useEffect } from "react";
 import { ArrowLeft, Compass, MapPin, RefreshCw, SearchX } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
 import {
+  useDestinationAttractions,
   useDestinationDetail,
   useDestinationPlaces,
 } from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
 import { ListRow } from "../PlaceCards";
+import { PoiListRow } from "../AttractionCards";
+import { DemoDataBanner } from "../DemoDataBanner";
 import { Skeleton } from "@/components/ui/skeleton";
-import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
+import type {
+  PlaceMaybeWithDistance,
+  PointOfInterestMaybeWithDistance,
+} from "@/lib/foodie/types";
 import { useLocationStore } from "@/lib/foodie/locationStore";
 import { haversineKm } from "@/lib/foodie/location";
 
@@ -32,7 +38,9 @@ export function DestinationScreen() {
 
   const detail = useDestinationDetail(destinationId);
   const placesFeed = useDestinationPlaces(destinationId);
+  const attractionsFeed = useDestinationAttractions(destinationId);
   const origin = useLocationStore((s) => s.origin);
+  const openAttraction = useFoodieStore((s) => s.openAttraction);
 
   // Real distance from the user's actual origin — the same Haversine rule as
   // every other list. Coordinate-less places keep NO distance and show their
@@ -41,6 +49,16 @@ export function DestinationScreen() {
     p.latitude != null && p.longitude != null
       ? { ...p, distanceKm: haversineKm(origin, { lat: p.latitude, lng: p.longitude }) }
       : p
+  );
+
+  // Same honesty rule for the non-food rows (attractions + lodging stays):
+  // distance is computed ONLY from real stored coordinates — every row with
+  // NULL lat/lng stays distance-less instead of being estimated.
+  const annotatedAttractions = attractionsFeed.attractions.map<PointOfInterestMaybeWithDistance>(
+    (p) =>
+      p.latitude != null && p.longitude != null
+        ? { ...p, distanceKm: haversineKm(origin, { lat: p.latitude, lng: p.longitude }) }
+        : p
   );
 
   // No selection → there is nothing honest to show; return home. The screen
@@ -116,6 +134,12 @@ export function DestinationScreen() {
 
         {detail.status === "ready" && detail.destination && (
           <>
+            {detail.mode === "demo" && (
+              <div className="px-5 pt-4">
+                <DemoDataBanner />
+              </div>
+            )}
+
             <section className="px-5 pt-5">
               <p className="text-[11px] font-bold uppercase tracking-wider text-primary">
                 {detail.destination.region ?? detail.destination.country}
@@ -198,20 +222,96 @@ export function DestinationScreen() {
               )}
             </section>
 
-            {/* ---------------- places in this destination ---------------- */}
-            {/* The reusable multi-area browser: every discoverable place
-                recorded in this destination's OWN city (Area A: Tirupati
-                hotels, restaurants, cafés…). Nothing is hardcoded and zero
-                rows render the honest "not curated yet" state — places from
-                other cities are never mixed in. */}
+            {/* ---------------- attractions & stays (NON-FOOD) ---------------- */}
+            {/* The approved public.places discovery surface (migration-008
+                design): tourist attractions AND lodging hotels, kept
+                deliberately separate from the food list below. Until the
+                migration is applied to the live database this renders the
+                honest "not set up yet" state; demo mode serves the clearly
+                labelled researched preview. Nothing is ever invented. */}
             <section className="mt-6">
               <div className="px-5">
                 <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
-                  <MapPin className="size-4 text-primary" aria-hidden="true" /> Places in{" "}
+                  <span aria-hidden="true">🛕</span> Attractions &amp; stays
+                </h2>
+                <p className="mt-0.5 text-[12.5px] text-muted-foreground">
+                  Temples, sights and lodging — curated separately from food listings
+                </p>
+              </div>
+
+              {attractionsFeed.status === "loading" && (
+                <div className="mt-4 space-y-2.5 px-5" aria-busy="true" aria-live="polite">
+                  {[0, 1].map((i) => (
+                    <Skeleton key={i} className="h-24 w-full rounded-2xl" />
+                  ))}
+                </div>
+              )}
+
+              {attractionsFeed.status === "error" && (
+                <div className="mx-5 mt-4 rounded-3xl border border-dashed border-rose-200 bg-rose-50/50 px-6 py-8 text-center">
+                  <p className="text-[13.5px] font-bold text-foreground">
+                    Couldn&apos;t load attractions for this destination
+                  </p>
+                  <button
+                    type="button"
+                    onClick={attractionsFeed.reload}
+                    className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-[12.5px] font-bold text-white shadow-md shadow-orange-600/25 transition-all hover:bg-primary/90 active:scale-95"
+                  >
+                    <RefreshCw className="size-3.5" aria-hidden="true" />
+                    Try again
+                  </button>
+                </div>
+              )}
+
+              {attractionsFeed.status === "ready" &&
+                attractionsFeed.attractions.length === 0 &&
+                (attractionsFeed.notice ? (
+                  <div className="mx-5 mt-4 rounded-3xl border border-amber-200 bg-amber-50/70 px-6 py-8 text-center">
+                    <Compass className="mx-auto size-9 text-amber-300" aria-hidden="true" />
+                    <p className="mt-3 text-[14px] font-bold text-amber-900">
+                      Attractions &amp; stays aren&apos;t set up yet
+                    </p>
+                    <p className="mx-auto mt-1 max-w-[300px] text-[12.5px] leading-snug text-amber-800">
+                      {attractionsFeed.notice}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="mx-5 mt-4 flex flex-col items-center rounded-3xl border border-dashed border-border bg-card/60 px-6 py-10 text-center">
+                    <Compass className="size-9 text-stone-300" aria-hidden="true" />
+                    <p className="mt-3 text-[15px] font-bold text-foreground">
+                      No attractions recorded in {detail.destination.name} yet
+                    </p>
+                    <p className="mt-1 max-w-[280px] text-[13px] leading-snug text-muted-foreground">
+                      Foodie lists only source-backed attractions and stays — the next
+                      curated data pass will add this area&apos;s non-food places.
+                    </p>
+                  </div>
+                ))}
+
+              {attractionsFeed.status === "ready" && attractionsFeed.attractions.length > 0 && (
+                <div className="mt-4 space-y-2.5 px-5">
+                  {annotatedAttractions.map((p) => (
+                    <PoiListRow key={p.id} poi={p} onSelect={openAttraction} />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* ---------------- places in this destination ---------------- */}
+            {/* The reusable multi-area browser: every discoverable FOOD place
+                recorded in this destination's OWN city (Area A: Tirupati
+                restaurants, cafés…). Nothing is hardcoded and zero rows
+                render the honest "not curated yet" state — places from other
+                cities are never mixed in. Lodging lives in the attractions &
+                stays section above, not here. */}
+            <section className="mt-6">
+              <div className="px-5">
+                <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
+                  <MapPin className="size-4 text-primary" aria-hidden="true" /> Food places in{" "}
                   {detail.destination.name}
                 </h2>
                 <p className="mt-0.5 text-[12.5px] text-muted-foreground">
-                  Verified listings for this area — hotels, eateries and more
+                  Eateries recorded for this area — restaurants, cafés and more
                 </p>
               </div>
 

@@ -16,12 +16,20 @@
 
 import { haversineKm } from "../location";
 import { getSupabaseClient } from "@/lib/supabase/server";
-import type { Destination, DestinationFood, GeoPosition, Place, PlaceWithDistance } from "../types";
+import type {
+  Destination,
+  DestinationFood,
+  GeoPosition,
+  Place,
+  PlaceWithDistance,
+  PointOfInterest,
+} from "../types";
 import {
   destinationFoodRowToFood,
   destinationRowToDestination,
   isUuid,
   nearbyRowToPlaceWithDistance,
+  placeRowToPointOfInterest,
   restaurantRowToPlace,
   type PhotoRecord,
 } from "./mappers";
@@ -30,6 +38,7 @@ import type {
   DestinationRow,
   DishRow,
   NearbyRestaurantRow,
+  PlaceRow,
   RestaurantRow,
   ReviewRow,
 } from "./types";
@@ -341,6 +350,68 @@ export async function getSupabaseDestinationFoodPlaces(
     .filter(isDiscoverable);
 
   return { food, places };
+}
+
+/* ------------------------------------------------------------------ */
+/* public.places — NON-FOOD points of interest (attractions + lodging) */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Strip PostgREST `.or()` syntax characters so a destination name can never
+ * break the filter (same defence as searchSupabaseRestaurants).
+ */
+function safeOrValue(value: string): string {
+  return value.trim().replace(/[,()%]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/**
+ * NON-FOOD places of one destination — tourist attractions AND lodging
+ * hotels from `public.places`. Dual match path exactly as the approved
+ * design documents: the relational `destination_id` link when set, OR the
+ * case-insensitive `city` primitive as the fallback. READ-ONLY; `closed`
+ * rows are filtered by the shared isDiscoverable convention after the fetch.
+ *
+ * ⚠️ `public.places` is NOT live yet (migration-008 is an unrun REVIEW
+ * CANDIDATE): until the owner applies it, PostgREST rejects this query with
+ * a "relation does not exist" error — the dispatcher maps that to
+ * PLACES_TABLE_NOT_READY_NOTICE and an honest empty list. Nothing here ever
+ * writes, and no food/destination table is touched.
+ */
+export async function getSupabaseAttractionsByDestination(
+  destination: Destination
+): Promise<PointOfInterest[]> {
+  const sb = requireClient();
+  const city = safeOrValue(destination.name);
+  const orParts = [`destination_id.eq.${destination.id}`];
+  if (city) orParts.push(`city.ilike.${city}`);
+  const { data, error } = await sb
+    .from("places")
+    .select("*")
+    .eq("is_active", true)
+    .or(orParts.join(","))
+    .order("name", { ascending: true })
+    .limit(200);
+  if (error) throw new Error(error.message);
+  return ((data ?? []) as PlaceRow[])
+    .map(placeRowToPointOfInterest)
+    .filter(isDiscoverable);
+}
+
+/**
+ * One non-food place by its stable uuid5 id — null when the id is unknown.
+ * Same not-live-yet caveat as the destination query above (the dispatcher
+ * maps the missing-table error to an honest notice).
+ */
+export async function getSupabasePlaceById(id: string): Promise<PointOfInterest | null> {
+  if (!isUuid(id)) return null; // malformed ids can never match a row
+  const sb = requireClient();
+  const { data, error } = await sb
+    .from("places")
+    .select("*")
+    .eq("id", id)
+    .maybeSingle();
+  if (error) throw new Error(error.message);
+  return data ? placeRowToPointOfInterest(data as PlaceRow) : null;
 }
 
 /* ------------------------------------------------------------------ */

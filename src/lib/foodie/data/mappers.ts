@@ -46,12 +46,21 @@ import type {
   DestinationFoodDesignation,
   Dish,
   Place,
+  PlaceType,
   PlaceWithDistance,
+  PointOfInterest,
   PriceRange,
   PhotoCredit,
   VerificationStatus,
 } from "../types";
-import type { DestinationFoodRow, DestinationRow, DishRow, NearbyRestaurantRow, RestaurantRow } from "./types";
+import type {
+  DestinationFoodRow,
+  DestinationRow,
+  DishRow,
+  NearbyRestaurantRow,
+  PlaceRow,
+  RestaurantRow,
+} from "./types";
 
 /** Prefix applied to demo-mode ids so demo and DB data can never collide. */
 export const DEMO_ID_PREFIX = "demo:";
@@ -272,5 +281,60 @@ export function destinationFoodRowToFood(row: DestinationFoodRow): DestinationFo
     foodType: row.food_type ?? undefined,
     designation,
     imageUrl: row.image_url ?? undefined,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* public.places — NON-FOOD points of interest ➜ domain mapping        */
+/* ------------------------------------------------------------------ */
+
+/** Exact strings allowed by the `places_place_type_check` (migration-008). */
+const PLACE_TYPES: readonly string[] = [
+  "temple",
+  "waterfall",
+  "fort",
+  "zoo",
+  "natural_arch",
+  "other",
+  "hotel",
+];
+
+/**
+ * Map a `public.places` row (migration-008 — REVIEW CANDIDATE, table not
+ * live yet) into the domain `PointOfInterest`.
+ *
+ * Every field is NULL-safe exactly like the migration's column comments
+ * demand: NULL stays null (the UI renders "not captured", never a guess).
+ * An unexpected place_type (the DB CHECK should prevent this) normalizes to
+ * 'other' so the UI renders the generic type instead of inventing a label,
+ * and an unknown verification_status falls back to 'unverified' — the
+ * import default — never to "verified".
+ */
+export function placeRowToPointOfInterest(row: PlaceRow): PointOfInterest {
+  const placeType: PlaceType = PLACE_TYPES.includes(row.place_type)
+    ? (row.place_type as PlaceType)
+    : "other";
+  return {
+    id: row.id,
+    slug: row.slug,
+    placeType,
+    name: row.name,
+    description: row.description,
+    address: row.address,
+    locality: row.locality,
+    city: row.city,
+    destinationId: row.destination_id,
+    latitude: row.latitude,
+    longitude: row.longitude,
+    tags: row.tags ?? [],
+    source: row.source,
+    sourceUrl: row.source_url,
+    lastVerifiedAt: row.last_verified_at,
+    nameVerified: row.name_verified,
+    addressVerified: row.address_verified,
+    coordinatesVerified: row.coordinates_verified,
+    verificationStatus: parseVerificationStatus(row.verification_status) ?? "unverified",
+    isActive: row.is_active,
+    createdAt: row.created_at,
   };
 }

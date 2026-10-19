@@ -11,6 +11,7 @@ import type {
   DestinationFood,
   Place,
   PlaceWithDistance,
+  PointOfInterest,
   PriceRange,
 } from "../types";
 
@@ -160,6 +161,45 @@ export interface DestinationFoodRow {
   created_at: string;
 }
 
+/* ------------------------------------------------------------------ */
+/* public.places — NON-FOOD points of interest (migration-008)          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * `places` row (snake_case — mirrors supabase/migration-008-places.sql
+ * 1:1, all 21 approved columns).
+ *
+ * ⚠️ The migration is a REVIEW CANDIDATE — the table does NOT exist in the
+ * live database yet (verified 2026-xx: queries against it return
+ * "relation \"public.places\" does not exist"). Queries therefore fail
+ * with a PostgREST "table not found" style error and the dispatcher maps
+ * that to PLACES_TABLE_NOT_READY_NOTICE + an honest empty list — the UI
+ * never crashes and never invents places.
+ */
+export interface PlaceRow {
+  id: string;
+  slug: string;
+  place_type: string;
+  name: string;
+  description: string | null;
+  address: string | null;
+  locality: string | null;
+  city: string;
+  destination_id: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  tags: string[] | null;
+  source: string | null;
+  source_url: string | null;
+  last_verified_at: string | null;
+  name_verified: boolean | null;
+  address_verified: boolean | null;
+  coordinates_verified: boolean | null;
+  verification_status: string;
+  is_active: boolean;
+  created_at: string;
+}
+
 /**
  * NOTE on `destination_food_places` (migration-004): it links destination
  * foods to REAL restaurants and stays empty until evidence-based links are
@@ -259,6 +299,34 @@ export interface DestinationPlacesResponse {
   notice?: string;
 }
 
+/**
+ * GET /api/destinations/[id]/attractions — the NON-FOOD discovery list for
+ * one destination: tourist attractions AND lodging hotels from the approved
+ * `public.places` model (migration-008 design; the table is not live yet —
+ * see PLACES_TABLE_NOT_READY_NOTICE). Match = places.destination_id when a
+ * matching active destination exists, with places.city as the primitive
+ * fallback — exactly the dual path the migration documents.
+ * `destination` is null when the id is unknown; zero rows is an honest
+ * empty state — nothing is ever substituted.
+ */
+export interface DestinationAttractionsResponse {
+  mode: DataMode;
+  destination: Destination | null;
+  attractions: PointOfInterest[];
+  notice?: string;
+}
+
+/**
+ * GET /api/places/[id] — one curated non-food place (attraction or lodging
+ * hotel) by its stable uuid5 id. `place` is null when the id is unknown OR
+ * when the `public.places` table isn't live yet (the notice explains which).
+ */
+export interface PointOfInterestDetailResponse {
+  mode: DataMode;
+  place: PointOfInterest | null;
+  notice?: string;
+}
+
 /** Hard limits shared by the client form, the write layer and the DB check. */
 export const REVIEW_TEXT_MIN_LENGTH = 1;
 export const REVIEW_TEXT_MAX_LENGTH = 2000;
@@ -267,3 +335,11 @@ export const DEMO_MODE_NOTICE =
   "Supabase isn't connected yet — you're browsing the clearly-labelled demo dataset.";
 export const SUPABASE_ERROR_NOTICE =
   "The Supabase query failed, so demo data is being shown temporarily. Check the server logs.";
+/**
+ * Shown when the approved `public.places` structure (migration-008) has not
+ * been applied to the live database yet — the current production state.
+ * Attractions & stays render their honest "not set up yet" state instead of
+ * an error or invented content.
+ */
+export const PLACES_TABLE_NOT_READY_NOTICE =
+  "Attractions & stays aren't set up on the server yet — nothing is shown rather than guessed.";

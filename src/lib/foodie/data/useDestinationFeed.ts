@@ -17,15 +17,18 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   DataAccessError,
+  getDestinationAttractions,
   getDestinationFoodPlaces,
   getDestinationFoods,
   getDestinationPlaces,
   getDestinations,
 } from "./repository";
+import type { DataMode } from "./types";
 import type {
   Destination,
   DestinationFood,
   Place,
+  PointOfInterest,
 } from "../types";
 
 export type FeedStatus = "loading" | "ready" | "error";
@@ -112,6 +115,8 @@ interface FoodsOutcome {
   foods: DestinationFood[];
   notice: string | null;
   error: string | null;
+  /** Which backend served this outcome — drives the demo banner. */
+  mode: DataMode | null;
 }
 
 export type DestinationFoodsStatus = "idle" | FeedStatus;
@@ -122,6 +127,7 @@ export interface DestinationFoodsFeedState {
   foods: DestinationFood[];
   notice: string | null;
   error: string | null;
+  mode: DataMode | null;
   reload: () => void;
 }
 
@@ -158,6 +164,7 @@ export function useDestinationFoods(destinationId: string | null): DestinationFo
             foods: res.foods,
             notice: res.notice ?? null,
             error: null,
+            mode: res.mode,
           });
         }
       })
@@ -176,6 +183,7 @@ export function useDestinationFoods(destinationId: string | null): DestinationFo
                 : err instanceof Error
                   ? err.message
                   : "Couldn't load this destination's foods right now.",
+            mode: null,
           });
         }
       });
@@ -202,6 +210,7 @@ export function useDestinationFoods(destinationId: string | null): DestinationFo
     foods: current?.kind === "ready" ? current.foods : [],
     notice: current?.notice ?? null,
     error: current?.error ?? null,
+    mode: current?.mode ?? null,
     reload,
   };
 }
@@ -216,6 +225,7 @@ export interface DestinationDetailFeedState {
   foods: DestinationFood[];
   notice: string | null;
   error: string | null;
+  mode: DataMode | null;
   reload: () => void;
 }
 
@@ -232,6 +242,7 @@ export function useDestinationDetail(destinationId: string | null): DestinationD
     foods: foods.foods,
     notice: foods.notice,
     error: foods.error,
+    mode: foods.mode,
     reload: foods.reload,
   };
 }
@@ -421,6 +432,117 @@ export function useDestinationPlaces(destinationId: string | null): DestinationP
     places: current?.kind === "ready" ? current.places : [],
     notice: current?.notice ?? null,
     error: current?.error ?? null,
+    reload,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* Attractions & stays of ONE destination (public.places model)        */
+/* ------------------------------------------------------------------ */
+
+interface AttractionsOutcome {
+  key: string;
+  kind: "ready" | "error";
+  destination: Destination | null;
+  attractions: PointOfInterest[];
+  notice: string | null;
+  error: string | null;
+  mode: DataMode | null;
+}
+
+export interface DestinationAttractionsFeedState {
+  status: DestinationFoodsStatus;
+  destination: Destination | null;
+  attractions: PointOfInterest[];
+  notice: string | null;
+  error: string | null;
+  mode: DataMode | null;
+  reload: () => void;
+}
+
+/**
+ * NON-FOOD places of interest (tourist attractions AND lodging hotels) of
+ * one destination — the approved `public.places` model. Until migration-008
+ * is applied to the live database the response carries the honest
+ * PLACES_TABLE_NOT_READY_NOTICE with an empty list (the UI renders a "not
+ * set up yet" state, never an error and never invented places). Demo mode
+ * serves the clearly-labelled researched preview dataset. Pass `null` to
+ * stay idle; per-id retry semantics as everywhere else.
+ */
+export function useDestinationAttractions(
+  destinationId: string | null
+): DestinationAttractionsFeedState {
+  const [attempt, setAttempt] = useState(0);
+  const [outcome, setOutcome] = useState<AttractionsOutcome | null>(null);
+
+  const [lastId, setLastId] = useState(destinationId);
+  if (destinationId !== lastId) {
+    setLastId(destinationId);
+    setAttempt(0);
+  }
+
+  const key = `${destinationId ?? "none"}|${attempt}`;
+
+  useEffect(() => {
+    if (destinationId === null) return; // idle — nothing to fetch
+    let cancelled = false;
+    getDestinationAttractions(destinationId)
+      .then((res) => {
+        if (!cancelled) {
+          setOutcome({
+            key,
+            kind: "ready",
+            destination: res.destination,
+            attractions: res.attractions,
+            notice: res.notice ?? null,
+            error: null,
+            mode: res.mode,
+          });
+        }
+      })
+      .catch((err: unknown) => {
+        if (!cancelled) {
+          const status = err instanceof DataAccessError ? err.status : 0;
+          setOutcome({
+            key,
+            kind: "error",
+            destination: null,
+            attractions: [],
+            notice: null,
+            error:
+              status === 404
+                ? "This destination isn't available anymore."
+                : err instanceof Error
+                  ? err.message
+                  : "Couldn't load the attractions for this destination right now.",
+            mode: null,
+          });
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [key, destinationId]);
+
+  const reload = useCallback(() => setAttempt((n) => n + 1), []);
+
+  const current = outcome?.key === key ? outcome : null;
+  const status: DestinationFoodsStatus =
+    destinationId === null
+      ? "idle"
+      : current === null
+        ? "loading"
+        : current.kind === "ready"
+          ? "ready"
+          : "error";
+
+  return {
+    status,
+    destination: current?.destination ?? null,
+    attractions: current?.kind === "ready" ? current.attractions : [],
+    notice: current?.notice ?? null,
+    error: current?.error ?? null,
+    mode: current?.mode ?? null,
     reload,
   };
 }

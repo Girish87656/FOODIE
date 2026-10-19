@@ -38,6 +38,10 @@ export function SplashScreen() {
   const authStatus = useAuthStore((s) => s.status);
   const session = useAuthStore((s) => s.session);
   const user = useAuthStore((s) => s.user);
+  // Auth config errors (missing Supabase env) mean accounts can NEVER work
+  // in this environment — the welcome screen then offers the honest demo
+  // exploration path instead of a dead-end signup form.
+  const authConfigError = useAuthStore((s) => s.configError);
   const [brandDone, setBrandDone] = useState(false);
 
   // The brand animation always plays in full — once per app open, 1.4s.
@@ -218,6 +222,16 @@ export function SplashScreen() {
               Already have an account?{" "}
               <span className="font-bold underline underline-offset-2">Log in</span>
             </button>
+            {authConfigError && (
+              <button
+                type="button"
+                onClick={() => go("home")}
+                className="mx-auto block max-w-[280px] text-[12.5px] font-semibold leading-snug text-white/70 underline decoration-white/40 underline-offset-2 transition-colors hover:text-white"
+              >
+                Accounts aren&apos;t available right now — explore the clearly-labelled
+                demo data instead
+              </button>
+            )}
           </motion.div>
         )}
       </div>

@@ -14,21 +14,45 @@
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import type {
   DataMode,
+  DestinationAttractionsResponse,
   DestinationFoodPlacesResponse,
   DestinationFoodsResponse,
   DestinationPlacesResponse,
   DestinationsResponse,
   NearbyRestaurantsResponse,
+  PointOfInterestDetailResponse,
   RestaurantDetailResponse,
   RestaurantListResponse,
   ReviewsResponse,
 } from "./types";
-import { DEMO_MODE_NOTICE, SUPABASE_ERROR_NOTICE } from "./types";
+import {
+  DEMO_MODE_NOTICE,
+  PLACES_TABLE_NOT_READY_NOTICE,
+  SUPABASE_ERROR_NOTICE,
+} from "./types";
 import * as demo from "./demoBackend";
 import * as supabase from "./supabaseBackend";
 
 function demoResult<T>(result: T, notice: string): T & { mode: DataMode } {
   return { ...result, mode: "demo", notice };
+}
+
+/**
+ * Detects the "public.places isn't applied yet" failure mode (the CURRENT
+ * production state — migration-008 is a review candidate). PostgREST reports
+ * a missing table as PGRST205 / "Could not find the table … schema cache";
+ * the raw Postgres text is "relation … does not exist". Matching on the
+ * message (not just a code) because supabaseBackend re-wraps errors as
+ * plain Error objects carrying only the message.
+ */
+function isMissingPlacesTable(error: unknown): boolean {
+  const message =
+    error instanceof Error ? error.message.toLowerCase() : String(error ?? "").toLowerCase();
+  return (
+    message.includes("could not find the table") ||
+    message.includes("does not exist") ||
+    message.includes("schema cache")
+  );
 }
 
 export async function loadNearbyRestaurants(
@@ -114,13 +138,15 @@ export async function loadRestaurantsBySearch(query: string): Promise<Restaurant
 }
 
 /* ------------------------------------------------------------------ */
-/* Destinations — real database ONLY, never demo-fabricated            */
+/* Destinations — live rows when connected, real-value demo preview     */
+/* when not. A Supabase FAILURE still yields an honestly EMPTY list     */
+/* with a notice (demo data is never substituted over a database blip). */
 /* ------------------------------------------------------------------ */
 
 /**
- * Every active destination. Same policy as reviews: there is NO demo
- * dataset for destinations, so a failure yields an honestly EMPTY list
- * with a notice — fabricated cities/foods are never substituted.
+ * Every active destination. Demo mode serves the clearly-labelled preview
+ * dataset (verbatim batch-003 seed values — see src/data/destinations.ts);
+ * a Supabase failure yields an honestly EMPTY list with a notice.
  */
 export async function loadDestinations(): Promise<DestinationsResponse> {
   if (isSupabaseConfigured()) {
@@ -132,13 +158,14 @@ export async function loadDestinations(): Promise<DestinationsResponse> {
       return { mode: "supabase", destinations: [], notice: SUPABASE_ERROR_NOTICE };
     }
   }
-  return { mode: "demo", destinations: [], notice: DEMO_MODE_NOTICE };
+  return demoResult({ destinations: demo.getDemoDestinations() }, DEMO_MODE_NOTICE);
 }
 
 /**
- * One destination plus its curated foods (empty list when the destination
- * genuinely has none — the UI shows its honest empty state). The route
- * turns `destination: null` into a 404.
+ * One destination plus its curated foods. Demo mode resolves the preview
+ * destination + foods (same fixed ids as the live seed); a Supabase
+ * failure returns destination:null with a notice (the route keeps it a
+ * 200-with-notice rather than a bare 404 so the UI can show the reason).
  */
 export async function loadDestinationFoods(destinationId: string): Promise<DestinationFoodsResponse> {
   if (isSupabaseConfigured()) {
@@ -153,15 +180,20 @@ export async function loadDestinationFoods(destinationId: string): Promise<Desti
       return { mode: "supabase", destination: null, foods: [], notice: SUPABASE_ERROR_NOTICE };
     }
   }
-  return { mode: "demo", destination: null, foods: [], notice: DEMO_MODE_NOTICE };
+  const destination = demo.getDemoDestinationById(destinationId);
+  if (!destination) return { mode: "demo", destination: null, foods: [], notice: DEMO_MODE_NOTICE };
+  return demoResult(
+    { destination, foods: demo.getDemoDestinationFoods(destinationId) },
+    DEMO_MODE_NOTICE
+  );
 }
 
 /**
  * One destination food plus its CURATED places (evidence-gated links).
  * `food: null` → the route responds 404; zero links is an honest empty list
  * (random nearby restaurants are NEVER substituted — migration-004 rule).
- * There is deliberately NO demo fallback: fabricating "places serving X"
- * would break the honesty contract, so failures yield an empty list + notice.
+ * Demo mode resolves the preview food but keeps links empty: fabricating
+ * "places serving X" would break the honesty contract.
  */
 export async function loadDestinationFoodPlaces(
   foodId: string
@@ -175,7 +207,10 @@ export async function loadDestinationFoodPlaces(
       return { mode: "supabase", food: null, places: [], notice: SUPABASE_ERROR_NOTICE };
     }
   }
-  return { mode: "demo", food: null, places: [], notice: DEMO_MODE_NOTICE };
+  // Demo mode resolves the preview food but NEVER fabricates place links —
+  // the link table is evidence-gated (migration-004) and stays empty.
+  const food = demo.getDemoDestinationFoodById(foodId);
+  return demoResult({ food, places: [] }, DEMO_MODE_NOTICE);
 }
 
 /**
@@ -196,7 +231,87 @@ export async function loadDestinationPlaces(destinationId: string): Promise<Dest
       return { mode: "supabase", destination: null, places: [], notice: SUPABASE_ERROR_NOTICE };
     }
   }
-  return { mode: "demo", destination: null, places: [], notice: DEMO_MODE_NOTICE };
+  const destination = demo.getDemoDestinationById(destinationId);
+  if (!destination) return { mode: "demo", destination: null, places: [], notice: DEMO_MODE_NOTICE };
+  return demoResult(
+    { destination, places: demo.getDemoRestaurantsByDestinationCity(destination) },
+    DEMO_MODE_NOTICE
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* public.places — NON-FOOD points of interest (attractions + lodging) */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Attractions & stays of one destination (the approved public.places
+ * model, migration-008 design).
+ *
+ * Live mode: the table is NOT applied yet (verified), so PostgREST's
+ * missing-table error is mapped to PLACES_TABLE_NOT_READY_NOTICE with
+ * destination resolved independently — the UI renders an honest "not set
+ * up yet" state instead of an error or invented places. Unknown ids yield
+ * destination:null with no notice (a genuine 404).
+ *
+ * Demo mode: the clearly-labelled preview dataset (16 real researched
+ * rows — see src/data/points-of-interest.ts).
+ */
+export async function loadDestinationAttractions(
+  destinationId: string
+): Promise<DestinationAttractionsResponse> {
+  if (isSupabaseConfigured()) {
+    try {
+      const destination = await supabase.getSupabaseDestination(destinationId);
+      if (!destination) return { mode: "supabase", destination: null, attractions: [] };
+      try {
+        const attractions = await supabase.getSupabaseAttractionsByDestination(destination);
+        return { mode: "supabase", destination, attractions };
+      } catch (placesError) {
+        if (isMissingPlacesTable(placesError)) {
+          console.warn("[foodie/data] public.places is not applied yet (migration-008 pending)");
+          return {
+            mode: "supabase",
+            destination,
+            attractions: [],
+            notice: PLACES_TABLE_NOT_READY_NOTICE,
+          };
+        }
+        throw placesError;
+      }
+    } catch (error) {
+      console.error("[foodie/data] Supabase attractions query failed:", error);
+      return { mode: "supabase", destination: null, attractions: [], notice: SUPABASE_ERROR_NOTICE };
+    }
+  }
+  const destination = demo.getDemoDestinationById(destinationId);
+  if (!destination) return { mode: "demo", destination: null, attractions: [], notice: DEMO_MODE_NOTICE };
+  return demoResult(
+    { destination, attractions: demo.getDemoAttractionsByDestination(destination) },
+    DEMO_MODE_NOTICE
+  );
+}
+
+/**
+ * One non-food place (attraction or lodging hotel) by stable uuid5 id.
+ * Same missing-table handling as the destination loader — the response
+ * carries the notice so the detail screen can explain the honest state.
+ */
+export async function loadPointOfInterestById(id: string): Promise<PointOfInterestDetailResponse> {
+  if (isSupabaseConfigured()) {
+    try {
+      const place = await supabase.getSupabasePlaceById(id);
+      return { mode: "supabase", place };
+    } catch (error) {
+      if (isMissingPlacesTable(error)) {
+        console.warn("[foodie/data] public.places is not applied yet (migration-008 pending)");
+        return { mode: "supabase", place: null, notice: PLACES_TABLE_NOT_READY_NOTICE };
+      }
+      console.error("[foodie/data] Supabase place detail query failed:", error);
+      return { mode: "supabase", place: null, notice: SUPABASE_ERROR_NOTICE };
+    }
+  }
+  const place = demo.getDemoPlaceById(id);
+  return demoResult({ place }, DEMO_MODE_NOTICE);
 }
 
 /**

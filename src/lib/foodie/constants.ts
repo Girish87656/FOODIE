@@ -1,4 +1,4 @@
-import type { EatContext, FoodCategory, PlaceCategory } from "./types";
+import type { EatContext, FoodCategory, PlaceCategory, PlaceType } from "./types";
 
 /**
  * The 7 pilot PLACE categories — the ONLY allowed `restaurants.category`
@@ -38,6 +38,25 @@ export const EAT_CONTEXTS: {
   { id: "Partner", label: "Partner", emoji: "❤️", hint: "Date night picks" },
   { id: "Friends", label: "Friends", emoji: "🧑‍🤝‍🧑", hint: "Squad cravings" },
   { id: "Travelling", label: "Travelling", emoji: "✈️", hint: "Taste the city" },
+];
+
+/**
+ * The 7 NON-FOOD place types — mirrors the `places_place_type_check`
+ * constraint of the approved `public.places` design
+ * (supabase/migration-008-places.sql — REVIEW CANDIDATE, not yet applied).
+ *
+ * Kept strictly separate from `PLACE_CATEGORIES`: these labels/emojis are
+ * for attractions and lodging stays, never for food places. Extending this
+ * list requires a matching CHECK-constraint change in a reviewed migration.
+ */
+export const POI_PLACE_TYPES: FoodCategory<PlaceType>[] = [
+  { id: "temple", label: "Temple", emoji: "🛕" },
+  { id: "waterfall", label: "Waterfall", emoji: "💦" },
+  { id: "fort", label: "Fort", emoji: "🏰" },
+  { id: "zoo", label: "Zoo", emoji: "🦁" },
+  { id: "natural_arch", label: "Natural Arch", emoji: "🪨" },
+  { id: "other", label: "Place of interest", emoji: "📍" },
+  { id: "hotel", label: "Stay", emoji: "🏨" }, // lodging — never the meals-place "hotel"
 ];
 
 /** App-level constants. Location constants live in `location.ts` (prototype origin, manual corridor picks). */

@@ -12,11 +12,13 @@
  */
 
 import type {
+  DestinationAttractionsResponse,
   DestinationFoodPlacesResponse,
   DestinationFoodsResponse,
   DestinationPlacesResponse,
   DestinationsResponse,
   NearbyRestaurantsResponse,
+  PointOfInterestDetailResponse,
   RestaurantDetailResponse,
   RestaurantListResponse,
   ReviewsResponse,
@@ -148,5 +150,29 @@ export async function getDestinationFoodPlaces(foodId: string): Promise<Destinat
 export async function getDestinationPlaces(destinationId: string): Promise<DestinationPlacesResponse> {
   return request<DestinationPlacesResponse>(
     `/api/destinations/${encodeURIComponent(destinationId)}/places`
+  );
+}
+
+/**
+ * Attractions & stays of one destination — the NON-FOOD discovery list
+ * (approved `public.places` model). Unknown destination ids throw 404; an
+ * unapplied migration surfaces as `notice` + an honestly empty list.
+ */
+export async function getDestinationAttractions(
+  destinationId: string
+): Promise<DestinationAttractionsResponse> {
+  return request<DestinationAttractionsResponse>(
+    `/api/destinations/${encodeURIComponent(destinationId)}/attractions`
+  );
+}
+
+/**
+ * One non-food place (attraction or lodging hotel) by stable uuid5 id.
+ * A 404 covers both unknown ids and the not-yet-applied table (the error
+ * body explains which).
+ */
+export async function getPointOfInterestById(id: string): Promise<PointOfInterestDetailResponse> {
+  return request<PointOfInterestDetailResponse>(
+    `/api/places/${encodeURIComponent(id)}`
   );
 }

@@ -27,6 +27,26 @@ export type VerificationStatus =
   | "unverified"
   | "closed";
 
+/**
+ * Kind of NON-FOOD point of interest — mirrors the `places_place_type_check`
+ * constraint of the approved `public.places` design
+ * (supabase/migration-008-places.sql, REVIEW CANDIDATE — not yet applied).
+ *
+ * Deliberately SEPARATE from `PlaceCategory` (the restaurants food
+ * categories): a lodging hotel or a temple must never be forced through the
+ * food-category system. `'hotel'` here means LODGING (brand-verified stay
+ * properties), never the local "meals place" meaning restaurants.category
+ * uses for the same word.
+ */
+export type PlaceType =
+  | "temple"
+  | "waterfall"
+  | "fort"
+  | "zoo"
+  | "natural_arch"
+  | "other"
+  | "hotel";
+
 /** Companionship context captured during onboarding */
 export type EatContext =
   | "Alone"
@@ -221,6 +241,79 @@ export interface Place {
   hoursVerified?: boolean | null;
   photosVerified?: boolean | null;
 }
+
+/* ------------------------------------------------------------------ */
+/* Points of interest — NON-FOOD discovery (public.places, migration-008) */
+/* ------------------------------------------------------------------ */
+
+/**
+ * A curated NON-FOOD place of interest — tourist attraction OR lodging
+ * hotel. Maps 1:1 onto the approved `public.places` table
+ * (supabase/migration-008-places.sql, currently a REVIEW CANDIDATE: the
+ * table does not exist in the live database yet, so the app surfaces an
+ * honest empty/notice state until the migration is applied and Batch-011
+ * is imported).
+ *
+ * Honesty contract (mirrors the migration's column comments):
+ *  - `description` / `address` / `latitude` / `longitude` are null exactly
+ *    when the cited source does not support them — NEVER guessed, NEVER
+ *    estimated (coordinates are never derived from addresses or map pins).
+ *  - `nameVerified` / `addressVerified` / `coordinatesVerified` are
+ *    tri-state: null = not checked · false = checked and NOT verified ·
+ *    true = verified with real evidence. Imports never set them.
+ *  - `source`/`sourceUrl` are provenance, not a verification claim.
+ *  - `verificationStatus` reuses the same union as food places so the
+ *    existing status-label conventions work unchanged.
+ */
+export interface PointOfInterest {
+  /** Stable uuid5 id supplied by the reviewed generator (no randomness). */
+  id: string;
+  /** Stable lowercase key for deep links and duplicate protection. */
+  slug: string;
+  placeType: PlaceType;
+  /** Canonical name exactly as evidenced by the cited source. */
+  name: string;
+  /** null = not captured from the cited source — never invented or padded. */
+  description: string | null;
+  /** Address ONLY at the level the source publishes (null when none). */
+  address: string | null;
+  /** Area/locality label when the source supports one (null = not captured). */
+  locality: string | null;
+  /** City primitive — always populated (fallback match path). */
+  city: string;
+  /** Relational path to destinations; null when no active match exists. */
+  destinationId: string | null;
+  /** null = not captured; coordinates are NEVER estimated. */
+  latitude: number | null;
+  longitude: number | null;
+  /** Evidenced free-form tags only (e.g. lodging, unesco_tentative). */
+  tags: string[];
+  /** Where the listing came from (null = unknown — never guessed). */
+  source: string | null;
+  /** URL of the source page — provenance only, never a booking link. */
+  sourceUrl: string | null;
+  /** When a listed fact was last ACTUALLY re-checked (null = never). */
+  lastVerifiedAt: string | null;
+  /** Tri-state per-field verification — imports NEVER set these. */
+  nameVerified: boolean | null;
+  addressVerified: boolean | null;
+  coordinatesVerified: boolean | null;
+  /** Same trust union as restaurants — imports as 'unverified'. */
+  verificationStatus: VerificationStatus;
+  /** false hides the place from discovery without deleting it. */
+  isActive: boolean;
+  /** Row creation time (curation metadata, not a verification claim). */
+  createdAt: string;
+}
+
+/** A PointOfInterest annotated with its live distance (km) from the origin. */
+export type PointOfInterestWithDistance = PointOfInterest & { distanceKm: number };
+
+/**
+ * A PointOfInterest that may or may not carry a distance yet — rows whose
+ * coordinates are still NULL never get a `distanceKm` (never estimated).
+ */
+export type PointOfInterestMaybeWithDistance = PointOfInterest & { distanceKm?: number };
 
 /** A Place annotated with its live distance (km) from the user's chosen origin. */
 export type PlaceWithDistance = Place & { distanceKm: number };

@@ -34,6 +34,7 @@ import {
 } from "@/lib/foodie/utils";
 import { RatingBadge, PlaceBadge } from "../Badges";
 import { ReviewsSection } from "../ReviewsSection";
+import { PhotoUploader } from "../PhotoUploader";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
@@ -773,7 +774,7 @@ export function PlaceDetailScreen() {
                     <ImageOff className="size-5 text-orange-300" aria-hidden="true" />
                   </div>
                 ) : (
-                  <div key={`${src}-${i}`} className="relative">
+                <div key={`${src}-${i}`} className="relative">
                     <img
                       src={src}
                       alt={`${place.name} gallery photo ${i + 1}`}
@@ -800,6 +801,13 @@ export function PlaceDetailScreen() {
               )}
             </div>
           )}
+
+          {/* add-a-photo — real uploads only (browser session + RLS + storage;
+              demo mode renders an honest "can't store here" note instead).
+              onUploaded re-runs the keyed detail fetch, so the gallery refresh
+              shows the STORED row (with its recorded credit) — nothing is
+              optimistically faked into the list. */}
+          <PhotoUploader restaurantId={place.id} onUploaded={retry} />
         </section>
 
         {/* local recommendation */}

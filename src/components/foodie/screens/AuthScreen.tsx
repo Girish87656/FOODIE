@@ -202,13 +202,24 @@ export function AuthScreen() {
         </div>
 
         {authConfigError && (
-          <p
-            role="alert"
-            aria-live="assertive"
-            className="mb-5 rounded-xl border border-amber-200 bg-amber-50 px-3.5 py-2.5 text-[12.5px] font-semibold leading-snug text-amber-800"
-          >
-            {authConfigError}
-          </p>
+          <>
+            <p
+              role="alert"
+              aria-live="assertive"
+              className="mb-5 rounded-xl border border-amber-200 bg-amber-50 px-3.5 py-2.5 text-[12.5px] font-semibold leading-snug text-amber-800"
+            >
+              {authConfigError}
+            </p>
+            {/* Escape hatch: without a backend, accounts can never work here.
+                The honest alternative is the clearly-labelled demo dataset. */}
+            <button
+              type="button"
+              onClick={() => go("home")}
+              className="mb-5 w-full rounded-xl border border-border bg-card px-3.5 py-2.5 text-[12.5px] font-bold text-foreground transition-colors hover:bg-accent active:scale-[0.99]"
+            >
+              Skip for now — explore the demo data
+            </button>
+          </>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-3.5">

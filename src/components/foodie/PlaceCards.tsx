@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { MapPin, Users, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
@@ -62,7 +63,18 @@ function PlacePhoto({
   iconClassName?: string;
   category?: string;
 }) {
-  if (!src) {
+  // A stored URL that cannot load degrades to the honest placeholder tile —
+  // the broken-image glyph of a dead <img> is never shown (same contract as
+  // the detail screen's gallery). State resets when the src prop changes via
+  // the render-time adjustment pattern (no setState-in-effect).
+  const [failed, setFailed] = useState(false);
+  const [prevSrc, setPrevSrc] = useState(src);
+  if (prevSrc !== src) {
+    setPrevSrc(src);
+    setFailed(false);
+  }
+
+  if (!src || failed) {
     const emoji = categoryEmoji(category);
     return (
       <div
@@ -97,6 +109,7 @@ function PlacePhoto({
       alt={alt}
       loading="lazy"
       decoding="async"
+      onError={() => setFailed(true)}
       className={className}
     />
   );

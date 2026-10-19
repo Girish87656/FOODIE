@@ -16,7 +16,8 @@ export type Screen =
   | "home"
   | "detail"
   | "destination"
-  | "food";
+  | "food"
+  | "attraction";
 
 interface FoodieState {
   screen: Screen;
@@ -35,6 +36,8 @@ interface FoodieState {
   selectedDestinationId: string | null;
   /** destination food currently presented on the "food" screen */
   selectedDestinationFoodId: string | null;
+  /** non-food point of interest currently presented on the "attraction" screen */
+  selectedAttractionId: string | null;
   /** distance filter in km (null = any distance) */
   distanceFilterKm: number | null;
   /** discovery list sorting — "nearest" needs the user's origin (always available) */
@@ -54,6 +57,9 @@ interface FoodieState {
   openDestinationFood: (foodId: string, destinationId: string) => void;
   backFromDestination: () => void;
   backFromFood: () => void;
+  /** Destination → Attractions & stays (NON-FOOD public.places discovery) */
+  openAttraction: (poiId: string) => void;
+  backFromAttraction: () => void;
   setDistanceFilter: (km: number | null) => void;
   setSortBy: (sortBy: "nearest" | "rating") => void;
   reset: () => void;
@@ -74,6 +80,7 @@ export const useFoodieStore = create<FoodieState>((set, get) => ({
   selectedPlaceId: null,
   selectedDestinationId: null,
   selectedDestinationFoodId: null,
+  selectedAttractionId: null,
   distanceFilterKm: null,
   sortBy: "nearest" as const,
   ...initialFlow,
@@ -136,6 +143,19 @@ export const useFoodieStore = create<FoodieState>((set, get) => ({
   backFromFood: () =>
     set({ screen: "destination", selectedDestinationFoodId: null }),
 
+  // Destination → Attractions & stays (NON-FOOD). Mirrors openPlace: the
+  // current screen is remembered as returnScreen so back lands exactly
+  // where the user came from.
+  openAttraction: (poiId) =>
+    set({
+      selectedAttractionId: poiId,
+      returnScreen: get().screen === "detail" ? get().returnScreen : get().screen,
+      screen: "attraction",
+    }),
+
+  backFromAttraction: () =>
+    set({ screen: get().returnScreen, selectedAttractionId: null }),
+
   setDistanceFilter: (distanceFilterKm) => set({ distanceFilterKm }),
   setSortBy: (sortBy) => set({ sortBy }),
 
@@ -145,6 +165,7 @@ export const useFoodieStore = create<FoodieState>((set, get) => ({
       selectedPlaceId: null,
       selectedDestinationId: null,
       selectedDestinationFoodId: null,
+      selectedAttractionId: null,
       searchQuery: "",
       activeCategory: null,
       ...initialFlow,
