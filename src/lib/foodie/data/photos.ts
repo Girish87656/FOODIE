@@ -132,6 +132,12 @@ export function isValidRestaurantId(id: string): boolean {
  *   `<auth.uid()>/<restaurantId>/<timestamp>-<rand>.<jpg|png|webp>`
  * — exactly the layout the migration-009 storage policy authorizes
  * (first path segment = auth.uid()). Exported pure for tests.
+ *
+ * BOTH id segments are URL-encoded. For real values this is the IDENTITY
+ * transformation (uuids contain only `[0-9a-f-]`, all unreserved URI
+ * characters, so the policy's `storage.foldername(name)[1] = auth.uid()`
+ * still matches byte-for-byte) — but it makes the key escape-proof even
+ * against a value that somehow slipped past the uuid validators.
  */
 export function buildStoragePath(
   userId: string,
@@ -140,7 +146,7 @@ export function buildStoragePath(
   now: number = Date.now(),
   rand: string = Math.random().toString(36).slice(2, 10)
 ): string {
-  return `${userId}/${encodeURIComponent(restaurantId)}/${now}-${rand}.${extFor(kind)}`;
+  return `${encodeURIComponent(userId)}/${encodeURIComponent(restaurantId)}/${now}-${rand}.${extFor(kind)}`;
 }
 
 /** Maps raw database/RLS failures to short, user-safe messages. Exported for tests. */
@@ -163,7 +169,7 @@ export function mapPhotoInsertError(err: unknown): { error: string; needsLogin?:
 }
 
 /** Maps storage-transfer failures to short, user-safe messages. Exported for tests. */
-export function mapStorageError(err: unknown): { error: string } {
+export function mapStorageError(err: unknown): { error: string; needsLogin?: boolean } {
   const status = (err as { status?: number } | null)?.status ?? 0;
   const message = err instanceof Error ? err.message.toLowerCase() : String(err ?? "").toLowerCase();
   if (status === 403 || status === 404 || message.includes("bucket")) {
@@ -174,7 +180,8 @@ export function mapStorageError(err: unknown): { error: string } {
     return { error: "That photo is too large for the server — please choose one under 5 MB." };
   }
   if (status === 401 || message.includes("jwt") || message.includes("expired")) {
-    return { error: "Your session expired — please log in again.", };
+    // The session is no longer valid — the caller should send the user to login.
+    return { error: "Your session expired — please log in again.", needsLogin: true };
   }
   if (message.includes("network") || message.includes("load failed")) {
     return { error: "Can't reach the photo service. Check your connection and try again." };

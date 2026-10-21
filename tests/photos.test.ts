@@ -15,12 +15,16 @@ import { describe, expect, test } from "bun:test";
 
 import {
   PHOTO_ALLOWED_TYPES,
+  PHOTO_BUCKET,
   PHOTO_MAX_BYTES,
+  USER_UPLOAD_ATTRIBUTION,
+  USER_UPLOAD_LICENSE,
   buildStoragePath,
   isValidRestaurantId,
   mapPhotoInsertError,
   mapStorageError,
   sniffImageKind,
+  uploadRestaurantPhoto,
   validatePhotoFile,
 } from "../src/lib/foodie/data/photos";
 
@@ -180,6 +184,84 @@ describe("buildStoragePath", () => {
     expect(p.split("/")).toHaveLength(3);
     expect(p.split("/")[0]).toBe(uid);
   });
+
+  test("encoding is the IDENTITY transform for real uuids (policy compatibility)", () => {
+    // The migration-009 policy compares the first folder literally against
+    // auth.uid()::text — so the encoding must NOT alter a real uuid.
+    const p = buildStoragePath(uid, rid, "webp", 1700000000000, "zz");
+    expect(p).toBe(`${uid}/${rid}/1700000000000-zz.webp`);
+    expect(p.split("/")[0]).toBe(uid);
+  });
+
+  test("even a hostile userId cannot escape the uploader folder", () => {
+    // Defense-in-depth: userId comes from auth.getUser() (a real uuid), but
+    // the path stays 3-segment with NO raw traversal segment for ANY input —
+    // a hostile id is percent-encoded into a single harmless folder name.
+    const hostile = "../../victim/steal";
+    const p = buildStoragePath(hostile, rid, "jpeg");
+    expect(p.split("/")).toHaveLength(3);
+    expect(p.split("/")[0]).toBe(encodeURIComponent(hostile));
+    expect(p.split("/").every((seg) => seg !== "..")).toBe(true);
+    expect(p).not.toContain("victim/");
+  });
+});
+
+/* ------------------------------------------------------------------ */
+/* client/migration-009 contract constants                             */
+/* ------------------------------------------------------------------ */
+
+describe("client contract constants", () => {
+  test("bucket name matches the migration-009 candidate exactly", () => {
+    expect(PHOTO_BUCKET).toBe("restaurant-photos");
+  });
+
+  test("user uploads carry a truthful, non-empty licensing record", () => {
+    // migration-006 columns: license + attribution are written on every
+    // user upload — the credit overlay renders from these stored values.
+    expect(USER_UPLOAD_LICENSE).toBe("user-upload");
+    expect(USER_UPLOAD_ATTRIBUTION.length).toBeGreaterThan(0);
+    expect(USER_UPLOAD_ATTRIBUTION).toBe("Foodie community photo");
+  });
+
+  test("client size/mime limits mirror the bucket config byte-for-byte", () => {
+    expect(PHOTO_MAX_BYTES).toBe(5242880); // migration-009 file_size_limit
+    const allowed: string[] = [...PHOTO_ALLOWED_TYPES].sort();
+    expect(allowed).toEqual(
+      ["image/jpeg", "image/png", "image/webp"].sort() // migration-009 allowed_mime_types
+    );
+  });
+});
+
+/* ------------------------------------------------------------------ */
+/* uploadRestaurantPhoto — network-free early returns                  */
+/* ------------------------------------------------------------------ */
+
+describe("uploadRestaurantPhoto early returns (no network, no Supabase client)", () => {
+  test("rejects an HTML payload renamed to .jpg BEFORE any network call", async () => {
+    const f = fakeFile(HTML_AS_JPG, "image/jpeg");
+    const res = await uploadRestaurantPhoto("123e4567-e89b-12d3-a456-426614174000", f);
+    expect(res.ok).toBe(false);
+    expect(res.error).toMatch(/doesn't look like a real JPG, PNG or WebP/);
+  });
+
+  test("rejects a non-uuid restaurant id BEFORE any network call", async () => {
+    const res = await uploadRestaurantPhoto("demo:rest-1", fakeFile(JPEG_HEAD, "image/jpeg"));
+    expect(res.ok).toBe(false);
+    expect(res.error).toMatch(/can't receive photos/);
+  });
+
+  test("rejects a path-traversal restaurant id BEFORE any network call", async () => {
+    const res = await uploadRestaurantPhoto("../../evil", fakeFile(JPEG_HEAD, "image/jpeg"));
+    expect(res.ok).toBe(false);
+    expect(res.error).toMatch(/can't receive photos/);
+  });
+
+  test("validation failures never claim success and never return a photo", async () => {
+    const res = await uploadRestaurantPhoto("nope", fakeFile(GIF_HEAD, "image/gif"));
+    expect(res.ok).toBe(false);
+    expect(res.photo).toBeUndefined();
+    expect(res.error).toBeTruthy();
+  });
 });
 
 /* ------------------------------------------------------------------ */
@@ -231,9 +313,16 @@ describe("mapStorageError", () => {
     expect(mapStorageError(err).error).toMatch(/too large/);
   });
 
-  test("401 → session-expired message", () => {
+  test("401 → session-expired message + needsLogin (UI prompts re-login)", () => {
     const err = Object.assign(new Error("storage upload failed (401)"), { status: 401 });
-    expect(mapStorageError(err).error).toMatch(/session expired/i);
+    const r = mapStorageError(err);
+    expect(r.error).toMatch(/session expired/i);
+    expect(r.needsLogin).toBe(true);
+  });
+
+  test("403/404 bucket case does NOT ask for re-login (it's a setup issue)", () => {
+    const err = Object.assign(new Error("storage upload failed (404)"), { status: 404 });
+    expect(mapStorageError(err).needsLogin).toBeUndefined();
   });
 
   test("network failure → connection message", () => {
