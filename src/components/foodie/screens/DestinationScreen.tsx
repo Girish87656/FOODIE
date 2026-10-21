@@ -18,6 +18,7 @@ import {
   useDestinationPlaces,
 } from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
+import { SafeImage } from "../SafeImage";
 import { ListRow } from "../PlaceCards";
 import { PoiListRow } from "../AttractionCards";
 import { DemoDataBanner } from "../DemoDataBanner";
@@ -185,21 +186,19 @@ export function DestinationScreen() {
                       className="flex w-full items-stretch gap-3 rounded-2xl border border-border/60 bg-card p-3 text-left shadow-sm transition-all hover:border-primary/40 hover:shadow-md active:scale-[0.99]"
                       aria-label={`Explore ${food.name}`}
                     >
-                      {food.imageUrl ? (
-                        <img
-                          src={food.imageUrl}
-                          alt={food.name}
-                          loading="lazy"
-                          className="size-[76px] shrink-0 rounded-xl object-cover"
-                        />
-                      ) : (
-                        <span
-                          className="grid size-[76px] shrink-0 place-items-center rounded-xl bg-orange-50 text-2xl"
-                          aria-hidden="true"
-                        >
-                          🍽️
-                        </span>
-                      )}
+                      <SafeImage
+                        src={food.imageUrl}
+                        alt={food.name}
+                        className="size-[76px] shrink-0 rounded-xl object-cover"
+                        fallback={
+                          <span
+                            className="grid size-[76px] shrink-0 place-items-center rounded-xl bg-orange-50 text-2xl"
+                            aria-hidden="true"
+                          >
+                            🍽️
+                          </span>
+                        }
+                      />
                       <span className="min-w-0 flex-1">
                         <span className="flex items-center gap-2">
                           <span className="truncate text-[14.5px] font-bold text-foreground">

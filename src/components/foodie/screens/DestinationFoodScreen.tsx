@@ -24,6 +24,7 @@ import {
   useDestinationFoodPlaces,
 } from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
+import { SafeImage } from "../SafeImage";
 import { ListRow } from "../PlaceCards";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
@@ -140,14 +141,11 @@ export function DestinationFoodScreen() {
         {feed.status === "ready" && feed.food && (
           <>
             <section className="px-5 pt-5">
-              {feed.food.imageUrl ? (
-                <img
-                  src={feed.food.imageUrl}
-                  alt={feed.food.name}
-                  loading="lazy"
-                  className="h-40 w-full rounded-3xl object-cover"
-                />
-              ) : null}
+              <SafeImage
+                src={feed.food.imageUrl}
+                alt={feed.food.name}
+                className="h-40 w-full rounded-3xl object-cover"
+              />
               <div className="mt-3 flex items-center gap-2">
                 <h1 className="truncate text-2xl font-extrabold tracking-tight text-foreground">
                   {feed.food.name}

@@ -20,18 +20,24 @@
 -- WHAT THIS DOES
 --   1) Creates the 'restaurant-photos' bucket (public read), idempotent via
 --      on conflict do nothing. 5 MB limit + JPG/PNG/WebP only — matching the
---      client-side validation in photos.ts exactly.
+--      client-side validation in photos.ts exactly (the bucket IS the server
+--      boundary: Supabase Storage enforces both limits on every upload).
 --   2) Enables RLS on storage.objects (already enabled on Supabase by
---      default — kept idempotent) and adds exactly three policies:
+--      default — kept idempotent) and adds exactly two policies (and
+--      deliberately NO update/delete policy — photos are immutable for
+--      users):
 --        - public SELECT  : anyone can view photos (matches the
 --          restaurant_photos public-read posture)
 --        - authenticated INSERT : ONLY inside the uploader's own folder
 --          (first path segment = auth.uid()) — the app writes
 --          `{userId}/{restaurantId}/{timestamp}-{rand}.{ext}`
---        - NO UPDATE / NO DELETE policy for users: photos are immutable
---          once stored (same insert-only posture as restaurant_photos).
 --   3) Asserts the landed state loudly and prints read-only verification
 --      queries (same convention as migration-008).
+--
+-- ORDER-INDEPENDENT: this migration does NOT require migration-008 to be
+--   applied first. Its final sanity probe reads public.places through a
+--   NULL-tolerant to_regclass guard, so it reports a clear "skipped" row
+--   instead of erroring when 008 is still a pending candidate.
 --
 -- WHAT THIS DELIBERATELY DOES NOT DO
 --   * Touches NO existing table, bucket, policy or row: restaurant_photos,
@@ -94,6 +100,9 @@ create policy "users can upload photos to their own folder"
 --      * bucket row   = 1: restaurant-photos, public=true, 5 MB, 3 mime types
 --      * policy rows  = exactly 2 for this bucket (SELECT public + INSERT
 --                       authenticated); zero UPDATE/DELETE for it
+--      * places probe = one row: either the row count of public.places, or
+--                       'skipped: public.places not present yet (migration-008
+--                       not applied)' — BOTH outcomes are healthy for 009.
 -- ---------------------------------------------------------------------------
 select id, name, public, file_size_limit, allowed_mime_types
   from storage.buckets
@@ -105,7 +114,14 @@ select policyname, cmd, roles, qual, with_check
    and tablename = 'objects'
    and policyname like 'restaurant photos %';
 
-select count(*) as places_rows_must_be_zero from public.places; -- unrelated sanity: still structure-only
+-- Order-independent sanity probe: CASE never evaluates the ELSE branch when
+-- the table is absent, so this CANNOT raise `relation "public.places" does
+-- not exist` while migration-008 is still a pending candidate.
+select case
+         when to_regclass('public.places') is null
+           then 'skipped: public.places not present yet (migration-008 not applied)'
+         else 'places rows: ' || (select count(*)::text from public.places)
+       end as places_probe;
 
 -- ============================================================================
 -- ROLLBACK (COMMENTED — inert; uncomment ONLY after reading the conditions)

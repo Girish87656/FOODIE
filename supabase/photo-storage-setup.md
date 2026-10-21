@@ -20,6 +20,9 @@ retry-safe). Then verify its read-only verification queries print:
 - exactly 2 policies for this bucket: `restaurant photos are readable by
   everyone` (SELECT) and `users can upload photos to their own folder`
   (INSERT to authenticated, first path segment = `auth.uid()`)
+- one `places_probe` row — either `places rows: N` or `skipped:
+  public.places not present yet (migration-008 not applied)`. The migration
+  is ORDER-INDEPENDENT: it runs cleanly before, after, or without 008.
 
 Alternatively create the bucket by hand in Dashboard → Storage, but you must
 then add the same two storage.objects policies manually — the SQL file is the
@@ -58,7 +61,14 @@ insert only happens after a successful storage transfer.
 ## Safety notes
 
 - No service-role key is used or referenced anywhere in the app.
+- The bucket config IS the server-side boundary: Supabase Storage rejects
+  anything over 5 MB or outside `image/jpeg, image/png, image/webp` regardless
+  of what the browser claims (the app additionally sniffs real magic bytes
+  client-side, so mislabeled non-images never even reach the server).
 - Photos are immutable for users: no UPDATE/DELETE policy is created; cleanup
-  is a curator action.
+  is a curator action. If a transfer succeeds but the `restaurant_photos`
+  INSERT fails, the object stays as an unreferenced orphan — the app reports
+  failure and never fakes success; curators can find orphans as objects whose
+  key is not referenced by any `restaurant_photos.image_url`.
 - Removing the bucket later is covered by the commented rollback section in
   `migration-009-photo-storage.sql` (including its data-loss warnings).

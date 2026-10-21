@@ -290,6 +290,15 @@ export async function uploadRestaurantPhoto(
   // 3) record the photo row (RLS enforces uploaded_by = auth.uid()).
   //    source_url stays NULL — a user photo has no external source — and the
   //    licensing fields carry the truthful user-upload markers.
+  //
+  //    FAILURE SEMANTICS (honest cleanup contract): if the INSERT fails AFTER
+  //    the transfer succeeded, the stored object is deliberately LEFT in
+  //    place — users have NO storage DELETE policy (photos are immutable),
+  //    so the client cannot remove it and must not pretend otherwise. The
+  //    failure is returned to the caller, success is NEVER reported, the
+  //    gallery refetch shows nothing (no row exists), and the orphan becomes
+  //    a curator cleanup item: an object in the bucket whose key is not
+  //    referenced by any restaurant_photos.image_url.
   try {
     const { data, error } = await sb
       .from("restaurant_photos")
