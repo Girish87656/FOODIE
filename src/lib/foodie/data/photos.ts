@@ -75,19 +75,76 @@ export function validatePhotoFile(file: File): string | null {
   return null;
 }
 
-function extFor(type: string): string {
-  switch (type) {
-    case "image/png":
+/**
+ * Content validation: reads the file's first bytes and matches them against
+ * the real magic numbers of the allowed formats. The browser-reported
+ * `file.type` only reflects the file EXTENSION, so a renamed non-image
+ * (e.g. `payload.exe` → `payload.jpg`) would otherwise pass the MIME allowlist.
+ * Returns the detected kind, or `null` when the bytes match nothing allowed.
+ */
+export async function sniffImageKind(blob: Blob): Promise<"jpeg" | "png" | "webp" | null> {
+  const head = new Uint8Array(await blob.slice(0, 12).arrayBuffer());
+  if (head.length < 12) return null;
+  // JPEG: FF D8 FF
+  if (head[0] === 0xff && head[1] === 0xd8 && head[2] === 0xff) return "jpeg";
+  // PNG: 89 50 4E 47 0D 0A 1A 0A
+  if (
+    head[0] === 0x89 && head[1] === 0x50 && head[2] === 0x4e && head[3] === 0x47 &&
+    head[4] === 0x0d && head[5] === 0x0a && head[6] === 0x1a && head[7] === 0x0a
+  ) {
+    return "png";
+  }
+  // WebP: "RIFF" .... "WEBP"
+  if (
+    head[0] === 0x52 && head[1] === 0x49 && head[2] === 0x46 && head[3] === 0x46 &&
+    head[8] === 0x57 && head[9] === 0x45 && head[10] === 0x42 && head[11] === 0x50
+  ) {
+    return "webp";
+  }
+  return null;
+}
+
+function extFor(kind: "jpeg" | "png" | "webp"): string {
+  switch (kind) {
+    case "png":
       return "png";
-    case "image/webp":
+    case "webp":
       return "webp";
     default:
       return "jpg";
   }
 }
 
-/** Maps raw database/RLS failures to short, user-safe messages. */
-function mapPhotoInsertError(err: unknown): { error: string; needsLogin?: boolean } {
+/**
+ * Only real restaurant rows may receive photos. Live ids are Postgres uuids;
+ * validating BEFORE the storage path is built guarantees the object key can
+ * never contain `/`, `..`, `?` or `#` from a caller-supplied id (the first
+ * path segment is always the uploader's own id, so ownership was never at
+ * risk — this keeps the path WELL-FORMED on top of that).
+ */
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+export function isValidRestaurantId(id: string): boolean {
+  return UUID_RE.test(id);
+}
+
+/**
+ * Builds the storage object key:
+ *   `<auth.uid()>/<restaurantId>/<timestamp>-<rand>.<jpg|png|webp>`
+ * — exactly the layout the migration-009 storage policy authorizes
+ * (first path segment = auth.uid()). Exported pure for tests.
+ */
+export function buildStoragePath(
+  userId: string,
+  restaurantId: string,
+  kind: "jpeg" | "png" | "webp",
+  now: number = Date.now(),
+  rand: string = Math.random().toString(36).slice(2, 10)
+): string {
+  return `${userId}/${encodeURIComponent(restaurantId)}/${now}-${rand}.${extFor(kind)}`;
+}
+
+/** Maps raw database/RLS failures to short, user-safe messages. Exported for tests. */
+export function mapPhotoInsertError(err: unknown): { error: string; needsLogin?: boolean } {
   const code = (err as { code?: string } | null)?.code ?? "";
   const message = err instanceof Error ? err.message.toLowerCase() : String(err ?? "").toLowerCase();
   if (code === "42501" || message.includes("row-level security") || message.includes("permission")) {
@@ -105,8 +162,8 @@ function mapPhotoInsertError(err: unknown): { error: string; needsLogin?: boolea
   return { error: "Couldn't save the photo right now. Please try again in a moment." };
 }
 
-/** Maps storage-transfer failures to short, user-safe messages. */
-function mapStorageError(err: unknown): { error: string } {
+/** Maps storage-transfer failures to short, user-safe messages. Exported for tests. */
+export function mapStorageError(err: unknown): { error: string } {
   const status = (err as { status?: number } | null)?.status ?? 0;
   const message = err instanceof Error ? err.message.toLowerCase() : String(err ?? "").toLowerCase();
   if (status === 403 || status === 404 || message.includes("bucket")) {
@@ -142,6 +199,21 @@ export async function uploadRestaurantPhoto(
   const invalid = validatePhotoFile(file);
   if (invalid) return { ok: false, error: invalid };
 
+  // Content check BEFORE any network round-trip: the declared MIME type only
+  // mirrors the file extension, so bytes are matched against the real magic
+  // numbers. A mislabeled non-image never leaves the browser.
+  const kind = await sniffImageKind(file);
+  if (!kind) {
+    return {
+      ok: false,
+      error: "That file doesn't look like a real JPG, PNG or WebP photo.",
+    };
+  }
+
+  if (!isValidRestaurantId(restaurantId)) {
+    return { ok: false, error: "This place can't receive photos right now." };
+  }
+
   const sb = getBrowserSupabase();
   if (!sb) {
     return { ok: false, error: AUTH_CONFIG_ERROR };
@@ -167,10 +239,10 @@ export async function uploadRestaurantPhoto(
   }
 
   // Storage path: the FIRST folder segment is always the uploader's own id —
-  // that is exactly what the migration-009 storage policy checks.
-  const path = `${userId}/${restaurantId}/${Date.now()}-${Math.random()
-    .toString(36)
-    .slice(2, 10)}.${extFor(file.type)}`;
+  // that is exactly what the migration-009 storage policy checks. The id was
+  // UUID-validated above and the extension comes from the SNIFFED bytes, so
+  // the key is URL-safe by construction.
+  const path = buildStoragePath(userId, restaurantId, kind);
 
   // 1) transfer the bytes (XHR gives REAL upload progress events)
   try {
