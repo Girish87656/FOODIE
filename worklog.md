@@ -2000,3 +2000,16 @@ Work Log:
 
 Stage Summary:
 - Launch pass implemented locally and verified end-to-end in browser. 9 modified + 15 new files (see commit): imagery system (14 illustrations + 8 licensed attributed venue photos + registries + provenance doc), push opt-in module (SW + client + 2 API routes + migration-010 REVIEW CANDIDATE + dialog), zero lint/tsc/test regressions, honest demo/live labelling intact. NOT claimed: Batch-011 imported (pending owner probe POST row), migration-009/010 applied (owner manual), push delivery verified (needs VAPID env + migration-010 + a real subscribed-device E2E by owner), live public.places reads (verifiable on the deployed URL only). Commit + push + deploy verification follow this entry.
+
+---
+Task ID: L-PUSH-OUTCOME (push/deploy outcome; trace 1a16948187774235)
+Agent: Z.ai Code (main orchestrator)
+Task: Record the owner-authorized push/deploy attempt outcome honestly.
+
+Work Log:
+- Commit ca2ae6e "Launch pass: professional imagery system + secure push opt-in" created (41 files; worklog staged intentionally; platform dev.pid churn not present this cycle).
+- git push origin main FAILED: "fatal: could not read Username for 'https://github.com': No such device or address" (exit 128). credential.helper=store exists but holds NO usable GitHub credential in this sandbox; non-interactive environment cannot prompt. origin/main UNTOUCHED; 25 commits remain unpushed; NO deploy was triggered (Vercel deploys via the GitHub integration on push).
+- Nothing was claimed deployed. The live Vercel URL (if still up) continues to serve the OLD pre-launch-pass build until the owner either provides a push credential here or pushes from their own machine.
+
+Stage Summary:
+- PUSH BLOCKED ON CREDENTIALS (exact error recorded). Recovery options recorded in the final report: (1) provide a GitHub token (fine-grained, Contents read/write for FOODIE) as an env var / credential-store entry here, or (2) owner pushes from their own machine after obtaining the bundle/remote access. No history rewrite, no force, no secret printed.
