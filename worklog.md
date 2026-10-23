@@ -2043,3 +2043,17 @@ Work Log:
 
 Stage Summary:
 - Zero emoji glyphs remain in any user-visible UI (only code comments mention legacy ones). Verified: bunx tsc --noEmit clean, bun run lint exit 0, bun test 41/41, agent-browser E2E (home hero + section tiles + destination chips + destination screen headers + attraction detail hero chip) all render the new icons, 0 console errors.
+
+---
+Task ID: L-AUDIT (Phases 2/4/5/6 of owner launch directive)
+Agent: Z.ai Code (main orchestrator)
+Task: Full product/Supabase/push audit + complete verification suite.
+
+Work Log:
+- PHASE 2 (product): browser-verified search ("coffee"→2 honest matches, "biryani"→0 with suggestions + Reset), category filter (Cafe→"1 place in Cafe"), destination flow (Tirupati panel → destination → Laddu food screen w/ honest "No verified places" empty state), location sheet (prototype-origin honesty + 3 manual picks + TEST area labelling), AI sheet (MapPin + "location not shared"), auth screen (explicit "Authentication isn't configured" — never fake). Coverage re-verified: 7 demo corridor places (GITAM/Nagadenahalli → Doddaballapura Station → town), Tirupati Batch-009 REV2 foods + p4-research-preview attractions; Epicruise/Hangouts remain documented identity negatives (gen-insert-batch-009.ts) — never invented. Desktop 1440×900 no overflow. Place types stay separated (food vs attractions/lodging distinct types/screens/cards).
+- PHASE 4 (Supabase): config env-only (publishable key browser-side; NO service role anywhere). serverRepository dispatcher: isMissingPlacesTable → PLACES_TABLE_NOT_READY_NOTICE + honest 200 empty; all Supabase failures → SUPABASE_ERROR_NOTICE; every response carries mode demo|supabase. Reviews/photos writes go browser→Supabase with user JWT (RLS), 403/401 → needsLogin mapping (unit-tested). migration-008 owner-reported applied; runtime handles both states. migration-009/010 unexecuted — code surfaces honest setup errors (photo 403/404 bucket mapping, push configured:false).
+- PHASE 5 (push): enablePush() only from user gesture (documented + enforced by call sites); /sw.js registered post-gesture; /api/push/config → {configured:false} honest (no VAPID env here); /api/push/test → honest sign-in error; server secrets (PUSH_VAPID_PRIVATE_KEY/SUBJECT) never leave server; user-JWT-scoped client only; stale 404/410 cleanup. Delivery E2E NOT possible here (needs VAPID + migration-010 + real device) — owner steps documented.
+- PHASE 6: bun run lint exit 0; bunx tsc --noEmit 0 src errors; bun test 41/41 PASS; sw.js 200 (2384B) + manifest 200; full E2E pass 0 page errors/0 console warnings; dev.log clean after final edits (one transient Fast Refresh "Gem is not defined" was a mid-edit HMR artifact, resolved, confirmed by later 200s + E2E). Production build NOT run (sandbox forbids next build — Vercel build at push is the production check).
+
+Stage Summary:
+- All launch gates that CAN be verified locally are green. Commit 941d6ea (icon system) verified. Outstanding: owner-only actions (Batch-011 import probe, migrations 009/010, VAPID env, Supabase env on Vercel, git push credentials).
