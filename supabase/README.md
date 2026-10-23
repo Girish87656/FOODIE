@@ -210,3 +210,84 @@ any structural mismatch — read its header before running.
 Payments, food delivery, AI recommendations, nutrition tracking (the
 `dishes.calories/protein/carbs/fat` columns exist purely as future schema) and
 creator intelligence — per the product roadmap.
+
+## 10. Web Push notifications — owner manual steps
+
+The push feature ships COMPLETE in code but is honestly **disabled**
+(`configured: false` everywhere — the bell dialog says so) until ALL of the
+following owner actions are done. Nothing in the app pretends otherwise, and
+no notification is ever sent or subscribed before that.
+
+### 10.1 Generate VAPID keys (one-time)
+
+```bash
+bunx web-push generate-vapid-keys
+```
+
+This prints a **Public Key** and a **Private Key**. Also pick a contact
+subject — either `mailto:you@example.com` or `https://your-site.example`.
+
+### 10.2 Set the three SERVER-ONLY environment variables
+
+Add to `.env` / `.env.local` (and your production host's env settings):
+
+```
+PUSH_VAPID_PUBLIC_KEY=<Public Key from 10.1>
+PUSH_VAPID_PRIVATE_KEY=<Private Key from 10.1>
+PUSH_VAPID_SUBJECT=mailto:you@example.com
+```
+
+**Secrets rules (enforced by design, verified by audit):**
+- The private key and subject are read ONLY by server code
+  (`src/lib/foodie/pushServer.ts` → `/api/push/test`). They must NEVER be
+  given a `NEXT_PUBLIC_` prefix, never logged, never committed.
+- Only the PUBLIC key is served to browsers, by `GET /api/push/config` —
+  that is its purpose in the Web Push standard.
+- `.env*` is gitignored; only the empty `.env.example` template is tracked.
+
+### 10.3 Approve and run `migration-010-push-subscriptions.sql`
+
+Run it in the Supabase SQL Editor (step 11 of the migration order above).
+It creates `public.push_subscriptions` with **own-rows-only RLS** (4 policies,
+`user_id = auth.uid()`), the `(user_id, endpoint_hash)` UNIQUE constraint
+(duplicate prevention) and loud post-assertions. The file header must still
+read "NOT EXECUTED" until you run it — the app's dialog honestly says
+"storage isn't set up" until the table exists.
+
+### 10.4 Serve over HTTPS
+
+Web push and service workers only exist in **secure contexts**. `localhost`
+counts as secure during development; production must be HTTPS (the browser
+check `pushSupport()` now reports this explicitly).
+
+### 10.5 Verify end-to-end (real device, real browser)
+
+1. Sign in, open the Home bell → the dialog must show "ready" (not
+   "not-configured").
+2. Click **Enable notifications** → accept the browser prompt → "on for this
+   device".
+3. Click **Send a test notification** → a real system notification appears
+   ("Foodie notifications are on"), and the API response reports `sent: 1`.
+4. Click **Turn off** → row removed + browser unsubscribed; a further test
+   send must return 404.
+5. Only after this succeeds should delivery be considered WORKING. Until
+   then the feature state is honestly "configured in code, not yet verified".
+
+### 10.6 Operational notes (already implemented in code)
+
+- **Duplicate prevention** — one row per (user, browser) via the UNIQUE
+  constraint; re-subscribing upserts instead of duplicating; payload `tag`
+  collapses repeat notifications visually.
+- **Retries** — exactly ONE automatic retry for transient push-service
+  failures (429/500/502/503); terminal 4xx/410 are never retried.
+- **Failure logging** — delivery failures are logged server-side as status
+  codes only (subscription endpoints are per-browser tokens and are never
+  logged).
+- **Expired-subscription cleanup** — dead endpoints (push 404/410) are
+  deleted by `/api/push/test` in the same pass; the SW's
+  `pushsubscriptionchange` handler re-subscribes and hands the renewal to an
+  open page for persistence (renewal without a signed-in open page is an
+  honest no-op followed by the same 404/410 cleanup).
+- **No unsolicited sends** — the only sender is `/api/push/test`, which is
+  authenticated server-side and can only reach the CALLING user's own rows
+  (RLS; no service role). New event sources would need their own review.

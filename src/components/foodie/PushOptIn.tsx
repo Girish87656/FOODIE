@@ -28,6 +28,7 @@ import {
   fetchPushConfig,
   isSubscribed,
   pushSupport,
+  watchPushRenewal,
   type PushState,
 } from "@/lib/foodie/push";
 
@@ -60,12 +61,25 @@ async function evaluatePushPhase(): Promise<DialogState> {
   if (!config.configured) {
     return { phase: "not-configured" };
   }
+  // Already-blocked permission is a read-only check (NO prompt) — surfacing
+  // it directly beats showing an Enable button that would instantly fail.
+  if (Notification.permission === "denied") {
+    return { phase: "denied" };
+  }
   const subscribed = await isSubscribed();
   return subscribed ? { phase: "subscribed" } : { phase: "ready" };
 }
 
 export function PushNotificationsButton({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
+
+  // One-time renewal listener: after the browser fires pushsubscriptionchange,
+  // the service worker re-subscribes and postMessages this page; this keeps
+  // the stored row current for the signed-in user. No permission side
+  // effects — it only listens. (If nobody is signed in it is an honest no-op;
+  // the delivery route cleans up stale rows on 404/410.)
+  useEffect(() => watchPushRenewal(), []);
+
   return (
     <>
       <button
@@ -119,7 +133,15 @@ function PushOptInDialog({ onClose }: { onClose: () => void }) {
 
   const onEnable = async () => {
     setBusy("enable");
-    const state: PushState = await enablePush();
+    // enablePush never throws (it resolves to a PushState), but the guard
+    // keeps the button recoverable even if something unexpected rejects.
+    let state: PushState;
+    try {
+      state = await enablePush();
+    } catch (err) {
+      state = { kind: "error", message: "Something went wrong while setting up notifications." };
+      console.error("[push] enablePush rejected:", err);
+    }
     setBusy(null);
     switch (state.kind) {
       case "subscribed":
@@ -151,11 +173,14 @@ function PushOptInDialog({ onClose }: { onClose: () => void }) {
         method: "POST",
         headers: token ? { Authorization: `Bearer ${token}` } : undefined,
       });
-      const data = (await res.json().catch(() => ({}))) as { sent?: number; error?: string; message?: string };
+      const data = (await res.json().catch(() => ({}))) as { sent?: number; removedStale?: number; error?: string; message?: string };
       if (res.ok && (data.sent ?? 0) > 0) {
         toast.success("Test notification sent — check your device");
-      } else if (res.status === 404) {
-        toast.error("No active subscription on this device — enable notifications again.");
+      } else if (res.status === 404 || (res.ok && (data.sent ?? 0) === 0 && (data.removedStale ?? 0) > 0)) {
+        // 404 = no stored rows; sent=0 with removedStale>0 = every stored
+        // subscription was dead (browser rotation/expiry) and was cleaned up.
+        // Both mean the same honest thing: this device must enable again.
+        toast.error("This device's subscription is no longer active — enable notifications again.");
         // Re-evaluate (setState inside this async callback, not an effect).
         evaluatePushPhase()
           .then((phase) => setDialog(phase))
@@ -171,7 +196,13 @@ function PushOptInDialog({ onClose }: { onClose: () => void }) {
 
   const onDisable = async () => {
     setBusy("disable");
-    const state = await disablePush();
+    let state: PushState;
+    try {
+      state = await disablePush();
+    } catch (err) {
+      console.error("[push] disablePush rejected:", err);
+      state = { kind: "error", message: "Couldn't turn notifications off completely — please try again." };
+    }
     setBusy(null);
     if (state.kind === "ready") {
       setDialog({ phase: "ready" });

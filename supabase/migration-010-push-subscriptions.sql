@@ -7,6 +7,12 @@
 --   remains the owner's single manual action in the Supabase SQL Editor,
 --   only after approving this file.
 --
+--   AMENDED (pre-execution, push-feature completion audit): added the
+--   nullable `expires_at` column — the browser MAY report a finite
+--   PushSubscription.expirationTime (rare; most browsers leave it null).
+--   Storing it keeps expired rows explainable; nullable so the common
+--   never-expires case stores NULL. Column count assertion updated 7 → 8.
+--
 -- WHAT THIS DOES
 --   1) Creates public.push_subscriptions — one row per (user, browser).
 --   2) RLS: OWN-ROWS-ONLY (select / insert / delete where user_id = auth.uid()).
@@ -39,9 +45,13 @@ create table if not exists public.push_subscriptions (
   endpoint_hash text not null,
   p256dh        text not null,
   auth_key      text not null,
+  expires_at    timestamptz,
   created_at    timestamptz not null default now(),
   constraint push_subscriptions_user_endpoint_key unique (user_id, endpoint_hash)
 );
+
+comment on column public.push_subscriptions.expires_at is
+  'Browser-reported PushSubscription.expirationTime (epoch seconds → timestamptz), NULL when the browser reports no expiry (the common case). Informational — expiry-driven cleanup is handled by delivery-route 404/410 handling.';
 
 comment on table public.push_subscriptions is
   'Web Push opt-in store — one row per (user, browser endpoint). RLS is OWN-ROWS-ONLY (user_id = auth.uid()). endpoint_hash = SHA-256(endpoint) is the duplicate-prevention key; stale endpoints (404/410) are deleted by the delivery route.';
@@ -90,9 +100,9 @@ begin
   select count(*) into v_columns
     from information_schema.columns
    where table_schema = 'public' and table_name = 'push_subscriptions'
-     and column_name in ('id','user_id','endpoint','endpoint_hash','p256dh','auth_key','created_at');
-  if v_columns <> 7 then
-    raise exception 'ASSERT FAIL: push_subscriptions has % of the 7 approved columns.', v_columns;
+     and column_name in ('id','user_id','endpoint','endpoint_hash','p256dh','auth_key','expires_at','created_at');
+  if v_columns <> 8 then
+    raise exception 'ASSERT FAIL: push_subscriptions has % of the 8 approved columns.', v_columns;
   end if;
 
   select count(*) into v_unique
@@ -117,7 +127,7 @@ begin
     raise exception 'ASSERT FAIL: expected exactly 4 own-rows-only policies, found %.', v_policies;
   end if;
 
-  raise notice 'ASSERT OK: push_subscriptions matches the approved design (7 columns, unique key, RLS, 4 own-row policies).';
+  raise notice 'ASSERT OK: push_subscriptions matches the approved design (8 columns incl. nullable expires_at, unique key, RLS, 4 own-row policies).';
 end
 $assert_push_subs$;
 
