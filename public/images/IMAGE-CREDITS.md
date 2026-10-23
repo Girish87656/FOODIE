@@ -52,6 +52,15 @@ temple query — was REJECTED and is not bundled).
 | Talakona Waterfall (`7f2c91c5`) | [File:Talakona Waterfalls near Tirupati India.jpg](https://commons.wikimedia.org/wiki/File:Talakona_Waterfalls_near_Tirupati_India.jpg) | Eyeofshahval | CC BY-SA 4.0 |
 | Chandragiri Fort (`544ffb45`) | [File:Chandragiri Fort, Chandragiri, Tirupati, Andhra Pradesh, India (2017).jpg](https://commons.wikimedia.org/wiki/File:Chandragiri_Fort,_Chandragiri,_Tirupati,_Andhra_Pradesh,_India_(2017).jpg) | Laxmanvety | CC BY-SA 4.0 |
 | Sri Venkateswara Zoological Park (`7a69de5b`) | [File:Sambar Deer in S.V. zoo,Tirupathi (May 2019) 3.jpg](https://commons.wikimedia.org/wiki/File:Sambar_Deer_in_S.V._zoo,Tirupathi_(May_2019)_3.jpg) | iMahesh | CC BY-SA 4.0 |
+| Sri Padmavathi Ammavari Temple (`550f0ee2`) | [File:Padmavathi Ammavari Temple.JPG](https://commons.wikimedia.org/wiki/File:Padmavathi_Ammavari_Temple.JPG) | Vedamurthy.j | CC BY-SA 3.0 |
+| Sri Kalyana Venkateswara Swamy Temple (`7ca7b062`) | [File:Kalyana Venkateshwara Swamy Temple View.jpg](https://commons.wikimedia.org/wiki/File:Kalyana_Venkateshwara_Swamy_Temple_View.jpg) | Ramya Srivastav | CC BY-SA 4.0 |
+
+The two 2026-10-23 additions were each VISUALLY verified against the named
+venue before bundling (the Padmavathi photo's festival banner names the
+temple in Telugu; the Kalyana Venkateswara file description names Srinivasa
+Mangapuram and the gopuram matches an independent photographer's file of
+the same temple). Two other Tiruchanur candidates were inspected and
+REJECTED on visual check (see section 3).
 
 The running app renders each photo's credit and links its source page on
 the venue detail hero (`src/data/venue-images.ts`). No Google Maps/Google
@@ -63,7 +72,27 @@ pages (venue copyright) and no photo is reused across venues.
 
 | Venue | Reason |
 |---|---|
-| Sri Padmavathi Ammavari Temple | No usable Commons file found this pass (honest illustration instead) |
-| Sri Kalyana Venkateswara Swamy Temple | Commons candidate rejected on visual check — generic hills, not the temple |
+| `File:Tiruchanur 02.JPG` (Padmavathi pass) | Gopuram mostly occluded by compound wall + market stalls — not a clear depiction of the temple |
+| `File:Tiruchanur 03.JPG` (Padmavathi pass) | Street-side shrine facade — not verifiably the main Padmavathi Ammavari Temple |
 | All 6 lodging hotels | Official-site photos are venue copyright; no licensed source found → illustration |
 | All food places (77 + 9 Batch-009) | No licensed per-venue sources captured → category illustration |
+
+## 4. Responsive variants (generated derivatives — same provenance as §1/§2)
+
+Every bundled master WebP above also ships generated, provenance-identical
+smaller siblings (sharp resize + WebP q78, 2026-10-23), served through the
+`responsiveSrcSet` helper (`src/lib/foodie/categoryImages.ts`) so chips and
+tiles download kilobytes instead of the full-size master:
+
+| Pattern | Candidates | Used by |
+|---|---|---|
+| `categories/<name>-small.webp` | 320w | chips (20-40px), POI list tiles (76px) |
+| `categories/<name>-md.webp` | 640w | food place cards (200-248px) |
+| `categories/<name>.webp` | 1344w (master, §1) | detail heroes (~430px @2x) |
+| `places/<name>-small.webp` | 320w | POI list tiles (76px) |
+| `places/<name>.webp` | 800w (master, §2) | venue detail heroes (~430px @2x) |
+
+RULE: whenever a new master `.webp` is added to either folder, its
+`-small.webp` (and, for categories, `-md.webp`) sibling MUST be generated
+in the same pass — the srcset references these files unconditionally, so a
+missing sibling would break the responsive candidates.

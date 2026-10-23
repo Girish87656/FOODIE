@@ -24,12 +24,15 @@ export function SafeImage({
   alt,
   className,
   fallback = null,
+  priority = false,
 }: {
   src?: string | null;
   alt: string;
   className?: string;
   /** Rendered when there is no src or the image failed to load. */
   fallback?: React.ReactNode;
+  /** Above-the-fold heroes: eager + fetchPriority=high instead of lazy. */
+  priority?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
   const [prevSrc, setPrevSrc] = useState(src);
@@ -53,7 +56,8 @@ export function SafeImage({
     <img
       src={src}
       alt={alt}
-      loading="lazy"
+      loading={priority ? "eager" : "lazy"}
+      {...(priority ? { fetchPriority: "high" as const } : {})}
       decoding="async"
       onError={() => setFailed(true)}
       className={className}

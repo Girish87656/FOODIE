@@ -56,3 +56,43 @@ export function categoryIllustration(categoryId?: string): string | null {
 export function poiTypeIllustration(placeType: PlaceType): string {
   return POI_TYPE_ILLUSTRATIONS[placeType] ?? POI_TYPE_ILLUSTRATIONS.other;
 }
+
+/**
+ * Responsive srcset for bundled media assets.
+ *
+ * Every `public/images/categories/*.webp` ships `-small.webp` (320w) and
+ * `-md.webp` (640w) siblings; every `public/images/places/*.webp` ships a
+ * `-small.webp` (320w) sibling (see public/images/IMAGE-CREDITS.md §4).
+ * Chips/tiles (≤80px CSS) download the ~5-12 KB thumb instead of the
+ * ~30-105 KB master — the homepage's category rails stay light.
+ *
+ * Returns null for any src outside those two bundled prefixes (e.g.
+ * user-uploaded Supabase storage URLs), which callers render as a plain img.
+ */
+const RESPONSIVE_PREFIXES: ReadonlyArray<readonly [prefix: string, widths: readonly number[]]> = [
+  ["/images/categories/", [320, 640, 1344]],
+  ["/images/places/", [320, 800]],
+];
+
+const WIDTH_SUFFIX: ReadonlyArray<readonly [width: number, suffix: string]> = [
+  [320, "-small"],
+  [640, "-md"],
+  [800, ""],
+  [1344, ""],
+];
+
+export function responsiveSrcSet(src: string): string | null {
+  if (!src.endsWith(".webp") || src.endsWith("-small.webp") || src.endsWith("-md.webp")) {
+    return null;
+  }
+  for (const [prefix, widths] of RESPONSIVE_PREFIXES) {
+    if (!src.startsWith(prefix)) continue;
+    return widths
+      .map((w) => {
+        const [, suffix] = WIDTH_SUFFIX.find(([candidate]) => candidate === w)!;
+        return `${src.replace(".webp", `${suffix}.webp`)} ${w}w`;
+      })
+      .join(", ");
+  }
+  return null;
+}

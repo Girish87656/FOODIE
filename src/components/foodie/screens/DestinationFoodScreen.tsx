@@ -25,6 +25,7 @@ import {
 } from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
 import { SafeImage } from "../SafeImage";
+import { GlyphTile } from "../IllustrationImage";
 import { ListRow } from "../PlaceCards";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
@@ -141,10 +142,20 @@ export function DestinationFoodScreen() {
         {feed.status === "ready" && feed.food && (
           <>
             <section className="px-5 pt-5">
+              {/* image_url is NULL by the batch-003 licensing policy — the hero
+                  degrades to the honest glyph tile, never a substitute image. */}
               <SafeImage
                 src={feed.food.imageUrl}
                 alt={feed.food.name}
+                priority
                 className="h-40 w-full rounded-3xl object-cover"
+                fallback={
+                  <GlyphTile
+                    icon={UtensilsCrossed}
+                    iconClassName="size-10 text-orange-300"
+                    className="h-40 w-full rounded-3xl"
+                  />
+                }
               />
               <div className="mt-3 flex items-center gap-2">
                 <h1 className="truncate text-2xl font-extrabold tracking-tight text-foreground">

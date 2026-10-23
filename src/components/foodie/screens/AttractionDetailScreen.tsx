@@ -238,6 +238,7 @@ export function AttractionDetailScreen() {
           iconClassName="size-16"
           showAttribution
           priority
+          sizes="(max-width: 480px) 100vw, 430px"
         />
         <div
           aria-hidden="true"

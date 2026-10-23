@@ -13,11 +13,10 @@
  *     publishes them — never invented, never paraphrased. The detail hero
  *     renders the credit and links the source page (the license requires
  *     attribution; we also add a link to the license where available).
- *   * Venues WITHOUT an entry (all 86+9 food places, the 6 lodging hotels,
- *     2 temples with no verifiably-licensed Commons photo) intentionally
- *     render the honest category illustration instead — a photo is never
- *     borrowed across venues and never hotlinked from official pages
- *     (venue-copyright).
+ *   * Venues WITHOUT an entry (all 86+9 food places and the 6 lodging
+ *     hotels) intentionally render the honest category illustration
+ *     instead — a photo is never borrowed across venues and never
+ *     hotlinked from official pages (venue-copyright).
  *   * Assets ship from public/images/places/ (WebP, width ≤ 800px, quality
  *     78) so the browser caches them; no third-party image host is hotlinked
  *     at runtime.
@@ -107,6 +106,36 @@ export const VENUE_IMAGES: Record<string, VenueImage> = {
     license: "CC BY-SA 4.0",
     sourcePage:
       "https://commons.wikimedia.org/wiki/File:Sambar_Deer_in_S.V._zoo,Tirupathi_(May_2019)_3.jpg",
+  },
+  "550f0ee2-d898-5f44-9897-9fd72310d77f": {
+    // Sri Padmavathi Ammavari Temple (Tiruchanoor / Alamelu Mangapuram)
+    // VISUALLY VERIFIED 2026-10-23: the festival banner across the gopuram
+    // names "శ్రీ పద్మావతి అమ్మవారి" (Sri Padmavathi Ammavari) and the
+    // Commons description reads "Padmavathi Ammavari Temple, Alamelu
+    // Mangapura, AP". Two other Tiruchanur candidates (Tiruchanur 02/03)
+    // were inspected and REJECTED — a street shrine and a market-cluttered
+    // wall view that do not clearly depict the main temple.
+    src: "/images/places/sri-padmavathi-ammavari-temple.webp",
+    alt: "Festival-dressed white gopuram of Sri Padmavathi Ammavari Temple, Tiruchanoor, with pilgrims walking in front",
+    credit: "Vedamurthy.j",
+    license: "CC BY-SA 3.0",
+    sourcePage:
+      "https://commons.wikimedia.org/wiki/File:Padmavathi_Ammavari_Temple.JPG",
+  },
+  "7ca7b062-f601-55a9-832f-f3355aa8a80d": {
+    // Sri Kalyana Venkateswara Swamy Temple (Srinivasa Mangapuram)
+    // VISUALLY VERIFIED 2026-10-23: white tiered gopuram consistent across
+    // two independent photographers' files of the same temple; the bundled
+    // landscape file's Commons description states "Located in Srinivasa
+    // Mangapuram, west of Tirupathi". The portrait arch-framed candidate
+    // (5171srinivas) was verified too and kept OUT only because the
+    // landscape view serves the hero better — it is equally licensed.
+    src: "/images/places/sri-kalyana-venkateswara-swamy-temple.webp",
+    alt: "White tiered gopuram of Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram, rising above the compound wall under a clear sky",
+    credit: "Ramya Srivastav",
+    license: "CC BY-SA 4.0",
+    sourcePage:
+      "https://commons.wikimedia.org/wiki/File:Kalyana_Venkateshwara_Swamy_Temple_View.jpg",
   },
 };
 

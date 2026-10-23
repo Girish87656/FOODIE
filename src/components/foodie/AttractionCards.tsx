@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
 import { POI_PLACE_TYPES } from "@/lib/foodie/constants";
 import { POI_TYPE_ICONS } from "@/lib/foodie/icons";
-import { poiTypeIllustration } from "@/lib/foodie/categoryImages";
+import { poiTypeIllustration, responsiveSrcSet } from "@/lib/foodie/categoryImages";
 import { venueImageFor } from "@/data/venue-images";
 import { prettifyTag, verificationStatusLabel } from "@/lib/foodie/utils";
 import type {
@@ -55,6 +55,7 @@ export function PoiTypeTile({
   iconClassName,
   showAttribution = false,
   priority = false,
+  sizes,
 }: {
   poi: Pick<PointOfInterest, "id" | "placeType" | "name">;
   className?: string;
@@ -63,6 +64,9 @@ export function PoiTypeTile({
   showAttribution?: boolean;
   /** Hero tiles load eagerly; list tiles lazy. */
   priority?: boolean;
+  /** Layout width hint — enables the responsive 320w/800w (or 640w/1344w
+   *  illustration) srcset. Omitted → plain img (full asset). */
+  sizes?: string;
 }) {
   const meta = poiTypeMeta(poi.placeType);
   const TypeIcon = meta.icon;
@@ -76,6 +80,7 @@ export function PoiTypeTile({
     setMediaFailed(false);
   }
   const mediaSrc = mediaFailed ? null : desiredSrc;
+  const srcSet = mediaSrc ? responsiveSrcSet(mediaSrc) : null;
 
   return (
     <div
@@ -93,6 +98,7 @@ export function PoiTypeTile({
       {mediaSrc ? (
         <img
           src={mediaSrc}
+          {...(srcSet ? { srcSet, ...(sizes ? { sizes } : {}) } : {})}
           alt=""
           loading={priority ? "eager" : "lazy"}
           {...(priority ? { fetchPriority: "high" as const } : {})}
@@ -157,7 +163,7 @@ export function PoiListRow({
       className="flex w-full items-stretch gap-3 rounded-2xl border border-border/60 bg-card p-3 text-left shadow-sm transition-all hover:border-primary/40 hover:shadow-md active:scale-[0.99]"
       aria-label={`Open ${poi.name}`}
     >
-      <PoiTypeTile poi={poi} className="size-[76px] shrink-0 rounded-xl" />
+      <PoiTypeTile poi={poi} className="size-[76px] shrink-0 rounded-xl" sizes="76px" />
       <span className="min-w-0 flex-1">
         <span className="flex flex-wrap items-center gap-1.5">
           <span className="truncate text-[14.5px] font-bold text-foreground">{poi.name}</span>

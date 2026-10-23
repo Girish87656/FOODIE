@@ -26,6 +26,7 @@ import type { DataMode } from "@/lib/foodie/data/types";
 import type { Dish, PhotoCredit, Place } from "@/lib/foodie/types";
 import { formatDistance, haversineKm } from "@/lib/foodie/location";
 import { categoryIllustration } from "@/lib/foodie/categoryImages";
+import { IllustrationImage, GlyphTile } from "../IllustrationImage";
 import { originSourceLabel, useLocationStore } from "@/lib/foodie/locationStore";
 import {
   formatHours,
@@ -300,22 +301,29 @@ export function PlaceDetailScreen() {
           <div className="relative h-[264px] w-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
             {categoryIllustration(place.categoryIds[0]) ? (
               <>
-                <img
-                  src={categoryIllustration(place.categoryIds[0]) as string}
+                <IllustrationImage
+                  src={categoryIllustration(place.categoryIds[0])}
                   alt={`${place.name} — category illustration (no venue photo available yet)`}
+                  sizes="(max-width: 480px) 100vw, 430px"
+                  priority
                   className="size-full object-cover"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
+                  fallback={
+                    <GlyphTile
+                      icon={UtensilsCrossed}
+                      iconClassName="size-14 text-orange-300"
+                      className="absolute inset-0"
+                    />
+                  }
                 />
                 <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/50 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
                   Illustration · not a venue photo
                 </span>
               </>
             ) : (
-              <div className="grid size-full place-items-center">
-                <UtensilsCrossed className="size-14 text-orange-300" aria-hidden="true" />
-              </div>
+              <GlyphTile
+                icon={UtensilsCrossed}
+                iconClassName="size-14 text-orange-300"
+              />
             )}
           </div>
         ) : (

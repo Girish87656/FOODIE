@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { MapPin as FallbackPin } from "lucide-react";
 import { categoryIllustration } from "@/lib/foodie/categoryImages";
 import { FOOD_CATEGORY_ICONS, POI_TYPE_ICONS } from "@/lib/foodie/icons";
+import { IllustrationImage } from "./IllustrationImage";
 import type { FoodCategory } from "@/lib/foodie/types";
 
 interface CategoryChipProps {
@@ -16,8 +17,9 @@ interface CategoryChipProps {
  * Horizontal quick-filter chip on the Home screen.
  *
  * Categories with a custom illustration (the 7 food categories) render a
- * small rounded picture-style thumb; ids without one (e.g. destination
- * chips) get the professional Lucide icon fallback — never an emoji.
+ * small rounded picture-style thumb (IllustrationImage: responsive 320w
+ * thumb, error → icon fallback); ids without one (e.g. destination chips)
+ * get the professional Lucide icon fallback — never an emoji.
  */
 export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
   const illustration = categoryIllustration(category.id);
@@ -38,12 +40,19 @@ export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
       )}
     >
       {illustration ? (
-        <img
+        <IllustrationImage
           src={illustration}
           alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
+          sizes="20px"
+          fallback={
+            <FallbackIcon
+              aria-hidden="true"
+              className={cn(
+                "size-4 shrink-0",
+                active ? "text-primary-foreground" : "text-primary"
+              )}
+            />
+          }
           className="size-5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
         />
       ) : (
@@ -88,12 +97,18 @@ export function CategoryTile({
       )}
     >
       {illustration ? (
-        <img
+        <IllustrationImage
           src={illustration}
           alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
+          sizes="40px"
+          fallback={
+            <span
+              aria-hidden="true"
+              className="grid size-10 place-items-center rounded-xl bg-primary/10 transition-transform group-hover:scale-110"
+            >
+              <FallbackIcon className="size-5 text-primary" />
+            </span>
+          }
           className="size-10 rounded-xl object-cover ring-1 ring-black/10 transition-transform group-hover:scale-110"
         />
       ) : (

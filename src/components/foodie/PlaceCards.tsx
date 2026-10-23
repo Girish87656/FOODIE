@@ -5,6 +5,7 @@ import { MapPin, Users, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
 import { categoryIllustration } from "@/lib/foodie/categoryImages";
+import { IllustrationImage, GlyphTile } from "./IllustrationImage";
 import { RatingBadge, PlaceBadge } from "./Badges";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
 
@@ -54,19 +55,22 @@ function PlacePhoto({
   className,
   iconClassName,
   category,
+  sizes,
 }: {
   src?: string;
   alt: string;
   className?: string;
   iconClassName?: string;
   category?: string;
+  /** Layout width hint for the illustration srcset (per card layout). */
+  sizes?: string;
 }) {
   // A stored URL that cannot load degrades to the honest placeholder tile —
   // the broken-image glyph of a dead <img> is never shown (same contract as
   // the detail screen's gallery). State resets when the src prop changes via
-  // the render-time adjustment pattern (no setState-in-effect).
+  // the render-time adjustment pattern (no setState-in-effect). The
+  // illustration itself ALSO degrades honestly (IllustrationImage → glyph).
   const [failed, setFailed] = useState(false);
-  const [illFailed, setIllFailed] = useState(false);
   const [prevSrc, setPrevSrc] = useState(src);
   if (prevSrc !== src) {
     setPrevSrc(src);
@@ -75,7 +79,7 @@ function PlacePhoto({
   const illustration = categoryIllustration(category);
 
   if (!src || failed) {
-    if (illustration && !illFailed) {
+    if (illustration) {
       return (
         <div
           role="img"
@@ -85,36 +89,29 @@ function PlacePhoto({
             className
           )}
         >
-          <img
+          <IllustrationImage
             src={illustration}
             alt=""
-            loading="lazy"
-            decoding="async"
-            onError={() => setIllFailed(true)}
+            sizes={sizes}
             className="size-full object-cover"
+            fallback={
+              <GlyphTile
+                icon={UtensilsCrossed}
+                iconClassName={iconClassName}
+                className="absolute inset-0"
+              />
+            }
           />
         </div>
       );
     }
     return (
-      <div
-        role="img"
-        aria-label={alt}
-        className={cn(
-          "relative grid size-full place-items-center overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
-          className
-        )}
-      >
-        {/* soft radial warmth behind the fallback glyph */}
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
-        />
-        <UtensilsCrossed
-          className={cn("size-6 text-orange-300", iconClassName)}
-          aria-hidden="true"
-        />
-      </div>
+      <GlyphTile
+        icon={UtensilsCrossed}
+        ariaLabel={alt}
+        iconClassName={iconClassName}
+        className={className}
+      />
     );
   }
   return (
@@ -154,6 +151,7 @@ export function CarouselCard({ place, onSelect }: PlaceCardBase) {
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           category={place.categoryIds[0]}
+          sizes="200px"
         />
         {place.badges.hiddenGem && (
           <PlaceBadge label="Hidden Gem" className="absolute left-2 top-2" />
@@ -215,6 +213,7 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           iconClassName="size-5"
           category={place.categoryIds[0]}
+          sizes="80px"
         />
       </div>
       <div className="min-w-0 flex-1">
@@ -268,6 +267,7 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           iconClassName="size-8"
           category={place.categoryIds[0]}
+          sizes="248px"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
         <DistanceChip place={place} className="absolute right-2 top-2" />

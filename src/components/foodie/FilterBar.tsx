@@ -5,6 +5,7 @@ import { ArrowDownUp, Check, ChevronDown, ListFilter, Navigation, Ruler, Star, U
 import { cn } from "@/lib/utils";
 import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
 import { categoryIllustration } from "@/lib/foodie/categoryImages";
+import { IllustrationImage } from "./IllustrationImage";
 
 const DISTANCE_OPTIONS: { value: number | null; label: string; aria: string }[] = [
   { value: null, label: "Any distance", aria: "Show places at any distance" },
@@ -223,12 +224,15 @@ function CategoryDropdown({
           }}
         >
           {ill ? (
-            <img
+            <IllustrationImage
               src={ill}
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
+              sizes="18px"
+              fallback={
+                <Utensils
+                  aria-hidden="true"
+                  className="size-4 shrink-0 text-stone-400"
+                />
+              }
               className="size-4.5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
             />
           ) : (
