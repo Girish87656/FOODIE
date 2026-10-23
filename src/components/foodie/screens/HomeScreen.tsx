@@ -53,6 +53,7 @@ import { LocationPromptBanner, LocationSheet } from "../LocationControls";
 import { AccountControls } from "../AccountControls";
 import { AssistantControls } from "../AssistantControls";
 import { DemoDataBanner } from "../DemoDataBanner";
+import { PushNotificationsButton } from "../PushOptIn";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
@@ -390,17 +391,10 @@ export function HomeScreen() {
             </span>
           </button>
 
-          <button
-            type="button"
-            onClick={() =>
-              toast.info("No new alerts", { description: "Foodie tips will show up here soon." })
-            }
-            aria-label="Notifications"
-            className="relative grid size-9 shrink-0 place-items-center rounded-full border border-border bg-card shadow-sm transition-colors hover:bg-accent"
-          >
-            <Bell className="size-4" />
-            <span className="absolute right-2 top-2 size-1.5 rounded-full bg-primary" aria-hidden="true" />
-          </button>
+          {/* Real push opt-in — the dialog (and the permission request it may
+              trigger) only ever opens from THIS click; nothing is requested
+              on page load. The old fake-unread dot is gone with the stub. */}
+          <PushNotificationsButton />
 
           {/* Real-session account controls (avatar + sign out) — renders
               nothing in demo mode, so the header is unchanged there */}

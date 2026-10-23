@@ -24,6 +24,7 @@ import { getRestaurantById } from "@/lib/foodie/data/repository";
 import type { DataMode } from "@/lib/foodie/data/types";
 import type { Dish, PhotoCredit, Place } from "@/lib/foodie/types";
 import { formatDistance, haversineKm } from "@/lib/foodie/location";
+import { categoryIllustration } from "@/lib/foodie/categoryImages";
 import { originSourceLabel, useLocationStore } from "@/lib/foodie/locationStore";
 import {
   formatHours,
@@ -291,9 +292,30 @@ export function PlaceDetailScreen() {
       {/* ---------------- hero photos ---------------- */}
       <div className="relative shrink-0">
         {place.photos.length === 0 ? (
-          /* no photos in the database yet — honest gradient placeholder */
-          <div className="grid h-[264px] w-full place-items-center bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
-            <UtensilsCrossed className="size-14 text-orange-300" aria-hidden="true" />
+          /* no photos in the database yet — the honest fallback is the custom
+             picture-style category ILLUSTRATION for this place's REAL stored
+             category, explicitly labelled so it is never mistaken for a venue
+             photo. Eager + high priority: above-the-fold hero. */
+          <div className="relative h-[264px] w-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
+            {categoryIllustration(place.categoryIds[0]) ? (
+              <>
+                <img
+                  src={categoryIllustration(place.categoryIds[0]) as string}
+                  alt={`${place.name} — category illustration (no venue photo available yet)`}
+                  className="size-full object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+                <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/50 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
+                  Illustration · not a venue photo
+                </span>
+              </>
+            ) : (
+              <div className="grid size-full place-items-center">
+                <UtensilsCrossed className="size-14 text-orange-300" aria-hidden="true" />
+              </div>
+            )}
           </div>
         ) : (
           <div

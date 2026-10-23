@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MapPin, Users, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
-import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
+import { categoryIllustration } from "@/lib/foodie/categoryImages";
 import { RatingBadge, PlaceBadge } from "./Badges";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
 
@@ -42,13 +42,11 @@ function DistanceChip({
 /**
  * Photo with an honest placeholder when the database row has no image yet
  * (demo data always ships photos; real rows may not). The placeholder is
- * category-aware — the emoji comes from the place's REAL stored category,
- * never a random decoration.
+ * category-aware — a custom picture-style ILLUSTRATION for the place's REAL
+ * stored category, never a random decoration and never presented as a venue
+ * photo (alt text says "category illustration"). If the illustration itself
+ * fails to load, a plain glyph-on-gradient tile is the last-ditch fallback.
  */
-function categoryEmoji(categoryId?: string): string | null {
-  if (!categoryId) return null;
-  return PLACE_CATEGORIES.find((c) => c.id === categoryId)?.emoji ?? null;
-}
 
 function PlacePhoto({
   src,
@@ -68,14 +66,36 @@ function PlacePhoto({
   // the detail screen's gallery). State resets when the src prop changes via
   // the render-time adjustment pattern (no setState-in-effect).
   const [failed, setFailed] = useState(false);
+  const [illFailed, setIllFailed] = useState(false);
   const [prevSrc, setPrevSrc] = useState(src);
   if (prevSrc !== src) {
     setPrevSrc(src);
     setFailed(false);
   }
+  const illustration = categoryIllustration(category);
 
   if (!src || failed) {
-    const emoji = categoryEmoji(category);
+    if (illustration && !illFailed) {
+      return (
+        <div
+          role="img"
+          aria-label={`${alt} — category illustration`}
+          className={cn(
+            "relative size-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
+            className
+          )}
+        >
+          <img
+            src={illustration}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            onError={() => setIllFailed(true)}
+            className="size-full object-cover"
+          />
+        </div>
+      );
+    }
     return (
       <div
         role="img"
@@ -85,21 +105,15 @@ function PlacePhoto({
           className
         )}
       >
-        {/* soft radial warmth behind the category emoji */}
+        {/* soft radial warmth behind the fallback glyph */}
         <span
           aria-hidden="true"
           className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
         />
-        {emoji ? (
-          <span aria-hidden="true" className="text-[26px] drop-shadow-sm">
-            {emoji}
-          </span>
-        ) : (
-          <UtensilsCrossed
-            className={cn("size-6 text-orange-300", iconClassName)}
-            aria-hidden="true"
-          />
-        )}
+        <UtensilsCrossed
+          className={cn("size-6 text-orange-300", iconClassName)}
+          aria-hidden="true"
+        />
       </div>
     );
   }

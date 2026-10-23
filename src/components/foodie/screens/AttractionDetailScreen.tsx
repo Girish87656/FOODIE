@@ -235,6 +235,8 @@ export function AttractionDetailScreen() {
           poi={poi}
           className="h-[264px] w-full rounded-none"
           emojiClassName="size-16"
+          showAttribution
+          priority
         />
         <div
           aria-hidden="true"

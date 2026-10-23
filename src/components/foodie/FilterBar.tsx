@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDownUp, Check, ChevronDown, ListFilter, Navigation, Ruler, Star, Utensils } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
+import { categoryIllustration } from "@/lib/foodie/categoryImages";
 
 const DISTANCE_OPTIONS: { value: number | null; label: string; aria: string }[] = [
   { value: null, label: "Any distance", aria: "Show places at any distance" },
@@ -208,7 +209,9 @@ function CategoryDropdown({
       active={value != null}
       footer={<ListFilter className="size-3 shrink-0" aria-hidden="true" />}
     >
-      {options.map((opt) => (
+      {options.map((opt) => {
+        const ill = categoryIllustration(opt.id);
+        return (
         <OptionRow
           key={opt.id}
           selected={
@@ -219,9 +222,21 @@ function CategoryDropdown({
             setOpen(false);
           }}
         >
-          <span aria-hidden="true">{opt.emoji}</span> {opt.label}
+          {ill ? (
+            <img
+              src={ill}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              className="size-4.5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
+            />
+          ) : (
+            <span aria-hidden="true">{opt.emoji}</span>
+          )} {opt.label}
         </OptionRow>
-      ))}
+        );
+      })}
     </FilterDropdownShell>
   );
 }

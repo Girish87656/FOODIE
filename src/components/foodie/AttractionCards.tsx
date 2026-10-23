@@ -9,10 +9,13 @@
  * comes from the row's REAL stored place_type — never decoration.
  */
 
+import { useState } from "react";
 import { MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
 import { POI_PLACE_TYPES } from "@/lib/foodie/constants";
+import { poiTypeIllustration } from "@/lib/foodie/categoryImages";
+import { venueImageFor } from "@/data/venue-images";
 import { prettifyTag, verificationStatusLabel } from "@/lib/foodie/utils";
 import type {
   PlaceType,
@@ -35,33 +38,93 @@ const VERIFICATION_CHIP_CLASS = {
   unverified: "border-amber-200 bg-amber-50 text-amber-700",
 } as const;
 
-/** The gradient emoji tile used for cards and the detail hero. */
+/**
+ * The type media tile used for cards and the detail hero.
+ *
+ * Priority: (1) a VERIFIED, licensed per-venue photo from the curated
+ * registry (src/data/venue-images.ts — full attribution rendered when
+ * `showAttribution` is on), (2) the custom picture-style ILLUSTRATION for
+ * the row's REAL stored place_type (never presented as a venue photo —
+ * the hero labels it "Illustration · not a venue photo"), (3) the type
+ * glyph on the gradient as the last-ditch fallback if both fail.
+ */
 export function PoiTypeTile({
   poi,
   className,
   emojiClassName,
+  showAttribution = false,
+  priority = false,
 }: {
-  poi: Pick<PointOfInterest, "placeType" | "name">;
+  poi: Pick<PointOfInterest, "id" | "placeType" | "name">;
   className?: string;
   emojiClassName?: string;
+  /** Detail-hero mode: renders the credit/attribution chip. */
+  showAttribution?: boolean;
+  /** Hero tiles load eagerly; list tiles lazy. */
+  priority?: boolean;
 }) {
   const meta = poiTypeMeta(poi.placeType);
+  const venue = venueImageFor(poi.id);
+  const illustration = poiTypeIllustration(poi.placeType);
+  const desiredSrc = venue?.src ?? illustration;
+  const [mediaFailed, setMediaFailed] = useState(false);
+  const [prevSrc, setPrevSrc] = useState(desiredSrc);
+  if (prevSrc !== desiredSrc) {
+    setPrevSrc(desiredSrc);
+    setMediaFailed(false);
+  }
+  const mediaSrc = mediaFailed ? null : desiredSrc;
+
   return (
     <div
       role="img"
-      aria-label={`${meta.label} — ${poi.name}`}
+      aria-label={
+        venue
+          ? venue.alt
+          : `${meta.label} — ${poi.name} (category illustration)`
+      }
       className={cn(
-        "relative grid size-full place-items-center overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
+        "relative size-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
         className
       )}
     >
-      <span
-        aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
-      />
-      <span aria-hidden="true" className={cn("text-[26px] drop-shadow-sm", emojiClassName)}>
-        {meta.emoji}
-      </span>
+      {mediaSrc ? (
+        <img
+          src={mediaSrc}
+          alt=""
+          loading={priority ? "eager" : "lazy"}
+          {...(priority ? { fetchPriority: "high" as const } : {})}
+          decoding="async"
+          onError={() => setMediaFailed(true)}
+          className="size-full object-cover"
+        />
+      ) : (
+        <>
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
+          />
+          <span aria-hidden="true" className={cn("text-[26px] drop-shadow-sm", emojiClassName)}>
+            {meta.emoji}
+          </span>
+        </>
+      )}
+      {showAttribution && venue && (
+        <a
+          href={venue.sourcePage}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          title={`${venue.credit} — ${venue.license} (opens the source page)`}
+          className="absolute bottom-2 left-2 max-w-[80%] truncate rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+        >
+          Photo: {venue.credit} · {venue.license}
+        </a>
+      )}
+      {showAttribution && !venue && (
+        <span className="absolute bottom-2 left-2 max-w-[80%] truncate rounded-full bg-black/45 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
+          Illustration · not a venue photo
+        </span>
+      )}
     </div>
   );
 }

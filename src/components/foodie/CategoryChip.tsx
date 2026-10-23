@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { categoryIllustration } from "@/lib/foodie/categoryImages";
 import type { FoodCategory } from "@/lib/foodie/types";
 
 interface CategoryChipProps {
@@ -9,8 +10,15 @@ interface CategoryChipProps {
   onClick: () => void;
 }
 
-/** Horizontal quick-filter chip on the Home screen */
+/**
+ * Horizontal quick-filter chip on the Home screen.
+ *
+ * Categories with a custom illustration (the 7 food categories) render a
+ * small rounded picture-style thumb instead of an emoji glyph; ids without
+ * an illustration (e.g. destination chips) keep the caller-provided emoji.
+ */
 export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
+  const illustration = categoryIllustration(category.id);
   return (
     <button
       type="button"
@@ -23,15 +31,26 @@ export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
           : "border-border bg-card text-foreground hover:border-primary/40 hover:bg-accent"
       )}
     >
-      <span aria-hidden="true" className="text-sm leading-none">
-        {category.emoji}
-      </span>
+      {illustration ? (
+        <img
+          src={illustration}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="size-5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
+        />
+      ) : (
+        <span aria-hidden="true" className="text-sm leading-none">
+          {category.emoji}
+        </span>
+      )}
       {category.label}
     </button>
   );
 }
 
-/** Grid tile version used on the preference picker */
+/** Grid tile version used on the preference picker — picture-style thumbs. */
 export function CategoryTile({
   category,
   selected,
@@ -41,6 +60,7 @@ export function CategoryTile({
   selected: boolean;
   onToggle: () => void;
 }) {
+  const illustration = categoryIllustration(category.id);
   return (
     <button
       type="button"
@@ -53,9 +73,20 @@ export function CategoryTile({
           : "border-border/80 bg-card hover:border-primary/30 hover:bg-accent/60"
       )}
     >
-      <span className="text-[26px] leading-none transition-transform group-hover:scale-110" aria-hidden="true">
-        {category.emoji}
-      </span>
+      {illustration ? (
+        <img
+          src={illustration}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="size-10 rounded-xl object-cover ring-1 ring-black/10 transition-transform group-hover:scale-110"
+        />
+      ) : (
+        <span className="text-[26px] leading-none transition-transform group-hover:scale-110" aria-hidden="true">
+          {category.emoji}
+        </span>
+      )}
       <span
         className={cn(
           "text-[11.5px] font-semibold leading-tight",
