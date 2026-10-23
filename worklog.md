@@ -2013,3 +2013,19 @@ Work Log:
 
 Stage Summary:
 - PUSH BLOCKED ON CREDENTIALS (exact error recorded). Recovery options recorded in the final report: (1) provide a GitHub token (fine-grained, Contents read/write for FOODIE) as an env var / credential-store entry here, or (2) owner pushes from their own machine after obtaining the bundle/remote access. No history rewrite, no force, no secret printed.
+
+---
+Task ID: L-REVERIFY (post-session-restart re-verification)
+Agent: Z.ai Code (main orchestrator)
+Task: Re-verify the launch-pass build end-to-end after session restart; retry push; confirm state honestly.
+
+Work Log:
+- Retried `git push origin main` → FAILED again with the identical error (fatal: could not read Username for 'https://github.com', exit 128). No credential store entry, no GitHub/Vercel env vars. origin/main untouched; 25 commits remain unpushed; no deploy triggered.
+- Investigated dev.log 404s on `/api/restaurants?city=X` → confirmed NOT a bug: that URL shape is not implemented and the frontend never calls it (grep: zero references to `?city=` in src/). Supported routes (all, nearby, search, category, [id], reviews, destinations*) all return 200. 404s came from external probes.
+- Re-ran full verification suite in this fresh session: bun run lint → exit 0; bun test → 41/41 PASS (0 fail).
+- Agent-browser E2E at 390×844: splash → demo escape → home (honest DEMO banner, bell w/o fake dot, illustration cards) → Tirupati famous panel (Laddu SIGNATURE + honesty note) → destination page (Chandragiri Fort REAL venue photo, Ekante Bliss hotel illustration, Unverified chips) → Natural Arch detail (real photo hero, "Photo: Á at English Wikipedia · CC BY 3.0" chip, no-invented-description panel, UNESCO source, location-pending-verification) → food detail regression (cafe illustration hero + "Illustration · not a venue photo" label) → push dialog (honest needs-login state + RLS privacy note, no auto prompt).
+- Desktop 1440×900: scrollWidth==clientWidth (1440 vs 1440, no horizontal overflow); centered phone frame + marketing side panel renders correctly.
+- 0 page errors, 0 console errors/warnings for the whole session. Only stale error in dev.log is a pre-session EADDRINUSE from a duplicate-server attempt before 14:38 — current server (PID 1060) healthy.
+
+Stage Summary:
+- Launch-pass build re-verified green end-to-end in a fresh session; state byte-identical to the L-LAUNCH verification. Sole outstanding item remains PUSH (blocked on GitHub credentials — owner must supply a token here or push from their own machine; commit ca2ae6e + worklog commit 74d9741 are ready to push). Nothing new claimed: Batch-011 not imported, migrations 009/010 not applied, push delivery not owner-E2E'd, live public.places reads verifiable only on deployed URL.
