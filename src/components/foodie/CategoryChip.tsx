@@ -1,7 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { MapPin as FallbackPin } from "lucide-react";
 import { categoryIllustration } from "@/lib/foodie/categoryImages";
+import { FOOD_CATEGORY_ICONS, POI_TYPE_ICONS } from "@/lib/foodie/icons";
 import type { FoodCategory } from "@/lib/foodie/types";
 
 interface CategoryChipProps {
@@ -14,11 +16,15 @@ interface CategoryChipProps {
  * Horizontal quick-filter chip on the Home screen.
  *
  * Categories with a custom illustration (the 7 food categories) render a
- * small rounded picture-style thumb instead of an emoji glyph; ids without
- * an illustration (e.g. destination chips) keep the caller-provided emoji.
+ * small rounded picture-style thumb; ids without one (e.g. destination
+ * chips) get the professional Lucide icon fallback — never an emoji.
  */
 export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
   const illustration = categoryIllustration(category.id);
+  const FallbackIcon =
+    FOOD_CATEGORY_ICONS[category.id as keyof typeof FOOD_CATEGORY_ICONS] ??
+    POI_TYPE_ICONS[category.id as keyof typeof POI_TYPE_ICONS] ??
+    FallbackPin;
   return (
     <button
       type="button"
@@ -41,9 +47,13 @@ export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
           className="size-5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
         />
       ) : (
-        <span aria-hidden="true" className="text-sm leading-none">
-          {category.emoji}
-        </span>
+        <FallbackIcon
+          aria-hidden="true"
+          className={cn(
+            "size-4 shrink-0",
+            active ? "text-primary-foreground" : "text-primary"
+          )}
+        />
       )}
       {category.label}
     </button>
@@ -61,6 +71,10 @@ export function CategoryTile({
   onToggle: () => void;
 }) {
   const illustration = categoryIllustration(category.id);
+  const FallbackIcon =
+    FOOD_CATEGORY_ICONS[category.id as keyof typeof FOOD_CATEGORY_ICONS] ??
+    POI_TYPE_ICONS[category.id as keyof typeof POI_TYPE_ICONS] ??
+    FallbackPin;
   return (
     <button
       type="button"
@@ -83,8 +97,11 @@ export function CategoryTile({
           className="size-10 rounded-xl object-cover ring-1 ring-black/10 transition-transform group-hover:scale-110"
         />
       ) : (
-        <span className="text-[26px] leading-none transition-transform group-hover:scale-110" aria-hidden="true">
-          {category.emoji}
+        <span
+          aria-hidden="true"
+          className="grid size-10 place-items-center rounded-xl bg-primary/10 transition-transform group-hover:scale-110"
+        >
+          <FallbackIcon className="size-5 text-primary" />
         </span>
       )}
       <span

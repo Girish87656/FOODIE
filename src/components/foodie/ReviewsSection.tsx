@@ -239,7 +239,7 @@ export function ReviewsSection({ placeId }: { placeId: string }) {
       if (res.needsLogin) toast.error("Please log in to review this place.");
       return;
     }
-    toast.success(formMode === "edit" ? "Review updated" : "Review posted — thank you! 🎉");
+    toast.success(formMode === "edit" ? "Review updated" : "Review posted — thank you!");
     closeForm();
     load(); // refresh list → new/updated review, count and average all recompute
   }

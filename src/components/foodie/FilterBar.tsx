@@ -19,7 +19,7 @@ const SORT_OPTIONS: { value: "nearest" | "rating"; label: string; hint: string }
   { value: "rating", label: "Top Rated", hint: "Sorted by community rating" },
 ];
 
-const ALL_CATEGORY_OPTION = { id: "all", label: "All", emoji: "🍽️" } as const;
+const ALL_CATEGORY_OPTION = { id: "all", label: "All" } as const;
 
 interface DiscoveryFilterBarProps {
   distanceFilterKm: number | null;
@@ -232,7 +232,10 @@ function CategoryDropdown({
               className="size-4.5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
             />
           ) : (
-            <span aria-hidden="true">{opt.emoji}</span>
+            <Utensils
+              aria-hidden="true"
+              className="size-4 shrink-0 text-stone-400"
+            />
           )} {opt.label}
         </OptionRow>
         );

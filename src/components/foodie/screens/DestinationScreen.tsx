@@ -10,7 +10,7 @@
  */
 
 import { useEffect } from "react";
-import { ArrowLeft, Compass, MapPin, RefreshCw, SearchX } from "lucide-react";
+import { ArrowLeft, Compass, Landmark, MapPin, RefreshCw, SearchX, UtensilsCrossed } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
 import {
   useDestinationAttractions,
@@ -158,7 +158,7 @@ export function DestinationScreen() {
             <section className="mt-6">
               <div className="px-5">
                 <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
-                  <span aria-hidden="true">🍛</span> Famous &amp; local foods
+                  <UtensilsCrossed className="size-4 text-primary" aria-hidden="true" /> Famous &amp; local foods
                 </h2>
                 <p className="mt-0.5 text-[12.5px] text-muted-foreground">
                   What this place is genuinely known for — source-backed, never padded
@@ -192,10 +192,10 @@ export function DestinationScreen() {
                         className="size-[76px] shrink-0 rounded-xl object-cover"
                         fallback={
                           <span
-                            className="grid size-[76px] shrink-0 place-items-center rounded-xl bg-orange-50 text-2xl"
+                            className="grid size-[76px] shrink-0 place-items-center rounded-xl bg-orange-50"
                             aria-hidden="true"
                           >
-                            🍽️
+                            <UtensilsCrossed className="size-7 text-orange-300" />
                           </span>
                         }
                       />
@@ -231,7 +231,7 @@ export function DestinationScreen() {
             <section className="mt-6">
               <div className="px-5">
                 <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
-                  <span aria-hidden="true">🛕</span> Attractions &amp; stays
+                  <Landmark className="size-4 text-primary" aria-hidden="true" /> Attractions &amp; stays
                 </h2>
                 <p className="mt-0.5 text-[12.5px] text-muted-foreground">
                   Temples, sights and lodging — curated separately from food listings

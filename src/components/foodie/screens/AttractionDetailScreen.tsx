@@ -27,6 +27,7 @@ import {
   ArrowLeft,
   Clock3,
   ExternalLink,
+  FlaskConical,
   MapPin,
   Navigation,
   RefreshCw,
@@ -234,7 +235,7 @@ export function AttractionDetailScreen() {
         <PoiTypeTile
           poi={poi}
           className="h-[264px] w-full rounded-none"
-          emojiClassName="size-16"
+          iconClassName="size-16"
           showAttribution
           priority
         />
@@ -250,10 +251,8 @@ export function AttractionDetailScreen() {
         >
           <ArrowLeft className="size-4.5" />
         </button>
-        <span className="absolute right-4 top-4 rounded-full bg-black/45 px-3 py-1 text-[11.5px] font-bold text-white backdrop-blur-sm">
-          <span aria-hidden="true" className="mr-1">
-            {meta.emoji}
-          </span>
+        <span className="absolute right-4 top-4 flex items-center gap-1 rounded-full bg-black/45 px-3 py-1 text-[11.5px] font-bold text-white backdrop-blur-sm">
+          <meta.icon aria-hidden="true" className="size-3.5" />
           {meta.label}
         </span>
       </div>
@@ -280,10 +279,11 @@ export function AttractionDetailScreen() {
             </span>
             {mode === "demo" && (
               <span
-                className="rounded-full border border-dashed border-amber-300 bg-amber-50 px-2.5 py-1 text-[11.5px] font-bold text-amber-700"
+                className="inline-flex items-center gap-1 rounded-full border border-dashed border-amber-300 bg-amber-50 px-2.5 py-1 text-[11.5px] font-bold text-amber-700"
                 title="This entry comes from the labelled demo dataset, not the real database"
               >
-                🧪 Demo data
+                <FlaskConical className="size-3" aria-hidden="true" />
+                Demo data
               </span>
             )}
           </div>

@@ -81,7 +81,11 @@ export function isEatContext(value: unknown): value is EatContext {
 export interface FoodCategory<T extends string = string> {
   id: T;
   label: string;
-  emoji: string;
+  /**
+   * Legacy emoji field — UI icons now come from `src/lib/foodie/icons.ts`
+   * (professional Lucide system). Optional so no caller has to invent one.
+   */
+  emoji?: string;
 }
 
 /** A badge a place can carry — drives the Home sections */

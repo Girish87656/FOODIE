@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Gem, Heart, Wallet } from "lucide-react";
 import { useFoodieStore, type Screen } from "@/lib/foodie/store";
 import { stopAuthListener, useAuthStore } from "@/lib/foodie/authStore";
 import { APP_TAGLINE } from "@/lib/foodie/constants";
@@ -42,13 +43,13 @@ function DesktopSidePanel() {
       </p>
       <ul className="mt-6 space-y-2.5 text-[14px] font-medium text-stone-300">
         <li className="flex items-center gap-2.5">
-          <span aria-hidden="true">💎</span> Hidden gems only locals know
+          <Gem className="size-4 shrink-0 text-amber-300" aria-hidden="true" /> Hidden gems only locals know
         </li>
         <li className="flex items-center gap-2.5">
-          <span aria-hidden="true">❤️</span> Favorites loved by your neighborhood
+          <Heart className="size-4 shrink-0 text-rose-300" aria-hidden="true" /> Favorites loved by your neighborhood
         </li>
         <li className="flex items-center gap-2.5">
-          <span aria-hidden="true">💸</span> Budget eats that hit the spot
+          <Wallet className="size-4 shrink-0 text-emerald-300" aria-hidden="true" /> Budget eats that hit the spot
         </li>
       </ul>
       <p className="mt-8 text-[11px] font-medium uppercase tracking-widest text-stone-600">

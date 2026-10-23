@@ -15,7 +15,7 @@
  */
 
 import { useEffect, useMemo } from "react";
-import { ArrowLeft, Compass, RefreshCw, SearchX, UtensilsCrossed } from "lucide-react";
+import { ArrowLeft, Compass, MapPin, RefreshCw, SearchX, UtensilsCrossed } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
 import { useLocationStore } from "@/lib/foodie/locationStore";
 import { haversineKm } from "@/lib/foodie/location";
@@ -167,7 +167,7 @@ export function DestinationFoodScreen() {
             <section className="mt-6">
               <div className="px-5">
                 <h2 className="flex items-center gap-2 text-[16px] font-bold text-foreground">
-                  <span aria-hidden="true">📍</span> Places serving this food
+                  <MapPin className="size-4 text-primary" aria-hidden="true" /> Places serving this food
                 </h2>
                 <p className="mt-0.5 text-[12.5px] text-muted-foreground">
                   Verified links only — Foodie never guesses who serves what

@@ -17,6 +17,7 @@ import {
   Star,
   Tag,
   UtensilsCrossed,
+  FlaskConical,
 } from "lucide-react";
 import { toast } from "sonner";
 import { useFoodieStore } from "@/lib/foodie/store";
@@ -396,7 +397,7 @@ export function PlaceDetailScreen() {
           {place.badges.budget && <PlaceBadge label="Budget Pick" />}
           {place.badges.studentFriendly && <PlaceBadge label="Student Friendly" />}
           {(place.verificationStatus === "verified" || place.badges.verified) && (
-            <PlaceBadge label="✓ Verified" />
+            <PlaceBadge label="Verified" />
           )}
         </div>
 
@@ -491,10 +492,11 @@ export function PlaceDetailScreen() {
             </span>
             {mode === "demo" && (
               <span
-                className="rounded-full border border-dashed border-amber-300 bg-amber-50 px-2.5 py-1 text-[11.5px] font-bold text-amber-700"
+                className="inline-flex items-center gap-1 rounded-full border border-dashed border-amber-300 bg-amber-50 px-2.5 py-1 text-[11.5px] font-bold text-amber-700"
                 title="This entry comes from the labelled demo dataset, not the real database"
               >
-                🧪 Demo data
+                <FlaskConical className="size-3" aria-hidden="true" />
+                Demo data
               </span>
             )}
           </div>
@@ -665,9 +667,6 @@ export function PlaceDetailScreen() {
                       title={d.description}
                       className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12.5px] font-semibold text-amber-800"
                     >
-                      {d.emoji && (
-                        <span aria-hidden="true" className="mr-1">{d.emoji}</span>
-                      )}
                       {d.name}
                       {d.price != null && (
                         <span className="ml-1 font-bold text-amber-600">{inr(d.price)}</span>
@@ -695,9 +694,6 @@ export function PlaceDetailScreen() {
                       >
                         <div className="min-w-0">
                           <span className="flex min-w-0 flex-wrap items-center gap-1.5">
-                            {d.emoji && (
-                              <span aria-hidden="true" className="text-base">{d.emoji}</span>
-                            )}
                             <span className="text-[13.5px] font-semibold text-foreground">
                               {d.name}
                             </span>

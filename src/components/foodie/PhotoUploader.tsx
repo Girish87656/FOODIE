@@ -101,7 +101,7 @@ export function PhotoUploader({
       if (res.needsLogin) toast.error("Please log in to add a photo.");
       return;
     }
-    toast.success("Photo added — thank you! 📸", {
+    toast.success("Photo added — thank you!", {
       description: "It will appear in the gallery after a quick refresh.",
     });
     reset();

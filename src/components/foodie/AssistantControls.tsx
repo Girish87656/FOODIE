@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Info, Loader2, Send, Sparkles, X } from "lucide-react";
+import { Info, Loader2, MapPin, Send, Sparkles, X } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
 import { useLocationStore } from "@/lib/foodie/locationStore";
 import { GITAM_TEST_LOCATION } from "@/lib/foodie/location";
@@ -210,9 +210,10 @@ export function AssistantControls() {
                 </h2>
                 <p className="mt-1 text-[12.5px] text-muted-foreground">Ask me where to eat.</p>
                 {/* honest context line — Food Mode the assistant will read */}
-                <p className="mt-1 truncate text-[11px] text-stone-400">
+                <p className="mt-1 flex items-center gap-1 truncate text-[11px] text-stone-400">
                   {eatContext ? `${eatContext} mode · ` : ""}
-                  {`📍 ${locationSummary(locSource, locAreaLabel)}`}
+                  <MapPin className="size-3 shrink-0" aria-hidden="true" />
+                  <span className="truncate">{locationSummary(locSource, locAreaLabel)}</span>
                 </p>
               </div>
               <button

@@ -5,15 +5,16 @@
  * stays (the approved `public.places` discovery surface).
  *
  * Deliberately separate from PlaceCards (which renders FOOD places): no
- * price/cuisine/menu semantics exist for these rows, and the type emoji
- * comes from the row's REAL stored place_type — never decoration.
+ * price/cuisine/menu semantics exist for these rows, and the type icon comes
+ * from the row's REAL stored place_type — never decoration.
  */
 
 import { useState } from "react";
-import { MapPin } from "lucide-react";
+import { MapPin, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
 import { POI_PLACE_TYPES } from "@/lib/foodie/constants";
+import { POI_TYPE_ICONS } from "@/lib/foodie/icons";
 import { poiTypeIllustration } from "@/lib/foodie/categoryImages";
 import { venueImageFor } from "@/data/venue-images";
 import { prettifyTag, verificationStatusLabel } from "@/lib/foodie/utils";
@@ -23,12 +24,12 @@ import type {
   PointOfInterestMaybeWithDistance,
 } from "@/lib/foodie/types";
 
-/** Label + emoji for a stored place_type; unknown values fall back to 'other'. */
-export function poiTypeMeta(type: PlaceType): { label: string; emoji: string } {
-  return (
+/** Label + Lucide icon for a stored place_type; unknown values fall back to 'other'. */
+export function poiTypeMeta(type: PlaceType): { label: string; icon: LucideIcon } {
+  const meta =
     POI_PLACE_TYPES.find((t) => t.id === type) ??
-    POI_PLACE_TYPES.find((t) => t.id === "other")!
-  );
+    POI_PLACE_TYPES.find((t) => t.id === "other")!;
+  return { label: meta.label, icon: POI_TYPE_ICONS[meta.id] ?? MapPin };
 }
 
 /** Verification chip classes — same tones as the food detail screen. */
@@ -51,19 +52,20 @@ const VERIFICATION_CHIP_CLASS = {
 export function PoiTypeTile({
   poi,
   className,
-  emojiClassName,
+  iconClassName,
   showAttribution = false,
   priority = false,
 }: {
   poi: Pick<PointOfInterest, "id" | "placeType" | "name">;
   className?: string;
-  emojiClassName?: string;
+  iconClassName?: string;
   /** Detail-hero mode: renders the credit/attribution chip. */
   showAttribution?: boolean;
   /** Hero tiles load eagerly; list tiles lazy. */
   priority?: boolean;
 }) {
   const meta = poiTypeMeta(poi.placeType);
+  const TypeIcon = meta.icon;
   const venue = venueImageFor(poi.id);
   const illustration = poiTypeIllustration(poi.placeType);
   const desiredSrc = venue?.src ?? illustration;
@@ -104,9 +106,10 @@ export function PoiTypeTile({
             aria-hidden="true"
             className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
           />
-          <span aria-hidden="true" className={cn("text-[26px] drop-shadow-sm", emojiClassName)}>
-            {meta.emoji}
-          </span>
+          <TypeIcon
+            aria-hidden="true"
+            className={cn("size-[26px] text-orange-400/90 drop-shadow-sm", iconClassName)}
+          />
         </>
       )}
       {showAttribution && venue && (
@@ -142,6 +145,7 @@ export function PoiListRow({
   onSelect: (id: string) => void;
 }) {
   const meta = poiTypeMeta(poi.placeType);
+  const TypeIcon = meta.icon;
   const verification = verificationStatusLabel(poi.verificationStatus);
   // "demo" is dataset metadata, not venue evidence — never rendered as a tag.
   const evidenceTags = poi.tags.filter((t) => t !== "demo");
@@ -158,9 +162,7 @@ export function PoiListRow({
         <span className="flex flex-wrap items-center gap-1.5">
           <span className="truncate text-[14.5px] font-bold text-foreground">{poi.name}</span>
           <span className="shrink-0 rounded-full bg-stone-100 px-2 py-0.5 text-[10.5px] font-bold text-stone-500">
-            <span aria-hidden="true" className="mr-0.5">
-              {meta.emoji}
-            </span>
+            <TypeIcon aria-hidden="true" className="mr-0.5 inline size-3 align-[-2px]" />
             {meta.label}
           </span>
         </span>

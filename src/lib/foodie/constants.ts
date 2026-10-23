@@ -12,13 +12,13 @@ import type { EatContext, FoodCategory, PlaceCategory, PlaceType } from "./types
  * dessert counter, ...) are NOT categories — they belong in `tags`.
  */
 export const PLACE_CATEGORIES: FoodCategory<PlaceCategory>[] = [
-  { id: "restaurant", label: "Restaurant", emoji: "🍽️" },
-  { id: "hotel", label: "Hotel", emoji: "🍛" }, // local "hotel" = meals place
-  { id: "tiffin", label: "Tiffin", emoji: "🥞" }, // idli/dosa/breakfast rooms
-  { id: "cafe", label: "Cafe", emoji: "☕" },
-  { id: "fast_food", label: "Fast Food", emoji: "🍔" },
-  { id: "street_food", label: "Street Food", emoji: "🌮" },
-  { id: "bakery_sweets", label: "Bakery & Sweets", emoji: "🧁" },
+  { id: "restaurant", label: "Restaurant" },
+  { id: "hotel", label: "Hotel" }, // local "hotel" = meals place
+  { id: "tiffin", label: "Tiffin" }, // idli/dosa/breakfast rooms
+  { id: "cafe", label: "Cafe" },
+  { id: "fast_food", label: "Fast Food" },
+  { id: "street_food", label: "Street Food" },
+  { id: "bakery_sweets", label: "Bakery & Sweets" },
 ];
 
 /**
@@ -30,14 +30,13 @@ export const FOOD_CATEGORIES = PLACE_CATEGORIES;
 export const EAT_CONTEXTS: {
   id: EatContext;
   label: string;
-  emoji: string;
   hint: string;
 }[] = [
-  { id: "Alone", label: "Alone", emoji: "🧍", hint: "Solo food dates" },
-  { id: "Family", label: "Family", emoji: "👨‍👩‍👧", hint: "Everyone's happy" },
-  { id: "Partner", label: "Partner", emoji: "❤️", hint: "Date night picks" },
-  { id: "Friends", label: "Friends", emoji: "🧑‍🤝‍🧑", hint: "Squad cravings" },
-  { id: "Travelling", label: "Travelling", emoji: "✈️", hint: "Taste the city" },
+  { id: "Alone", label: "Alone", hint: "Solo food dates" },
+  { id: "Family", label: "Family", hint: "Everyone's happy" },
+  { id: "Partner", label: "Partner", hint: "Date night picks" },
+  { id: "Friends", label: "Friends", hint: "Squad cravings" },
+  { id: "Travelling", label: "Travelling", hint: "Taste the city" },
 ];
 
 /**
@@ -45,18 +44,19 @@ export const EAT_CONTEXTS: {
  * constraint of the approved `public.places` design
  * (supabase/migration-008-places.sql — REVIEW CANDIDATE, not yet applied).
  *
- * Kept strictly separate from `PLACE_CATEGORIES`: these labels/emojis are
- * for attractions and lodging stays, never for food places. Extending this
- * list requires a matching CHECK-constraint change in a reviewed migration.
+ * Kept strictly separate from `PLACE_CATEGORIES`: these labels are for
+ * attractions and lodging stays, never for food places (UI icons live in
+ * `src/lib/foodie/icons.ts` → POI_TYPE_ICONS). Extending this list requires
+ * a matching CHECK-constraint change in a reviewed migration.
  */
 export const POI_PLACE_TYPES: FoodCategory<PlaceType>[] = [
-  { id: "temple", label: "Temple", emoji: "🛕" },
-  { id: "waterfall", label: "Waterfall", emoji: "💦" },
-  { id: "fort", label: "Fort", emoji: "🏰" },
-  { id: "zoo", label: "Zoo", emoji: "🦁" },
-  { id: "natural_arch", label: "Natural Arch", emoji: "🪨" },
-  { id: "other", label: "Place of interest", emoji: "📍" },
-  { id: "hotel", label: "Stay", emoji: "🏨" }, // lodging — never the meals-place "hotel"
+  { id: "temple", label: "Temple" },
+  { id: "waterfall", label: "Waterfall" },
+  { id: "fort", label: "Fort" },
+  { id: "zoo", label: "Zoo" },
+  { id: "natural_arch", label: "Natural Arch" },
+  { id: "other", label: "Place of interest" },
+  { id: "hotel", label: "Stay" }, // lodging — never the meals-place "hotel"
 ];
 
 /** App-level constants. Location constants live in `location.ts` (prototype origin, manual corridor picks). */

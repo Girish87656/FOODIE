@@ -2029,3 +2029,17 @@ Work Log:
 
 Stage Summary:
 - Launch-pass build re-verified green end-to-end in a fresh session; state byte-identical to the L-LAUNCH verification. Sole outstanding item remains PUSH (blocked on GitHub credentials — owner must supply a token here or push from their own machine; commit ca2ae6e + worklog commit 74d9741 are ready to push). Nothing new claimed: Batch-011 not imported, migrations 009/010 not applied, push delivery not owner-E2E'd, live public.places reads verifiable only on deployed URL.
+
+---
+Task ID: L-ICONS (Phase 3 of owner launch directive — professional icon system)
+Agent: Z.ai Code (main orchestrator)
+Task: Remove every remaining emoji-style icon from the UI and replace with a consistent professional Lucide icon system.
+
+Work Log:
+- NEW src/lib/foodie/icons.ts — single source of truth: FOOD_CATEGORY_ICONS (7 food categories), POI_TYPE_ICONS (7 place types incl. BedDouble for lodging vs Soup for meals-"hotel"), EAT_CONTEXT_ICONS + hero variants, HOME_SECTION_ICONS (nearby/gems/favorites/popular/budget/pending), categoryIconFor fallback helper.
+- constants.ts: removed ALL emoji fields (PLACE_CATEGORIES, POI_PLACE_TYPES, EAT_CONTEXTS); types.ts FoodCategory.emoji now optional legacy (documented).
+- Migrated every render site (16 files): SectionHeader (icon prop → tinted rounded tile), HomeScreen (RailSection icon, greeting hero tile, preference chips, 6 section headers, "Sneak peek 👀" toast), CategoryChip/CategoryTile (MapPin fallback for destination chips / icon tile), FilterBar (All option → Utensils), AttractionCards (poiTypeMeta → {label, icon}, PoiTypeTile fallback icon, list-row type chips), AttractionDetailScreen (hero type chip Castle etc., FlaskConical demo chip), EatingWithContextScreen, AccountControls (mode tile + picker + 2 toasts), PlaceDetailScreen (dish emojis removed from chips/list, "✓ Verified"→"Verified", 🧪→FlaskConical), DestinationScreen (UtensilsCrossed/Landmark headers, dish fallback tile), DestinationFoodScreen (MapPin header), AssistantControls (MapPin context line), FoodieApp desktop panel (Gem/Heart/Wallet), AuthScreen/ReviewsSection/PhotoUploader toasts de-emojied.
+- Venue photos, category illustrations, and all attribution chips UNTOUCHED (photo layer sits above the icon layer).
+
+Stage Summary:
+- Zero emoji glyphs remain in any user-visible UI (only code comments mention legacy ones). Verified: bunx tsc --noEmit clean, bun run lint exit 0, bun test 41/41, agent-browser E2E (home hero + section tiles + destination chips + destination screen headers + attraction detail hero chip) all render the new icons, 0 console errors.

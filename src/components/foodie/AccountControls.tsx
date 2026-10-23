@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, Check, ChevronRight, Loader2, LogOut, Mail, X } from "lucide-react";
+import { ArrowLeft, Check, ChevronRight, Loader2, LogOut, Mail, UtensilsCrossed, X } from "lucide-react";
 import { toast } from "sonner";
 import { useAuthStore, updateFoodMode } from "@/lib/foodie/authStore";
 import { useFoodieStore } from "@/lib/foodie/store";
 import { EAT_CONTEXTS } from "@/lib/foodie/constants";
+import { EAT_CONTEXT_ICONS } from "@/lib/foodie/icons";
 import type { EatContext } from "@/lib/foodie/types";
 import { cn } from "@/lib/utils";
 
@@ -82,9 +83,8 @@ export function AccountControls() {
       // Return the user to the existing screen naturally: close the sheet
       // back on home, where the greeting already reflects the new mode.
       closeSheet();
-      const emoji = EAT_CONTEXTS.find((c) => c.id === mode)?.emoji ?? "🍽️";
       toast.success(`Food mode set to ${mode}`, {
-        description: `${emoji} Saved to your account — it'll be here when you come back.`,
+        description: "Saved to your account — it'll be here when you come back.",
       });
     } else {
       // Stay on the selection view so the user can retry immediately.
@@ -100,7 +100,7 @@ export function AccountControls() {
       closeSheet();
       // Clear the in-memory profile and return to the splash/auth flow
       useFoodieStore.getState().reset();
-      toast.success("Signed out", { description: "See you at the next meal! 👋" });
+      toast.success("Signed out", { description: "See you at the next meal!" });
     } else {
       toast.error("Couldn't sign out", { description: res.error });
     }
@@ -173,10 +173,13 @@ export function AccountControls() {
                     className="mt-3 flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left transition-all hover:border-primary/40 hover:shadow-md active:scale-[0.99]"
                   >
                     <span
-                      className="grid size-11 shrink-0 place-items-center rounded-xl bg-stone-100 text-xl"
+                      className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10"
                       aria-hidden="true"
                     >
-                      {currentMode?.emoji ?? "🍽️"}
+                      {(() => {
+                        const ModeIcon = (currentMode && EAT_CONTEXT_ICONS[currentMode.id]) || UtensilsCrossed;
+                        return <ModeIcon className="size-5 text-primary" />;
+                      })()}
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block text-[14.5px] font-bold text-foreground">Food Mode</span>
@@ -247,6 +250,7 @@ export function AccountControls() {
                     {EAT_CONTEXTS.map((ctx) => {
                       const selected = eatContext === ctx.id;
                       const saving = savingMode === ctx.id;
+                      const ModeIcon = EAT_CONTEXT_ICONS[ctx.id];
                       return (
                         <button
                           key={ctx.id}
@@ -265,12 +269,12 @@ export function AccountControls() {
                         >
                           <span
                             className={cn(
-                              "grid size-11 shrink-0 place-items-center rounded-xl text-xl",
-                              selected ? "bg-primary/10" : "bg-stone-100"
+                              "grid size-11 shrink-0 place-items-center rounded-xl",
+                              selected ? "bg-primary/10 text-primary" : "bg-stone-100 text-stone-500"
                             )}
                             aria-hidden="true"
                           >
-                            {ctx.emoji}
+                            <ModeIcon className="size-5" />
                           </span>
                           <span className="min-w-0 flex-1">
                             <span className="block text-[14.5px] font-bold text-foreground">

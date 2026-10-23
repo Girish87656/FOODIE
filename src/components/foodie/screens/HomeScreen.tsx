@@ -13,10 +13,17 @@ import {
   MapPinned,
   RefreshCw,
   SearchX,
+  UtensilsCrossed,
+  type LucideIcon,
 } from "lucide-react";
 import { toast } from "sonner";
 import { useFoodieStore } from "@/lib/foodie/store";
 import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
+import {
+  EAT_CONTEXT_HERO_ICONS,
+  FOOD_CATEGORY_ICONS,
+  HOME_SECTION_ICONS,
+} from "@/lib/foodie/icons";
 import {
   useAllRestaurants,
   useRestaurantFeed,
@@ -79,7 +86,7 @@ function byKnownDistance(a: PlaceMaybeWithDistance, b: PlaceMaybeWithDistance): 
 
 /** Expandable horizontal rail section */
 function RailSection({
-  emoji,
+  icon,
   title,
   subtitle,
   children,
@@ -87,7 +94,7 @@ function RailSection({
   onSeeAll,
   expanded,
 }: {
-  emoji?: string;
+  icon?: LucideIcon;
   title: string;
   subtitle?: string;
   children: React.ReactNode;
@@ -100,7 +107,7 @@ function RailSection({
       <SectionHeader
         title={title}
         subtitle={subtitle}
-        emoji={emoji}
+        icon={icon}
         actionLabel={expanded ? "Show less" : total > 4 ? `See all ${total}` : undefined}
         onAction={onSeeAll}
         className="px-5"
@@ -116,9 +123,7 @@ function RailSection({
   );
 }
 
-const SECTION_ICONS = {
-  favorites: "❤️",
-} as const;
+const SECTION_ICONS = HOME_SECTION_ICONS;
 
 /** Full-feed loading state — mirrors the ready layout (search, hero, list)
  *  so the skeleton-to-content swap doesn't jump. */
@@ -507,7 +512,7 @@ export function HomeScreen() {
         ) : (
           /* ------- discovery sections ------- */
           <>
-            {/* 📍 Use my current location — clear GPS control */}
+            {/* Use my current location — clear GPS control */}
             <div className="mx-5 mt-5">
               <LocationPromptBanner onOpen={() => setLocSheetOpen(true)} />
             </div>
@@ -524,10 +529,13 @@ export function HomeScreen() {
               />
               <div className="relative flex items-center gap-3.5">
                 <span
-                  className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/85 text-[26px] shadow-sm"
+                  className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/85 shadow-sm"
                   aria-hidden="true"
                 >
-                  {eatContext === "Travelling" ? "🧳" : eatContext === "Family" ? "👨‍👩‍👧" : eatContext === "Partner" ? "❤️" : eatContext === "Friends" ? "🎉" : "🍽️"}
+                  {(() => {
+                    const HeroIcon = (eatContext && EAT_CONTEXT_HERO_ICONS[eatContext]) || UtensilsCrossed;
+                    return <HeroIcon className="size-6 text-primary" />;
+                  })()}
                 </span>
                 <div className="min-w-0">
                   <p className="truncate text-[17px] font-extrabold tracking-tight text-foreground">
@@ -546,14 +554,18 @@ export function HomeScreen() {
                   className="foodie-rail relative mt-3.5 flex gap-1.5 overflow-x-auto"
                   aria-label="Your preferences"
                 >
-                  {preferredCats.map((c) => (
-                    <span
-                      key={c.id}
-                      className="shrink-0 rounded-full border border-black/5 bg-white/85 px-2.5 py-1 text-[11px] font-semibold text-stone-700 shadow-sm"
-                    >
-                      {c.emoji} {c.label}
-                    </span>
-                  ))}
+                  {preferredCats.map((c) => {
+                    const ChipIcon = FOOD_CATEGORY_ICONS[c.id];
+                    return (
+                      <span
+                        key={c.id}
+                        className="flex shrink-0 items-center gap-1 rounded-full border border-black/5 bg-white/85 px-2.5 py-1 text-[11px] font-semibold text-stone-700 shadow-sm"
+                      >
+                        {ChipIcon && <ChipIcon className="size-3.5 text-primary" aria-hidden="true" />}
+                        {c.label}
+                      </span>
+                    );
+                  })}
                 </div>
               )}
             </motion.section>
@@ -593,7 +605,7 @@ export function HomeScreen() {
                 {nearby.length > 0 && (
                   <section className="mt-8">
                     <SectionHeader
-                      emoji="📍"
+                      icon={SECTION_ICONS.nearby}
                       title="Nearby food places"
                       subtitle={nearbySubtitle}
                       className="px-5"
@@ -609,7 +621,7 @@ export function HomeScreen() {
                 {/* hidden gems */}
                 {gems.length > 0 && (
                   <RailSection
-                    emoji="💎"
+                    icon={SECTION_ICONS.gems}
                     title="Hidden Gems"
                     subtitle="Low-key spots locals swear by"
                     total={gems.length}
@@ -630,7 +642,7 @@ export function HomeScreen() {
                 {favorites.length > 0 && (
                   <section className="mt-8">
                     <SectionHeader
-                      emoji={SECTION_ICONS.favorites}
+                      icon={SECTION_ICONS.favorites}
                       title="Local Favorites"
                       subtitle="Most loved by people around you"
                       className="px-5"
@@ -647,7 +659,7 @@ export function HomeScreen() {
                 {popular.length > 0 && (
                   <section className="mt-8">
                     <SectionHeader
-                      emoji="📈"
+                      icon={SECTION_ICONS.popular}
                       title="Popular Places"
                       subtitle="Trending near you right now"
                       className="px-5"
@@ -663,7 +675,7 @@ export function HomeScreen() {
                 {/* budget eats */}
                 {budget.length > 0 && (
                   <RailSection
-                    emoji="💸"
+                    icon={SECTION_ICONS.budget}
                     title="Budget Eats"
                     subtitle="Big flavor, small bills"
                     total={budget.length}
@@ -686,7 +698,7 @@ export function HomeScreen() {
                 {distanceFilterKm == null && pending.length > 0 && (
                   <section className="mt-8">
                     <SectionHeader
-                      emoji="⏳"
+                      icon={SECTION_ICONS.pending}
                       title="Location pending verification"
                       subtitle="Real places we're still mapping — no guessed distances"
                       className="px-5"
@@ -714,7 +726,7 @@ export function HomeScreen() {
               <button
                 type="button"
                 onClick={() =>
-                  toast.info("Sneak peek 👀", {
+                  toast.info("Sneak peek", {
                     description: "Travel food guides, AI picks & community tips are on the way.",
                   })
                 }

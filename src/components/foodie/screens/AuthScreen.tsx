@@ -61,7 +61,7 @@ export function AuthScreen() {
         return;
       }
       setUserName(name.trim().split(" ")[0]);
-      toast.success(`Welcome aboard, ${name.trim().split(" ")[0]}! 🎉`, {
+      toast.success(`Welcome aboard, ${name.trim().split(" ")[0]}!`, {
         description: "Let's personalize your foodie experience.",
       });
       go("onboarding-context");
@@ -78,7 +78,7 @@ export function AuthScreen() {
         const fallbackName = email.split("@")[0].replace(/[._-].*/, "");
         setUserName(fallbackName.charAt(0).toUpperCase() + fallbackName.slice(1));
       }
-      toast.success("Welcome back! 👋", { description: "Craving something nice?" });
+      toast.success("Welcome back!", { description: "Craving something nice?" });
       // First-time users (confirmed via email but never onboarded) still get
       // the full Alone/Family → Preferences flow; returning users go home.
       if (needsOnboarding(useAuthStore.getState().user)) {

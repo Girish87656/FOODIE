@@ -225,7 +225,7 @@ export function DestinationDiscoveryCard({ className }: { className?: string }) 
               {destinations.map((d) => (
                 <CategoryChip
                   key={d.id}
-                  category={{ id: d.id, label: d.name, emoji: "📍" }}
+                  category={{ id: d.id, label: d.name }}
                   active={presentation?.destinationId === d.id}
                   onClick={() => select(d.id)}
                 />

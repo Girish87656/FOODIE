@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
 import { EAT_CONTEXTS, APP_NAME } from "@/lib/foodie/constants";
+import { EAT_CONTEXT_ICONS } from "@/lib/foodie/icons";
 import type { EatContext } from "@/lib/foodie/types";
 import { cn } from "@/lib/utils";
 
@@ -60,6 +61,7 @@ export function EatingWithContextScreen() {
           {EAT_CONTEXTS.map((ctx, i) => {
             const selected = eatContext === ctx.id;
             const wide = ctx.id === "Travelling";
+            const ContextIcon = EAT_CONTEXT_ICONS[ctx.id];
             return (
               <motion.button
                 key={ctx.id}
@@ -80,12 +82,12 @@ export function EatingWithContextScreen() {
               >
                 <span
                   className={cn(
-                    "grid size-12 shrink-0 place-items-center rounded-xl text-2xl",
-                    selected ? "bg-primary/10" : "bg-stone-100"
+                    "grid size-12 shrink-0 place-items-center rounded-xl",
+                    selected ? "bg-primary/10 text-primary" : "bg-stone-100 text-stone-500"
                   )}
                   aria-hidden="true"
                 >
-                  {ctx.emoji}
+                  <ContextIcon className="size-6" />
                 </span>
                 <span className="min-w-0">
                   <span className="block text-[15px] font-bold text-foreground">{ctx.label}</span>
