@@ -178,12 +178,14 @@ export function ReviewsSection({ placeId }: { placeId: string }) {
 
   const current = outcome?.key === loadKey ? outcome : null;
   const reviews = current?.kind === "ready" ? current.reviews : [];
+  // A FAILED fetch (network/API error) — retryable, so it carries a Retry
+  // button. A ready-but-empty result with a notice (e.g. demo mode: reviews
+  // only ever come from the real database) is NOT an error — it must render
+  // the honest empty state with the notice as INFORMATION, never a Retry
+  // affordance for a response that was actually correct.
   const loadError =
-    current === null
-      ? null
-      : current.kind === "error"
-        ? "Couldn't load reviews right now. Please try again."
-        : current.notice;
+    current?.kind === "error" ? "Couldn't load reviews right now. Please try again." : null;
+  const loadNotice = current?.kind === "ready" ? current.notice : null;
 
   const myReview = useMemo(
     () => (myUserId ? reviews?.find((r) => r.user_id === myUserId) ?? null : null),
@@ -457,9 +459,16 @@ export function ReviewsSection({ placeId }: { placeId: string }) {
         </div>
       ) : otherReviews.length === 0 ? (
         reviews.length === 0 ? (
-          <p className="mt-3 rounded-2xl border border-dashed border-stone-200 bg-stone-50 px-4 py-5 text-center text-[13px] font-semibold text-stone-500" aria-live="polite">
-            No reviews yet. Be the first to review this place.
-          </p>
+          <div aria-live="polite">
+            <p className="mt-3 rounded-2xl border border-dashed border-stone-200 bg-stone-50 px-4 py-5 text-center text-[13px] font-semibold text-stone-500">
+              No reviews yet. Be the first to review this place.
+            </p>
+            {loadNotice && (
+              <p className="mt-2 text-center text-[11.5px] font-medium leading-snug text-stone-400">
+                {loadNotice}
+              </p>
+            )}
+          </div>
         ) : (
           <p className="mt-3 text-center text-[12px] font-medium text-stone-400" aria-live="polite">
             You&apos;re the only one who has reviewed this place so far.

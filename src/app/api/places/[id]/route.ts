@@ -3,14 +3,15 @@
  *
  * One curated NON-FOOD place — a tourist attraction OR lodging hotel — by
  * its stable uuid5 id, from the approved `public.places` model
- * (supabase/migration-008-places.sql — currently a REVIEW CANDIDATE that has
- * NOT been applied). Strictly READ-ONLY; the food tables
+ * (supabase/migration-008-places.sql — the owner applies this migration
+ * manually; the deployment state is detected at runtime, never assumed).
+ * Strictly READ-ONLY; the food tables
  * (restaurants/dishes/reviews/restaurant_photos) are never touched.
  *
  * 404 when the id is unknown OR when the `public.places` table isn't live
- * yet — the error body carries the honest reason (e.g.
- * PLACES_TABLE_NOT_READY_NOTICE) so the detail screen can explain the state
- * instead of a bare "not found".
+ * on the connected database — the error body carries the honest reason
+ * (e.g. PLACES_TABLE_NOT_READY_NOTICE) so the detail screen can explain the
+ * state instead of a bare "not found".
  *
  * Responds { mode, place: PointOfInterest | null, notice? }.
  */

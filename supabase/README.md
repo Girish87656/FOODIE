@@ -170,7 +170,42 @@ Key points:
 | `src/lib/supabase/config.ts` | Env-var validation (`NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`) |
 | `src/lib/supabase/server.ts` | Shared Supabase client for API routes |
 
-## 8. What's intentionally NOT included
+## 8. Migration order — fresh projects AND existing ones
+
+Run files in the SQL Editor **in this exact order** (every file is
+idempotent; nothing deletes data). The numbered `migration-*` files build on
+each other; the `insert-batch-*` files are curated DATA (each has a review
+report in `review-candidates/` where applicable).
+
+| Step | File | Adds |
+| --- | --- | --- |
+| 1 | `schema.sql` | Base tables (`restaurants`, `dishes`, `reviews`, `restaurant_photos`), RLS, `nearby_restaurants()` |
+| 2 | `migration-001-pilot-categories.sql` | 7 pilot categories + trust/verification columns |
+| 3 | `migration-002-review-improvements.sql` | Review table hardening |
+| 4 | `migration-003-destinations.sql` | `destinations` (public read-only RLS) |
+| 5 | `migration-004-destination-food-places.sql` | `destination_foods` + evidence-gated links |
+| 6 | `migration-005-verification-review-foundation.sql` | Provenance + community aggregates + rebuilt RPC |
+| 7 | `migration-006-photo-licensing.sql` | Photo credit/licensing columns |
+| 8 | `migration-007-dish-provenance.sql` | Dish `source_url` |
+| 9 | `migration-008-places.sql` | **`public.places`** — NON-FOOD POIs (attractions + lodging), public read-only RLS |
+| 10 | `migration-009-photo-storage.sql` | `restaurant-photos` storage bucket + storage RLS |
+| 11 | `migration-010-push-subscriptions.sql` | `push_subscriptions` (own-rows-only RLS) |
+
+Data batches (`insert-batch-001` … `insert-batch-009`, then the reviewed
+candidates in `review-candidates/`) run after the migration they depend on —
+e.g. Batch-011 (`review-candidates/insert-batch-011-p4-places.sql`) fills
+`public.places` created by migration-008 and must be followed by
+`review-candidates/verify-batch-011-p4-places.sql`: **Batch-011 counts as
+imported only when that verification query returns the documented POST state
+(16 rows, 0 missing, 0 violations)**. The app never assumes the import — a
+missing table renders "not set up yet", an empty table renders an honest
+"nothing recorded" state, and imported rows render with their true
+`unverified` status.
+
+Each migration also carries its own loud pre/post assertions that abort on
+any structural mismatch — read its header before running.
+
+## 9. What's intentionally NOT included
 
 Payments, food delivery, AI recommendations, nutrition tracking (the
 `dishes.calories/protein/carbs/fat` columns exist purely as future schema) and

@@ -462,12 +462,14 @@ export interface DestinationAttractionsFeedState {
 
 /**
  * NON-FOOD places of interest (tourist attractions AND lodging hotels) of
- * one destination — the approved `public.places` model. Until migration-008
- * is applied to the live database the response carries the honest
- * PLACES_TABLE_NOT_READY_NOTICE with an empty list (the UI renders a "not
- * set up yet" state, never an error and never invented places). Demo mode
- * serves the clearly-labelled researched preview dataset. Pass `null` to
- * stay idle; per-id retry semantics as everywhere else.
+ * one destination — the approved `public.places` model. The table's
+ * deployment state is never assumed: while migration-008 is unapplied the
+ * response carries the honest PLACES_TABLE_NOT_READY_NOTICE with an empty
+ * list (the UI renders a "not set up yet" state, never an error and never
+ * invented places); an applied-but-empty table renders the honest
+ * "nothing recorded" state. Demo mode serves the clearly-labelled
+ * researched preview dataset. Pass `null` to stay idle; per-id retry
+ * semantics as everywhere else.
  */
 export function useDestinationAttractions(
   destinationId: string | null

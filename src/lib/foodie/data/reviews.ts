@@ -70,8 +70,9 @@ export function validateReviewInput(
  *  - 23514 check_violation   → rating/text constraint rejected the row.
  *  - 42501 insufficient_privilege → RLS refused the write (not signed in, or
  *    trying to modify someone else's review).
+ * Exported for tests (same convention as photos.ts's error mappers).
  */
-function mapReviewError(err: unknown): { error: string; needsLogin?: boolean } {
+export function mapReviewError(err: unknown): { error: string; needsLogin?: boolean } {
   const code = (err as { code?: string } | null)?.code ?? "";
   const message = err instanceof Error ? err.message.toLowerCase() : String(err ?? "").toLowerCase();
 

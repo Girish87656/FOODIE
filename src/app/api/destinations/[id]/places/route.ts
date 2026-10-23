@@ -31,8 +31,9 @@ export async function GET(
   try {
     const result = await loadDestinationPlaces(decodeURIComponent(id));
     if (!result.destination) {
+      // Carry the honest cause (e.g. timeout / RLS refusal) when present.
       return NextResponse.json(
-        { error: "Destination not found." },
+        { error: result.notice ?? "Destination not found." },
         { status: 404, headers: { "Cache-Control": "no-store" } }
       );
     }

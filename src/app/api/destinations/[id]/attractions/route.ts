@@ -3,8 +3,8 @@
  *
  * The NON-FOOD discovery list for one destination: tourist attractions AND
  * lodging hotels from the approved `public.places` model
- * (supabase/migration-008-places.sql — currently a REVIEW CANDIDATE that has
- * NOT been applied; while that is true the response is an honestly EMPTY
+ * (supabase/migration-008-places.sql — the owner applies this migration
+ * manually; while it is unapplied the response is an honestly EMPTY
  * list with PLACES_TABLE_NOT_READY_NOTICE, never an error and never
  * invented places).
  *

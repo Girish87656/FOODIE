@@ -23,8 +23,11 @@ export async function GET(
   try {
     const result = await loadRestaurantById(decodeURIComponent(id));
     if (!result.place) {
+      // When a Supabase failure (timeout / RLS refusal / outage) produced the
+      // null place, the notice names the REAL cause — a bare "not found" would
+      // mislead. A genuinely unknown id has no notice and keeps the plain 404.
       return NextResponse.json(
-        { error: "Restaurant not found." },
+        { error: result.notice ?? "Restaurant not found." },
         { status: 404, headers: { "Cache-Control": "no-store" } }
       );
     }

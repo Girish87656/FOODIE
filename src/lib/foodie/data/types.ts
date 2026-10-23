@@ -169,12 +169,15 @@ export interface DestinationFoodRow {
  * `places` row (snake_case — mirrors supabase/migration-008-places.sql
  * 1:1, all 21 approved columns).
  *
- * ⚠️ The migration is a REVIEW CANDIDATE — the table does NOT exist in the
- * live database yet (verified 2026-xx: queries against it return
- * "relation \"public.places\" does not exist"). Queries therefore fail
- * with a PostgREST "table not found" style error and the dispatcher maps
- * that to PLACES_TABLE_NOT_READY_NOTICE + an honest empty list — the UI
- * never crashes and never invents places.
+ * ⚠️ DEPLOYMENT STATE IS HANDLED AT RUNTIME, never assumed: migration-008 is
+ * a review candidate the OWNER applies manually, and the code treats both
+ * live states honestly —
+ *   · table absent  → PostgREST "table not found"-style error → the
+ *     dispatcher maps it to PLACES_TABLE_NOT_READY_NOTICE + an honest empty
+ *     list (the UI never crashes and never invents places);
+ *   · table present → real rows (Batch-011 counts as imported ONLY after a
+ *     successful owner-run verify-batch-011 result; until then an empty
+ *     table renders the honest "no attractions recorded" empty state).
  */
 export interface PlaceRow {
   id: string;
@@ -302,8 +305,9 @@ export interface DestinationPlacesResponse {
 /**
  * GET /api/destinations/[id]/attractions — the NON-FOOD discovery list for
  * one destination: tourist attractions AND lodging hotels from the approved
- * `public.places` model (migration-008 design; the table is not live yet —
- * see PLACES_TABLE_NOT_READY_NOTICE). Match = places.destination_id when a
+ * `public.places` model (migration-008 design; while the table is not
+ * queryable on the connected database the response carries
+ * PLACES_TABLE_NOT_READY_NOTICE — see the type below). Match = places.destination_id when a
  * matching active destination exists, with places.city as the primitive
  * fallback — exactly the dual path the migration documents.
  * `destination` is null when the id is unknown; zero rows is an honest
@@ -319,7 +323,8 @@ export interface DestinationAttractionsResponse {
 /**
  * GET /api/places/[id] — one curated non-food place (attraction or lodging
  * hotel) by its stable uuid5 id. `place` is null when the id is unknown OR
- * when the `public.places` table isn't live yet (the notice explains which).
+ * when the `public.places` table isn't queryable on the connected database
+ * (the notice explains which case applies).
  */
 export interface PointOfInterestDetailResponse {
   mode: DataMode;
@@ -333,13 +338,46 @@ export const REVIEW_TEXT_MAX_LENGTH = 2000;
 
 export const DEMO_MODE_NOTICE =
   "Supabase isn't connected yet — you're browsing the clearly-labelled demo dataset.";
+
+/**
+ * DEMO-FALLBACK contexts only (restaurant feeds): a Supabase query failed
+ * and the labelled demo dataset IS being served instead. Never use on the
+ * honest-empty paths — those show NO data, so claiming "demo data is being
+ * shown" would be a lie; use SUPABASE_UNAVAILABLE_NOTICE there.
+ */
 export const SUPABASE_ERROR_NOTICE =
   "The Supabase query failed, so demo data is being shown temporarily. Check the server logs.";
+
 /**
- * Shown when the approved `public.places` structure (migration-008) has not
- * been applied to the live database yet — the current production state.
- * Attractions & stays render their honest "not set up yet" state instead of
- * an error or invented content.
+ * HONEST-EMPTY contexts (destinations, reviews, public.places): the query
+ * failed and NOTHING is substituted — the list is genuinely empty. The
+ * notice must say exactly that, never claim demo data is being shown.
+ */
+export const SUPABASE_UNAVAILABLE_NOTICE =
+  "The database query failed just now, so this list is empty for now — nothing was substituted. Please try again shortly.";
+
+/**
+ * The Supabase query exceeded the server-side time budget and was stopped
+ * instead of hanging the request forever. Mode-neutral wording: on the
+ * restaurant feeds the demo banner supplies the "demo data" context; on the
+ * honest-empty paths the list simply stays empty.
+ */
+export const SUPABASE_TIMEOUT_NOTICE =
+  "The database took too long to respond, so this request was stopped instead of hanging. Please try again.";
+
+/**
+ * Row Level Security refused the read (e.g. a policy was revoked or the
+ * query ran without the expected role). Nothing is guessed or substituted —
+ * on restaurant feeds the demo banner labels any demo data explicitly.
+ */
+export const SUPABASE_PERMISSION_NOTICE =
+  "The database refused this read (row-level security), so nothing is shown until access is fixed.";
+
+/**
+ * Shown when the approved `public.places` structure (migration-008) is not
+ * queryable on the connected database (migration not applied yet — the
+ * owner's single manual step). Attractions & stays render their honest
+ * "not set up yet" state instead of an error or invented content.
  */
 export const PLACES_TABLE_NOT_READY_NOTICE =
   "Attractions & stays aren't set up on the server yet — nothing is shown rather than guessed.";

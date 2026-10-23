@@ -371,11 +371,14 @@ function safeOrValue(value: string): string {
  * case-insensitive `city` primitive as the fallback. READ-ONLY; `closed`
  * rows are filtered by the shared isDiscoverable convention after the fetch.
  *
- * ⚠️ `public.places` is NOT live yet (migration-008 is an unrun REVIEW
- * CANDIDATE): until the owner applies it, PostgREST rejects this query with
- * a "relation does not exist" error — the dispatcher maps that to
- * PLACES_TABLE_NOT_READY_NOTICE and an honest empty list. Nothing here ever
- * writes, and no food/destination table is touched.
+ * ⚠️ `public.places` deployment state is never assumed: migration-008 is a
+ * review candidate the OWNER applies manually. Until it is applied, PostgREST
+ * rejects this query with a "relation does not exist" error — the dispatcher
+ * maps that to PLACES_TABLE_NOT_READY_NOTICE and an honest empty list. Once
+ * applied, real rows flow (Batch-011 counts as imported ONLY after a
+ * successful owner-run verify-batch-011 result; an empty-but-live table
+ * renders the honest "nothing recorded" state). Nothing here ever writes,
+ * and no food/destination table is touched.
  */
 export async function getSupabaseAttractionsByDestination(
   destination: Destination
@@ -399,8 +402,8 @@ export async function getSupabaseAttractionsByDestination(
 
 /**
  * One non-food place by its stable uuid5 id — null when the id is unknown.
- * Same not-live-yet caveat as the destination query above (the dispatcher
- * maps the missing-table error to an honest notice).
+ * Same deployment-state caveat as the destination query above (the
+ * dispatcher maps a missing-table error to the honest notice).
  */
 export async function getSupabasePlaceById(id: string): Promise<PointOfInterest | null> {
   if (!isUuid(id)) return null; // malformed ids can never match a row

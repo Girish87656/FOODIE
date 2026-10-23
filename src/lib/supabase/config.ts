@@ -23,6 +23,28 @@
  * or in any NEXT_PUBLIC_ variable.
  */
 
+/**
+ * Pure resolution of the three Supabase env inputs — the single place the
+ * missing-variable / naming-migration / malformed-value rules live. Exported
+ * so tests can cover every branch (missing vars, legacy fallback, bad URL,
+ * short key) WITHOUT touching process.env or re-loading this module.
+ */
+export interface SupabaseEnvResolution {
+  url: string;
+  publishableKey: string;
+  configured: boolean;
+}
+
+export function resolveSupabaseEnv(env: {
+  url?: string;
+  publishableKey?: string;
+  legacyAnonKey?: string;
+}): SupabaseEnvResolution {
+  const url = (env.url ?? "").trim();
+  const publishableKey = (env.publishableKey ?? "").trim() || (env.legacyAnonKey ?? "").trim();
+  return { url, publishableKey, configured: looksLikeSupabaseUrl(url) && looksLikePublicKey(publishableKey) };
+}
+
 export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 
 const PUBLISHABLE_KEY_ENV = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "";
@@ -38,7 +60,7 @@ export const SUPABASE_PUBLISHABLE_KEY = PUBLISHABLE_KEY_ENV.trim() || LEGACY_ANO
 export const SUPABASE_ANON_KEY = SUPABASE_PUBLISHABLE_KEY;
 
 /** A URL looks like https://<project-ref>.supabase.co */
-function looksLikeSupabaseUrl(url: string): boolean {
+export function looksLikeSupabaseUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
     return parsed.protocol === "https:" || parsed.protocol === "http:";
@@ -48,7 +70,7 @@ function looksLikeSupabaseUrl(url: string): boolean {
 }
 
 /** A public key (legacy anon JWT or `sb_publishable_…`) is a long string; anything shorter means "not set up yet". */
-function looksLikePublicKey(key: string): boolean {
+export function looksLikePublicKey(key: string): boolean {
   return key.trim().length >= 30;
 }
 

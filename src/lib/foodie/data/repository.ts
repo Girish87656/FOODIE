@@ -34,11 +34,25 @@ export class DataAccessError extends Error {
   }
 }
 
+/**
+ * Client-side request budget. The server already bounds its own Supabase
+ * queries (serverRepository QUERY_TIMEOUT_MS); this bounds the whole HTTP
+ * round-trip so a hung gateway/connection surfaces as a retryable error
+ * instead of an eternally-spinning loading state.
+ */
+const CLIENT_REQUEST_TIMEOUT_MS = 15_000;
+
 async function request<T>(url: string): Promise<T> {
   let res: Response;
   try {
-    res = await fetch(url, { cache: "no-store" });
-  } catch {
+    res = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(CLIENT_REQUEST_TIMEOUT_MS) });
+  } catch (err) {
+    if (err instanceof DOMException && err.name === "TimeoutError") {
+      throw new DataAccessError(
+        "The request took too long — please check your connection and try again.",
+        0
+      );
+    }
     throw new DataAccessError("Couldn't reach the Foodie service. Check your connection.", 0);
   }
   if (!res.ok) {

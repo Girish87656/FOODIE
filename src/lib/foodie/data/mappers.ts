@@ -300,8 +300,8 @@ const PLACE_TYPES: readonly string[] = [
 ];
 
 /**
- * Map a `public.places` row (migration-008 — REVIEW CANDIDATE, table not
- * live yet) into the domain `PointOfInterest`.
+ * Map a `public.places` row (migration-008 — deployment state is handled at
+ * runtime, never assumed) into the domain `PointOfInterest`.
  *
  * Every field is NULL-safe exactly like the migration's column comments
  * demand: NULL stays null (the UI renders "not captured", never a guess).
