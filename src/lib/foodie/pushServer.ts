@@ -148,3 +148,70 @@ export function logDeliveryOutcome(subId: string, result: PushSendResult): void 
   if (result.ok) return;
   console.error(`[push] delivery failed sub=${subId} status=${result.status}`);
 }
+
+/**
+ * Extracts the caller's access token from an Authorization header.
+ * Pure (no Next.js types) so the delivery route stays thin and this rule
+ * is unit-testable. Returns null when the header is absent, malformed,
+ * not a Bearer scheme, or carries an empty credential.
+ */
+export function parseBearerToken(header: string | null): string | null {
+  if (!header) return null;
+  const match = /^Bearer\s+(\S+)\s*$/i.exec(header.trim());
+  return match ? (match[1] ?? null) : null;
+}
+
+/**
+ * Server-side time budget for push_subscriptions reads/writes (mirrors the
+ * data layer's QUERY_TIMEOUT_MS discipline — a hung database must never
+ * hang the delivery route). Kept local to the push module so the delivery
+ * route does not import the entire foodie data layer.
+ */
+export const PUSH_QUERY_TIMEOUT_MS = 10_000;
+
+/** Raised by `withPushQueryTimeout` when the budget is exceeded. */
+export class PushQueryTimeoutError extends Error {
+  constructor() {
+    super(`push_subscriptions query exceeded the ${PUSH_QUERY_TIMEOUT_MS}ms server-side time budget`);
+    this.name = "PushQueryTimeoutError";
+  }
+}
+
+/**
+ * Stop waiting on `op` after `ms` (default PUSH_QUERY_TIMEOUT_MS). The
+ * underlying query is discarded, not cancelled — the caller proceeds on its
+ * honest failure path instead of hanging. Accepts PromiseLike because
+ * Supabase query builders (PostgrestFilterBuilder) are thenables without
+ * .catch/.finally, not full Promises.
+ */
+export function withPushQueryTimeout<T>(op: PromiseLike<T>, ms: number = PUSH_QUERY_TIMEOUT_MS): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(() => reject(new PushQueryTimeoutError()), ms);
+  });
+  return Promise.race([op, timeout]).finally(() => {
+    if (timer !== undefined) clearTimeout(timer);
+  });
+}
+
+/**
+ * User-safe classification of a failed push_subscriptions read/write — the
+ * raw Supabase error text never reaches the browser. Mirrors the client's
+ * describePushError taxonomy (storage-missing / timeout / generic) so both
+ * sides of the feature speak the same honest vocabulary. Our own
+ * PushQueryTimeoutError is recognized by identity first — its message must
+ * never be re-classified by text matching.
+ */
+export function describeSubscriptionStoreError(error: unknown): string {
+  if (error instanceof PushQueryTimeoutError) {
+    return "The notification storage took too long to respond — try again.";
+  }
+  const message = error instanceof Error ? error.message : String(error ?? "");
+  if (/push_subscriptions|schema cache|does not exist|could not find the table|pgrst205/i.test(message)) {
+    return "Notification storage isn't set up on the server yet — nothing has been sent.";
+  }
+  if (/timeout|timed out|abort/i.test(message)) {
+    return "The notification storage took too long to respond — try again.";
+  }
+  return "Couldn't reach the notification storage — try again.";
+}

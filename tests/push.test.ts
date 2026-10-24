@@ -15,6 +15,9 @@
  *   4. VAPID key decoding + endpoint hashing — the duplicate-prevention key.
  *   5. Error description mapping — user-safe messages that never leak raw
  *      exceptions (storage-missing, timeout, network, generic).
+ *   6. Delivery-route helpers — Bearer-token parsing (server-side identity
+ *      input), the push_subscriptions query time budget, and user-safe
+ *      storage-error classification for /api/push/test.
  *
  * The full flow (real permission prompt, real push service delivery) needs
  * the owner's VAPID credentials + migration-010 and is covered by the
@@ -32,9 +35,13 @@ import {
   urlBase64ToUint8Array,
 } from "../src/lib/foodie/push";
 import {
+  PushQueryTimeoutError,
+  describeSubscriptionStoreError,
   isRetryablePushStatus,
+  parseBearerToken,
   resolvePushConfig,
   sendToSubscription,
+  withPushQueryTimeout,
   type PushSender,
   type StoredSubscription,
 } from "../src/lib/foodie/pushServer";
@@ -244,5 +251,74 @@ describe("user-safe error description (raw exceptions never reach the UI)", () =
 
   test("non-Error throwables are handled", () => {
     expect(describePushError("boom")).toContain("Something went wrong");
+  });
+});
+
+describe("delivery route: bearer token parsing (server-side identity input)", () => {
+  test("well-formed Bearer header yields the token", () => {
+    expect(parseBearerToken("Bearer abc.def.ghi")).toBe("abc.def.ghi");
+    expect(parseBearerToken("bearer abc.def.ghi")).toBe("abc.def.ghi"); // scheme is case-insensitive
+    expect(parseBearerToken("  Bearer   tok  ")).toBe("tok"); // tolerated whitespace
+  });
+
+  test("missing / malformed headers yield null (never a guessed token)", () => {
+    expect(parseBearerToken(null)).toBeNull();
+    expect(parseBearerToken("")).toBeNull();
+    expect(parseBearerToken("Bearer")).toBeNull();
+    expect(parseBearerToken("Bearer ")).toBeNull();
+    expect(parseBearerToken("Token abc")).toBeNull();
+    expect(parseBearerToken("Basic dXNlcjpwYXNz")).toBeNull();
+  });
+});
+
+describe("delivery route: push_subscriptions query time budget", () => {
+  test("resolves passthrough when the query beats the budget", async () => {
+    const result = await withPushQueryTimeout(Promise.resolve("row"), 50);
+    expect(result).toBe("row");
+  });
+
+  test("rejects PushQueryTimeoutError when the budget is exceeded", async () => {
+    const hung = new Promise<string>(() => undefined); // never settles
+    try {
+      await withPushQueryTimeout(hung, 10);
+      throw new Error("expected withPushQueryTimeout to reject");
+    } catch (err) {
+      expect(err).toBeInstanceOf(PushQueryTimeoutError);
+      expect((err as Error).name).toBe("PushQueryTimeoutError");
+    }
+  });
+
+  test("an already-rejected query propagates unchanged (error identity kept)", async () => {
+    const boom = new Error("boom");
+    try {
+      await withPushQueryTimeout(Promise.reject(boom), 50);
+      throw new Error("expected rejection");
+    } catch (err) {
+      expect(err).toBe(boom);
+    }
+  });
+});
+
+describe("delivery route: user-safe subscription-store errors (raw text never leaks)", () => {
+  test("missing push_subscriptions table → storage-not-set-up, nothing-sent wording", () => {
+    expect(describeSubscriptionStoreError(new Error('relation "public.push_subscriptions" does not exist'))).toContain(
+      "storage isn't set up"
+    );
+    expect(
+      describeSubscriptionStoreError(new Error("Could not find the table 'push_subscriptions' in the schema cache"))
+    ).toContain("storage isn't set up");
+    expect(describeSubscriptionStoreError(new Error("PGRST205 shape error"))).toContain("storage isn't set up");
+  });
+
+  test("timeouts map to the took-too-long message", () => {
+    expect(describeSubscriptionStoreError(new PushQueryTimeoutError())).toContain("took too long");
+    expect(describeSubscriptionStoreError(new Error("Query timed out"))).toContain("took too long");
+  });
+
+  test("anything else maps to the reachability message (no exception text leaks)", () => {
+    const described = describeSubscriptionStoreError(new Error("jwt malformed segment eyJ..."));
+    expect(described).not.toContain("eyJ");
+    expect(described).toContain("try again");
+    expect(describeSubscriptionStoreError("weird")).toContain("try again");
   });
 });

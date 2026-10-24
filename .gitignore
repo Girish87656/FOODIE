@@ -48,8 +48,11 @@ local-*
 *.log
 dev.log
 dev.out.log
-test
-prompt
+# Scratch files (ANCHORED to the repo root — a bare "test"/"prompt" here once
+# silently ignored src/app/api/push/test/, so the push delivery route was
+# never committed by three consecutive sessions. Never use unanchored names.)
+/test
+/prompt
 
 server.log
 # Skills directory
