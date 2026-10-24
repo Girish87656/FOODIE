@@ -24,7 +24,9 @@
  *   • dismiss     — clears the presentation.
  *   • auto-detect timeout — the presented card clears itself after
  *     AUTO_COLLAPSE_MS (the card is keyed by presentation.key, so every
- *     show event remounts it and restarts the timer).
+ *     show event remounts it and restarts the timer). The timer PAUSES
+ *     while the card is hovered or contains keyboard/touch focus, so
+ *     engaged users are never yanked mid-read (WCAG 2.2.1).
  *
  * Because presentations are event-created and only cleared by
  * dismiss/timeout, re-selecting the same destination after a timeout OR a
@@ -267,13 +269,29 @@ function FamousHereCard({
   // this component by presentation.key, so every show event remounts it and
   // restarts the timer. setState fires from the timeout callback (async),
   // never synchronously inside the effect.
+  //
+  // QA FIX (WCAG 2.2.1 Timing Adjustable): the timer PAUSES while the user
+  // is engaged with the card (pointer hover or keyboard/touch focus inside
+  // it) — content must not vanish while someone is reading or navigating
+  // it. Leaving the card restarts the full budget; the peek behaviour is
+  // otherwise unchanged.
+  const [engaged, setEngaged] = useState(false);
   useEffect(() => {
+    if (engaged) return undefined; // paused — the user is on the card
     const timer = setTimeout(onAutoCollapse, AUTO_COLLAPSE_MS);
     return () => clearTimeout(timer);
-  }, [onAutoCollapse]);
+  }, [onAutoCollapse, engaged]);
 
   return (
-    <div className="foodie-gradient-soft relative overflow-hidden rounded-3xl p-4">
+    <div
+      className="foodie-gradient-soft relative overflow-hidden rounded-3xl p-4"
+      onMouseEnter={() => setEngaged(true)}
+      onMouseLeave={() => setEngaged(false)}
+      onFocusCapture={() => setEngaged(true)}
+      onBlurCapture={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setEngaged(false);
+      }}
+    >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="flex items-center gap-1 text-[10.5px] font-bold uppercase tracking-wider text-primary">
