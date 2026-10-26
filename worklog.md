@@ -2309,3 +2309,25 @@ Work Log:
 
 Stage Summary:
 - Prototype 4.2 = completion pass with an honest core finding: 3 of 4 place sets are 100% live in production; the 16 Batch-011 rows remain the owner's single approved-SQL step (candidate unchanged, hashes re-verified); 10/10 attractions have verified attributed venue photos, and NO additional real venue photos are obtainable from allowed sources today (documented negative, place-by-place); menus are live for 7 places with provenance + new staleness/labelling honesty; homepage untouched. All gates green locally before push.
+
+---
+Task ID: PROTOTYPE-4.3-PUSH
+Agent: Z.ai Code (main orchestrator)
+Task: Stage J of the Prototype 4 completion pass — push the two pending commits (a7eee1a Prototype 4.1, 943d804 Prototype 4.2), verify Vercel auto-deploy, verify production, credential cleanup, final report.
+
+Work Log:
+- Pre-push gate re-run (fresh session, nothing assumed): lint exit 0; tests 133/133; tsc 0 errors in src/tests (full-repo tsc noise limited to pre-existing examples/ + skills/ folders, unchanged from prior pass); production build NOT re-run locally per sandbox rule — both commits record build exit 0 in worklog and Vercel ran the authoritative build.
+- Secret audit of the unpushed range c00a502..943d804 (42 files, +2971/−41): zero hits for service keys/JWTs/pat/tokens/PEM blocks; zero .env/credential/secret file names in the diff.
+- Credential probe: `git credential fill` fails (no stored credentials) — prior cleanup intact. Found and removed a STALE `/home/z/.foodie-device-flow/` leftover (device_code+expires_in from the previous session, NO token file inside, code expired) — not reused per the expired-token protocol.
+- Fresh device-flow authorization issued (user code 75F6-4EA2, ~15 min TTL); user authorized at github.com/login/device; token obtained at poll 15 and stored only at /home/z/.foodie-device-flow/token (chmod 600).
+- PUSH: one-time credential helper (token never in argv/URL/credential store): c00a502..943d804 main -> main. Remote HEAD verified 943d8047b189003877b273686f2457bd50da3ffb == local HEAD.
+- VERCEL: deployment id 7332540385 created for sha 943d804…; status success, environment Production, created 2026-10-26T13:04:48Z.
+- PRODUCTION VERIFIED: https://foodie-arjun-123b.vercel.app/ HTTP 200 with meta application-version prototype-4.2.0 (also confirmed in the live DOM via browser eval); browser session on prod: 0 console messages, 0 page errors on splash + auth screens; read-only protocol kept (no test account written — demo skip path is correctly absent on prod because Supabase auth IS configured).
+- PRODUCTION API: /api/push/config {"configured":false,"publicKey":null} (honest owner-pending state); /api/restaurants/search live checks: Tirupati Foods/The 99 Pizza/Ni Cake World/Ps4 Restaurant each 1 result (Batch-009 6/6 set intact); doddaballapura 80 results; venkateswara 0 results (Batch-011 correctly still absent, owner SQL pending); /api/destinations = Bengaluru, Mumbai, Tirupati.
+- PRODUCTION ASSETS: /images/places/sri-venkateswara-swamy-temple.webp 200 image/webp 115078B; chandragiri-fort.webp 200 144216B; /images/representative/rep-bakery-sweets.webp 200 164746B; rep-poi-temple.webp 200 182054B + -small 200 15336B (two-variant rule intact).
+- LOCAL GOLDEN-PATH E2E (same sha, demo mode): home rails (8 representative images + 8 visible AI chips + 1 real venue photo, 0 broken images, honest demo banner); Corridor Tiffin Room detail — labelled representative hero, famous dishes, honest login-gated reviews; Tirupati destination — 16 Batch-011 places listed, 10 real venue photos + 6 labelled representatives, 0 broken; Chandragiri Fort detail — real hero photo + "CC BY-SA 4.0" + exact Commons file link; horizontal overflow 0px at 320/390/768/1440 on home AND detail; console clean except documented dev-only HMR logs; 0 page errors.
+- HOMEPAGE UNTOUCHED: screenshot-verified at 1440 — featured Tirupati card with real attributed temple photo (inline "Photo: Nikhilb239 · CC BY-SA 4.0"), iconic Lucide category rail, honest demo banner, warm brand system — Prototype 4 baseline preserved.
+- Credential cleanup: token + device_code + flow dir removed after all GitHub API usage; post-cleanup probe re-run (see Stage Summary).
+
+Stage Summary:
+- Prototype 4.1 + 4.2 are LIVE in production (deployment 7332540385, success, serving prototype-4.2.0). 3/4 place sets 100% live (74/74 Doddaballapura-Nagadenahalli, 6/6 GITAM, 6/6 Tirupati food); Batch-011 0/16 remains the owner's single approved-SQL step (candidate + hashes unchanged). Push notification honestly not-configured pending owner VAPID env vars. No credentials remain on disk after cleanup.
