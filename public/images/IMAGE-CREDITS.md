@@ -3,35 +3,17 @@
 This file records where every bundled image comes from. It exists so no
 image in this repository is ever an unattributed or mispresented asset.
 
-## 1. Category illustrations (`public/images/categories/*.webp`) — AI-GENERATED ARTWORK
+## 1. Category artwork — REMOVED in Prototype 4 (2026-10-26)
 
-All 14 files were generated for this project with a text-to-image model
-(z-ai image generation, 2026-10-23) from a consistent prompt family
-("editorial flat illustration, warm terracotta/amber/cream palette …").
-They are **category artwork, NOT photos of any real venue**:
-
-| File | Represents |
-|---|---|
-| `restaurant.webp` | FOOD category `restaurant` |
-| `hotel-meals.webp` | FOOD category `hotel` — the LOCAL "meals place" (rice-thali eatery), NOT lodging |
-| `tiffin.webp` | FOOD category `tiffin` |
-| `cafe.webp` | FOOD category `cafe` |
-| `fast-food.webp` | FOOD category `fast_food` |
-| `street-food.webp` | FOOD category `street_food` |
-| `bakery-sweets.webp` | FOOD category `bakery_sweets` |
-| `temple.webp` | place_type `temple` |
-| `waterfall.webp` | place_type `waterfall` |
-| `fort.webp` | place_type `fort` |
-| `zoo.webp` | place_type `zoo` |
-| `natural-arch.webp` | place_type `natural_arch` |
-| `poi-other.webp` | place_type `other` |
-| `hotel-stay.webp` | place_type `hotel` — LODGING stays |
-
-The UI never presents these as venue photos: detail heroes show
-"Illustration · not a venue photo", and alt text / aria labels say
-"category illustration". Because they are category artwork, the same image
-is shared by every place in that category **by design** — that is not the
-"one image reused across venues" anti-pattern, which applies to real photos.
+Prototype 3 shipped 14 AI-generated flat-illustration category WebPs
+(`public/images/categories/*.webp`). **Prototype 4 removed them from the
+interface and from the repository**: premium Foodie uses real, verified,
+attributed photographs where they exist, and a professional CATEGORY ICON
+TILE (Lucide glyph on a quiet warm-neutral gradient,
+`src/components/foodie/MediaTiles.tsx`) for everything else. An icon tile
+reads as interface chrome — like an avatar with initials — so nothing can
+be mistaken for a venue photo, and no raster artwork is deployed for
+categories at all.
 
 ## 2. Venue photos (`public/images/places/*.webp`) — WIKIMEDIA COMMONS, licensed & attributed
 
@@ -65,7 +47,7 @@ REJECTED on visual check (see section 3).
 The running app renders each photo's credit and links its source page on
 the venue detail hero (`src/data/venue-images.ts`). No Google Maps/Google
 Images content was used. Venues without an entry above intentionally use
-the category illustration — no photo is hotlinked from official venue
+the category icon tile — no photo is hotlinked from official venue
 pages (venue copyright) and no photo is reused across venues.
 
 ## 3. Venue-photo candidates deliberately NOT bundled
@@ -74,25 +56,23 @@ pages (venue copyright) and no photo is reused across venues.
 |---|---|
 | `File:Tiruchanur 02.JPG` (Padmavathi pass) | Gopuram mostly occluded by compound wall + market stalls — not a clear depiction of the temple |
 | `File:Tiruchanur 03.JPG` (Padmavathi pass) | Street-side shrine facade — not verifiably the main Padmavathi Ammavari Temple |
-| All 6 lodging hotels | Official-site photos are venue copyright; no licensed source found → illustration |
-| All food places (77 + 9 Batch-009) | No licensed per-venue sources captured → category illustration |
+| All 6 lodging hotels | Official-site photos are venue copyright; no licensed source found → icon tile |
+| All food places (77 + 9 Batch-009) | No licensed per-venue sources captured → category icon tile |
 
-## 4. Responsive variants (generated derivatives — same provenance as §1/§2)
+## 4. Responsive variants (generated derivatives — same provenance as §2)
 
-Every bundled master WebP above also ships generated, provenance-identical
-smaller siblings (sharp resize + WebP q78, 2026-10-23), served through the
-`responsiveSrcSet` helper (`src/lib/foodie/categoryImages.ts`) so chips and
-tiles download kilobytes instead of the full-size master:
+Every bundled venue-photo master WebP also ships a generated,
+provenance-identical smaller sibling (sharp resize + WebP q78, 2026-10-23),
+served through the `responsiveSrcSet` helper
+(`src/lib/foodie/categoryImages.ts`) so tiles download kilobytes instead of
+the full-size master:
 
 | Pattern | Candidates | Used by |
 |---|---|---|
-| `categories/<name>-small.webp` | 320w | chips (20-40px), POI list tiles (76px) |
-| `categories/<name>-md.webp` | 640w | food place cards (200-248px) |
-| `categories/<name>.webp` | 1344w (master, §1) | detail heroes (~430px @2x) |
-| `places/<name>-small.webp` | 320w | POI list tiles (76px) |
-| `places/<name>.webp` | 800w (master, §2) | venue detail heroes (~430px @2x) |
+| `places/<name>-small.webp` | 320w | POI list tiles (76px), featured-destination card @1x |
+| `places/<name>.webp` | 800w (master, §2) | venue detail heroes + featured card (~430px @2x) |
 
-RULE: whenever a new master `.webp` is added to either folder, its
-`-small.webp` (and, for categories, `-md.webp`) sibling MUST be generated
-in the same pass — the srcset references these files unconditionally, so a
-missing sibling would break the responsive candidates.
+RULE: whenever a new master `.webp` is added to `public/images/places/`,
+its `-small.webp` sibling MUST be generated in the same pass — the srcset
+references these files unconditionally, so a missing sibling would break
+the responsive candidates.

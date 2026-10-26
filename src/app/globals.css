@@ -45,7 +45,9 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(1 0 0);
+  /* Prototype 4: warm paper-white canvas (not pure #fff) so white cards read
+     as a subtle elevated layer — the base of the premium depth system. */
+  --background: oklch(0.984 0.004 84.6);
   --foreground: oklch(0.216 0.006 56.04);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.216 0.006 56.04);
@@ -167,8 +169,19 @@
   background: linear-gradient(135deg, oklch(0.705 0.213 47.604), oklch(0.646 0.222 41.116) 55%, oklch(0.577 0.245 27.325));
 }
 
+/* Prototype 4: quieter premium wash for hero surfaces — same warm family,
+   noticeably less saturation so foreground content carries the colour. */
 @utility foodie-gradient-soft {
-  background: linear-gradient(160deg, oklch(0.968 0.028 61.8), oklch(0.945 0.044 55.2) 60%, oklch(0.93 0.06 48.5));
+  background: linear-gradient(160deg, oklch(0.981 0.014 73.8), oklch(0.962 0.026 62.4) 60%, oklch(0.945 0.036 52.6));
+}
+
+/* Prototype 4 elevation token: the standard card treatment (border + soft
+   shadow + hairline ring) so every card shares one depth language. */
+@utility foodie-card {
+  border: 1px solid oklch(0.216 0.006 56.04 / 0.07);
+  box-shadow:
+    0 1px 2px oklch(0.216 0.006 56.04 / 0.04),
+    0 4px 16px -8px oklch(0.216 0.006 56.04 / 0.08);
 }
 
 /* subtle dot texture for splash backdrop */

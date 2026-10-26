@@ -55,6 +55,8 @@ import { SectionHeader } from "../SectionHeader";
 import { SearchBar } from "../SearchBar";
 import { CarouselCard, ListRow, WideCard } from "../PlaceCards";
 import { DiscoveryFilterBar } from "../FilterBar";
+import { CategoryChip } from "../CategoryChip";
+import { FeaturedDestinationCard } from "../FeaturedDestinationCard";
 import { DestinationDiscoveryCard } from "../DestinationDiscoveryCard";
 import { LocationPromptBanner, LocationSheet } from "../LocationControls";
 import { AccountControls } from "../AccountControls";
@@ -408,11 +410,39 @@ export function HomeScreen() {
 
         <SearchBar value={searchQuery} onChange={setSearchQuery} className="mt-4" />
 
-        {/* discovery controls — one row of functional dropdowns.
-            Every choice really drives the feed below (store-backed):
-            Category (All + the 7 pilot categories), Distance (Any/1/3/5/10 km),
-            Sort (Nearest First / Top Rated). */}
+        {/* Prototype 4: iconic category shortcuts — one tap to a category.
+            Same store-backed contract as the old dropdown (setActiveCategory,
+            "All" also clears the free-text query), now always visible. */}
+        <div
+          role="group"
+          aria-label="Filter by category"
+          className="foodie-rail mt-3 flex gap-2 overflow-x-auto"
+        >
+          <CategoryChip
+            category={{ id: "all", label: "All" }}
+            active={activeCategory === null}
+            onClick={() => {
+              setActiveCategory(null);
+              setSearchQuery("");
+            }}
+          />
+          {PLACE_CATEGORIES.map((c) => (
+            <CategoryChip
+              key={c.id}
+              category={c}
+              active={activeCategory === c.id}
+              onClick={() => {
+                setActiveCategory(activeCategory === c.id ? null : c.id);
+              }}
+            />
+          ))}
+        </div>
+
+        {/* discovery controls — distance + sort (the category rail above owns
+            category selection in Prototype 4). Every choice really drives the
+            feed below (store-backed). */}
         <DiscoveryFilterBar
+          showCategory={false}
           distanceFilterKm={distanceFilterKm}
           onDistanceChange={setDistanceFilter}
           sortBy={sortBy}
@@ -424,7 +454,7 @@ export function HomeScreen() {
             // free-text query so the dropdown truly resets the filter state
             if (id === null) setSearchQuery("");
           }}
-          className="mt-3"
+          className="mt-2.5"
         />
       </header>
 
@@ -517,11 +547,11 @@ export function HomeScreen() {
               <LocationPromptBanner onOpen={() => setLocSheetOpen(true)} />
             </div>
 
-            {/* greeting — premium hero with a context emoji tile */}
+            {/* greeting — premium hero with a context icon tile */}
             <motion.section
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="relative mx-5 mt-5 overflow-hidden rounded-3xl foodie-gradient-soft p-5"
+              className="relative mx-5 mt-4 overflow-hidden rounded-3xl foodie-gradient-soft p-4"
             >
               <div
                 aria-hidden="true"
@@ -569,6 +599,10 @@ export function HomeScreen() {
                 </div>
               )}
             </motion.section>
+
+            {/* Prototype 4: featured destination — a verified, attributed
+                photograph of a real landmark, curated per destination. */}
+            <FeaturedDestinationCard className="mx-5 mt-4" />
 
             {/* destination discovery — Famous here card + destination chips.
                 Tapping a famous food opens the destination-food screen

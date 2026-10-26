@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDownUp, Check, ChevronDown, ListFilter, Navigation, Ruler, Star, Utensils } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
-import { categoryIllustration } from "@/lib/foodie/categoryImages";
-import { IllustrationImage } from "./IllustrationImage";
+import { categoryIconFor } from "./CategoryChip";
 
 const DISTANCE_OPTIONS: { value: number | null; label: string; aria: string }[] = [
   { value: null, label: "Any distance", aria: "Show places at any distance" },
@@ -31,6 +30,9 @@ interface DiscoveryFilterBarProps {
   /* category dropdown wiring — selection really drives the feed filter */
   activeCategory: string | null;
   onCategoryChange: (id: string | null) => void;
+  /** Prototype 4: Home renders the iconic category RAIL above this bar, so
+   *  it hides the redundant category dropdown (defaults to true elsewhere). */
+  showCategory?: boolean;
 }
 
 /**
@@ -52,10 +54,11 @@ export function DiscoveryFilterBar({
   className,
   activeCategory,
   onCategoryChange,
+  showCategory = true,
 }: DiscoveryFilterBarProps) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
-      <CategoryDropdown value={activeCategory} onChange={onCategoryChange} />
+      {showCategory && <CategoryDropdown value={activeCategory} onChange={onCategoryChange} />}
       <DistanceDropdown value={distanceFilterKm} onChange={onDistanceChange} />
       <SortDropdown value={sortBy} onChange={onSortChange} />
     </div>
@@ -211,7 +214,7 @@ function CategoryDropdown({
       footer={<ListFilter className="size-3 shrink-0" aria-hidden="true" />}
     >
       {options.map((opt) => {
-        const ill = categoryIllustration(opt.id);
+        const OptIcon = opt.id === "all" ? Utensils : categoryIconFor(opt.id);
         return (
         <OptionRow
           key={opt.id}
@@ -223,24 +226,11 @@ function CategoryDropdown({
             setOpen(false);
           }}
         >
-          {ill ? (
-            <IllustrationImage
-              src={ill}
-              sizes="18px"
-              fallback={
-                <Utensils
-                  aria-hidden="true"
-                  className="size-4 shrink-0 text-stone-400"
-                />
-              }
-              className="size-4.5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
-            />
-          ) : (
-            <Utensils
-              aria-hidden="true"
-              className="size-4 shrink-0 text-stone-400"
-            />
-          )} {opt.label}
+          <OptIcon
+            aria-hidden="true"
+            className="size-4 shrink-0 text-stone-400"
+          />
+          {" "}{opt.label}
         </OptionRow>
         );
       })}

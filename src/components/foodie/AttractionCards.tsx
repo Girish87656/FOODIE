@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
 import { POI_PLACE_TYPES } from "@/lib/foodie/constants";
 import { POI_TYPE_ICONS } from "@/lib/foodie/icons";
-import { poiTypeIllustration, responsiveSrcSet } from "@/lib/foodie/categoryImages";
+import { responsiveSrcSet, TILE_SURFACE_CLASS } from "@/lib/foodie/categoryImages";
 import { venueImageFor } from "@/data/venue-images";
 import { prettifyTag, verificationStatusLabel } from "@/lib/foodie/utils";
 import type {
@@ -44,10 +44,10 @@ const VERIFICATION_CHIP_CLASS = {
  *
  * Priority: (1) a VERIFIED, licensed per-venue photo from the curated
  * registry (src/data/venue-images.ts — full attribution rendered when
- * `showAttribution` is on), (2) the custom picture-style ILLUSTRATION for
- * the row's REAL stored place_type (never presented as a venue photo —
- * the hero labels it "Illustration · not a venue photo"), (3) the type
- * glyph on the gradient as the last-ditch fallback if both fail.
+ * `showAttribution` is on), (2) the professional CATEGORY ICON TILE for the
+ * row's REAL stored place_type — quiet interface chrome that could never be
+ * mistaken for a venue photograph (the cartoon illustration layer is gone
+ * as of Prototype 4).
  */
 export function PoiTypeTile({
   poi,
@@ -64,15 +64,14 @@ export function PoiTypeTile({
   showAttribution?: boolean;
   /** Hero tiles load eagerly; list tiles lazy. */
   priority?: boolean;
-  /** Layout width hint — enables the responsive 320w/800w (or 640w/1344w
-   *  illustration) srcset. Omitted → plain img (full asset). */
+  /** Layout width hint — enables the responsive 320w/800w photo srcset.
+   *  Omitted → plain img (full asset). */
   sizes?: string;
 }) {
   const meta = poiTypeMeta(poi.placeType);
   const TypeIcon = meta.icon;
   const venue = venueImageFor(poi.id);
-  const illustration = poiTypeIllustration(poi.placeType);
-  const desiredSrc = venue?.src ?? illustration;
+  const desiredSrc = venue?.src ?? null;
   const [mediaFailed, setMediaFailed] = useState(false);
   const [prevSrc, setPrevSrc] = useState(desiredSrc);
   if (prevSrc !== desiredSrc) {
@@ -88,10 +87,11 @@ export function PoiTypeTile({
       aria-label={
         venue
           ? venue.alt
-          : `${meta.label} — ${poi.name} (category illustration)`
+          : `${meta.label} — ${poi.name} (no venue photo yet)`
       }
       className={cn(
-        "relative size-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
+        "relative size-full overflow-hidden",
+        mediaSrc ? "bg-stone-100" : TILE_SURFACE_CLASS,
         className
       )}
     >
@@ -110,11 +110,12 @@ export function PoiTypeTile({
         <>
           <span
             aria-hidden="true"
-            className="absolute inset-0 bg-[radial-gradient(12rem_8rem_at_50%_115%,rgba(249,115,22,0.14),transparent)]"
+            className="absolute inset-0 bg-[radial-gradient(14rem_9rem_at_50%_118%,rgba(234,88,12,0.07),transparent)]"
           />
           <TypeIcon
             aria-hidden="true"
-            className={cn("size-[26px] text-orange-400/90 drop-shadow-sm", iconClassName)}
+            strokeWidth={1.5}
+            className={cn("size-[26px] text-stone-400", iconClassName)}
           />
         </>
       )}
@@ -128,11 +129,6 @@ export function PoiTypeTile({
         >
           Photo: {venue.credit} · {venue.license}
         </a>
-      )}
-      {showAttribution && !venue && (
-        <span className="absolute bottom-2 left-2 max-w-[80%] truncate rounded-full bg-black/45 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
-          Illustration · not a venue photo
-        </span>
       )}
     </div>
   );

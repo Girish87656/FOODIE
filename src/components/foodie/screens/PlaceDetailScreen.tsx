@@ -25,8 +25,8 @@ import { getRestaurantById } from "@/lib/foodie/data/repository";
 import type { DataMode } from "@/lib/foodie/data/types";
 import type { Dish, PhotoCredit, Place } from "@/lib/foodie/types";
 import { formatDistance, haversineKm } from "@/lib/foodie/location";
-import { categoryIllustration } from "@/lib/foodie/categoryImages";
-import { IllustrationImage, GlyphTile } from "../IllustrationImage";
+import { FOOD_CATEGORY_ICONS } from "@/lib/foodie/icons";
+import { CategoryTile } from "../MediaTiles";
 import { originSourceLabel, useLocationStore } from "@/lib/foodie/locationStore";
 import {
   formatHours,
@@ -289,42 +289,32 @@ export function PlaceDetailScreen() {
     unverified: "border-amber-200 bg-amber-50 text-amber-700",
   }[verification.tone];
 
+  // Premium hero fallback: the professional icon for this place's REAL
+  // stored category (never a random glyph, never an image substitute).
+  const HeroCategoryIcon =
+    FOOD_CATEGORY_ICONS[place.categoryIds[0] as keyof typeof FOOD_CATEGORY_ICONS] ??
+    UtensilsCrossed;
+
   return (
     <div className="flex h-full flex-col bg-background">
       {/* ---------------- hero photos ---------------- */}
       <div className="relative shrink-0">
         {place.photos.length === 0 ? (
-          /* no photos in the database yet — the honest fallback is the custom
-             picture-style category ILLUSTRATION for this place's REAL stored
-             category, explicitly labelled so it is never mistaken for a venue
-             photo. Eager + high priority: above-the-fold hero. */
-          <div className="relative h-[264px] w-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50">
-            {categoryIllustration(place.categoryIds[0]) ? (
-              <>
-                <IllustrationImage
-                  src={categoryIllustration(place.categoryIds[0])}
-                  alt={`${place.name} — category illustration (no venue photo available yet)`}
-                  sizes="(max-width: 480px) 100vw, 430px"
-                  priority
-                  className="size-full object-cover"
-                  fallback={
-                    <GlyphTile
-                      icon={UtensilsCrossed}
-                      iconClassName="size-14 text-orange-300"
-                      className="absolute inset-0"
-                    />
-                  }
-                />
-                <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/50 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
-                  Illustration · not a venue photo
-                </span>
-              </>
-            ) : (
-              <GlyphTile
-                icon={UtensilsCrossed}
-                iconClassName="size-14 text-orange-300"
-              />
-            )}
+          /* no photos in the database yet — the honest fallback is the premium
+             CATEGORY ICON TILE for this place's REAL stored category: quiet
+             interface chrome that could never be mistaken for a venue photo.
+             Eager + high priority: above-the-fold hero. */
+          <div className="relative h-[264px] w-full overflow-hidden">
+            <CategoryTile
+              icon={HeroCategoryIcon}
+              ariaLabel={`${place.name} — no venue photo available yet`}
+              iconClassName="size-14 text-stone-300"
+              muted
+              className="size-full"
+            />
+            <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/45 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
+              Venue photo coming soon
+            </span>
           </div>
         ) : (
           <div

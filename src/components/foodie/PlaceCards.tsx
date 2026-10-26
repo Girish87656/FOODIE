@@ -1,13 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Users, UtensilsCrossed } from "lucide-react";
+import { MapPin, Users, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
-import { categoryIllustration } from "@/lib/foodie/categoryImages";
-import { IllustrationImage, GlyphTile } from "./IllustrationImage";
+import { FOOD_CATEGORY_ICONS } from "@/lib/foodie/icons";
+import { CategoryTile } from "./MediaTiles";
 import { RatingBadge, PlaceBadge } from "./Badges";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
+
+/** The professional category icon for a food place's REAL stored category. */
+function categoryIcon(place: PlaceMaybeWithDistance): LucideIcon {
+  return (
+    FOOD_CATEGORY_ICONS[place.categoryIds[0] as keyof typeof FOOD_CATEGORY_ICONS] ??
+    FOOD_CATEGORY_ICONS.restaurant
+  );
+}
 
 interface PlaceCardBase {
   place: PlaceMaybeWithDistance;
@@ -42,11 +50,13 @@ function DistanceChip({
 
 /**
  * Photo with an honest placeholder when the database row has no image yet
- * (demo data always ships photos; real rows may not). The placeholder is
- * category-aware — a custom picture-style ILLUSTRATION for the place's REAL
- * stored category, never a random decoration and never presented as a venue
- * photo (alt text says "category illustration"). If the illustration itself
- * fails to load, a plain glyph-on-gradient tile is the last-ditch fallback.
+ * (real rows may not). The placeholder is a premium CATEGORY ICON TILE for
+ * the place's REAL stored category — interface chrome, never a substitute
+ * photo, never a cartoon, never an emoji. A stored URL that cannot load
+ * degrades to the same tile — the broken-image glyph of a dead <img> is
+ * never shown (same contract as the detail screen's gallery). State resets
+ * when the src prop changes via the render-time adjustment pattern (no
+ * setState-in-effect).
  */
 
 function PlacePhoto({
@@ -54,60 +64,25 @@ function PlacePhoto({
   alt,
   className,
   iconClassName,
-  category,
-  sizes,
+  place,
 }: {
   src?: string;
   alt: string;
   className?: string;
   iconClassName?: string;
-  category?: string;
-  /** Layout width hint for the illustration srcset (per card layout). */
-  sizes?: string;
+  place: PlaceMaybeWithDistance;
 }) {
-  // A stored URL that cannot load degrades to the honest placeholder tile —
-  // the broken-image glyph of a dead <img> is never shown (same contract as
-  // the detail screen's gallery). State resets when the src prop changes via
-  // the render-time adjustment pattern (no setState-in-effect). The
-  // illustration itself ALSO degrades honestly (IllustrationImage → glyph).
   const [failed, setFailed] = useState(false);
   const [prevSrc, setPrevSrc] = useState(src);
   if (prevSrc !== src) {
     setPrevSrc(src);
     setFailed(false);
   }
-  const illustration = categoryIllustration(category);
 
   if (!src || failed) {
-    if (illustration) {
-      return (
-        <div
-          role="img"
-          aria-label={`${alt} — category illustration`}
-          className={cn(
-            "relative size-full overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50",
-            className
-          )}
-        >
-          <IllustrationImage
-            src={illustration}
-            alt=""
-            sizes={sizes}
-            className="size-full object-cover"
-            fallback={
-              <GlyphTile
-                icon={UtensilsCrossed}
-                iconClassName={iconClassName}
-                className="absolute inset-0"
-              />
-            }
-          />
-        </div>
-      );
-    }
     return (
-      <GlyphTile
-        icon={UtensilsCrossed}
+      <CategoryTile
+        icon={categoryIcon(place)}
         ariaLabel={alt}
         iconClassName={iconClassName}
         className={className}
@@ -150,8 +125,7 @@ export function CarouselCard({ place, onSelect }: PlaceCardBase) {
           src={place.photos[0]}
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
-          category={place.categoryIds[0]}
-          sizes="200px"
+          place={place}
         />
         {place.badges.hiddenGem && (
           <PlaceBadge label="Hidden Gem" className="absolute left-2 top-2" />
@@ -212,8 +186,7 @@ export function ListRow({ place, onSelect, rank }: PlaceCardBase & { rank?: numb
           alt={`${place.name} — ${place.cuisines.join(", ")}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           iconClassName="size-5"
-          category={place.categoryIds[0]}
-          sizes="80px"
+          place={place}
         />
       </div>
       <div className="min-w-0 flex-1">
@@ -266,8 +239,7 @@ export function WideCard({ place, onSelect }: PlaceCardBase) {
           alt={`${place.name} — ${place.cuisines.join(", ")} in ${place.area}`}
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
           iconClassName="size-8"
-          category={place.categoryIds[0]}
-          sizes="248px"
+          place={place}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
         <DistanceChip place={place} className="absolute right-2 top-2" />

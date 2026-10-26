@@ -1,88 +1,45 @@
 /**
- * Category illustration registry (Foodie).
+ * Category visual tokens + responsive-srcset helpers (Foodie, Prototype 4).
  *
- * WHY THIS EXISTS: every image-shaped surface in the app (card photo
- * placeholders, attraction type tiles, detail heroes, category chips) used
- * to fall back to a bare emoji glyph. These are now consistent, custom,
- * picture-style category illustrations — generated artwork, NEVER presented
- * as a real photo of any venue. Detail heroes label them "Illustration"
- * explicitly; alt text says "category illustration".
+ * PROTOTYPE 4 CHANGE — the AI-generated flat-illustration layer is GONE from
+ * the interface. The premium visual system is:
  *
- * The files are optimised WebP (generated at 1344×768, ≤ ~100 KB each) and
- * ship with the app bundle (public/images/categories/) so tiles render
- * instantly with no network dependency and are covered by Next.js static
- * asset caching.
+ *   1. VERIFIED, attributed per-venue photos (src/data/venue-images.ts,
+ *      bundled under public/images/places/) — the media layer, priority.
+ *   2. A professional CATEGORY ICON TILE for everything without a verified
+ *      photo — a Lucide glyph for the place's REAL stored category on a
+ *      quiet warm gradient (MediaTiles.tsx). It reads unmistakably as an
+ *      interface tile, never as a photo of the venue: no raster artwork is
+ *      deployed for categories any more.
  *
- * Illustrations are CATEGORY artwork: one image per category is shared by
- * every place in that category BY DESIGN (it is decoration, not a venue
- * photo). Real, licensed per-venue photos live in `src/data/venue-images.ts`
- * and take priority wherever an entry exists.
+ * This module keeps only what that system needs:
+ *   - `responsiveSrcSet` — serves `-small` (320w) / `-md` (640w) variants of
+ *     the bundled venue photos so tiles download kilobytes, not the master.
+ *   - the shared placeholder-gradient class tokens used by MediaTiles so
+ *     every fallback surface in the app is pixel-identical.
  */
-
-import type { PlaceType } from "./types";
-
-/** Illustration per FOOD place category (restaurants.category values). */
-export const CATEGORY_ILLUSTRATIONS: Record<string, string> = {
-  restaurant: "/images/categories/restaurant.webp",
-  // restaurants.category 'hotel' means the LOCAL "meals place" (rice-thali
-  // eatery) — its artwork is deliberately a meals platter, NOT a building.
-  // Lodging hotels use POI_TYPE_ILLUSTRATIONS.hotel (Stay).
-  hotel: "/images/categories/hotel-meals.webp",
-  tiffin: "/images/categories/tiffin.webp",
-  cafe: "/images/categories/cafe.webp",
-  fast_food: "/images/categories/fast-food.webp",
-  street_food: "/images/categories/street-food.webp",
-  bakery_sweets: "/images/categories/bakery-sweets.webp",
-};
-
-/** Illustration per NON-FOOD place type (public.places place_type values). */
-export const POI_TYPE_ILLUSTRATIONS: Record<PlaceType, string> = {
-  temple: "/images/categories/temple.webp",
-  waterfall: "/images/categories/waterfall.webp",
-  fort: "/images/categories/fort.webp",
-  zoo: "/images/categories/zoo.webp",
-  natural_arch: "/images/categories/natural-arch.webp",
-  other: "/images/categories/poi-other.webp",
-  hotel: "/images/categories/hotel-stay.webp",
-};
-
-/** Illustration for a food category id, or null when the id is unknown. */
-export function categoryIllustration(categoryId?: string): string | null {
-  if (!categoryId) return null;
-  return CATEGORY_ILLUSTRATIONS[categoryId] ?? null;
-}
-
-/** Illustration for a place_type — always defined ('other' is the fallback). */
-export function poiTypeIllustration(placeType: PlaceType): string {
-  return POI_TYPE_ILLUSTRATIONS[placeType] ?? POI_TYPE_ILLUSTRATIONS.other;
-}
 
 /**
  * Responsive srcset for bundled media assets.
  *
- * Every `public/images/categories/*.webp` ships `-small.webp` (320w) and
- * `-md.webp` (640w) siblings; every `public/images/places/*.webp` ships a
- * `-small.webp` (320w) sibling (see public/images/IMAGE-CREDITS.md §4).
- * Chips/tiles (≤80px CSS) download the ~5-12 KB thumb instead of the
- * ~30-105 KB master — the homepage's category rails stay light.
+ * Every `public/images/places/*.webp` ships a `-small.webp` (320w) sibling
+ * (see public/images/IMAGE-CREDITS.md). Tiles ≤ 80px CSS download the
+ * ~5-12 KB thumb instead of the ~30-105 KB master.
  *
- * Returns null for any src outside those two bundled prefixes (e.g.
- * user-uploaded Supabase storage URLs), which callers render as a plain img.
+ * Returns null for any src outside the bundled prefix (e.g. user-uploaded
+ * Supabase storage URLs), which callers render as a plain img.
  */
 const RESPONSIVE_PREFIXES: ReadonlyArray<readonly [prefix: string, widths: readonly number[]]> = [
-  ["/images/categories/", [320, 640, 1344]],
   ["/images/places/", [320, 800]],
 ];
 
 const WIDTH_SUFFIX: ReadonlyArray<readonly [width: number, suffix: string]> = [
   [320, "-small"],
-  [640, "-md"],
   [800, ""],
-  [1344, ""],
 ];
 
 export function responsiveSrcSet(src: string): string | null {
-  if (!src.endsWith(".webp") || src.endsWith("-small.webp") || src.endsWith("-md.webp")) {
+  if (!src.endsWith(".webp") || src.endsWith("-small.webp")) {
     return null;
   }
   for (const [prefix, widths] of RESPONSIVE_PREFIXES) {
@@ -96,3 +53,11 @@ export function responsiveSrcSet(src: string): string | null {
   }
   return null;
 }
+
+/**
+ * The one placeholder surface used across the app when no verified photo
+ * exists — quiet warm neutrals (never a cartoon, never a substitute photo).
+ * MediaTiles.CategoryTile renders the icon on top of this.
+ */
+export const TILE_SURFACE_CLASS =
+  "bg-gradient-to-br from-stone-100 via-[#faf6f1] to-amber-50/80";

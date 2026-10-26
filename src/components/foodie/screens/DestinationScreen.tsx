@@ -19,7 +19,7 @@ import {
 } from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
 import { SafeImage } from "../SafeImage";
-import { GlyphTile } from "../IllustrationImage";
+import { CategoryTile } from "../MediaTiles";
 import { ListRow } from "../PlaceCards";
 import { PoiListRow } from "../AttractionCards";
 import { DemoDataBanner } from "../DemoDataBanner";
@@ -192,9 +192,9 @@ export function DestinationScreen() {
                         alt={food.name}
                         className="size-[76px] shrink-0 rounded-xl object-cover"
                         fallback={
-                          <GlyphTile
+                          <CategoryTile
                             icon={UtensilsCrossed}
-                            iconClassName="size-7 text-orange-300"
+                            iconClassName="size-7 text-stone-400"
                             className="size-[76px] shrink-0 rounded-xl"
                           />
                         }

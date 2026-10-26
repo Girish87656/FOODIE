@@ -2,9 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { MapPin as FallbackPin } from "lucide-react";
-import { categoryIllustration } from "@/lib/foodie/categoryImages";
 import { FOOD_CATEGORY_ICONS, POI_TYPE_ICONS } from "@/lib/foodie/icons";
-import { IllustrationImage } from "./IllustrationImage";
 import type { FoodCategory } from "@/lib/foodie/types";
 
 interface CategoryChipProps {
@@ -13,17 +11,23 @@ interface CategoryChipProps {
   onClick: () => void;
 }
 
+/** The professional icon for a category id — never an emoji, never an image. */
+export function categoryIconFor(categoryId: string) {
+  return (
+    FOOD_CATEGORY_ICONS[categoryId as keyof typeof FOOD_CATEGORY_ICONS] ??
+    POI_TYPE_ICONS[categoryId as keyof typeof POI_TYPE_ICONS] ??
+    FallbackPin
+  );
+}
+
 /**
- * Horizontal quick-filter chip on the Home screen.
+ * Horizontal quick-filter chip on the Home screen (Prototype 4).
  *
- * Categories with a custom illustration (the 7 food categories) render a
- * small rounded picture-style thumb (IllustrationImage: responsive 320w
- * thumb, error → icon fallback); ids without one (e.g. destination chips)
- * get the professional Lucide icon fallback — never an emoji.
+ * Every chip renders its category's professional Lucide glyph — the old
+ * picture-style illustration thumbs are gone from the interface entirely.
  */
 export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
-  const illustration = categoryIllustration(category.id);
-  const FallbackIcon =
+  const Icon =
     FOOD_CATEGORY_ICONS[category.id as keyof typeof FOOD_CATEGORY_ICONS] ??
     POI_TYPE_ICONS[category.id as keyof typeof POI_TYPE_ICONS] ??
     FallbackPin;
@@ -39,37 +43,19 @@ export function CategoryChip({ category, active, onClick }: CategoryChipProps) {
           : "border-border bg-card text-foreground hover:border-primary/40 hover:bg-accent"
       )}
     >
-      {illustration ? (
-        <IllustrationImage
-          src={illustration}
-          alt=""
-          sizes="20px"
-          fallback={
-            <FallbackIcon
-              aria-hidden="true"
-              className={cn(
-                "size-4 shrink-0",
-                active ? "text-primary-foreground" : "text-primary"
-              )}
-            />
-          }
-          className="size-5 shrink-0 rounded-full object-cover ring-1 ring-black/10"
-        />
-      ) : (
-        <FallbackIcon
-          aria-hidden="true"
-          className={cn(
-            "size-4 shrink-0",
-            active ? "text-primary-foreground" : "text-primary"
-          )}
-        />
-      )}
+      <Icon
+        aria-hidden="true"
+        className={cn(
+          "size-4 shrink-0",
+          active ? "text-primary-foreground" : "text-primary"
+        )}
+      />
       {category.label}
     </button>
   );
 }
 
-/** Grid tile version used on the preference picker — picture-style thumbs. */
+/** Grid tile version used on the preference picker — professional icon tiles. */
 export function CategoryTile({
   category,
   selected,
@@ -79,8 +65,7 @@ export function CategoryTile({
   selected: boolean;
   onToggle: () => void;
 }) {
-  const illustration = categoryIllustration(category.id);
-  const FallbackIcon =
+  const Icon =
     FOOD_CATEGORY_ICONS[category.id as keyof typeof FOOD_CATEGORY_ICONS] ??
     POI_TYPE_ICONS[category.id as keyof typeof POI_TYPE_ICONS] ??
     FallbackPin;
@@ -96,29 +81,12 @@ export function CategoryTile({
           : "border-border/80 bg-card hover:border-primary/30 hover:bg-accent/60"
       )}
     >
-      {illustration ? (
-        <IllustrationImage
-          src={illustration}
-          alt=""
-          sizes="40px"
-          fallback={
-            <span
-              aria-hidden="true"
-              className="grid size-10 place-items-center rounded-xl bg-primary/10 transition-transform group-hover:scale-110"
-            >
-              <FallbackIcon className="size-5 text-primary" />
-            </span>
-          }
-          className="size-10 rounded-xl object-cover ring-1 ring-black/10 transition-transform group-hover:scale-110"
-        />
-      ) : (
-        <span
-          aria-hidden="true"
-          className="grid size-10 place-items-center rounded-xl bg-primary/10 transition-transform group-hover:scale-110"
-        >
-          <FallbackIcon className="size-5 text-primary" />
-        </span>
-      )}
+      <span
+        aria-hidden="true"
+        className="grid size-10 place-items-center rounded-xl bg-primary/10 transition-transform group-hover:scale-110"
+      >
+        <Icon className="size-5 text-primary" />
+      </span>
       <span
         className={cn(
           "text-[11.5px] font-semibold leading-tight",

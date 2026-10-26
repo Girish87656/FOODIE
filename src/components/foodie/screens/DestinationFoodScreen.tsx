@@ -25,7 +25,7 @@ import {
 } from "@/lib/foodie/data/useDestinationFeed";
 import { DestinationFoodBadge } from "../DestinationFoodBadge";
 import { SafeImage } from "../SafeImage";
-import { GlyphTile } from "../IllustrationImage";
+import { CategoryTile } from "../MediaTiles";
 import { ListRow } from "../PlaceCards";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
@@ -150,9 +150,10 @@ export function DestinationFoodScreen() {
                 priority
                 className="h-40 w-full rounded-3xl object-cover"
                 fallback={
-                  <GlyphTile
+                  <CategoryTile
                     icon={UtensilsCrossed}
-                    iconClassName="size-10 text-orange-300"
+                    iconClassName="size-10 text-stone-300"
+                    muted
                     className="h-40 w-full rounded-3xl"
                   />
                 }
