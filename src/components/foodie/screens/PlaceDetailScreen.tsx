@@ -663,10 +663,12 @@ export function PlaceDetailScreen() {
             >
               <UtensilsCrossed className="size-6 text-stone-300" aria-hidden="true" />
               <p className="mt-2 text-[13.5px] font-bold text-stone-500">
-                No dishes added yet
+                Menu not available online
               </p>
               <p className="mt-1 max-w-[260px] text-[12px] leading-snug text-stone-400">
-                Menu items will appear here once they&apos;re added for this place.
+                No verified online menu could be found for this place — nothing is
+                invented here. Dishes will only appear once a real source is
+                recorded for them.
               </p>
             </div>
           </section>
@@ -751,7 +753,8 @@ export function PlaceDetailScreen() {
               <p className="mt-3 flex flex-wrap items-center gap-x-1 gap-y-0.5 px-1 text-[11px] font-medium text-stone-400">
                 <ExternalLink className="size-3 shrink-0" aria-hidden="true" />
                 <span>
-                  Items &amp; prices from published listing{menuSources.length > 1 ? "s" : ""}:
+                  Items &amp; prices from published listing{menuSources.length > 1 ? "s" : ""} (may be
+                  outdated — verified only as of the listed research date):
                 </span>
                 {menuSources.map(([host, url], i) => (
                   <span key={host} className="flex items-center gap-1">
