@@ -2199,3 +2199,20 @@ Work Log:
 
 Stage Summary:
 - BLOCKED, EXACT LIMITATION: this environment has NO GitHub write authentication — no token env, no credential store, no SSH keys, no gh CLI, no platform GitHub connector. Pushing requires a credential authorized to the owner's GitHub account to be provisioned into the sandbox (e.g., platform-managed GITHUB_TOKEN env var with fine-grained Contents:read+write on FOODIE, or an SSH deploy/user key at ~/.ssh, or gh CLI auth). The moment any of those exists, `git push origin main` (37 commits, HEAD a1d9671) will succeed with zero conflicts (behind 0). Local HEAD a1d9671; remote HEAD e329186 (unchanged); push FAILED as above.
+
+---
+Task ID: LAUNCH-AUTH-INSPECT
+Agent: Z.ai Code (main orchestrator)
+Task: Inspect Z AI platform settings/integrations for a supported, verifiable way to securely connect GitHub or inject a secret — without repeating credential sweeps or push attempts; explain exact authorization steps or state unavailability; no code changes, no deploy.
+
+Work Log:
+- Platform web console (/app, gateway main.py): PERMISSION DENIED to user z — console-side settings/integrations cannot be verified from inside this environment; reported as unknown rather than assumed.
+- No MCP/connector configs anywhere (~/.mcp.json, project .mcp.json, ~/.claude, ~/.config/claude all absent).
+- ClawHub skill registry searched (clawhub search): community GitHub skills exist (top: @steipete/github 33 installs/60d, github-cli, github-mcp, …) — NONE provides platform-level authentication; all still require a user-supplied token, so installing third-party token-touching skills adds supply-chain risk without solving auth. Not installed; recommended against.
+- VERIFIED IN-REPO EVIDENCE for .env injection channel: .zscripts/dev.sh documents ".env stays the single source of truth" and that /start.sh REWRITES .env down to a single DATABASE_URL line at every boot (i.e., workspace .env is user-editable but non-durable across reboots). .env confirmed gitignored (.gitignore:34) and untracked → a token placed there cannot be committed. Viable one-shot fallback channel (paste token into workspace .env via the file panel — never chat; wiped on reboot = self-purging).
+- STRONGEST VERIFIED MECHANISM — GitHub OAuth DEVICE FLOW (the flow gh CLI itself uses; client_id 178c6fc778ccc68e1d6a = public GitHub CLI app id): requires NO Z AI platform feature, NO token in chat, NO token in remote URL, NO laptop commands. User opens github.com/login/device in their own browser, logs into their own GitHub account, enters the one-time user_code I request, clicks Authorize "GitHub CLI" (scope repo only). Token lands directly in this sandbox via the documented token-exchange endpoint, stored only in local git credential store; device_code/access_token never printed.
+- Network prerequisites VERIFIED: api.github.com → 200; github.com/login/device → 302; curl present. Sandbox constraint noted: background processes are reaped between tool calls, so the flow is split across two calls (request user_code → user authorizes → token exchange + push in the following call).
+- NO push attempted this round (per directive), NO deploy, NO application changes, NO history rewrite.
+
+Stage Summary:
+- A supported, secure, fully verified mechanism EXISTS: GitHub OAuth device flow (browser authorization on the user's own device; zero secrets in chat/files/URLs). Exact UI steps delivered to the user; awaiting their go-ahead. Fallback (.env-in-workspace) documented with durability caveat. Z AI console-side integrations remain unverifiable from inside and are NOT claimed either way.
