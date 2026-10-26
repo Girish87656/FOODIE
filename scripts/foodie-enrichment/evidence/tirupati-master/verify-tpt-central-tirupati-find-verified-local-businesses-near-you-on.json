@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "name": "Tirupati - Find Verified Local Businesses Near You on",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati"
+  },
+  "query": "\"Tirupati - Find Verified Local Businesses Near You on\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati",
+      "name": "Tirupati - Find Verified Local Businesses Near You on",
+      "snippet": "Find restaurants, hotels, salons, doctors, real estate, education, travel and other local businesses in Tirupati on Justdial. Get addresses , phone numbers,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/ml/Tirupati",
+      "name": "Tirupati - Find Verified Local Businesses Near You on India's",
+      "snippet": "Find restaurants, hotels, salons, doctors, real estate, education, travel and other local businesses in Tirupati on Justdial. Get addresses , phone numbers,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/hi/Tirupati/Navajeevan-Charitable-Eye-Hospital-Near-Indian-Bank-Tiruchanoor/9999PMULHYDSTD15517_BZDET/amp",
+      "name": "Jd Tirupati - Find Verified Local Businesses Near You on India's",
+      "snippet": "Find restaurants, hotels, salons, doctors, real estate, education, travel and other local businesses in Tirupati on Justdial. Get addresses , phone numbers,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/ta/Tirupati/Dr-Sahabjan-S-Near-Russian-Hospital-R-R-Colony-Korlagunta/9999PMULHYDSTD2684_BZDET/amp",
+      "name": "Jd Tirupati - Find Verified Local Businesses Near You on India's",
+      "snippet": "Find restaurants, hotels, salons, doctors, real estate, education, travel and other local businesses in Tirupati on Justdial. Get addresses , phone numbers,",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirupati - Find Verified Local Businesses Near You on :: Find restaurants, hotels, salons, doctors, real estate, education, travel and other local businesses in Tirupati on Justdial. Get addresses , phone numbers,",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

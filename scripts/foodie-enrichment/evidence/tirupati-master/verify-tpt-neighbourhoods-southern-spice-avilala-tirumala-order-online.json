@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Southern Spice - Avilala, Tirumala order online",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.zomato.com/tirupati/southern-spice-avilala-tirumala/order"
+  },
+  "query": "\"Southern Spice - Avilala, Tirumala order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/southern-spice-avilala-tirumala",
+      "name": "Southern Spice - Avilala, Tirumala order online",
+      "snippet": "Order food online from Southern Spice - Avilala, Tirumala, Tirupati . Get great offers and super fast food delivery … yani, North Indian, South Indian, Shake 4. ...",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

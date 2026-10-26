@@ -1,0 +1,49 @@
+{
+  "candidate": {
+    "name": "Tirumala Restaurants, Tirupati",
+    "area": "tirumala",
+    "sourceUrl": "https://www.zomato.com/tirupati/tirumala-restaurants/south-indian"
+  },
+  "query": "\"Tirumala Restaurants, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.instagram.com/popular/best-restaurants-in-tirumala/?hl=en",
+      "name": "Best Restaurants In Tirumala",
+      "snippet": "... Tirumala Restaurants, Tirupati Restaurants, TTD Tirumala, Tirumala Food Places, Tirupati Food Vlog. * Navivdeyam Restaurant * Navivdeyam Restaurant Tirumala ... Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tirumala-restaurants",
+      "name": "Tirumala Restaurants, Tirupati",
+      "snippet": "Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Pure Veg ... Tirumala Restaurants, Tirupati . Restaurant Card. ₹160 OFF. Govinda's ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tirumala-restaurants/bakery",
+      "name": "Tirumala Restaurants, Tirupati",
+      "snippet": "Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. 1. Filters. Bakery. Tirumala Restaurants, Tirupati . Restaurant Card · Sree Kafe. 4.0. Fast Food, ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/61568616722720/videos/price-kocham-akkavu-but-tasty-baganey-undi-navivdeyam-restaurant-ttd-tirumala-fo/2533013170506644",
+      "name": "Price kocham akkavu but tasty baganey undi Navivdeyam",
+      "snippet": "... Tirumala Restaurants, Tirupati Restaurants, TTD Tirumala, Tirumala ... Every Tirupati trip deserves a delicious meal Tirupati food, Tirupati lunch ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/saravana-bhavan-pure-veg-restaurant-tirumala",
+      "name": "Saravana Bhavan Pure Veg Restaurant - Tirumala",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Tirumala restaurants, Best Tirumala restaurants, Tirupati City restaurants, in Tirupati , near me, in Tirumala ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirumala Restaurants, Tirupati :: Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Pure Veg ... Tirumala Restaurants, Tirupati . Restaurant Card. ₹160 OFF. Govinda's ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

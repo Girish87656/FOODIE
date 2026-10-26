@@ -1,0 +1,648 @@
+{
+  "task": "TIR-3c OFFICIAL source pages sweep",
+  "userAgent": "FOODIE-Research/1.0 (place-discovery-audit)",
+  "accessedOn": "2026-10-26",
+  "normalization": "verbatimQuote windows are cut from page visible text after removing tags/scripts, unescaping HTML entities and collapsing whitespace; wording untouched. quote=null means the name string was not located (nothing invented).",
+  "selfCheck": [
+    {
+      "name": "Swami Pushkarini",
+      "foundInRawHtml": true,
+      "context": "e, there are many other places to visit and things to admire on the Tirumala hills. Some of the must visit places in Tirumala are Swami Pushkarini, Sri Bhu Varaha Swamy temple, Sri Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dha"
+    },
+    {
+      "name": "Sila Thoranam",
+      "foundInRawHtml": true,
+      "context": "e Swami Pushkarini, Sri Bhu Varaha Swamy temple, Sri Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens.</div> <"
+    },
+    {
+      "name": "Vaikuntha Teertham",
+      "foundInRawHtml": true,
+      "context": "s in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held"
+    },
+    {
+      "name": "SRI GOVINDARAJASWAMI TEMPLE",
+      "foundInRawHtml": true,
+      "context": "<td> <div id=\"id1\"> <tr> <td align=\"left\" valign=\"middle\"> <div style=\"float: left;\"> <div class=\"Pg-Heading\">SRI GOVINDARAJASWAMI TEMPLE</div> </div> </td> </tr> <tr> <td align=\"left\" valign=\"middle\"> <div style=\"float: left;\"> <div class=\"detail"
+    },
+    {
+      "name": "SRI KAPILESWARA SWAMY TEMPLE",
+      "foundInRawHtml": true,
+      "context": "<td> <div id=\"id5\"> <tr> <td align=\"left\" valign=\"middle\"> <div style=\"float: left;\"> <div class=\"Pg-Heading\">SRI KAPILESWARA SWAMY TEMPLE</div> </div> </td> </tr> <tr> <td align=\"left\" valign=\"middle\"> <div class=\"pg-sub-header\">History of Sri Kap"
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.tirumala.org/PlacesToVisit.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "places-to-visit.html",
+      "pageSizeBytes": 56815,
+      "note": "TTD official hub page 'Places to Visit'. Left-nav temple directory + section link to PlacesatTirumala.aspx.",
+      "extracted": [
+        {
+          "name": "Places in and around Tirumala",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "verbatimQuote": "pilgrims, there is a wide choice of places to visit. Places in and around Tirumala Other Temples Places in and around Tirupati Package Tours Other Links : Festivals Advance Booking"
+        },
+        {
+          "name": "Sri Bhu Varaha Swamy Temple",
+          "hrefOrDetail": "left-nav heading 'At Tirumala' (no own href on this page; block links: https://www.tirumala.org/Varaha_TempleLegend.aspx)",
+          "verbatimQuote": "Kalyanam How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple"
+        },
+        {
+          "name": "Sri Bedi Anjaneya Swamy Temple",
+          "hrefOrDetail": "left-nav heading 'At Tirumala' (no own href on this page; block links: https://www.tirumala.org/Anjaneya_TempleLegend.aspx)",
+          "verbatimQuote": "Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At"
+        },
+        {
+          "name": "Sri Padmavathi Ammavari Temple",
+          "hrefOrDetail": "left-nav heading 'At Tiruchanoor' (no own href on this page; block links: https://www.tirumala.org/TemplesAtTiruchanoor.aspx)",
+          "verbatimQuote": "Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi"
+        },
+        {
+          "name": "Sri Govindarajaswami Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1",
+          "verbatimQuote": "Ammavari Temple Temple Legend Arjitha Sevas More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama"
+        },
+        {
+          "name": "Srivari Padalamandapam Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id2",
+          "verbatimQuote": "Legend Arjitha Sevas More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama Swamy Temple more.."
+        },
+        {
+          "name": "Sri Lakshmi Narayana Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id3",
+          "verbatimQuote": "More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama Swamy Temple more.. Piligrim Services Darshan"
+        },
+        {
+          "name": "Sri Vinayaka Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id4",
+          "verbatimQuote": "Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama Swamy Temple more.. Piligrim Services Darshan Sarvadarshan Special Entry Darshan Divya"
+        },
+        {
+          "name": "Sri Kapliswaraswamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id5",
+          "verbatimQuote": "Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama Swamy Temple more.. Piligrim Services Darshan Sarvadarshan Special Entry Darshan Divya Darshan (for pedestrians) Special"
+        },
+        {
+          "name": "Sri Kodandarama Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id6",
+          "verbatimQuote": "Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama Swamy Temple more.. Piligrim Services Darshan Sarvadarshan Special Entry Darshan Divya Darshan (for pedestrians) Special Darshan for Physically"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "temples-at-tirupati.html",
+      "pageSizeBytes": 75393,
+      "note": "TTD official page: 6 main TTD-managed Tirupati temples (anchors id1-id6) + 16-18 numbered sub-temples in the Govindarajaswami premises.",
+      "extracted": [
+        {
+          "name": "Sri Govindarajaswami Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1..id6 main sections",
+          "verbatimQuote": "Ammavari Temple Temple Legend Arjitha Sevas More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama"
+        },
+        {
+          "name": "Srivari Padala Mandapam, Alipiri",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1..id6 main sections",
+          "verbatimQuote": "5/- per head 7. Quick Dharshan Rs 20/- per head SRIVARI PADALA MANDAPAM, ALIPIRI The Srivari Padalamandapam temple located at Alipiri-the Gate Way to Tirumala temple, is under administrative control"
+        },
+        {
+          "name": "Sri Lakshmi Narayana Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1..id6 main sections",
+          "verbatimQuote": "More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy Temple Sri Vinayaka Swamy Temple Sri Kapliswaraswamy Temple Sri Kodandarama Swamy Temple more.. Piligrim Services Darshan"
+        },
+        {
+          "name": "Sri Vinayaka Swamy Temple, 2nd Ghat Road",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1..id6 main sections",
+          "verbatimQuote": "- 7.30 PM to 8.00 PM – Rs.10.00 per head SRI VINAYAKA SWAMY TEMPLE, 2nd GHAT ROAD This is also a sub-temple of Srivari Padalamandapam, Alipiri. And pilgirms who reach"
+        },
+        {
+          "name": "Sri Kapileswara Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1..id6 main sections",
+          "verbatimQuote": "6.00 AM to 7.00 PM – Rs. 50.00 per one SRI KAPILESWARA SWAMY TEMPLE History of Sri Kapileswara Swamy Temple According to mythology, this temple derived its name from Maharshi"
+        },
+        {
+          "name": "Sri Kodanda Ramaswamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx#id1..id6 main sections",
+          "verbatimQuote": "You can book for Seva well in advance through ttdevasthanams.ap.gov.in SRI KODANDA RAMASWAMY TEMPLE Sri Kodandarama Swamy Temple is one of the local temples situated in heart of Tirupati city"
+        },
+        {
+          "name": "Sri Partha Sarathi Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "can book for Seva well in advance through ttdevasthanams.ap.gov.in 01. Sri Partha Sarathi Swamy Temple. 02 Sri Kalyana Venkateswara Swamy Temple. 03 Sri Choodikudutha Nachiyar Ammavari Temple(SriAndal) 04. Sri Salai"
+        },
+        {
+          "name": "Sri Kalyana Venkateswara Swamy Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "advance through ttdevasthanams.ap.gov.in 01. Sri Partha Sarathi Swamy Temple. 02 Sri Kalyana Venkateswara Swamy Temple. 03 Sri Choodikudutha Nachiyar Ammavari Temple(SriAndal) 04. Sri Salai Nachiyar Ammavari Temple(Sri Pundarikavalli Temple) 05."
+        },
+        {
+          "name": "Sri Choodikudutha Nachiyar Ammavari Temple(SriAndal)",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Sarathi Swamy Temple. 02 Sri Kalyana Venkateswara Swamy Temple. 03 Sri Choodikudutha Nachiyar Ammavari Temple(SriAndal) 04. Sri Salai Nachiyar Ammavari Temple(Sri Pundarikavalli Temple) 05. Sri Bhasyakarla vari Temple 06. Sri"
+        },
+        {
+          "name": "Sri Salai Nachiyar Ammavari Temple(Sri Pundarikavalli Temple)",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Venkateswara Swamy Temple. 03 Sri Choodikudutha Nachiyar Ammavari Temple(SriAndal) 04. Sri Salai Nachiyar Ammavari Temple(Sri Pundarikavalli Temple) 05. Sri Bhasyakarla vari Temple 06. Sri Anajaneya swamy Temple near(opposite) Dwajasthambham 07."
+        },
+        {
+          "name": "Sri Bhasyakarla vari Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Temple(SriAndal) 04. Sri Salai Nachiyar Ammavari Temple(Sri Pundarikavalli Temple) 05. Sri Bhasyakarla vari Temple 06. Sri Anajaneya swamy Temple near(opposite) Dwajasthambham 07. Sri Thirumangai Alwar Temple 08. Sri Kurath Alwar"
+        },
+        {
+          "name": "Sri Anajaneya swamy Temple near(opposite) Dwajasthambham",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Ammavari Temple(Sri Pundarikavalli Temple) 05. Sri Bhasyakarla vari Temple 06. Sri Anajaneya swamy Temple near(opposite) Dwajasthambham 07. Sri Thirumangai Alwar Temple 08. Sri Kurath Alwar Temple 09. Sri Madhurakavi and"
+        },
+        {
+          "name": "Sri Thirumangai Alwar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "vari Temple 06. Sri Anajaneya swamy Temple near(opposite) Dwajasthambham 07. Sri Thirumangai Alwar Temple 08. Sri Kurath Alwar Temple 09. Sri Madhurakavi and Ananda Alwar Temple 10. Sri Chakrathalwar Temple"
+        },
+        {
+          "name": "Sri Kurath Alwar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "swamy Temple near(opposite) Dwajasthambham 07. Sri Thirumangai Alwar Temple 08. Sri Kurath Alwar Temple 09. Sri Madhurakavi and Ananda Alwar Temple 10. Sri Chakrathalwar Temple 11. Sri Mudal Alwar Temple"
+        },
+        {
+          "name": "Sri Madhurakavi and Ananda Alwar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Sri Thirumangai Alwar Temple 08. Sri Kurath Alwar Temple 09. Sri Madhurakavi and Ananda Alwar Temple 10. Sri Chakrathalwar Temple 11. Sri Mudal Alwar Temple 12. Sri Manavala Mahamuni Temple"
+        },
+        {
+          "name": "Sri Chakrathalwar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Alwar Temple 09. Sri Madhurakavi and Ananda Alwar Temple 10. Sri Chakrathalwar Temple 11. Sri Mudal Alwar Temple 12. Sri Manavala Mahamuni Temple 13. Sri Vedantha Desikar Temple 14. Sri"
+        },
+        {
+          "name": "Sri Mudal Alwar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Madhurakavi and Ananda Alwar Temple 10. Sri Chakrathalwar Temple 11. Sri Mudal Alwar Temple 12. Sri Manavala Mahamuni Temple 13. Sri Vedantha Desikar Temple 14. Sri Anjaneya Swamy Vari Temple"
+        },
+        {
+          "name": "Sri Manavala Mahamuni Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "10. Sri Chakrathalwar Temple 11. Sri Mudal Alwar Temple 12. Sri Manavala Mahamuni Temple 13. Sri Vedantha Desikar Temple 14. Sri Anjaneya Swamy Vari Temple 15. Sri Nammalwar Temple 16."
+        },
+        {
+          "name": "Sri Vedantha Desikar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Sri Mudal Alwar Temple 12. Sri Manavala Mahamuni Temple 13. Sri Vedantha Desikar Temple 14. Sri Anjaneya Swamy Vari Temple 15. Sri Nammalwar Temple 16. Sri Sanjeevaraya swamy Temple( Mattam"
+        },
+        {
+          "name": "Sri Anjaneya Swamy Vari Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Sri Manavala Mahamuni Temple 13. Sri Vedantha Desikar Temple 14. Sri Anjaneya Swamy Vari Temple 15. Sri Nammalwar Temple 16. Sri Sanjeevaraya swamy Temple( Mattam Anjaneya Swamy Temple) 17. Sri"
+        },
+        {
+          "name": "Sri Nammalwar Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Vedantha Desikar Temple 14. Sri Anjaneya Swamy Vari Temple 15. Sri Nammalwar Temple 16. Sri Sanjeevaraya swamy Temple( Mattam Anjaneya Swamy Temple) 17. Sri Tirumala Nambi Sannidhi 18. Sri Lakshmi"
+        },
+        {
+          "name": "Sri Sanjeevaraya swamy Temple( Mattam Anjaneya Swamy Temple)",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Sri Anjaneya Swamy Vari Temple 15. Sri Nammalwar Temple 16. Sri Sanjeevaraya swamy Temple( Mattam Anjaneya Swamy Temple) 17. Sri Tirumala Nambi Sannidhi 18. Sri Lakshmi Narayana Swamy Temple, G.S."
+        },
+        {
+          "name": "Sri Tirumala Nambi Sannidhi",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "16. Sri Sanjeevaraya swamy Temple( Mattam Anjaneya Swamy Temple) 17. Sri Tirumala Nambi Sannidhi 18. Sri Lakshmi Narayana Swamy Temple, G.S. Mada Street, Tirupati(taken over temple) Temple Legend When South"
+        },
+        {
+          "name": "Sri Lakshmi Narayana Swamy Temple, G.S. Mada Street, Tirupati(taken over temple)",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx — numbered sub-temple list inside Sri Govindarajaswami Temple premises (no individual href)",
+          "verbatimQuote": "Mattam Anjaneya Swamy Temple) 17. Sri Tirumala Nambi Sannidhi 18. Sri Lakshmi Narayana Swamy Temple, G.S. Mada Street, Tirupati(taken over temple) Temple Legend When South India was invaded by Muslim"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "home.html",
+      "pageSizeBytes": 217085,
+      "note": "TTD homepage: fetched for nav discovery. Body is news/announcements; value = nav links to other official place/temple/accommodation pages. Nav labels quoted; 'name' here = nav label, not a place claim.",
+      "extracted": [
+        {
+          "name": "Places to Visit",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesToVisit.aspx",
+          "verbatimQuote": "How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple"
+        },
+        {
+          "name": "Places to Visit Around Tirumala",
+          "hrefOrDetail": "https://www.tirumala.org/Places to see around Tirumala.aspx",
+          "verbatimQuote": "How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple"
+        },
+        {
+          "name": "Sri Govindarajaswami Temple",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
+          "verbatimQuote": "More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi Narayana Swamy"
+        },
+        {
+          "name": "More Temples",
+          "hrefOrDetail": "https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+          "verbatimQuote": "Temple Legend Arjitha Sevas More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple"
+        },
+        {
+          "name": "more..",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx",
+          "verbatimQuote": "Sri Kodandarama Swamy Temple more.. Piligrim Services Darshan Sarvadarshan Special Entry Darshan Divya Darshan"
+        },
+        {
+          "name": "Accommodation",
+          "hrefOrDetail": "https://www.tirumala.org/AccommodationAtTirumala.aspx",
+          "verbatimQuote": "Annual or Periodical Sevas Accommodation at Tirumala Accommodation Advance Reservation Current Booking Rest Houses"
+        },
+        {
+          "name": "Accommodation",
+          "hrefOrDetail": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
+          "verbatimQuote": "Annual or Periodical Sevas Accommodation at Tirumala Accommodation Advance Reservation Current Booking Rest Houses"
+        },
+        {
+          "name": "Rest Houses",
+          "hrefOrDetail": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Advance Reservation Current Booking Rest Houses Accommodation at Tirupati Accommodation Transport To Reach Tirupati"
+        },
+        {
+          "name": "TTD Kalyana Mandapams",
+          "hrefOrDetail": "https://www.tirumala.org/ttdklmps.aspx",
+          "verbatimQuote": "Books SVETA Voluntary Services TTD Kalyana Mandapams HMV Active Tenders Archives Information : Home"
+        },
+        {
+          "name": "Package Tours",
+          "hrefOrDetail": "https://www.tirumala.org/PackageTours.aspx",
+          "verbatimQuote": "Return Journey From Tirumala Package Tours Railway Booking Office Automobile Clinic Others Anna Prasadam"
+        },
+        {
+          "name": "S.V. Museum",
+          "hrefOrDetail": "https://www.tirumala.org/S.V. Museum.aspx",
+          "verbatimQuote": "Venkateswara Bhakthi Channel Brahmotsavams S.V. Museum TTD Management Administration TTD Trust Board Board Resolutions"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "places-around-tirumala.html",
+      "pageSizeBytes": 54108,
+      "note": "TTD official 'Places To Visit Around Tirumala': 13 must-visit places + 11 named teerthams, both as prose lists (no per-place links).",
+      "extracted": [
+        {
+          "name": "Swami Pushkarini",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "hills. Some of the must visit places in Tirumala are Swami Pushkarini, Sri Bhu Varaha Swamy temple, Sri Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam,"
+        },
+        {
+          "name": "Sri Bhu Varaha Swamy temple",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Kalyanam How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple"
+        },
+        {
+          "name": "Sri Hathiramjee Mutt",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "in Tirumala are Swami Pushkarini, Sri Bhu Varaha Swamy temple, Sri Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls,"
+        },
+        {
+          "name": "Sri Bedi Anjaneya Swamy temple",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At"
+        },
+        {
+          "name": "Srivari Sikhara Darshanam",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Swamy temple, Sri Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams"
+        },
+        {
+          "name": "Sila Thoranam",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several"
+        },
+        {
+          "name": "Dharmagiri",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in"
+        },
+        {
+          "name": "Narayangiri",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in Tirumala,"
+        },
+        {
+          "name": "Papavinasanam",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in Tirumala, some"
+        },
+        {
+          "name": "Akasa Ganga water falls",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in Tirumala, some of"
+        },
+        {
+          "name": "Temple Museum",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Darshanam, Sila Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in Tirumala, some of them are Pandava Teertham,"
+        },
+        {
+          "name": "Asthana Mandapams",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Thoranam, Dharmagiri, Narayangiri, Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham,"
+        },
+        {
+          "name": "Gogarbham Gardens",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Papavinasanam, Akasa Ganga water falls, Temple Museum, Asthana Mandapams and Gogarbham Gardens. Theeerthams There are several teerthams in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna"
+        },
+        {
+          "name": "Pandava Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "There are several teerthams in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham,"
+        },
+        {
+          "name": "Kumaradhara Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "several teerthams in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana"
+        },
+        {
+          "name": "Tumbhuru Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important"
+        },
+        {
+          "name": "Ramakrishna Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that"
+        },
+        {
+          "name": "Chakra Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held"
+        },
+        {
+          "name": "Vaikuntha Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held at the"
+        },
+        {
+          "name": "Sesha Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held at the teerthams are"
+        },
+        {
+          "name": "Sitamma Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held at the teerthams are -Kumaradhara Magha"
+        },
+        {
+          "name": "Pasupu Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held at the teerthams are -Kumaradhara Magha Pournami, Ramakrishna"
+        },
+        {
+          "name": "Jupali Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held at the teerthams are -Kumaradhara Magha Pournami, Ramakrishna Pushya Pournami"
+        },
+        {
+          "name": "Sanaka Sanandana Teertham",
+          "hrefOrDetail": "prose list on page (no individual href); page: https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "verbatimQuote": "Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held at the teerthams are -Kumaradhara Magha Pournami, Ramakrishna Pushya Pournami Tumbhuru Phalguna"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/AccommodationAtTirumala.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "accommodation-tirumala.html",
+      "pageSizeBytes": 57021,
+      "note": "TTD official accommodation page for Tirumala: 4 named guest-house/cottage AREAS + free choultries & dormitory halls described in prose. No individual named choultry list on this page.",
+      "extracted": [
+        {
+          "name": "Sri Padmavathi Guest House area - Tirumala",
+          "hrefOrDetail": "accommodation category area (no individual href)",
+          "verbatimQuote": "200% after 48 hours, 400% after 72 hours. Categories > Sri Padmavathi Guest House area - Tirumala > Sri Venkateswara Guest House area - Tirumala > Varahaswami Guest House, Rambagicha,"
+        },
+        {
+          "name": "Sri Venkateswara Guest House area - Tirumala",
+          "hrefOrDetail": "accommodation category area (no individual href)",
+          "verbatimQuote": "Categories > Sri Padmavathi Guest House area - Tirumala > Sri Venkateswara Guest House area - Tirumala > Varahaswami Guest House, Rambagicha, HUDC, Travellers Bungalows Cottages Area > Marriage Halls"
+        },
+        {
+          "name": "Varahaswami Guest House, Rambagicha, HUDC, Travellers Bungalows Cottages Area",
+          "hrefOrDetail": "accommodation category area (no individual href)",
+          "verbatimQuote": "Tirumala > Sri Venkateswara Guest House area - Tirumala > Varahaswami Guest House, Rambagicha, HUDC, Travellers Bungalows Cottages Area > Marriage Halls and Cottages Free There are several large choultries"
+        },
+        {
+          "name": "Marriage Halls and Cottages",
+          "hrefOrDetail": "accommodation category area (no individual href)",
+          "verbatimQuote": "Varahaswami Guest House, Rambagicha, HUDC, Travellers Bungalows Cottages Area > Marriage Halls and Cottages Free There are several large choultries with free rooms for families to stay in reasonable comfort."
+        },
+        {
+          "name": "Free choultries (category)",
+          "hrefOrDetail": "accommodation type — prose; contact Central Reception Office, near the bus stand in Tirumala",
+          "verbatimQuote": "Travellers Bungalows Cottages Area > Marriage Halls and Cottages Free There are several large choultries with free rooms for families to stay in reasonable comfort. Electricity and water are provided"
+        },
+        {
+          "name": "Dormitory Halls (category)",
+          "hrefOrDetail": "accommodation type — prose (TTD dormitory halls)",
+          "verbatimQuote": "the bus stand in Tirumala. Pilgrims can also rest in Dormitory Halls provided by TTD. Other Links : Festivals Advance Booking e-Darshan Counters CDs Video Cassettes SriVenkateshwara Recording Project Alwar"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "accommodation-tirupati.html",
+      "pageSizeBytes": 67878,
+      "note": "TTD official accommodation page for Tirupati: 7 named choultries/guest houses with contact + rates (Rs.50-1300) in the page tables.",
+      "extracted": [
+        {
+          "name": "Sreenivasam Complex",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "Accommodation at Tirupati On Payment Name Contact Rate Per Day Sreenivasam Complex (Opposite to R.T.C bus Stand in Tirupati) The Superintendent, Phone: 0877-2264541 Non A.C.Rooms : Rs.200.00 A/C Rooms :"
+        },
+        {
+          "name": "Madhavam Guest House",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "Rs.200.00 A/C Rooms : Rs.400.00 A/C Deluxe Rooms : Rs.600.00 Madhavam Guest House (adjacent to Srinivasm complex in Tirupati) The Superintendent, Phone:0877-2264541 A.C.Ordinary Suits: Rs. 800.00 A.C.Deluxe Suits: Rs.1,000.00 Only"
+        },
+        {
+          "name": "Sri Venkateswara Dharmasala",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "800.00 A.C.Deluxe Suits: Rs.1,000.00 Only Current Booking (No Advance Booking) Sri Venkateswara Dharmasala (opposite the Tirupati Railway Station) The Superintendent Phone: 0877-2225144 Single : Rs.50.00 Double : Rs.100.00 Four Bed"
+        },
+        {
+          "name": "Sri Venkateswara Guest House",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "Single : Rs.50.00 Double : Rs.100.00 Four Bed : Rs.100.00 Sri Venkateswara Guest House (to the north of the Tirupati Railway Station) (Non-AC) Deputy Executive Officer (Reception) Phone : 0877-2264507"
+        },
+        {
+          "name": "Sri Govindaraja Dharmasala (2ndNC)",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "Executive Officer (Reception) Phone : 0877-2264507 51 rooms @ Rs.150.00 Sri Govindaraja Dharmasala (2ndNC) The Superintendent Central Reception Office (at the respective Dharmasala) Tirupati Free Locker facility and rooms @50.00"
+        },
+        {
+          "name": "Sri Kodanda rama Swamy Dharmasala (3rdNC)",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "the respective Dharmasala) Tirupati Free Locker facility and rooms @50.00 Sri Kodanda rama Swamy Dharmasala (3rdNC) The Superintendent Central Reception Office (at the respective Dharmasala) Tirupati Free Locker facility and"
+        },
+        {
+          "name": "Vishnu Nivasam",
+          "hrefOrDetail": "named paid TTD accommodation at Tirupati (rates table on page; no individual href)",
+          "verbatimQuote": "the respective Dharmasala) Tirupati Free Locker facility and rooms @50.00 Vishnu Nivasam Name of the Choultry / Guest House Total No.of Rooms Allotment to Pilgrims L.F. Charges per Day each"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "temples-at-tiruchanoor.html",
+      "pageSizeBytes": 75302,
+      "note": "TTD official Tiruchanoor (Sri Padmavathi) page: 2 sub-shrines inside the Padmavathi compound + Suryanarayana (opposite Padma Sarovaram) + 2 outside temples under SRI PAT (Appalayagunta, Thondamanadu).",
+      "extracted": [
+        {
+          "name": "Sri Krishna Swamy Temple, (Alagiyaperumal Shrine),Tiruchanoor",
+          "hrefOrDetail": "section heading on page (no individual href); page: https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+          "verbatimQuote": "Don'ts FAQs Dress Code Contact US Sub-temples at Tiruchanoor Premises Sri Krishna Swamy Temple, (Alagiyaperumal Shrine),Tiruchanoor This is the earliest of the shrines found inside the compound of Sri Padmavathi"
+        },
+        {
+          "name": "Sri Sundaraja Swamy Temple, (Varada Raja Shrine), Tiruchanoor",
+          "hrefOrDetail": "section heading on page (no individual href); page: https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+          "verbatimQuote": "Krishna in Kaliya mardana pose and Sri Lakshmi Narasimha Swamy. SRI SUNDARAJA SWAMY TEMPLE, (VARADA RAJA SHRINE), TIRUCHANOOR This shrine is found inside the compound of Sri Padmavathi Ammavari Temple"
+        },
+        {
+          "name": "Sri Suryanarayana Swamy Temple",
+          "hrefOrDetail": "section heading on page (no individual href); page: https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+          "verbatimQuote": "every year in the month of July for three days. SRI SURYANARAYANA SWAMY TEMPLE The one of its kind Lord Sri Suryanarayana Swamy temple is located opposite to Padma Saraovaram-the"
+        },
+        {
+          "name": "Sri Prasanna Venkateswara Swamy Temple, Appalayagunta",
+          "hrefOrDetail": "section heading on page (no individual href); page: https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+          "verbatimQuote": "advance through ttdevasthanams.ap.gov.in OUTSIDE TEMPLES FUNCTIONING UNDER - (SRI PAT),TIRUCHANOOR SRI PRASANNA VENKATESWARA SWAMY TEMPLE, APPALAYAGUNTA The Prasanna Venkateswara Swamy temple is located at a distance of about 16km, from"
+        },
+        {
+          "name": "Sridevi Bhudevi Sametha Venkateswara Swamy Temple, Thondamanadu",
+          "hrefOrDetail": "section heading on page (no individual href); page: https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
+          "verbatimQuote": "Sravana Nakshatram (Every Month) Kalyanotsavam 11:00 AM to 12.30 PM SRIDEVI BHUDEVI SAMETHA VENKATESWARA SWAMY TEMPLE, THONDAMANADU This historical temple was constructed by Sri Thondaman Chakravarthy, king of “Thondamandalam” and"
+        },
+        {
+          "name": "Sri Padmavathi Ammavari Temple",
+          "hrefOrDetail": "context mention — sub-shrines described as inside its compound at Tiruchanoor",
+          "verbatimQuote": "Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At Tirupathi Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "incredibleindia-tirupati.html",
+      "pageSizeBytes": 592196,
+      "note": "Ministry of Tourism 'Incredible India' Tirupati destination page. NOT a Next.js shell as anticipated: server-rendered HTML (AEM path content/incredible-india-v2; 0 self.__next_f chunks, 0 __NEXT_DATA__) — full text + 10 attraction card links extractable.",
+      "extracted": [
+        {
+          "name": "Padmavathi Temple",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/padmavathi-temple",
+          "verbatimQuote": "the embrace of the divine. Attractions worth a thousand stories Padmavathi Temple Explore Silathoranam Explore Sri Govindaraja Swamy Temple Explore Chandragiri Fort Explore Sri Venkateswara National Park Explore Sri Venkateswara"
+        },
+        {
+          "name": "Silathoranam",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/silathoranam",
+          "verbatimQuote": "history of the region. Don't miss the spellbinding sights of Silathoranam, a stunning geological formation dating back 1,500 million years, and the serene Chakra Theertham sacred waterfall surrounded by shrines."
+        },
+        {
+          "name": "Sri Govindaraja Swamy Temple",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-govindaraja-swamy-temple",
+          "verbatimQuote": "Attractions worth a thousand stories Padmavathi Temple Explore Silathoranam Explore Sri Govindaraja Swamy Temple Explore Chandragiri Fort Explore Sri Venkateswara National Park Explore Sri Venkateswara Swamy Vaari Temple Explore Srikalahasti"
+        },
+        {
+          "name": "Chandragiri Fort",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort",
+          "verbatimQuote": "serene Chakra Theertham sacred waterfall surrounded by shrines. The majestic Chandragiri Fort is another marvel to visit, with its beautiful architecture and historical signifcance that captivates everyone. You must also"
+        },
+        {
+          "name": "Sri Venkateswara National Park",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-venkateswara-national-park",
+          "verbatimQuote": "Park Mount Manipur National Park Andhra Pradesh Kondakarla Bird Sanctuary Sri Venkateswara National Park Veerapuram Bird Sanctuary Arunachal Pradesh Namdapha National Park Assam Dibru Saikhowa National Park Delhi National Zoological"
+        },
+        {
+          "name": "Sri Venkateswara Swamy Vaari Temple",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-venkateswara-swamy-vaari-temple",
+          "verbatimQuote": "Temple Explore Chandragiri Fort Explore Sri Venkateswara National Park Explore Sri Venkateswara Swamy Vaari Temple Explore Srikalahasti Temple Explore Talakona Waterfall Explore Kailasakona Waterfall Explore Regional Science Centre Explore Previous"
+        },
+        {
+          "name": "Srikalahasti Temple",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/srikalahasti-temple",
+          "verbatimQuote": "Venkateswara National Park Explore Sri Venkateswara Swamy Vaari Temple Explore Srikalahasti Temple Explore Talakona Waterfall Explore Kailasakona Waterfall Explore Regional Science Centre Explore Previous Next Discover more A trove of"
+        },
+        {
+          "name": "Talakona Waterfall",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/talakona-waterfall",
+          "verbatimQuote": "the opportunity to pay homage to the Supreme Lord Venkateswara. Talakona Waterfall, Tirupati A city of mysterious origins The temple of Lord Venkateshwara has a mysterious origin, with various kingdoms"
+        },
+        {
+          "name": "Kailasakona Waterfall",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/kailasakona-waterfall",
+          "verbatimQuote": "Swamy Vaari Temple Explore Srikalahasti Temple Explore Talakona Waterfall Explore Kailasakona Waterfall Explore Regional Science Centre Explore Previous Next Discover more A trove of fascinating facts A trove of fascinating"
+        },
+        {
+          "name": "Regional Science Centre",
+          "hrefOrDetail": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/regional-science-centre",
+          "verbatimQuote": "Explore Srikalahasti Temple Explore Talakona Waterfall Explore Kailasakona Waterfall Explore Regional Science Centre Explore Previous Next Discover more A trove of fascinating facts A trove of fascinating facts Sri Venkateswara"
+        },
+        {
+          "name": "Srivari Padalu",
+          "hrefOrDetail": "narrative mention only (no link on this page)",
+          "verbatimQuote": "and historical signifcance that captivates everyone. You must also visit Srivari Padalu, the place where legend claims Lord Venkateswara first set foot on Earth, and experience the grandeur of the"
+        },
+        {
+          "name": "Akasaganga Theertham",
+          "hrefOrDetail": "narrative mention only (no link on this page)",
+          "verbatimQuote": "completed in 1130 CE. Afterwards, explore the breathtaking sight of Akasaganga Theertham and seek spiritual purification at Papavinasam. Also, you can embark on a spiritual quest at the revered Shaivite"
+        },
+        {
+          "name": "Papavinasam",
+          "hrefOrDetail": "narrative mention only (no link on this page)",
+          "verbatimQuote": "breathtaking sight of Akasaganga Theertham and seek spiritual purification at Papavinasam. Also, you can embark on a spiritual quest at the revered Shaivite pilgrimage site of Srikalahasti and experience its"
+        },
+        {
+          "name": "Chakra Theertham",
+          "hrefOrDetail": "narrative mention only — 'sacred waterfall surrounded by shrines'",
+          "verbatimQuote": "geological formation dating back 1,500 million years, and the serene Chakra Theertham sacred waterfall surrounded by shrines. The majestic Chandragiri Fort is another marvel to visit, with its beautiful architecture"
+        },
+        {
+          "name": "Tirumala Temple",
+          "hrefOrDetail": "narrative mention only",
+          "verbatimQuote": "offering One of the most sacred rituals performed at the Tirumala Temple is the offering of \"Tirupati Laddu,\" a delectable sweetmeat made from gram flour, ghee, sugar, and dry fruits."
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://tirupati.ap.gov.in/",
+      "httpStatus": 0,
+      "accessedOn": "2026-10-26",
+      "page": "(not saved — connection failed)",
+      "pageSizeBytes": 0,
+      "note": "LIMITATION: district official site unreachable from sandbox network. Single curl attempt (per task directive): curl -sSL exited with http_code=000 (connection could not be established). Not retried further. No content recorded from it.",
+      "extracted": []
+    },
+    {
+      "sourceUrl": "https://tourism.ap.gov.in/",
+      "httpStatus": 0,
+      "accessedOn": "2026-10-26",
+      "page": "(not saved — connection failed)",
+      "pageSizeBytes": 0,
+      "note": "LIMITATION: AP Tourism official site unreachable from sandbox network. Single curl attempt (per task directive): http_code=000. Not retried further. No content recorded from it.",
+      "extracted": []
+    }
+  ]
+}

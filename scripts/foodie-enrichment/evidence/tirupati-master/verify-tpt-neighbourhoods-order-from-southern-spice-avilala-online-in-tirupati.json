@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Order from Southern Spice - Avilala online in Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/southern-spice-avilala-bypass-road-tirupati-dominos-rest111199"
+  },
+  "query": "\"Order from Southern Spice - Avilala online in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/tirupati/southern-spice-avilala-bypass-road-tirupati-dominos-rest111199",
+      "name": "Order from Southern Spice - Avilala online in Tirupati",
+      "snippet": "Customers can order from Southern Spice - Avilala … s 02, Surabi Gardens, 200 Feet, Bypass Road, Tirupati .",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Order from Southern Spice - Avilala online in Tirupati :: Customers can order from Southern Spice - Avilala … s 02, Surabi Gardens, 200 Feet, Bypass Road, Tirupati .",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

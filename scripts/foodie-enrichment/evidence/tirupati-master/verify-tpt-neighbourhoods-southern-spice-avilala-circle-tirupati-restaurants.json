@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Southern Spice Avilala Circle - Tirupati Restaurants",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297587-d15743006-Reviews-Southern_Spice_Avilala_Circle-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"Southern Spice Avilala Circle - Tirupati Restaurants\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Southern Spice Avilala Circle - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Southern Spice Avilala Circle - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26"
+}

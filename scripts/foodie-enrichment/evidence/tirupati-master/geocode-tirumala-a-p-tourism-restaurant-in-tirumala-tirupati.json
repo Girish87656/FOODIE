@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "A P Tourism Restaurant in Tirumala,Tirupati",
+    "area": "tirumala"
+  },
+  "query": "A P Tourism Restaurant in Tirumala,Tirupati, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-26"
+}

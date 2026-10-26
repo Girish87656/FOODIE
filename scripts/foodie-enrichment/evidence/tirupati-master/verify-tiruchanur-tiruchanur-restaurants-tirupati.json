@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tiruchanur Restaurants, Tirupati",
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.zomato.com/tirupati/tiruchanur-restaurants"
+  },
+  "query": "\"Tiruchanur Restaurants, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/tiruchanur-restaurants",
+      "name": "Tiruchanur Restaurants, Tirupati",
+      "snippet": "Tiruchanur Restaurants, Tirupati · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Madras Tiffin Centre · Hotel Padmavathi Sarvana Bhavan · Sathvik Fast Food. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tiruchanur-restaurants/biryani",
+      "name": "Tiruchanur Restaurants, Tirupati",
+      "snippet": "Tiruchanur Restaurants, Tirupati ; Appu Family Restaurant · Biryani, South Indian. ₹200 for one ; Lasa Food Court · Chinese, Mughlai, Kebab, North Indian, South ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tiruchanur-restaurants/street-food",
+      "name": "Tiruchanur Restaurants, Tirupati",
+      "snippet": "Tiruchanur Restaurants, Tirupati · Just Bake · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · VM Iyer's Home Made Foods · Aarish Food Hub · Cafe Manasa · Ramadevi ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tiruchanur-restaurants/arabian",
+      "name": "Tiruchanur Restaurants, Tirupati",
+      "snippet": "Tiruchanur Restaurants, Tirupati ; Nawaabs - An Arabic Restaurant. 3.7. Biryani, Arabic. ₹150 for one ; Barkaas Indo Arabic Restaurant. 3.7. Biryani, Mandi. ₹ ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/amrutha-vilas-tiruchanur/order",
+      "name": "Amrutha Vilas, Tiruchanur order online",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Tiruchanur restaurants, Best Tiruchanur restaurants, Tirupati City restaurants, Quick Bites in Tirupati ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tiruchanur-restaurants/fast-food",
+      "name": "Tiruchanur Restaurants, Tirupati",
+      "snippet": "Tiruchanur Restaurants, Tirupati · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Di Andhra Tiffins · Kakinada Subbbayya Gari Hotel · Springs Hotel · Midhunam ...",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

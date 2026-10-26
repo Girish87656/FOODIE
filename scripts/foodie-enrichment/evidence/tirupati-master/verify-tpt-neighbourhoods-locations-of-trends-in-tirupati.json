@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Locations of Trends in Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Trends-Bhavani-Nagar/9999PX877-X877-230217091158-T8B2_BZDET/locations"
+  },
+  "query": "\"Locations of Trends in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Locations of Trends in Tirupati",
+      "snippet": "... PhotosCategories. Locations of Trends in Tirupati . TrendsIndira Nagar. Call. Trends. 4.0. TrendsBhavani Nagar. Call. Trends. 4.0. TrendsMunicipal Office Road. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Locations of Trends in Tirupati :: ... PhotosCategories. Locations of Trends in Tirupati . TrendsIndira Nagar. Call. Trends. 4.0. TrendsBhavani Nagar. Call. Trends. 4.0. TrendsMunicipal Office Road. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

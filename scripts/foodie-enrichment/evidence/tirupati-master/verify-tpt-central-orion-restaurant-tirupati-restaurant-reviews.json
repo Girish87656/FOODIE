@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "ORION RESTAURANT, Tirupati - Restaurant Reviews,",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297587-d15242957-Reviews-Orion_Restaurant-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"ORION RESTAURANT, Tirupati - Restaurant Reviews,\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297587-d15242957-Reviews-or15-Orion_Restaurant-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "ORION RESTAURANT, Tirupati - Restaurant Reviews,",
+      "snippet": "May 17, 2024 — ... Road Tirupati , Tirupati 517501 India. Call. Map ... ORION RESTAURANT, Tirupati - Restaurant Reviews , Photos & Phone Number - Tripadvisor. Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/Restaurant_Review-g297587-d15242957-Reviews-Orion_Restaurant-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "ORION RESTAURANT, Tirupati - Restaurant Reviews,",
+      "snippet": "... Road Tirupati , Tirupati 517501 India. Call. Map. Review. About ... ORION RESTAURANT, Tirupati - Restaurant Reviews , Phone Number & Photos - Tripadvisor. Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "ORION RESTAURANT, Tirupati - Restaurant Reviews, :: May 17, 2024 — ... Road Tirupati , Tirupati 517501 India. Call. Map ... ORION RESTAURANT, Tirupati - Restaurant Reviews , Photos & Phone Number - Tripadvisor. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

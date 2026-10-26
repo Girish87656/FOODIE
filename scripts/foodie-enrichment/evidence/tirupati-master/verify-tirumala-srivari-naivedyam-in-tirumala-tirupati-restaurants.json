@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Srivari Naivedyam in Tirumala,Tirupati - Restaurants",
+    "area": "tirumala",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Srivari-Naivedyam-Tirumala/9999PX877-X877-250213135636-R8L1_BZDET"
+  },
+  "query": "\"Srivari Naivedyam in Tirumala,Tirupati - Restaurants\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Srivari Naivedyam in Tirumala,Tirupati - Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Srivari Naivedyam in Tirumala,Tirupati - Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26"
+}

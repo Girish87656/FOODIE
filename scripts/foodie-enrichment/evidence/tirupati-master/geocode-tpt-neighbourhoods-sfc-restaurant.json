@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "SFC Restaurant",
+    "area": "tpt-neighbourhoods"
+  },
+  "query": "SFC Restaurant, Tirupati",
+  "lat": 13.6236886,
+  "lng": 79.4306379,
+  "displayName": "SFC Restaurant, 18-1-421, Srinivasa Flyover, Tirupathi Urban, Narayanapuram, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+  "osmType": "node/restaurant",
+  "areaConfirmed": true,
+  "note": null,
+  "retrievedOn": "2026-10-26"
+}

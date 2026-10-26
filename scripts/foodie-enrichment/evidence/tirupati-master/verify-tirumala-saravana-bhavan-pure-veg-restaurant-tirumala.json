@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Saravana Bhavan Pure Veg Restaurant - Tirumala",
+    "area": "tirumala",
+    "sourceUrl": "https://www.zomato.com/tirupati/saravana-bhavan-pure-veg-restaurant-tirumala"
+  },
+  "query": "\"Saravana Bhavan Pure Veg Restaurant - Tirumala\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Saravana Bhavan Pure Veg Restaurant - Tirumala\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Saravana Bhavan Pure Veg Restaurant - Tirumala\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26"
+}

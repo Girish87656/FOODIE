@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "Reviews of Southern Spice - Avilala, Tirumala, Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.zomato.com/tirupati/southern-spice-avilala-tirumala/reviews"
+  },
+  "query": "\"Reviews of Southern Spice - Avilala, Tirumala, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/southern-spice-avilala-tirumala/reviews",
+      "name": "Reviews of Southern Spice - Avilala, Tirumala, Tirupati",
+      "snippet": "see all unbiased reviews of Southern Spice - DINING 4.5 4,325 … 200 Feet Bypass Road, AvilalaCircle, generated reviews, ratings and photos",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/it/tirupati/southern-spice-avilala-tirumala/reviews?amp=1",
+      "name": "Reviews of Southern Spice - Avilala, Tirumala, Tirupati",
+      "snippet": "21/1B, Surabhi Garden, 200 Feet Bypass Road, AvilalaCircle, Chittoor Tirumala, Tirupati . Closed - Opens at 7am. Recensioni.",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Reviews of Southern Spice - Avilala, Tirumala, Tirupati :: see all unbiased reviews of Southern Spice - DINING 4.5 4,325 … 200 Feet Bypass Road, AvilalaCircle, generated reviews, ratings and photos",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

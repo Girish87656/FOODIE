@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Chillies Restaurant - Air Bypass Road online in Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/chillies-restaurant-air-bypass-road-air-bypass-road-tirupati-dominos-rest87108"
+  },
+  "query": "\"Chillies Restaurant - Air Bypass Road online in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/tirupati/chillies-restaurant-air-bypass-road-air-bypass-road-tirupati-dominos-rest87108",
+      "name": "Chillies Restaurant - Air Bypass Road online in Tirupati",
+      "snippet": "AIR Bypass Rd, Near TVS Showroom, STV Nagar, Tirupati , Andhra Pradesh 517501, India",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Chillies Restaurant - Air Bypass Road online in Tirupati :: AIR Bypass Rd, Near TVS Showroom, STV Nagar, Tirupati , Andhra Pradesh 517501, India",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Anandan Vasavi Vegetarian Restaurant Dining Reviews",
+    "area": "tirumala",
+    "sourceUrl": "https://www.zomato.com/tirupati/anandan-vasavi-vegetarian-restaurant-tirumala/reviews"
+  },
+  "query": "\"Anandan Vasavi Vegetarian Restaurant Dining Reviews\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/anandan-vasavi-vegetarian-restaurant-tirumala/reviews",
+      "name": "Anandan Vasavi Vegetarian Restaurant Dining Reviews",
+      "snippet": "Shanti Nagar, Tirumala Bypass Road, Chittoor, Opposite SBI Training Centre, Tirumala, Tirupati . Anandan Vasavi Vegetarian Restaurant Dining Reviews ... Tirupati ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Anandan Vasavi Vegetarian Restaurant Dining Reviews :: Shanti Nagar, Tirumala Bypass Road, Chittoor, Opposite SBI Training Centre, Tirumala, Tirupati . Anandan Vasavi Vegetarian Restaurant Dining Reviews ... Tirupati ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

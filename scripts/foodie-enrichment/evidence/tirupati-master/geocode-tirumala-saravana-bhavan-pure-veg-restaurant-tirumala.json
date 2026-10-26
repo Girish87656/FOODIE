@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Saravana Bhavan Pure Veg Restaurant - Tirumala",
+    "area": "tirumala"
+  },
+  "query": "Saravana Bhavan Pure Veg Restaurant - Tirumala, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-26"
+}

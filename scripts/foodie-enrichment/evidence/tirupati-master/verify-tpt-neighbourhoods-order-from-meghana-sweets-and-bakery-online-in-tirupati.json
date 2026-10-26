@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Order from Meghana Sweets And Bakery online in Tirupati",
+    "area": "tpt-neighbourhoods"
+  },
+  "query": "\"Order from Meghana Sweets And Bakery online in Tirupati\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-26",
+  "skipped": true
+}

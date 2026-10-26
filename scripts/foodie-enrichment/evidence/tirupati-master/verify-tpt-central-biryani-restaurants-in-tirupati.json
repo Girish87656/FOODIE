@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Biryani Restaurants in Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/restaurants/biryani"
+  },
+  "query": "\"Biryani Restaurants in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/restaurants/biryani",
+      "name": "Biryani Restaurants in Tirupati",
+      "snippet": "Biryani Restaurants in Tirupati · Appu Family Restaurant · Hyderabad Biryani House · Hoskote 4 AM Biryani · Nysa Kitchen Mumbai Wala · Star Food · Leo 9 Biryani House. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/biryani-dish-restaurants",
+      "name": "Best Biryani Restaurants In Tirupati 2026 | Order Online",
+      "snippet": "Explore The Best Biryani Restaurants In Tirupati . View Menus, Photos, Ratings, Reviews Or Order Online And Enjoy Mouth-watering Biryani.",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Biryani-Restaurants/nct-10047018",
+      "name": "Best Biryani Restaurants in Tirupati - Order Food Online",
+      "snippet": "Biryani Restaurants in Tirupati ; Address , D.No-1-425, Chittor Bypass Road, Tirupati Bazar, Tirupati - 517501 (Near Vakulamatha Temple), D.no: 13 , 7-936/6/1, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/paradise-biryani-tirupati",
+      "name": "Paradise Biryani Tirupati",
+      "snippet": "Paradise Biryani House and Spicy Paradise are two popular biryani restaurants in Tirupati ... My Biryani- Tirupati 9866131909 Address : Beside BNR Mall and KFC ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/61551118813366/posts/-new-spot-alert-in-tirupati-insane-opening-offers-sunday-buy-1-get-1-free-on-chi/122279505320037293",
+      "name": "Sunday: Buy 1 Get 1 FREE on Chicken Dum Biryani (Massive",
+      "snippet": "This post advertises a promotional offer on Biryani restaurants in Tirupati for April 17-19. The video showcases specific restaurant chains ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/ItsMyTirupathi/posts/enjoy-the-taste-of-donne-biriyani-first-ever-in-tirupatimayuka-family-restaurant/5179124378841238",
+      "name": "Enjoy the Taste of Donne Biriyani First ever in Tirupati!",
+      "snippet": "Address : Beside Ankura Hospital, Renigunta Road, Tirupati #Ad # tirupati ... Biryani restaurants in Tirupati for April 17-19. The video showcases ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Best Biryani Restaurants in Tirupati - Order Food Online :: Biryani Restaurants in Tirupati ; Address , D.No-1-425, Chittor Bypass Road, Tirupati Bazar, Tirupati - 517501 (Near Vakulamatha Temple), D.no: 13 , 7-936/6/1, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

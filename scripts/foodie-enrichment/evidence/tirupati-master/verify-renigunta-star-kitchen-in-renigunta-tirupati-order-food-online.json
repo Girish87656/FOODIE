@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Star Kitchen in Renigunta,Tirupati - Order Food Online",
+    "area": "renigunta"
+  },
+  "query": "\"Star Kitchen in Renigunta,Tirupati - Order Food Online\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-26",
+  "skipped": true
+}

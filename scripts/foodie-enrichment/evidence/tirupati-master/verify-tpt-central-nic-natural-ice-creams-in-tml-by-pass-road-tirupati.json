@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Nic Natural Ice Creams in tml by pass road,Tirupati",
+    "area": "tpt-central"
+  },
+  "query": "\"Nic Natural Ice Creams in tml by pass road,Tirupati\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-26",
+  "skipped": true
+}

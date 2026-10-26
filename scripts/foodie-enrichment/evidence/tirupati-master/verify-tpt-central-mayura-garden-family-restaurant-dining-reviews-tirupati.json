@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Mayura Garden Family Restaurant Dining Reviews - Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/mayura-garden-family-restaurant-korlagunta/reviews"
+  },
+  "query": "\"Mayura Garden Family Restaurant Dining Reviews - Tirupati\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Mayura Garden Family Restaurant Dining Reviews - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Mayura Garden Family Restaurant Dining Reviews - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26"
+}

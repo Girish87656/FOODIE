@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "name": "Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/mayuri-restaurant-vidyut-nagar/reviews"
+  },
+  "query": "\"Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/mayuri-restaurant-vidyut-nagar/reviews",
+      "name": "Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati",
+      "snippet": "Flat 51/3, Thummalagunta, Upparapalli Road, Vidyut Nagar, Tirupati . Mayuri Restaurant Dining Reviews. No Reviews Graphic. Related to Mayuri Restaurant, ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/it/tirupati/mayuri-restaurant-vidyut-nagar/reviews",
+      "name": "Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati",
+      "snippet": "Cinese. Flat 51/3, Thummalagunta, Upparapalli Road, Vidyut Nagar, Tirupati . Mayuri Restaurant Dining Reviews. No Reviews Graphic. Correlati a Mayuri Restaurant ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/pl/tirupati/mayuri-restaurant-vidyut-nagar/reviews?amp=1",
+      "name": "Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati",
+      "snippet": "Chińska. Flat 51/3, Thummalagunta, Upparapalli Road, Vidyut Nagar, Tirupati . Closed - Opens at 11:45am. Recenzje. Review · Direction · Call. Zomato Logo. ABOUT ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/sk/tirupati/mayuri-restaurant-vidyut-nagar/reviews",
+      "name": "Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati",
+      "snippet": "Čínska. Flat 51/3, Thummalagunta, Upparapalli Road, Vidyut Nagar, Tirupati . Mayuri Restaurant Dining Reviews. No Reviews Graphic. Súvisiace s Mayuri Restaurant ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Reviews of Mayuri Restaurant, Vidyut Nagar, Tirupati :: Flat 51/3, Thummalagunta, Upparapalli Road, Vidyut Nagar, Tirupati . Mayuri Restaurant Dining Reviews. No Reviews Graphic. Related to Mayuri Restaurant, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

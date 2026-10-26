@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Meenakshi Pure Veg Restaurant, Tirumala order online",
+    "area": "tirumala",
+    "sourceUrl": "https://www.zomato.com/tirupati/meenakshi-pure-veg-restaurant-tirumala/menu"
+  },
+  "query": "\"Meenakshi Pure Veg Restaurant, Tirumala order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/meenakshi-pure-veg-restaurant-tirumala",
+      "name": "Meenakshi Pure Veg Restaurant, Tirumala order online",
+      "snippet": "Order food online from Meenakshi Pure Veg Restaurant, Tirumala, Tirupati . This restaurant is temporarily closed image It's empty here!",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Double Egg Dosa & Ghee Karam Dosa at Tirupati Street Food",
+    "area": "tpt-central"
+  },
+  "query": "\"Double Egg Dosa & Ghee Karam Dosa at Tirupati Street Food\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-26",
+  "skipped": true
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Korlagunta Restaurants, Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.zomato.com/tirupati/korlagunta-restaurants"
+  },
+  "query": "\"Korlagunta Restaurants, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/korlagunta-restaurants/beverages",
+      "name": "Korlagunta Restaurants, Tirupati",
+      "snippet": "Korlagunta Restaurants, Tirupati ; SK Tiffin's. 4.2. South Indian, Beverages. ₹100 for one ; Venky Yadav Cafe. 4.6. Pizza, Sandwich, Burger, Fast Food, Momos, ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/korlagunta-restaurants",
+      "name": "Korlagunta Restaurants, Tirupati",
+      "snippet": "Korlagunta Restaurants, Tirupati ; Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa. 4.7. North Indian, South Indian, Fast Food, Street Food, Biryani, Mithai. ₹ ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/korlagunta-restaurants/pizza",
+      "name": "Korlagunta Restaurants, Tirupati",
+      "snippet": "Korlagunta Restaurants, Tirupati · The 99 Pizza · Domino's Pizza · MB Express Pizza · Pizza Hut · The Vintage Cafe · Hot Spot · Hot Spot Cafe · Pizza Panic.",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/18th-street-kitchen-korlagunta/order",
+      "name": "18th Street Kitchen, Korlagunta order online - Tirupati",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Korlagunta restaurants, Best Korlagunta restaurants, Tirupati City restaurants, in Tirupati , near me, in ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/korlagunta-restaurants/andhra",
+      "name": "Korlagunta Restaurants, Tirupati",
+      "snippet": "Korlagunta Restaurants, Tirupati ; Kwalitys Spicy. 3.9. Biryani, Andhra, Chinese, North Indian. ₹100 for one. 20 min ; Kakinada Subbbayya Gari Hotel. 4.0. Andhra ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/cafe-manasa-korlagunta/order",
+      "name": "Cafe Manasa, Korlagunta order online",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Korlagunta restaurants, Best Korlagunta restaurants, Tirupati City restaurants, in Tirupati , near me, in ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Korlagunta Restaurants, Tirupati :: Korlagunta Restaurants, Tirupati ; Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa. 4.7. North Indian, South Indian, Fast Food, Street Food, Biryani, Mithai. ₹ ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}
