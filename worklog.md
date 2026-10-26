@@ -2216,3 +2216,21 @@ Work Log:
 
 Stage Summary:
 - A supported, secure, fully verified mechanism EXISTS: GitHub OAuth device flow (browser authorization on the user's own device; zero secrets in chat/files/URLs). Exact UI steps delivered to the user; awaiting their go-ahead. Fallback (.env-in-workspace) documented with durability caveat. Z AI console-side integrations remain unverifiable from inside and are NOT claimed either way.
+
+---
+Task ID: LAUNCH-PUSH-DEPLOY-VERIFIED
+Agent: Z.ai Code (main orchestrator)
+Task: Exchange device-flow code, push main, verify remote HEAD, verify Vercel production deployment, then remove local credentials + report revocation path.
+
+Work Log:
+- DEVICE-FLOW EXCHANGE: POST /login/oauth/access_token (client_id 178c6fc778ccc68e1d6a) with retry loop → TOKEN_RECEIVED (type bearer, scope exactly "repo"), written to /home/z/.foodie-device-flow/token chmod 600. Token never printed; only masked prefix/length shown. device_code file deleted after exchange.
+- PUSH: git -c credential.helper= (store helper RESET — ~/.git-credentials never written) -c one-shot helper reading the token file → `git push origin main` → "e329186..be00497 main -> main", exit 0. No force, no history rewrite; all 40 commits preserved.
+- REMOTE VERIFICATION (double): git fetch + rev-parse → LOCAL == REMOTE == be0049733361013b2f4f477303a3fe4f5f235dd7. GitHub REST API /branches/main → same sha; repo pushed_at 2026-10-26T09:40:16Z.
+- VERCEL (auto-deploy discovered): repo has a connected Vercel Git integration — push auto-triggered Production deployment id 7328560188 for sha be00497 → status "success", "Deployment has completed", URL https://foodie-2q7pwtgpp-arjun-123b.vercel.app. No CLI deploy needed.
+- PRODUCTION VERIFICATION (deployment URL + stable aliases foodie-arjun-123b.vercel.app and foodie-git-main-arjun-123b.vercel.app, all HTTP 200): homepage title correct; /api/destinations → mode:supabase (owner's Supabase env vars ARE configured on Vercel — production runs on live data, 3 destinations, NOT demo); /api/push/config → {"configured":false,"publicKey":null} (VAPID env NOT set on Vercel — push honestly reports not-configured, NOT counted as working); /api/push/test no-token → 401; /sw.js → 200.
+- PRODUCTION E2E (agent-browser 390×844, read-only): splash → Get Started / Log in ONLY (no demo escape — correct, Supabase configured); Get Started → real Sign Up/Log In form, Create-account disabled until fields filled (validation works); Notification.permission stayed "default" through load and navigation (no prompts); 0 page errors, 0 console errors. Browsing appears gated behind sign-in when Supabase is configured (product behavior, reported not judged). No account created, no writes performed.
+- WORKLOG pushed in same session; final push + HEAD re-verification after this entry.
+- CREDENTIAL CLEANUP (after all pushes): /home/z/.foodie-device-flow/ removed entirely; ~/.git-credentials confirmed never created; credential-fill probe re-run → fails again ("could not read Username… terminal prompts disabled") proving no residual credentials. Server-side OAuth grant revocation is NOT possible from here with only the public client_id (GitHub requires the app's client_secret) → owner one-click revoke documented: github.com → Settings → Applications → Authorized OAuth Apps → GitHub CLI → Revoke.
+
+Stage Summary:
+- LAUNCH EXECUTED AND VERIFIED: 40 commits pushed (local HEAD == origin/main == be00497, GitHub-API-confirmed), Vercel auto-deployed the exact pushed sha to Production successfully, production URL verified serving live Supabase-backed data with honest push "not-configured" state, zero console errors, zero permission prompts. Remaining owner steps: (1) revoke the GitHub CLI OAuth grant (one click, path above), (2) set PUSH_VAPID_* env vars on Vercel + run migration-010 + README §10.5 device checklist before push delivery can be called working, (3) optional: confirm Batch-011 place-import verify script POST state if more places are expected.
