@@ -31,6 +31,7 @@
  */
 const RESPONSIVE_PREFIXES: ReadonlyArray<readonly [prefix: string, widths: readonly number[]]> = [
   ["/images/places/", [320, 800]],
+  ["/images/representative/", [320, 800]],
 ];
 
 const WIDTH_SUFFIX: ReadonlyArray<readonly [width: number, suffix: string]> = [

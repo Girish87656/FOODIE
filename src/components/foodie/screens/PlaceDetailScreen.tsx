@@ -26,7 +26,8 @@ import type { DataMode } from "@/lib/foodie/data/types";
 import type { Dish, PhotoCredit, Place } from "@/lib/foodie/types";
 import { formatDistance, haversineKm } from "@/lib/foodie/location";
 import { FOOD_CATEGORY_ICONS } from "@/lib/foodie/icons";
-import { CategoryTile } from "../MediaTiles";
+import { CategoryTile, RepresentativePhoto } from "../MediaTiles";
+import { representativeImageFor } from "@/data/representative-images";
 import { originSourceLabel, useLocationStore } from "@/lib/foodie/locationStore";
 import {
   formatHours,
@@ -294,28 +295,48 @@ export function PlaceDetailScreen() {
   const HeroCategoryIcon =
     FOOD_CATEGORY_ICONS[place.categoryIds[0] as keyof typeof FOOD_CATEGORY_ICONS] ??
     UtensilsCrossed;
+  // Prototype 4.1 — the representative category image for this place's REAL
+  // stored category (AI-generated, labelled) — shown when no venue photo
+  // exists, above the icon-tile last resort.
+  const heroRepresentative = representativeImageFor("food", place.categoryIds[0]);
 
   return (
     <div className="flex h-full flex-col bg-background">
       {/* ---------------- hero photos ---------------- */}
       <div className="relative shrink-0">
         {place.photos.length === 0 ? (
-          /* no photos in the database yet — the honest fallback is the premium
-             CATEGORY ICON TILE for this place's REAL stored category: quiet
-             interface chrome that could never be mistaken for a venue photo.
-             Eager + high priority: above-the-fold hero. */
-          <div className="relative h-[264px] w-full overflow-hidden">
-            <CategoryTile
-              icon={HeroCategoryIcon}
-              ariaLabel={`${place.name} — no venue photo available yet`}
-              iconClassName="size-14 text-stone-300"
-              muted
-              className="size-full"
-            />
-            <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/45 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
-              Venue photo coming soon
-            </span>
-          </div>
+          heroRepresentative ? (
+            /* no photos in the database yet — the premium REPRESENTATIVE
+               category image (AI-generated, unique per category) shows here
+               and ALWAYS wears its visible "Representative image ·
+               AI-generated" chip: it never claims to be the venue's own
+               photo. Eager + high priority: above-the-fold hero. */
+            <div className="relative h-[264px] w-full overflow-hidden">
+              <RepresentativePhoto
+                image={heroRepresentative}
+                icon={HeroCategoryIcon}
+                className="size-full"
+                priority
+                sizes="100vw"
+              />
+            </div>
+          ) : (
+            /* last-resort fallback: the premium CATEGORY ICON TILE for this
+               place's REAL stored category — quiet interface chrome that
+               could never be mistaken for a venue photo. */
+            <div className="relative h-[264px] w-full overflow-hidden">
+              <CategoryTile
+                icon={HeroCategoryIcon}
+                ariaLabel={`${place.name} — no venue photo available yet`}
+                iconClassName="size-14 text-stone-300"
+                muted
+                className="size-full"
+              />
+              <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/45 px-2.5 py-1 text-[10.5px] font-semibold text-white backdrop-blur-sm">
+                Venue photo coming soon
+              </span>
+            </div>
+          )
         ) : (
           <div
             className="no-scrollbar flex h-[264px] snap-x snap-mandatory overflow-x-auto"

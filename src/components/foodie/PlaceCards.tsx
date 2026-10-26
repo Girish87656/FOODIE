@@ -5,7 +5,8 @@ import { MapPin, Users, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/foodie/location";
 import { FOOD_CATEGORY_ICONS } from "@/lib/foodie/icons";
-import { CategoryTile } from "./MediaTiles";
+import { CategoryTile, RepresentativePhoto } from "./MediaTiles";
+import { representativeImageFor } from "@/data/representative-images";
 import { RatingBadge, PlaceBadge } from "./Badges";
 import type { PlaceMaybeWithDistance } from "@/lib/foodie/types";
 
@@ -49,12 +50,13 @@ function DistanceChip({
 }
 
 /**
- * Photo with an honest placeholder when the database row has no image yet
- * (real rows may not). The placeholder is a premium CATEGORY ICON TILE for
- * the place's REAL stored category — interface chrome, never a substitute
- * photo, never a cartoon, never an emoji. A stored URL that cannot load
- * degrades to the same tile — the broken-image glyph of a dead <img> is
- * never shown (same contract as the detail screen's gallery). State resets
+ * Photo with an honest placeholder when the database row has no usable image
+ * (real rows may not). The placeholder is the REPRESENTATIVE CATEGORY IMAGE
+ * for the place's REAL stored category — a premium AI-generated illustration
+ * that always wears a visible "AI-generated" chip and never claims to be the
+ * venue's own photo; categories without representative art degrade to the
+ * CATEGORY ICON TILE. A stored URL that cannot load degrades to the same
+ * chain — the broken-image glyph of a dead <img> is never shown. State resets
  * when the src prop changes via the render-time adjustment pattern (no
  * setState-in-effect).
  */
@@ -80,6 +82,19 @@ function PlacePhoto({
   }
 
   if (!src || failed) {
+    const representative = representativeImageFor("food", place.categoryIds[0]);
+    if (representative) {
+      return (
+        <RepresentativePhoto
+          image={representative}
+          icon={categoryIcon(place)}
+          ariaLabel={`${place.name} — representative AI-generated image, not the actual venue`}
+          className={className}
+          iconClassName={iconClassName}
+          shortChip
+        />
+      );
+    }
     return (
       <CategoryTile
         icon={categoryIcon(place)}

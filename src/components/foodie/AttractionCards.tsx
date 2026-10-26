@@ -17,6 +17,11 @@ import { POI_PLACE_TYPES } from "@/lib/foodie/constants";
 import { POI_TYPE_ICONS } from "@/lib/foodie/icons";
 import { responsiveSrcSet, TILE_SURFACE_CLASS } from "@/lib/foodie/categoryImages";
 import { venueImageFor } from "@/data/venue-images";
+import {
+  REPRESENTATIVE_LABEL,
+  REPRESENTATIVE_LABEL_SHORT,
+  representativeImageFor,
+} from "@/data/representative-images";
 import { prettifyTag, verificationStatusLabel } from "@/lib/foodie/utils";
 import type {
   PlaceType,
@@ -25,11 +30,15 @@ import type {
 } from "@/lib/foodie/types";
 
 /** Label + Lucide icon for a stored place_type; unknown values fall back to 'other'. */
-export function poiTypeMeta(type: PlaceType): { label: string; icon: LucideIcon } {
+export function poiTypeMeta(type: PlaceType): {
+  id: PlaceType;
+  label: string;
+  icon: LucideIcon;
+} {
   const meta =
     POI_PLACE_TYPES.find((t) => t.id === type) ??
     POI_PLACE_TYPES.find((t) => t.id === "other")!;
-  return { label: meta.label, icon: POI_TYPE_ICONS[meta.id] ?? MapPin };
+  return { id: meta.id, label: meta.label, icon: POI_TYPE_ICONS[meta.id] ?? MapPin };
 }
 
 /** Verification chip classes — same tones as the food detail screen. */
@@ -44,10 +53,12 @@ const VERIFICATION_CHIP_CLASS = {
  *
  * Priority: (1) a VERIFIED, licensed per-venue photo from the curated
  * registry (src/data/venue-images.ts — full attribution rendered when
- * `showAttribution` is on), (2) the professional CATEGORY ICON TILE for the
- * row's REAL stored place_type — quiet interface chrome that could never be
- * mistaken for a venue photograph (the cartoon illustration layer is gone
- * as of Prototype 4).
+ * `showAttribution` is on), (2) the REPRESENTATIVE category image — a
+ * premium AI-generated illustration that always wears a visible
+ * "AI-generated" chip and never claims to be the venue (Prototype 4.1),
+ * (3) the professional CATEGORY ICON TILE for the row's REAL stored
+ * place_type — quiet interface chrome that could never be mistaken for a
+ * venue photograph.
  */
 export function PoiTypeTile({
   poi,
@@ -71,7 +82,8 @@ export function PoiTypeTile({
   const meta = poiTypeMeta(poi.placeType);
   const TypeIcon = meta.icon;
   const venue = venueImageFor(poi.id);
-  const desiredSrc = venue?.src ?? null;
+  const representative = venue ? null : representativeImageFor("poi", meta.id);
+  const desiredSrc = venue?.src ?? representative?.src ?? null;
   const [mediaFailed, setMediaFailed] = useState(false);
   const [prevSrc, setPrevSrc] = useState(desiredSrc);
   if (prevSrc !== desiredSrc) {
@@ -87,7 +99,9 @@ export function PoiTypeTile({
       aria-label={
         venue
           ? venue.alt
-          : `${meta.label} — ${poi.name} (no venue photo yet)`
+          : representative
+            ? representative.alt
+            : `${meta.label} — ${poi.name} (no venue photo yet)`
       }
       className={cn(
         "relative size-full overflow-hidden",
@@ -129,6 +143,16 @@ export function PoiTypeTile({
         >
           Photo: {venue.credit} · {venue.license}
         </a>
+      )}
+      {showAttribution && !venue && representative && (
+        <span className="absolute bottom-2 left-2 max-w-[85%] truncate rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
+          {REPRESENTATIVE_LABEL}
+        </span>
+      )}
+      {!showAttribution && representative && (
+        <span className="absolute bottom-1 left-1 max-w-[85%] truncate rounded-full bg-black/55 px-1.5 py-[2px] text-[8.5px] font-semibold text-white backdrop-blur-sm">
+          {REPRESENTATIVE_LABEL_SHORT}
+        </span>
       )}
     </div>
   );

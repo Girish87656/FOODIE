@@ -19,6 +19,7 @@ import {
   Castle,
   Clock,
   Coffee,
+  CookingPot,
   Gem,
   Heart,
   Landmark,
@@ -27,6 +28,7 @@ import {
   Mountain,
   PartyPopper,
   PawPrint,
+  Pizza,
   Plane,
   Sandwich,
   Soup,
@@ -41,14 +43,15 @@ import {
 
 import type { EatContext, PlaceCategory, PlaceType } from "./types";
 
-/** The 7 pilot FOOD categories — `PLACE_CATEGORIES` ids. */
+/** The 7 pilot FOOD categories — `PLACE_CATEGORIES` ids. Every id gets its
+ *  OWN unique glyph (Prototype 4.1: no shared icons across categories). */
 export const FOOD_CATEGORY_ICONS: Record<PlaceCategory, LucideIcon> = {
   restaurant: UtensilsCrossed,
   hotel: Soup, // local "hotel" = meals place (never lodging — see POI_TYPE_ICONS.hotel)
-  tiffin: Sandwich,
+  tiffin: Sandwich, // idli/dosa/breakfast rooms
   cafe: Coffee,
-  fast_food: Sandwich,
-  street_food: UtensilsCrossed,
+  fast_food: Pizza,
+  street_food: CookingPot,
   bakery_sweets: CakeSlice,
 };
 

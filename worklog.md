@@ -2269,3 +2269,24 @@ Work Log:
 
 Stage Summary:
 - Prototype 4 (9b4f50a) is LIVE: GitHub main == 9b4f50a, Vercel deployment success, production foodie-arjun-123b.vercel.app serving prototype-4.0.0 in supabase mode with the honest push not-configured state. Full chain: user-authorized -> pushed -> deployed -> verified -> credentials removed. Owner-only items unchanged and honestly not done: VAPID env on Vercel (push remains configured:false until set), migration-010 apply, Batch-011 16 Tirupati places SQL + verify script, GitHub CLI OAuth grant revocation (one click in GitHub UI).
+
+---
+Task ID: PROTOTYPE-4.1
+Agent: Z.ai Code (main orchestrator)
+Task: Owner-directed Prototype 4 extension — premium REPRESENTATIVE imagery for places without verified photos (owner explicitly authorized labelled AI-generated imagery), unique icons per category, all gates, push, deploy.
+
+Work Log:
+- Re-verified live production state first (prototype-4.0.0 marker, mode=supabase, 3 destinations) — nothing claimed from memory.
+- Generated 14 photorealistic category illustrations in-house (z-ai image generation, 1344x768, prompts banned text/logos/visible faces): 7 food categories (restaurant interior, banana-leaf meals thali, tiffin breakfast, cafe interior, fast-food tray, dusk street-food stall, mithai counter) + 7 POI types (gopuram, waterfall, fort, zoo, natural arch, lakeside park, hotel exterior). VLM spot-check of 4 samples passed.
+- Pipeline: sharp -> WebP q80 masters + 320w q72 -small siblings -> public/images/representative/ (28 files, ~2.2MB) — mirrors the venue-photo two-variant rule; responsiveSrcSet prefix added.
+- NEW src/data/representative-images.ts — honest registry: REPRESENTATIVE_LICENSE "AI-generated (in-house)"; every alt text ALWAYS reads "Representative image of … — AI-generated illustration, not the actual venue"; one UNIQUE image per real stored category/type; representativeImageFor(kind, id) resolver.
+- NEW MediaTiles.RepresentativePhoto — srcset/sizes img, eager+fetchPriority heroes, onError -> CategoryTile; visible chip ALWAYS ("Representative image · AI-generated" full / "AI-generated" compact on small tiles); role="img" with honest label.
+- PoiTypeTile (attractions & stays): priority chain venue photo -> representative (chip) -> icon tile; poiTypeMeta now returns resolved `id` (type-level fix).
+- PlaceCards.PlacePhoto (all discovery rails) + PlaceDetailScreen hero: no-photo/unloadable -> representative (labelled) -> icon tile; detail heroes carry the full chip; "Venue photo coming soon" retained ONLY for the icon-tile last resort.
+- icons.ts: eliminated the last icon reuse — fast_food -> Pizza, street_food -> CookingPot (all 7 food categories now unique glyphs).
+- IMAGE-CREDITS.md §3 documents the set + honesty contract; layout version -> prototype-4.1.0.
+- NEW tests/representative-images.test.ts (9 tests): taxonomy coverage (7+7 ids), exact-size anti-drift, per-image uniqueness, master+small existence, srcset candidates, honest-alt gate, license constant, resolver contract. Suite 133/133 PASS.
+- GATES: lint exit 0; tsc 0 src/tests errors (caught + fixed useState-from-lucide and meta.id typing); production build exit 0; local E2E (demo mode, agent-browser): home rails — 8 representative images all loaded + 8 chips; Corridor Tiffin Room detail hero rep-tiffin + full chip + honest aria-label; Tirupati destination — REAL venue photos still first (Chandragiri/ISKCON/Silathoranam/Govindaraja), 6 lodging rows on rep-poi-hotel; Ekante Bliss detail hero + chip; no horizontal overflow at 320/390/1440; 0 page errors; console clean (dev-only HMR logs).
+
+Stage Summary:
+- Prototype 4.1: every food place and attraction/stay now has premium imagery with a strict honesty chain — verified venue photo first, labelled AI-generated representative image second, professional icon tile last — zero unlabeled renders, zero reused images across categories, all enforced by the new test gate. Owner-owned items unchanged: Batch-011 SQL (16 Tirupati hotels+attractions — newly added rows will immediately get these labelled fallbacks until venue photos are verified), VAPID env, migration-010, OAuth grant revocation.

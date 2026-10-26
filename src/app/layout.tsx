@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Foodie" }],
   other: {
     // Release marker — lets deployment verification confirm which build is live.
-    "application-version": "prototype-4.0.0",
+    "application-version": "prototype-4.1.0",
   },
   manifest: "/manifest.webmanifest",
   icons: {

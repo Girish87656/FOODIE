@@ -76,3 +76,38 @@ RULE: whenever a new master `.webp` is added to `public/images/places/`,
 its `-small.webp` sibling MUST be generated in the same pass — the srcset
 references these files unconditionally, so a missing sibling would break
 the responsive candidates.
+
+## 3. Representative category imagery (`public/images/representative/*.webp`) — GENERATED IN-HOUSE, Prototype 4.1 (2026-10-26)
+
+14 photorealistic category illustrations generated in-house (AI image
+generation) for places WITHOUT a verified venue photo. They are NOT photos
+of any real venue and are never presented as one: every render carries a
+visible "Representative image · AI-generated" chip (compact "AI-generated"
+on small tiles) and an accessibility label that reads "… AI-generated
+illustration, not the actual venue" (`src/data/representative-images.ts`).
+
+- No third-party source and no license obligations — generated in-house.
+- 1344×768 native PNG → WebP q80 masters + 320w `-small` siblings
+  (same two-variant rule as §2).
+- ONE unique image per real stored category / place type; uniqueness and
+  honest alt text are enforced by `tests/representative-images.test.ts`.
+
+| Asset | Represents |
+|---|---|
+| `rep-restaurant.webp` | food category `restaurant` — South Indian family restaurant interior |
+| `rep-hotel-meals.webp` | food category `hotel` (meals place) — banana-leaf meals thali |
+| `rep-tiffin.webp` | food category `tiffin` — dosa/idli breakfast |
+| `rep-cafe.webp` | food category `cafe` — modern cafe interior |
+| `rep-fast-food.webp` | food category `fast_food` — burger/fries tray |
+| `rep-street-food.webp` | food category `street_food` — dusk street-food stall |
+| `rep-bakery-sweets.webp` | food category `bakery_sweets` — mithai/pastry counter |
+| `rep-poi-temple.webp` | place type `temple` — Dravidian gopuram |
+| `rep-poi-waterfall.webp` | place type `waterfall` — forest waterfall |
+| `rep-poi-fort.webp` | place type `fort` — hill fort ramparts |
+| `rep-poi-zoo.webp` | place type `zoo` — zoo park pathway |
+| `rep-poi-natural-arch.webp` | place type `natural_arch` — stone arch |
+| `rep-poi-other.webp` | place type `other` — lakeside park |
+| `rep-poi-hotel.webp` | place type `hotel` (lodging) — mid-range hotel exterior |
+
+The same RULE as §2 applies: masters and `-small.webp` siblings ship
+together (`responsiveSrcSet` references both unconditionally).

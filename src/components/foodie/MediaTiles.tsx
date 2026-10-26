@@ -21,9 +21,15 @@
  * <img> is never shown anywhere in Foodie.
  */
 
+import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { TILE_SURFACE_CLASS } from "@/lib/foodie/categoryImages";
+import { TILE_SURFACE_CLASS, responsiveSrcSet } from "@/lib/foodie/categoryImages";
+import {
+  REPRESENTATIVE_LABEL,
+  REPRESENTATIVE_LABEL_SHORT,
+  type RepresentativeImage,
+} from "@/data/representative-images";
 
 export function CategoryTile({
   icon: Icon,
@@ -65,6 +71,95 @@ export function CategoryTile({
           iconClassName
         )}
       />
+    </div>
+  );
+}
+
+/**
+ * RepresentativePhoto — Prototype 4.1 premium fallback layer.
+ *
+ * An AI-GENERATED, photorealistic category illustration (bundled, unique per
+ * category — see src/data/representative-images.ts). It sits between the
+ * verified venue photo and the icon tile and is NEVER presented as the real
+ * venue: a visible chip always reads "Representative image · AI-generated"
+ * (or the compact "AI-generated" on small tiles), and the accessibility
+ * label states it is not the actual venue. If the asset fails to load it
+ * degrades to the honest CategoryTile — a dead <img> is never shown in
+ * Foodie.
+ */
+export function RepresentativePhoto({
+  image,
+  icon: Icon,
+  ariaLabel,
+  className,
+  iconClassName,
+  chipClassName,
+  shortChip = false,
+  priority = false,
+  sizes,
+}: {
+  image: RepresentativeImage;
+  /** Icon for the failure fallback tile (this surface's real category). */
+  icon: LucideIcon;
+  /** Defaults to the registry's honest alt text. */
+  ariaLabel?: string;
+  className?: string;
+  iconClassName?: string;
+  chipClassName?: string;
+  /** Compact corner chip for small tiles (still honest, still visible). */
+  shortChip?: boolean;
+  /** Hero surfaces load eagerly. */
+  priority?: boolean;
+  /** Layout width hint — enables the responsive 320w/800w srcset. */
+  sizes?: string;
+}) {
+  const [failed, setFailed] = useState(false);
+  const [prevSrc, setPrevSrc] = useState(image.src);
+  if (prevSrc !== image.src) {
+    setPrevSrc(image.src);
+    setFailed(false);
+  }
+
+  if (failed) {
+    return (
+      <CategoryTile
+        icon={Icon}
+        ariaLabel={ariaLabel ?? image.alt}
+        className={className}
+        iconClassName={iconClassName}
+      />
+    );
+  }
+
+  const srcSet = responsiveSrcSet(image.src);
+
+  return (
+    <div
+      role="img"
+      aria-label={ariaLabel ?? image.alt}
+      className={cn(
+        "relative size-full overflow-hidden bg-stone-100",
+        className
+      )}
+    >
+      <img
+        src={image.src}
+        {...(srcSet ? { srcSet, ...(sizes ? { sizes } : {}) } : {})}
+        alt=""
+        loading={priority ? "eager" : "lazy"}
+        {...(priority ? { fetchPriority: "high" as const } : {})}
+        decoding="async"
+        onError={() => setFailed(true)}
+        className="size-full object-cover"
+      />
+      <span
+        className={cn(
+          "pointer-events-none absolute bottom-1.5 left-1.5 max-w-[85%] truncate rounded-full bg-black/55 px-2 py-[3px] text-[9.5px] font-semibold text-white backdrop-blur-sm",
+          chipClassName
+        )}
+      >
+        {shortChip ? REPRESENTATIVE_LABEL_SHORT : REPRESENTATIVE_LABEL}
+      </span>
     </div>
   );
 }
