@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Sri venkateshwara zoological park - Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3912809-r738828928-Sri_Venkateswara_National_Park-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"Sri venkateshwara zoological park - Tirupati\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sri venkateshwara zoological park - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sri venkateshwara zoological park - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26"
+}

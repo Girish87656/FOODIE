@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Others",
+    "area": "tpt-central",
+    "sourceUrl": "https://tirupati.ap.gov.in/tourist-place-category/others"
+  },
+  "query": "\"Others\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tirumala.org/Privileges.aspx",
+      "name": "Privileges",
+      "snippet": "Others . Anna Prasadam Kalyana Katta Medical Fulfilling Vows. Online Services ... Please furnish your complete address with telephone number, fax number, e-mail ... Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/TodoTirupati/posts/ttd-247-call-centre-always-here-to-help-devotees-visiting-tirumala-tirupati-deva/122142364856987669",
+      "name": "Always Here to Help Devotees 🙏 Visiting Tirumala Tirupati",
+      "snippet": "This is an independent information page and not an official TTD page. No photo description available. Tukaram Potdar and 21 others . Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/TTDevasthanams/videos/ttd-launches-whatsapp-feedback-systemnow-devotees-can-easily-share-their-experie/1836708287149872",
+      "name": "TTD Launches WhatsApp Feedback System for Tirumala &",
+      "snippet": "[ Tirupati , Balaji, TTD, Tirumala] #tirumala # tirupati #ttd # todotirupati #balaji ... TTD Sri Sesha Reddy and others were also present.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://jagruthisiri.wordpress.com/contact-us",
+      "name": "contact us | jagruthisiri - WordPress.com",
+      "snippet": "Contact Us Tirumala Tirupati Devasthanams, TTD Administrative Building, K.T. Road Tirupati 517 501 , Andhra Pradesh , India ... Others · HMV · Hindu Dharma ... Read more",
+      "host": "jagruthisiri.wordpress.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/ItsMyTirupathi/videos/must-visit-temples-in-tirupati-%EF%B8%8F/1621134316116438",
+      "name": "Must Visit Temples in Tirupati: Sri Prasanna Venkateswara",
+      "snippet": "Address : Tirupati Zoo Park road, Chennai - Anantapur Hwy ... Kpmg Spares and 125 others . 126 reactions ·. 2 comments. ·. 21 shares.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tirumala.org/TTDBoard.aspx",
+      "name": "Tirumala Tirupati Devasthanams (Official Website)",
+      "snippet": "Others . Anna Prasadam Kalyana Katta Medical Fulfilling Vows. Online Services ... Address Tirumala Tirupati Devasthanams TTD Administrative Building K.T. ... Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "contact us | jagruthisiri - WordPress.com :: Contact Us Tirumala Tirupati Devasthanams, TTD Administrative Building, K.T. Road Tirupati 517 501 , Andhra Pradesh , India ... Others · HMV · Hindu Dharma ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

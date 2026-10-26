@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Natural Arch, Tirumala hills",
+    "area": "tirumala",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Natural_Arch,_Tirumala_hills"
+  },
+  "query": "\"Natural Arch, Tirumala hills\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Natural_Arch,_Tirumala_hills",
+      "name": "Natural Arch, Tirumala hills",
+      "snippet": "Natural Arch, Tirumala hills ; Tirumala, Andhra Pradesh, India · Tirupati · 13°40′54″N 79°20′46″E﻿ / ﻿13.68167°N 79.34611°E﻿ / 13.68167; 79.34611 · 26.2 ft (8.0 m). Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/6894",
+      "name": "Natural Heritage of Tirumala Hills",
+      "snippet": "Eparchaean Unconformity - 13° 40′ 0.0012″ N 79°21′0″ E Natural Arch, Tirumala hills - 13°41′14″N 79°20′25″ E Seshachalam Forests & Sri Venkateswara National ... Read more",
+      "host": "whc.unesco.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705043-r434008872-Silathoranam-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Natural Arch, Tirumala hills - Silathoranam Garden",
+      "snippet": "Natural Arch, Tirumala hills - Silathoranam Garden. Silathoranam Garden; Tirupati - Things to Do; Tirupati ; Chittoor District; Andhra Pradesh; India; Asia. $ ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirumalahills.wordpress.com/2016/02/25/natural-arch-at-tirumala-hills",
+      "name": "Natural Arch at Tirumala Hills",
+      "snippet": "Feb 25, 2016 — Natural Arch, Tirumala hills is a distinctive geological wonder located 1 km (0.6 mi) North of the Tirumala hills temple, near the Chakra ... Read more",
+      "host": "tirumalahills.wordpress.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com",
+      "name": "🧭 Natural Arch, Tirumala hills National Geo-heritage Monument",
+      "snippet": "National Geo-heritage Monument in Andhra Pradesh, India Natural Arch, Tirumala hills , a natural site in Tentative List(World Heritage Site) and a notified ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/blisstirupati/posts/a-scenic-drive-leads-you-to-the-natural-arch-at-silathoranam-garden-a-rare-forma/1378545760956319",
+      "name": "Ekanté Bliss, Tirupati - IHCL SeleQtions",
+      "snippet": "Natural Arch, Tirumala hills , a notified National Geo-heritage Monument, is a distinctive geological feature 1 km north of the Tirumala ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Natural Arch at Tirumala Hills :: Feb 25, 2016 — Natural Arch, Tirumala hills is a distinctive geological wonder located 1 km (0.6 mi) North of the Tirumala hills temple, near the Chakra ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

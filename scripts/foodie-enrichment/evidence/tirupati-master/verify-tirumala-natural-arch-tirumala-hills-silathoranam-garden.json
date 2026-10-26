@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Natural Arch, Tirumala hills - Silathoranam Garden",
+    "area": "tirumala",
+    "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705043-r434008872-Silathoranam-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"Natural Arch, Tirumala hills - Silathoranam Garden\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705043-r434008872-Silathoranam-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Natural Arch, Tirumala hills - Silathoranam Garden",
+      "snippet": "Natural Arch, Tirumala hills - Silathoranam Garden . Silathoranam Garden; Tirupati - Things to Do; Tirupati ; Chittoor District; Andhra Pradesh; India; Asia. $ ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

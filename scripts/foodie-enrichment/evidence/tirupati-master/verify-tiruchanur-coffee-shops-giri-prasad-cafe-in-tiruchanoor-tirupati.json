@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati",
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Giri-Prasad-Cafe-Near-Padmavathi-Temple-Tiruchanoor/9999PX877-X877-260103204410-R7T4_BZDET"
+  },
+  "query": "\"Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Giri-Prasad-Cafe-Near-Padmavathi-Temple-Tiruchanoor/9999PX877-X877-260103204410-R7T4_BZDET",
+      "name": "Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati",
+      "snippet": "Nestled near Near Padmavathi Temple in Tiruchanoor, Giri Prasad Cafe is a convenient stop for both locals and visitors exploring the city. The restaurant's ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati :: Nestled near Near Padmavathi Temple in Tiruchanoor, Giri Prasad Cafe is a convenient stop for both locals and visitors exploring the city. The restaurant's ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

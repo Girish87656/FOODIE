@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Explore the Historic Chandragiri Fort in Tirupati",
+    "area": "chandragiri",
+    "sourceUrl": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort"
+  },
+  "query": "\"Explore the Historic Chandragiri Fort in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort",
+      "name": "Explore the Historic Chandragiri Fort in Tirupati",
+      "snippet": "Explore the majestic Chandragiri Fort in Tirupati , India. Built in the 11th century, this impressive fort has a rich history and breathtaking views.",
+      "host": "www.incredibleindia.gov.in",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Does Iyer's Cafe deliver food in Tirupati on Swiggy?",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/iyers-cafe-korlagunta-rest1256682"
+  },
+  "query": "\"Does Iyer's Cafe deliver food in Tirupati on Swiggy?\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/tirupati/mana-inti-bhojanm-tata-nagar-korlagunta-rest1307586",
+      "name": "How can I order from Mana Inti Bhojanm online?",
+      "snippet": "Yes, Mana Inti Bhojanm delivers food in Tirupati through Swiggy. Customers can order their favorite dishes online and enjoy doorstep delivery. Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/food-mantra-tata-nagar-rest1250781",
+      "name": "Best-Selling Dishes at Food mantra",
+      "snippet": "Yes, Food mantra delivers food in Tirupati through Swiggy. Customers can order their favorite dishes online and enjoy doorstep delivery. What is Food mantra ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/is-swiggy-available-in-tirupati",
+      "name": "Is Swiggy Available in Tirupati?",
+      "snippet": "Yes, Swiggy is available in Tirupati and people are ordering from restaurants like Table 9 and others. However, many locals also mention price differences and ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/ansuyamma-tiffin-and-bojanam-korlagunta-rest1181832",
+      "name": "Best-Selling Dishes at Ansuyamma Tiffin & Bojanam",
+      "snippet": "Yes, Ansuyamma Tiffin & Bojanam delivers food in Tirupati through Swiggy. Customers can order their favorite dishes online and enjoy doorstep delivery. What is ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/iyers-cafe-srinivasa-nagar/order",
+      "name": "Iyer's Cafe, Srinivasa Nagar order online",
+      "snippet": "Check out Iyer's Cafe, Srinivasa Nagar, Tirupati on Zomato for great deals, ratings, reviews and more!",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/make-my-burger-tata-nagar-rest1019227",
+      "name": "How can I order from Make My Burger online?",
+      "snippet": "Yes, Make My Burger delivers food in Tirupati through Swiggy. Customers can order their favorite dishes online and enjoy doorstep delivery. Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Iyer's Cafe, Srinivasa Nagar order online :: Check out Iyer's Cafe, Srinivasa Nagar, Tirupati on Zomato for great deals, ratings, reviews and more!",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

@@ -20,6 +20,31 @@
       "context": "s in Tirumala, some of them are Pandava Teertham, Kumaradhara Teertham, Tumbhuru Teertham, Ramakrishna Teertham, Chakra Teertham, Vaikuntha Teertham, Sesha Teertham, Sitamma Teertham, Pasupu Teertham, Jupali Teertham, Sanaka Sanandana Teertham. Important festivals that are held"
     },
     {
+      "name": "Ampro Rest House",
+      "foundInRawHtml": true,
+      "context": "per day (INR) * </strong> </td> </tr> <tr class=\"RowHeight\"> <td class=\"gridbg1\">1. </td> <td class=\"gridbg1\">Ampro Rest House <td class=\"gridbg1\"> 750.00 <br /> 1500.00 </td> </tr> <tr class=\"RowHeight\"> <td class=\"gridbg2\">2. </td> <t"
+    },
+    {
+      "name": "Narayanagiri Guest House - II",
+      "foundInRawHtml": true,
+      "context": "2\">1500.00 <br /> 2000.00 </td> </tr> <tr class=\"RowHeight\"> <td class=\"gridbg1\">5. </td> <td class=\"gridbg1\">Narayanagiri Guest House - II <br /> Corner Suite </td> <td class=\"gridbg1\">1500.00 <br /> 2000.00 </td> </tr> <tr class=\"RowHeight\"> <td c"
+    },
+    {
+      "name": "Alwar Tank Cottage No. 99",
+      "foundInRawHtml": true,
+      "context": " per day (INR) *</strong> </td> </tr> <tr class=\"RowHeight\"> <td class=\"gridbg1\">1. </td> <td class=\"gridbg1\">Alwar Tank Cottage No. 99 </td> <td class=\"gridbg1\">200.00 </td> </tr> <tr class=\"RowHeight\"> <td class=\"gridbg2\">2. </td> <td class=\"g"
+    },
+    {
+      "name": "Sri Vedanarayana Swamy Temple, Nagalapuram",
+      "foundInRawHtml": true,
+      "context": "Program</a> </p> </div> </div> </td> </tr> <tr> <td align=\"left\" valign=\"middle\"> <div class=\"pg-sub-header\"> Sri Vedanarayana Swamy Temple, Nagalapuram </div> <div style=\"float: left;\"> <div class=\"detailsAbnBody\"> <p> This is one of the most important and anci"
+    },
+    {
+      "name": "Sri Kalyana Venkateswara Swamy temple, Narayanavanam",
+      "foundInRawHtml": true,
+      "context": "(outside temples)</div> </div> </td> </tr> <tr> <td align=\"left\" valign=\"middle\"> <div class=\"pg-sub-header\"> Sri Kalyana Venkateswara Swamy temple, Narayanavanam </div> <div style=\"float: left;\"> <div class=\"detailsAbnBody\"> <p> It is yet another ancient temple of mythol"
+    },
+    {
       "name": "SRI GOVINDARAJASWAMI TEMPLE",
       "foundInRawHtml": true,
       "context": "<td> <div id=\"id1\"> <tr> <td align=\"left\" valign=\"middle\"> <div style=\"float: left;\"> <div class=\"Pg-Heading\">SRI GOVINDARAJASWAMI TEMPLE</div> </div> </td> </tr> <tr> <td align=\"left\" valign=\"middle\"> <div style=\"float: left;\"> <div class=\"detail"
@@ -623,6 +648,351 @@
           "name": "Tirumala Temple",
           "hrefOrDetail": "narrative mention only",
           "verbatimQuote": "offering One of the most sacred rituals performed at the Tirumala Temple is the offering of \"Tirupati Laddu,\" a delectable sweetmeat made from gram flour, ghee, sugar, and dry fruits."
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/PlacesatTirumala.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "ttd-PlacesatTirumala.html",
+      "pageSizeBytes": 61784,
+      "note": "TTD official 'Places at Tirumala' (batch 2). 4 named temples (incl. TWO distinct Anjaneya temples per the page's own prose) + Swami Pushkarini + Silathoranam.",
+      "extracted": [
+        {
+          "name": "Sri Venkateswara Temple",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx — main temple section",
+          "verbatimQuote": "and Don'ts FAQs Dress Code Contact US Places at Tirumala Sri Venkateswara Temple The ancient and sacred temple of Sri Venkateswara is located on the seventh peak, Venkatachala (Venkata Hill)"
+        },
+        {
+          "name": "Sri Varaha Swami Temple",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx — section: north of the Sri Venkateswara Temple, banks of Varaha Pushkarini",
+          "verbatimQuote": "mukti, only by worshipping Venkata Nayaka or Sri Venkateswara. More... Sri Varaha Swami Temple Sri Varaha Swami TempleSri Varahaswami Temple in Tirumala is to the north of the Sri Venkateswara"
+        },
+        {
+          "name": "Sri Bedi AnjaneyaswamiTemple",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx — section: Sannidhi Street, opposite the main temple (page writes this name without a space)",
+          "verbatimQuote": "permission that Lord Sri Venkateswara took up residence here. More... Sri Bedi AnjaneyaswamiTemple Sri Bedi Anjaneyaswami Temple is located on Sannidhi Street, opposite the main temple. (In the Vaishnavite tradition,"
+        },
+        {
+          "name": "Sri Anjaneyaswami Temple",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx — section: opposite the Pushkarini, at Sri Varahaswami temple (DISTINCT from Bedi Anjaneyaswami per the page itself)",
+          "verbatimQuote": "every Sunday and special offerings are made on Hanuman Jayanti. Sri Anjaneyaswami Temple Sri Anjaneyaswami Temple is located opposite to the Pushkarini , at Sri Varahaswami temple on the north-eastern"
+        },
+        {
+          "name": "Swami Pushkarini",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx — teerthams section",
+          "verbatimQuote": "Seshachalam ranges and lies on the southern banks of Sri Swami Pushkarini. It is by the Lord’s presidency over Venkatachala, that He has received the appellation, Venkateswara (Lord of the"
+        },
+        {
+          "name": "Silathoranam",
+          "hrefOrDetail": "https://www.tirumala.org/PlacesatTirumala.aspx — 'Other Places' section (natural rock arch near Chakra Tirtham)",
+          "verbatimQuote": "day of the fortnight of Dhanur Masa). More... Other Places Silathoranam is a natural rock formation in the form of an arch, near the Chakra Tirtham. Geologists have identified the"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/S.V. Museum.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "ttd-S.V.-Museum.html",
+      "pageSizeBytes": 69029,
+      "note": "TTD official S.V. Museum page (batch 2): museum officially named Sri Venkateswara Dhyana Jnana Mandiram, Tirumala; 6000+ items, ten sections.",
+      "extracted": [
+        {
+          "name": "S.V. Museum",
+          "hrefOrDetail": "https://www.tirumala.org/S.V. Museum.aspx — page subject",
+          "verbatimQuote": "General Information Do's and Don'ts FAQs Dress Code Contact US S.V. Museum Sri Venkateswara Dhyana Jnana Mandiram,Tirumala The Hall of Antiques was first established in 1980 in Thousand Piller mandapam"
+        },
+        {
+          "name": "Sri Venkateswara Dhyana Jnana Mandiram",
+          "hrefOrDetail": "https://www.tirumala.org/S.V. Museum.aspx — official building name (opposite Vaikuntham Queue Complex, Tirumala)",
+          "verbatimQuote": "Do's and Don'ts FAQs Dress Code Contact US S.V. Museum Sri Venkateswara Dhyana Jnana Mandiram,Tirumala The Hall of Antiques was first established in 1980 in Thousand Piller mandapam opposite to"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "ttd-RestHousesInTirumala.html",
+      "pageSizeBytes": 76257,
+      "note": "TTD official Rest Houses in Tirumala (batch 2): 34 named rows across 4 sections (Sri Padmavathi GH Area 15, Sri Venkateswara GH Area 6 named, TBC Area 12, Marriage Halls 1 new name) with official rates. NOT extracted (recorded here instead): 'NGC VVGH HRG MBC Cottages' row — internal booking codes, not a place name.",
+      "extracted": [
+        {
+          "name": "Ampro Rest House",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "No Name Rate per unit per day (INR) * 1. Ampro Rest House 750.00 1500.00 2. Bela Kuteeram A/C ( 6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4."
+        },
+        {
+          "name": "Bela Kuteeram A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "day (INR) * 1. Ampro Rest House 750.00 1500.00 2. Bela Kuteeram A/C ( 6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4. Hari Sadan Guest House A/C (7"
+        },
+        {
+          "name": "Gayathri Sadan A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "1500.00 2. Bela Kuteeram A/C ( 6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4. Hari Sadan Guest House A/C (7 suites) 1500.00 5. Hill View Cottages Deluxe 50.00"
+        },
+        {
+          "name": "Hari Sadan Guest House A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4. Hari Sadan Guest House A/C (7 suites) 1500.00 5. Hill View Cottages Deluxe 50.00 100.00 150.00 1500.00 6. Indira Rest"
+        },
+        {
+          "name": "Hill View Cottages Deluxe",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "4. Hari Sadan Guest House A/C (7 suites) 1500.00 5. Hill View Cottages Deluxe 50.00 100.00 150.00 1500.00 6. Indira Rest House A/C( 4 suites ) 2000.00 7. Jagannadha Bhavan"
+        },
+        {
+          "name": "Indira Rest House A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "5. Hill View Cottages Deluxe 50.00 100.00 150.00 1500.00 6. Indira Rest House A/C( 4 suites ) 2000.00 7. Jagannadha Bhavan ( 4 suites ) 2500.00 3500.00 8. Karam Nivas"
+        },
+        {
+          "name": "Jagannadha Bhavan",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "6. Indira Rest House A/C( 4 suites ) 2000.00 7. Jagannadha Bhavan ( 4 suites ) 2500.00 3500.00 8. Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi"
+        },
+        {
+          "name": "Karam Nivas",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "7. Jagannadha Bhavan ( 4 suites ) 2500.00 3500.00 8. Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP"
+        },
+        {
+          "name": "Lakshmi Nivas",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "suites ) 2500.00 3500.00 8. Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00"
+        },
+        {
+          "name": "RajyaLakshmi Guest House A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00 12. Srinikethan A/C ( 3"
+        },
+        {
+          "name": "SP Guest House (Main)",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00 12. Srinikethan A/C ( 3 suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00"
+        },
+        {
+          "name": "Srinikethan A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00 12. Srinikethan A/C ( 3 suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00 14. Venkata Vijayam Guest House A/C 3"
+        },
+        {
+          "name": "Srinivasa Nilayam A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "2500.00 12. Srinikethan A/C ( 3 suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00 14. Venkata Vijayam Guest House A/C 3 master suites 6 other suites 1500.00 2500.00 15."
+        },
+        {
+          "name": "Venkata Vijayam Guest House A/C",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00 14. Venkata Vijayam Guest House A/C 3 master suites 6 other suites 1500.00 2500.00 15. Vidya Sadan 1500.00 * Rate per"
+        },
+        {
+          "name": "Vidya Sadan",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "A/C 3 master suites 6 other suites 1500.00 2500.00 15. Vidya Sadan 1500.00 * Rate per unit = Rate per Room/Cottage Sri Venkateswara Guest House Area S. No Name Rate"
+        },
+        {
+          "name": "Sri Venkateswara Guest House Corner Suites",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "No Name Rate per unit per day (INR) * 1. Sri Venkateswara Guest House Corner Suites 1500.00 2000.00 2. NGC VVGH HRG MBC Cottages (Number: 20 and 22) 2000.00, 2500.00"
+        },
+        {
+          "name": "Narayanagiri Guest House - I",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Bungalow Cottages) A/C (13 nos.) 50.00 100.00 200.00 500.00 4. Narayanagiri Guest House - I Corner Suite 1500.00 2000.00 5. Narayanagiri Guest House - II Corner Suite 1500.00 2000.00 6."
+        },
+        {
+          "name": "Narayanagiri Guest House - II",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Narayanagiri Guest House - I Corner Suite 1500.00 2000.00 5. Narayanagiri Guest House - II Corner Suite 1500.00 2000.00 6. Narayanagiri Guest House - III Corner Suite 1500.00 2000.00 7."
+        },
+        {
+          "name": "Narayanagiri Guest House - III",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Narayanagiri Guest House - II Corner Suite 1500.00 2000.00 6. Narayanagiri Guest House - III Corner Suite 1500.00 2000.00 7. Srivari Kuteer Guest House (A/C) Suite No.1 to 4 entire"
+        },
+        {
+          "name": "Srivari Kuteer Guest House",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Narayanagiri Guest House - III Corner Suite 1500.00 2000.00 7. Srivari Kuteer Guest House (A/C) Suite No.1 to 4 entire Guest House 200.00 1500.00 8. Surapuram Thota Cottages 1500.00 *"
+        },
+        {
+          "name": "Surapuram Thota Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Suite No.1 to 4 entire Guest House 200.00 1500.00 8. Surapuram Thota Cottages 1500.00 * Rate per unit = Rate per Room/Cottage Travellers Bungalow Cottages Area S. No Name Rate"
+        },
+        {
+          "name": "Alwar Tank Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "No Name Rate per unit per day (INR) * 1. Alwar Tank Cottages Single rooms 50.00 100.00 2. Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View"
+        },
+        {
+          "name": "Anjanadri Nagar Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "* 1. Alwar Tank Cottages Single rooms 50.00 100.00 2. Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2"
+        },
+        {
+          "name": "Garudadri Nagar Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Single rooms 50.00 100.00 2. Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00"
+        },
+        {
+          "name": "Hill View Cottages (Ordinary)",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00 6. Ram Bagicha Guest House"
+        },
+        {
+          "name": "Mangala Bavi Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00 6. Ram Bagicha Guest House - I 100.00 7. Ram Bagicha"
+        },
+        {
+          "name": "Ram Bagicha Guest House - I",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00 6. Ram Bagicha Guest House - I 100.00 7. Ram Bagicha Guest House - II 100.00 8. Ram Bagicha Guest House"
+        },
+        {
+          "name": "Ram Bagicha Guest House - II",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "200.00 6. Ram Bagicha Guest House - I 100.00 7. Ram Bagicha Guest House - II 100.00 8. Ram Bagicha Guest House - III 100.00 9. Sanku Mitta Cottages 50.00"
+        },
+        {
+          "name": "Ram Bagicha Guest House - III",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "100.00 7. Ram Bagicha Guest House - II 100.00 8. Ram Bagicha Guest House - III 100.00 9. Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages"
+        },
+        {
+          "name": "Sanku Mitta Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "100.00 8. Ram Bagicha Guest House - III 100.00 9. Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages 2 suites Single rooms Outside cottages 50.00 100.00"
+        },
+        {
+          "name": "Seshadri Nagar Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "House - III 100.00 9. Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages 2 suites Single rooms Outside cottages 50.00 100.00 200.00 500.00 12. Valley View"
+        },
+        {
+          "name": "TB Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages 2 suites Single rooms Outside cottages 50.00 100.00 200.00 500.00 12. Valley View Cottages 100.00 200.00 * Rate"
+        },
+        {
+          "name": "Valley View Cottages",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "suites Single rooms Outside cottages 50.00 100.00 200.00 500.00 12. Valley View Cottages 100.00 200.00 * Rate per unit = Rate per Room/Cottage Marriage Halls and Cottages S.No Name Rate"
+        },
+        {
+          "name": "Alwar Tank Cottage No. 99",
+          "hrefOrDetail": "named TTD rest-house/cottage row in a rates table (no individual href); page: https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "verbatimQuote": "S.No Name Rate per unit per day (INR) * 1. Alwar Tank Cottage No. 99 200.00 2. Sanku Mitta Cottages (10 cottages) 200.00 3. Travellers Bungalow Cottages (5 cottages) 200.00"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/ttdklmps.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "ttd-ttdklmps.html",
+      "pageSizeBytes": 113640,
+      "note": "TTD official Kalyana Mandapam directory (batch 2): ~160 rows across Indian cities/towns. SCOPE FINDING: ZERO Tirupati or Tirumala rows in the directory table (checked programmatically — 'Tirupati'/'Tirumala' hits are all page-nav text, not table rows). Page reviewed and recorded; NO candidates from it — out of Tirupati scope by the page's own content.",
+      "extracted": [
+        {
+          "name": "Kalyana Mandapams",
+          "hrefOrDetail": "https://www.tirumala.org/ttdklmps.aspx — page subject (pan-India directory; page heading: 'TTD Information Centres and Kalyana Mandapams')",
+          "verbatimQuote": "Don'ts FAQs Dress Code Contact US TTD Information Centres and Kalyana Mandapams TTD has established Kalyana Mandapams cum Information Centres in Pondicherry and at all metropolitan cities. TTD also runs"
+        },
+        {
+          "name": "Bangalore",
+          "hrefOrDetail": "https://www.tirumala.org/ttdklmps.aspx — example directory row: 'Manager TTD Information Centre 16th Cross, Vyalikavel Bangalore - 560 003'",
+          "verbatimQuote": "will be levied for the Kalyana Mandapams at Hyderabad and Bangalore. At the centres in all metropolitan cities and at all district headquarters, you can book accommodation (only rooms costing"
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "httpStatus": 200,
+      "accessedOn": "2026-10-26",
+      "page": "ttd-MoreTemples.html",
+      "pageSizeBytes": 149703,
+      "note": "TTD official 'More Temples' (batch 2): 9 Tirupati-region TTD-managed temple candidates + 4 sub-temple names 'in Pattabhiramalayam' (location unstated on page — kept as evidence only) + 2 OUT-OF-REGION Kadapa temples (recorded, excluded from inventory by scope).",
+      "extracted": [
+        {
+          "name": "Sri Prasanna Venkateswara Swamy temple, Kosuvari Palle",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section (TTD-managed, Tirupati region)",
+          "verbatimQuote": "important religious fete that is being observed in this temple. Sri Prasanna Venkateswara Swamy temple, Kosuvari Palle This is yet another important and ancient temple which was recently taken over"
+        },
+        {
+          "name": "Sri Konetiraya Swamy, Keelapatla",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section (village Keelapatla; TTD-managed)",
+          "verbatimQuote": "the month of Magha-(January/February) in the advent of Sravana Nakshatram. Sri Konetiraya Swamy, Keelapatla This ancient temple is located in the village of Keelaptla, Gangavaram mandal in Palamaneru, about 110km"
+        },
+        {
+          "name": "Sri Kalyana Venkateswara Swamy temple, Narayanavanam",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section (DISTINCT from the Srinivasa Mangapuram Kalyana Venkateswara temple)",
+          "verbatimQuote": "11-00 AM TO 11-30 AM Temples outside Tirupati (outside temples) Sri Kalyana Venkateswara Swamy temple, Narayanavanam It is yet another ancient temple of mythological significance located about 60 km from"
+        },
+        {
+          "name": "Sri Vedanarayana Swamy Temple, Nagalapuram",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section",
+          "verbatimQuote": "in advance through ttdevasthanams.ap.gov.in Click here to view Temple Program Sri Vedanarayana Swamy Temple, Nagalapuram This is one of the most important and ancient sub-shrines under the umbrella of Tirumala"
+        },
+        {
+          "name": "Sri Venugopala Swamy Vari temple, Karvetinagaram",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section (rates table spells the village 'Karveti Nagaram')",
+          "verbatimQuote": "in advance through ttdevasthanams.ap.gov.in Click here to view Temple Program Sri Venugopala Swamy Vari temple, Karvetinagaram (taken over temple): The presiding deity in this ancient shrine is Sri Venugopala Swamy"
+        },
+        {
+          "name": "Sri Karivarada Raja Swamy vari temple, Satravada",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section (rates table also carries 'Sri Kati Varadaraja Swamy Temple, Sathravada' — same-village name ambiguity flagged for review, not resolved here)",
+          "verbatimQuote": "Moksham in the Bhagavatam. Click here to view Temple Program Sri Karivarada Raja Swamy vari temple, Satravada (taken over temple): Both the Nagari and Satravada temples are considered to have"
+        },
+        {
+          "name": "Sri Kodandarama Swamy Temple, Tirupati",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — rates-table row (Tirupati city)",
+          "verbatimQuote": "Sevas and Weekly Sevas Annual Utsavams, Fairs and Festivals 1 Sri Kodandarama Swamy Temple, Tirupati 5.00 am to 9.00 pm Suprabatham Archana Abhishekam (weekly) Unjal Seva (on every Saturday) Kalyanotsavam"
+        },
+        {
+          "name": "Sri Kari Manikya Swamy Temple, Nagari",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — rates-table row",
+          "verbatimQuote": "Gokulastami Brahmotsavams Anivara Asthanam Varalakshmi Vratham Deepavali Asthanam Danurmasam 5 Sri Kari Manikya Swamy Temple, Nagari 5.30 am to 12.30 pm and 4.00pm to 8.30pm Suprabatham Archana Abhishekam (weekly) Ekantha"
+        },
+        {
+          "name": "Sri Lakshmi Narasimha Swamy temple, Tarigonda",
+          "hrefOrDetail": "https://www.tirumala.org/MoreTemples.aspx — prose section (TTD-managed)",
+          "verbatimQuote": "Vittaleshwara Swamy temple Sri Mahalakshmi Temple Sri Veeranjaneya Swamy temple Sri Lakshmi Narasimha Swamy temple, Tarigonda This famous temple of Sri Lakshmi Narasimha Swamy is located in the village of"
+        },
+        {
+          "name": "Sri Ranganatha Temple",
+          "hrefOrDetail": "'Other sub-temples in Pattabhiramalayam' prose list — Pattabhiramalayam's own location is NOT stated on this page; recorded, not mapped to an area",
+          "verbatimQuote": "fortnight of Chaitra (March/April) every year. Other sub-temples in Pattabhiramalayam: Sri Ranganatha Temple Sri Panduranga Vittaleshwara Swamy temple Sri Mahalakshmi Temple Sri Veeranjaneya Swamy temple Sri Lakshmi Narasimha Swamy temple,"
+        },
+        {
+          "name": "Sri Panduranga Vittaleshwara Swamy temple",
+          "hrefOrDetail": "'Other sub-temples in Pattabhiramalayam' prose list — location not stated on page",
+          "verbatimQuote": "(March/April) every year. Other sub-temples in Pattabhiramalayam: Sri Ranganatha Temple Sri Panduranga Vittaleshwara Swamy temple Sri Mahalakshmi Temple Sri Veeranjaneya Swamy temple Sri Lakshmi Narasimha Swamy temple, Tarigonda This famous"
+        },
+        {
+          "name": "Sri Mahalakshmi Temple",
+          "hrefOrDetail": "'Other sub-temples in Pattabhiramalayam' prose list — location not stated on page",
+          "verbatimQuote": "in Pattabhiramalayam: Sri Ranganatha Temple Sri Panduranga Vittaleshwara Swamy temple Sri Mahalakshmi Temple Sri Veeranjaneya Swamy temple Sri Lakshmi Narasimha Swamy temple, Tarigonda This famous temple of Sri Lakshmi Narasimha"
+        },
+        {
+          "name": "Sri Veeranjaneya Swamy temple",
+          "hrefOrDetail": "'Other sub-temples in Pattabhiramalayam' prose list — location not stated on page",
+          "verbatimQuote": "Ranganatha Temple Sri Panduranga Vittaleshwara Swamy temple Sri Mahalakshmi Temple Sri Veeranjaneya Swamy temple Sri Lakshmi Narasimha Swamy temple, Tarigonda This famous temple of Sri Lakshmi Narasimha Swamy is located"
+        },
+        {
+          "name": "Sri Narapura Venkateswara Swamy vari Temple, Jammalamadugu",
+          "hrefOrDetail": "OUT-OF-REGION: Jammalamadugu, YSR Kadapa district (~200 km) — TTD-managed but NOT a Tirupati-region destination; recorded, not an inventory candidate",
+          "verbatimQuote": "General Information Do's and Don'ts FAQs Dress Code Contact US Sri Narapura Venkateswara Swamy vari Temple, Jammalamadugu According to the legend, there was a big tank with thick Jambu bushes"
+        },
+        {
+          "name": "Sri Siddeswara Swamy Vari Temple, Thallapaka",
+          "hrefOrDetail": "OUT-OF-REGION: Thallapaka, Rajampeta Mandal, YSR Kadapa district — recorded, not an inventory candidate",
+          "verbatimQuote": "From then all poojas are performed as per Pancharatra Agama. Sri Siddeswara Swamy Vari Temple, Thallapaka Sri Kamakshi Sametha Sri Siddeswara Swamy was a temple dedicated to Lord Shiva, constructed"
         }
       ]
     },

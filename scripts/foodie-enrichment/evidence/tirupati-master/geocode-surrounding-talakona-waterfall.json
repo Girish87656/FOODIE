@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Talakona Waterfall",
+    "area": "surrounding"
+  },
+  "query": "Talakona Waterfall, Tirupati",
+  "lat": 13.8116648,
+  "lng": 79.2157823,
+  "displayName": "Talakona Waterfalls, Talakona, Yerravaripalem Mandal, Tirupati District, Andhra Pradesh, India",
+  "osmType": "node/waterfall",
+  "areaConfirmed": true,
+  "note": null,
+  "retrievedOn": "2026-10-26"
+}

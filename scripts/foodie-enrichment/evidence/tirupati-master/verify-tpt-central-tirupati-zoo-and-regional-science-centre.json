@@ -1,0 +1,49 @@
+{
+  "candidate": {
+    "name": "Tirupati Zoo and Regional Science Centre",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d5123376-r447486738-Regional_Science_Centre-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"Tirupati Zoo and Regional Science Centre\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d5123376-r447486738-Regional_Science_Centre-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Tirupati Zoo and Regional Science Centre",
+      "snippet": "Regional Science Centre: Must visit for Children and Students - Tirupati Zoo and Regional Science Centre - See 25 traveler reviews, 24 candid photos, ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/Attraction_Review-g297587-d5123376-Reviews-or10-Regional_Science_Centre-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "REGIONAL SCIENCE CENTRE - All You SHOULD Know",
+      "snippet": "Must visit for Children and Students - Tirupati Zoo and Regional Science Centre . Jan 2016. There are two important attractions for children and students in ... Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/LocationPhotoDirectLink-g297587-d5123376-i234861692-Regional_Science_Centre-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Entrance to Regional Science Centre - Tirupati",
+      "snippet": "Must visit for Children and Students - Tirupati Zoo and Regional Science Centre . There are two important attractions for children and students in Tirupati . Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://it.tripadvisor.ch/LocationPhotoDirectLink-g297587-d5123376-i234861692-Regional_Science_Centre-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Foto di : Entrance to Regional Science Centre - Tirupati - Tripadvisor",
+      "snippet": "Dalla recensione : Must visit for Children and Students - Tirupati Zoo and Regional Science Centre di Regional Science Centre ...",
+      "host": "it.tripadvisor.ch",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com.tw/LocationPhotoDirectLink-g297587-d5123376-i234861555-Regional_Science_Centre-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Great Scientists Statues - 蒂魯伯蒂Regional Science Centre的圖片",
+      "snippet": "照片：Great Scientists Statues. 來自Regional Science Centre 的: Must visit for Children and Students - Tirupati Zoo and Regional Science Centre 評論 ...",
+      "host": "www.tripadvisor.com.tw",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

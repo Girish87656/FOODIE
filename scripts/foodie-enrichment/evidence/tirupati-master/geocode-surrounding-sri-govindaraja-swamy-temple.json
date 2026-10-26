@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Sri Govindaraja Swamy temple",
+    "area": "surrounding"
+  },
+  "query": "Sri Govindaraja Swamy temple, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-26"
+}

@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Sri Kapileswara Swamy Temple - Tirupati District",
+    "area": "tpt-central",
+    "sourceUrl": "https://tirupati.ap.gov.in/tourist-place/sri-kapileswara-swamy-temple"
+  },
+  "query": "\"Sri Kapileswara Swamy Temple - Tirupati District\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.youtube.com",
+      "name": "Sri Kapileswara Swamy Temple - Tirupati District #love #music #",
+      "snippet": "Sri Kapileswara Swamy Temple - Tirupati District #love #music #motivation #latest #devalaya · Shiv Swarnamala Stuti · Religious India.",
+      "host": "www.youtube.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

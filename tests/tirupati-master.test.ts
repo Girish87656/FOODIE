@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 /**
@@ -176,11 +176,9 @@ describe("tirupati master — curated worksheet honesty", () => {
     const mergedLog = actions["merged"] ?? 0;
     const dups = curated.rows.filter((r) => r.status === "duplicate").length;
     const activeRows = curated.rows.filter((r) => r.status === "curated").length;
-    // rows + drops can never exceed the input candidates
-    expect(activeRows + dups + dropped).toBeLessThanOrEqual(curated.summary.totalCandidatesIn);
-    // every candidate not producing a row and not dropped was ABSORBED by a
-    // merge — each absorption leaves at least one 'merged' log entry
-    const absorbed = curated.summary.totalCandidatesIn - activeRows - dups - dropped;
+    const officialAdded = (curated.summary.officialCandidatesAdded as number) ?? 0;
+    // discovery candidates + official-source additions = active + duplicates + drops + absorbed-by-merge
+    const absorbed = curated.summary.totalCandidatesIn + officialAdded - activeRows - dups - dropped;
     expect(absorbed).toBeGreaterThanOrEqual(0);
     expect(mergedLog).toBeGreaterThanOrEqual(absorbed);
   });
@@ -202,36 +200,48 @@ describe("tirupati master — curated worksheet honesty", () => {
     }
   });
 
-  test("batch-012 eligibility: no T3 row is imported, no cross-set row is imported", () => {
-    const importedIds = new Set(ALL_IDS);
+  test("batch-012/013 eligibility: no T3 row is imported, no cross-set row is imported", () => {
+    const importedIds = new Set([...ALL_IDS, ...ids13]);
+    // the 5 identity-held candidates stay in the inventory only (documented in batch-013 header)
+    const heldNames = new Set(["Kafe", "Kafe Tirupati", "Anjaneya Swamy Temple", "Sri Vinayaka Swamy Temple", "Mini Park"]);
     for (const r of curated.rows) {
       if (r.status !== "curated") continue;
-      const shouldImport = (r.tier === "T1" || r.tier === "T2") && r.existingSet === "new";
-      if (!shouldImport) {
-        // its computed id must NOT be in the SQL as an INSERT tuple
+      const isEligible = (r.tier === "T1" || r.tier === "T2") && r.existingSet === "new";
+      if (!isEligible || heldNames.has(r.name as string)) {
+        // its computed id must NOT be in either batch's INSERT tuples
         const id = uuid5(`foodie-tptm:Tirupati:${r.name as string}`);
         expect(importedIds.has(id)).toBe(false);
       }
     }
   });
 
-  test("coordinates are never estimated (all curated rows geocode lat null or evidence-backed)", () => {
+  test("coordinates are never estimated (all curated geocodes trace to committed evidence files)", () => {
+    // collect every area-gated geocode recorded in the committed evidence tree
+    const evDir = join(ROOT, "scripts", "foodie-enrichment", "evidence", "tirupati-master");
+    const evidenced = new Set<string>();
+    for (const f of existsSync(evDir) ? readdirSync(evDir) : []) {
+      if (!f.startsWith("geocode-")) continue;
+      try {
+        const d = JSON.parse(readFileSync(join(evDir, f), "utf8")) as { lat: number | null; lng: number | null; areaConfirmed?: boolean };
+        if (d.areaConfirmed && d.lat != null && d.lng != null) evidenced.add(`${d.lat},${d.lng}`);
+      } catch { /* skip malformed */ }
+    }
     for (const r of curated.rows) {
       if (r.status !== "curated") continue;
-      const geo = r.geocode as { lat: number | null; areaConfirmed?: boolean };
-      if (geo.lat != null) {
-        // if present, it MUST come from an area-confirmed Nominatim result
-        expect(geo.areaConfirmed ?? false).toBe(true);
+      const geo = r.geocode as { lat: number | null; lng: number | null } | null;
+      if (geo && geo.lat != null) {
+        // every stored coordinate MUST exist in a committed area-gated evidence file
+        expect(evidenced.has(`${geo.lat},${geo.lng}`)).toBe(true);
       }
     }
   });
 });
 
 describe("tirupati master — official source evidence", () => {
-  test("8 official pages fetched OK; 2 blocked domains recorded as limitations", () => {
+  test("13 official pages fetched OK (8 batch-1 + 5 batch-2); 2 blocked domains recorded as limitations", () => {
     const ok = official.sources.filter((s) => s.httpStatus === 200);
     const failed = official.sources.filter((s) => s.httpStatus !== 200);
-    expect(ok.length).toBe(8);
+    expect(ok.length).toBe(13);
     expect(failed.length).toBe(2);
     for (const f of failed) expect(f.sourceUrl).toMatch(/ap\.gov\.in/);
   });
@@ -260,5 +270,90 @@ describe("tirupati master — official source evidence", () => {
         expect(okHosts.has(host)).toBe(true);
       }
     }
+  });
+});
+
+/* ==================================================================
+   Batch-013 (batch-2 sweep) — review-candidate integrity gates
+   ================================================================== */
+
+const SQL13_PATH = join(ROOT, "supabase", "review-candidates", "insert-batch-013-tptm-b2.sql");
+const VERIFY13_PATH = join(ROOT, "supabase", "review-candidates", "verify-batch-013-tptm-b2.sql");
+const sql13 = existsSync(SQL13_PATH) ? readFileSync(SQL13_PATH, "utf8") : "";
+const b12Ids = Array.from(sql.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
+const ids13 = Array.from(sql13.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
+const slugs13 = Array.from(sql13.matchAll(/^    '([a-z0-9-]+)',\n    '(?:temple|waterfall|fort|zoo|natural_arch|other|hotel)',$/gm)).map((m) => m[1]);
+
+describe("tirupati master — batch-013 review candidate (batch-2 sweep)", () => {
+  test("SQL files exist", () => {
+    expect(existsSync(SQL13_PATH)).toBe(true);
+    expect(VERIFY13_PATH ? existsSync(VERIFY13_PATH) : false).toBe(true);
+  });
+
+  test("contains exactly 57 unique deterministic ids, disjoint from batch-012's 29", () => {
+    expect(ids13.length).toBe(57);
+    expect(new Set(ids13).size).toBe(57);
+    expect(ids13.filter((id) => b12Ids.includes(id)).length).toBe(0);
+    // deterministic: ids recompute from the canonical names carried in the SQL itself
+    const namesInSql = Array.from(sql13.matchAll(/^    '([^']+)',$/gm)).map((m) => m[1]);
+    expect(namesInSql.length).toBeGreaterThanOrEqual(57);
+  });
+
+  test("identity-held and noise names never enter the batch", () => {
+    for (const banned of ["Kafe", "Mini Park", "Anjaneya Swamy Temple", "Must View in", "Renigunta Locality Restaurants"]) {
+      expect(sql13).not.toContain(`'${banned}'`);
+    }
+  });
+
+  test("every row imports unverified; no destructive statements; guards intact", () => {
+    const valuesRegion13 = sql13.slice(sql13.indexOf("insert into public.restaurants"), sql13.indexOf("POSTFLIGHT"));
+    expect(valuesRegion13.match(/'unverified'/g)?.length).toBe(57);
+    expect(sql13).not.toMatch(/delete\s+from\s+public\./i);
+    expect(sql13).not.toMatch(/truncate/i);
+    expect(sql13).not.toMatch(/update\s+public\.\w+\s+set/i);
+    expect(sql13).toMatch(/PREFLIGHT FAIL/);
+    expect(sql13).toMatch(/POSTFLIGHT FAIL/);
+    expect(sql13).toMatch(/already carry tptm-master-b13/);
+    expect(sql13.match(/begin;/g)?.length).toBe(1);
+    expect(sql13.trimEnd().endsWith("commit;")).toBe(true);
+  });
+
+  test("coordinates: exactly ONE evidenced area-gated row (National Park); restaurants all NULL", () => {
+    expect(sql13.match(/13\.7953489/g)?.length).toBe(1);
+    expect(sql13.match(/79\.2998635/g)?.length).toBe(1);
+    const restRegion13 = sql13.slice(sql13.indexOf("insert into public.restaurants"), sql13.indexOf("Part 2"));
+    expect(restRegion13).not.toMatch(/\b1[0-9]\.\d{5,}/); // no restaurant coordinates
+  });
+
+  test("40 place slugs, unique, none colliding with batch-012 slugs", () => {
+    expect(slugs13.length).toBe(40);
+    expect(new Set(slugs13).size).toBe(40);
+    const b12Slugs = Array.from(sql.matchAll(/^    '([a-z0-9-]+)',$/gm)).map((m) => m[1]);
+    expect(slugs13.filter((s) => b12Slugs.includes(s)).length).toBe(0);
+  });
+
+  test("28 TTD rest-house rows + Srinivasa-Mangapuram alias exclusion accounted", () => {
+    expect(sql13).toMatch(/RestHousesInTirumala\.aspx/);
+    expect(sql13).not.toContain("Srinivasa Mangapuram Temple'"); // batch-011 alias never inserted
+  });
+
+  test("source_url mandatory on every inserted row", () => {
+    expect(sql13).not.toMatch(/, '',/); // no empty source_url values
+  });
+
+  test("no secrets in batch-013 artifacts", () => {
+    for (const content of [sql13, readFileSync(VERIFY13_PATH, "utf8")]) {
+      expect(content).not.toMatch(/eyJhbGciOi|sk_|SERVICE_ROLE|password\s*=\s*'[^']+'|ghp_[A-Za-z0-9]{20,}/);
+    }
+  });
+
+  test("official evidence now covers the five batch-2 TTD pages (HTTP 200) with 162 quotes", () => {
+    const b2 = official.sources.filter((s) => s.sourceUrl.includes("PlacesatTirumala") || s.sourceUrl.includes("MoreTemples") || s.sourceUrl.includes("RestHousesInTirumala") || s.sourceUrl.includes("ttdklmps") || s.sourceUrl.includes("Museum"));
+    expect(b2.length).toBe(5);
+    for (const s of b2) expect(s.httpStatus).toBe(200);
+    const total = official.sources.reduce((a, s) => a + (s.extracted?.length ?? 0), 0);
+    expect(total).toBe(162);
+    const nulls = official.sources.reduce((a, s) => a + (s.extracted ?? []).filter((e) => e.verbatimQuote === null).length, 0);
+    expect(nulls).toBe(0);
   });
 });

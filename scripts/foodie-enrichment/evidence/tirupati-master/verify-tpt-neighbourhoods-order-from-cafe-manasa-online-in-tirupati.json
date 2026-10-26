@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Order from Cafe Manasa online in Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/cafe-manasa-korlagunta-rest1316846"
+  },
+  "query": "\"Order from Cafe Manasa online in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/tirupati/cafe-manasa-korlagunta-rest1316846",
+      "name": "Order from Cafe Manasa online in Tirupati",
+      "snippet": "Order Online from Cafe Manasa in Korlagunta, Tirupati for delicious South Indian food. Enjoy fast delivery with Swiggy ... ,Konkachennaiahgunta, Tirupati (Urban), ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Sri Venkateswara National Park",
+    "area": "tpt-central",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park"
+  },
+  "query": "\"Sri Venkateswara National Park\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+      "name": "Sri Venkateswara National Park",
+      "snippet": "Sri Venkateswara National Park ; Tirupati district, Andhra Pradesh, India · Tirupati · 13°45′4″N 79°20′16″E﻿ / ﻿13.75111°N 79.33778°E﻿ / 13.75111; 79.33778 · 353 km ... Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-venkateswara-national-park",
+      "name": "Explore the Beauty of Sri Venkateswara National Park",
+      "snippet": "Stretching over 353 square kilometres, Sri Venkateswara National Park is a biosphere reserve nestled in the lush green outskirts of Tirupathi City. Spread ... Read more",
+      "host": "www.incredibleindia.gov.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d3912809-Reviews-Sri_Venkateswara_National_Park-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Venkateswara National Park - All You SHOULD Know",
+      "snippet": "The area. Address . KT Road, Tirupati 517505 India ... AsiaIndiaAndhra PradeshChittoor District Tirupati Things to Do in TirupatiSri Venkateswara National Park . Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.makemytrip.com/tripideas/attractions/sri-venkateswara-national-park",
+      "name": "Sri Venkateswara National Park, Tirupati",
+      "snippet": "Sri Venkateswara National Park . Scenic Biosphere Reserve. 4.2. in Google ... Tirupati Marasa Sarovar Premiere, Tirupati Akasaganga Teertham, Tirupati Kafe Tirupati , ... Read more",
+      "host": "www.makemytrip.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupathibookings.com/sriVenkateswaraNationalPark",
+      "name": "Sri Venkateswara National Park | Tirupati Bookings",
+      "snippet": "Visit Sri Venkateswara National Park —abundant in wildlife, waterfalls, and trekking routes amidst the verdant Eastern Ghats close to Tirupati . img. It lies in ... Read more",
+      "host": "tirupathibookings.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.avathi.com/place/sri-venkateswara-national-park/4451",
+      "name": "Sri Venkateswara Zoological Park",
+      "snippet": "Sri Venkateswara National Park is renowned for its sprawling bioreserve covering over 350 square kilometers of diverse wildlife and stunning natural landscapes ... Read more",
+      "host": "www.avathi.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Venkateswara National Park - All You SHOULD Know :: The area. Address . KT Road, Tirupati 517505 India ... AsiaIndiaAndhra PradeshChittoor District Tirupati Things to Do in TirupatiSri Venkateswara National Park . Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

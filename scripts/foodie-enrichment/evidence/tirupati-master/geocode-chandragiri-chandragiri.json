@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Chandragiri",
+    "area": "chandragiri"
+  },
+  "query": "Chandragiri, Tirupati",
+  "lat": 13.5842501,
+  "lng": 79.3166721,
+  "displayName": "Chandragiri, Chandragiri Mandal, Tirupati District, Andhra Pradesh, 517100, India",
+  "osmType": "node/town",
+  "areaConfirmed": true,
+  "note": null,
+  "retrievedOn": "2026-10-26"
+}

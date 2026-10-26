@@ -82,7 +82,7 @@ const AREAS: Area[] = [
     city: "Tirupati",
     locality: "Tirupati residential neighbourhoods",
     areaTokens: /\btirupati\b/i,
-    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "stays"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
   {
     key: "tirumala",
@@ -90,7 +90,7 @@ const AREAS: Area[] = [
     locality: "Tirumala hills",
     areaTokens: /\btirumala\b/i,
     areaTag: "tirumala",
-    groups: ["food-restaurants", "food-tiffin", "food-street", "temples", "attractions", "stays"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
   {
     key: "tiruchanur",
@@ -98,7 +98,7 @@ const AREAS: Area[] = [
     locality: "Tiruchanur (Alamelu Mangapuram corridor)",
     areaTokens: /\btiruchan(oo|u)r\b|alamelu\s*manga/i,
     areaTag: "surrounding-corridor",
-    groups: ["food-restaurants", "food-tiffin", "temples", "stays"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
   {
     key: "srinivasa-mangapuram",
@@ -106,7 +106,7 @@ const AREAS: Area[] = [
     locality: "Srinivasa Mangapuram (about 10 km west of Tirupati city, per district page)",
     areaTokens: /srinivasa\s*manga/i,
     areaTag: "surrounding-corridor",
-    groups: ["food-restaurants", "food-tiffin", "temples", "stays"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
   {
     key: "chandragiri",
@@ -114,7 +114,7 @@ const AREAS: Area[] = [
     locality: "Chandragiri (about 12-14 km south-west of Tirupati city)",
     areaTokens: /chandragiri/i,
     areaTag: "surrounding-corridor",
-    groups: ["food-restaurants", "food-tiffin", "temples", "attractions", "stays"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
   {
     key: "renigunta",
@@ -122,7 +122,7 @@ const AREAS: Area[] = [
     locality: "Renigunta (airport / railway junction corridor, about 10-12 km north)",
     areaTokens: /renigunta/i,
     areaTag: "surrounding-corridor",
-    groups: ["food-restaurants", "food-tiffin", "stays"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
   {
     key: "surrounding",
@@ -130,7 +130,7 @@ const AREAS: Area[] = [
     locality: "Surrounding destinations (beyond the city/Tirumala core — clearly-labelled group)",
     areaTokens: /\btirupati\b|\bchittoor\b/i,
     areaTag: "surrounding",
-    groups: ["attractions"],
+    groups: ["food-restaurants", "food-tiffin", "food-street", "food-bakery", "food-cafe", "temples", "attractions", "stays", "markets"],
   },
 ];
 
@@ -231,6 +231,7 @@ const GROUPS: Record<string, Group> = {
       "srinivasa-mangapuram": ["restaurants Srinivasa Mangapuram Tirupati"],
       "chandragiri": ["restaurants Chandragiri Tirupati"],
       "renigunta": ["restaurants Renigunta Tirupati justdial"],
+      "surrounding": ["restaurants Srikalahasti justdial", "restaurants Nagalapuram Tirupati district"],
     },
     hints: [
       { test: /biryani/i, category: "restaurant", tag: "biryani" },
@@ -259,8 +260,10 @@ const GROUPS: Record<string, Group> = {
       ],
       "tirumala": ["breakfast tiffin Tirumala"],
       "tiruchanur": ["tiffin Tiruchanoor"],
+      "srinivasa-mangapuram": ["tiffin centre Srinivasa Mangapuram Tirupati"],
       "chandragiri": ["tiffin centre Chandragiri"],
       "renigunta": ["tiffin centre Renigunta"],
+      "surrounding": ["tiffin centres Srikalahasti"],
     },
     hints: [
       { test: /tiffin|breakfast|idli|dosa|vada|puri|upma|pongal/i, category: "tiffin" },
@@ -282,6 +285,11 @@ const GROUPS: Record<string, Group> = {
       ],
       "tpt-neighbourhoods": ["street food Korlagunta Tirupati", "tea shop Bhavani Nagar Tirupati"],
       "tirumala": ["street food Tirumala stalls"],
+      "tiruchanur": ["tea stalls Tiruchanoor Tirupati"],
+      "srinivasa-mangapuram": ["tea stalls Srinivasa Mangapuram"],
+      "chandragiri": ["street food tea stalls Chandragiri Tirupati"],
+      "renigunta": ["street food tea stalls Renigunta"],
+      "surrounding": ["street food Srikalahasti"],
     },
     hints: [
       { test: /chaat|pani puri|street/i, category: "street_food" },
@@ -303,7 +311,12 @@ const GROUPS: Record<string, Group> = {
         "mithai Tirupati sweets",
       ],
       "tpt-neighbourhoods": ["bakery Korlagunta Tirupati", "sweets Bhavani Nagar Tirupati"],
-      "tirumala": ["sweets laddu Tirumala prasadam counters"],
+      "tirumala": ["sweets laddu Tirumala prasadam counters", "sweets snacks shops Tirumala justdial"],
+      "tiruchanur": ["sweets bakeries Tiruchanoor Tirupati"],
+      "srinivasa-mangapuram": ["bakery sweets Srinivasa Mangapuram"],
+      "chandragiri": ["bakery sweets Chandragiri Tirupati"],
+      "renigunta": ["bakery sweets Renigunta"],
+      "surrounding": ["sweets bakeries Srikalahasti"],
     },
     hints: [
       { test: /bakery|cakes?/i, category: "bakery_sweets", tag: "bakery" },
@@ -319,6 +332,12 @@ const GROUPS: Record<string, Group> = {
     queries: {
       "tpt-central": ["cafes Tirupati zomato", "coffee shop Tirupati", "cafe Tirupati Tilak Road justdial"],
       "tpt-neighbourhoods": ["cafe Korlagunta Tirupati"],
+      "tirumala": ["cafe coffee Tirumala"],
+      "tiruchanur": ["cafe Tiruchanoor Tirupati"],
+      "srinivasa-mangapuram": ["cafe Srinivasa Mangapuram"],
+      "chandragiri": ["cafe Chandragiri Tirupati"],
+      "renigunta": ["cafe Renigunta"],
+      "surrounding": ["cafes Srikalahasti"],
     },
     hints: [{ test: /caf[eé]|coffee/i, category: "cafe" }],
     defaultCategory: "cafe",
@@ -357,6 +376,8 @@ const GROUPS: Record<string, Group> = {
       "tiruchanur": ["Sri Padmavathi Ammavari temple Tiruchanur official"],
       "srinivasa-mangapuram": ["Sri Kalyana Venkateswara Swamy temple Srinivasa Mangapuram official"],
       "chandragiri": ["temples near Chandragiri fort", "Chandragiri Venkateswara temple"],
+      "renigunta": ["temples Renigunta Tirupati"],
+      "surrounding": ["temples in Srikalahasti tirumala.org", "TTD temples Tirupati region Nagalapuram Narayanavanam"],
     },
     hints: [
       { test: /temple|swamy|alvar|alwar|koil|devasthanam/i, category: "temple", placeType: "temple" },
@@ -382,8 +403,12 @@ const GROUPS: Record<string, Group> = {
         "Sri Venkateswara National Park Tirupati",
         "Deer park Tirupati",
       ],
+      "tpt-neighbourhoods": ["parks playgrounds Korlagunta Tirupati", "tourist places Bhavani Nagar Tirupati"],
       "tirumala": ["places to visit in Tirumala tirumala.org", "Papasanam Teertham Tirumala", "Akasha Ganga Teertham Tirumala"],
+      "tiruchanur": ["places to visit Tiruchanoor Tirupati"],
+      "srinivasa-mangapuram": ["places to visit Srinivasa Mangapuram Tirupati"],
       "chandragiri": ["Chandragiri Fort Raja Mahal official", "things to do Chandragiri Tirupati"],
+      "renigunta": ["places to visit Renigunta Tirupati"],
       "surrounding": [
         "Talakona waterfall official andhra tourism",
         "Nagalapuram trekking waterfall",
@@ -429,6 +454,7 @@ const GROUPS: Record<string, Group> = {
       "srinivasa-mangapuram": ["accommodation Srinivasa Mangapuram"],
       "chandragiri": ["hotels Chandragiri Tirupati"],
       "renigunta": ["hotels near Renigunta airport", "lodges Renigunta justdial"],
+      "surrounding": ["hotels Srikalahasti justdial"],
     },
     hints: [
       { test: /resort/i, category: "hotel", tag: "resort" },
@@ -454,6 +480,13 @@ const GROUPS: Record<string, Group> = {
         "shopping malls Tirupati justdial",
         "vegetable market Tirupati",
       ],
+      "tpt-neighbourhoods": ["markets supermarkets Korlagunta Tirupati", "shopping Bhavani Nagar Tirupati justdial"],
+      "tirumala": ["shopping markets Tirumala justdial"],
+      "tiruchanur": ["shops markets Tiruchanoor Tirupati"],
+      "srinivasa-mangapuram": ["shops markets Srinivasa Mangapuram"],
+      "chandragiri": ["shops markets Chandragiri Tirupati"],
+      "renigunta": ["shops markets Renigunta"],
+      "surrounding": ["markets shopping Srikalahasti"],
     },
     hints: [
       { test: /market|bazaar|mandi/i, category: "market", placeType: "other", tag: "market" },

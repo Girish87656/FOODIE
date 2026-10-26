@@ -1,0 +1,49 @@
+{
+  "candidate": {
+    "name": "Chandragiri Fort",
+    "area": "chandragiri",
+    "sourceUrl": "https://obms-tourist.rajasthan.gov.in/place-details/Chandragiri-Fort"
+  },
+  "query": "\"Chandragiri Fort\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org",
+      "name": "Chandragiri Fort, Andhra Pradesh",
+      "snippet": "Chandragiri Fort is a historical fort located in Tirupati in Andhra Pradesh, India. The fort, with its rectangular bastions and steep moat, was built around ... Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in",
+      "name": "Explore the Historic Chandragiri Fort in Tirupati",
+      "snippet": "Chandragiri Fort stands proudly amidst the picturesque landscape of Andhra Pradesh, where history and nature converge. It covers an area of 25 acres and is ... Read more",
+      "host": "www.incredibleindia.gov.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Chandragiri Fort in Chandragiri,Tirupati - Justdial Jd",
+      "snippet": "Chandragiri Fort is located approximately 3 km from the town of Chandragiri, which is about 14 km from the city of Tirupati . The fort is easily accessible by ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com",
+      "name": "Chandragiri Palaces and Fort - All You SHOULD Know",
+      "snippet": "The area. Address . 11 Km From Tirupati , Tirupati 517501 India. Reach out ... The Chandragiri fort and palace at Chandragiri near Tirupati was built in ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.district.in",
+      "name": "Book tickets to Chandragiri Fort",
+      "snippet": "Chandragiri Fort , located in the Chittoor district of Andhra Pradesh, rises prominently atop the hill known as Chandragiri or the Mountain of the Moon. Read more",
+      "host": "www.district.in",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Chandragiri Palaces and Fort - All You SHOULD Know :: The area. Address . 11 Km From Tirupati , Tirupati 517501 India. Reach out ... The Chandragiri fort and palace at Chandragiri near Tirupati was built in ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

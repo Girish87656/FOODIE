@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Renigunta Locality Restaurants, Tirupati",
+    "area": "renigunta",
+    "sourceUrl": "https://www.zomato.com/tirupati/renigunta-locality-restaurants/street-food"
+  },
+  "query": "\"Renigunta Locality Restaurants, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/renigunta-locality-restaurants",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Skandha Amor Fati Cafe · The Irani & Co · The Vintage Cafe · Mayura Garden Family Restaurant · OG Zone · Potlam Biryani. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/renigunta-locality-restaurants/andhra",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Aahar Samrajyam · Mayura Garden Family Restaurant · Kakinada Subbbayya Gari Hotel · Kwalitys Spicy · Lasa Food Court · Sri ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/renigunta-locality-restaurants/sandwich?all=1&no-bar=1&category=9",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Venky Yadav Cafe · Country Popeyes Kitchen · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Sky Bucks · Foodies Park. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/renigunta-locality-restaurants/food-truck",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Chai Ka Damki · Cravings Kitchen · Venky Yadav Cafe · Trishikaah Chats · Burger King · Red Bucket Biryani · Hyderabad ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/renigunta-locality-restaurants/south-indian",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Hotel Sri Balaji Bhavan · AR Bhavan · Zam Zam Family Restaurant · Hotel AR · Hotel Ramana Vilas · Padmavathi Tiffins · Good ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/renigunta-locality-restaurants/indian?all=1&veg=1&category=9",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Vaibhav Grand Family Restaurant · AR Bhavan · Hotel Sri Balaji Bhavan · Zam Zam Family Restaurant · Good Luck Family Dhaba. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

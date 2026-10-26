@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "BNR Sweets & Bakery, Chandragiri, Tirupati",
+    "area": "chandragiri"
+  },
+  "query": "BNR Sweets & Bakery, Chandragiri, Tirupati, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-26"
+}

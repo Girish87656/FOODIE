@@ -14,10 +14,15 @@ A source that could not be accessed is recorded as a limitation — never silent
 | https://www.tirumala.org/AccommodationAtTirupati.aspx | 200 OK | 67878 B | 7 names | TTD official accommodation page for Tirupati: 7 named choultries/guest houses with contact + rates (Rs.50-1300) in the page tables. |
 | https://www.tirumala.org/TemplesAtTiruchanoor.aspx | 200 OK | 75302 B | 6 names | TTD official Tiruchanoor (Sri Padmavathi) page: 2 sub-shrines inside the Padmavathi compound + Suryanarayana (opposite Padma Sarovaram) + 2 outside temples under SRI PAT (Appalayagunta, Thondamanadu). |
 | https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati | 200 OK | 592196 B | 15 names | Ministry of Tourism 'Incredible India' Tirupati destination page. NOT a Next.js shell as anticipated: server-rendered HTML (AEM path content/incredible-india-v2; 0 self.__next_f chunks, 0 __NEXT_DATA__) — full text + 10 attraction card links extractable. |
+| https://www.tirumala.org/PlacesatTirumala.aspx | 200 OK | 61784 B | 6 names | TTD official 'Places at Tirumala' (batch 2). 4 named temples (incl. TWO distinct Anjaneya temples per the page's own prose) + Swami Pushkarini + Silathoranam. |
+| https://www.tirumala.org/S.V. Museum.aspx | 200 OK | 69029 B | 2 names | TTD official S.V. Museum page (batch 2): museum officially named Sri Venkateswara Dhyana Jnana Mandiram, Tirumala; 6000+ items, ten sections. |
+| https://www.tirumala.org/RestHousesInTirumala.aspx | 200 OK | 76257 B | 34 names | TTD official Rest Houses in Tirumala (batch 2): 34 named rows across 4 sections (Sri Padmavathi GH Area 15, Sri Venkateswara GH Area 6 named, TBC Area 12, Marriage Halls 1 new name) with official rates. NOT extracted (recorded here instead): 'NGC VVGH HRG MBC Cottages' row — internal booking codes, not a place name. |
+| https://www.tirumala.org/ttdklmps.aspx | 200 OK | 113640 B | 2 names | TTD official Kalyana Mandapam directory (batch 2): ~160 rows across Indian cities/towns. SCOPE FINDING: ZERO Tirupati or Tirumala rows in the directory table (checked programmatically — 'Tirupati'/'Tirumala' hits are all page-nav text, not table rows). Page reviewed and recorded; NO candidates from it — out of Tirupati scope by the page's own content. |
+| https://www.tirumala.org/MoreTemples.aspx | 200 OK | 149703 B | 15 names | TTD official 'More Temples' (batch 2): 9 Tirupati-region TTD-managed temple candidates + 4 sub-temple names 'in Pattabhiramalayam' (location unstated on page — kept as evidence only) + 2 OUT-OF-REGION Kadapa temples (recorded, excluded from inventory by scope). |
 | https://tirupati.ap.gov.in/ | FAILED (connection) | — | 0 names | LIMITATION: district official site unreachable from sandbox network. Single curl attempt (per task directive): curl -sSL exited with http_code=000 (connection could not be established). Not retried further. No content recorded from it. |
 | https://tourism.ap.gov.in/ | FAILED (connection) | — | 0 names | LIMITATION: AP Tourism official site unreachable from sandbox network. Single curl attempt (per task directive): http_code=000. Not retried further. No content recorded from it. |
 
-Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrity self-check: 5/5 located word-for-word in the saved raw HTML.
+Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrity self-check: 10/10 located word-for-word in the saved raw HTML.
 
 ## 2. Inaccessible official domains (recorded limitations)
 
@@ -29,45 +34,46 @@ Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrit
 
 ## 3. Search channel
 
-z-ai `web_search` (multi-engine public web results): **115 discovery queries** across
-9 category groups × 8 locality groups, returning **854 raw hits**.
+z-ai `web_search` (multi-engine public web results): **154 discovery queries** across
+9 category groups × 8 locality groups, returning **1123 raw hits**.
 Rate limits: the backend hard-throttled during the pass (HTTP 429s with documented back-offs);
-0 queries ended in a recorded error state and 74 identity verifications were
+0 queries ended in a recorded error state and 78 identity verifications were
 rate-limit-skipped (all re-runnable — the pipeline is resumable per query/candidate).
 
 ## 4. Identity-verification + geocoding channels
 
-- Identity verification: **104 candidates verified** so far — 26 area-confirmed,
-  4 not confirmed, 74 skipped (rate limit). Remaining candidates keep their
+- Identity verification: **205 candidates verified** so far — 111 area-confirmed,
+  16 not confirmed, 78 skipped (rate limit). Remaining candidates keep their
   discovery-hit evidence and stay T3/backlog until verified.
 - Geocoding: OpenStreetMap Nominatim (keyless, 1 req/s, project UA, area-gated):
-  28 attempts → **1 area-confirmed matches, 27 NULL** (coordinates are
+  116 attempts → **18 area-confirmed matches, 98 NULL** (coordinates are
   NEVER estimated; every NULL is recorded with its reason in geocode-*.json).
 
 ## 5. Public listing platforms (via search snippets only — no page scraping)
 
 Hosts that actually surfaced allow-listed hits in this pass:
-- `www.justdial.com` — 56 curated reference(s)
-- `www.tirumala.org` — 27 curated reference(s)
-- `www.tripadvisor.com` — 25 curated reference(s)
-- `en.wikipedia.org` — 17 curated reference(s)
-- `www.zomato.com` — 14 curated reference(s)
+- `www.justdial.com` — 71 curated reference(s)
+- `www.tirumala.org` — 66 curated reference(s)
+- `www.tripadvisor.com` — 24 curated reference(s)
+- `www.zomato.com` — 16 curated reference(s)
+- `en.wikipedia.org` — 16 curated reference(s)
 - `www.swiggy.com` — 11 curated reference(s)
-- `www.facebook.com` — 8 curated reference(s)
+- `www.facebook.com` — 10 curated reference(s)
+- `magicpin.in` — 6 curated reference(s)
 - `www.incredibleindia.gov.in` — 5 curated reference(s)
-- `magicpin.in` — 3 curated reference(s)
 - `www.makemytrip.com` — 3 curated reference(s)
 - `www.district.in` — 2 curated reference(s)
-- `news.tirumala.org` — 2 curated reference(s)
 - `wanderlog.com` — 1 curated reference(s)
+- `www.eazydiner.com` — 1 curated reference(s)
 - `www.goibibo.com` — 1 curated reference(s)
 - `tirupati.ap.gov.in` — 1 curated reference(s)
+- `www.agoda.com` — 1 curated reference(s)
+- `www.booking.com` — 1 curated reference(s)
+- `news.tirumala.org` — 1 curated reference(s)
 - `obms-tourist.rajasthan.gov.in` — 1 curated reference(s)
 - `irrigation.ap.gov.in` — 1 curated reference(s)
 - `indiacinehub.gov.in` — 1 curated reference(s)
 - `www.holidify.com` — 1 curated reference(s)
-- `www.agoda.com` — 1 curated reference(s)
-- `www.booking.com` — 1 curated reference(s)
 
 Usage policy: only the identity of a listing (name + URL + public snippet) is used as evidence;
 listing pages are NOT scraped wholesale, no descriptions are copied, no Google Maps bulk

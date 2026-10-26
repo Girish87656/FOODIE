@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Sri Venkateswara Zoological Park",
+    "area": "tpt-central",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park"
+  },
+  "query": "\"Sri Venkateswara Zoological Park\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://tirupatizoo.com/contact-us",
+      "name": "Contact Us - SV ZOO - Tirupati Zoo",
+      "snippet": "Address: SRI VENKATESWARA ZOOLOGICAL PARK Pudipatla Post, Tirupati - 517505, Andhra Pradesh ; Phone: 0877-2249235, · 0877-29100212 ; Email: tirupati.svzoo@gmail.",
+      "host": "tirupatizoo.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupatizoo.com",
+      "name": "Sri Venkateswara Zoological Park Tirupati",
+      "snippet": "Sri Venkateswara Zoological Park Tirupati. Home; About. About Tirupati Zoo · News ... Location: Sri Venkateswara Zoological Park, Pudipatla Post, Tirupati – ... · · ·",
+      "host": "tirupatizoo.com",
+      "kind": null
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+      "name": "Sri Venkateswara Zoological Park - Wikipedia",
+      "snippet": "Sri Venkateswara Zoological Park is located in Tirupati, Andhra Pradesh, India. Sri Venkateswara Zoological Park. Indian peafowl at SV Zoological Park.",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://tirupatizoo.com/zoo-map",
+      "name": "Zoo Map - SV ZOO - Tirupati Zoo",
+      "snippet": "Location: Sri Venkateswara Zoological Park, Pudipatla Post, Tirupati – 517505. Phone: 8919060065,. Email: tirupati.svzoo@gmail.com. Openning hours: 8:30 AM – 5 ...",
+      "host": "tirupatizoo.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Zoological-Park-Pudipatla-Thatithopu/9999PX877-X877-091130162456-W2C7DC_BZDET",
+      "name": "Sri Venkateswara Zoological Park in Thatithopu,Tirupati - Justdial",
+      "snippet": "This establishment is functional from 09:00 - 18:00. Please scroll to the top for the address and contact details of Sri Venkateswara Zoological Park at ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/tirupatizoo/?hl=en",
+      "name": "Sri Venkateswara Zoological Park (@tirupatizoo) - Instagram",
+      "snippet": "**IMPORTANT ANNOUNCEMENT | SRI VENKATESWARA ZOOLOGICAL PARK, TIRUPATI** **Good News for Zoo Visitors!** On account of the continuous Dasara ...",
+      "host": "www.instagram.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Contact Us - SV ZOO - Tirupati Zoo :: Address: SRI VENKATESWARA ZOOLOGICAL PARK Pudipatla Post, Tirupati - 517505, Andhra Pradesh ; Phone: 0877-2249235, · 0877-29100212 ; Email: tirupati.svzoo@gmail.",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

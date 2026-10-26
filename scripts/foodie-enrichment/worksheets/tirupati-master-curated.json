@@ -1,51 +1,49 @@
 {
   "summary": {
     "curatedOn": "2026-10-26",
-    "totalCandidatesIn": 191,
-    "curated": 137,
+    "totalCandidatesIn": 228,
+    "curated": 190,
     "duplicatesMarked": 7,
-    "dropped": 29,
-    "officialCandidatesAdded": 20,
+    "dropped": 43,
+    "officialCandidatesAdded": 56,
     "byTier": {
-      "T1": 10,
-      "T3": 103,
-      "T2": 24
+      "T1": 48,
+      "T3": 87,
+      "T2": 55
     },
     "byArea": {
       "tpt-central": 43,
-      "tpt-neighbourhoods": 41,
-      "tirumala": 31,
-      "chandragiri": 4,
-      "renigunta": 4,
-      "tiruchanur": 4,
-      "srinivasa-mangapuram": 3,
-      "surrounding": 7
+      "tpt-neighbourhoods": 45,
+      "tirumala": 59,
+      "chandragiri": 6,
+      "renigunta": 11,
+      "tiruchanur": 8,
+      "srinivasa-mangapuram": 2,
+      "surrounding": 16
     },
     "byCategory": {
       "restaurant": 20,
-      "tiffin": 22,
-      "street_food": 9,
-      "bakery_sweets": 20,
-      "cafe": 8,
-      "temple": 22,
-      "sacred_water": 2,
-      "church": 1,
-      "museum": 1,
-      "park": 5,
+      "tiffin": 23,
+      "street_food": 10,
+      "bakery_sweets": 29,
+      "cafe": 13,
+      "temple": 30,
+      "sacred_water": 1,
       "zoo": 1,
-      "attraction": 3,
+      "park": 5,
+      "attraction": 1,
       "waterfall": 3,
-      "hotel": 9,
+      "hotel": 36,
       "craft": 1,
-      "shopping_centre": 3,
-      "market": 1,
+      "shopping_centre": 5,
+      "market": 6,
       "other": 6
     },
     "byExistingSet": {
-      "new": 127,
-      "batch-011": 10
+      "new": 177,
+      "batch-011": 13
     },
-    "geocoded": 0,
+    "geocoded": 9,
     "note": "tiers are DOC-LEVEL evidence grades; DB rows always import as verification_status='unverified' per plan §3"
   },
   "rows": [
@@ -1675,6 +1673,45 @@
       ]
     },
     {
+      "key": "srinivasa-mangapuram::sri venkateswara annaprasadam trust",
+      "name": "Sri Venkateswara Annaprasadam Trust",
+      "rawNames": [
+        "Sri Venkateswara Annaprasadam Trust"
+      ],
+      "nameCleaned": false,
+      "area": "srinivasa-mangapuram",
+      "localityHint": null,
+      "group": "food-tiffin",
+      "target": "restaurant",
+      "category": "tiffin",
+      "placeType": null,
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.tirumala.org/SRIVENKATESWARAANNAPRASADAMTRUST.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": false,
+      "verifyAddressEvidence": "Tirumala Free Annaprasadam in Tirupati | Is it Good? :: The Sri Venkateswara Annaprasadam Trust ... Address M8PX+8PQ, Tirumala Tirupati , Andhra Pradesh 517504 India ... HOTEL RAMCHARAN RESIDENCY, TIRUPATI photo 1",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/SRIVENKATESWARAANNAPRASADAMTRUST.aspx",
+          "kind": "official",
+          "title": "Sri Venkateswara Annaprasadam Trust"
+        }
+      ]
+    },
+    {
       "key": "chandragiri::geetha general stores and tiffin centre",
       "name": "Geetha General Stores & Tiffin Centre",
       "rawNames": [
@@ -2092,6 +2129,46 @@
           "url": "https://www.swiggy.com/city/tirupati/18th-street-kitchen-korlagunta-rest1237008",
           "kind": "swiggy",
           "title": "Order from 18Th Street Kitchen online in Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "chandragiri::kk tea stall",
+      "name": "KK TEA STALL",
+      "rawNames": [
+        "KK TEA STALL, Chandragiri, Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "chandragiri",
+      "localityHint": "Chandragiri",
+      "group": "food-street",
+      "target": "restaurant",
+      "category": "street_food",
+      "placeType": null,
+      "tags": [
+        "tea_stall",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://magicpin.in/Tirupati/Chandragiri/Restaurant/Kk-Tea-Stall/store/4468a89?srsltid=AYCX9vK6g5-FtPlMKgjoXeIVNQM1EDf0lzesI4tsgNVWIfheTKi7zYCS",
+      "sourceKind": "magicpin",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "KK TEA STALL, Chandragiri, Tirupati :: Address . Chandragiri _ Pakala Road, Chandragiri, Andhra Pradesh 517101 ... KK TEA STALL, Chandragiri, Tirupati . KK TEA STALL. Call · Enquire now. Read more",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://magicpin.in/Tirupati/Chandragiri/Restaurant/Kk-Tea-Stall/store/4468a89?srsltid=AYCX9vK6g5-FtPlMKgjoXeIVNQM1EDf0lzesI4tsgNVWIfheTKi7zYCS",
+          "kind": "magicpin",
+          "title": "KK TEA STALL, Chandragiri, Tirupati"
         }
       ]
     },
@@ -2866,6 +2943,366 @@
       ]
     },
     {
+      "key": "tirumala::tirumala balaji sweets",
+      "name": "Tirumala Balaji Sweets -",
+      "rawNames": [
+        "Tirumala Balaji Sweets - Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tirumala",
+      "localityHint": "Tirumala",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "sweets",
+        "tirumala"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Balaji-Sweets-Near-Rambagicha-Bus-Stand-Tirumala/9999PX877-X877-191228162503-J1W2_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tirumala-Balaji-Sweets-Near-Rambagicha-Bus-Stand-Tirumala/9999PX877-X877-191228162503-J1W2_BZDET",
+          "kind": "justdial",
+          "title": "Tirumala Balaji Sweets - Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::guptha balaji sweets",
+      "name": "GUPTHA BALAJI SWEETS",
+      "rawNames": [
+        "GUPTHA BALAJI SWEETS in Tirumala,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tirumala",
+      "localityHint": "Tirumala",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "sweets",
+        "tirumala"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/GUPTHA-BALAJI-SWEETS-Tirumala/9999PX877-X877-220320230455-D7F3_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/GUPTHA-BALAJI-SWEETS-Tirumala/9999PX877-X877-220320230455-D7F3_BZDET",
+          "kind": "justdial",
+          "title": "GUPTHA BALAJI SWEETS in Tirumala,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tpt-central::tirumala sweets",
+      "name": "Tirumala Sweets",
+      "rawNames": [
+        "Tirumala Sweets in Gandhi Road,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tpt-central",
+      "localityHint": "Gandhi Road",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "sweets",
+        "tirumala"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Sweets-Gandhi-Road/9999PX877-X877-140624231654-R5H1_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Tirumala Sweets in Gandhi Road,Tirupati :: Tirumala Sweets in Gandhi Road,Tirupati well known for Sweet Shops in Tirupati . Rated 4.0 based on 1 Customer Reviews and Ratings with 1 Photos.",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tirumala-Sweets-Gandhi-Road/9999PX877-X877-140624231654-R5H1_BZDET",
+          "kind": "justdial",
+          "title": "Tirumala Sweets in Gandhi Road,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tiruchanur::sri venkateswara sweet and bakery",
+      "name": "Sri Venkateswara Sweet & Bakery",
+      "rawNames": [
+        "Sri Venkateswara Sweet & Bakery in Tiruchanoor,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tiruchanur",
+      "localityHint": "Tiruchanur",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "bakery",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Sweet-Bakery-Srinivasapuram-Tiruchanoor/9999PX877-X877-231109132617-F4V1_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Sweet-Bakery-Srinivasapuram-Tiruchanoor/9999PX877-X877-231109132617-F4V1_BZDET",
+          "kind": "justdial",
+          "title": "Sri Venkateswara Sweet & Bakery in Tiruchanoor,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tiruchanur::nandini sweets and bakery tiruchanur",
+      "name": "Nandini Sweets And Bakery, Tiruchanur",
+      "rawNames": [
+        "Nandini Sweets And Bakery, Tiruchanur order online"
+      ],
+      "nameCleaned": true,
+      "area": "tiruchanur",
+      "localityHint": "Tiruchanur",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "bakery",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.zomato.com/tirupati/nandini-sweets-and-bakery-tiruchanur/order",
+      "sourceKind": "zomato",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.zomato.com/tirupati/nandini-sweets-and-bakery-tiruchanur/order",
+          "kind": "zomato",
+          "title": "Nandini Sweets And Bakery, Tiruchanur order online"
+        }
+      ]
+    },
+    {
+      "key": "chandragiri::sri nandini bakery and sweets",
+      "name": "Sri Nandini Bakery & Sweets",
+      "rawNames": [
+        "Sri Nandini Bakery & Sweets in Chandragiri,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "chandragiri",
+      "localityHint": "Chandragiri",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "bakery",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Nandini-Bakery-Sweets-Chandragiri/9999PX877-X877-140529121745-W1A1_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Sri-Nandini-Bakery-Sweets-Chandragiri/9999PX877-X877-140529121745-W1A1_BZDET",
+          "kind": "justdial",
+          "title": "Sri Nandini Bakery & Sweets in Chandragiri,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "chandragiri::bnr sweets and bakery",
+      "name": "BNR Sweets & Bakery",
+      "rawNames": [
+        "BNR Sweets & Bakery, Chandragiri, Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "chandragiri",
+      "localityHint": "Chandragiri",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "bakery",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://magicpin.in/Tirupati/Chandragiri/Restaurant/Bnr-Sweets-and-Bakery/store/2228931?srsltid=AYCX9vKvkus4sDYnq2Cey6QQCoaflK2oODvXDsMlpScZ70UpHFMAZclQ",
+      "sourceKind": "magicpin",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "BNR Sweets & Bakery Reviews - Chandragiri :: Reviews & posts — BNR Sweets & Bakery, Chandragiri, Tirupati . 1–5☆ customer ... Registered Office Address : Plot No.379 & 380, Sector - 29, Near IFFCO ... Read more",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://magicpin.in/Tirupati/Chandragiri/Restaurant/Bnr-Sweets-and-Bakery/store/2228931?srsltid=AYCX9vKvkus4sDYnq2Cey6QQCoaflK2oODvXDsMlpScZ70UpHFMAZclQ",
+          "kind": "magicpin",
+          "title": "BNR Sweets & Bakery, Chandragiri, Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "renigunta::bangalore ayengar bakery",
+      "name": "Bangalore Ayengar Bakery",
+      "rawNames": [
+        "Bangalore Ayengar Bakery in Renigunta,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "renigunta",
+      "localityHint": "Renigunta",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "bakery",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Bangalore-Ayengar-Bakery-Near-Indian-Overseas-Bank-Renigunta/9999PX877-X877-161015124525-K6E7_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Bangalore-Ayengar-Bakery-Near-Indian-Overseas-Bank-Renigunta/9999PX877-X877-161015124525-K6E7_BZDET",
+          "kind": "justdial",
+          "title": "Bangalore Ayengar Bakery in Renigunta,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "renigunta::sri laxmi sweet stall and bakery",
+      "name": "Sri Laxmi Sweet Stall & Bakery",
+      "rawNames": [
+        "Sri Laxmi Sweet Stall & Bakery in Renigunta,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "renigunta",
+      "localityHint": "Renigunta",
+      "group": "food-bakery",
+      "target": "restaurant",
+      "category": "bakery_sweets",
+      "placeType": null,
+      "tags": [
+        "bakery",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Laxmi-Sweet-Stall-Bakery-Renigunta/9999PX877-X877-110216100111-Q4I1_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Sri-Laxmi-Sweet-Stall-Bakery-Renigunta/9999PX877-X877-110216100111-Q4I1_BZDET",
+          "kind": "justdial",
+          "title": "Sri Laxmi Sweet Stall & Bakery in Renigunta,Tirupati"
+        }
+      ]
+    },
+    {
       "key": "tirumala::kafe tirupati",
       "name": "Kafe Tirupati",
       "rawNames": [
@@ -2881,20 +3318,25 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
       "dupReason": null,
       "status": "curated",
       "sources": [
+        {
+          "url": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order",
+          "kind": "zomato",
+          "title": "Kafe Tirupati, Tirumala order online"
+        },
         {
           "url": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order",
           "kind": "zomato",
@@ -3029,14 +3471,14 @@
       "tags": [],
       "sourceUrl": "https://www.swiggy.com/city/tirupati/iyers-cafe-korlagunta-rest1256682",
       "sourceKind": "swiggy",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Iyer's Cafe, Srinivasa Nagar order online :: Check out Iyer's Cafe, Srinivasa Nagar, Tirupati on Zomato for great deals, ratings, reviews and more!",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3067,14 +3509,14 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/amor-fati-cafe-1-korlagunta/reviews",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Amor Fati Cafe (@cafe.amorfati) :: Amor Fati Cafe . 786 followers. 0 following. Tirupati's first vibe cafe. Matcha. Smash Burgers. Pizzeria. V.V Mahal Road, beside khazana jeweller. Claim your ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3109,14 +3551,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Retro-Cafe-Restaurant-Korlagunta/9999PX877-X877-250908143109-Q5T4_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Retro Cafe & Restaurant in Korlagunta,Tirupati :: Retro Cafe & Restaurant in Korlagunta,Tirupati well known for Restaurants in Tirupati ... Bairagipatteda Road, Korlagunta, Tirupati -517501, Andhra Pradesh. Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3146,6 +3588,84 @@
       "tags": [],
       "sourceUrl": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Kafe-Tirumala/store/34c4b1/menu?srsltid=AYCX9vLv17h2zbZ-muh5b9uD7PIWE0Nw9gLccFDt-C27cYT5AplOmqup",
       "sourceKind": "magicpin",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Kafe-Tirumala/store/34c4b1/menu?srsltid=AYCX9vLv17h2zbZ-muh5b9uD7PIWE0Nw9gLccFDt-C27cYT5AplOmqup",
+          "kind": "magicpin",
+          "title": "Menu of Kafe Tirumala, Korlagunta, Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::tirumala cafe",
+      "name": "Tirumala Cafe",
+      "rawNames": [
+        "Tirumala Cafe"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": "Tirumala",
+      "group": "food-cafe",
+      "target": "restaurant",
+      "category": "cafe",
+      "placeType": null,
+      "tags": [
+        "tirumala"
+      ],
+      "sourceUrl": "https://www.facebook.com/p/Tirumala-Cafe-61567491802154",
+      "sourceKind": "facebook-page",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Tirumala Cafe in Tata Nagar,Tirupati - Coffee Shops :: Tirumala Cafe in Tata Nagar, Tirupati . Located in the vibrant heart of Tata Nagar, Tirumala Cafe is a cherished culinary haven where tradition meets innovation. Read more",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.facebook.com/p/Tirumala-Cafe-61567491802154",
+          "kind": "facebook-page",
+          "title": "Tirumala Cafe"
+        }
+      ]
+    },
+    {
+      "key": "tiruchanur::explore citrus cafe",
+      "name": "Explore Citrus Cafe",
+      "rawNames": [
+        "Explore Citrus Cafe in Tiruchanoor Rd, Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tiruchanur",
+      "localityHint": "Tiruchanur",
+      "group": "food-cafe",
+      "target": "restaurant",
+      "category": "cafe",
+      "placeType": null,
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.eazydiner.com/tirupati/citrus-cafe-tiruchanoor-rd-tirupati-716099",
+      "sourceKind": "eazydiner",
       "verifyAreaConfirmed": null,
       "verifyAddressEvidence": null,
       "geocode": {
@@ -3161,9 +3681,126 @@
       "status": "curated",
       "sources": [
         {
-          "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Kafe-Tirumala/store/34c4b1/menu?srsltid=AYCX9vLv17h2zbZ-muh5b9uD7PIWE0Nw9gLccFDt-C27cYT5AplOmqup",
+          "url": "https://www.eazydiner.com/tirupati/citrus-cafe-tiruchanoor-rd-tirupati-716099",
+          "kind": "eazydiner",
+          "title": "Explore Citrus Cafe in Tiruchanoor Rd, Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tiruchanur::giri prasad cafe",
+      "name": "Giri Prasad Cafe",
+      "rawNames": [
+        "Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tiruchanur",
+      "localityHint": "Tiruchanur",
+      "group": "food-cafe",
+      "target": "restaurant",
+      "category": "cafe",
+      "placeType": null,
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Giri-Prasad-Cafe-Near-Padmavathi-Temple-Tiruchanoor/9999PX877-X877-260103204410-R7T4_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati :: Nestled near Near Padmavathi Temple in Tiruchanoor, Giri Prasad Cafe is a convenient stop for both locals and visitors exploring the city. The restaurant's ... Read more",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Giri-Prasad-Cafe-Near-Padmavathi-Temple-Tiruchanoor/9999PX877-X877-260103204410-R7T4_BZDET",
+          "kind": "justdial",
+          "title": "Coffee Shops - Giri Prasad Cafe in Tiruchanoor,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "renigunta::zamzam restaurant",
+      "name": "Zamzam restaurant",
+      "rawNames": [
+        "Zamzam restaurant"
+      ],
+      "nameCleaned": false,
+      "area": "renigunta",
+      "localityHint": null,
+      "group": "food-cafe",
+      "target": "restaurant",
+      "category": "cafe",
+      "placeType": null,
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.facebook.com/Zamzamrenigunta",
+      "sourceKind": "facebook-page",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Hotels near zamzam restaurant, Tirupati :: Located in the heart of Tirupati , Zamzam Restaurant is celebrated as one of the premier dining establishments in the city. Renowned for its exquisite flavors ...",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.facebook.com/Zamzamrenigunta",
+          "kind": "facebook-page",
+          "title": "Zamzam restaurant"
+        }
+      ]
+    },
+    {
+      "key": "renigunta::mamatha s coffee cafe",
+      "name": "MAMATHA'S COFFEE CAFE",
+      "rawNames": [
+        "MAMATHA'S COFFEE CAFE, Renigunta Road, Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "renigunta",
+      "localityHint": "Renigunta",
+      "group": "food-cafe",
+      "target": "restaurant",
+      "category": "cafe",
+      "placeType": null,
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://magicpin.in/Tirupati/Renigunta-Road/Restaurant/Mamathas-Coffee-Cafe/store/4043c3a?srsltid=AYCX9vJ-gLJc4TPl6hhNwPs5-KPly_NNv0sQTt_-J-UUvs9JfQUUEun6",
+      "sourceKind": "magicpin",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "MAMATHA'S COFFEE CAFE, Renigunta Road, Tirupati :: Address . Bank Employees Colony, Mangalam, Tirupati , Andhra Pradesh 517507 ... MAMATHA'S COFFEE CAFE, Renigunta Road, Tirupati . MAMATHA'S COFFEE CAFE. Read more",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://magicpin.in/Tirupati/Renigunta-Road/Restaurant/Mamathas-Coffee-Cafe/store/4043c3a?srsltid=AYCX9vJ-gLJc4TPl6hhNwPs5-KPly_NNv0sQTt_-J-UUvs9JfQUUEun6",
           "kind": "magicpin",
-          "title": "Menu of Kafe Tirumala, Korlagunta, Tirupati"
+          "title": "MAMATHA'S COFFEE CAFE, Renigunta Road, Tirupati"
         }
       ]
     },
@@ -3185,14 +3822,14 @@
       "tags": [],
       "sourceUrl": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
       "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Govindaraja Swamy Temple in Tirupati, India :: Temple Timings: 5:00 AM to 9:00 PM Temple's Full Address : Sri Govindaraja swamy Temple , 118-122, GS Mada Street,Varadaraja Nagar, Tirupati – 517 ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T2",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Govindaraja Swamy Temple",
       "dupOf": null,
@@ -3246,14 +3883,14 @@
       "tags": [],
       "sourceUrl": "https://en.wikipedia.org/wiki/Venkateswara_Temple,_Tirumala",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Venkateswara Temple, Tirumala | Tirupati, Andhra Pradesh :: Sep 13, 2026 — Venkateswara Temple, Tirumala , is a Hindu temple near Tirupati , Andhra Pradesh, India, that is of vital importance to Srivaishnava and ...",
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6831199,
+        "lng": 79.3468546,
+        "displayName": "Sri Venkateswara Swamy Temple, Vimana Pradakshinam, Sankumitta Nagar, Tirumala, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517504, India"
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Venkateswara Swamy Temple",
       "dupOf": null,
@@ -3275,6 +3912,12 @@
           "kind": "wikipedia",
           "title": "Venkateswara Temple, Tirumala"
         }
+      ],
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "quote": "and Don'ts FAQs Dress Code Contact US Places at Tirumala Sri Venkateswara Temple The ancient and sacred temple of Sri Venkateswara is located on the seventh peak, Venkatachala (Venkata Hill)"
+        }
       ]
     },
     {
@@ -3295,14 +3938,14 @@
       "tags": [],
       "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
       "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Kalyana Venkateswara Swamy Temple in 1st Cross Road :: Sri Kalyana Venkateswara Swamy Temple in 1st Cross Road,Tirupati listed under Temples in Tirupati. Rated 4.9 based on 17584 Customer Reviews and Ratings ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Kalyana Venkateswara Swamy Temple",
       "dupOf": null,
@@ -3347,14 +3990,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org/wiki/Kapila_Theertham",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Kapila Theertham , Tirupati :: Kapila Theertham , Tirupati . AsiaIndiaAndhra PradeshChittoor District Tirupati ... Gear Rentals in Tirupati 4WD, ATV & Off-Road Tours in Tirupati Bike ... Read more",
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6565756,
+        "lng": 79.4210339,
+        "displayName": "Kapila Theertham - Falls, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India"
       },
-      "tier": "T2",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Kapilatheertham Temple",
       "dupOf": null,
@@ -3406,14 +4049,14 @@
       "tags": [],
       "sourceUrl": "https://www.tirumala.org/PatAtThiruchanoorTempleLegend.aspx",
       "sourceKind": "official",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6079735,
+        "lng": 79.4500147,
+        "displayName": "Sri Padmavathi Ammavari Temple, Tiruchanoor Road, Alimelumangapuram Rural, Tiruchanur, Daminedu, Tirupati Rural Mandal, Tirupati District, Andhra Pradesh, 517503, India"
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Padmavathi Ammavari Temple",
       "dupOf": null,
@@ -3448,7 +4091,7 @@
       "tags": [],
       "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d2646206-Reviews-ISKCON_Tirupati-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": false,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
@@ -3470,49 +4113,15 @@
       ]
     },
     {
-      "key": "tpt-central::prominent churches in tirupati worship and peaceful places",
-      "name": "Prominent Churches in Tirupati – Worship & Peaceful Places",
+      "key": "srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram",
+      "name": "Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram",
       "rawNames": [
-        "Prominent Churches in Tirupati – Worship & Peaceful Places"
-      ],
-      "nameCleaned": false,
-      "area": "tpt-central",
-      "localityHint": null,
-      "group": "temples",
-      "target": "place",
-      "category": "church",
-      "placeType": "other",
-      "tags": [
-        "church"
-      ],
-      "sourceUrl": "https://www.justdial.com/Tirupati/Churches/nct-10099288",
-      "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.justdial.com/Tirupati/Churches/nct-10099288",
-          "kind": "justdial",
-          "title": "Prominent Churches in Tirupati – Worship & Peaceful Places"
-        }
-      ]
-    },
-    {
-      "key": "srinivasa-mangapuram::srinivasa mangapuram temple",
-      "name": "Srinivasa Mangapuram Temple",
-      "rawNames": [
-        "Srinivasa Mangapuram Temple - All You SHOULD Know"
+        "Srinivasa Mangapuram Temple - All You SHOULD Know",
+        "Sri Kalyana Venkateswara Swamy",
+        "Kalyana Venkateswara Temple, Srinivasamangapuram",
+        "Srinivasa Mangapuram aka Sri Kalyana Venkateshwara",
+        "Srinivasa Hotel, near Srinivasa Mangapuram Temple",
+        "Super Hotel O Srinivasa Mangapuram Temple Formerly"
       ],
       "nameCleaned": true,
       "area": "srinivasa-mangapuram",
@@ -3524,24 +4133,54 @@
       "tags": [],
       "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d13313684-Reviews-Srinivasa_Mangapuram_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
+      "dupOf": "Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram",
+      "dupReason": "same normalized name \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" already curated under tpt-central (possible branch vs duplicate — needs review)",
+      "status": "duplicate",
       "sources": [
         {
           "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d13313684-Reviews-Srinivasa_Mangapuram_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
           "kind": "tripadvisor",
           "title": "Srinivasa Mangapuram Temple - All You SHOULD Know"
+        },
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Kalyana Venkateswara Swamy"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Kalyana_Venkateswara_Temple,_Srinivasamangapuram",
+          "kind": "wikipedia",
+          "title": "Kalyana Venkateswara Temple, Srinivasamangapuram"
+        },
+        {
+          "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3913314-r816300591-Sri_Kalyana_Venkateswaraswami_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "kind": "tripadvisor",
+          "title": "Srinivasa Mangapuram aka Sri Kalyana Venkateshwara"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d13313684-Reviews-Srinivasa_Mangapuram_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "kind": "tripadvisor",
+          "title": "Srinivasa Mangapuram Temple - All You SHOULD Know"
+        },
+        {
+          "url": "https://www.agoda.com/dr-srinivasahotels/hotel/chirala-in.html",
+          "kind": "agoda",
+          "title": "Srinivasa Hotel, near Srinivasa Mangapuram Temple"
+        },
+        {
+          "url": "https://www.booking.com/hotel/in/o-srinivasa-mangapuram-temple-formerly-bgr-gardens.html",
+          "kind": "booking",
+          "title": "Super Hotel O Srinivasa Mangapuram Temple Formerly"
         }
       ]
     },
@@ -3561,14 +4200,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Anjaneya-Swamy-Temple-Bhavani-Nagar/9999PX877-X877-200628005848-K1K3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Anjaneya Swamy Temple in Bhavani Nagar,Tirupati - Justdial Jd :: Anjaneya Swamy Temple in Bhavani Nagar,Tirupati listed under Temples in Tirupati . Rated 5.0 based on 113 Customer Reviews and Ratings with 9 Photos.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3598,14 +4237,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Vinayaka-Swamy-Temple-Balajy-Colony/9999PX877-X877-200627231755-A6V1_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Vinayaka Swamy Temple in Balajy Colony,Tirupati :: Sri Vinayaka Swamy Temple in Balajy Colony,Tirupati listed under Temples in Tirupati . Rated 4.9 based on 182 Customer Reviews and Ratings with 15 Photos.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3620,10 +4259,11 @@
       ]
     },
     {
-      "key": "tirumala::varahaswamy temple",
-      "name": "Varahaswamy Temple",
+      "key": "tirumala::sri varahaswamy temple tirumala",
+      "name": "Sri Varahaswamy Temple, Tirumala",
       "rawNames": [
-        "Varahaswamy Temple"
+        "Varahaswamy Temple",
+        "Sri Varahaswami Temple, Tirupati"
       ],
       "nameCleaned": false,
       "area": "tirumala",
@@ -3637,14 +4277,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org/wiki/Varahaswamy_Temple",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Varahaswami Temple, N Mada Street, Tirupati, AP, IN :: Get more information for Sri Varahaswami Temple in Tirupati , AP. See reviews, map, get the address , and find directions ... and varahaswamy temple ... 3 years ago. Read more",
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6848751,
+        "lng": 79.3476435,
+        "displayName": "Sri Varahaswamy Temple, North Mada Street, TTD Staff Quarters, Tirumala, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517504, India"
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3655,45 +4295,25 @@
           "url": "https://en.wikipedia.org/wiki/Varahaswamy_Temple",
           "kind": "wikipedia",
           "title": "Varahaswamy Temple"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::sri varahaswamy temple tirumala",
-      "name": "Sri Varahaswamy Temple, Tirumala",
-      "rawNames": [
-        "Sri Varahaswami Temple, Tirupati"
-      ],
-      "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": null,
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d3704861-Reviews-Sri_Varahaswami_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-      "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
+        },
         {
           "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d3704861-Reviews-Sri_Varahaswami_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
           "kind": "tripadvisor",
           "title": "Sri Varahaswami Temple, Tirupati"
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/PlacesToVisit.aspx",
+          "quote": "Kalyanam How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple"
+        },
+        {
+          "url": "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "quote": "Kalyanam How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple"
+        },
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "quote": "mukti, only by worshipping Venkata Nayaka or Sri Venkateswara. More... Sri Varaha Swami Temple Sri Varaha Swami TempleSri Varahaswami Temple in Tirumala is to the north of the Sri Venkateswara"
         }
       ]
     },
@@ -3717,14 +4337,14 @@
       ],
       "sourceUrl": "https://www.tirumala.org/Anjaneya_TempleLegend.aspx",
       "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "History of Sri Bedi Anjaneya Swamy Temple, Tirumala! #tirupati :: Sri Bedi Anjaneya Swamy Temple Sri Bedi Anjaneyaswami Temple Tirumala, is situated in Sannidhi street. Sri Bedi Anjaneya swamy Temple is located ...",
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6834215,
+        "lng": 79.3492407,
+        "displayName": "Sri Bedi Anjaneya Swamy Temple, Sannidhi Street, TTD Staff Quarters, Tirumala, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517504, India"
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3746,45 +4366,19 @@
           "kind": "official",
           "title": "BEDI HANUMAN TEMPLE AND AKHILANDAM - TTD News"
         }
-      ]
-    },
-    {
-      "key": "tirumala::sacred teerthams of tirumala seshachala ranges",
-      "name": "SACRED TEERTHAMS OF TIRUMALA SESHACHALA RANGES",
-      "rawNames": [
-        "SACRED TEERTHAMS OF TIRUMALA SESHACHALA RANGES"
       ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "temples",
-      "target": "place",
-      "category": "sacred_water",
-      "placeType": "other",
-      "tags": [
-        "teertham",
-        "tirumala"
-      ],
-      "sourceUrl": "https://news.tirumala.org/sacred-teerthams-of-tirumala-seshachala-ranges",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
+      "officialSources": [
         {
-          "url": "https://news.tirumala.org/sacred-teerthams-of-tirumala-seshachala-ranges",
-          "kind": "official",
-          "title": "SACRED TEERTHAMS OF TIRUMALA SESHACHALA RANGES"
+          "url": "https://www.tirumala.org/PlacesToVisit.aspx",
+          "quote": "Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At"
+        },
+        {
+          "url": "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
+          "quote": "Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At"
+        },
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "quote": "permission that Lord Sri Venkateswara took up residence here. More... Sri Bedi AnjaneyaswamiTemple Sri Bedi Anjaneyaswami Temple is located on Sannidhi Street, opposite the main temple. (In the Vaishnavite tradition,"
         }
       ]
     },
@@ -3807,14 +4401,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org/wiki/Natural_Arch,_Tirumala_hills",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Natural Arch at Tirumala Hills :: Feb 25, 2016 — Natural Arch, Tirumala hills is a distinctive geological wonder located 1 km (0.6 mi) North of the Tirumala hills temple, near the Chakra ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T2",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Natural Arch, Tirumala hills (Silathoranam)",
       "dupOf": null,
@@ -3840,6 +4434,10 @@
         {
           "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati",
           "quote": "history of the region. Don't miss the spellbinding sights of Silathoranam, a stunning geological formation dating back 1,500 million years, and the serene Chakra Theertham sacred waterfall surrounded by shrines."
+        },
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "quote": "day of the fortnight of Dhanur Masa). More... Other Places Silathoranam is a natural rock formation in the form of an arch, near the Chakra Tirtham. Geologists have identified the"
         }
       ]
     },
@@ -3863,14 +4461,14 @@
       ],
       "sourceUrl": "https://www.tirumala.org/PatAtThiruchanoorTempleLegend.aspx",
       "sourceKind": "official",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6079735,
+        "lng": 79.4500147,
+        "displayName": "Sri Padmavathi Ammavari Temple, Tiruchanoor Road, Alimelumangapuram Rural, Tiruchanur, Daminedu, Tirupati Rural Mandal, Tirupati District, Andhra Pradesh, 517503, India"
       },
-      "tier": "T2",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Padmavathi Ammavari Temple",
       "dupOf": "Sri Padmavathi Ammavari Temple, Tiruchanur",
@@ -3909,96 +4507,6 @@
       ]
     },
     {
-      "key": "srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram",
-      "name": "Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram",
-      "rawNames": [
-        "Sri Kalyana Venkateswara Swamy",
-        "Kalyana Venkateswara Temple, Srinivasamangapuram",
-        "Srinivasa Mangapuram aka Sri Kalyana Venkateshwara"
-      ],
-      "nameCleaned": false,
-      "area": "srinivasa-mangapuram",
-      "localityHint": "Srinivasa Mangapuram",
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "batch-011",
-      "existingSetId": "Sri Kalyana Venkateswara Swamy Temple",
-      "dupOf": "Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram",
-      "dupReason": "same normalized name \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" already curated under tpt-central (possible branch vs duplicate — needs review)",
-      "status": "duplicate",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/MoreTemples.aspx",
-          "kind": "official",
-          "title": "Sri Kalyana Venkateswara Swamy"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/Kalyana_Venkateswara_Temple,_Srinivasamangapuram",
-          "kind": "wikipedia",
-          "title": "Kalyana Venkateswara Temple, Srinivasamangapuram"
-        },
-        {
-          "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3913314-r816300591-Sri_Kalyana_Venkateswaraswami_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-          "kind": "tripadvisor",
-          "title": "Srinivasa Mangapuram aka Sri Kalyana Venkateshwara"
-        }
-      ]
-    },
-    {
-      "key": "chandragiri::chandragiri",
-      "name": "Chandragiri",
-      "rawNames": [
-        "Chandragiri"
-      ],
-      "nameCleaned": false,
-      "area": "chandragiri",
-      "localityHint": "Chandragiri",
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://en.wikipedia.org/wiki/Chandragiri",
-      "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://en.wikipedia.org/wiki/Chandragiri",
-          "kind": "wikipedia",
-          "title": "Chandragiri"
-        }
-      ]
-    },
-    {
       "key": "chandragiri::chandragiri fort raja mahal and rani mahal",
       "name": "Chandragiri Fort (Raja Mahal & Rani Mahal)",
       "rawNames": [
@@ -4020,14 +4528,14 @@
       ],
       "sourceUrl": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort",
       "sourceKind": "official",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.5830317,
+        "lng": 79.3052847,
+        "displayName": "Chandragiri Fort, Chandragiri Fort Road, Chandragiri Urban, Harijanawada, Chandragiri, Chandragiri Mandal, Tirupati District, Andhra Pradesh, 517100, India"
       },
-      "tier": "T2",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Chandragiri Fort",
       "dupOf": null,
@@ -4068,25 +4576,25 @@
       ]
     },
     {
-      "key": "tpt-central::museums in",
-      "name": "Museums in",
+      "key": "renigunta::sri prasanna venkateswara swamy temple",
+      "name": "Sri Prasanna Venkateswara Swamy Temple",
       "rawNames": [
-        "Museums in Tirupati"
+        "Sri Prasanna Venkateswara Swamy Temple"
       ],
-      "nameCleaned": true,
-      "area": "tpt-central",
+      "nameCleaned": false,
+      "area": "renigunta",
       "localityHint": null,
-      "group": "attractions",
+      "group": "temples",
       "target": "place",
-      "category": "museum",
-      "placeType": "other",
+      "category": "temple",
+      "placeType": "temple",
       "tags": [
-        "museum"
+        "surrounding-corridor"
       ],
-      "sourceUrl": "https://www.tripadvisor.com/Attractions-g297587-Activities-c49-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g8480310-d25088630-Reviews-Sri_Prasanna_Venkateswara_Swamy_Temple-Renigunta_Chittoor_District_Andhra_Prade.html",
       "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": false,
+      "verifyAddressEvidence": "Sri Prasanna Venkateswara Swamy Temple in Koduru,Kadapa :: ... Address , Contact Number , Reviews & Ratings, Photos, Maps of Sri Prasanna Venkateswara Swamy Temple , Koduru, Kadapa ... Narsapuram, Kadapa Tirupati Road ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -4100,38 +4608,38 @@
       "status": "curated",
       "sources": [
         {
-          "url": "https://www.tripadvisor.com/Attractions-g297587-Activities-c49-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g8480310-d25088630-Reviews-Sri_Prasanna_Venkateswara_Swamy_Temple-Renigunta_Chittoor_District_Andhra_Prade.html",
           "kind": "tripadvisor",
-          "title": "Museums in Tirupati"
+          "title": "Sri Prasanna Venkateswara Swamy Temple"
         }
       ]
     },
     {
-      "key": "tpt-central::nature and parks in",
-      "name": "Nature & Parks in",
+      "key": "surrounding::srikalahasteeswara temple",
+      "name": "Srikalahasteeswara temple",
       "rawNames": [
-        "Nature & Parks in Tirupati"
+        "Srikalahasteeswara temple"
       ],
-      "nameCleaned": true,
-      "area": "tpt-central",
+      "nameCleaned": false,
+      "area": "surrounding",
       "localityHint": null,
-      "group": "attractions",
+      "group": "temples",
       "target": "place",
-      "category": "park",
-      "placeType": "other",
+      "category": "temple",
+      "placeType": "temple",
       "tags": [
-        "nature"
+        "surrounding"
       ],
-      "sourceUrl": "https://www.tripadvisor.com/Attractions-g297587-Activities-c57-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-      "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
+      "sourceKind": "wikipedia",
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -4139,9 +4647,87 @@
       "status": "curated",
       "sources": [
         {
-          "url": "https://www.tripadvisor.com/Attractions-g297587-Activities-c57-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-          "kind": "tripadvisor",
-          "title": "Nature & Parks in Tirupati"
+          "url": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
+          "kind": "wikipedia",
+          "title": "Srikalahasteeswara temple"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri govindaraja swamy temple",
+      "name": "Sri Govindaraja Swamy temple",
+      "rawNames": [
+        "Sri Govindaraja Swamy temple"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "temples",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Govindaraja Swamy Temple in Tirupati, India :: Temple Timings: 5:00 AM to 9:00 PM Temple's Full Address : Sri Govindaraja swamy Temple , 118-122, GS Mada Street,Varadaraja Nagar, Tirupati – 517 ... Read more",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "batch-011",
+      "existingSetId": "Sri Govindaraja Swamy Temple",
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
+          "kind": "official",
+          "title": "Sri Govindaraja Swamy temple"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri kalyana venkateswara swamy",
+      "name": "Sri Kalyana Venkateswara Swamy",
+      "rawNames": [
+        "Sri Kalyana Venkateswara Swamy"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "temples",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Kalyana Venkateswara Swamy Temple in 1st Cross Road :: Sri Kalyana Venkateswara Swamy Temple in 1st Cross Road,Tirupati listed under Temples in Tirupati. Rated 4.9 based on 17584 Customer Reviews and Ratings ...",
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T1",
+      "existingSet": "batch-011",
+      "existingSetId": "Sri Kalyana Venkateswara Swamy Temple",
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Kalyana Venkateswara Swamy"
         }
       ]
     },
@@ -4163,14 +4749,14 @@
       "tags": [],
       "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Contact Us - SV ZOO - Tirupati Zoo :: Address: SRI VENKATESWARA ZOOLOGICAL PARK Pudipatla Post, Tirupati - 517505, Andhra Pradesh ; Phone: 0877-2249235, · 0877-29100212 ; Email: tirupati.svzoo@gmail.",
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.6293568,
+        "lng": 79.3621737,
+        "displayName": "Sri Venkateswara Zoological Park, Tirumala Link Road, Alipiri Gate, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India"
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Venkateswara Zoological Park",
       "dupOf": null,
@@ -4214,14 +4800,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.7953489,
+        "lng": 79.2998635,
+        "displayName": "Sri Venkateswara National Park, Pullampeta Mandal, Tirupati District, Andhra Pradesh, India"
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -4264,14 +4850,14 @@
       ],
       "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d3172186-Reviews-Deer_Park-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Deer Park in Alipiri,Tirupati - Wildlife Sanctuary - Justdial Jd :: Address Alipiri Gate, Tirumala Up Road, Alipiri, Tirupati -517507, Andhra Pradesh. Open 24 Hrs Wednesday:- Open 24 Hrs. Open 24 Hrs,",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -4291,31 +4877,31 @@
       ]
     },
     {
-      "key": "tirumala::must view in",
-      "name": "Must View in",
+      "key": "tpt-neighbourhoods::mini park",
+      "name": "Mini Park",
       "rawNames": [
-        "Must View in Tirumala - Review of Papavinasam"
+        "Mini Park in Korlagunta,Tirupati"
       ],
       "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
+      "area": "tpt-neighbourhoods",
+      "localityHint": "Korlagunta",
       "group": "attractions",
       "target": "place",
-      "category": "attraction",
+      "category": "park",
       "placeType": "other",
       "tags": [
-        "tirumala"
+        "nature"
       ],
-      "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3704906-r228427631-Papavinasam_Theertham-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-      "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
+      "sourceUrl": "https://www.justdial.com/Tirupati/Mini-Park-Korlagunta/9999PX877-X877-250306022547-L6P2_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -4323,9 +4909,9 @@
       "status": "curated",
       "sources": [
         {
-          "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3704906-r228427631-Papavinasam_Theertham-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-          "kind": "tripadvisor",
-          "title": "Must View in Tirumala - Review of Papavinasam"
+          "url": "https://www.justdial.com/Tirupati/Mini-Park-Korlagunta/9999PX877-X877-250306022547-L6P2_BZDET",
+          "kind": "justdial",
+          "title": "Mini Park in Korlagunta,Tirupati"
         }
       ]
     },
@@ -4347,7 +4933,7 @@
       ],
       "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d4139129-Reviews-Akashaganga-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": false,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
@@ -4389,14 +4975,14 @@
       ],
       "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/talakona-waterfall",
       "sourceKind": "makemytrip",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Talakona waterfall :: Nov 6, 2025 — Talakona waterfall ... Talakona water fall is situated near Bakarapeta in Nallamala Hill Range and 40 Km. away from Tirupati . The height of the ... Read more",
       "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
+        "lat": 13.8116648,
+        "lng": 79.2157823,
+        "displayName": "Talakona Waterfalls, Talakona, Yerravaripalem Mandal, Tirupati District, Andhra Pradesh, India"
       },
-      "tier": "T2",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Talakona Waterfall",
       "dupOf": null,
@@ -4428,45 +5014,6 @@
         {
           "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati",
           "quote": "the opportunity to pay homage to the Supreme Lord Venkateswara. Talakona Waterfall, Tirupati A city of mysterious origins The temple of Lord Venkateshwara has a mysterious origin, with various kingdoms"
-        }
-      ]
-    },
-    {
-      "key": "surrounding::srikalahasteeswara temple",
-      "name": "Srikalahasteeswara temple",
-      "rawNames": [
-        "Srikalahasteeswara temple"
-      ],
-      "nameCleaned": false,
-      "area": "surrounding",
-      "localityHint": null,
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [
-        "surrounding"
-      ],
-      "sourceUrl": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
-      "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
-          "kind": "wikipedia",
-          "title": "Srikalahasteeswara temple"
         }
       ]
     },
@@ -4762,84 +5309,6 @@
       ]
     },
     {
-      "key": "srinivasa-mangapuram::srinivasa hotel srinivasa mangapuram",
-      "name": "Srinivasa Hotel, Srinivasa Mangapuram",
-      "rawNames": [
-        "Srinivasa Hotel, near Srinivasa Mangapuram Temple"
-      ],
-      "nameCleaned": false,
-      "area": "srinivasa-mangapuram",
-      "localityHint": "Srinivasa Mangapuram",
-      "group": "stays",
-      "target": "place",
-      "category": "hotel",
-      "placeType": "hotel",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.agoda.com/dr-srinivasahotels/hotel/chirala-in.html",
-      "sourceKind": "agoda",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.agoda.com/dr-srinivasahotels/hotel/chirala-in.html",
-          "kind": "agoda",
-          "title": "Srinivasa Hotel, near Srinivasa Mangapuram Temple"
-        }
-      ]
-    },
-    {
-      "key": "srinivasa-mangapuram::super hotel o srinivasa mangapuram temple formerly",
-      "name": "Super Hotel O Srinivasa Mangapuram Temple Formerly",
-      "rawNames": [
-        "Super Hotel O Srinivasa Mangapuram Temple Formerly"
-      ],
-      "nameCleaned": false,
-      "area": "srinivasa-mangapuram",
-      "localityHint": "Srinivasa Mangapuram",
-      "group": "stays",
-      "target": "place",
-      "category": "hotel",
-      "placeType": "hotel",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.booking.com/hotel/in/o-srinivasa-mangapuram-temple-formerly-bgr-gardens.html",
-      "sourceKind": "booking",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.booking.com/hotel/in/o-srinivasa-mangapuram-temple-formerly-bgr-gardens.html",
-          "kind": "booking",
-          "title": "Super Hotel O Srinivasa Mangapuram Temple Formerly"
-        }
-      ]
-    },
-    {
       "key": "tpt-central::lepakshi handicrafts emporium",
       "name": "Lepakshi Handicrafts Emporium",
       "rawNames": [
@@ -5074,23 +5543,21 @@
       ]
     },
     {
-      "key": "tirumala::sri bhu varahaswamy temple",
-      "name": "Sri Bhu Varahaswamy Temple",
+      "key": "tpt-neighbourhoods::trends",
+      "name": "Trends",
       "rawNames": [
-        "Sri Bhu Varaha Swamy Temple"
+        "Trends in Bhavani Nagar,Tirupati"
       ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": null,
-      "group": "official",
+      "nameCleaned": true,
+      "area": "tpt-neighbourhoods",
+      "localityHint": "Bhavani Nagar",
+      "group": "markets",
       "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/PlacesToVisit.aspx",
-      "sourceKind": "official",
+      "category": "market",
+      "placeType": "other",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Trends-Bhavani-Nagar/9999PX877-X877-230217091158-T8B2_BZDET",
+      "sourceKind": "justdial",
       "verifyAreaConfirmed": null,
       "verifyAddressEvidence": null,
       "geocode": {
@@ -5098,47 +5565,269 @@
         "lng": null,
         "displayName": null
       },
-      "tier": "T2",
+      "tier": "T3",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
       "dupReason": null,
       "status": "curated",
-      "officialSources": [
-        {
-          "url": "https://www.tirumala.org/PlacesToVisit.aspx",
-          "quote": "Kalyanam How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple"
-        },
-        {
-          "url": "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
-          "quote": "Kalyanam How to Reach Tirumala Places to Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple"
-        }
-      ],
       "sources": [
         {
-          "url": "https://www.tirumala.org/PlacesToVisit.aspx",
-          "kind": "official",
-          "title": "Sri Bhu Varaha Swamy Temple"
+          "url": "https://www.justdial.com/Tirupati/Trends-Bhavani-Nagar/9999PX877-X877-230217091158-T8B2_BZDET",
+          "kind": "justdial",
+          "title": "Trends in Bhavani Nagar,Tirupati"
         }
       ]
     },
     {
-      "key": "tirumala::sri bedi anjaneya swamy temple",
-      "name": "Sri Bedi Anjaneya Swamy Temple",
+      "key": "tpt-neighbourhoods::198 photos of trends",
+      "name": "198 Photos of Trends",
       "rawNames": [
-        "Sri Bedi Anjaneya Swamy Temple"
+        "198 Photos of Trends in Bhavani Nagar, Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tpt-neighbourhoods",
+      "localityHint": "Bhavani Nagar",
+      "group": "markets",
+      "target": "place",
+      "category": "market",
+      "placeType": "other",
+      "tags": [],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Trends-Bhavani-Nagar/9999PX877-X877-230217091158-T8B2_BZDET/photos",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Trends-Bhavani-Nagar/9999PX877-X877-230217091158-T8B2_BZDET/photos",
+          "kind": "justdial",
+          "title": "198 Photos of Trends in Bhavani Nagar, Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tpt-neighbourhoods::lucky shopping mall",
+      "name": "Lucky Shopping Mall",
+      "rawNames": [
+        "Lucky Shopping Mall in Bhavani Nagar,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tpt-neighbourhoods",
+      "localityHint": "Bhavani Nagar",
+      "group": "markets",
+      "target": "place",
+      "category": "shopping_centre",
+      "placeType": "other",
+      "tags": [
+        "shopping"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Lucky-Shopping-Mall-Opposite-Sagar-Hospital-Bhavani-Nagar/9999PX877-X877-260420184346-X1G9_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Lucky-Shopping-Mall-Opposite-Sagar-Hospital-Bhavani-Nagar/9999PX877-X877-260420184346-X1G9_BZDET",
+          "kind": "justdial",
+          "title": "Lucky Shopping Mall in Bhavani Nagar,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::tirumala shopping complex balaji nagar",
+      "name": "Tirumala Shopping Complex - Balaji Nagar",
+      "rawNames": [
+        "Tirumala Shopping Complex - Balaji Nagar, Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "tirumala",
+      "localityHint": "Tirumala",
+      "group": "markets",
+      "target": "place",
+      "category": "shopping_centre",
+      "placeType": "other",
+      "tags": [
+        "shopping",
+        "tirumala"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Shopping-Complex-Balaji-Nagar/9999PX877-X877-251015022221-W9M4_BZDET/reviews",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tirumala-Shopping-Complex-Balaji-Nagar/9999PX877-X877-251015022221-W9M4_BZDET/reviews",
+          "kind": "justdial",
+          "title": "Tirumala Shopping Complex - Balaji Nagar, Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "srinivasa-mangapuram::murali grocery shop",
+      "name": "Murali Grocery Shop",
+      "rawNames": [
+        "Murali Grocery Shop in Srinivasa Mangapuram Road,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "srinivasa-mangapuram",
+      "localityHint": "Srinivasa Mangapuram",
+      "group": "markets",
+      "target": "place",
+      "category": "market",
+      "placeType": "other",
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Murali-Grocery-Shop/9999PX877-X877-230913141256-S6R9_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Murali-Grocery-Shop/9999PX877-X877-230913141256-S6R9_BZDET",
+          "kind": "justdial",
+          "title": "Murali Grocery Shop in Srinivasa Mangapuram Road,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "renigunta::renigunta weekend market",
+      "name": "Renigunta Weekend Market",
+      "rawNames": [
+        "Renigunta Weekend Market in Gowri Nagar,Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "renigunta",
+      "localityHint": "Renigunta",
+      "group": "markets",
+      "target": "place",
+      "category": "market",
+      "placeType": "other",
+      "tags": [
+        "market",
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Renigunta-Weekend-Market-Gowri-Nagar/9999PX877-X877-200628210408-Q5R2_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Renigunta-Weekend-Market-Gowri-Nagar/9999PX877-X877-200628210408-Q5R2_BZDET",
+          "kind": "justdial",
+          "title": "Renigunta Weekend Market in Gowri Nagar,Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "renigunta::sri dharshini enterprises fancy and gifts store",
+      "name": "Sri Dharshini Enterprises Fancy &Gifts Store -",
+      "rawNames": [
+        "Sri Dharshini Enterprises Fancy &Gifts Store - Tirupati"
+      ],
+      "nameCleaned": true,
+      "area": "renigunta",
+      "localityHint": null,
+      "group": "markets",
+      "target": "place",
+      "category": "market",
+      "placeType": "other",
+      "tags": [
+        "surrounding-corridor"
+      ],
+      "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Dharshini-Enterprises-Fancy-Gifts-Store-Renigunta/9999PX877-X877-230722034134-A2M1_BZDET",
+      "sourceKind": "justdial",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T3",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "sources": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Sri-Dharshini-Enterprises-Fancy-Gifts-Store-Renigunta/9999PX877-X877-230722034134-A2M1_BZDET",
+          "kind": "justdial",
+          "title": "Sri Dharshini Enterprises Fancy &Gifts Store - Tirupati"
+        }
+      ]
+    },
+    {
+      "key": "tpt-central::sri kodanda ramaswamy temple tirupati",
+      "name": "Sri Kodanda Ramaswamy Temple, Tirupati",
+      "rawNames": [
+        "Sri Kodanda Ramaswamy Temple"
       ],
       "nameCleaned": false,
-      "area": "tirumala",
+      "area": "tpt-central",
       "localityHint": null,
       "group": "official",
       "target": "place",
       "category": "temple",
       "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/PlacesToVisit.aspx",
+      "tags": [],
+      "sourceUrl": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
       "sourceKind": "official",
       "verifyAreaConfirmed": null,
       "verifyAddressEvidence": null,
@@ -5155,19 +5844,19 @@
       "status": "curated",
       "officialSources": [
         {
-          "url": "https://www.tirumala.org/PlacesToVisit.aspx",
-          "quote": "Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At"
+          "url": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
+          "quote": "You can book for Seva well in advance through ttdevasthanams.ap.gov.in SRI KODANDA RAMASWAMY TEMPLE Sri Kodandarama Swamy Temple is one of the local temples situated in heart of Tirupati city"
         },
         {
-          "url": "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
-          "quote": "Visit Around Tirumala Sri Bhu Varaha Swamy Temple Temple Legend Sri Bedi Anjaneya Swamy Temple Temple Legend At Tiruchanoor Sri Padmavathi Ammavari Temple Temple Legend Arjitha Sevas More Temples At"
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "Sevas and Weekly Sevas Annual Utsavams, Fairs and Festivals 1 Sri Kodandarama Swamy Temple, Tirupati 5.00 am to 9.00 pm Suprabatham Archana Abhishekam (weekly) Unjal Seva (on every Saturday) Kalyanotsavam"
         }
       ],
       "sources": [
         {
-          "url": "https://www.tirumala.org/PlacesToVisit.aspx",
+          "url": "https://www.tirumala.org/TemplesAtTirupathi.aspx",
           "kind": "official",
-          "title": "Sri Bedi Anjaneya Swamy Temple"
+          "title": "Sri Kodanda Ramaswamy Temple"
         }
       ]
     },
@@ -5207,6 +5896,14 @@
         {
           "url": "https://www.tirumala.org/",
           "quote": "Venkateswara Bhakthi Channel Brahmotsavams S.V. Museum TTD Management Administration TTD Trust Board Board Resolutions"
+        },
+        {
+          "url": "https://www.tirumala.org/S.V. Museum.aspx",
+          "quote": "General Information Do's and Don'ts FAQs Dress Code Contact US S.V. Museum Sri Venkateswara Dhyana Jnana Mandiram,Tirumala The Hall of Antiques was first established in 1980 in Thousand Piller mandapam"
+        },
+        {
+          "url": "https://www.tirumala.org/S.V. Museum.aspx",
+          "quote": "Do's and Don'ts FAQs Dress Code Contact US S.V. Museum Sri Venkateswara Dhyana Jnana Mandiram,Tirumala The Hall of Antiques was first established in 1980 in Thousand Piller mandapam opposite to"
         }
       ],
       "sources": [
@@ -5253,6 +5950,10 @@
         {
           "url": "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx",
           "quote": "hills. Some of the must visit places in Tirumala are Swami Pushkarini, Sri Bhu Varaha Swamy temple, Sri Hathiramjee Mutt, Sri Bedi Anjaneya Swamy temple, Srivari Sikhara Darshanam, Sila Thoranam,"
+        },
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "quote": "Seshachalam ranges and lies on the southern banks of Sri Swami Pushkarini. It is by the Lord’s presidency over Venkatachala, that He has received the appellation, Venkateswara (Lord of the"
         }
       ],
       "sources": [
@@ -5542,6 +6243,52 @@
       ]
     },
     {
+      "key": "tpt-central::sri venkateswara guest house tirupati",
+      "name": "Sri Venkateswara Guest House, Tirupati",
+      "rawNames": [
+        "Sri Venkateswara Guest House"
+      ],
+      "nameCleaned": false,
+      "area": "tpt-central",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
+          "quote": "Single : Rs.50.00 Double : Rs.100.00 Four Bed : Rs.100.00 Sri Venkateswara Guest House (to the north of the Tirupati Railway Station) (Non-AC) Deputy Executive Officer (Reception) Phone : 0877-2264507"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
+          "kind": "official",
+          "title": "Sri Venkateswara Guest House"
+        }
+      ]
+    },
+    {
       "key": "tpt-central::sri govindaraja swamy dharmasala ttd",
       "name": "Sri Govindaraja Swamy Dharmasala (TTD)",
       "rawNames": [
@@ -5711,6 +6458,10 @@
         {
           "url": "https://www.tirumala.org/TemplesAtTiruchanoor.aspx",
           "quote": "Krishna in Kaliya mardana pose and Sri Lakshmi Narasimha Swamy. SRI SUNDARAJA SWAMY TEMPLE, (VARADA RAJA SHRINE), TIRUCHANOOR This shrine is found inside the compound of Sri Padmavathi Ammavari Temple"
+        },
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "Moksham in the Bhagavatam. Click here to view Temple Program Sri Karivarada Raja Swamy vari temple, Satravada (taken over temple): Both the Nagari and Satravada temples are considered to have"
         }
       ],
       "sources": [
@@ -5992,6 +6743,1706 @@
           "title": "Papavinasam"
         }
       ]
+    },
+    {
+      "key": "tirumala::sri anjaneyaswami temple tirumala",
+      "name": "Sri Anjaneyaswami Temple, Tirumala",
+      "rawNames": [
+        "Sri Anjaneyaswami Temple"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "tirumala"
+      ],
+      "sourceUrl": "https://www.tirumala.org/PlacesatTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "quote": "every Sunday and special offerings are made on Hanuman Jayanti. Sri Anjaneyaswami Temple Sri Anjaneyaswami Temple is located opposite to the Pushkarini , at Sri Varahaswami temple on the north-eastern"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
+          "kind": "official",
+          "title": "Sri Anjaneyaswami Temple"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::ampro rest house tirumala",
+      "name": "Ampro Rest House, Tirumala",
+      "rawNames": [
+        "Ampro Rest House"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "No Name Rate per unit per day (INR) * 1. Ampro Rest House 750.00 1500.00 2. Bela Kuteeram A/C ( 6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Ampro Rest House"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::bela kuteeram tirumala",
+      "name": "Bela Kuteeram, Tirumala",
+      "rawNames": [
+        "Bela Kuteeram A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "day (INR) * 1. Ampro Rest House 750.00 1500.00 2. Bela Kuteeram A/C ( 6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4. Hari Sadan Guest House A/C (7"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Bela Kuteeram A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::gayathri sadan tirumala",
+      "name": "Gayathri Sadan, Tirumala",
+      "rawNames": [
+        "Gayathri Sadan A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "1500.00 2. Bela Kuteeram A/C ( 6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4. Hari Sadan Guest House A/C (7 suites) 1500.00 5. Hill View Cottages Deluxe 50.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Gayathri Sadan A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::hari sadan guest house tirumala",
+      "name": "Hari Sadan Guest House, Tirumala",
+      "rawNames": [
+        "Hari Sadan Guest House A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "6 suites) 500.00 3. Gayathri Sadan A/C 1500.00 2500.00 4. Hari Sadan Guest House A/C (7 suites) 1500.00 5. Hill View Cottages Deluxe 50.00 100.00 150.00 1500.00 6. Indira Rest"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Hari Sadan Guest House A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::hill view cottages tirumala",
+      "name": "Hill View Cottages, Tirumala",
+      "rawNames": [
+        "Hill View Cottages Deluxe"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "4. Hari Sadan Guest House A/C (7 suites) 1500.00 5. Hill View Cottages Deluxe 50.00 100.00 150.00 1500.00 6. Indira Rest House A/C( 4 suites ) 2000.00 7. Jagannadha Bhavan"
+        },
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00 6. Ram Bagicha Guest House"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Hill View Cottages Deluxe"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::indira rest house tirumala",
+      "name": "Indira Rest House, Tirumala",
+      "rawNames": [
+        "Indira Rest House A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "5. Hill View Cottages Deluxe 50.00 100.00 150.00 1500.00 6. Indira Rest House A/C( 4 suites ) 2000.00 7. Jagannadha Bhavan ( 4 suites ) 2500.00 3500.00 8. Karam Nivas"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Indira Rest House A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::jagannadha bhavan tirumala",
+      "name": "Jagannadha Bhavan, Tirumala",
+      "rawNames": [
+        "Jagannadha Bhavan"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "6. Indira Rest House A/C( 4 suites ) 2000.00 7. Jagannadha Bhavan ( 4 suites ) 2500.00 3500.00 8. Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Jagannadha Bhavan"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::karam nivas tirumala",
+      "name": "Karam Nivas, Tirumala",
+      "rawNames": [
+        "Karam Nivas"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "7. Jagannadha Bhavan ( 4 suites ) 2500.00 3500.00 8. Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Karam Nivas"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::lakshmi nivas tirumala",
+      "name": "Lakshmi Nivas, Tirumala",
+      "rawNames": [
+        "Lakshmi Nivas"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "suites ) 2500.00 3500.00 8. Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Lakshmi Nivas"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::rajyalakshmi guest house tirumala",
+      "name": "RajyaLakshmi Guest House, Tirumala",
+      "rawNames": [
+        "RajyaLakshmi Guest House A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Karam Nivas 1500.00 2500.00 9. Lakshmi Nivas 500.00 600.00 10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00 12. Srinikethan A/C ( 3"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "RajyaLakshmi Guest House A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::sp guest house tirumala",
+      "name": "SP Guest House, Tirumala",
+      "rawNames": [
+        "SP Guest House (Main)"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "10. RajyaLakshmi Guest House A/C 1000.00 2500.00 3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00 12. Srinikethan A/C ( 3 suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "SP Guest House (Main)"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::srinikethan tirumala",
+      "name": "Srinikethan, Tirumala",
+      "rawNames": [
+        "Srinikethan A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "3000.00 3500.00 11. SP Guest House (Main) 1500.00 2500.00 12. Srinikethan A/C ( 3 suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00 14. Venkata Vijayam Guest House A/C 3"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Srinikethan A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::srinivasa nilayam tirumala",
+      "name": "Srinivasa Nilayam, Tirumala",
+      "rawNames": [
+        "Srinivasa Nilayam A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "2500.00 12. Srinikethan A/C ( 3 suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00 14. Venkata Vijayam Guest House A/C 3 master suites 6 other suites 1500.00 2500.00 15."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Srinivasa Nilayam A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::venkata vijayam guest house tirumala",
+      "name": "Venkata Vijayam Guest House, Tirumala",
+      "rawNames": [
+        "Venkata Vijayam Guest House A/C"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "suites ) 6000.00 13. Srinivasa Nilayam A/C 2500.00 3500.00 14. Venkata Vijayam Guest House A/C 3 master suites 6 other suites 1500.00 2500.00 15. Vidya Sadan 1500.00 * Rate per"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Venkata Vijayam Guest House A/C"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::vidya sadan tirumala",
+      "name": "Vidya Sadan, Tirumala",
+      "rawNames": [
+        "Vidya Sadan"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "A/C 3 master suites 6 other suites 1500.00 2500.00 15. Vidya Sadan 1500.00 * Rate per unit = Rate per Room/Cottage Sri Venkateswara Guest House Area S. No Name Rate"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Vidya Sadan"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::sri venkateswara guest house tirumala",
+      "name": "Sri Venkateswara Guest House, Tirumala",
+      "rawNames": [
+        "Sri Venkateswara Guest House Corner Suites"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "No Name Rate per unit per day (INR) * 1. Sri Venkateswara Guest House Corner Suites 1500.00 2000.00 2. NGC VVGH HRG MBC Cottages (Number: 20 and 22) 2000.00, 2500.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Sri Venkateswara Guest House Corner Suites"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::narayanagiri guest house tirumala",
+      "name": "Narayanagiri Guest House, Tirumala",
+      "rawNames": [
+        "Narayanagiri Guest House - I"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Bungalow Cottages) A/C (13 nos.) 50.00 100.00 200.00 500.00 4. Narayanagiri Guest House - I Corner Suite 1500.00 2000.00 5. Narayanagiri Guest House - II Corner Suite 1500.00 2000.00 6."
+        },
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Narayanagiri Guest House - I Corner Suite 1500.00 2000.00 5. Narayanagiri Guest House - II Corner Suite 1500.00 2000.00 6. Narayanagiri Guest House - III Corner Suite 1500.00 2000.00 7."
+        },
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Narayanagiri Guest House - II Corner Suite 1500.00 2000.00 6. Narayanagiri Guest House - III Corner Suite 1500.00 2000.00 7. Srivari Kuteer Guest House (A/C) Suite No.1 to 4 entire"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Narayanagiri Guest House - I"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::srivari kuteer guest house tirumala",
+      "name": "Srivari Kuteer Guest House, Tirumala",
+      "rawNames": [
+        "Srivari Kuteer Guest House"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Narayanagiri Guest House - III Corner Suite 1500.00 2000.00 7. Srivari Kuteer Guest House (A/C) Suite No.1 to 4 entire Guest House 200.00 1500.00 8. Surapuram Thota Cottages 1500.00 *"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Srivari Kuteer Guest House"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::surapuram thota cottages tirumala",
+      "name": "Surapuram Thota Cottages, Tirumala",
+      "rawNames": [
+        "Surapuram Thota Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Suite No.1 to 4 entire Guest House 200.00 1500.00 8. Surapuram Thota Cottages 1500.00 * Rate per unit = Rate per Room/Cottage Travellers Bungalow Cottages Area S. No Name Rate"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Surapuram Thota Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::alwar tank cottages tirumala",
+      "name": "Alwar Tank Cottages, Tirumala",
+      "rawNames": [
+        "Alwar Tank Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "No Name Rate per unit per day (INR) * 1. Alwar Tank Cottages Single rooms 50.00 100.00 2. Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View"
+        },
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "S.No Name Rate per unit per day (INR) * 1. Alwar Tank Cottage No. 99 200.00 2. Sanku Mitta Cottages (10 cottages) 200.00 3. Travellers Bungalow Cottages (5 cottages) 200.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Alwar Tank Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::anjanadri nagar cottages tirumala",
+      "name": "Anjanadri Nagar Cottages, Tirumala",
+      "rawNames": [
+        "Anjanadri Nagar Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "* 1. Alwar Tank Cottages Single rooms 50.00 100.00 2. Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Anjanadri Nagar Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::garudadri nagar cottages tirumala",
+      "name": "Garudadri Nagar Cottages, Tirumala",
+      "rawNames": [
+        "Garudadri Nagar Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Single rooms 50.00 100.00 2. Anjanadri Nagar Cottages 50.00 3. Garudadri Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Garudadri Nagar Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::mangala bavi cottages tirumala",
+      "name": "Mangala Bavi Cottages, Tirumala",
+      "rawNames": [
+        "Mangala Bavi Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Nagar Cottages 50.00 4. Hill View Cottages (Ordinary) 50.00 5. Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00 6. Ram Bagicha Guest House - I 100.00 7. Ram Bagicha"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Mangala Bavi Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::ram bagicha guest house tirumala",
+      "name": "Ram Bagicha Guest House, Tirumala",
+      "rawNames": [
+        "Ram Bagicha Guest House - I"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Mangala Bavi Cottages 2 suites 4 cottages 100.00 200.00 6. Ram Bagicha Guest House - I 100.00 7. Ram Bagicha Guest House - II 100.00 8. Ram Bagicha Guest House"
+        },
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "200.00 6. Ram Bagicha Guest House - I 100.00 7. Ram Bagicha Guest House - II 100.00 8. Ram Bagicha Guest House - III 100.00 9. Sanku Mitta Cottages 50.00"
+        },
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "100.00 7. Ram Bagicha Guest House - II 100.00 8. Ram Bagicha Guest House - III 100.00 9. Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Ram Bagicha Guest House - I"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::sanku mitta cottages tirumala",
+      "name": "Sanku Mitta Cottages, Tirumala",
+      "rawNames": [
+        "Sanku Mitta Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "100.00 8. Ram Bagicha Guest House - III 100.00 9. Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages 2 suites Single rooms Outside cottages 50.00 100.00"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Sanku Mitta Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::seshadri nagar cottages tirumala",
+      "name": "Seshadri Nagar Cottages, Tirumala",
+      "rawNames": [
+        "Seshadri Nagar Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "House - III 100.00 9. Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages 2 suites Single rooms Outside cottages 50.00 100.00 200.00 500.00 12. Valley View"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Seshadri Nagar Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::tb cottages tirumala",
+      "name": "TB Cottages, Tirumala",
+      "rawNames": [
+        "TB Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "Sanku Mitta Cottages 50.00 10. Seshadri Nagar Cottages 50.00 11. TB Cottages 2 suites Single rooms Outside cottages 50.00 100.00 200.00 500.00 12. Valley View Cottages 100.00 200.00 * Rate"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "TB Cottages"
+        }
+      ]
+    },
+    {
+      "key": "tirumala::valley view cottages tirumala",
+      "name": "Valley View Cottages, Tirumala",
+      "rawNames": [
+        "Valley View Cottages"
+      ],
+      "nameCleaned": false,
+      "area": "tirumala",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "hotel",
+      "placeType": "hotel",
+      "tags": [
+        "pilgrim_accommodation",
+        "tirumala",
+        "ttd"
+      ],
+      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "quote": "suites Single rooms Outside cottages 50.00 100.00 200.00 500.00 12. Valley View Cottages 100.00 200.00 * Rate per unit = Rate per Room/Cottage Marriage Halls and Cottages S.No Name Rate"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
+          "kind": "official",
+          "title": "Valley View Cottages"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri prasanna venkateswara swamy temple kosuvari palle",
+      "name": "Sri Prasanna Venkateswara Swamy Temple, Kosuvari Palle",
+      "rawNames": [
+        "Sri Prasanna Venkateswara Swamy temple, Kosuvari Palle"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "important religious fete that is being observed in this temple. Sri Prasanna Venkateswara Swamy temple, Kosuvari Palle This is yet another important and ancient temple which was recently taken over"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Prasanna Venkateswara Swamy temple, Kosuvari Palle"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri konetiraya swamy temple keelapatla",
+      "name": "Sri Konetiraya Swamy Temple, Keelapatla",
+      "rawNames": [
+        "Sri Konetiraya Swamy, Keelapatla"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "the month of Magha-(January/February) in the advent of Sravana Nakshatram. Sri Konetiraya Swamy, Keelapatla This ancient temple is located in the village of Keelaptla, Gangavaram mandal in Palamaneru, about 110km"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Konetiraya Swamy, Keelapatla"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri kalyana venkateswara swamy temple narayanavanam",
+      "name": "Sri Kalyana Venkateswara Swamy Temple, Narayanavanam",
+      "rawNames": [
+        "Sri Kalyana Venkateswara Swamy temple, Narayanavanam"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "batch-011",
+      "existingSetId": "Sri Kalyana Venkateswara Swamy Temple",
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "11-00 AM TO 11-30 AM Temples outside Tirupati (outside temples) Sri Kalyana Venkateswara Swamy temple, Narayanavanam It is yet another ancient temple of mythological significance located about 60 km from"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Kalyana Venkateswara Swamy temple, Narayanavanam"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri vedanarayana swamy temple nagalapuram",
+      "name": "Sri Vedanarayana Swamy Temple, Nagalapuram",
+      "rawNames": [
+        "Sri Vedanarayana Swamy Temple, Nagalapuram"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "in advance through ttdevasthanams.ap.gov.in Click here to view Temple Program Sri Vedanarayana Swamy Temple, Nagalapuram This is one of the most important and ancient sub-shrines under the umbrella of Tirumala"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Vedanarayana Swamy Temple, Nagalapuram"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri venugopala swamy temple karvetinagaram",
+      "name": "Sri Venugopala Swamy Temple, Karvetinagaram",
+      "rawNames": [
+        "Sri Venugopala Swamy Vari temple, Karvetinagaram"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "in advance through ttdevasthanams.ap.gov.in Click here to view Temple Program Sri Venugopala Swamy Vari temple, Karvetinagaram (taken over temple): The presiding deity in this ancient shrine is Sri Venugopala Swamy"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Venugopala Swamy Vari temple, Karvetinagaram"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri kari manikya swamy temple nagari",
+      "name": "Sri Kari Manikya Swamy Temple, Nagari",
+      "rawNames": [
+        "Sri Kari Manikya Swamy Temple, Nagari"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "Gokulastami Brahmotsavams Anivara Asthanam Varalakshmi Vratham Deepavali Asthanam Danurmasam 5 Sri Kari Manikya Swamy Temple, Nagari 5.30 am to 12.30 pm and 4.00pm to 8.30pm Suprabatham Archana Abhishekam (weekly) Ekantha"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Kari Manikya Swamy Temple, Nagari"
+        }
+      ]
+    },
+    {
+      "key": "surrounding::sri lakshmi narasimha swamy temple tarigonda",
+      "name": "Sri Lakshmi Narasimha Swamy Temple, Tarigonda",
+      "rawNames": [
+        "Sri Lakshmi Narasimha Swamy temple, Tarigonda"
+      ],
+      "nameCleaned": false,
+      "area": "surrounding",
+      "localityHint": null,
+      "group": "official",
+      "target": "place",
+      "category": "temple",
+      "placeType": "temple",
+      "tags": [
+        "surrounding"
+      ],
+      "sourceUrl": "https://www.tirumala.org/MoreTemples.aspx",
+      "sourceKind": "official",
+      "verifyAreaConfirmed": null,
+      "verifyAddressEvidence": null,
+      "geocode": {
+        "lat": null,
+        "lng": null,
+        "displayName": null
+      },
+      "tier": "T2",
+      "existingSet": "new",
+      "existingSetId": null,
+      "dupOf": null,
+      "dupReason": null,
+      "status": "curated",
+      "officialSources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "quote": "Vittaleshwara Swamy temple Sri Mahalakshmi Temple Sri Veeranjaneya Swamy temple Sri Lakshmi Narasimha Swamy temple, Tarigonda This famous temple of Sri Lakshmi Narasimha Swamy is located in the village of"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "kind": "official",
+          "title": "Sri Lakshmi Narasimha Swamy temple, Tarigonda"
+        }
+      ]
     }
   ],
   "curationLog": [
@@ -6176,6 +8627,12 @@
       "reason": "generic directory/category page, not a place"
     },
     {
+      "raw": "Renigunta Locality Restaurants, Tirupati",
+      "area": "renigunta",
+      "action": "dropped",
+      "reason": "directory page title, not a place"
+    },
+    {
       "raw": "Nic Natural Ice Creams in tml by pass road,Tirupati",
       "area": "tpt-central",
       "action": "renamed",
@@ -6212,6 +8669,18 @@
       "reason": "\"Sri Venkateshwara Bakery And Sweets -\" → \"Sri Venkateshwara Bakery And Sweets\" (explicit rename table)"
     },
     {
+      "raw": "Tirupati laddu prasadam details and significance",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "article title, not a place"
+    },
+    {
+      "raw": "Tirumala Temple Laddu Prasadam Counter Inside Visuals",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "video title, not a place"
+    },
+    {
       "raw": "Chota Cafe, Mangalam order online",
       "area": "tpt-central",
       "action": "renamed",
@@ -6226,6 +8695,18 @@
     {
       "raw": "Order from Cafe Manasa online in Tirupati",
       "area": "tpt-neighbourhoods",
+      "action": "dropped",
+      "reason": "generic directory/category page, not a place"
+    },
+    {
+      "raw": "Kafe Tirupati, Tirumala order online",
+      "area": "tirumala",
+      "action": "merged",
+      "reason": "same identity as \"Kafe Tirupati\" (tirumala::kafe tirupati)"
+    },
+    {
+      "raw": "Cafe Extra, Renigunta Locality order online",
+      "area": "renigunta",
       "action": "dropped",
       "reason": "generic directory/category page, not a place"
     },
@@ -6278,6 +8759,12 @@
       "reason": "same identity as \"Sri Padmavathi Ammavari Temple, Tiruchanur\" (tpt-central::sri padmavathi ammavari temple tiruchanur)"
     },
     {
+      "raw": "Prominent Churches in Tirupati – Worship & Peaceful Places",
+      "area": "tpt-central",
+      "action": "dropped",
+      "reason": "listicle page title, not a single place"
+    },
+    {
       "raw": "Kalyana Venkateswara Temple, Srinivasamangapuram",
       "area": "tpt-central",
       "action": "merged",
@@ -6314,6 +8801,12 @@
       "reason": "generic directory/category page, not a place"
     },
     {
+      "raw": "Sri Varahaswami Temple, Tirupati",
+      "area": "tirumala",
+      "action": "merged",
+      "reason": "same identity as \"Sri Varahaswamy Temple, Tirumala\" (tirumala::sri varahaswamy temple tirumala)"
+    },
+    {
       "raw": "Sri Bedi Anjaneyaswami Temple, Tirupati",
       "area": "tirumala",
       "action": "merged",
@@ -6324,6 +8817,12 @@
       "area": "tirumala",
       "action": "merged",
       "reason": "same identity as \"Sri Bedi Anjaneya Swamy Temple, Tirumala\" (tirumala::sri bedi anjaneya swamy temple tirumala)"
+    },
+    {
+      "raw": "SACRED TEERTHAMS OF TIRUMALA SESHACHALA RANGES",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "article/listicle title, not a single place"
     },
     {
       "raw": "Natural Arch, Tirumala hills - Silathoranam Garden",
@@ -6350,6 +8849,12 @@
       "reason": "same identity as \"Sri Padmavathi Ammavari Temple, Tiruchanur\" (tiruchanur::sri padmavathi ammavari temple tiruchanur)"
     },
     {
+      "raw": "Sri Kalyana Venkateswara Swamy",
+      "area": "srinivasa-mangapuram",
+      "action": "merged",
+      "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
+    },
+    {
       "raw": "Kalyana Venkateswara Temple, Srinivasamangapuram",
       "area": "srinivasa-mangapuram",
       "action": "merged",
@@ -6368,6 +8873,12 @@
       "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
     },
     {
+      "raw": "Chandragiri",
+      "area": "chandragiri",
+      "action": "dropped",
+      "reason": "ambiguous single-token name — source title does not establish whether it denotes Chandragiri Fort, the town, or another POI (identity rule; held out rather than guessed)"
+    },
+    {
       "raw": "Chandragiri Palaces and Fort - All You SHOULD Know",
       "area": "chandragiri",
       "action": "merged",
@@ -6384,6 +8895,30 @@
       "area": "chandragiri",
       "action": "dropped",
       "reason": "generic directory/category page, not a place"
+    },
+    {
+      "raw": "Religious Tourism",
+      "area": "renigunta",
+      "action": "dropped",
+      "reason": "generic directory/category page, not a place"
+    },
+    {
+      "raw": "Religious Tourism",
+      "area": "surrounding",
+      "action": "dropped",
+      "reason": "generic directory/category page, not a place"
+    },
+    {
+      "raw": "Museums in Tirupati",
+      "area": "tpt-central",
+      "action": "dropped",
+      "reason": "generic category page title, not a place"
+    },
+    {
+      "raw": "Nature & Parks in Tirupati",
+      "area": "tpt-central",
+      "action": "dropped",
+      "reason": "generic category page title, not a place"
     },
     {
       "raw": "Sri venkateshwara zoological park - Tirupati",
@@ -6420,6 +8955,30 @@
       "area": "tpt-central",
       "action": "merged",
       "reason": "same identity as \"Deer Park, Alipiri\" (tpt-central::deer park alipiri)"
+    },
+    {
+      "raw": "Nature & Parks in Tirupati",
+      "area": "tpt-neighbourhoods",
+      "action": "dropped",
+      "reason": "generic category page title, not a place"
+    },
+    {
+      "raw": "Must View in Tirumala - Review of Papavinasam",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "generic page title, not a place"
+    },
+    {
+      "raw": "Srinivasa Mangapuram Temple - All You SHOULD Know",
+      "area": "srinivasa-mangapuram",
+      "action": "merged",
+      "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
+    },
+    {
+      "raw": "Religious Tourism",
+      "area": "srinivasa-mangapuram",
+      "action": "dropped",
+      "reason": "generic directory/category page, not a place"
     },
     {
       "raw": "Chandragiri Fort",
@@ -6500,6 +9059,18 @@
       "reason": "generic hotel listing page"
     },
     {
+      "raw": "Srinivasa Hotel, near Srinivasa Mangapuram Temple",
+      "area": "srinivasa-mangapuram",
+      "action": "merged",
+      "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
+    },
+    {
+      "raw": "Super Hotel O Srinivasa Mangapuram Temple Formerly",
+      "area": "srinivasa-mangapuram",
+      "action": "merged",
+      "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
+    },
+    {
       "raw": "10 Top Hotels in Renigunta",
       "area": "renigunta",
       "action": "dropped",
@@ -6530,16 +9101,16 @@
       "reason": "same normalized name \"Revathi Mess & Catering\" already curated under tpt-neighbourhoods (possible branch vs duplicate — needs review)"
     },
     {
+      "raw": "Srinivasa Mangapuram Temple - All You SHOULD Know",
+      "area": "srinivasa-mangapuram",
+      "action": "duplicate",
+      "reason": "same normalized name \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" already curated under tpt-central (possible branch vs duplicate — needs review)"
+    },
+    {
       "raw": "Sri Padmavathi Ammavari Temple",
       "area": "tiruchanur",
       "action": "duplicate",
       "reason": "same normalized name \"Sri Padmavathi Ammavari Temple, Tiruchanur\" already curated under tpt-central (possible branch vs duplicate — needs review)"
-    },
-    {
-      "raw": "Sri Kalyana Venkateswara Swamy",
-      "area": "srinivasa-mangapuram",
-      "action": "duplicate",
-      "reason": "same normalized name \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" already curated under tpt-central (possible branch vs duplicate — needs review)"
     },
     {
       "raw": "Silathoranam Garden - All You SHOULD Know Before",

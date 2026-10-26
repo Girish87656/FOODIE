@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Museums in Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tripadvisor.com/Attractions-g297587-Activities-c49-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"Museums in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Attractions-g297587-Activities-c49-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Museums in Tirupati",
+      "snippet": "Museums in Tirupati · 1. Sri Venkatesvara Museum · 2. Regional Science Centre · 3. Sri Vari Museum · 4. Shilparamam · 5. Sri Venkateswara Museum Of Temple Art · 6. Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Venkatesvara-Museum-Tirumala/9999PX877-X877-170315165615-L9S1_BZDET",
+      "name": "Sri Venkatesvara Museum in Tirumala,Tirupati",
+      "snippet": "Sri Venkatesvara Museum in Tirumala, Tirupati listed under Museums in Tirupati . Rated 4.6 based on 17628 Customer Reviews and Ratings with 3 Photos.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://indiago.app/en/tirumala-tirupati/museums",
+      "name": "Museums in Tirupati and Tirumala: which to visit - India GO",
+      "snippet": "Oct 15, 2026 — Museums in Tirupati and Tirumala ... Four museums are within easy reach: three in and above Tirupati , and a fourth twelve kilometres out. Two are ... Read more",
+      "host": "indiago.app",
+      "kind": null
+    },
+    {
+      "url": "https://www.yatrablog.com/museums-in-tirupati",
+      "name": "Museums In Tirupati That Showcase Its Culture",
+      "snippet": "Aug 16, 2018 — Museums In Tirupati That Showcase Its Culture · 1. Sri Venkateswara Museum · 2. Sri Vari Museum · 3. Shilparamam · 4. Museum at Chandragiri Fort. Read more",
+      "host": "www.yatrablog.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/Attractions-g297587-Activities-c49-t28-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE BEST Tirupati Art Museums (2026)",
+      "snippet": "Art Museums in Tirupati · Specialty Museums · Art Museums · Science Museums · History Museums · Natural History Museums.",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://wanderlog.com/list/geoCategory/131601/best-free-museums-in-tirupati",
+      "name": "The 32 best free museums in Tirupati",
+      "snippet": "The 32 best free museums in Tirupati · 1 Sri Govindaraja Swamy Temple · 2 Chandragiri Fort · 3 Sri Venkateswara Swamy Temple (Tirumala Tirupati Devasthanams) · 4 ... Read more",
+      "host": "wanderlog.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

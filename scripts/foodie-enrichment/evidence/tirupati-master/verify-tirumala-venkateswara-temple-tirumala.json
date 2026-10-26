@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Venkateswara Temple, Tirumala",
+    "area": "tirumala",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Venkateswara_Temple,_Tirumala"
+  },
+  "query": "\"Venkateswara Temple, Tirumala\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Venkateswara_Temple,_Tirumala",
+      "name": "Venkateswara Temple, Tirumala",
+      "snippet": "Venkateswara Temple, Tirumala . Venkateswara Temple, Tirumala is located in Andhra Pradesh. Venkateswara Temple, Tirumala . Location in Andhra Pradesh. Religion. Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tirumala",
+      "name": "Tirumala",
+      "snippet": "The town is a part of the Tirupati Urban mandal of the Tirupati revenue division. ... ↑ \"Why is the Venkateswara Temple, Tirumala , important for Venkateswara?\". Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.britannica.com/topic/Venkateswara-Temple-Tirumala",
+      "name": "Venkateswara Temple, Tirumala | Tirupati, Andhra Pradesh",
+      "snippet": "Sep 13, 2026 — Venkateswara Temple, Tirumala , is a Hindu temple near Tirupati , Andhra Pradesh, India, that is of vital importance to Srivaishnava and ...",
+      "host": "www.britannica.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705325-r577900241-Tirumala_Tirupati_Devasthanams-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Venkateswara Temple - Tirumala Tirupati Devasthanams",
+      "snippet": "Venkateswara Temple - Tirumala Tirupati Devasthanams. Tirumala Tirupati Devasthanams; Tirupati - Things to Do; Tirupati ; Chittoor District; Andhra Pradesh ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirupati-temple-postal-address/?locale=ms_MY",
+      "name": "Tirupati Temple Postal Address",
+      "snippet": "BSNL office address :- Tirupati post office beside// near Gangamma Temple Tirupati ... Sri Venkateswara Temple (Tirumala ) Distance from Tirupati : 22 km Travel ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirumala-tirupati-devasthanam.blogspot.com/2012/09/contact-details-of-ttd-officials.html",
+      "name": "Contact Details of TTD Officials",
+      "snippet": "The town is a pilgrimage center for Hindus, with its Sri Venkateswara Temple. Tirumala is dedicated to the Shrimann Narayana, or Maha Vishnu. Sri Rengam ... Read more",
+      "host": "tirumala-tirupati-devasthanam.blogspot.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Venkateswara Temple, Tirumala | Tirupati, Andhra Pradesh :: Sep 13, 2026 — Venkateswara Temple, Tirumala , is a Hindu temple near Tirupati , Andhra Pradesh, India, that is of vital importance to Srivaishnava and ...",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

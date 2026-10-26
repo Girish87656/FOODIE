@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "name": "Reviews of Amor Fati Cafe, Korlagunta, Tirupati",
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.zomato.com/tirupati/amor-fati-cafe-1-korlagunta/reviews"
+  },
+  "query": "\"Reviews of Amor Fati Cafe, Korlagunta, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/amor-fati-cafe-1-korlagunta/reviews",
+      "name": "Reviews of Amor Fati Cafe, Korlagunta, Tirupati",
+      "snippet": "Amor Fati Cafe Dining Reviews ; Latha · 3 months ago. good taste ; Aanandh · 3 months ago. good at service ; Aanandh · 4 months ago. the food was good taste. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/it/tirupati/amor-fati-cafe-1-korlagunta/reviews",
+      "name": "Reviews of Amor Fati Cafe, Korlagunta, Tirupati",
+      "snippet": "Amor Fati Cafe Dining Reviews ; Latha · 2 mesi fa. good taste ; Aanandh · 3 mesi fa. good at service ; Aanandh · 4 mesi fa. the food was good taste.",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/id/tirupati/amor-fati-cafe-1-korlagunta/reviews",
+      "name": "Reviews of Amor Fati Cafe, Korlagunta, Tirupati",
+      "snippet": "Amor Fati Cafe Dining Reviews ; Latha · 1 bulan lalu. good taste ; Aanandh · 2 bulan lalu. good at service ; Aanandh · 2 bulan lalu. the food was good taste.",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

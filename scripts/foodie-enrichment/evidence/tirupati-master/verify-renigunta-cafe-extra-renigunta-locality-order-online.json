@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "name": "Cafe Extra, Renigunta Locality order online",
+    "area": "renigunta",
+    "sourceUrl": "https://www.zomato.com/tirupati/cafe-extra-renigunta-locality/order"
+  },
+  "query": "\"Cafe Extra, Renigunta Locality order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/cafe-extra-renigunta-locality/order",
+      "name": "Cafe Extra, Renigunta Locality order online",
+      "snippet": "Order food online from Cafe Extra, Renigunta Locality, Tirupati . Fast Food, Sandwich, Pizza, Burger, Street Food, Ice Cream, Desserts, Beverages 4.3 DELIVERY",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/pl/tirupati/cafe-extra-renigunta-locality/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gU2FuZHdpY2giLCJkaXNoX2lkcyI6WyI2NDA4OCJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+      "name": "Cafe Extra, Renigunta Locality order online",
+      "snippet": "Order food online from Cafe Extra, Renigunta Locality, Tirupati . Get great offers and super fast food delivery. Extra Fast Food, Sandwich, Pizza, Burgery, ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tr/tirupati/cafe-extra-renigunta-locality/order/verify",
+      "name": "Cafe Extra, Renigunta Locality order online",
+      "snippet": "Order food online from Cafe Extra, Renigunta Locality, Tirupati . Get great offers and super fast food delivery when you order food online from Cafe Extra on ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/hi/tirupati/cafe-extra-renigunta-locality/order",
+      "name": "Cafe Extra, Renigunta Locality order online",
+      "snippet": "Order food online from Cafe Extra, Renigunta Locality, Tirupati . Get great offers and super fast food delivery when you order food online from Cafe Extra on ...",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Cafe Extra, Renigunta Locality order online :: Order food online from Cafe Extra, Renigunta Locality, Tirupati . Fast Food, Sandwich, Pizza, Burger, Street Food, Ice Cream, Desserts, Beverages 4.3 DELIVERY",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

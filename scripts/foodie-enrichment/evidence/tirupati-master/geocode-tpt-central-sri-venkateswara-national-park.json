@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Sri Venkateswara National Park",
+    "area": "tpt-central"
+  },
+  "query": "Sri Venkateswara National Park, Tirupati",
+  "lat": 13.7953489,
+  "lng": 79.2998635,
+  "displayName": "Sri Venkateswara National Park, Pullampeta Mandal, Tirupati District, Andhra Pradesh, India",
+  "osmType": "relation/national_park",
+  "areaConfirmed": true,
+  "note": null,
+  "retrievedOn": "2026-10-26"
+}

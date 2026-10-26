@@ -100,6 +100,12 @@ for key, fn in {
     "accp": "accommodation-tirupati.html",
     "tch": "temples-at-tiruchanoor.html",
     "ii": "incredibleindia-tirupati.html",
+    # batch-2 fetches (same session day, same UA + method)
+    "ptm": "ttd-PlacesatTirumala.html",
+    "svm": "ttd-S.V.-Museum.html",
+    "rh": "ttd-RestHousesInTirumala.html",
+    "kl": "ttd-ttdklmps.html",
+    "mt": "ttd-MoreTemples.html",
 }.items():
     P[key] = clean_text((DIR / fn).read_text(encoding="utf-8", errors="replace"))
 
@@ -315,6 +321,111 @@ SOURCES.append({
     "extracted": ii,
 })
 
+# ---------------------------------------------------------------- Source 9 (batch 2)
+# PlacesatTirumala.aspx — fetched in the batch-2 sweep (same UA + method).
+ptm = [
+    entry(P["ptm"], "Sri Venkateswara Temple", ttd("PlacesatTirumala.aspx") + " — main temple section"),
+    entry(P["ptm"], "Sri Varaha Swami Temple", ttd("PlacesatTirumala.aspx") + " — section: north of the Sri Venkateswara Temple, banks of Varaha Pushkarini"),
+    entry(P["ptm"], "Sri Bedi AnjaneyaswamiTemple", ttd("PlacesatTirumala.aspx") + " — section: Sannidhi Street, opposite the main temple (page writes this name without a space)"),
+    entry(P["ptm"], "Sri Anjaneyaswami Temple", ttd("PlacesatTirumala.aspx") + " — section: opposite the Pushkarini, at Sri Varahaswami temple (DISTINCT from Bedi Anjaneyaswami per the page itself)"),
+    entry(P["ptm"], "Swami Pushkarini", ttd("PlacesatTirumala.aspx") + " — teerthams section", occurrence=1),
+    entry(P["ptm"], "Silathoranam", ttd("PlacesatTirumala.aspx") + " — 'Other Places' section (natural rock arch near Chakra Tirtham)"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("PlacesatTirumala.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED, "page": "ttd-PlacesatTirumala.html",
+    "pageSizeBytes": fetch_size("ttd-PlacesatTirumala.html"),
+    "note": "TTD official 'Places at Tirumala' (batch 2). 4 named temples (incl. TWO distinct Anjaneya temples per the page's own prose) + Swami Pushkarini + Silathoranam.",
+    "extracted": ptm,
+})
+
+# ---------------------------------------------------------------- Source 10 (batch 2)
+svm = [
+    entry(P["svm"], "S.V. Museum", ttd("S.V. Museum.aspx") + " — page subject", occurrence=2),
+    entry(P["svm"], "Sri Venkateswara Dhyana Jnana Mandiram", ttd("S.V. Museum.aspx") + " — official building name (opposite Vaikuntham Queue Complex, Tirumala)"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("S.V. Museum.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED, "page": "ttd-S.V.-Museum.html",
+    "pageSizeBytes": fetch_size("ttd-S.V.-Museum.html"),
+    "note": "TTD official S.V. Museum page (batch 2): museum officially named Sri Venkateswara Dhyana Jnana Mandiram, Tirumala; 6000+ items, ten sections.",
+    "extracted": svm,
+})
+
+# ---------------------------------------------------------------- Source 11 (batch 2)
+rh_names = [
+    # Sri Padmavathi Guest House Area (15 rows)
+    "Ampro Rest House", "Bela Kuteeram A/C", "Gayathri Sadan A/C", "Hari Sadan Guest House A/C",
+    "Hill View Cottages Deluxe", "Indira Rest House A/C", "Jagannadha Bhavan", "Karam Nivas",
+    "Lakshmi Nivas", "RajyaLakshmi Guest House A/C", "SP Guest House (Main)", "Srinikethan A/C",
+    "Srinivasa Nilayam A/C", "Venkata Vijayam Guest House A/C", "Vidya Sadan",
+    # Sri Venkateswara Guest House Area (named rows; NGC/VVGH/HRG/MBC code-style row deliberately NOT extracted — booking codes, not place names)
+    "Sri Venkateswara Guest House Corner Suites",
+    "Narayanagiri Guest House - I", "Narayanagiri Guest House - II", "Narayanagiri Guest House - III",
+    "Srivari Kuteer Guest House", "Surapuram Thota Cottages",
+    # Travellers Bungalow Cottages Area (12 rows)
+    "Alwar Tank Cottages", "Anjanadri Nagar Cottages", "Garudadri Nagar Cottages",
+    "Hill View Cottages (Ordinary)", "Mangala Bavi Cottages",
+    "Ram Bagicha Guest House - I", "Ram Bagicha Guest House - II", "Ram Bagicha Guest House - III",
+    "Sanku Mitta Cottages", "Seshadri Nagar Cottages", "TB Cottages", "Valley View Cottages",
+    # Marriage Halls and Cottages section (3 rows)
+    "Alwar Tank Cottage No. 99",
+]
+rh = [
+    entry(P["rh"], n, "named TTD rest-house/cottage row in a rates table (no individual href); page: " + ttd("RestHousesInTirumala.aspx"))
+    for n in rh_names
+]
+SOURCES.append({
+    "sourceUrl": ttd("RestHousesInTirumala.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED, "page": "ttd-RestHousesInTirumala.html",
+    "pageSizeBytes": fetch_size("ttd-RestHousesInTirumala.html"),
+    "note": "TTD official Rest Houses in Tirumala (batch 2): 34 named rows across 4 sections (Sri Padmavathi GH Area 15, Sri Venkateswara GH Area 6 named, TBC Area 12, Marriage Halls 1 new name) with official rates. NOT extracted (recorded here instead): 'NGC VVGH HRG MBC Cottages' row — internal booking codes, not a place name.",
+    "extracted": rh,
+})
+
+# ---------------------------------------------------------------- Source 12 (batch 2)
+kl = [
+    entry(P["kl"], "Kalyana Mandapams", ttd("ttdklmps.aspx") + " — page subject (pan-India directory; page heading: 'TTD Information Centres and Kalyana Mandapams')"),
+    entry(P["kl"], "Bangalore", ttd("ttdklmps.aspx") + " — example directory row: 'Manager TTD Information Centre 16th Cross, Vyalikavel Bangalore - 560 003'"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("ttdklmps.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED, "page": "ttd-ttdklmps.html",
+    "pageSizeBytes": fetch_size("ttd-ttdklmps.html"),
+    "note": "TTD official Kalyana Mandapam directory (batch 2): ~160 rows across Indian cities/towns. SCOPE FINDING: ZERO Tirupati or Tirumala rows in the directory table (checked programmatically — 'Tirupati'/'Tirumala' hits are all page-nav text, not table rows). Page reviewed and recorded; NO candidates from it — out of Tirupati scope by the page's own content.",
+    "extracted": kl,
+})
+
+# ---------------------------------------------------------------- Source 13 (batch 2)
+mt_region = [
+    entry(P["mt"], "Sri Prasanna Venkateswara Swamy temple, Kosuvari Palle", ttd("MoreTemples.aspx") + " — prose section (TTD-managed, Tirupati region)"),
+    entry(P["mt"], "Sri Konetiraya Swamy, Keelapatla", ttd("MoreTemples.aspx") + " — prose section (village Keelapatla; TTD-managed)"),
+    entry(P["mt"], "Sri Kalyana Venkateswara Swamy temple, Narayanavanam", ttd("MoreTemples.aspx") + " — prose section (DISTINCT from the Srinivasa Mangapuram Kalyana Venkateswara temple)"),
+    entry(P["mt"], "Sri Vedanarayana Swamy Temple, Nagalapuram", ttd("MoreTemples.aspx") + " — prose section"),
+    entry(P["mt"], "Sri Venugopala Swamy Vari temple, Karvetinagaram", ttd("MoreTemples.aspx") + " — prose section (rates table spells the village 'Karveti Nagaram')"),
+    entry(P["mt"], "Sri Karivarada Raja Swamy vari temple, Satravada", ttd("MoreTemples.aspx") + " — prose section (rates table also carries 'Sri Kati Varadaraja Swamy Temple, Sathravada' — same-village name ambiguity flagged for review, not resolved here)"),
+    entry(P["mt"], "Sri Kodandarama Swamy Temple, Tirupati", ttd("MoreTemples.aspx") + " — rates-table row (Tirupati city)"),
+    entry(P["mt"], "Sri Kari Manikya Swamy Temple, Nagari", ttd("MoreTemples.aspx") + " — rates-table row"),
+    entry(P["mt"], "Sri Lakshmi Narasimha Swamy temple, Tarigonda", ttd("MoreTemples.aspx") + " — prose section (TTD-managed)"),
+]
+mt_sub = [
+    entry(P["mt"], "Sri Ranganatha Temple", "'Other sub-temples in Pattabhiramalayam' prose list — Pattabhiramalayam's own location is NOT stated on this page; recorded, not mapped to an area"),
+    entry(P["mt"], "Sri Panduranga Vittaleshwara Swamy temple", "'Other sub-temples in Pattabhiramalayam' prose list — location not stated on page"),
+    entry(P["mt"], "Sri Mahalakshmi Temple", "'Other sub-temples in Pattabhiramalayam' prose list — location not stated on page"),
+    entry(P["mt"], "Sri Veeranjaneya Swamy temple", "'Other sub-temples in Pattabhiramalayam' prose list — location not stated on page"),
+]
+mt_out = [
+    entry(P["mt"], "Sri Narapura Venkateswara Swamy vari Temple, Jammalamadugu", "OUT-OF-REGION: Jammalamadugu, YSR Kadapa district (~200 km) — TTD-managed but NOT a Tirupati-region destination; recorded, not an inventory candidate"),
+    entry(P["mt"], "Sri Siddeswara Swamy Vari Temple, Thallapaka", "OUT-OF-REGION: Thallapaka, Rajampeta Mandal, YSR Kadapa district — recorded, not an inventory candidate"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("MoreTemples.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED, "page": "ttd-MoreTemples.html",
+    "pageSizeBytes": fetch_size("ttd-MoreTemples.html"),
+    "note": "TTD official 'More Temples' (batch 2): 9 Tirupati-region TTD-managed temple candidates + 4 sub-temple names 'in Pattabhiramalayam' (location unstated on page — kept as evidence only) + 2 OUT-OF-REGION Kadapa temples (recorded, excluded from inventory by scope).",
+    "extracted": mt_region + mt_sub + mt_out,
+})
+
 # ---------------------------------------------------------------- Blocked sources
 SOURCES.append({
     "sourceUrl": "https://tirupati.ap.gov.in/", "httpStatus": 0,
@@ -341,6 +452,29 @@ for nm in ["Swami Pushkarini", "Sila Thoranam", "Vaikuntha Teertham"]:
     i = raw_pat_flat.find(nm)
     if i >= 0:
         ctx = raw_pat_flat[max(0, i - 130): i + len(nm) + 130]
+        ctx = re.sub(r"\s+", " ", ctx)
+        selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
+    else:
+        selfcheck.append({"name": nm, "foundInRawHtml": False, "context": None})
+
+# Also cross-check batch-2 names in their raw saved files
+raw_rh = (DIR / "ttd-RestHousesInTirumala.html").read_text(encoding="utf-8", errors="replace")
+raw_rh_flat = htmllib.unescape(re.sub(r"\s+", " ", raw_rh))
+for nm in ["Ampro Rest House", "Narayanagiri Guest House - II", "Alwar Tank Cottage No. 99"]:
+    i = raw_rh_flat.find(nm)
+    if i >= 0:
+        ctx = raw_rh_flat[max(0, i - 110): i + len(nm) + 110]
+        ctx = re.sub(r"\s+", " ", ctx)
+        selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
+    else:
+        selfcheck.append({"name": nm, "foundInRawHtml": False, "context": None})
+
+raw_mt = (DIR / "ttd-MoreTemples.html").read_text(encoding="utf-8", errors="replace")
+raw_mt_flat = htmllib.unescape(re.sub(r"\s+", " ", raw_mt))
+for nm in ["Sri Vedanarayana Swamy Temple, Nagalapuram", "Sri Kalyana Venkateswara Swamy temple, Narayanavanam"]:
+    i = raw_mt_flat.find(nm)
+    if i >= 0:
+        ctx = raw_mt_flat[max(0, i - 110): i + len(nm) + 110]
         ctx = re.sub(r"\s+", " ", ctx)
         selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
     else:
@@ -424,7 +558,7 @@ for s in SOURCES:
 lines.append("## Limitations (explicit)")
 lines.append("")
 lines.append("1. `https://tirupati.ap.gov.in/` and `https://tourism.ap.gov.in/` are network-unreachable from this sandbox (single attempt each on " + ACCESSED + ", curl `http_code=000`). Per task directive they were NOT retried further; no content from them enters this evidence.")
-lines.append("2. `PlacesatTirumala.aspx` (teerthams/places in and around Tirumala), `MoreTemples.aspx`, `RestHousesInTirumala.aspx`, `ttdklmps.aspx` and `S.V. Museum.aspx` were DISCOVERED via saved nav pages (URLs recorded above) but NOT fetched — the task capped extra tirumala.org fetches at 4 and the cap was used on the two Accommodation pages, 'Places to see around Tirumala' and TemplesAtTiruchanoor. They remain the next official candidates.")
+lines.append("2. `PlacesatTirumala.aspx`, `MoreTemples.aspx`, `RestHousesInTirumala.aspx`, `ttdklmps.aspx` and `S.V. Museum.aspx` were discovered via saved nav pages in the batch-1 pass and FETCHED in the batch-2 sweep (same day, same UA + method) — all five HTTP 200; their extractions are Sources 9-13 above. `ttdklmps.aspx` was confirmed to contain ZERO Tirupati/Tirumala directory rows (pan-India table; scope finding recorded on the source itself).")
 lines.append("3. `Places to see around Tirumala.aspx` and both accommodation pages present their lists as prose/tables WITHOUT per-place hyperlinks — names are quoted from prose; hrefOrDetail records that reality.")
 lines.append("4. The incredibleindia.gov.in page was anticipated to be a JS-heavy Next.js shell with a `self.__next_f` payload; in reality it is **server-rendered** (AEM v2; 0 `self.__next_f` chunks, 0 `__NEXT_DATA__`), so extraction was better than expected: full narrative text + 10 attraction card links came through statically. No browser rendering was needed or used.")
 lines.append("5. tirumala.org nav `Advance Reservation / Seva / Darshan / Accommodation` online-booking links point to `ttdevasthanams.ap.gov.in` and `tirupatibalaji.ap.gov.in` — related official domains, not fetched this pass (outside the 4-page cap).")

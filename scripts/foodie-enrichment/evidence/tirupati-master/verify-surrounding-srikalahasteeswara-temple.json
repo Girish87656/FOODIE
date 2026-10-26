@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Srikalahasteeswara temple",
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple"
+  },
+  "query": "\"Srikalahasteeswara temple\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
+      "name": "Srikalahasteeswara temple",
+      "snippet": "The Srikalahasti Temple is in the town of Srikalahasti in Tirupati district in the state of Andhra Pradesh, India. ... Srikalahasteeswara temple is located in ... Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.google.com.pk/travel/hotels/entity/ChYIwae8nKb01bRwGgovbS8wMjVydGxyEAQ",
+      "name": "Srikalahasti Temple",
+      "snippet": "The temple is located at Sri kalahasti, Tirupati District Andhra Pradesh. Timing: ... https://en.wikipedia.org. Srikalahasteeswara temple . Srikalahasti temple ... Read more",
+      "host": "www.google.com.pk",
+      "kind": null
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/srikalahasti-temple",
+      "name": "Explore the Ancient Town of Srikalahasti in Tirupati",
+      "snippet": "Srikalahasti Temple, also known as Srikalahasteeswara Temple , is located in the town of Srikalahasti in the Tirupati district of Andhra Pradesh. It is a ... Read more",
+      "host": "www.incredibleindia.gov.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/100064033122562/posts/the-srikalahasti-temple-is-located-in-the-town-of-srikalahasti-in-tirupati-distr/1315972060547219",
+      "name": "The Srikalahasti Temple is located in the town",
+      "snippet": "Srikalahasti Temple, also known as Srikalahasteeswara Temple , is located in Srikalahasti, Tirupati district, Andhra Pradesh. It is one of ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.blessingsonthenet.com/indian-temple/id/103/srikalahasteeswara-temple-kalahasti",
+      "name": "Srikalahasteeswara Temple Kalahasti",
+      "snippet": "Srikalahasteeswara Temple Kalahasti Sri Kalahasti Temple is dedicated to Lord Shiva , located 36 km away from Tirupathi in Chittoor district of Andhra ... Read more",
+      "host": "www.blessingsonthenet.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/KaushikiBasu555/posts/at-sri-kalahasti-temple-sri-kalahasti-andhra-pradesh-it-is-situated-near-gate-no/1510967754384520",
+      "name": "At Sri Kalahasti Temple Sri Kalahasti Andhra Pradesh It is",
+      "snippet": "Srikalahasti is a significant pilgrimage town in Andhra Pradesh, India, famous for the ancient Srikalahasteeswara Temple dedicated to Lord Shiva ...",
+      "host": "www.facebook.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

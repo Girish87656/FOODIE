@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Tirumala Cafe",
+    "area": "tirumala"
+  },
+  "query": "Tirumala Cafe, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-26"
+}

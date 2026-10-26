@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Minerva Coffee Shop - Tirupati Restaurants",
+    "area": "tpt-central"
+  },
+  "query": "\"Minerva Coffee Shop - Tirupati Restaurants\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26",
+  "skipped": true
+}

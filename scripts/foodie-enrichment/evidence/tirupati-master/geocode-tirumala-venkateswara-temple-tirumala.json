@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Venkateswara Temple, Tirumala",
+    "area": "tirumala"
+  },
+  "query": "Venkateswara Temple, Tirumala, Tirupati",
+  "lat": 13.6831199,
+  "lng": 79.3468546,
+  "displayName": "Sri Venkateswara Swamy Temple, Vimana Pradakshinam, Sankumitta Nagar, Tirumala, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517504, India",
+  "osmType": "relation/place_of_worship",
+  "areaConfirmed": true,
+  "note": null,
+  "retrievedOn": "2026-10-26"
+}

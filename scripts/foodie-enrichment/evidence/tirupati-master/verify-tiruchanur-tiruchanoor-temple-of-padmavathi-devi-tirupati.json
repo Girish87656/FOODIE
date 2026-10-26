@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Tiruchanoor temple of Padmavathi Devi - Tirupati",
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705522-r425062691-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html"
+  },
+  "query": "\"Tiruchanoor temple of Padmavathi Devi - Tirupati\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Tiruchanoor temple of Padmavathi Devi - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Tiruchanoor temple of Padmavathi Devi - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retrievedOn": "2026-10-26"
+}

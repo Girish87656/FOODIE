@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "name": "Nandini Sweets And Bakery, Tiruchanur order online",
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.zomato.com/tirupati/nandini-sweets-and-bakery-tiruchanur/order"
+  },
+  "query": "\"Nandini Sweets And Bakery, Tiruchanur order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/nandini-sweets-and-bakery-tiruchanur/order",
+      "name": "Nandini Sweets And Bakery, Tiruchanur order online",
+      "snippet": "Check out Nandini Sweets And Bakery, Tiruchanur, Tirupati on Zomato for great deals, ratings, reviews and more! Burger, Sandwich, Shake, Beverages - DELIVERY",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/hi/tirupati/nandini-sweets-and-bakery-tiruchanur",
+      "name": "Nandini Sweets And Bakery, Tiruchanur order online",
+      "snippet": "Nandini Sweets And Bakery · Salads · Greek Veg Salad · Crunchy Chicken Salad · Burgers and Sandwiches · Classic Veg Burger · Aloo Tikki Burger · Veg Deluxe Burger.",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

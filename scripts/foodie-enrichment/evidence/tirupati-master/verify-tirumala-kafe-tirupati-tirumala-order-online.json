@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "name": "Kafe Tirupati, Tirumala order online",
+    "area": "tirumala",
+    "sourceUrl": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order"
+  },
+  "query": "\"Kafe Tirupati, Tirumala order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order",
+      "name": "Kafe Tirupati, Tirumala order online",
+      "snippet": "Check out Kafe Tirupati , Tirumala, Tirupati on Zomato for great deals, ratings, reviews and more! Kafe Tirupati South Indian, Fast Food, Biryani 4.6 DELIVERY",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/it/tirupati/kafe-tirupati-1-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gTWFzYWxhIERvc2EiLCJkaXNoX2lkcyI6WyI3MDczNSJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+      "name": "Kafe Tirupati, Tirumala order online",
+      "snippet": "Kafe Tirupati · Best in Masala Dosa Ghee Masala Dosa · Breakfast. Idli [3 Pieces] · Dosa. 2 Butter Set Dosa · Breads Chapathi [ 3 pieces] · Drinks (Beverages) ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/cs/tirupati/kafe-tirupati-1-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gRGlubmVyIiwiZGlzaF9pZHMiOlsiNDAzNiJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+      "name": "Kafe Tirupati, Tirumala order online",
+      "snippet": "Check out Kafe Tirupati , Tirumala, Tirupati on Zomato for great deals, ratings, reviews and more! Fast food, Biryani Meals",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/hi/tirupati/kafe-tirupati-1-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6Ik1hc2FsYSBEb3NhIFx1MDkyZVx1MDk0N1x1MDkwMiBcdTA5MzhcdTA5MzBcdTA5NGRcdTA5MzVcdTA5MzZcdTA5NGRcdTA5MzBcdTA5NDdcdTA5MzdcdTA5NGRcdTA5MjAiLCJkaXNoX2lkcyI6WyI3MDczNSJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+      "name": "Kafe Tirupati, Tirumala order online",
+      "snippet": "ऑर्डर फूड ऑनलाइन से Kafe Tirupati , Tirumala, Tirupati > और zomato पर शानदार ऑफर और सुपर फास्ट डिलीवरी ...",
+      "host": "www.zomato.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}

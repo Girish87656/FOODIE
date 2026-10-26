@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Chandragiri Fort",
+    "area": "chandragiri"
+  },
+  "query": "Chandragiri Fort, Tirupati",
+  "lat": 13.5830317,
+  "lng": 79.3052847,
+  "displayName": "Chandragiri Fort, Chandragiri Fort Road, Chandragiri Urban, Harijanawada, Chandragiri, Chandragiri Mandal, Tirupati District, Andhra Pradesh, 517100, India",
+  "osmType": "node/fort",
+  "areaConfirmed": true,
+  "note": null,
+  "retrievedOn": "2026-10-26"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Chandragiri",
+    "area": "chandragiri",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Chandragiri"
+  },
+  "query": "\"Chandragiri\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Chandragiri",
+      "name": "Chandragiri",
+      "snippet": "Chandragiri is a village located in Chandragiri mandal, Tirupati district of the Indian state of Andhra Pradesh. It is a part of Tirupati Urban Development ... Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://myholidayhappiness.com/place/andhra-pradesh/tirupati/chandragiri",
+      "name": "Chandragiri, Tirupati - Timings, entry fees, nearby places &",
+      "snippet": "Chandragiri is one of the prime places to visit in Tirupati . Discover the details of Chandragiri timings, nearby places, entry fees & things to do etc.",
+      "host": "myholidayhappiness.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/groups/1528556590661443/posts/3015423358641418",
+      "name": "Chandragiri fort in Tirupati district, Andhra Pradesh, India",
+      "snippet": "The place shown in the image is # Chandragiri #Fort, located in # Chandragiri , # Tirupati district, #Andhra #Pradesh, #India.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Chandragiri-Fort-Near-Archaeological-Museum-Chandragiri/9999PX877-X877-141218184935-S1S4_BZDET",
+      "name": "Chandragiri Fort in Chandragiri,Tirupati - Justdial Jd",
+      "snippet": "Chandragiri Fort is located approximately 3 km from the town of Chandragiri , which is about 14 km from the city of Tirupati . The fort is easily accessible by ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/IndianHeritage.GoI/videos/chandragiri-fort-is-set-amidst-the-picturesque-landscape-of-andhra-pradesh-spann/990357946661036",
+      "name": "Chandragiri Fort is set amidst the picturesque landscape of",
+      "snippet": "The magnificent Chandragiri fort is an 11th century architectural marvel of the Vijayanagar empire. A part of the Chittoor district, the closest ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort",
+      "name": "Explore the Historic Chandragiri Fort in Tirupati",
+      "snippet": "Chandragiri Fort stands proudly amidst the picturesque landscape of Andhra Pradesh, where history and nature converge. It covers an area of 25 acres and is ... Read more",
+      "host": "www.incredibleindia.gov.in",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Chandragiri Fort is set amidst the picturesque landscape of :: The magnificent Chandragiri fort is an 11th century architectural marvel of the Vijayanagar empire. A part of the Chittoor district, the closest ...",
+  "errors": [],
+  "retrievedOn": "2026-10-26"
+}
