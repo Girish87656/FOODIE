@@ -2412,3 +2412,24 @@ Work Log:
 
 Stage Summary:
 - Batch 3 recovered and advanced WITHOUT discarding any prior work: verification pipeline now resume-safe under throttling (bounded retries + circuit breaker + honest tallying), geocode backlog cleared, the batch-3 eligibility review produced Batch-014 (27 audited rows) as a third owner-review candidate alongside the untouched Batch-012/013. 170-test suite green. HEAD is now X commits ahead of origin/main, still UNPUSHED (no GitHub authorization attempted, per instruction). Remaining honest gaps: 174 candidates still unverified (116 throttled + 58 pending — resumable once quota resets), ap.gov.in still network-blocked, Google Maps not bulk-harvested, Batch-011/012/013/014 all awaiting owner execution, Epicruise/Hangouts unresolved, VAPID unset, venue photos absent for most rows.
+
+---
+Task ID: batch-4-direct-source
+Agent: Z.ai Code (main session)
+Task: Continue FOODIE Tirupati Master Discovery from e454722 — direct-source research without the quota-exhausted web_search provider; preserve clean tree, all evidence, frozen name-drift guards; no push/deploy/SQL/auth.
+
+Work Log:
+- Diagnosed transient tool interruptions (context-cancelled + partially-applied MultiEdit that silently ate an "} else {" line) via read-only probes + git diff; restored correct control flow; learned to verify after every edit batch.
+- official2 phase: 7 tirumala.org pages fetched (2.5s spacing, polite UA) → 4 real TTD rate-table pages (Marriage halls & Cottages; Sri Padmavathi / Sri Venkateswara / VarahaSwami guest houses) + 3 dead URLs serving the homepage shell (content-based shell detection; recorded as limitations).
+- extract-official2 phase: 42 TTD accommodation venue names parsed from the 4 real rate tables (header/unit filters, display-name tail trimming, verbatim quotes kept) — documentary corroboration for batch-013 queued rows, NOT new candidates.
+- wikipedia phase rebuilt 3 times with verification at each step: v1 chrome-leak junk DELETED unused; v2 zero-anchor regression (served HTML = absolute hrefs, attrs before href); v3 final (both anchor forms, namespace blocklist, sentence±400/paragraph±1200 locality gates with per-entry evidence tier, disambiguation guard, article-subject entries) → 494 entries / 15 bounded articles, ≥4s spacing, api.php 429 recorded.
+- crossmatch phase: 174 pending rows → 6 independent-source locality confirmations (Kalyana Venkateswara Temple Narayanavanam, Kalyani Dam, Talakona, Ubbalamadugu Falls, Tirumala, Tirupati) — crossmatch-*.json, verify stubs untouched, explicitly NOT web_search identity verifications.
+- new-names phase: review queue only — 352 unique corpus names → 41 corroborating existing inventory, 53 weak overlaps, 133 genuinely new unverified leads (5 HIGH / 92 MEDIUM / 36 LOW by quote proximity); leads are counted nowhere and never auto-added.
+- gen-tirupati-docs.ts extended: source register §6, inventory Batch-4 corroboration section + header corrected to 113 queued review rows (incl. batch-014=27), coverage-matrix batch-4 evidence + honest gaps, photo-gaps line; docs regenerated (determinism byte-identical on re-run).
+- Discovery worklog (docs/tirupati-discovery-worklog.md) Batch-4 section appended.
+
+Stage Summary:
+- Commit a3b2911 on top of d99ba46/e454722; working tree clean; 6 commits ahead of origin (not pushed).
+- Gates: 170/170 tests, lint 0, tsc 0 for project code (4 pre-existing examples/skills errors untouched), determinism byte-identical, secret scan clean.
+- Honest limits: web_search still 429 (one bounded probe, paused); 168/174 pending rows remain pending; small food businesses NOT expandable this pass (recorded gap); 3 dead TTD URLs; ap.gov.in + Overpass blocked; wiki api.php rate-limited.
+- Nothing pushed, nothing deployed, no production SQL, no GitHub authorization.
