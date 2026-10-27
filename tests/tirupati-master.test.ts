@@ -205,10 +205,14 @@ describe("tirupati master — curated worksheet honesty", () => {
     }
   });
 
-  test("batch-012/013 eligibility: no T3 row is imported, no cross-set row is imported", () => {
-    const importedIds = new Set([...ALL_IDS, ...ids13]);
-    // the 5 identity-held candidates stay in the inventory only (documented in batch-013 header)
-    const heldNames = new Set(["Kafe", "Kafe Tirupati", "Anjaneya Swamy Temple", "Sri Vinayaka Swamy Temple", "Mini Park"]);
+  test("batch-012/013/014 eligibility: no T3 row is imported, no cross-set row is imported", () => {
+    const importedIds = new Set([...ALL_IDS, ...ids13, ...ids14]);
+    // the identity-held candidates stay in the inventory only (documented in
+    // batch-013 header + batch-3 eligibility review)
+    const heldNames = new Set([
+      "Kafe", "Kafe Tirupati", "Anjaneya Swamy Temple", "Sri Vinayaka Swamy Temple", "Mini Park",
+      "Tirumala Balaji Sweets", "Tirumala Tea Stall", "Mirchi Bajji Point",
+    ]);
     for (const r of curated.rows) {
       if (r.status !== "curated") continue;
       const isEligible = (r.tier === "T1" || r.tier === "T2") && r.existingSet === "new";
@@ -221,12 +225,13 @@ describe("tirupati master — curated worksheet honesty", () => {
   });
 
   test("forward drift: every eligible worksheet row is imported under its canonical-name id", () => {
-    const imported = new Set([...b12Ids, ...ids13]);
+    const imported = new Set([...b12Ids, ...ids13, ...ids14]);
     const heldKeys = new Set([
       "tpt-neighbourhoods::kafe", "tirumala::kafe tirupati",
       "tpt-neighbourhoods::anjaneya swamy temple",
       "tpt-neighbourhoods::sri vinayaka swamy temple",
       "tpt-neighbourhoods::mini park",
+      "tirumala::tirumala balaji sweets", "tirumala::tirumala tea stall", "tpt-central::mirchi bajji point",
     ]);
     const missing: string[] = [];
     let eligible = 0;
@@ -238,7 +243,13 @@ describe("tirupati master — curated worksheet honesty", () => {
       const id = uuid5(`foodie-tptm:Tirupati:${r.name as string}`);
       if (!imported.has(id)) missing.push(`${r.key as string} ("${r.name as string}" → ${id})`);
     }
-    expect(eligible).toBe(86); // 29 batch-012 + 57 batch-013
+    // 112 = 29 batch-012 + 57 batch-013 + 27 batch-014, minus 1: the curated
+    // row "Tirumala Balaji Sweets" was re-held (batch-3) because its canonical
+    // name drifted from the FROZEN batch-013 queued row 'Tirumala Balaji
+    // Sweets -' — that venue is already queued under the frozen id, so the
+    // no-dash canonical must NOT import a second row. Every one of the 112
+    // eligible rows IS imported (missing = [] below enforces it).
+    expect(eligible).toBe(112);
     expect(missing).toEqual([]);
   });
 
@@ -265,10 +276,13 @@ describe("tirupati master — curated worksheet honesty", () => {
 });
 
 describe("tirupati master — official source evidence", () => {
-  test("13 official pages fetched OK (8 batch-1 + 5 batch-2); 2 blocked domains recorded as limitations", () => {
+  test("18 official pages fetched OK (8 batch-1 + 5 batch-2 + 5 batch-3); 2 blocked domains recorded as limitations", () => {
     const ok = official.sources.filter((s) => s.httpStatus === 200);
     const failed = official.sources.filter((s) => s.httpStatus !== 200);
-    expect(ok.length).toBe(13);
+    // batch-3 added 5 pages fetched HTTP 200 during the 2026-10-27 sweep:
+    // KalyanaKatta, PackageTours, TirumalatoTirupathiOnFoot, MoreLinks
+    // (tirumala.org) + the Incredible India SV Temple page
+    expect(ok.length).toBe(18);
     expect(failed.length).toBe(2);
     for (const f of failed) expect(f.sourceUrl).toMatch(/ap\.gov\.in/);
   });
@@ -310,6 +324,82 @@ const sql13 = existsSync(SQL13_PATH) ? readFileSync(SQL13_PATH, "utf8") : "";
 const b12Ids = Array.from(sql.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
 const ids13 = Array.from(sql13.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
 const slugs13 = Array.from(sql13.matchAll(/^    '([a-z0-9-]+)',\n    '(?:temple|waterfall|fort|zoo|natural_arch|other|hotel)',$/gm)).map((m) => m[1]);
+
+/* ==================================================================
+   Batch-014 (batch-3 sweep) — review-candidate integrity gates
+   ================================================================== */
+
+const SQL14_PATH = join(ROOT, "supabase", "review-candidates", "insert-batch-014-tptm-b3.sql");
+const VERIFY14_PATH = join(ROOT, "supabase", "review-candidates", "verify-batch-014-tptm-b3.sql");
+const sql14 = existsSync(SQL14_PATH) ? readFileSync(SQL14_PATH, "utf8") : "";
+const ids14 = Array.from(sql14.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
+const slugs14 = Array.from(sql14.matchAll(/^    '([a-z0-9-]+)',\n    '(?:temple|waterfall|fort|zoo|natural_arch|other|hotel)',$/gm)).map((m) => m[1]);
+
+describe("tirupati master — batch-014 review candidate (batch-3 sweep)", () => {
+  test("SQL files exist", () => {
+    expect(existsSync(SQL14_PATH)).toBe(true);
+    expect(existsSync(VERIFY14_PATH)).toBe(true);
+  });
+
+  test("contains exactly 27 unique deterministic ids, disjoint from batch-012's 29 and batch-013's 57", () => {
+    expect(ids14.length).toBe(27);
+    expect(new Set(ids14).size).toBe(27);
+    expect(ids14.filter((id) => b12Ids.includes(id)).length).toBe(0);
+    expect(ids14.filter((id) => ids13.includes(id)).length).toBe(0);
+    // deterministic: ids recompute from the canonical names carried in the SQL itself
+    const namesInSql = Array.from(sql14.matchAll(/^    '([^']+)',$/gm)).map((m) => m[1]);
+    expect(namesInSql.length).toBeGreaterThanOrEqual(27);
+  });
+
+  test("identity-held and noise names never enter the batch", () => {
+    for (const banned of ["Kafe", "Mini Park", "Anjaneya Swamy Temple", "Tirumala Balaji Sweets", "Tirumala Tea Stall", "Mirchi Bajji Point", "Must View in", "Renigunta Locality Restaurants", "United Tirupati", "Are Tirumala Laddus available", " cakes and sweet", "Asian Restaurants", "Museums", "Trends", "Nature & Parks"]) {
+      expect(sql14).not.toContain(`'${banned}'`);
+    }
+    // the four disambiguated neighbourhood temples carry their locality suffix
+    for (const required of ["Anjaneya Swamy Temple, Vedullacheruvu", "Anjaneya Temple, Bairagi Patteda", "Sri Anjaneya Swami Temple, Nehru Nagar", "Sri Anjaneya Swami Temple, Karakambadi"]) {
+      expect(sql14).toContain(`'${required}'`);
+    }
+  });
+
+  test("every row imports unverified; no destructive statements; guards intact", () => {
+    const valuesRegion14 = sql14.slice(sql14.indexOf("insert into public.restaurants"), sql14.indexOf("POSTFLIGHT"));
+    expect(valuesRegion14.match(/'unverified'/g)?.length).toBe(27);
+    expect(sql14).not.toMatch(/delete\s+from\s+public\./i);
+    expect(sql14).not.toMatch(/truncate/i);
+    expect(sql14).not.toMatch(/update\s+public\.\w+\s+set/i);
+    expect(sql14).toMatch(/PREFLIGHT FAIL/);
+    expect(sql14).toMatch(/POSTFLIGHT FAIL/);
+    expect(sql14).toMatch(/already carry tptm-master-b14/);
+    expect(sql14.match(/begin;/g)?.length).toBe(1);
+    expect(sql14.trimEnd().endsWith("commit;")).toBe(true);
+  });
+
+  test("coordinates: ZERO rows carry coordinates (no area-gated geocode for any batch-014 candidate)", () => {
+    const valuesRegion14 = sql14.slice(sql14.indexOf("insert into public.restaurants"), sql14.indexOf("POSTFLIGHT"));
+    expect(valuesRegion14).not.toMatch(/\b1[0-9]\.[0-9]{5,}/); // no restaurant coordinates
+    expect(valuesRegion14).not.toMatch(/\b7[0-9]·?[0-9]*\.[0-9]{5,}/); // no longitude literals either
+    const placeRegion14 = sql14.slice(sql14.indexOf("insert into public.places"), sql14.indexOf("POSTFLIGHT"));
+    expect(placeRegion14).not.toMatch(/\b1[0-9]\.[0-9]{5,}/);
+    expect(placeRegion14).not.toMatch(/\b7[0-9]\.[0-9]{5,}/);
+  });
+
+  test("5 place slugs, unique, none colliding with batch-012 or batch-013 slugs", () => {
+    expect(slugs14.length).toBe(5);
+    expect(new Set(slugs14).size).toBe(5);
+    const b12Slugs = Array.from(sql.matchAll(/^    '([a-z0-9-]+)',$/gm)).map((m) => m[1]);
+    expect(slugs14.filter((s) => b12Slugs.includes(s) || slugs13.includes(s)).length).toBe(0);
+  });
+
+  test("source_url mandatory on every inserted row", () => {
+    expect(sql14).not.toMatch(/, '',/); // no empty source_url values
+  });
+
+  test("no secrets in batch-014 artifacts", () => {
+    for (const content of [sql14, readFileSync(VERIFY14_PATH, "utf8")]) {
+      expect(content).not.toMatch(/eyJhbGciOi|sk_|SERVICE_ROLE|password\s*=\s*'[^']+'|ghp_[A-Za-z0-9]{20,}/);
+    }
+  });
+});
 
 describe("tirupati master — batch-013 review candidate (batch-2 sweep)", () => {
   test("SQL files exist", () => {
@@ -374,12 +464,14 @@ describe("tirupati master — batch-013 review candidate (batch-2 sweep)", () =>
     }
   });
 
-  test("official evidence now covers the five batch-2 TTD pages (HTTP 200) with 162 quotes", () => {
+  test("official evidence now covers the five batch-2 TTD pages (HTTP 200); 185 quotes across 18 pages", () => {
     const b2 = official.sources.filter((s) => s.sourceUrl.includes("PlacesatTirumala") || s.sourceUrl.includes("MoreTemples") || s.sourceUrl.includes("RestHousesInTirumala") || s.sourceUrl.includes("ttdklmps") || s.sourceUrl.includes("Museum"));
     expect(b2.length).toBe(5);
     for (const s of b2) expect(s.httpStatus).toBe(200);
+    // 162 quotes at batch-2 close; +23 from the 5 batch-3 pages
+    // (KalyanaKatta, PackageTours, OnFoot, MoreLinks, incredibleindia SV Temple)
     const total = official.sources.reduce((a, s) => a + (s.extracted?.length ?? 0), 0);
-    expect(total).toBe(162);
+    expect(total).toBe(185);
     const nulls = official.sources.reduce((a, s) => a + (s.extracted ?? []).filter((e) => e.verbatimQuote === null).length, 0);
     expect(nulls).toBe(0);
   });

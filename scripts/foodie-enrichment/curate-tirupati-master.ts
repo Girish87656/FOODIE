@@ -112,7 +112,17 @@ const NOISE_TAILS: Array<[RegExp, string]> = [
   [/^tiffin services? - /gi, ""],
   [/^handicraft item dealers in.*$/gi, ""],
   [/^fabric retailers in.*$/gi, ""],
-  [/\s*-\s*(wildlife sanctuary|bakeries|cake shops?|restaurants?)\s*$/gi, ""],
+  [/^\d+ photos? of /gi, ""],
+  [/^\d+ reviews for /gi, ""],
+  [/^reviews for /gi, ""],
+  [/\s*:\s*sweets, snacks & home\s*$/gi, ""],
+  [/\s+in tirupati\s*$/gi, ""],
+  [/\s+in\s*$/gi, ""],
+  [/\s*-\s*tirupati\s*$/gi, ""],
+  [/\s*-\s*tirumala,?\s*tirupati\s*$/gi, " §T"],
+  [/\s*-\s*reviews, ratings, tips\s*$/gi, ""],
+  [/,\s*tirupati,\s*india\s*$/gi, ""],
+  [/\s*-\s*(wildlife sanctuary|bakeries|cake shops?|restaurants?|tiffin services?|temples?)\s*$/gi, ""],
   [/\s*[-,]+\s*$/, ""],
   [/\s*\.$/, ""],
 ];
@@ -150,6 +160,24 @@ const GENERIC_PATTERNS: Array<[RegExp, string]> = [
   [/prasadam counter inside visuals/i, "video title, not a place"],
   [/laddu prasadam details and significance/i, "article title, not a place"],
   [/^renigunta locality restaurants$/i, "directory page title, not a place"],
+  /* ---- batch-3 eligibility review (2026-10-27) — every drop records its reason ---- */
+  [/^asian restaurants/i, "cuisine directory page, not a place"],
+  [/^tirupati restaurants$/i, "generic directory/category page, not a place"],
+  [/^varadaraja nagar.*restaurants$/i, "generic directory/category page, not a place"],
+  [/^museums?$/i, "generic category page title, not a place"],
+  [/^nature (&|and) parks?$/i, "generic category page title, not a place"],
+  [/^trends$/i, "retail chain store-locator page"],
+  [/sugarcane juice machine/i, "equipment-dealer category page, not a food venue"],
+  [/^cakes? and sweet$/i, "generic listing name without a distinct business identity (identity rule)"],
+  [/^are tirumala laddus/i, "social-media Q&A post, not a place"],
+  [/^united tirupati( tirumala)?$/i, "social-media fan page, not a place"],
+  [/^tiruchanoor (laddu prasadam|padmavati ammavari prasadam)/i, "prasadam product post, not a place"],
+  [/^tirupati sri venkateswara laddu/i, "social-media post, not a place"],
+  [/tirumala tirupati devasthanams/i, "organisation listing, not a place"],
+  [/^pilgrims waiting halls/i, "TTD pilgrim facility caught by a food sweep — not a food venue (retained in raw evidence for a future facilities review)"],
+  [/^sudarshan nc1/i, "TTD accommodation block caught by a food sweep — not a food venue (retained in raw evidence for a future facilities review)"],
+  [/^govinda nilayam/i, "listing entity type unclear (facility/guest house caught by a food sweep) — not a food venue"],
+  [/^tirumala traders$/i, "trade-shop listing without food-category evidence — identity and category unconfirmed"],
 ];
 
 function cleanName(raw: string): { name: string; changed: boolean; localityHint: string | null; areaKey: string | null } {
@@ -266,6 +294,22 @@ const EXPLICIT_RENAMES: Array<[RegExp, string]> = [
   [/^geetha general stores & tiffin centre\b.*$/i, "Geetha General Stores & Tiffin Centre"],
 ];
 
+/* area/category-scoped audited renames (batch-3 eligibility review 2026-10-27).
+   Unlike EXPLICIT_RENAMES these can be restricted to ONE worksheet area (the
+   same cleaned string can denote different held rows elsewhere) and can pin a
+   reviewed category when the discovery-group default is misleading.
+   Every application is recorded in the curation log. */
+const SCOPED_RENAMES: Array<{ re: RegExp; name: string; area?: string; category?: string; note: string }> = [
+  { re: /^prasadalayam ttd$/i, name: "Prasadalayam (TTD)", category: "restaurant", note: "TTD free-meals complex; bakery-sweep default category overridden after review" },
+  { re: /^ap 39cafe& restaurant.*$/i, name: "AP 39 Cafe & Restaurant", note: "justdial listing title punctuation" },
+  { re: /^tirumala tea stall, reddy and reddy/i, name: "Tirumala Tea Stall", note: "magicpin listing title normalized; collides with the Khadi Colony listing of the same shop name — pair held for identity review" },
+  { re: /^padmavathi juice center$/i, name: "Padmavathi Juice Center", note: "display casing" },
+  { re: /^anjaneya swamy temple$/i, name: "Anjaneya Swamy Temple, Vedullacheruvu", area: "tpt-central", note: "locality from the listing title — distinct temple, disambiguated name" },
+  { re: /^anjaneya temple$/i, name: "Anjaneya Temple, Bairagi Patteda", area: "tpt-central", note: "locality from the listing title — distinct temple, disambiguated name" },
+  { re: /^sri anjaneya swami temple$/i, name: "Sri Anjaneya Swami Temple, Nehru Nagar", area: "tpt-central", note: "locality from the listing title — distinct temple, disambiguated name" },
+  { re: /^sri anjaneya swami$/i, name: "Sri Anjaneya Swami Temple, Karakambadi", area: "tpt-central", note: "locality from the listing title — distinct temple, disambiguated name" },
+];
+
 /* ---------------- alias groups (identity-level dedup) ---------------- */
 
 const ALIAS_GROUPS: Array<{ canonical: string; areas: string[]; patterns: RegExp[] }> = [
@@ -327,6 +371,13 @@ function batch011Hit(name: string): string | null {
   for (const [re, id] of BATCH011_ALIASES) if (re.test(name)) return id;
   return null;
 }
+
+/* production cross-references by brand pattern (batch-3 review): listings that
+   name an ALREADY-LIVE production venue under a longer/branch-style title are
+   marked existingSet='production' and never re-imported. */
+const PRODUCTION_ALIASES: Array<[RegExp, string]> = [
+  [/perambur srinivasa sweets/i, "Ps4 Restaurant"],
+];
 
 /* ---------------- main ---------------- */
 
@@ -401,6 +452,18 @@ for (const row of ws.rows) {
     cleaned.name = rename[1];
     cleaned.changed = true;
   }
+  // area/category-scoped audited renames (batch-3 eligibility review)
+  let category = row.category;
+  const sren = SCOPED_RENAMES.find((r) => (!r.area || r.area === row.area) && r.re.test(cleaned.name));
+  if (sren && sren.name !== cleaned.name) {
+    curationLog.push({ raw: row.name, area: row.area, action: "renamed", reason: `"${cleaned.name}" → "${sren.name}" (${sren.note})` });
+    cleaned.name = sren.name;
+    cleaned.changed = true;
+  }
+  if (sren?.category && (!sren.area || sren.area === row.area) && sren.category !== category) {
+    curationLog.push({ raw: row.name, area: row.area, action: "renamed", reason: `category ${category} → ${sren.category} (${sren.note})` });
+    category = sren.category;
+  }
   const drop = GENERIC_PATTERNS.find(([re]) => re.test(cleaned.name));
   if (drop) {
     curationLog.push({ raw: row.name, area: row.area, action: "dropped", reason: drop[1] });
@@ -428,8 +491,12 @@ for (const row of ws.rows) {
 
   let existingSet: Curated["existingSet"] = "new";
   let existingSetId: string | null = null;
+  const prodAlias = PRODUCTION_ALIASES.find(([re]) => re.test(cleaned.name));
   if (PRODUCTION_TIRUPATI.some((p) => norm(p) === nKey)) {
     existingSet = "production"; existingSetId = cleaned.name;
+  } else if (prodAlias) {
+    existingSet = "production"; existingSetId = prodAlias[1];
+    curationLog.push({ raw: row.name, area, action: "cross-ref", reason: `matches live production venue "${prodAlias[1]}" (brand pattern) — not re-imported` });
   } else {
     const b11 = batch011Hit(cleaned.name);
     if (b11) { existingSet = "batch-011"; existingSetId = b11; }
@@ -457,7 +524,7 @@ for (const row of ws.rows) {
     key, name: aKey ? (ALIAS_GROUPS.find((a) => a.areas.includes(area) && `${area}::${norm(a.canonical)}` === aKey)?.canonical ?? key.split("::")[1]) : cleaned.name, rawNames: [row.name],
     nameCleaned: cleaned.changed, area,
     localityHint: cleaned.localityHint,
-    group: row.group, target: row.target, category: row.category,
+    group: row.group, target: row.target, category,
     placeType: row.placeType, tags: row.tags,
     sourceUrl: row.sourceUrl, sourceKind: row.sourceKind,
     verifyAreaConfirmed, verifyAddressEvidence, geocode, tier,

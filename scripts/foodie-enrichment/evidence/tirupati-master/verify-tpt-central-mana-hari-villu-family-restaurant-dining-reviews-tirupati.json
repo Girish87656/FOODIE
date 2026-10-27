@@ -1,14 +1,42 @@
 {
   "candidate": {
     "name": "Mana Hari Villu Family Restaurant Dining Reviews - Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/mana-hari-villu-family-restaurant-vidyut-nagar/reviews"
   },
   "query": "\"Mana Hari Villu Family Restaurant Dining Reviews - Tirupati\" Tirupati address",
   "hits": [],
   "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Mana Hari Villu Family Restaurant Dining Reviews - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Mana Hari Villu Family Restaurant Dining Reviews - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "retrievedOn": "2026-10-27",
+  "skipped": true,
+  "skipReason": "rate-limited",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Mana Hari Villu Family Restaurant Dining Reviews - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Mana Hari Villu Family Restaurant Dining Reviews - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    },
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    },
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

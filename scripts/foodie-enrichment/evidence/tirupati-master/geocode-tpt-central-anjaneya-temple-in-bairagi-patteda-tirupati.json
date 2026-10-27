@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Anjaneya Temple in Bairagi Patteda,Tirupati",
+    "area": "tpt-central"
+  },
+  "query": "Anjaneya Temple in Bairagi Patteda,Tirupati, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-27"
+}

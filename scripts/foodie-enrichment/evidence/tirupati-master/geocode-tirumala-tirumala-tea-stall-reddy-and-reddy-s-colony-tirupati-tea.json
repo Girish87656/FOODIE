@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Tirumala Tea Stall, Reddy and Reddy's Colony, Tirupati, Tea",
+    "area": "tirumala"
+  },
+  "query": "Tirumala Tea Stall, Reddy and Reddy's Colony, Tirupati, Tea, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-27"
+}

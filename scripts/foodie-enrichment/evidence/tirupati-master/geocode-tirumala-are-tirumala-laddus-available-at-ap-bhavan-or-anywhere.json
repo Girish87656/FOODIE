@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Are Tirumala Laddus available at AP Bhavan or anywhere",
+    "area": "tirumala"
+  },
+  "query": "Are Tirumala Laddus available at AP Bhavan or anywhere, Tirupati",
+  "lat": null,
+  "lng": null,
+  "displayName": null,
+  "osmType": null,
+  "areaConfirmed": false,
+  "note": "no result with area token (0 candidates, all outside Tirupati)",
+  "retrievedOn": "2026-10-27"
+}

@@ -12,7 +12,7 @@ Honest photograph coverage for the Tirupati master inventory (2026-10-26).
    category icon tile — both clearly labelled as non-venue imagery in the UI.
 2. **Batch-011's 10 attraction photos remain bundled in the repo** (with per-photo attribution in
    IMAGE-CREDITS.md) and go live only when the owner executes the Batch-011 SQL.
-3. The 87 T3 backlog candidates equally have no photos; the same fallback chain applies.
+3. The 137 T3 backlog candidates equally have no photos; the same fallback chain applies.
 
 ## What is needed to close a photo gap
 

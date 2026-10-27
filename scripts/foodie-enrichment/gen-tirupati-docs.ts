@@ -52,6 +52,10 @@ const HELD_KEYS = new Set([
   "tpt-neighbourhoods::anjaneya swamy temple",
   "tpt-neighbourhoods::sri vinayaka swamy temple",
   "tpt-neighbourhoods::mini park",
+  /* batch-3 eligibility review (2026-10-27): */
+  "tirumala::tirumala balaji sweets", /* name drift vs frozen batch-013 queued row 'Tirumala Balaji Sweets -' — venue already queued; reconcile before import */
+  "tirumala::tirumala tea stall", /* conflicting locality listings (Khadi Colony vs Reddy & Reddy Colony) — identity review */
+  "tpt-central::mirchi bajji point", /* unresolved vs the Mangalam listing (dup queue) — identity review */
 ]);
 
 /* batch review-candidate INSERT ids (parsed from the generated SQL files —
@@ -73,6 +77,7 @@ function insertIds(sqlPath: string): Set<string> {
 }
 const B12_IDS = insertIds(join(ROOT, "supabase", "review-candidates", "insert-batch-012-tptm-master.sql"));
 const B13_IDS = insertIds(join(ROOT, "supabase", "review-candidates", "insert-batch-013-tptm-b2.sql"));
+const B14_IDS = insertIds(join(ROOT, "supabase", "review-candidates", "insert-batch-014-tptm-b3.sql"));
 const GROUP_LABEL: Record<string, string> = {
   "food-restaurants": "Restaurants & messes",
   "food-tiffin": "Tiffin & breakfast centres",
@@ -175,7 +180,8 @@ for (const area of areasInOrder) {
       let inBatch: string;
       if (B12_IDS.has(id)) inBatch = `YES → batch-012 (${dest})`;
       else if (B13_IDS.has(id)) inBatch = `YES → batch-013 (${dest})`;
-      else if (HELD_KEYS.has(r.key as string)) inBatch = "no (identity-held — name too generic)";
+      else if (B14_IDS.has(id)) inBatch = `YES → batch-014 (${dest})`;
+      else if (HELD_KEYS.has(r.key as string)) inBatch = "no (identity-held — see batch-014 header for hold reason)";
       else if (r.existingSet === "batch-011") inBatch = "— (already Batch-011 candidate)";
       else if (r.existingSet === "production") inBatch = "— (already live)";
       else inBatch = "no (T3 backlog)";

@@ -26,9 +26,21 @@
  *
  * Usage:
  *   bun scripts/foodie-enrichment/research-tirupati-master.ts discovery <group>
- *   bun scripts/foodie-enrichment/research-tirupati-master.ts verify   [slug]
+ *   bun scripts/foodie-enrichment/research-tirupati-master.ts verify   [slug] [--limit N] [--breaker N]
  *   bun scripts/foodie-enrichment/research-tirupati-master.ts geocode  [slug]
  *   bun scripts/foodie-enrichment/research-tirupati-master.ts worksheet
+ *
+ * verify resume semantics (batch-3 hardening):
+ *   • a verify file WITHOUT skipped:true is a COMPLETED record — never
+ *     overwritten, never re-queried (unless --redo);
+ *   • a verify file WITH skipped:true (rate-limited / infra-error stub)
+ *     IS re-attempted on the next run — a throttled attempt is never
+ *     treated as verification;
+ *   • --limit N caps candidates attempted per invocation (small chunks);
+ *   • per candidate: at most 1 + |backoffs| attempts with escalating
+ *     back-off, honouring a Retry-After hint when the error carries one;
+ *   • circuit breaker: after N (default 5) CONSECUTIVE rate-limited
+ *     outcomes the run stops — the source is paused, not spun against.
  */
 
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from "fs";
@@ -45,12 +57,29 @@ const RETRIEVED = new Date().toISOString().slice(0, 10);
 
 const phase = (process.argv[2] ?? "").toLowerCase();
 const arg3 = process.argv[3] ?? null;
+/** positional arg3 is a group/slug ONLY when it is not a --flag
+ *  (e.g. `verify --limit 4` must not treat "--limit" as a slug filter). */
+const positional3 = arg3 && !arg3.startsWith("--") ? arg3 : null;
 /** --redo: re-run verify/geocode even when an evidence file already exists.
  *  DEFAULT (batch-3+): a candidate with ANY existing evidence file is SKIPPED —
  *  previously the daily-refresh semantic re-ran every past-session file on each
  *  new day, which burned the rate-limited budget before new candidates.
  *  The pipeline stays resumable either way. */
 const REDO = process.argv.includes("--redo");
+
+/** Read a positive-int `--flag N` from argv (null when absent/invalid). */
+function intFlag(name: string): number | null {
+  const i = process.argv.indexOf(name);
+  if (i === -1 || i + 1 >= process.argv.length) return null;
+  const v = Number(process.argv[i + 1]);
+  return Number.isFinite(v) && v > 0 ? Math.floor(v) : null;
+}
+
+/** Best-effort Retry-After extraction from an error message (seconds). */
+function retryAfterSeconds(msg: string): number | null {
+  const m = /retry[- ]?after(?:['"]?\s*[:=]\s*|\s+)(\d{1,4})/i.exec(msg);
+  return m ? Number(m[1]) : null;
+}
 
 if (!["discovery", "verify", "geocode", "worksheet"].includes(phase)) {
   console.error("usage: research-tirupati-master.ts <discovery|verify|geocode|worksheet> [group|slug]");
@@ -590,6 +619,10 @@ interface Candidate {
   };
   review: "needs_human_review" | "approved";
   reviewNotes: string[];
+  /** true when the verify attempt was recorded as a skipped stub
+   *  (rate-limited / infra error) — the candidate is PENDING, never
+   *  verified and never area-denied. */
+  verificationThrottled?: boolean;
 }
 
 function hostOf(url: string): string {
@@ -756,61 +789,136 @@ function buildCandidates(): Candidate[] {
   return Array.from(bySlug.values());
 }
 
+type VerifyOutcome = "confirmed" | "not-confirmed" | "throttled" | "infra-failed";
+
+const VERIFY_PACING_MS = 12_000;               // inter-candidate pacing (unchanged)
+const VERIFY_BACKOFFS_MS = [75_000, 120_000];  // bounded: 1 initial + 2 backoff attempts
+
 async function runVerify(onlySlug: string | null): Promise<void> {
+  const limit = intFlag("--limit") ?? 0;        // 0 = unbounded (whole queue)
+  const breakerMax = intFlag("--breaker") ?? 5; // consecutive-throttle circuit breaker
   const candidates = buildCandidates();
-  console.log(`[verify] ${candidates.length} candidates extracted from discovery`);
-  let done = 0;
+  console.log(`[verify] ${candidates.length} candidates extracted from discovery` +
+    (limit > 0 ? ` — chunk limit ${limit}` : "") +
+    ` — circuit breaker ${breakerMax} consecutive throttles`);
+  const tally = { alreadyCompleted: 0, attempted: 0, confirmed: 0, notConfirmed: 0, throttled: 0, infraFailed: 0 };
+  let consecutiveThrottled = 0;
+  let attempted = 0;
+  let pausedByBreaker = false;
+
   for (const c of candidates) {
     const slug = slugify(`${c.area}-${c.name}`);
     if (onlySlug && slug !== onlySlug) continue;
     const file = join(EV, `verify-${slug}.json`);
-    if (existsSync(file) && !REDO) {
-      done++;
-      continue;
+    // resume semantics: completed records are NEVER overwritten or repeated;
+    // throttled stubs (skipped:true) ARE re-attempted
+    let previousAttempts: Array<{ retrievedOn: string; errors: string[] }> = [];
+    if (existsSync(file)) {
+      let old: { skipped?: boolean; retrievedOn?: string; errors?: string[]; previousAttempts?: Array<{ retrievedOn: string; errors: string[] }> } | null = null;
+      try { old = JSON.parse(readFileSync(file, "utf8")); } catch { old = null; }
+      if (!REDO && old && !old.skipped) {
+        tally.alreadyCompleted++;
+        continue;
+      }
+      if (old) {
+        previousAttempts = [
+          ...(old.previousAttempts ?? []).slice(-4),
+          { retrievedOn: old.retrievedOn ?? "?", errors: old.errors ?? [] },
+        ];
+      }
     }
+    if (limit > 0 && attempted >= limit) break;
+    attempted++;
+    tally.attempted++;
     const area = AREAS.find((a) => a.key === c.area)!;
     const query = `"${c.name}" ${area.city} address`;
-    let hits: Hit[] = [];
+    let hits: Hit[] | null = null;
     const errors: string[] = [];
-    try {
-      hits = await webSearch(query, 6);
-    } catch (e) {
-      const msg = (e as Error).message;
-      errors.push(msg);
-      if (/429|rate/i.test(msg)) {
-        console.log(`[verify] 429 at ${c.name} — backing off 60s`);
-        await sleep(60_000);
-        try {
-          hits = await webSearch(query, 6);
-          errors.pop();
-        } catch (e2) {
-          errors.push(`retry failed: ${(e2 as Error).message}`);
-          writeFileSync(file, JSON.stringify({ candidate: { name: c.name, area: c.area }, query, hits: [], errors, retrievedOn: RETRIEVED, skipped: true }, null, 2));
-          done++;
-          continue;
+    for (let attempt = 0; attempt <= VERIFY_BACKOFFS_MS.length; attempt++) {
+      try {
+        hits = await webSearch(query, 6);
+        break;
+      } catch (e) {
+        const msg = (e as Error).message;
+        errors.push(msg);
+        if (attempt < VERIFY_BACKOFFS_MS.length) {
+          const ra = retryAfterSeconds(msg);
+          const wait = ra != null ? Math.max(ra * 1000, 30_000) : VERIFY_BACKOFFS_MS[attempt];
+          console.log(`[verify] throttled/error at "${c.name}" (attempt ${attempt + 1}/${VERIFY_BACKOFFS_MS.length + 1}) — backing off ${Math.round(wait / 1000)}s${ra != null ? " (Retry-After)" : ""}`);
+          await sleep(wait);
         }
       }
     }
-    const allText = hits.map((h) => `${h.name ?? ""} ${h.snippet ?? ""}`).join(" \n ");
-    const areaConfirmed = area.areaTokens.test(allText);
-    const addressHit = hits.find((h) =>
-      /\b\d{6}\b|road|street|nagar|colony|layout|circle| OPP\.|opp\.|near /i.test(`${h.name ?? ""} ${h.snippet ?? ""}`)
-    );
-    const payload = {
-      candidate: { name: c.name, area: c.area, sourceUrl: c.sourceUrl },
-      query,
-      hits,
-      areaConfirmed,
-      addressEvidence: addressHit ? `${addressHit.name ?? ""} :: ${addressHit.snippet ?? ""}`.slice(0, 400) : null,
-      errors,
-      retrievedOn: RETRIEVED,
-    };
-    writeFileSync(file, JSON.stringify(payload, null, 2));
-    done++;
-    console.log(`[verify] ${done}: ${c.name} — area:${areaConfirmed ? "OK" : "NOT-CONFIRMED"} addr:${addressHit ? "yes" : "no"}`);
-    await sleep(12_000);
+    const throttledMsg = /429|rate|too many/i.test(errors[errors.length - 1] ?? "");
+    if (hits != null) {
+      const retriedAfterThrottle = errors.length > 0;
+      const allText = hits.map((h) => `${h.name ?? ""} ${h.snippet ?? ""}`).join(" \n ");
+      const areaConfirmed = area.areaTokens.test(allText);
+      const addressHit = hits.find((h) =>
+        /\b\d{6}\b|road|street|nagar|colony|layout|circle| OPP\.|opp\.|near /i.test(`${h.name ?? ""} ${h.snippet ?? ""}`)
+      );
+      const payload: Record<string, unknown> = {
+        candidate: { name: c.name, area: c.area, sourceUrl: c.sourceUrl },
+        query,
+        hits,
+        areaConfirmed,
+        addressEvidence: addressHit ? `${addressHit.name ?? ""} :: ${addressHit.snippet ?? ""}`.slice(0, 400) : null,
+        errors: [],
+        retrievedOn: RETRIEVED,
+      };
+      if (retriedAfterThrottle) payload.transientErrors = errors.slice(0, 3);
+      if (retriedAfterThrottle) payload.retriedAfterThrottle = true;
+      if (previousAttempts.length > 0) payload.previousAttempts = previousAttempts;
+      writeFileSync(file, JSON.stringify(payload, null, 2));
+      if (areaConfirmed) { tally.confirmed++; console.log(`[verify] ✓ "${c.name}" — area CONFIRMED${addressHit ? " + address evidence" : ""}`); }
+      else { tally.notConfirmed++; console.log(`[verify] ✗ "${c.name}" — area NOT confirmed (negative evidence)`); }
+      consecutiveThrottled = 0;
+    } else {
+      const outcome: Exclude<VerifyOutcome, "confirmed" | "not-confirmed"> = throttledMsg ? "throttled" : "infra-failed";
+      const stub: Record<string, unknown> = {
+        candidate: { name: c.name, area: c.area, sourceUrl: c.sourceUrl },
+        query,
+        hits: [],
+        errors,
+        retrievedOn: RETRIEVED,
+        skipped: true,
+        skipReason: outcome === "throttled" ? "rate-limited" : "infra-error",
+      };
+      if (previousAttempts.length > 0) stub.previousAttempts = previousAttempts;
+      writeFileSync(file, JSON.stringify(stub, null, 2));
+      if (outcome === "throttled") {
+        tally.throttled++;
+        consecutiveThrottled++;
+        console.log(`[verify] ⏸ "${c.name}" — rate-limited, recorded as skipped (NOT verified)`);
+        if (consecutiveThrottled >= breakerMax) {
+          console.log(`[verify] CIRCUIT BREAKER — ${consecutiveThrottled} consecutive rate-limited candidates; pausing the web_search source this run. Resume later; completed records are preserved.`);
+          pausedByBreaker = true;
+          break;
+        }
+      } else {
+        tally.infraFailed++;
+        consecutiveThrottled = 0;
+        console.log(`[verify] ⏸ "${c.name}" — infra error, recorded as skipped (NOT verified)`);
+      }
+    }
+    await sleep(VERIFY_PACING_MS);
   }
-  console.log(`[verify] DONE — ${done} candidates`);
+
+  // honest remaining-work recount straight from the evidence tree
+  const remaining = { pending: 0, throttled: 0 };
+  for (const c of candidates) {
+    const slug = slugify(`${c.area}-${c.name}`);
+    if (onlySlug && slug !== onlySlug) continue;
+    const file = join(EV, `verify-${slug}.json`);
+    if (!existsSync(file)) { remaining.pending++; continue; }
+    try {
+      const v = JSON.parse(readFileSync(file, "utf8")) as { skipped?: boolean };
+      if (v.skipped) remaining.throttled++;
+    } catch { remaining.pending++; }
+  }
+  console.log(`[verify] TALLY — attempted: ${tally.attempted} (confirmed ${tally.confirmed}, not-confirmed ${tally.notConfirmed}, throttled-skipped ${tally.throttled}, infra-failed ${tally.infraFailed}); untouched completed: ${tally.alreadyCompleted}; remaining overall: ${remaining.pending} never-attempted + ${remaining.throttled} throttled-stubs`);
+  console.log(pausedByBreaker ? "[verify] STOPPED BY CIRCUIT BREAKER (source paused — not a completion)" : "[verify] DONE");
+  if (pausedByBreaker) process.exitCode = 3;
 }
 
 /* ------------------------------------------------------------------ */
@@ -887,18 +995,24 @@ async function runWorksheet(): Promise<void> {
     const row: Candidate = { ...c, reviewNotes: [...c.reviewNotes] };
     if (existsSync(vFile)) {
       const v = JSON.parse(readFileSync(vFile, "utf8")) as {
-        areaConfirmed?: boolean; addressEvidence?: string | null; hits?: Hit[]; retrievedOn?: string; skipped?: boolean;
+        areaConfirmed?: boolean; addressEvidence?: string | null; hits?: Hit[]; retrievedOn?: string; skipped?: boolean; skipReason?: string;
       };
       row.verification = {
         queried: true,
-        areaConfirmed: !!v.areaConfirmed,
+        areaConfirmed: !!v.areaConfirmed && !v.skipped,
         addressEvidence: v.addressEvidence ?? null,
         hits: v.hits ?? [],
         errors: [],
         retrievedOn: v.retrievedOn ?? null,
       };
-      if (v.skipped) row.reviewNotes.push("verification rate-limited (skipped run)");
-      if (!v.areaConfirmed) row.reviewNotes.push("AREA NOT CONFIRMED — candidate excluded from SQL");
+      if (v.skipped) {
+        // a skipped request is NEVER verification: the candidate stays pending,
+        // with no area-confirmation and no area-exclusion claim
+        row.verificationThrottled = true;
+        row.reviewNotes.push(`verification NOT completed (${v.skipReason ?? "rate-limited"} — skipped run; pending re-attempt)`);
+      } else if (!v.areaConfirmed) {
+        row.reviewNotes.push("AREA NOT CONFIRMED — candidate excluded from SQL");
+      }
     } else {
       row.reviewNotes.push("verification pending");
     }
@@ -929,6 +1043,11 @@ async function runWorksheet(): Promise<void> {
     byCategory: rows.reduce<Record<string, number>>((acc, r) => ((acc[r.category] = (acc[r.category] ?? 0) + 1), acc), {}),
     areaConfirmed: rows.filter((r) => r.verification.areaConfirmed).length,
     geocoded: rows.filter((r) => r.geocode.areaConfirmed).length,
+    // exact verification accounting (a throttled request is never verified):
+    verifyRanNotConfirmed: rows.filter((r) => r.verification.queried && !r.verificationThrottled && !r.verification.areaConfirmed).length,
+    verifyThrottled: rows.filter((r) => r.verificationThrottled === true).length,
+    verifyPending: rows.filter((r) => !r.verification.queried && r.verificationThrottled !== true).length,
+    geocodeEligiblePending: rows.filter((r) => r.verification.areaConfirmed && !r.geocode.queried).length,
     note: "rows are candidates with recorded evidence; only area-confirmed rows with reviewed identity enter a generated SQL batch, after explicit human approval",
   };
   writeFileSync(join(WS, "tirupati-master.json"), JSON.stringify({ summary, rows }, null, 2));
@@ -940,10 +1059,10 @@ switch (phase) {
     runDiscovery(arg3 ?? "").catch((e) => { console.error("FATAL:", e); process.exit(1); });
     break;
   case "verify":
-    runVerify(arg3).catch((e) => { console.error("FATAL:", e); process.exit(1); });
+    runVerify(positional3).catch((e) => { console.error("FATAL:", e); process.exit(1); });
     break;
   case "geocode":
-    runGeocode(arg3).catch((e) => { console.error("FATAL:", e); process.exit(1); });
+    runGeocode(positional3).catch((e) => { console.error("FATAL:", e); process.exit(1); });
     break;
   case "worksheet":
     runWorksheet().catch((e) => { console.error("FATAL:", e); process.exit(1); });

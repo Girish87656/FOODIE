@@ -163,3 +163,99 @@ everything before continuing; found and fixed the following:
 5. Optional: approve identity resolution for the 5 HELD candidates (Kafe,
    Kafe Tirupati, Anjaneya Swamy Temple, Sri Vinayaka Swamy Temple, Mini Park) —
    verify-confirmed but names too generic to admit without stronger evidence.
+
+### Session 4 (2026-10-27) — interrupted batch-3 recovery, verification hardening, Batch-014
+
+State found on resume (read-only diagnosis first, nothing reset/overwritten):
+- HEAD `4fcd64a` (checkpoint commit on top of `9fe2b29`, 4 ahead of origin/main,
+  unpushed); working tree carried 6 untracked verify evidence files, all
+  `skipped:true` 429 stubs — the exact point where the prior session died.
+- Reconciled counts at resume: 251 discovery queries / 1,858 raw hits
+  (10 errored entries); worksheet 351 candidates; verify evidence on disk 304
+  files = 293 matched to current candidates (165 area-confirmed incl. 9
+  post-worksheet confirmations, 21 ran-and-not-confirmed, 116 throttled
+  stubs) + 11 orphan files for stale slugs (preserved, not deleted);
+  58 candidates never attempted; geocode 116 files / 18 with coords.
+
+Tool-failure diagnosis (instruction 1):
+- The "transient tool error" = z-ai `web_search` upstream returning HTTP 429
+  ("Too many requests"), sometimes wrapped in HTTP 500 with a serper
+  ReadTimeout; every verify attempt in the final stretch was throttled.
+
+Pipeline hardening (research-tirupati-master.ts):
+- Verify resume semantics fixed: a verify file WITHOUT `skipped:true` is a
+  COMPLETED record — never overwritten, never re-queried; a `skipped:true`
+  stub IS re-attempted, with `previousAttempts` audit trail preserved.
+- Added `--limit N` (chunked runs) and a circuit breaker (`--breaker N`,
+  default 5 consecutive throttle-outcomes → pause the source, exit 3,
+  never spin). Bounded back-offs 75s→120s per candidate, Retry-After hint
+  honoured when present; skip reasons recorded (`rate-limited` /
+  `infra-error`).
+- Worksheet phase honesty fix: a throttled candidate now carries
+  `verificationThrottled: true` and is NOT labelled "AREA NOT CONFIRMED"
+  (it was never verified — pending, not excluded). Worksheet summary now
+  reports verifyRanNotConfirmed / verifyThrottled / verifyPending /
+  geocodeEligiblePending explicitly.
+- CLI arg fix: `verify --limit 4` no longer mistakes "--limit" for a slug
+  filter (positional3).
+- Geocode pass resumed for the 54 eligible candidates: 1 new area-gated
+  coordinate (Sri Bedi Anjaneya Swamy Temple, Tirumala → 13.6834215,
+  79.3492407, evidence file committed); 53 honest NULLs (dirty listing
+  titles yield no Nominatim match — coordinates stay null, never estimated).
+  geocodeEligiblePending now 0.
+
+Verification state at session close (honest):
+- web_search quota remained exhausted across 3 bounded probes spread over the
+  session (every attempt 429, including after 75s/120s back-offs) — the
+  source was PAUSED per protocol, not spun against.
+- Final tally: 351 candidates = 156 area-confirmed + 21 ran-negative +
+  116 throttled-stubs (pending re-attempt) + 58 never-attempted.
+  A throttled request is never counted as verified anywhere.
+
+Batch-3 eligibility review + Batch-014 (instruction 7):
+- Curation re-run on the batch-3 worksheet (the interrupted session never
+  curated it): 351 in → 273 curated / 13 dup-queued / 65 dropped with
+  reasons; T1 81, T2 55.
+- All 49 newly verify-confirmed candidates reviewed individually:
+  - 27 admitted → NEW `gen-insert-batch-014.ts` review candidate
+    (insert-batch-014-tptm-b3.sql, sha256 0d0c4043…; 22 T1 restaurants +
+    5 T1 neighbourhood temples with locality-disambiguated canonical names;
+    ALL coordinates NULL; INSERT-only; preflight asserts b11/b12/b13 are
+    each fully-absent-or-fully-applied; idempotent; NOT executed).
+  - 22 dropped with recorded reasons (5 social-media posts, 5 directory
+    pages, 2 equipment-dealer pages, 1 generic name, 1 TTD organisation
+    listing, 3 TTD facilities caught by a food sweep, 1 trade shop,
+    4 merged duplicates).
+  - 2 "Perambur Srinivasa Sweets" listings cross-referenced to the LIVE
+    production "Ps4 Restaurant" (brand pattern) — never re-imported.
+  - 3 new identity holds: "Tirumala Balaji Sweets" (name-drift guard vs the
+    FROZEN batch-013 queued row 'Tirumala Balaji Sweets -' — venue already
+    queued; importing the no-dash canonical would double-queue it),
+    "Tirumala Tea Stall" (Khadi Colony vs Reddy & Reddy Colony conflict),
+    "Mirchi Bajji Point" (unresolved vs the Mangalam listing).
+- Forward-drift gate updated 86 → 112 (29+57+27 minus the drift-held
+  canonical); every one of the 112 eligible rows verified imported.
+- Official-source gates updated for the 5 pages the interrupted session
+  fetched (18 HTTP-200 pages total, 185 verbatim quotes; 2 ap.gov.in
+  domains still network-blocked).
+
+Quality gates (all green at close):
+- 170/170 tests (was 162; +8 batch-014 gates), lint 0, scripts tsc 0;
+  root tsc errors pre-existing in examples//skills/ only (untouched);
+  generator determinism verified (byte-identical on re-run); secret scans
+  pass; E2E: homepage + auth flow render, 0 console/page errors, mobile
+  viewport clean, `/api/restaurants/all` serves 86 live places incl. the
+  6 live Tirupati rows. Zero src/ changes.
+
+Remaining gaps (not claimed complete):
+- 174 candidates still await verification (116 throttled + 58 never
+  attempted) — resumable once the search quota resets; run
+  `bun scripts/foodie-enrichment/research-tirupati-master.ts verify --limit N`
+  in chunks.
+- 11 orphan verify files for stale slugs retained on disk (documented).
+- ap.gov.in domains remain network-blocked; Google Maps not bulk-harvested.
+- Batch-011 (16), Batch-012 (29), Batch-013 (57) remain owner-blocked
+  review candidates; Batch-014 (27) joins that queue. NOTHING executed,
+  NOTHING pushed.
+- Epicruise / Hangouts identity resolution still open; VAPID env still
+  unset; venue photos still absent for most rows (photo-gaps doc current).

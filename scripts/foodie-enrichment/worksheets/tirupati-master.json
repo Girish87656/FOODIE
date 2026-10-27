@@ -45,7 +45,11 @@
       "shopping_centre": 5
     },
     "areaConfirmed": 156,
-    "geocoded": 17,
+    "geocoded": 18,
+    "verifyRanNotConfirmed": 21,
+    "verifyThrottled": 116,
+    "verifyPending": 58,
+    "geocodeEligiblePending": 0,
     "note": "rows are candidates with recorded evidence; only area-confirmed rows with reviewed identity enter a generated SQL batch, after explicit human approval"
   },
   "rows": [
@@ -265,7 +269,7 @@
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": "2026-10-26"
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -280,9 +284,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -397,7 +401,7 @@
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": "2026-10-26"
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": true,
@@ -412,10 +416,10 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL",
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)",
         "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
-      ]
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -450,10 +454,10 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL",
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)",
         "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
-      ]
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -486,10 +490,10 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL",
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)",
         "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
-      ]
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -522,9 +526,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from district (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -557,10 +561,10 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL",
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)",
         "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
-      ]
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -1317,9 +1321,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "chandragiri",
@@ -1536,18 +1540,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from magicpin (title/snippet area-gated)"
+        "extracted from magicpin (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -1584,9 +1589,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -1621,9 +1626,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -1658,9 +1663,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -1726,18 +1731,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -1804,18 +1810,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from zomato (title/snippet area-gated)"
+        "extracted from zomato (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -1849,9 +1856,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -1884,9 +1891,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -1919,9 +1926,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -1954,9 +1961,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -1989,9 +1996,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2024,9 +2031,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2059,9 +2066,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2094,9 +2101,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2129,9 +2136,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2166,9 +2173,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2203,9 +2210,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2240,9 +2247,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2277,9 +2284,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2314,9 +2321,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2351,9 +2358,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2386,9 +2393,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -2498,9 +2505,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -2533,9 +2540,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -2568,9 +2575,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from district (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -2603,9 +2610,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -2638,9 +2645,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -2673,9 +2680,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -2739,18 +2746,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -2815,18 +2823,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -2891,18 +2900,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -2938,9 +2948,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -2975,9 +2985,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tiruchanur",
@@ -3012,9 +3022,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "srinivasa-mangapuram",
@@ -3128,9 +3138,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from magicpin (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -3165,9 +3175,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -3198,18 +3208,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -3276,18 +3287,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -3323,9 +3335,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3360,9 +3372,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3397,9 +3409,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3434,9 +3446,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3471,9 +3483,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3506,9 +3518,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3541,9 +3553,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from wanderlog (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -3607,18 +3619,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from wanderlog (title/snippet area-gated)"
+        "extracted from wanderlog (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -3683,18 +3696,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -3786,18 +3800,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -3864,18 +3879,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -3940,18 +3956,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -4018,18 +4035,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -4094,18 +4112,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -4141,9 +4160,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from magicpin (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -4178,9 +4197,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -4213,9 +4232,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -4248,9 +4267,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from facebook-page (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -4283,9 +4302,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -4428,18 +4447,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -4506,18 +4526,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -4585,18 +4606,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -4763,9 +4785,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -4798,9 +4820,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -4835,9 +4857,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -4872,9 +4894,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -4909,9 +4931,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -4944,9 +4966,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -4981,9 +5003,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5016,9 +5038,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5053,9 +5075,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5090,9 +5112,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5127,9 +5149,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5162,9 +5184,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5199,9 +5221,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5236,9 +5258,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5273,9 +5295,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5310,9 +5332,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -5378,18 +5400,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -5428,18 +5451,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -5504,18 +5528,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -5580,18 +5605,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -5625,9 +5651,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -5662,9 +5688,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -5699,9 +5725,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -5736,9 +5762,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -5773,9 +5799,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from swiggy (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -5841,18 +5867,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from tripadvisor (title/snippet area-gated)"
+        "extracted from tripadvisor (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -5917,18 +5944,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from swiggy (title/snippet area-gated)"
+        "extracted from swiggy (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6297,18 +6325,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6375,18 +6404,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6453,18 +6483,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6531,18 +6562,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6609,18 +6641,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6687,18 +6720,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6765,18 +6799,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6927,18 +6962,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -6971,18 +7007,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7043,18 +7080,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from facebook-page (title/snippet area-gated)"
+        "extracted from facebook-page (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7122,18 +7160,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from tripadvisor (title/snippet area-gated)"
+        "extracted from tripadvisor (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7416,18 +7455,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7495,18 +7535,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7574,18 +7615,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7619,9 +7661,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -7654,9 +7696,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from zomato (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -7689,9 +7731,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from tripadvisor (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -7724,9 +7766,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -7790,18 +7832,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from zomato (title/snippet area-gated)"
+        "extracted from zomato (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7866,18 +7909,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from zomato (title/snippet area-gated)"
+        "extracted from zomato (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -7942,18 +7986,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from zomato (title/snippet area-gated)"
+        "extracted from zomato (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -8018,18 +8063,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from zomato (title/snippet area-gated)"
+        "extracted from zomato (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -8094,18 +8140,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from zomato (title/snippet area-gated)"
+        "extracted from zomato (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -8659,18 +8706,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -8737,18 +8785,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from magicpin (title/snippet area-gated)"
+        "extracted from magicpin (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -8784,9 +8833,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from eazydiner (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tiruchanur",
@@ -9084,18 +9133,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10406,18 +10456,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10461,18 +10512,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
-        "lat": null,
-        "lng": null,
-        "displayName": null,
-        "osmType": null,
-        "areaConfirmed": false,
+        "queried": true,
+        "lat": 13.6834215,
+        "lng": 79.3492407,
+        "displayName": "Sri Bedi Anjaneya Swamy Temple, Sannidhi Street, TTD Staff Quarters, Tirumala, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517504, India",
+        "osmType": "way/place_of_worship",
+        "areaConfirmed": true,
         "note": null,
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates geocoded via OSM Nominatim (area-gated)"
       ]
     },
     {
@@ -10537,18 +10589,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10613,18 +10666,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10689,18 +10743,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10765,18 +10820,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10841,18 +10897,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10917,18 +10974,19 @@
         "retrievedOn": "2026-10-27"
       },
       "geocode": {
-        "queried": false,
+        "queried": true,
         "lat": null,
         "lng": null,
         "displayName": null,
         "osmType": null,
         "areaConfirmed": false,
-        "note": null,
-        "retrievedOn": null
+        "note": "no result with area token (0 candidates, all outside Tirupati)",
+        "retrievedOn": "2026-10-27"
       },
       "review": "needs_human_review",
       "reviewNotes": [
-        "extracted from justdial (title/snippet area-gated)"
+        "extracted from justdial (title/snippet area-gated)",
+        "coordinates NULL (no result with area token (0 candidates, all outside Tirupati))"
       ]
     },
     {
@@ -10962,9 +11020,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -10997,9 +11055,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -11032,9 +11090,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -11067,9 +11125,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -11375,9 +11433,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -11412,9 +11470,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -11447,9 +11505,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -11482,9 +11540,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -11517,9 +11575,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -11552,9 +11610,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -12403,9 +12461,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from wikipedia (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -12440,9 +12498,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -12477,9 +12535,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -12494,12 +12552,12 @@
       "sourceUrl": "https://www.tirumala.org/ThomalaSeva.aspx",
       "sourceKind": "official",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -12514,8 +12572,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -12530,12 +12589,12 @@
       "sourceUrl": "https://www.tirumala.org/ttdklmps.aspx",
       "sourceKind": "official",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -12550,8 +12609,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tiruchanur",
@@ -12839,12 +12899,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Padmavathi-Ammavari-Temple-Tiruchanoor/9999PX877-X877-100124112925-D7L9DC_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -12859,8 +12919,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tiruchanur",
@@ -12875,12 +12936,12 @@
       "sourceUrl": "https://tirupati.ap.gov.in/religious-tourism",
       "sourceKind": "official",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -12895,8 +12956,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tiruchanur",
@@ -12911,12 +12973,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Padmavati-Temple-Tiruchanoor/9999PX877-X877-220205214040-W7D9_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -12931,8 +12993,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tiruchanur",
@@ -12947,12 +13010,12 @@
       "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705522-r298805836-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -12967,8 +13030,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from tripadvisor (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "srinivasa-mangapuram",
@@ -13696,12 +13760,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Shri-Ramulavari-Temple-Chandragiri/9999PX877-X877-200927020845-U2E3_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -13716,8 +13780,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -13890,12 +13955,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Swami-Temple-Renigunta/9999PX877-X877-190818084240-Q9T1_BZDET/photos",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -13910,8 +13975,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -13926,12 +13992,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Mathamma-Temple-Renigunta-Road/9999PX877-X877-180223141720-T4N7_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -13946,8 +14012,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",
@@ -13962,12 +14029,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Sai-Baba-Temple-Renigunta/9999PX877-X877-180224230022-C8B6_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -13982,8 +14049,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -14314,12 +14382,12 @@
       "sourceUrl": "https://www.justdial.com/Chittoor/Om-Shakthi-Temple-Nagari/9999P8572-8572-200221194311-P4P6_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -14334,8 +14402,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -14350,12 +14419,12 @@
       "sourceUrl": "https://www.justdial.com/Chittoor/Skms-Temple-Nagari/9999P8572-8572-180606001915-N8W2_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -14370,8 +14439,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -14386,12 +14456,12 @@
       "sourceUrl": "https://www.justdial.com/Chittoor/Perumal-Temple-Nagari/9999P8572-8572-180302082749-Y9N1_BZDET/photos",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -14406,8 +14476,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -14422,12 +14493,12 @@
       "sourceUrl": "https://en.wikipedia.org",
       "sourceKind": "wikipedia",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -14442,8 +14513,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from wikipedia (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -14458,12 +14530,12 @@
       "sourceUrl": "https://ttdevasthanams.ap.gov.in",
       "sourceKind": "official",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -14478,8 +14550,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "surrounding",
@@ -14494,12 +14567,12 @@
       "sourceUrl": "https://www.tripadvisor.com",
       "sourceKind": "tripadvisor",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -14514,8 +14587,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from tripadvisor (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -15269,12 +15343,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Srinivasa-Auditorium-Mr-Palli-Circle/9999PX877-X877-221229225441-W4M9_BZDET/things-to-do",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15289,8 +15363,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -15303,12 +15378,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15323,8 +15398,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -15337,12 +15413,12 @@
       "sourceUrl": "https://www.tripadvisor.com/Attractions-g297587-Activities-c47-t17-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15357,8 +15433,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from tripadvisor (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -15371,12 +15448,12 @@
       "sourceUrl": "https://ignca.gov.in/hi/regional-centers/tirupati-regional-centre",
       "sourceKind": "official",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15391,8 +15468,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from official (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -15407,12 +15485,12 @@
       "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/ttd-gardens",
       "sourceKind": "makemytrip",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15427,8 +15505,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from makemytrip (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-central",
@@ -15441,12 +15520,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Artist-Colony-Bommagunta/9999PX877-X877-260227233806-J7J1_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15461,8 +15540,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -15600,12 +15680,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Sannidhi-Park-Tirumala/9999PX877-X877-190825073654-W7F9_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15620,8 +15700,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -15634,12 +15715,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Tummalagunta-Playground/9999PX877-X877-250306022353-G1H2_BZDET/reviews",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15654,8 +15735,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -15668,12 +15750,12 @@
       "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Activity-Toy/jdm-1000966-ent-2-17398396",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15688,8 +15770,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tpt-neighbourhoods",
@@ -15702,12 +15785,12 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Kids-Zone-Near-Gantasala-Circle-V-V-Mahal-Road/9999PX877-X877-100115152041-N6D6DC_BZDET",
       "sourceKind": "justdial",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -15722,8 +15805,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from justdial (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "tirumala",
@@ -15976,9 +16060,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from tripadvisor (title/snippet area-gated)",
-        "verification rate-limited (skipped run)",
-        "AREA NOT CONFIRMED — candidate excluded from SQL"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "chandragiri",
@@ -15993,12 +16077,12 @@
       "sourceUrl": "https://or.wikipedia.org/wiki/%E0%AC%AB%E0%AC%BE%E0%AC%87%E0%AC%B2:ChandraGiri_Fort_-_Raja_Palace.JPG",
       "sourceKind": "wikipedia",
       "verification": {
-        "queried": false,
+        "queried": true,
         "areaConfirmed": false,
         "addressEvidence": null,
         "hits": [],
         "errors": [],
-        "retrievedOn": null
+        "retrievedOn": "2026-10-27"
       },
       "geocode": {
         "queried": false,
@@ -16013,8 +16097,9 @@
       "review": "needs_human_review",
       "reviewNotes": [
         "extracted from wikipedia (title/snippet area-gated)",
-        "verification pending"
-      ]
+        "verification NOT completed (rate-limited — skipped run; pending re-attempt)"
+      ],
+      "verificationThrottled": true
     },
     {
       "area": "renigunta",

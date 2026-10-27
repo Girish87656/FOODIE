@@ -14,9 +14,9 @@ DOC-LEVEL review layer. DB rows imported from this inventory always carry
 - **UNVERIFIED** (T3) — plausible candidate from a single area-gated listing hit;
   discoverable internally, never shown as verified to users.
 
-**Counts:** 228 raw candidates → 190 curated
-({"T1":48,"T3":87,"T2":55}) → 7 possible duplicates
-(queued) → 43 dropped with recorded reasons.
+**Counts:** 351 raw candidates → 273 curated
+({"T1":81,"T3":137,"T2":55}) → 13 possible duplicates
+(queued) → 65 dropped with recorded reasons.
 
 **Review candidates queued for owner execution:** Batch-012 = 29 rows (10 T1 restaurants +
 19 T2 places) + Batch-013 = 57 rows (17 T1 food venues + 40 POI/stay places) = **86 rows**,
@@ -42,6 +42,7 @@ executed; both await owner approval.
 | Vinayaka Tiffin Centre | UNVERIFIED | Tirupati Bazar | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Sri Venkateswara Tiffin Center | UNVERIFIED | KT Road | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Nagarjuna Military Mess | UNVERIFIED | — | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | — |
+| 99 variety Dosa | Street Food | UNVERIFIED | — | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | address-pattern evidence recorded |
 
 ### Street food, tea & juice stalls
 
@@ -52,6 +53,12 @@ executed; both await owner approval.
 | Ganesh Juice Center | UNVERIFIED | Tilak Road | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Hygien Pani Puri Hot Chats | UNVERIFIED | — | restaurants | swiggy | no (T3 backlog) | null (never estimated) | — |
 | Pani Puri Centre | UNVERIFIED | — | restaurants | wanderlog | no (T3 backlog) | null (never estimated) | — |
+| Mirchi Bajji Point | VERIFIED | — | restaurants | wanderlog | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | address-pattern evidence recorded |
+| Vasavi Snack Bazar | UNVERIFIED | — | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | — |
+| Ramadevi Foods Store | VERIFIED | — | restaurants | facebook-page | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| The Sugar Cane Co | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Eswar Sugar Cane Shop | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Ganesh Juice Corner | VERIFIED | Tilak Road | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Bakeries, sweets & ice cream
 
@@ -59,20 +66,22 @@ executed; both await owner approval.
 |---|---|---|---|---|---|---|---|
 | Mayura Bakery | UNVERIFIED | Gandhi Road | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Babas Bakery | UNVERIFIED | TK Street | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
-| Amrutha Swagruha Foods | UNVERIFIED | — | restaurants | swiggy | no (T3 backlog) | null (never estimated) | — |
+| Amrutha Swagruha Foods | VERIFIED | — | restaurants | swiggy | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | Cream Stone | UNVERIFIED | Tata Nagar | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Havmor Ice Cream | UNVERIFIED | Ramanuja Circle | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Grand Cakes & Bakes | UNVERIFIED | Nethaji Road | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Balaji Bakery And Sweets | UNVERIFIED | — | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Mithaiwala | UNVERIFIED | KT Road | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
+| Tirumala Bakery | VERIFIED | Tirupati Bazar | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | Tirumala Sweets | VERIFIED | Gandhi Road | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Cafés & coffee
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
-| Minerva Coffee Shop | UNVERIFIED | — | restaurants | tripadvisor | no (T3 backlog) | null (never estimated) | — |
+| Minerva Coffee Shop | VERIFIED | — | restaurants | tripadvisor | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | Srinivasa Cafe | UNVERIFIED | Tilak Road | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
+| Tea Time, Srinivasa Nagar | VERIFIED | — | restaurants | zomato | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Temples & sacred sites
 
@@ -83,6 +92,17 @@ executed; both await owner approval.
 | Sri Kapileswara Swamy Temple (Kapila Theertham) | VERIFIED | — | places | wikipedia, official, tripadvisor, official | — (already Batch-011 candidate) | 13.65658, 79.42103 | address-pattern evidence recorded; official verbatim quote stored; 4 listing titles merged |
 | Sri Padmavathi Ammavari Temple, Tiruchanur | VERIFIED | — | places | official, tripadvisor | — (already Batch-011 candidate) | 13.60797, 79.45001 | 2 listing titles merged |
 | ISKCON | UNVERIFIED | — | places | tripadvisor | — (already Batch-011 candidate) | null (never estimated) | — |
+| Anjaneya Swamy Temple, Vedullacheruvu | VERIFIED | — | places | justdial | YES → batch-014 (places) | null (never estimated) | address-pattern evidence recorded |
+| Sri Bala Anjaneya Swamy Temple | VERIFIED | Gandhi Road | places | justdial, justdial | YES → batch-014 (places) | null (never estimated) | address-pattern evidence recorded; 2 listing titles merged |
+| Anjaneya Temple, Bairagi Patteda | VERIFIED | — | places | justdial | YES → batch-014 (places) | null (never estimated) | address-pattern evidence recorded |
+| Sri Anjaneya Swami Temple, Nehru Nagar | VERIFIED | — | places | justdial | YES → batch-014 (places) | null (never estimated) | address-pattern evidence recorded |
+| Sri Anjaneya Swami Temple, Karakambadi | VERIFIED | — | places | justdial | YES → batch-014 (places) | null (never estimated) | address-pattern evidence recorded |
+| Sri Vara Siddhi Vinayaka Ayyappa Swamy Temple | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Varasiddi Vinayaka Swamy Temple | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Sri Ramulavari Temple | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Venkateswara Temple | VERIFIED | — | places | justdial | — (already Batch-011 candidate) | 13.68312, 79.34685 | address-pattern evidence recorded |
+| Tirupati Golden Temple in Tata Nagar | UNVERIFIED | Tata Nagar | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Tirumala Mandir | UNVERIFIED | Alipiri | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Sri Kodanda Ramaswamy Temple, Tirupati | PARTIALLY VERIFIED | — | places | official | YES → batch-013 (places) | null (never estimated) | official verbatim quote stored |
 
 ### Tourist attractions
@@ -92,6 +112,10 @@ executed; both await owner approval.
 | Sri Venkateswara Zoological Park, Tirupati | VERIFIED | — | places | wikipedia, tripadvisor, tripadvisor | — (already Batch-011 candidate) | 13.62936, 79.36217 | address-pattern evidence recorded; 3 listing titles merged |
 | Sri Venkateswara National Park | VERIFIED | — | places | wikipedia, tripadvisor, makemytrip | YES → batch-013 (places) | 13.79535, 79.29986 | address-pattern evidence recorded; 3 listing titles merged |
 | Deer Park, Alipiri | VERIFIED | Alipiri | places | tripadvisor, justdial | YES → batch-013 (places) | null (never estimated) | address-pattern evidence recorded; 2 listing titles merged |
+| Tirupati Historic Sites & Districts to Visit | UNVERIFIED | — | places | tripadvisor | no (T3 backlog) | null (never estimated) | — |
+| Tirupati Regional Centre | UNVERIFIED | — | places | official | no (T3 backlog) | null (never estimated) | — |
+| TTD Gardens | UNVERIFIED | — | places | makemytrip | no (T3 backlog) | null (never estimated) | — |
+| Tirupati Artist Colony in Bommagunta | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Regional Science Centre, Tirupati | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 
 ### Stays & pilgrim accommodation
@@ -99,6 +123,7 @@ executed; both await owner approval.
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Accommodation at | UNVERIFIED | — | places | official | no (T3 backlog) | null (never estimated) | — |
+| Treebo Sripadha Residency Alipiri Road | UNVERIFIED | Alipiri | places | booking | no (T3 backlog) | null (never estimated) | — |
 | Sreenivasam Complex (TTD Pilgrim Accommodation) | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Sri Venkateswara Dharmasala (TTD) | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Sri Venkateswara Guest House, Tirupati | PARTIALLY VERIFIED | — | places | official | YES → batch-013 (places) | null (never estimated) | official verbatim quote stored |
@@ -113,6 +138,14 @@ executed; both await owner approval.
 | Garuda Mall | UNVERIFIED | Madhavapuram | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Sirikala Shopping Mall | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Tirupathi Vegetable Market | UNVERIFIED | TK Street | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Day Fresh vegetables | UNVERIFIED | Tirupati Bazar | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| APURVA TEXTILES | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Sunil Textiles | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| 20+ 1 Gram Gold Jewellery Wholesalers | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| 20+ 1 Gram White Gold Jewellery Dealers | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| 20+ Italian 1 Gram Gold Jewellery Dealers | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| AR SUPER SHOPPE | UNVERIFIED | Tirupati Bazar | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Provision Plaza | UNVERIFIED | Gandhi Road | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ## Tirupati residential neighbourhoods
 
@@ -144,6 +177,8 @@ executed; both await owner approval.
 | OTC — Orion Tiffin Centre, Korlagunta | UNVERIFIED | Korlagunta | restaurants | zomato, swiggy | no (T3 backlog) | null (never estimated) | 2 listing titles merged |
 | Lovely breakfast at Hotel Orion | UNVERIFIED | — | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | — |
 | Tirupati early morning non-veg breakfast | UNVERIFIED | — | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | — |
+| Renuka Tiffin Center | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Ruchi Tiffins | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Street food, tea & juice stalls
 
@@ -169,6 +204,7 @@ executed; both await owner approval.
 | Bangalore Bakery | UNVERIFIED | Korlagunta | restaurants | zomato | no (T3 backlog) | null (never estimated) | — |
 | Sri Venkateshwara Bakery And Sweets | UNVERIFIED | — | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 | Meghana Sweets And Bakery | UNVERIFIED | — | restaurants | swiggy | no (T3 backlog) | null (never estimated) | — |
+| PERAMBUR SRINIVASA SWEETS AND SNACKS | VERIFIED | — | restaurants | tripadvisor | — (already live) | null (never estimated) | address-pattern evidence recorded |
 
 ### Cafés & coffee
 
@@ -177,29 +213,35 @@ executed; both await owner approval.
 | Iyer's Cafe | VERIFIED | — | restaurants | swiggy | YES → batch-013 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | Amor Fati Cafe | VERIFIED | Korlagunta | restaurants | zomato, district | YES → batch-013 (restaurants) | null (never estimated) | 2 listing titles merged |
 | Retro Cafe & Restaurant | VERIFIED | Korlagunta | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | address-pattern evidence recorded |
-| Kafe | VERIFIED | Korlagunta | restaurants | magicpin | no (identity-held — name too generic) | null (never estimated) | — |
+| Kafe | VERIFIED | Korlagunta | restaurants | magicpin | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | — |
 
 ### Temples & sacred sites
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
-| Anjaneya Swamy Temple | VERIFIED | Bhavani Nagar | places | justdial | no (identity-held — name too generic) | null (never estimated) | address-pattern evidence recorded |
-| Sri Vinayaka Swamy Temple | VERIFIED | — | places | justdial | no (identity-held — name too generic) | null (never estimated) | address-pattern evidence recorded |
+| Anjaneya Swamy Temple | VERIFIED | Bhavani Nagar | places | justdial | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | address-pattern evidence recorded |
+| Sri Vinayaka Swamy Temple | VERIFIED | — | places | justdial | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | address-pattern evidence recorded |
+| Avilala Church | UNVERIFIED | Avilala | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Sri Padmavathi Ammavari Temple | VERIFIED | — | places | official | — (already Batch-011 candidate) | 13.60797, 79.45001 | — |
 
 ### Tourist attractions
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
-| Mini Park | VERIFIED | Korlagunta | places | justdial | no (identity-held — name too generic) | null (never estimated) | — |
+| Srinivasa Auditorium - Mr Palli Circle | UNVERIFIED | MR Palli | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Mini Park | VERIFIED | Korlagunta | places | justdial | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | — |
+| Tummalagunta Playground | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Activity Toy in Tirupati - Engaging, Fun & Educational | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Kids Zone | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ### Markets & shopping
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | BNR Mall | UNVERIFIED | STV Nagar | places | justdial | no (T3 backlog) | null (never estimated) | — |
-| Trends | UNVERIFIED | Bhavani Nagar | places | justdial | no (T3 backlog) | null (never estimated) | — |
-| 198 Photos of Trends | UNVERIFIED | Bhavani Nagar | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Lucky Shopping Mall | UNVERIFIED | Bhavani Nagar | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Lucky Food Plaza | UNVERIFIED | Korlagunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Majida Stores | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ## Tirumala hills
 
@@ -223,29 +265,44 @@ executed; both await owner approval.
 | Morning Breakfast | UNVERIFIED | Tirumala | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | — |
 | Tirumala Tiffins online in Hyderabad | UNVERIFIED | Tirumala | restaurants | swiggy | no (T3 backlog) | null (never estimated) | — |
 
+### Street food, tea & juice stalls
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| Tirumala Tea Stall | VERIFIED | Tirumala | restaurants | justdial, magicpin | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | address-pattern evidence recorded; 2 listing titles merged |
+
 ### Bakeries, sweets & ice cream
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Ice Stone | UNVERIFIED | Tirumala | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
-| Tirumala Balaji Sweets - | VERIFIED | Tirumala | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | — |
+| Prasadalayam (TTD) | VERIFIED | Tirumala | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Tirumala Balaji Sweets | VERIFIED | Tirumala | restaurants | justdial | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | — |
 | GUPTHA BALAJI SWEETS | VERIFIED | Tirumala | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | — |
 
 ### Cafés & coffee
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
-| Kafe Tirupati | VERIFIED | Tirumala | restaurants | zomato, zomato | no (identity-held — name too generic) | null (never estimated) | — |
+| Kafe Tirupati | VERIFIED | Tirumala | restaurants | zomato, zomato | no (identity-held — see batch-014 header for hold reason) | null (never estimated) | — |
 | Tirumala Cafe | VERIFIED | Tirumala | restaurants | facebook-page | YES → batch-013 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Balasubramanyam Tea Stall | VERIFIED | Tirumala | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Temples & sacred sites
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Sri Venkateswara Swamy Temple, Tirumala | VERIFIED | Tirumala | places | wikipedia, wikipedia, wikipedia | — (already Batch-011 candidate) | 13.68312, 79.34685 | address-pattern evidence recorded; official verbatim quote stored |
+| Sri Bedi Anjaneya Swamy Temple, Tirumala | VERIFIED | Tirumala | places | justdial, official, tripadvisor, official | YES → batch-012 (places) | 13.68342, 79.34924 | official verbatim quote stored; 4 listing titles merged |
+| Tirupati Balaji Temple in | UNVERIFIED | Tirumala | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Vinayaka Temple | UNVERIFIED | Tirumala | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Sri Varahaswamy Temple, Tirumala | VERIFIED | — | places | wikipedia, tripadvisor | YES → batch-012 (places) | 13.68488, 79.34764 | address-pattern evidence recorded; official verbatim quote stored; 2 listing titles merged |
-| Sri Bedi Anjaneya Swamy Temple, Tirumala | VERIFIED | — | places | official, tripadvisor, official | YES → batch-012 (places) | 13.68342, 79.34924 | address-pattern evidence recorded; official verbatim quote stored; 3 listing titles merged |
 | Natural Arch, Tirumala hills (Silathoranam) | VERIFIED | Tirumala | places | wikipedia, tripadvisor | — (already Batch-011 candidate) | null (never estimated) | address-pattern evidence recorded; official verbatim quote stored; 2 listing titles merged |
+| Tirumala | UNVERIFIED | Tirumala | places | wikipedia | no (T3 backlog) | null (never estimated) | — |
+| Weekly Sevas | UNVERIFIED | — | places | official | no (T3 backlog) | null (never estimated) | — |
+| SV Temple Amaravathi | UNVERIFIED | — | places | official | no (T3 backlog) | null (never estimated) | — |
+| Thomala Seva | UNVERIFIED | — | places | official | no (T3 backlog) | null (never estimated) | — |
+| TTD Information Centres and Kalyana Mandapams | UNVERIFIED | — | places | official | no (T3 backlog) | null (never estimated) | — |
 | Sri Hathiramjee Mutt, Tirumala | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Sri Anjaneyaswami Temple, Tirumala | PARTIALLY VERIFIED | — | places | official | YES → batch-013 (places) | null (never estimated) | official verbatim quote stored |
 
@@ -253,6 +310,7 @@ executed; both await owner approval.
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
+| Sannidhi Park | UNVERIFIED | Tirumala | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Akasha Ganga Theertham, Tirumala | UNVERIFIED | — | places | tripadvisor | no (T3 backlog) | null (never estimated) | — |
 | Sri Venkateswara Museum, Tirumala | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Swami Pushkarini | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
@@ -300,6 +358,7 @@ executed; both await owner approval.
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
+| Chandra Provision | UNVERIFIED | Tirumala | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Tirumala Shopping Complex - Balaji Nagar | UNVERIFIED | Tirumala | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ## Tiruchanur (Alamelu Mangapuram corridor)
@@ -310,12 +369,19 @@ executed; both await owner approval.
 |---|---|---|---|---|---|---|---|
 | Muthunagar | UNVERIFIED | — | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
 
+### Street food, tea & juice stalls
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| Padmavathi Juice Center | VERIFIED | Tiruchanur | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+
 ### Bakeries, sweets & ice cream
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Sri Venkateswara Sweet & Bakery | VERIFIED | Tiruchanur | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | — |
 | Nandini Sweets And Bakery, Tiruchanur | VERIFIED | Tiruchanur | restaurants | zomato | YES → batch-013 (restaurants) | null (never estimated) | — |
+| Perambur Srinivasa Sweets Ps4 Veg Restaurant (Tiruchanoor | VERIFIED | Tiruchanur | restaurants | facebook-page | — (already live) | null (never estimated) | address-pattern evidence recorded |
 
 ### Cafés & coffee
 
@@ -332,6 +398,19 @@ executed; both await owner approval.
 | Sri Varada Raja Swamy Temple, Tiruchanoor | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Sri Suryanarayana Swamy Temple, Tiruchanoor | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 
+### Stays & pilgrim accommodation
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| Amrutha Home Stay | UNVERIFIED | Tiruchanur | places | booking | no (T3 backlog) | null (never estimated) | — |
+
+### Markets & shopping
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| Km Gifts And Fancy | UNVERIFIED | Tiruchanur | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Padmavati Jewellers | UNVERIFIED | Tiruchanur | places | justdial | no (T3 backlog) | null (never estimated) | — |
+
 ## Srinivasa Mangapuram (~10 km west)
 
 ### Tiffin & breakfast centres
@@ -339,6 +418,12 @@ executed; both await owner approval.
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Sri Venkateswara Annaprasadam Trust | UNVERIFIED | — | restaurants | official | no (T3 backlog) | null (never estimated) | address-pattern evidence recorded |
+
+### Stays & pilgrim accommodation
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| Srinivasa Mangapuram hotels & places to stay | UNVERIFIED | Srinivasa Mangapuram | places | agoda | no (T3 backlog) | null (never estimated) | — |
 
 ### Markets & shopping
 
@@ -353,6 +438,7 @@ executed; both await owner approval.
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Raja Food Centre | UNVERIFIED | Chandragiri | restaurants | justdial | no (T3 backlog) | null (never estimated) | — |
+| Happi Family Dhaba | VERIFIED | Chandragiri | restaurants | justdial, district, magicpin | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded; 3 listing titles merged |
 
 ### Tiffin & breakfast centres
 
@@ -377,7 +463,8 @@ executed; both await owner approval.
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
-| Chandragiri Fort (Raja Mahal & Rani Mahal) | VERIFIED | Chandragiri | places | official, tripadvisor, wikipedia, official, tripadvisor | — (already Batch-011 candidate) | 13.58303, 79.30528 | official verbatim quote stored; 5 listing titles merged |
+| Chandragiri Fort (Raja Mahal & Rani Mahal) | VERIFIED | Chandragiri | places | official, tripadvisor, wikipedia, official, tripadvisor, wikipedia, justdial | — (already Batch-011 candidate) | 13.58303, 79.30528 | official verbatim quote stored; 7 listing titles merged |
+| Shri Ramulavari Temple | UNVERIFIED | Chandragiri | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ## Renigunta (airport/junction corridor, ~10-12 km north)
 
@@ -392,7 +479,10 @@ executed; both await owner approval.
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
+| Ujwal Tiffin Center | VERIFIED | Renigunta | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | Aapam Tiffin Center, Renigunta | UNVERIFIED | Renigunta | restaurants | facebook-page | no (T3 backlog) | null (never estimated) | — |
+| SVT Tiffin Center | VERIFIED | Renigunta | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Aha Tiffens | VERIFIED | Renigunta | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Bakeries, sweets & ice cream
 
@@ -400,29 +490,51 @@ executed; both await owner approval.
 |---|---|---|---|---|---|---|---|
 | Bangalore Ayengar Bakery | VERIFIED | Renigunta | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | — |
 | Sri Laxmi Sweet Stall & Bakery | VERIFIED | Renigunta | restaurants | justdial | YES → batch-013 (restaurants) | null (never estimated) | — |
+| Tirumalai Sweets And Bakery | VERIFIED | Renigunta | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Master Sweets Shop | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Sri Gomathi Bhavani Lala Sweets And Bakery | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Cafés & coffee
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Chota Cafe | UNVERIFIED | Mangalam (Renigunta corridor) | restaurants | zomato | no (T3 backlog) | null (never estimated) | — |
+| Chai Ka Damki, Mangalam | VERIFIED | Mangalam (Renigunta corridor) | restaurants | zomato | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | Zamzam restaurant | VERIFIED | — | restaurants | facebook-page | YES → batch-013 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 | MAMATHA'S COFFEE CAFE | VERIFIED | Renigunta | restaurants | magicpin | YES → batch-013 (restaurants) | null (never estimated) | address-pattern evidence recorded |
+| Rameshvaram Coffee | UNVERIFIED | — | restaurants | district | no (T3 backlog) | null (never estimated) | address-pattern evidence recorded |
 
 ### Temples & sacred sites
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
 | Sri Prasanna Venkateswara Swamy Temple | UNVERIFIED | — | places | tripadvisor | no (T3 backlog) | null (never estimated) | address-pattern evidence recorded |
+| Renigunta | UNVERIFIED | Renigunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Mathamma Temple | UNVERIFIED | Renigunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Sai Baba Temple | UNVERIFIED | Renigunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
+
+### Tourist attractions
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| Stores and Outlets | UNVERIFIED | Renigunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Videos from Well-kept | UNVERIFIED | Renigunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ### Markets & shopping
 
 | Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
 |---|---|---|---|---|---|---|---|
+| Venky Vegetables Market | UNVERIFIED | Mangalam (Renigunta corridor) | places | justdial | no (T3 backlog) | null (never estimated) | — |
 | Renigunta Weekend Market | UNVERIFIED | Renigunta | places | justdial | no (T3 backlog) | null (never estimated) | — |
-| Sri Dharshini Enterprises Fancy &Gifts Store - | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Sri Dharshini Enterprises Fancy &Gifts Store | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
 
 ## Surrounding destinations (beyond city/Tirumala core)
+
+### Restaurants & messes
+
+| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |
+|---|---|---|---|---|---|---|---|
+| AP 39 Cafe & Restaurant | VERIFIED | — | restaurants | justdial | YES → batch-014 (restaurants) | null (never estimated) | address-pattern evidence recorded |
 
 ### Temples & sacred sites
 
@@ -431,6 +543,10 @@ executed; both await owner approval.
 | Srikalahasteeswara temple | VERIFIED | — | places | wikipedia | YES → batch-013 (places) | null (never estimated) | — |
 | Sri Govindaraja Swamy temple | VERIFIED | — | places | official | — (already Batch-011 candidate) | null (never estimated) | address-pattern evidence recorded |
 | Sri Kalyana Venkateswara Swamy | VERIFIED | — | places | official | — (already Batch-011 candidate) | null (never estimated) | address-pattern evidence recorded |
+| Om Shakthi Temple in Nagari,Chittoor | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Skms Temple in Nagari,Chittoor | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Perumal Temple in Nagari, Chittoor | UNVERIFIED | — | places | justdial | no (T3 backlog) | null (never estimated) | — |
+| Kalyana Venkateswara Temple, Narayanavanam | UNVERIFIED | — | places | wikipedia | — (already Batch-011 candidate) | null (never estimated) | — |
 | Sri Prasanna Venkateswara Swamy Temple, Appalayagunta | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Sri Sridevi Bhudevi Sametha Thondamanadu Temple | PARTIALLY VERIFIED | — | places | official | YES → batch-012 (places) | null (never estimated) | official verbatim quote stored |
 | Sri Prasanna Venkateswara Swamy Temple, Kosuvari Palle | PARTIALLY VERIFIED | — | places | official | YES → batch-013 (places) | null (never estimated) | official verbatim quote stored |
@@ -449,14 +565,16 @@ executed; both await owner approval.
 | Kalyani Dam | UNVERIFIED | — | places | wikipedia, tripadvisor, official | no (T3 backlog) | null (never estimated) | 3 listing titles merged |
 | Horsley Hills | UNVERIFIED | — | places | makemytrip, official | no (T3 backlog) | null (never estimated) | 2 listing titles merged |
 | 9 Waterfalls near Tirupati That Every Traveller Must Visit | UNVERIFIED | — | places | holidify | no (T3 backlog) | null (never estimated) | — |
+| Ubbalamadugu Falls | UNVERIFIED | — | places | wikipedia, tripadvisor | no (T3 backlog) | null (never estimated) | 2 listing titles merged |
+| Tada Falls | UNVERIFIED | — | places | makemytrip | no (T3 backlog) | null (never estimated) | — |
 
 ## Cross-references to existing sets
 
-Batch-011 (owner-blocked import, candidate unchanged): 13 curated candidates alias
+Batch-011 (owner-blocked import, candidate unchanged): 16 curated candidates alias
 10 of its 16 rows — listed in
 docs/tirupati-duplicate-review.md; none are re-imported.
 
-Production (live) rows re-encountered: 0 — none.
+Production (live) rows re-encountered: 2 — PERAMBUR SRINIVASA SWEETS AND SNACKS, Perambur Srinivasa Sweets Ps4 Veg Restaurant (Tiruchanoor.
 
 ## Dropped candidates (with reasons — never silently deleted)
 
@@ -468,16 +586,33 @@ Production (live) rows re-encountered: 0 — none.
 | Tirumala Restaurants, Tirupati | tirumala | generic directory/category page, not a place |
 | Tiruchanur Restaurants, Tirupati | tiruchanur | generic directory/category page, not a place |
 | Renigunta Restaurants | renigunta | generic directory/category page, not a place |
+| Varadaraja Nagar, Tirupati Restaurants | surrounding | generic directory/category page, not a place |
 | Popular Restaurants Serving Upma in Tirupati | tpt-central | generic listicle page |
 | OTC - Orion Tiffin Centre | tpt-neighbourhoods | name empty/too short after cleaning |
 | Tea Restaurants in Tirupati | tpt-central | generic directory/category page, not a place |
 | Popular Packaged Juice Manufacturers in Tirupati | tpt-central | generic listicle page |
+| Stainless Steel Sugarcane Juice Machine Distributors | tpt-central | equipment-dealer category page, not a food venue |
+| Cane Fresh Semi Automatic Sugarcane Juice Machine | tpt-central | equipment-dealer category page, not a food venue |
 | Craving something sweet, delightful, and utterly irresistible? | tpt-neighbourhoods | social-media noise, no place identity |
 | Korlagunta Restaurants, Tirupati | tpt-neighbourhoods | generic directory/category page, not a place |
 | Renigunta Locality Restaurants, Tirupati | renigunta | directory page title, not a place |
 | Ice Cream in Tirupati - Creamy Delights & Flavorful Treats | tpt-central | generic directory/category page, not a place |
+| cakes and sweet in KT Road,Tirupati | tpt-central | generic listing name without a distinct business identity (identity rule) |
+| Tirupati Sri Venkateswara laddu available for order | tpt-central | social-media post, not a place |
 | Tirupati laddu prasadam details and significance | tirumala | article title, not a place |
 | Tirumala Temple Laddu Prasadam Counter Inside Visuals | tirumala | video title, not a place |
+| United Tirupati Tirumala | tirumala | social-media fan page, not a place |
+| Reviews for Tirumala Tirupati Devasthanams in KT Road | tirumala | organisation listing, not a place |
+| Sudarshan Nc1 - Tirumala, Tirupati | tirumala | TTD accommodation block caught by a food sweep — not a food venue (retained in raw evidence for a future facilities review) |
+| Pilgrims Waiting Halls - Tirumala, Tirupati | tirumala | TTD pilgrim facility caught by a food sweep — not a food venue (retained in raw evidence for a future facilities review) |
+| Govinda Nilayam - Tirumala, Tirupati | tirumala | listing entity type unclear (facility/guest house caught by a food sweep) — not a food venue |
+| Are Tirumala Laddus available at AP Bhavan or anywhere | tirumala | social-media Q&A post, not a place |
+| Tirumala Traders in Tiruchanoor Road, Tirupati | tirumala | trade-shop listing without food-category evidence — identity and category unconfirmed |
+| Tiruchanoor Padmavati Ammavari Prasadam Sheera, | tiruchanur | prasadam product post, not a place |
+| Tiruchanoor Laddu Prasadam from Tirupati Tirumala | tiruchanur | prasadam product post, not a place |
+| Asian Restaurants in Tirupati | tpt-central | cuisine directory page, not a place |
+| Tirupati Restaurants | tpt-central | generic directory/category page, not a place |
+| Tirumala Restaurants, Tirupati | tpt-central | generic directory/category page, not a place |
 | Order from Cafe Manasa online in Tirupati | tpt-neighbourhoods | generic directory/category page, not a place |
 | Cafe Extra, Renigunta Locality order online | renigunta | generic directory/category page, not a place |
 | Tirumala Tirupati Devasthanams | tpt-central | organisation, not a place |
@@ -488,7 +623,9 @@ Production (live) rows re-encountered: 0 — none.
 | Religious Tourism | tirumala | generic directory/category page, not a place |
 | SACRED TEERTHAMS OF TIRUMALA SESHACHALA RANGES | tirumala | article/listicle title, not a single place |
 | Tirumala Tirupati Devasthanams | tiruchanur | organisation, not a place |
+| Religious Tourism | tiruchanur | generic directory/category page, not a place |
 | Tirumala Tirupati Devasthanams | srinivasa-mangapuram | organisation, not a place |
+| Religious Tourism | srinivasa-mangapuram | generic directory/category page, not a place |
 | Chandragiri | chandragiri | ambiguous single-token name — source title does not establish whether it denotes Chandragiri Fort, the town, or another POI (identity rule; held out rather than guessed) |
 | Religious Tourism | chandragiri | generic directory/category page, not a place |
 | Religious Tourism | renigunta | generic directory/category page, not a place |
@@ -496,15 +633,18 @@ Production (live) rows re-encountered: 0 — none.
 | Museums in Tirupati | tpt-central | generic category page title, not a place |
 | Nature & Parks in Tirupati | tpt-central | generic category page title, not a place |
 | Others | tpt-central | generic directory/category page, not a place |
+| Tirupati - Find Verified Local Businesses Near You on India's | tpt-central | generic directory/category page, not a place |
 | Nature & Parks in Tirupati | tpt-neighbourhoods | generic category page title, not a place |
 | Must View in Tirumala - Review of Papavinasam | tirumala | generic page title, not a place |
-| Religious Tourism | srinivasa-mangapuram | generic directory/category page, not a place |
 | Forest Tourism | surrounding | generic directory/category page, not a place |
 | 5 Star hotels near Tirupati Railway Station Tirupati | tpt-central | generic hotel listing page |
 | Online Hotel Booking | tpt-central | generic directory/category page, not a place |
 | 10 Places to Stay Near Tirumala Temple - Tirupati Hotels | tirumala | generic hotel listing page |
 | 10 Top Hotels in Renigunta | renigunta | generic hotel listing page |
 | Tirupati | tpt-central | generic directory/category page, not a place |
+| Trends in Bhavani Nagar,Tirupati | tpt-neighbourhoods | retail chain store-locator page |
+| 198 Photos of Trends in Bhavani Nagar, Tirupati | tpt-neighbourhoods | retail chain store-locator page |
+| Tirupati - Find Verified Local Businesses Near You on India's | tpt-neighbourhoods | generic directory/category page, not a place |
 
 ## Renames (dirty listing title → clean display name; audited)
 
@@ -514,19 +654,27 @@ Production (live) rows re-encountered: 0 — none.
 | Saravana Bhavan Pure Veg Restaurant - Tirumala | Saravana Bhavan Pure Veg Restaurant |
 | Ugadhi Restrent - Pure Veg Restaurants In Tirupati | Ugadhi Restaurant (Ugadhi Restrent) |
 | Star Kitchen in Renigunta,Tirupati - Order Food Online | Star Kitchen, Renigunta |
+| Ap 39Cafe& Restaurant in Nagari,Chittoor | AP 39 Cafe & Restaurant |
 | Vinayaka Tiffin Centre in Tirupati Bazar | Vinayaka Tiffin Centre |
 | Revathi Mess & Catering'S - Hathiramji Colony, Tirupati | Revathi Mess & Catering |
 | Nagarjuna Military Mess, Tirupati Authentic Andhra-style | Nagarjuna Military Mess |
 | Revathi Mess & Catering Veg & Non Veg - Tirupati | Revathi Mess & Catering |
 | Aapam Tiffin center, Renigunta | Aapam Tiffin Center, Renigunta |
 | Mr'S Juice Bar in Kapilateertham Road,Tirupati | Mr's Juice Bar |
-| Pani Puri Centre, Tirupati, India - Reviews, Ratings, Tips | Pani Puri Centre |
 | Dessertezy in Bhavani Nagar Tirupati: Buy 2 Get 1 Free | Dessertezy |
 | Order from 18Th Street Kitchen online in Tirupati | 18th Street Kitchen |
+| Padmavathi juice center in Tiruchanoor Road,Tirupati | Padmavathi Juice Center |
 | Nic Natural Ice Creams in tml by pass road,Tirupati | NiC Natural Ice Creams |
 | Grand cakes & bakes in Nethaji Road,Tirupati | Grand Cakes & Bakes |
 | balaji bakery and sweets - Cake Shops In Tirupati | Balaji Bakery And Sweets |
+| 140 Reviews for Prasadalayam Ttd in Tirumala, Tirupati | Prasadalayam (TTD) |
+| 140 Reviews for Prasadalayam Ttd in Tirumala, Tirupati | category bakery_sweets → restaurant (TTD free-meals complex; bakery-sweep default category overridden after review) |
 | Bangalore Bakery , Korlagunta order online - Tirupati | Bangalore Bakery |
-| Sri Venkateshwara Bakery And Sweets - Tirupati | Sri Venkateshwara Bakery And Sweets |
 | Chota Cafe, Mangalam order online | Chota Cafe |
+| Tirumala Tea Stall, Reddy and Reddy's Colony, Tirupati, Tea | Tirumala Tea Stall |
+| Anjaneya Swamy Temple in Vedullacheruvu,Tirupati | Anjaneya Swamy Temple, Vedullacheruvu |
+| Anjaneya Temple in Bairagi Patteda,Tirupati | Anjaneya Temple, Bairagi Patteda |
+| Sri Anjaneya Swami Temple in Nehru Nagar,Tirupati | Sri Anjaneya Swami Temple, Nehru Nagar |
+| Anjaneya Swamy Temple in Bhavani Nagar,Tirupati | Anjaneya Swamy Temple, Vedullacheruvu |
+| Sri Anjaneya Swami in Karakambadi,Tirupati - Temples | Sri Anjaneya Swami Temple, Karakambadi |
 | Bnr Mall in Stv Nagar,Tirupati | BNR Mall |
