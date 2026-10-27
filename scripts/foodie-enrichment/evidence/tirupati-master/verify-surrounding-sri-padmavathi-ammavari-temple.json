@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Sri Padmavathi Ammavari Temple",
+    "area": "surrounding"
+  },
+  "query": "\"Sri Padmavathi Ammavari Temple\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-27",
+  "skipped": true
+}

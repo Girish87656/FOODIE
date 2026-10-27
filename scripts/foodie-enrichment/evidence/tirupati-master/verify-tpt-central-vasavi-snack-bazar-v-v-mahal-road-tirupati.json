@@ -1,0 +1,15 @@
+{
+  "candidate": {
+    "name": "Vasavi Snack Bazar, V.V.Mahal Road, Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.facebook.com/61551118813366/videos/vasavi-snack-bazar-vvmahal-road-tirupati%EF%B8%8F-9494581059-experience-famous-foods-fro/844089208578208"
+  },
+  "query": "\"Vasavi Snack Bazar, V.V.Mahal Road, Tirupati\" Tirupati address",
+  "hits": [],
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [
+    "Function invoke failed with status 502: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>\r\n"
+  ],
+  "retrievedOn": "2026-10-27"
+}

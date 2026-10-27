@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tea Time, Srinivasa Nagar order online",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/tea-time-srinivasa-nagar/order"
+  },
+  "query": "\"Tea Time, Srinivasa Nagar order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Time-Lakshmipuram-Circle/9999PX877-X877-220131001855-G1P9_BZDET",
+      "name": "Tea Time- Tea Lounges - Lakshmipuram Circle, Tirupati",
+      "snippet": "Address Giripuram, Alipiri Road, Alipiri Road Road, Lakshmipuram Circle, Tirupati -517501, This establishment is functional from 05:00 - 22:00.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Time-Dr-Mahal-Road/9999PX877-X877-110401161633-F9G2_BZDET",
+      "name": "Tea Time in Dr Mahal Road,Tirupati",
+      "snippet": "This establishment is functional from 04:00 - 21:30. Please scroll to the top for the address and contact details of Tea Time at Dr Mahal Road, Tirupati . Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/ta/tirupati/tirumala-tiffin-center-srinivasa-nagar",
+      "name": "Tirumala Tiffin Center, Srinivasa Nagar order online",
+      "snippet": "Order food online from Tirumala Tiffin Center, Srinivasa Nagar, Tirupati . Get great offers and super fast food delivery when you order food online",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/it/tirupati/the-tirupati-chats-and-foods-srinivasa-nagar/order",
+      "name": "The Tirupati Chats And Foods, Srinivasa Nagar order online",
+      "snippet": "Check out The Tirupati Chats And Foods, Srinivasa Nagar, Tirupati on Zomato for great deals, ratings, reviews and more!",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/hi/tirupati/tea-time-srinivasa-nagar/reviews",
+      "name": "Tea Time समीक्षा, Srinivasa Nagar, Tirupati",
+      "snippet": "Tea Time समीक्षा, Srinivasa Nagar, Tirupati ; 4-3-785/1, Srinivasa Nagar, Tirupati Tea Time Dining Reviews No Reviews … 2008-2026 © ZomatoTM Ltd. All rights ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Retailers-in-Tirumala/nct-10554561",
+      "name": "Top Tea Retailers in Tirumala - Tirupati",
+      "snippet": "Address , Nagamani Tower, Survey No 682, Sri Chaitanya School Biulding, Chittoor, Vellore Road, Balaji Nagar, Tirupati - 517504, Tirumala Bypass Road, Tirumala ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tea Time- Tea Lounges - Lakshmipuram Circle, Tirupati :: Address Giripuram, Alipiri Road, Alipiri Road Road, Lakshmipuram Circle, Tirupati -517501, This establishment is functional from 05:00 - 22:00.",
+  "errors": [],
+  "retrievedOn": "2026-10-27"
+}

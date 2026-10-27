@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Asian Restaurants in Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/restaurants/asian"
+  },
+  "query": "\"Asian Restaurants in Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-c3-zfp9-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Asian Restaurants for Large Groups in Tirupati",
+      "snippet": "Asian Restaurants in Tirupati ; 1. Vyom, Ekante' Bliss, Tirupati - Ihcl Seleqtions. 4.5. 4.5 of 5 bubbles ; 2. Zodiac. 4.5. 4.5 of 5 bubbles.",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/restaurants/asian",
+      "name": "Asian Restaurants in Tirupati",
+      "snippet": "Asian Restaurants in Tirupati · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Springs Hotel · Midhunam Pure Veg Restaurant · Hotel Orion · Sweety Tiffins & Fast ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/asian-dish-restaurants",
+      "name": "Best Asian Restaurants In Tirupati 2026 | Order Online",
+      "snippet": "Explore The Best Asian Restaurants In Tirupati . View Menus, Photos, Ratings, Reviews Or Order Online And Enjoy Mouth-watering Asian.",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/South-East-Asian-Restaurants/nct-10445746",
+      "name": "South East Asian Restaurants in Tirupati",
+      "snippet": "Best South East Asian Restaurants in Tirupati - Order Food Online · Nasi and Mee (Holiday Inn) · Sian (Vivanta) · Bonsai ( South East Asian Rooftop Dining).",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-c3-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Asian Restaurants in Tirupati (Updated 2026)",
+      "snippet": "Asian Restaurants in Tirupati · 1. Vyom, Ekante' Bliss, Tirupati - Ihcl Seleqtions. 4.5. 4.5 of 5 bubbles · 2. Zodiac. 4.5. 4.5 of 5 bubbles. Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.sulekha.com/asian-restaurants/tirupati-bazar-tirupati",
+      "name": "Asian Restaurants in Tirupati Bazar, Tirupati, Cafe",
+      "snippet": "Asian Restaurants in Tirupati Bazar, Tirupati - Asian foods buffets, cafes in Tirupati Bazar dishes list/menu with ✓Free WiFi ✓Coupons ✓High Quality Food ...",
+      "host": "www.sulekha.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-27"
+}

@@ -21,6 +21,7 @@ from pathlib import Path
 
 DIR = Path(__file__).resolve().parent
 ACCESSED = "2026-10-26"
+ACCESSED_B3 = "2026-10-27"  # batch-3 pages fetched this session, same UA + method
 UA = "FOODIE-Research/1.0 (place-discovery-audit)"
 BASE_TTD = "https://www.tirumala.org/"
 BASE_II = "https://www.incredibleindia.gov.in"
@@ -106,6 +107,13 @@ for key, fn in {
     "rh": "ttd-RestHousesInTirumala.html",
     "kl": "ttd-ttdklmps.html",
     "mt": "ttd-MoreTemples.html",
+    # batch-3 fetches (2026-10-27, same UA + method; pages discovered via the
+    # saved tirumala.org nav and the saved Incredible India attraction links)
+    "kk": "ttd-KalyanaKatta.html",
+    "pt": "ttd-PackageTours.html",
+    "ft": "ttd-TirumalatoTirupathiOnFoot.html",
+    "ml": "ttd-MoreLinks.html",
+    "iit": "incredibleindia-sv-temple.html",
 }.items():
     P[key] = clean_text((DIR / fn).read_text(encoding="utf-8", errors="replace"))
 
@@ -426,6 +434,96 @@ SOURCES.append({
     "extracted": mt_region + mt_sub + mt_out,
 })
 
+# ---------------------------------------------------------------- Source 14 (batch 3)
+# KalyanaKatta.aspx — the TTD tonsuring facility page (fetched 2026-10-27).
+# Names = the page's OWN prose (main Kalyana Katta + the 5 individually NAMED
+# rest houses that host Kalyanakatta counters; PAC1/PAC2/HVC/GNC etc. are
+# internal area codes, NOT place names, and are deliberately NOT extracted).
+kk = [
+    entry(P["kk"], "Kalyana Katta", ttd("KalyanaKatta.aspx") + " — main tonsuring centre, Tirumala (page title + nav; body describes facilities/timings)"),
+    entry(P["kk"], "Nandhakam Rest House", ttd("KalyanaKatta.aspx") + " — named among rest houses running a Kalyanakatta counter"),
+    entry(P["kk"], "Kousthubham rest House", ttd("KalyanaKatta.aspx") + " — named with code (KTRH)"),
+    entry(P["kk"], "Sapthagiri Rest House", ttd("KalyanaKatta.aspx") + " — named with code (SGRH)"),
+    entry(P["kk"], "Sri Venkateswara Rest House", ttd("KalyanaKatta.aspx") + " — named with code (SVRH); distinct from the TTD Guest Houses on RestHousesInTirumala.aspx"),
+    entry(P["kk"], "Sri Padmavathi Rest House", ttd("KalyanaKatta.aspx") + " — named with code (SPRH); distinct from the Guest House Area on RestHousesInTirumala.aspx"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("KalyanaKatta.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED_B3, "page": "ttd-KalyanaKatta.html",
+    "pageSizeBytes": fetch_size("ttd-KalyanaKatta.html"),
+    "note": "TTD official Kalyana Katta page (batch 3): main tonsuring centre + 5 named rest houses carrying Kalyanakatta counters. Internal shift-table codes (KKC/PAC1/PAC2/SPRH/SVRH/GNC/NDRH/HVC/KTRH/SGRH) recorded here but NOT extracted as place names.",
+    "extracted": kk,
+})
+
+# ---------------------------------------------------------------- Source 15 (batch 3)
+# PackageTours.aspx — TTD's official tour page names TWO temple circuits with
+# full itineraries (fetched 2026-10-27). NEW names: Agastheeswara (Thondavada),
+# Vakulamatha (Tirupati), Pallikondeswara (Surutupalli), Kasi Visweswara (Bugga).
+# The page's own spelling variants (Swamyvari / Venkaeswara / Appalayagunta
+# with 3 P's) are kept verbatim in the extracted names; canonical mapping
+# happens in curate-tirupati-master.ts OFFICIAL_NAME_MAP.
+pt_local = [
+    entry(P["pt"], "Sri Padmavathi Ammavari Temple, Tiruchanoor", ttd("PackageTours.aspx") + " — Local Temples Tour itinerary (strengthens existing row)"),
+    entry(P["pt"], "Sri Kalyana Venkateswaa Swamyvari Temple, Srinivasa Mangapuram", ttd("PackageTours.aspx") + " — Local Temples Tour itinerary (page's own spelling; same temple as Batch-011 candidate)"),
+    entry(P["pt"], "Sri Agastheeswara Swamyvari Temple, Thondawada", ttd("PackageTours.aspx") + " — Local Temples Tour itinerary (NEW: Thondavada village, on the Chandragiri road)"),
+    entry(P["pt"], "Sri Kapileswraswamyvari Temple, Kapilatheertham, Tirupati", ttd("PackageTours.aspx") + " — Local Temples Tour itinerary (page's own spelling; same temple as Batch-011 candidate)"),
+    entry(P["pt"], "Sri Govindaraja Swamyvari Temple, Tirupati", ttd("PackageTours.aspx") + " — Local Temples Tour itinerary (same temple as Batch-011 candidate)"),
+    entry(P["pt"], "Sri Vakulamatha Temple, Tirupati", ttd("PackageTours.aspx") + " — Local Temples Tour itinerary (NEW)"),
+]
+pt_surrounding = [
+    entry(P["pt"], "Sri Venugopalaswamyvari Temple, Karvetinagaram", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (strengthens existing batch-013 row)"),
+    entry(P["pt"], "Sri Kalyanavenkaeswaraswamyvari Temple, Narayanavaram", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (page's own spelling of Narayanavanam; strengthens existing batch-013 row)"),
+    entry(P["pt"], "Sri Pallikondeswara Swamyvari Temple, Surutupalli", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (NEW)"),
+    entry(P["pt"], "Sri Vedanarayanaswamyvari Temple, Nagalapuram", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (strengthens existing batch-013 row)"),
+    entry(P["pt"], "Sri Kariya Manikya Swamyvari Tmple, Nagari", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (page's own spelling incl. 'TMPLE' typo nearby; strengthens existing batch-013 row)"),
+    entry(P["pt"], "Sri Kasi Viseswara Swamyvari Temple, Bugga", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (NEW: Bugga village)"),
+    entry(P["pt"], "Sri Prasanna Venkateswaraswamyvari Temple, Apppalayagunta", ttd("PackageTours.aspx") + " — Surrounding Temples Tour itinerary (page's own spelling with 3 P's; same temple as Batch-012 row)"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("PackageTours.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED_B3, "page": "ttd-PackageTours.html",
+    "pageSizeBytes": fetch_size("ttd-PackageTours.html"),
+    "note": "TTD official Package Tours page (batch 3): Local Temples Tour (6 named stops) + Surrounding Temples Tour (7 named stops) with fares/durations. Tour logistics (Srinivasam/Vishnu Nivasam start points) quoted in prose.",
+    "extracted": pt_local + pt_surrounding,
+})
+
+# ---------------------------------------------------------------- Source 16 (batch 3)
+ft = [
+    entry(P["ft"], "Alipiri", ttd("TirumalatoTirupathiOnFoot.aspx") + " — the 11 km sopanamarga footpath 'starts from Alipiri at the foot of the hills' (Tirupati side)"),
+    entry(P["ft"], "Gali Gopuram", ttd("TirumalatoTirupathiOnFoot.aspx") + " — named pedestrian access point with bio-metric counter on the footpath"),
+    entry(P["ft"], "Srivari Mettu", ttd("TirumalatoTirupathiOnFoot.aspx") + " — named pedestrian access point with bio-metric counter on the footpath"),
+]
+SOURCES.append({
+    "sourceUrl": ttd("TirumalatoTirupathiOnFoot.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED_B3, "page": "ttd-TirumalatoTirupathiOnFoot.html",
+    "pageSizeBytes": fetch_size("ttd-TirumalatoTirupathiOnFoot.html"),
+    "note": "TTD official On-Foot page (batch 3): two sopanamargas with named access points (Alipiri start, Gali Gopuram, Srivari Mettu) + pilgrim facilities (luggage token, P.A.C., free buses).",
+    "extracted": ft,
+})
+
+# ---------------------------------------------------------------- Source 17 (batch 3)
+# MoreLinks.aspx — a link-directory page: ZERO new place names (honest
+# negative); fetched to complete nav-coverage of tirumala.org.
+SOURCES.append({
+    "sourceUrl": ttd("MoreLinks.aspx"), "httpStatus": 200,
+    "accessedOn": ACCESSED_B3, "page": "ttd-MoreLinks.html",
+    "pageSizeBytes": fetch_size("ttd-MoreLinks.html"),
+    "note": "TTD 'More Links' directory page (batch 3): reviewed; NO new place names (only links to already-covered pages/services). Recorded as an honest negative so nav coverage is complete.",
+    "extracted": [],
+})
+
+# ---------------------------------------------------------------- Source 18 (batch 3)
+iit = [
+    entry(P["iit"], "Sri Venkateshwara Swami Vaari Temple", BASE_II + "/en/andhra-pradesh/tirupati/sri-venkateswara-swamy-vaari-temple — Ministry of Tourism's own attraction sub-page (page's official spelling; same temple as Batch-011 candidate)"),
+]
+SOURCES.append({
+    "sourceUrl": BASE_II + "/en/andhra-pradesh/tirupati/sri-venkateswara-swamy-vaari-temple", "httpStatus": 200,
+    "accessedOn": ACCESSED_B3, "page": "incredibleindia-sv-temple.html",
+    "pageSizeBytes": fetch_size("incredibleindia-sv-temple.html"),
+    "note": "Incredible India attraction sub-page for the main temple (batch 3): the ONLY attraction sub-link embedded in the saved Tirupati destination page. Server-rendered like the parent page. Names only the main temple (already Batch-011 candidate) — recorded for source completeness.",
+    "extracted": iit,
+})
+
 # ---------------------------------------------------------------- Blocked sources
 SOURCES.append({
     "sourceUrl": "https://tirupati.ap.gov.in/", "httpStatus": 0,
@@ -475,6 +573,38 @@ for nm in ["Sri Vedanarayana Swamy Temple, Nagalapuram", "Sri Kalyana Venkateswa
     i = raw_mt_flat.find(nm)
     if i >= 0:
         ctx = raw_mt_flat[max(0, i - 110): i + len(nm) + 110]
+        ctx = re.sub(r"\s+", " ", ctx)
+        selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
+    else:
+        selfcheck.append({"name": nm, "foundInRawHtml": False, "context": None})
+
+# Also cross-check batch-3 names in their raw saved files
+raw_kk = (DIR / "ttd-KalyanaKatta.html").read_text(encoding="utf-8", errors="replace")
+raw_kk_flat = htmllib.unescape(re.sub(r"\s+", " ", raw_kk))
+for nm in ["Nandhakam Rest House", "Kousthubham rest House", "Sapthagiri Rest House"]:
+    i = raw_kk_flat.find(nm)
+    if i >= 0:
+        ctx = raw_kk_flat[max(0, i - 110): i + len(nm) + 110]
+        ctx = re.sub(r"\s+", " ", ctx)
+        selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
+    else:
+        selfcheck.append({"name": nm, "foundInRawHtml": False, "context": None})
+raw_pt = (DIR / "ttd-PackageTours.html").read_text(encoding="utf-8", errors="replace")
+raw_pt_flat = htmllib.unescape(re.sub(r"\s+", " ", raw_pt))
+for nm in ["SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA", "SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI", "SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA", "SRI VAKULAMATHA TEMPLE", "SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE", "SRI KARIYA MANIKYA SWAMYVARI TMPLE"]:
+    i = raw_pt_flat.find(nm)
+    if i >= 0:
+        ctx = raw_pt_flat[max(0, i - 110): i + len(nm) + 110]
+        ctx = re.sub(r"\s+", " ", ctx)
+        selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
+    else:
+        selfcheck.append({"name": nm, "foundInRawHtml": False, "context": None})
+raw_ft = (DIR / "ttd-TirumalatoTirupathiOnFoot.html").read_text(encoding="utf-8", errors="replace")
+raw_ft_flat = htmllib.unescape(re.sub(r"\s+", " ", raw_ft))
+for nm in ["Gali Gopuram or Srivari Mettu"]:
+    i = raw_ft_flat.find(nm)
+    if i >= 0:
+        ctx = raw_ft_flat[max(0, i - 110): i + len(nm) + 110]
         ctx = re.sub(r"\s+", " ", ctx)
         selfcheck.append({"name": nm, "foundInRawHtml": True, "context": ctx})
     else:

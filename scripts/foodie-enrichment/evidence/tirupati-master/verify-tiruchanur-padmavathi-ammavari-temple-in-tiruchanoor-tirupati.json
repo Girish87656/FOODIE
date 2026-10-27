@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "name": "Padmavathi Ammavari Temple in Tiruchanoor,Tirupati",
+    "area": "tiruchanur"
+  },
+  "query": "\"Padmavathi Ammavari Temple in Tiruchanoor,Tirupati\" Tirupati address",
+  "hits": [],
+  "errors": [
+    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  ],
+  "retrievedOn": "2026-10-27",
+  "skipped": true
+}

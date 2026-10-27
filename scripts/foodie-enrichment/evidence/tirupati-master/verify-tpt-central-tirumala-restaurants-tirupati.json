@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tirumala Restaurants, Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/mr/tirupati/tirumala-restaurants/tea"
+  },
+  "query": "\"Tirumala Restaurants, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-with-Drive-Through-in-Tirumala/nct-10408936-att-res40",
+      "name": "Best Restaurants With Drive Through in Tirumala, Tirupati",
+      "snippet": "Address , Tirumala, Tirupati - 517504 (Near HVC Free Bus Stop, Near Sannidhanam Guest House), Balaji Nagar, Tirupati - 517504 (Tirumala), Sri Varaha Swamy Rest ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/mr/tirupati/tirumala-restaurants/train-delivery",
+      "name": "Tirumala Restaurants, Tirupati",
+      "snippet": "Balaji Nagar, Tirumala, Tirupati , Andhra Pradesh 517504. Filters. Pure ... Tirumala Restaurants, Tirupati . Restaurant Card. 50% OFF. Sri Athidi Fast Foods ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/tirupathi-restaurants",
+      "name": "Tirupathi Restaurants",
+      "snippet": "Tirupati offers several dining options near the temple area, with Sri New Vijaya Venkateswara Bhavan open daily from 7:00 AM to 11:00 PM on G Car Street ¹.",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Indian-Restaurants-in-Tirumala/nct-10263652",
+      "name": "Best Indian Food Restaurants in Tirumala, Tirupati",
+      "snippet": "Address , D.no: 13 , 7-936/6/1, Korlagunta, Tuda Office Rd, Tirupati - 517501 (Opp DSN One Mall), Narayanagiri, Tirumala, Tirupati - 517504 (Beside ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/restaurants-near-tirumala-hill-top",
+      "name": "Restaurants Near Tirumala Hill Top",
+      "snippet": "Srivari Naivedyam is a popular vegetarian spot right on Tirumala hill top, known for unlimited veg thali near Sannidanam Guest House. For free temple food, ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Pure-Veg-Thali-Restaurants-Family-Friendly-in-Tirumala/nct-10396872-att-res494",
+      "name": "Top Pure Veg Thali Restaurants Family Friendly in Tirumala",
+      "snippet": "Find ✓Pure Veg Thali Restaurants in Tirumala, Tirupati . Get Phone Numbers, Address ... Tirupati on Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Best Restaurants With Drive Through in Tirumala, Tirupati :: Address , Tirumala, Tirupati - 517504 (Near HVC Free Bus Stop, Near Sannidhanam Guest House), Balaji Nagar, Tirupati - 517504 (Tirumala), Sri Varaha Swamy Rest ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-27"
+}

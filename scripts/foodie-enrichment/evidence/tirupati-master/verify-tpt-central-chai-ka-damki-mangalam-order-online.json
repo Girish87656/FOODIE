@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Chai Ka Damki, Mangalam order online",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/te/tirupati/chai-ka-damki-mangalam/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gU3RyZWV0IEZvb2QiLCJkaXNoX2lkcyI6W10sImN1aXNpbmVfaWRzIjpbIjkwIl19fQ=="
+  },
+  "query": "\"Chai Ka Damki, Mangalam order online\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-World-Mangalam/9999PX877-X877-250918144856-Y3F9_BZDET",
+      "name": "Tea World in Mangalam,Tirupati - Coffee Shops",
+      "snippet": "Address Karakambadi Road, Mangalam, Tirupati -517507, hours from Monday:- 10:00 am - 10:00 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Stalls-With-Delivery-Service/nct-10853304-att-hos7182",
+      "name": "Best Tea Stalls With Delivery Service near me - Tirupati",
+      "snippet": "Tea Stalls in Tirupati ; Name, Tea On Food Point · Tea Kottu ; Address , Vidya Nagar Colony, Vidyanagar 3rd Cross Road, Tirupati - 517502, L. S. Nagar,Tummalagunta ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/sk/tirupati/the-irani-co-mangalam/order",
+      "name": "The Irani & Co, Mangalam order online",
+      "snippet": "Check out The Irani &amp; Co, Mangalam, Tirupati on Zomato for great deals, ratings, reviews and more! required to place an order",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tandoori-Chai-Outlets-in-Tiruchanoor-Road/nct-12068515",
+      "name": "Best Tandoori Chai Outlets in Tiruchanoor Road, Tirupati",
+      "snippet": "Tandoori Chai Outlets in Tiruchanoor Road, Tirupati ; Address , R.C Road, Bairagi Patteda, Tirupati - 517501 (Opposite Patanjali Chikitsalaya and Store, Avilala) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Indian-Delivery-Restaurants-in-Mangalam/nct-11960424",
+      "name": "Best Indian Delivery Restaurants in Mangalam, Tirupati",
+      "snippet": "Mangalam Road, Mangalam, Tirupati - 517507 (Opposite Rame Guestline Hotel) place your order easily. ordering through their websites or by phone.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Masala-Chai/nct-10853304/page-5",
+      "name": "Masala Chai in Tirupati - Page 5",
+      "snippet": "Chai Address Shop 1, Mangalam, Subbareddy Nagar, Tirupati - 517501 Shop 12, dr mahal road, Tirupati - 517501 (Mangalam) P L Complex, Dharamshalas Farm House",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tea World in Mangalam,Tirupati - Coffee Shops :: Address Karakambadi Road, Mangalam, Tirupati -517507, hours from Monday:- 10:00 am - 10:00 pm,",
+  "errors": [],
+  "retrievedOn": "2026-10-27"
+}

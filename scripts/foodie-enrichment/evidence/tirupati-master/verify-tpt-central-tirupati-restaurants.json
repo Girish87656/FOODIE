@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tirupati Restaurants",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/bn/tirupati/order-food-online?all=1&veg=1&min-order=2&delivery-time=0"
+  },
+  "query": "\"Tirupati Restaurants\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tirupationline.in/guide/restaurants-in-tirupati",
+      "name": "Restaurants in Tirupati",
+      "snippet": "Bhanoos Veg Restaurant Tirupati Road, Tata Nagar, Tirupati , Andhra Pradesh – 517501 ; Idly Factory Tata Nagar, Tirupati , AP – 517501 ; Dhwaraka Restaurant Read more",
+      "host": "www.tirupationline.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.scribd.com/document/781749527/Stores",
+      "name": "Tirupati Restaurant Directory | PDF",
+      "snippet": "188 Big +918122265124. Bus Stop, Ramachandra Pushkarini, Nehru Nagar, Tirupati Ramee Gust, Annamayya Marg Road, Line Road, near Fish Mart, Tirupati , Tirumala ...",
+      "host": "www.scribd.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/pa/tirupati/order-food-online",
+      "name": "Tirupati Restaurants",
+      "snippet": "Tirupati Restaurants · McDonald's · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Narayana Kebab Corner · Appu Family Restaurant · Di Table 9 · Rayalaseema Spice. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/restaurants-near-bus-stand-tirupati",
+      "name": "Restaurants Near Bus Stand Tirupati",
+      "snippet": "Near Leela Mahal Circle, Beside Hotel SK, Tirumala Bypass Rd, Tirupati 📞 9989336736 | 9985235833 … 📍 Seethamma road, 100 feet road, beside cars 24, Tirupati",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-in-Telugu-Nagar/nct-10408936",
+      "name": "Best Restaurants in Telugu Nagar, Tirupati - Justdial Jd",
+      "snippet": "Explore a wide range of restaurants with Photos, Address , Reviews, Maps and Phone numbers on Justdial ... TirupatiRestaurants in TirupatiRestaurants in Telugu ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Indian-Restaurants-in-Tirumala/nct-10263652",
+      "name": "Best Indian Food Restaurants in Tirumala, Tirupati",
+      "snippet": "Address , D.no: 13 , 7-936/6/1, Korlagunta, Tuda Office Rd, Tirupati - 517501 (Opp DSN One Mall), Narayanagiri, Tirumala, Tirupati - 517504 (Beside ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Restaurants in Tirupati :: Bhanoos Veg Restaurant Tirupati Road, Tata Nagar, Tirupati , Andhra Pradesh – 517501 ; Idly Factory Tata Nagar, Tirupati , AP – 517501 ; Dhwaraka Restaurant Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-27"
+}

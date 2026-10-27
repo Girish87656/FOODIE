@@ -22,10 +22,15 @@
 | 11 | https://www.tirumala.org/RestHousesInTirumala.aspx | 200 | 76257 | ttd-RestHousesInTirumala.html |
 | 12 | https://www.tirumala.org/ttdklmps.aspx | 200 | 113640 | ttd-ttdklmps.html |
 | 13 | https://www.tirumala.org/MoreTemples.aspx | 200 | 149703 | ttd-MoreTemples.html |
-| 14 | https://tirupati.ap.gov.in/ | 000 (connection failed) | 0 | (not saved — connection failed) |
-| 15 | https://tourism.ap.gov.in/ | 000 (connection failed) | 0 | (not saved — connection failed) |
+| 14 | https://www.tirumala.org/KalyanaKatta.aspx | 200 | 60092 | ttd-KalyanaKatta.html |
+| 15 | https://www.tirumala.org/PackageTours.aspx | 200 | 57022 | ttd-PackageTours.html |
+| 16 | https://www.tirumala.org/TirumalatoTirupathiOnFoot.aspx | 200 | 56585 | ttd-TirumalatoTirupathiOnFoot.html |
+| 17 | https://www.tirumala.org/MoreLinks.aspx | 200 | 61728 | ttd-MoreLinks.html |
+| 18 | https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-venkateswara-swamy-vaari-temple | 200 | 460135 | incredibleindia-sv-temple.html |
+| 19 | https://tirupati.ap.gov.in/ | 000 (connection failed) | 0 | (not saved — connection failed) |
+| 20 | https://tourism.ap.gov.in/ | 000 (connection failed) | 0 | (not saved — connection failed) |
 
-Extraction totals (place/temple/accommodation names): `places-to-visit.html`=10, `temples-at-tirupati.html`=24, `home.html`=11, `places-around-tirumala.html`=24, `accommodation-tirumala.html`=6, `accommodation-tirupati.html`=7, `temples-at-tiruchanoor.html`=6, `incredibleindia-tirupati.html`=15, `ttd-PlacesatTirumala.html`=6, `ttd-S.V.-Museum.html`=2, `ttd-RestHousesInTirumala.html`=34, `ttd-ttdklmps.html`=2, `ttd-MoreTemples.html`=15, `(not saved — connection failed)`=0, `(not saved — connection failed)`=0
+Extraction totals (place/temple/accommodation names): `places-to-visit.html`=10, `temples-at-tirupati.html`=24, `home.html`=11, `places-around-tirumala.html`=24, `accommodation-tirumala.html`=6, `accommodation-tirupati.html`=7, `temples-at-tiruchanoor.html`=6, `incredibleindia-tirupati.html`=15, `ttd-PlacesatTirumala.html`=6, `ttd-S.V.-Museum.html`=2, `ttd-RestHousesInTirumala.html`=34, `ttd-ttdklmps.html`=2, `ttd-MoreTemples.html`=15, `ttd-KalyanaKatta.html`=6, `ttd-PackageTours.html`=13, `ttd-TirumalatoTirupathiOnFoot.html`=3, `ttd-MoreLinks.html`=0, `incredibleindia-sv-temple.html`=1, `(not saved — connection failed)`=0, `(not saved — connection failed)`=0
 
 ## https://www.tirumala.org/PlacesToVisit.aspx
 
@@ -617,6 +622,114 @@ Extraction totals (place/temple/accommodation names): `places-to-visit.html`=10,
 - href/detail: OUT-OF-REGION: Thallapaka, Rajampeta Mandal, YSR Kadapa district — recorded, not an inventory candidate
 - verbatim: > From then all poojas are performed as per Pancharatra Agama. Sri Siddeswara Swamy Vari Temple, Thallapaka Sri Kamakshi Sametha Sri Siddeswara Swamy was a temple dedicated to Lord Shiva, constructed
 
+## https://www.tirumala.org/KalyanaKatta.aspx
+
+- HTTP status: **200** | bytes: 60092 | saved: `ttd-KalyanaKatta.html` | accessed: 2026-10-27
+- TTD official Kalyana Katta page (batch 3): main tonsuring centre + 5 named rest houses carrying Kalyanakatta counters. Internal shift-table codes (KKC/PAC1/PAC2/SPRH/SVRH/GNC/NDRH/HVC/KTRH/SGRH) recorded here but NOT extracted as place names.
+
+- Extracted **6** names:
+
+### Kalyana Katta
+- href/detail: https://www.tirumala.org/KalyanaKatta.aspx — main tonsuring centre, Tirumala (page title + nav; body describes facilities/timings)
+- verbatim: > Incase of vehicle break down / accident Others Anna Prasadam Kalyana Katta Medical Fulfilling Vows Online Services Seva Darshan Accommodation Hundi Donation Publications Kalyana Vedika Kalyanamandapam News and Events TTD
+### Nandhakam Rest House
+- href/detail: https://www.tirumala.org/KalyanaKatta.aspx — named among rest houses running a Kalyanakatta counter
+- verbatim: > Rest House(SVRH), Sri Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH). Tonsuring is done at free of cost at all Kalyanakattas.
+### Kousthubham rest House
+- href/detail: https://www.tirumala.org/KalyanaKatta.aspx — named with code (KTRH)
+- verbatim: > Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH). Tonsuring is done at free of cost at all Kalyanakattas. Antiseptics are mixed
+### Sapthagiri Rest House
+- href/detail: https://www.tirumala.org/KalyanaKatta.aspx — named with code (SGRH)
+- verbatim: > GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH). Tonsuring is done at free of cost at all Kalyanakattas. Antiseptics are mixed with water and applied
+### Sri Venkateswara Rest House
+- href/detail: https://www.tirumala.org/KalyanaKatta.aspx — named with code (SVRH); distinct from the TTD Guest Houses on RestHousesInTirumala.aspx
+- verbatim: > to the pilgrims staying in cottages and guesthouses. Such as Sri Venkateswara Rest House(SVRH), Sri Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri
+### Sri Padmavathi Rest House
+- href/detail: https://www.tirumala.org/KalyanaKatta.aspx — named with code (SPRH); distinct from the Guest House Area on RestHousesInTirumala.aspx
+- verbatim: > in cottages and guesthouses. Such as Sri Venkateswara Rest House(SVRH), Sri Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH). Tonsuring is
+
+## https://www.tirumala.org/PackageTours.aspx
+
+- HTTP status: **200** | bytes: 57022 | saved: `ttd-PackageTours.html` | accessed: 2026-10-27
+- TTD official Package Tours page (batch 3): Local Temples Tour (6 named stops) + Surrounding Temples Tour (7 named stops) with fares/durations. Tour logistics (Srinivasam/Vishnu Nivasam start points) quoted in prose.
+
+- Extracted **13** names:
+
+### Sri Padmavathi Ammavari Temple, Tiruchanoor
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Local Temples Tour itinerary (strengthens existing row)
+- verbatim: > Nivasam Complex opposite railway station, Tirupati. These tours cover: • SRI PADMAVATHI AMMAVARI TEMPLE, TIRUCHANOOR • SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE, SRINIVASA MANGAPURAM • SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA •
+### Sri Kalyana Venkateswaa Swamyvari Temple, Srinivasa Mangapuram
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Local Temples Tour itinerary (page's own spelling; same temple as Batch-011 candidate)
+- verbatim: > These tours cover: • SRI PADMAVATHI AMMAVARI TEMPLE, TIRUCHANOOR • SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE, SRINIVASA MANGAPURAM • SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA • SRI KAPILESWRASWAMYVARI TEMPLE, KAPILATHEERTHAM, TIRUPATI •
+### Sri Agastheeswara Swamyvari Temple, Thondawada
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Local Temples Tour itinerary (NEW: Thondavada village, on the Chandragiri road)
+- verbatim: > TIRUCHANOOR • SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE, SRINIVASA MANGAPURAM • SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA • SRI KAPILESWRASWAMYVARI TEMPLE, KAPILATHEERTHAM, TIRUPATI • SRI GOVINDARAJA SWAMYVARI TEMPLE, TIRUPATI. • SRI VAKULAMATHA
+### Sri Kapileswraswamyvari Temple, Kapilatheertham, Tirupati
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Local Temples Tour itinerary (page's own spelling; same temple as Batch-011 candidate)
+- verbatim: > TEMPLE, SRINIVASA MANGAPURAM • SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA • SRI KAPILESWRASWAMYVARI TEMPLE, KAPILATHEERTHAM, TIRUPATI • SRI GOVINDARAJA SWAMYVARI TEMPLE, TIRUPATI. • SRI VAKULAMATHA TEMPLE, TIRUPATI. Note : The duration
+### Sri Govindaraja Swamyvari Temple, Tirupati
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Local Temples Tour itinerary (same temple as Batch-011 candidate)
+- verbatim: > SWAMYVARI TEMPLE, THONDAWADA • SRI KAPILESWRASWAMYVARI TEMPLE, KAPILATHEERTHAM, TIRUPATI • SRI GOVINDARAJA SWAMYVARI TEMPLE, TIRUPATI. • SRI VAKULAMATHA TEMPLE, TIRUPATI. Note : The duration of the tour is 5 hours
+### Sri Vakulamatha Temple, Tirupati
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Local Temples Tour itinerary (NEW)
+- verbatim: > TEMPLE, KAPILATHEERTHAM, TIRUPATI • SRI GOVINDARAJA SWAMYVARI TEMPLE, TIRUPATI. • SRI VAKULAMATHA TEMPLE, TIRUPATI. Note : The duration of the tour is 5 hours and fare charged is Rs.200/- per
+### Sri Venugopalaswamyvari Temple, Karvetinagaram
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (strengthens existing batch-013 row)
+- verbatim: > to APSRTC Central Bus Station, Tirupati. These tours cover: • SRI VENUGOPALASWAMYVARI TEMPLE, KARVETINAGARAM • SRI KALYANAVENKAESWARASWAMYVARI TEMPLE, NARAYANAVARAM • SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM
+### Sri Kalyanavenkaeswaraswamyvari Temple, Narayanavaram
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (page's own spelling of Narayanavanam; strengthens existing batch-013 row)
+- verbatim: > Tirupati. These tours cover: • SRI VENUGOPALASWAMYVARI TEMPLE, KARVETINAGARAM • SRI KALYANAVENKAESWARASWAMYVARI TEMPLE, NARAYANAVARAM • SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM • SRI KARIYA MANIKYA SWAMYVARI
+### Sri Pallikondeswara Swamyvari Temple, Surutupalli
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (NEW)
+- verbatim: > SRI VENUGOPALASWAMYVARI TEMPLE, KARVETINAGARAM • SRI KALYANAVENKAESWARASWAMYVARI TEMPLE, NARAYANAVARAM • SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI • SRI KASI
+### Sri Vedanarayanaswamyvari Temple, Nagalapuram
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (strengthens existing batch-013 row)
+- verbatim: > KALYANAVENKAESWARASWAMYVARI TEMPLE, NARAYANAVARAM • SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI • SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA • SRI
+### Sri Kariya Manikya Swamyvari Tmple, Nagari
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (page's own spelling incl. 'TMPLE' typo nearby; strengthens existing batch-013 row)
+- verbatim: > PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI • SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA • SRI PRASANNA VENKATESWARASWAMYVARI TEMPLE, APPPALAYAGUNTA Note
+### Sri Kasi Viseswara Swamyvari Temple, Bugga
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (NEW: Bugga village)
+- verbatim: > TEMPLE, NAGALAPURAM • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI • SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA • SRI PRASANNA VENKATESWARASWAMYVARI TEMPLE, APPPALAYAGUNTA Note : The duration of the tour is
+### Sri Prasanna Venkateswaraswamyvari Temple, Apppalayagunta
+- href/detail: https://www.tirumala.org/PackageTours.aspx — Surrounding Temples Tour itinerary (page's own spelling with 3 P's; same temple as Batch-012 row)
+- verbatim: > TMPLE, NAGARI • SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA • SRI PRASANNA VENKATESWARASWAMYVARI TEMPLE, APPPALAYAGUNTA Note : The duration of the tour is 8 hours and the fare charged is
+
+## https://www.tirumala.org/TirumalatoTirupathiOnFoot.aspx
+
+- HTTP status: **200** | bytes: 56585 | saved: `ttd-TirumalatoTirupathiOnFoot.html` | accessed: 2026-10-27
+- TTD official On-Foot page (batch 3): two sopanamargas with named access points (Alipiri start, Gali Gopuram, Srivari Mettu) + pilgrim facilities (luggage token, P.A.C., free buses).
+
+- Extracted **3** names:
+
+### Alipiri
+- href/detail: https://www.tirumala.org/TirumalatoTirupathiOnFoot.aspx — the 11 km sopanamarga footpath 'starts from Alipiri at the foot of the hills' (Tirupati side)
+- verbatim: > The more ancient of the two sopanamargas which starts from Alipiri at the foot of the hills, is about 11 km in length, and is the commonly-used route. Token facility
+### Gali Gopuram
+- href/detail: https://www.tirumala.org/TirumalatoTirupathiOnFoot.aspx — named pedestrian access point with bio-metric counter on the footpath
+- verbatim: > provided for pedestrian who come on foot to Tirumala through Gali Gopuram or Srivari Mettu. Bio-Metric counters are established on these foot paths, to facilitate free darshan, free accommodation (P.A.C.)
+### Srivari Mettu
+- href/detail: https://www.tirumala.org/TirumalatoTirupathiOnFoot.aspx — named pedestrian access point with bio-metric counter on the footpath
+- verbatim: > who come on foot to Tirumala through Gali Gopuram or Srivari Mettu. Bio-Metric counters are established on these foot paths, to facilitate free darshan, free accommodation (P.A.C.) and free food
+
+## https://www.tirumala.org/MoreLinks.aspx
+
+- HTTP status: **200** | bytes: 61728 | saved: `ttd-MoreLinks.html` | accessed: 2026-10-27
+- TTD 'More Links' directory page (batch 3): reviewed; NO new place names (only links to already-covered pages/services). Recorded as an honest negative so nav coverage is complete.
+
+- Extracted: **0** (source not fetched — recorded as a limitation, not skipped silently)
+
+## https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-venkateswara-swamy-vaari-temple
+
+- HTTP status: **200** | bytes: 460135 | saved: `incredibleindia-sv-temple.html` | accessed: 2026-10-27
+- Incredible India attraction sub-page for the main temple (batch 3): the ONLY attraction sub-link embedded in the saved Tirupati destination page. Server-rendered like the parent page. Names only the main temple (already Batch-011 candidate) — recorded for source completeness.
+
+- Extracted **1** names:
+
+### Sri Venkateshwara Swami Vaari Temple
+- href/detail: https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/sri-venkateswara-swamy-vaari-temple — Ministry of Tourism's own attraction sub-page (page's official spelling; same temple as Batch-011 candidate)
+- verbatim: > Visit the Sri Venkateshwara Swami Vaari Temple in Tirupati | Incredible India Hi, User name My profile Logout Incredible India Content Hub Travel For LiFE Colours of India FAQs Contact
+
 ## https://tirupati.ap.gov.in/
 
 - HTTP status: **000 — connection failed (see limitation)** | bytes: 0 | saved: `(not saved — connection failed)` | accessed: 2026-10-26
@@ -659,6 +772,26 @@ Re-opened the RAW saved files (not the cleaned text) and located 5 extracted nam
   - surrounding text: `Program</a> </p> </div> </div> </td> </tr> <tr> <td align="left" valign="middle"> <div class="pg-sub-header"> Sri Vedanarayana Swamy Temple, Nagalapuram </div> <div style="float: left;"> <div class="detailsAbnBody"> <p> This is one of the most important and anci`
 - **Sri Kalyana Venkateswara Swamy temple, Narayanavanam** — FOUND in raw saved HTML.
   - surrounding text: `(outside temples)</div> </div> </td> </tr> <tr> <td align="left" valign="middle"> <div class="pg-sub-header"> Sri Kalyana Venkateswara Swamy temple, Narayanavanam </div> <div style="float: left;"> <div class="detailsAbnBody"> <p> It is yet another ancient temple of mythol`
+- **Nandhakam Rest House** — FOUND in raw saved HTML.
+  - surrounding text: `uesthouses. Such as Sri Venkateswara Rest House(SVRH), Sri Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH).</li> <li>Tonsuring is done at free of cost at `
+- **Kousthubham rest House** — FOUND in raw saved HTML.
+  - surrounding text: `i Venkateswara Rest House(SVRH), Sri Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH).</li> <li>Tonsuring is done at free of cost at all Kalyanakattas.</li> `
+- **Sapthagiri Rest House** — FOUND in raw saved HTML.
+  - surrounding text: `Sri Padmavathi Rest House(SPRH), HVC, GNC, PAC1, PAC2, Nandhakam Rest House, Kousthubham rest House(KTRH) and Sapthagiri Rest House(SGRH).</li> <li>Tonsuring is done at free of cost at all Kalyanakattas.</li> <li>Antiseptics are mixed with w`
+- **SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA** — FOUND in raw saved HTML.
+  - surrounding text: `AMMAVARI TEMPLE, TIRUCHANOOR <br /> • SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE, SRINIVASA MANGAPURAM <br /> • SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA <br /> • SRI KAPILESWRASWAMYVARI TEMPLE, KAPILATHEERTHAM, TIRUPATI <br /> • SRI GOVINDARAJA SWAMYVARI TEMPLE,`
+- **SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI** — FOUND in raw saved HTML.
+  - surrounding text: `OPALASWAMYVARI TEMPLE, KARVETINAGARAM <br /> • SRI KALYANAVENKAESWARASWAMYVARI TEMPLE, NARAYANAVARAM <br /> • SRI PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI <br /> • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM <br /> • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI <b`
+- **SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA** — FOUND in raw saved HTML.
+  - surrounding text: ` • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM <br /> • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI <br /> • SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA <br /> • SRI PRASANNA VENKATESWARASWAMYVARI TEMPLE, APPPALAYAGUNTA <br /><br /> <b>Note </b>: <ul> <li>The du`
+- **SRI VAKULAMATHA TEMPLE** — FOUND in raw saved HTML.
+  - surrounding text: `SWRASWAMYVARI TEMPLE, KAPILATHEERTHAM, TIRUPATI <br /> • SRI GOVINDARAJA SWAMYVARI TEMPLE, TIRUPATI. <br /> • SRI VAKULAMATHA TEMPLE, TIRUPATI. <br /> <br /> <b>Note </b>: <ul> <li>The duration of the tour is 5 hours and fare charged is Rs.20`
+- **SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE** — FOUND in raw saved HTML.
+  - surrounding text: `ite railway station, Tirupati. These tours cover: </p> • SRI PADMAVATHI AMMAVARI TEMPLE, TIRUCHANOOR <br /> • SRI KALYANA VENKATESWAA SWAMYVARI TEMPLE, SRINIVASA MANGAPURAM <br /> • SRI AGASTHEESWARA SWAMYVARI TEMPLE, THONDAWADA <br /> • SRI KAPILESWRASWAMYVAR`
+- **SRI KARIYA MANIKYA SWAMYVARI TMPLE** — FOUND in raw saved HTML.
+  - surrounding text: `PALLIKONDESWARA SWAMYVARI TEMPLE, SURUTUPALLI <br /> • SRI VEDANARAYANASWAMYVARI TEMPLE, NAGALAPURAM <br /> • SRI KARIYA MANIKYA SWAMYVARI TMPLE, NAGARI <br /> • SRI KASI VISESWARA SWAMYVARI TEMPLE, BUGGA <br /> • SRI PRASANNA VENKATESWARASWAMYVARI TEMPL`
+- **Gali Gopuram or Srivari Mettu** — FOUND in raw saved HTML.
+  - surrounding text: `"Images/RightArrowBold.png" /> Token facility is provided for pedestrian who come on foot to Tirumala through Gali Gopuram or Srivari Mettu. </p> <div> <p> <img alt="" src="Images/RightArrowBold.png" /> Bio-Metric counters are established on these f`
 - **SRI GOVINDARAJASWAMI TEMPLE** — FOUND in raw saved HTML.
   - surrounding text: `<td> <div id="id1"> <tr> <td align="left" valign="middle"> <div style="float: left;"> <div class="Pg-Heading">SRI GOVINDARAJASWAMI TEMPLE</div> </div> </td> </tr> <tr> <td align="left" valign="middle"> <div style="float: left;"> <div class="detail`
 - **SRI KAPILESWARA SWAMY TEMPLE** — FOUND in raw saved HTML.
@@ -666,6 +799,6 @@ Re-opened the RAW saved files (not the cleaned text) and located 5 extracted nam
 
 ### Full quote-integrity re-verification (programmatic)
 
-- 162/162 verbatim quotes re-located word-for-word inside their saved page's visible text (same tag-stripped, entity-unescaped, whitespace-collapsed normalization used to cut them). 0 mismatches.
+- 185/185 verbatim quotes re-located word-for-word inside their saved page's visible text (same tag-stripped, entity-unescaped, whitespace-collapsed normalization used to cut them). 0 mismatches.
 
 *Generated by extract_official_sources.py (this directory); input = the saved raw HTML files fetched on 2026-10-26.*

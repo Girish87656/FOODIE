@@ -1,5 +1,5 @@
 {
-  "retrievedOn": "2026-10-26",
+  "retrievedOn": "2026-10-27",
   "group": "food-cafe",
   "areas": {
     "tpt-central": [
@@ -146,6 +146,61 @@
           }
         ],
         "retrievedOn": "2026-10-26"
+      },
+      {
+        "query": "chai tea cafe Tirupati zomato",
+        "hits": [
+          {
+            "url": "https://www.zomato.com/tirupati/restaurants/asian",
+            "name": "Asian Restaurants in Tirupati",
+            "snippet": "Restaurants serving Asian cuisine in Tirupati . Menus, Photos, Ratings and Reviews for Asian Restaurants in Tirupati. Chinese, North Indian, Indo-Chinese, Tea, ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/kn/ncr/delivery/dish-tea?landmark_id=63",
+            "name": "Best Tea Delivery Restaurants in Sri Venkateswara College",
+            "snippet": "Chaayos Chai+Snacks=Relax . 4.4. Tea, Cafe, Coffee, Rolls, Fast Food, Beverages. ₹350 for one ; Chai Point. 4.4. Tea. ₹100 for one ; Sukh Chai. 4.0. Tea, Coffee, ... Read more",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/bn/tirupati/order-food-online?all=1&veg=1&min-order=2&delivery-time=0",
+            "name": "Tirupati Restaurants",
+            "snippet": "Tirupati Restaurants - Menus, Reviews, Photos for Restaurants, Pubs, Lounges, and Bars in Tirupati. Cafe Hot Spot Cafe 35–40 min",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/tirupati/tea-time-srinivasa-nagar/order",
+            "name": "Tea Time, Srinivasa Nagar order online",
+            "snippet": "Check out Tea Time, Srinivasa Nagar, Tirupati on Zomato for great deals, ratings, reviews and more! Tea, Juices, Street Food - DELIVERY",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/te/tirupati/chai-ka-damki-mangalam/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gU3RyZWV0IEZvb2QiLCJkaXNoX2lkcyI6W10sImN1aXNpbmVfaWRzIjpbIjkwIl19fQ==",
+            "name": "Chai Ka Damki, Mangalam order online",
+            "snippet": "Check out Chai Ka Damki, Mangalam, Tirupati on Zomato for great deals, ratings, reviews and more! Chai Ka Damki Snacks, Fast Food, Beverages, Street Food, ...",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/mr/tirupati/tirumala-restaurants/tea",
+            "name": "Tirumala Restaurants, Tirupati",
+            "snippet": "Tea Tirumala Restaurants, Tirupati . New Snacks, Tea, Fast Food, Beverages, Fried Chicken, Street Food, American ₹250 for one Opens at 11:30am",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          },
+          {
+            "url": "https://www.zomato.com/it/tirupati/kafe-tirupati-1-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gTWFzYWxhIERvc2EiLCJkaXNoX2lkcyI6WyI3MDczNSJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+            "name": "Kafe Tirupati, Tirumala order online",
+            "snippet": "Check out Kafe Tirupati, Tirumala, Tirupati on Zomato for great deals, ratings, reviews and more!",
+            "host": "www.zomato.com",
+            "kind": "zomato"
+          }
+        ],
+        "retrievedOn": "2026-10-27"
       }
     ],
     "tpt-neighbourhoods": [
@@ -267,6 +322,47 @@
           }
         ],
         "retrievedOn": "2026-10-26"
+      },
+      {
+        "query": "milk tea stall Tirumala",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Tirupati/Tea-Stalls-having-Tea-in-Tirumala/nct-10853304-att-cou22",
+            "name": "Best Tea Stalls Having Tea in Tirumala, Tirupati",
+            "snippet": "Best Tea Stalls Having Tea in Tirumala, Tirupati - Order Food Online · V C B Tea & Tiffin Stall · Ammulu Tea Stall · Chinna Tea Stall · Balasubramanyam Tea Stall. Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://tirupati.idbf.in/4354716/tirumala-tea-stall",
+            "name": "Tirumala Tea Stall in Tirupati",
+            "snippet": "Tirumala Tea Stall can be contacted via: Phone: 8886221776 . Address: Door No, 424, Sundaraiah Nagar Road, Srinivasa Nagar, Ramchandra Nagar, Tirupati - 517501. Read more",
+            "host": "tirupati.idbf.in",
+            "kind": null
+          },
+          {
+            "url": "https://www.mappls.com/place-tirumala+tea+stall-chennai+kolkata+highway-ojili-tirupati+district-andhra+pradesh-524402-6E4343@zdata=MTQuMDMyODIzKzc5Ljg5NTYyNCsxNys2RTQzNDMrK25yed",
+            "name": "Tirumala Tea Stall, Chennai Kolkata Highway, Ojili, Tirupati",
+            "snippet": "Get map of tirumala tea stall , chennai kolkata highway, ojili, tirupati district, andhra pradesh, 524402 by Mappls. Find location,directions,places. Omega Milk ...",
+            "host": "www.mappls.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Balasubramanyam-Tea-Stall-Tirumala/9999PX877-X877-240113180821-F6N5_BZDET",
+            "name": "Balasubramanyam Tea Stall in Tirumala,Tirupati",
+            "snippet": "Balasubramanyam Tea Stall in Tirumala,Tirupati well known for Tea Stalls in Tirupati . Rated 3.8 based on 6 Customer Reviews and Ratings with 1 Photos.",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://magicpin.in/Tirupati/Reddy-And-Reddys-Colony/Restaurant/Tirumala-Tea-Stall/store/99bc67?srsltid=AYCX9vKaZKvQux-TEFFYnd9Ty-2ta2w13F7UkaXB035NXREVHoEq-lnJ",
+            "name": "Tirumala Tea Stall, Reddy and Reddy's Colony, Tirupati, Tea",
+            "snippet": "Tirumala Tea Stall is a neighbourhood dining destination. Open now·10:00 AM – 8:00 PM Tea. Among its cuisines are Tea, etc. 10:00 AM – 8:00 PM Phone+ ...",
+            "host": "magicpin.in",
+            "kind": "magicpin"
+          }
+        ],
+        "retrievedOn": "2026-10-27"
       }
     ],
     "tiruchanur": [
@@ -453,6 +549,75 @@
           }
         ],
         "retrievedOn": "2026-10-26"
+      },
+      {
+        "query": "coffee shop Renigunta airport Tirupati",
+        "hits": [
+          {
+            "url": "https://www.tripadvisor.ie/Restaurant_Review-g297587-d7291631-Reviews-or70-Minerva_Coffee_Shop-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+            "name": "Minerva Coffee Shop - Tirupati Restaurants",
+            "snippet": "Minerva Coffee shop is one of the best place to eat veg food, It is spread all over AP and Telangana and the food here is very tasty but bit costly. Read more. Read more",
+            "host": "www.tripadvisor.ie",
+            "kind": null
+          },
+          {
+            "url": "http://minervacoffeeshop.in/newsite/?page_id=83",
+            "name": "Minerva Coffee Shop at Renigunta Road, Tirupati",
+            "snippet": "Minerva Coffee Shop at Renigunta Road, Tirupati | … 517501 Contact: Mobile: 8008002312 Phone : 0877 668 8888 Fax: 0877 668 8889",
+            "host": "minervacoffeeshop.in",
+            "kind": null
+          },
+          {
+            "url": "https://en.tripadvisor.com.hk/ShowUserReviews-g297587-d7291631-r372371754-Minerva_Coffee_Shop-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+            "name": "Best choice for food in tirupati. - Review of Minerva Coffee",
+            "snippet": "Minerva Coffee Shop: Renigunta Road, Near Railway Station Flyover, Tirupati 517501, India 011 91 877 668 8888 minervahotels.in",
+            "host": "en.tripadvisor.com.hk",
+            "kind": null
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Coffee-Shops-with-Birthday-Group-Parties-in-Tirupati-North/nct-10104727-att-Rbp",
+            "name": "Best Coffee Shops With Birthday Group Parties in Tirupati",
+            "snippet": "Minerva Coffee Shop Near Railway Station Flyover Renigunta Road , Tirupati … +57 View Colony Air Bypass Road - 2.73 km ₹ 560 Price for two Opens at 10:00 AM ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/Minerva-Coffee-Shop-Near-Railway-Station-Flyover-Renigunta-Road/9999PX877-X877-170107114033-I9L9_BZDET/menu",
+            "name": "Menu of Minerva Coffee Shop in Renigunta Road, Tirupati",
+            "snippet": "Minerva Coffee Shop in Renigunta Road, Tirupati on Justdial. Chaat, rolls, butter chicken, kebabs, chole bhature, biryani, rolls, samosa,",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.mappls.com/n0qpg6",
+            "name": "Minerva Coffee Shop, National Highway 205, Renigunta",
+            "snippet": "Minerva Coffee Shop, National Highway 205, Renigunta Road , Near Railway Flyover, Tirupati, Andhra Pradesh, 517501 by Mappls. +918008002312",
+            "host": "www.mappls.com",
+            "kind": null
+          },
+          {
+            "url": "https://www.justdial.com/Tirupati/24-Hours-Coffee-Shops-in-T-P-Area/nct-10000361",
+            "name": "24 Hours Coffee Shops Restaurants in T P Area, Tirupati",
+            "snippet": "Coffee Caf'e Opp Maruthi Showroom Renigunta Road, Tirupati . Renigunta Road - 1.91 km Open 24 Hrs. Price for two Open 24 Hrs Call Now. Super taste and natural ...",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.facebook.com/tapriwalatirupati/videos/pov-you-just-found-your-new-favourite-spot-in-tirupati-good-food-great-chai-coff/2151102976287734",
+            "name": "POV: You just found your new favourite spot in Tirupati.",
+            "snippet": "This video provides a promotional tour of \" Tapriwala by Treat Meets,\" a new cafe located in Tirupati . The reel showcases the cafe's cozy, modern ...",
+            "host": "www.facebook.com",
+            "kind": "facebook-page"
+          },
+          {
+            "url": "https://www.district.in/dining/tirupati/rameshvaram-coffee-renigunta-locality?srsltid=AYCX9vLr2dMKMvMOZD-9a98z6fHWgugpPQEp4IjfypJny8iUjeTx4GEQ",
+            "name": "Rameshvaram Coffee | Renigunta Locality, Tirupati",
+            "snippet": "1-162, Railway Station, Renigunta Locality, Tirupati . ₹450 for two. Closed • Opens at 11:00 AM. Directions Share Call. Reviews. Ratings & reviews. Read more",
+            "host": "www.district.in",
+            "kind": "district"
+          }
+        ],
+        "retrievedOn": "2026-10-27"
       }
     ],
     "surrounding": [
@@ -510,6 +675,75 @@
           }
         ],
         "retrievedOn": "2026-10-26"
+      },
+      {
+        "query": "cafe Srikalahasti justdial",
+        "hits": [
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Restaurants/nct-10408936",
+            "name": "Best Restaurants near me - Srikalahasti",
+            "snippet": "120 Restaurants in Srikalahasti . Address 16th Ward 207/03., Panagal Road,Naidupeta. St, Srikalahasti - 517644 (Near By Arch) ready-to-eat meals",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Inexpensive-Restaurants-Below-Rs-500/nct-11400089",
+            "name": "Top Inexpensive Restaurants Below Rs 500 in Srikalahasti",
+            "snippet": "Best Inexpensive Restaurants Below Rs 500 in Srikalahasti - Order Food Online · Five Star and Koli Hut · Bahubali Family Restaurant · Smile Garden Family ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Indian-Restaurants-in-Kaikala-Street/nct-10263652",
+            "name": "Best Indian Restaurants in Kaikala Street, Srikalahasti",
+            "snippet": "Indian Restaurants in Kaikala Street, Srikalahasti ; Name, Green Paradise Multi Cuisine Restaurant · Red Chillies Family Restaurant ; Address, 16th Ward 207/03., ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Apollo-Fish--Dish-Restaurants",
+            "name": "Popular Restaurants Serving Apollo Fish in Srikalahasti",
+            "snippet": "Kanishka Cafe K V B Puram, srikalahasti . Kanishka Cafe. 3.919 Ratings. Panagal Road K V B Puram. Fast Food. Opens at 11:30 AM. Call Now Order online. Bawarchi ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Restaurants-Bars-in-K-V-B-Puram/nct-10408938",
+            "name": "Best Restaurants & Bars in KVB Puram, Srikalahasti",
+            "snippet": "Restaurants & Bars in K V B Puram, Srikalahasti ; Name, Green Paradise Multi Cuisine Restaurant · Brundavanam Rooftop Multicuisine Restaurant ; Address, 16th Ward ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Bahubali-Family-Restaurant/9999P8578-8578-241207145131-D6M1_BZDET/things-to-do",
+            "name": "Bahubali Family Restaurant - Srikalahasti",
+            "snippet": "Bahubali Family Restaurant caters to their needs by offering fully furnished accommodations with flexible terms. Whether it's a backpacker looking for a budget- ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Fried-Chicken-Restaurants/nct-10217195",
+            "name": "Best Fried Chicken Restaurants in Srikalahasti",
+            "snippet": "Five Star and Koli Hut · Bahubali Family Restaurant · Smile Garden Family Restaurant AC · Kanishka Multicuisine Restaurant · Mora Cafe & Restaurant · Gfc Restaurant. Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Dal-Tadka-Dish-Restaurants",
+            "name": "Popular Restaurants Serving Dal Tadka in Srikalahasti",
+            "snippet": "Kanishka Cafe K V B Puram, srikalahasti . Kanishka Cafe. 3.919 Ratings. Panagal Road K V B Puram. Fast Food. Open until 10:00 pm. Call Now Order online. Bawarchi ... Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          },
+          {
+            "url": "https://www.justdial.com/Srikalahasti/Restaurants-Bars-in-Bangaramma-Colony/nct-10408938",
+            "name": "Top Bars Restaurants in Bangaramma Colony,Srikalahasti",
+            "snippet": "Brundavanam Rooftop Multicuisine Restaurant · Green Paradise Multi Cuisine Restaurant · Arabian Kebabs · Red Chillies Family Restaurant · Shree Keerthika Hotel. Read more",
+            "host": "www.justdial.com",
+            "kind": "justdial"
+          }
+        ],
+        "retrievedOn": "2026-10-27"
       }
     ]
   }
