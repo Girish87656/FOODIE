@@ -19,10 +19,11 @@ DOC-LEVEL review layer. DB rows imported from this inventory always carry
 (queued) → 65 dropped with recorded reasons.
 
 **Review candidates queued for owner execution:** Batch-012 = 29 rows (10 T1 restaurants +
-19 T2 places) + Batch-013 = 57 rows (17 T1 food venues + 40 POI/stay places) = **86 rows**,
-plus 5 verify-confirmed candidates HELD inventory-only (names too generic to admit without
-stronger identity evidence — see duplicate-review §B/batch-013 header). Neither batch is
-executed; both await owner approval.
+19 T2 places) + Batch-013 = 57 rows (17 T1 food venues + 40 POI/stay places) + Batch-014 =
+27 rows (22 T1 restaurants + 5 T1 locality-disambiguated temples, all coordinates null by
+design) = **113 rows**, plus 5 verify-confirmed candidates HELD inventory-only (names too
+generic to admit without stronger identity evidence — see duplicate-review §B/batch-013
+header). No batch is executed; all await owner approval.
 
 ## Tirupati city centre
 
@@ -678,3 +679,22 @@ Production (live) rows re-encountered: 2 — PERAMBUR SRINIVASA SWEETS AND SNACK
 | Anjaneya Swamy Temple in Bhavani Nagar,Tirupati | Anjaneya Swamy Temple, Vedullacheruvu |
 | Sri Anjaneya Swami in Karakambadi,Tirupati - Temples | Sri Anjaneya Swami Temple, Karakambadi |
 | Bnr Mall in Stv Nagar,Tirupati | BNR Mall |
+
+## Batch-4 independent-source corroboration (2026-10-27 direct-source pass)
+
+Pending candidates whose identity a second, non-search source corroborates (exact normalized-name
+match within the same area — evidence in `evidence/tirupati-master/crossmatch-*.json`; verify stubs
+stay untouched on disk; this is NEVER labelled a web_search identity verification):
+
+- **Kalyana Venkateswara Temple, Narayanavanam** [surrounding] ← wikipedia: https://en.wikipedia.org/wiki/Narayanavanam
+- **Kalyani Dam** [surrounding] ← wikipedia: https://en.wikipedia.org/wiki/Kalyani_Dam
+- **Talakona** [surrounding] ← wikipedia: https://en.wikipedia.org/wiki/Talakona
+- **Ubbalamadugu Falls** [surrounding] ← wikipedia: https://en.wikipedia.org/wiki/Talakona
+- **Tirumala** [tirumala] ← wikipedia: https://en.wikipedia.org/wiki/Tirumala
+- **Tirupati** [tpt-central] ← wikipedia: https://en.wikipedia.org/wiki/Tirupati
+
+All other pending rows remain pending (throttled stubs and never-attempted rows unchanged).
+
+Review-queue leads from the same pass (133 names in
+evidence/tirupati-master/review-queue-new-names.json) are NOT inventory rows and are NOT counted
+anywhere — each is an unverified lead with a verbatim quote, awaiting human research.

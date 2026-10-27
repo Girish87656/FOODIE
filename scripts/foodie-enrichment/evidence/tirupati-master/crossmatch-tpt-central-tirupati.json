@@ -1,0 +1,18 @@
+{
+  "candidate": {
+    "name": "Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tirupati",
+    "group": "markets"
+  },
+  "match": {
+    "kind": "wikipedia",
+    "name": "Tirupati",
+    "url": "https://en.wikipedia.org/wiki/Tirupati",
+    "verbatimQuote": "en.wikipedia.org/wiki/Lingaraja_Temple\" title=\"Lingaraja Temple\">Lingaraj Paadal Petra Sthalam Thanjavur Tirupati Thiruvarur Thrissur <a rel=\"mw:WikiLink\" href=\"https://en.wikipedia.org/wiki/Vaikom_Sree_Mahadeva_Temple\" title=\"Vaikom Sree Mahad"
+  },
+  "rule": "exact normalized-name equality within the SAME honest area",
+  "meaning": "INDEPENDENT-SOURCE locality confirmation — the candidate's identity is corroborated by a second, non-search source. This is NOT a web_search identity verification and is never labelled as one.",
+  "previousVerifyState": "pending (throttled stub or never attempted) — stub file preserved untouched on disk",
+  "retrievedOn": "2026-10-27"
+}

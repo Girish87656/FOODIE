@@ -33,6 +33,21 @@ const official = JSON.parse(readFileSync(join(EV, "official", "official-sources.
   selfCheck: Array<{ name: string; foundInRawHtml: boolean }>;
 };
 
+/* batch-4 direct-source inputs (no search provider — recorded limitations kept) */
+const o2log = existsSync(join(EV, "official", "official2-fetch-log.json"))
+  ? JSON.parse(readFileSync(join(EV, "official", "official2-fetch-log.json"), "utf8")) as { retrievedOn: string; results: Array<{ url: string; httpStatus: number | null; bytes: number | null; pageTitle: string | null; servedHomepageShell?: boolean; note?: string; why: string; error?: string }> }
+  : null;
+const o2ext = existsSync(join(EV, "official", "official2-extractions.json"))
+  ? JSON.parse(readFileSync(join(EV, "official", "official2-extractions.json"), "utf8")) as { retrievedOn: string; pages: Array<{ page: string; sourceUrl: string; subject: string | null; entryCount: number }> }
+  : null;
+const wiki = existsSync(join(EV, "wikipedia", "wikipedia-evidence.json"))
+  ? JSON.parse(readFileSync(join(EV, "wikipedia", "wikipedia-evidence.json"), "utf8")) as { retrievedOn: string; apiLimitation: string; pages: Array<{ pageTitle: string; area: string; url: string; httpStatus: number | null; entryCount?: number; pageCoord?: { lat: number; lng: number } | null; disambiguationPage?: boolean; note?: string; error?: string }> }
+  : null;
+const rq = existsSync(join(EV, "review-queue-new-names.json"))
+  ? JSON.parse(readFileSync(join(EV, "review-queue-new-names.json"), "utf8")) as { retrievedOn: string; statusDefinition: string; tallies: { corpusUniqueNames: number; corroboratedExistingNames: number; weakMatches: number; genuinelyNewQueued: number }; genuinelyNew: Array<{ name: string; area: string; reviewPriority: string }> }
+  : null;
+const crossmatchFiles = existsSync(EV) ? readdirSync(EV).filter((f) => f.startsWith("crossmatch-")).sort() : [];
+
 const AREA_LABEL: Record<string, string> = {
   "tpt-central": "Tirupati city centre",
   "tpt-neighbourhoods": "Tirupati residential neighbourhoods",
@@ -156,10 +171,11 @@ DOC-LEVEL review layer. DB rows imported from this inventory always carry
 (queued) → ${cur.summary.dropped} dropped with recorded reasons.
 
 **Review candidates queued for owner execution:** Batch-012 = 29 rows (10 T1 restaurants +
-19 T2 places) + Batch-013 = 57 rows (17 T1 food venues + 40 POI/stay places) = **86 rows**,
-plus 5 verify-confirmed candidates HELD inventory-only (names too generic to admit without
-stronger identity evidence — see duplicate-review §B/batch-013 header). Neither batch is
-executed; both await owner approval.
+19 T2 places) + Batch-013 = 57 rows (17 T1 food venues + 40 POI/stay places) + Batch-014 =
+27 rows (22 T1 restaurants + 5 T1 locality-disambiguated temples, all coordinates null by
+design) = **113 rows**, plus 5 verify-confirmed candidates HELD inventory-only (names too
+generic to admit without stronger identity evidence — see duplicate-review §B/batch-013
+header). No batch is executed; all await owner approval.
 `;
 
 const areasInOrder = ["tpt-central", "tpt-neighbourhoods", "tirumala", "tiruchanur", "srinivasa-mangapuram", "chandragiri", "renigunta", "surrounding"];
@@ -216,6 +232,26 @@ inv += "| Raw listing title | Clean name |\n|---|---|\n";
 for (const l of cur.curationLog.filter((l) => l.action === "renamed")) {
   const m = l.reason.match(/"(.+?)" → "(.+)"/);
   inv += `| ${l.raw.replace(/\|/g, "/")} | ${m ? m[2] : l.reason} |\n`;
+}
+
+if (crossmatchFiles.length) {
+  inv += `\n## Batch-4 independent-source corroboration (${o2log?.retrievedOn ?? "2026-10-27"} direct-source pass)\n\n`;
+  inv += `Pending candidates whose identity a second, non-search source corroborates (exact normalized-name
+match within the same area — evidence in \`evidence/tirupati-master/crossmatch-*.json\`; verify stubs
+stay untouched on disk; this is NEVER labelled a web_search identity verification):
+\n`;
+  for (const f of crossmatchFiles) {
+    const d = JSON.parse(readFileSync(join(EV, f), "utf8")) as { candidate: { name: string; area: string }; match: { kind: string; url: string } };
+    inv += `- **${d.candidate.name}** [${d.candidate.area}] ← ${d.match.kind}: ${d.match.url}\n`;
+  }
+  inv += `\nAll other pending rows remain pending (throttled stubs and never-attempted rows unchanged).
+`;
+}
+if (rq) {
+  inv += `\nReview-queue leads from the same pass (${rq.tallies.genuinelyNewQueued} names in
+evidence/tirupati-master/review-queue-new-names.json) are NOT inventory rows and are NOT counted
+anywhere — each is an unverified lead with a verbatim quote, awaiting human research.
+`;
 }
 
 /* ---------------- 2. source register ---------------- */
@@ -281,6 +317,46 @@ listing pages are NOT scraped wholesale, no descriptions are copied, no Google M
 harvesting was attempted (their terms prohibit it), and no copyrighted photo was downloaded.
 `;
 
+if (o2log && wiki) {
+  reg += `\n## 6. Batch-4 direct sources (fetched WITHOUT any search provider, ${o2log.retrievedOn})\n\nThe z-ai web_search provider stayed quota-exhausted (HTTP 429) — ONE bounded probe this session,
+then paused per protocol. These sources were fetched directly instead:
+\n### 6a. tirumala.org official pages (batch-4 additions)\n\n| Source | Status | Size | Result |
+|---|---|---|---|\n`;
+  for (const r of o2log.results) {
+    // the guest-house pages carry the site-generic <title>; their real identity
+    // is the div-heading subject recorded in the extractions — prefer it
+    const o2Subject = o2ext?.pages.find((pg) => pg.sourceUrl === r.url)?.subject ?? null;
+    const result = r.servedHomepageShell
+      ? "HOMEPAGE SHELL — dead/retired URL, no place content (recorded limitation)"
+      : (o2Subject ? `real rate-table page: ${o2Subject}` : `real page: ${r.pageTitle ?? "?"}`);
+    reg += `| ${r.url} | ${r.httpStatus ?? "ERR"} | ${r.bytes ?? "—"} B | ${result} |\n`;
+  }
+  if (o2ext) {
+    const o2Venues = o2ext.pages.reduce((a, p) => a + p.entryCount, 0);
+    reg += `\nExtracted ${o2Venues} TTD accommodation venue names from the ${o2ext.pages.filter((p) => p.entryCount).length} real rate-table
+pages (official/official2-extractions.json) — documentary corroboration for the batch-013 queued
+accommodation rows; NOT new candidates.
+`;
+  }
+  reg += `\n### 6b. English Wikipedia article pages\n\n| Article | Area | Status | Entries | Page coord published |
+|---|---|---|---|---|\n`;
+  for (const p of wiki.pages) {
+    reg += `| ${p.pageTitle} | ${p.area} | ${p.httpStatus ?? "ERR"}${p.disambiguationPage ? " (disambiguation — 0 entries by guard)" : ""} | ${p.entryCount ?? 0} | ${p.pageCoord ? "yes" : "no"} |\n`;
+  }
+  const wikiEntries = wiki.pages.reduce((a, p) => a + (p.entryCount ?? 0), 0);
+  reg += `\n${wikiEntries} place-link entries (dedup per page) with verbatim sentence quotes; article-subject
+coordinates recorded only where Wikipedia itself publishes one — coordinates are NEVER inferred.
+api.php limitation: ${wiki.apiLimitation}
+`;
+  if (rq) {
+    reg += `\n### 6c. Independent-source crossmatch + review queue\n\n- Corpus: ${rq.tallies.corpusUniqueNames} unique source names → **${rq.tallies.corroboratedExistingNames} corroborate existing
+  inventory names**, ${rq.tallies.weakMatches} weak partial overlaps, ${rq.tallies.genuinelyNewQueued} genuinely new names queued for
+  review (review-queue-new-names.json — leads only, never counted as candidates).\n- ${crossmatchFiles.length} pending candidates received an independent-source locality confirmation
+  (crossmatch-*.json; inventory §Batch-4 lists them).
+`;
+  }
+}
+
 /* ---------------- 3. coverage matrix ---------------- */
 
 let cov = `# FOODIE — Tirupati Discovery Coverage Matrix
@@ -315,6 +391,16 @@ cov += `- ${active.filter((r) => r.tier === "T3").length} T3 candidates still ne
 cov += `- ${geocodeNull} geocode attempts returned no area-gated match; re-run after verification upgrades for a second chance at coordinates.\n`;
 cov += `- Official TTD pages PlacesatTirumala.aspx, MoreTemples.aspx, RestHousesInTirumala.aspx, ttdklmps.aspx and S.V. Museum.aspx were FETCHED in the batch-2 pass (HTTP 200, verbatim quotes in evidence/official/) — the 28 TTD rest-house/cottage rows in batch-013 come straight from the official rates page.\n`;
 cov += `- District/AP-tourism domains remain network-blocked from this sandbox; retry from a network with access, or provide exported content.\n`;
+
+if (o2log && wiki && rq) {
+  cov += `\n## Batch-4 direct-source evidence (no search provider, ${o2log.retrievedOn})\n\n`;
+  cov += `- web_search: still HTTP 429 (one bounded probe, then paused per protocol) — the limitation is recorded, not worked around.\n`;
+  cov += `- tirumala.org batch-4: 4 real accommodation/rate pages landed; 3 URLs (garden.aspx, theerthams.aspx, varahaswamytirumala.aspx) served the homepage shell — dead links, recorded as limitations, never treated as content.\n`;
+  cov += `- Wikipedia (bounded 15-article set, ≥4 s spacing): ${wiki.pages.reduce((a, p) => a + (p.entryCount ?? 0), 0)} place-link entries + published article coordinates only.\n`;
+  cov += `- Independent-source corroboration: ${crossmatchFiles.length} pending rows confirmed (list in the inventory doc).\n`;
+  cov += `- Review queue: ${rq.tallies.genuinelyNewQueued} genuinely new unverified leads (priority-tiered) + ${rq.tallies.weakMatches} weak overlaps — NOT added as candidates; human research required first.\n`;
+  cov += `- Small food businesses (tiffin centres, tea stalls, messes, bakeries) could NOT be expanded this pass — the accessible direct sources cover TTD accommodation/attractions/encyclopedic places only; the search provider or a directory export is required for the food categories. Recorded as a gap.\n`;
+}
 
 /* ---------------- 4. duplicate review ---------------- */
 
@@ -371,6 +457,8 @@ Honest photograph coverage for the Tirupati master inventory (${official.accesse
 2. **Batch-011's 10 attraction photos remain bundled in the repo** (with per-photo attribution in
    IMAGE-CREDITS.md) and go live only when the owner executes the Batch-011 SQL.
 3. The ${active.filter((r) => r.tier === "T3").length} T3 backlog candidates equally have no photos; the same fallback chain applies.
+4. **Batch-4 direct-source pass added no photographs** — the new evidence (TTD rate tables,
+   Wikipedia articles) is textual only; the policy above applies unchanged to every row.
 
 ## What is needed to close a photo gap
 

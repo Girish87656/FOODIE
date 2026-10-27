@@ -1,0 +1,18 @@
+{
+  "candidate": {
+    "name": "Talakona",
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+    "group": "attractions"
+  },
+  "match": {
+    "kind": "wikipedia",
+    "name": "Talakona",
+    "url": "https://en.wikipedia.org/wiki/Talakona",
+    "verbatimQuote": "Find sources: \"Talakona\" – news · newspapers · books · scholar · JSTOR ( April 2024 ) ( Learn how and when to remove this message ) Talakona is situated in Tirupati district of Andhra Pradesh , India."
+  },
+  "rule": "exact normalized-name equality within the SAME honest area",
+  "meaning": "INDEPENDENT-SOURCE locality confirmation — the candidate's identity is corroborated by a second, non-search source. This is NOT a web_search identity verification and is never labelled as one.",
+  "previousVerifyState": "pending (throttled stub or never attempted) — stub file preserved untouched on disk",
+  "retrievedOn": "2026-10-27"
+}

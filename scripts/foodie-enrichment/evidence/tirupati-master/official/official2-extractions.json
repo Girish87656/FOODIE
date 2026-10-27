@@ -1,0 +1,217 @@
+{
+  "retrievedOn": "2026-10-27",
+  "sourceHost": "www.tirumala.org (official TTD website)",
+  "areaBasis": "area assigned 'tirumala' — these are tirumala.org TIRUMALA-side accommodation rate tables; venue locality names (Alwar Tank, Narayanagiri, Hill View, Sanku Mitta) are Tirumala localities",
+  "provenance": "documentary corroboration for the batch-013 queued TTD accommodation rows (cross-checked in the prior session). These named venues are NOT new raw-worksheet candidates — no new place claims are created from these pages; unit-level rate rows are recorded with verbatim quotes for human review.",
+  "shellExclusions": [
+    "ttd-garden.html (served homepage shell — no content)",
+    "ttd-theerthams.html (served homepage shell — no content)",
+    "ttd-varahaswamytirumala.html (served homepage shell — no content)"
+  ],
+  "pages": [
+    {
+      "page": "ttd-marriagehallcotteges.html",
+      "sourceUrl": "https://www.tirumala.org/marriagehallcotteges.aspx",
+      "subject": null,
+      "area": "tirumala",
+      "extracted": [
+        {
+          "name": "Sri Venkateswara Guest House Corner Suites",
+          "verbatimQuote": "1 | Sri Venkateswara Guest House Corner Suites | 200.00 150.00 & 100.00"
+        },
+        {
+          "name": "Special Type Cottage A/C No-5 Special Type Cottage A/C No-12 Special Type Cottage A/C No-13 Special Type Cottages A/C (17) HRG 'A' Portion HRG 'B' Portion MBC Cottages (Number:20 and 22)",
+          "verbatimQuote": "2 | Special Type Cottage A/C No-5 Special Type Cottage A/C No-12 Special Type Cottage A/C No-13 Special Type Cottages A/C (17) HRG 'A' Portion HRG 'B' Portion MBC Cottages (Number:20 and 22) | 750.00 750.00 750.00 600.00 600.00 600.00"
+        },
+        {
+          "name": "Travellers Bungalow",
+          "verbatimQuote": "Travellers Bungalow | 50.00 | 24"
+        },
+        {
+          "name": "Narayanagiri Guest House - I Corner Suite",
+          "verbatimQuote": "4 | Narayanagiri Guest House - I Corner Suite | 2000.00 1500.00"
+        },
+        {
+          "name": "Narayanagiri Guest House - II Corner Suite",
+          "verbatimQuote": "5 | Narayanagiri Guest House - II Corner Suite | 2000.00 1500.00"
+        },
+        {
+          "name": "Narayanagiri Guest House - III Corner Suite",
+          "verbatimQuote": "6 | Narayanagiri Guest House - III Corner Suite | 2000.00 1500.00"
+        },
+        {
+          "name": "Srivari Kuteer Guest House (A/C) Suite No.1 to 4 entire Guest House",
+          "verbatimQuote": "7 | Srivari Kuteer Guest House (A/C) Suite No.1 to 4 entire Guest House | 1500.00"
+        },
+        {
+          "name": "Surapuram Thota Cottages",
+          "verbatimQuote": "8 | Surapuram Thota Cottages | 1500.00"
+        }
+      ],
+      "entryCount": 8
+    },
+    {
+      "page": "ttd-sripadmavathiguesthouse.html",
+      "sourceUrl": "https://www.tirumala.org/sripadmavathiguesthouse.aspx",
+      "subject": "Sri Padmavathi Guest House",
+      "area": "tirumala",
+      "extracted": [
+        {
+          "name": "Sri Padmavathi Guest House",
+          "verbatimQuote": "page heading on https://www.tirumala.org/sripadmavathiguesthouse.aspx"
+        },
+        {
+          "name": "Alwar Tank Cottages",
+          "verbatimQuote": "1 | Alwar Tank Cottages - Single rooms | 50.00 100.00"
+        },
+        {
+          "name": "Anjanadri Nagar Cottages",
+          "verbatimQuote": "2 | Anjanadri Nagar Cottages | 50.00"
+        },
+        {
+          "name": "Garudadri Nagar Cottages",
+          "verbatimQuote": "3 | Garudadri Nagar Cottages | 50.00"
+        },
+        {
+          "name": "Hill View Cottages (Ordinary)",
+          "verbatimQuote": "4 | Hill View Cottages (Ordinary) | 50.00"
+        },
+        {
+          "name": "Mangala Bavi Cottages",
+          "verbatimQuote": "5 | Mangala Bavi Cottages 2 suites 4 cottages | 100.00 200.00"
+        },
+        {
+          "name": "Ram Bagicha Guest House - I",
+          "verbatimQuote": "6 | Ram Bagicha Guest House - I | 100.00"
+        },
+        {
+          "name": "Ram Bagicha Guest House - II",
+          "verbatimQuote": "7 | Ram Bagicha Guest House - II | 100.00"
+        },
+        {
+          "name": "Ram Bagicha Guest House - III",
+          "verbatimQuote": "8 | Ram Bagicha Guest House - III | 100.00"
+        },
+        {
+          "name": "Sanku Mitta Cottages",
+          "verbatimQuote": "9 | Sanku Mitta Cottages | 50.00"
+        },
+        {
+          "name": "Seshadri Nagar Cottages",
+          "verbatimQuote": "10 | Seshadri Nagar Cottages | 50.00"
+        },
+        {
+          "name": "TB Cottages",
+          "verbatimQuote": "11 | TB Cottages - 2 Suits 2 Suits | 200.00"
+        },
+        {
+          "name": "Outside Cottages",
+          "verbatimQuote": "13 | Outside Cottages | 100.00"
+        },
+        {
+          "name": "Valley View Cottages",
+          "verbatimQuote": "14 | Valley View Cottages - 6 suites | 100.00 200.00"
+        }
+      ],
+      "entryCount": 14
+    },
+    {
+      "page": "ttd-srivenkateswaraguesthouse.html",
+      "sourceUrl": "https://www.tirumala.org/srivenkateswaraguesthouse.aspx",
+      "subject": "Sri Venkateswara Guest House",
+      "area": "tirumala",
+      "extracted": [
+        {
+          "name": "Sri Venkateswara Guest House",
+          "verbatimQuote": "page heading on https://www.tirumala.org/srivenkateswaraguesthouse.aspx"
+        },
+        {
+          "name": "Alwar Tank Cottage No.",
+          "verbatimQuote": "1 | Alwar Tank Cottage No. | 200.00"
+        },
+        {
+          "name": "Sanku Mitta Cottages",
+          "verbatimQuote": "2 | Sanku Mitta Cottages | 200.00"
+        },
+        {
+          "name": "Travellers Bungalow Cottages",
+          "verbatimQuote": "3 | Travellers Bungalow Cottages | 200.00"
+        }
+      ],
+      "entryCount": 4
+    },
+    {
+      "page": "ttd-varahaswamiguesthouse.html",
+      "sourceUrl": "https://www.tirumala.org/varahaswamiguesthouse.aspx",
+      "subject": "VarahaSwami Guest House",
+      "area": "tirumala",
+      "extracted": [
+        {
+          "name": "VarahaSwami Guest House",
+          "verbatimQuote": "page heading on https://www.tirumala.org/varahaswamiguesthouse.aspx"
+        },
+        {
+          "name": "Ampro Guest House (A/C)",
+          "verbatimQuote": "01. | Ampro Guest House (A/C) 2 big suites 1 small suite | 1500.00 750.00"
+        },
+        {
+          "name": "Bela Kuteeram A/C ( 6 suites)",
+          "verbatimQuote": "02. | Bela Kuteeram A/C ( 6 suites) | 500.00"
+        },
+        {
+          "name": "Gayathri Sadan",
+          "verbatimQuote": "03. | Gayathri Sadan 2500.00 1500.00"
+        },
+        {
+          "name": "Hari Sadan Guest House A/C (7 suites)",
+          "verbatimQuote": "04. | Hari Sadan Guest House A/C (7 suites) | 1500.00"
+        },
+        {
+          "name": "Hill View Deluxe Cottages Big Suites Small Suites",
+          "verbatimQuote": "05. | Hill View Deluxe Cottages Big Suites Small Suites | 1500.00 150.00 100.00"
+        },
+        {
+          "name": "Indira Guest House A/C( 4 suites )",
+          "verbatimQuote": "06. | Indira Guest House A/C( 4 suites ) | 2000.00"
+        },
+        {
+          "name": "Jagannadha Bhavan",
+          "verbatimQuote": "07. | Jagannadha Bhavan | 2500.00 3500.00"
+        },
+        {
+          "name": "Karam Nivas",
+          "verbatimQuote": "08. | Karam Nivas 2500.00 1500.00"
+        },
+        {
+          "name": "Lakshmi Nivas",
+          "verbatimQuote": "09. | Lakshmi Nivas | 500.00 , 600.00"
+        },
+        {
+          "name": "RajyaLakshmi Guest House A/C",
+          "verbatimQuote": "10. | RajyaLakshmi Guest House A/C | 1000.00 2500.00 3000.00 3500.00"
+        },
+        {
+          "name": "SP Guest House",
+          "verbatimQuote": "11. | SP Guest House | 2500.00 1500.00"
+        },
+        {
+          "name": "Srinikethan A/C",
+          "verbatimQuote": "12. | Srinikethan A/C | 6000.00"
+        },
+        {
+          "name": "Srinivasa Nilayam A/C",
+          "verbatimQuote": "13. | Srinivasa Nilayam A/C | 3500.00 2500.00"
+        },
+        {
+          "name": "Venkata Vijayam Guest House A/C",
+          "verbatimQuote": "14. | Venkata Vijayam Guest House A/C 3 master suites 6 other suites | 2500.00 1500.0"
+        },
+        {
+          "name": "Vidya Sadan",
+          "verbatimQuote": "15. | Vidya Sadan | 1500.00"
+        }
+      ],
+      "entryCount": 16
+    }
+  ]
+}

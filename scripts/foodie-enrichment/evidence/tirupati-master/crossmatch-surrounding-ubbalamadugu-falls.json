@@ -1,0 +1,18 @@
+{
+  "candidate": {
+    "name": "Ubbalamadugu Falls",
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ubbalamadugu_Falls",
+    "group": "attractions"
+  },
+  "match": {
+    "kind": "wikipedia",
+    "name": "Ubbalamadugu Falls",
+    "url": "https://en.wikipedia.org/wiki/Talakona",
+    "verbatimQuote": "Falls\">Kiliyur Phurlijharan Sanaghagara Talakona Ubbalamadugu Lakes <a rel=\"mw:WikiLink\" href=\"https://e"
+  },
+  "rule": "exact normalized-name equality within the SAME honest area",
+  "meaning": "INDEPENDENT-SOURCE locality confirmation — the candidate's identity is corroborated by a second, non-search source. This is NOT a web_search identity verification and is never labelled as one.",
+  "previousVerifyState": "pending (throttled stub or never attempted) — stub file preserved untouched on disk",
+  "retrievedOn": "2026-10-27"
+}

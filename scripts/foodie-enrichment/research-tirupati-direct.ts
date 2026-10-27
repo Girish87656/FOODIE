@@ -8,6 +8,10 @@
  *
  *   official2   — fetch NEW tirumala.org official pages (nav links recorded in
  *                 the saved homepage but never fetched) and save raw HTML.
+ *   extract-official2 — parse the 4 REAL saved rate-table pages into venue
+ *                 names + verbatim quotes → official/official2-extractions.json
+ *                 (documentary corroboration for batch-013 queued rows; shells
+ *                 excluded; subjects taken from page headings, not filenames).
  *   wikipedia   — fetch a BOUNDED set of English Wikipedia ARTICLE pages
  *                 (the api.php endpoint is separately rate-limited from this
  *                 sandbox — recorded limitation; article pages themselves are
@@ -49,8 +53,8 @@ mkdirSync(WIKI_DIR, { recursive: true });
 const RETRIEVED = new Date().toISOString().slice(0, 10);
 
 const phase = (process.argv[2] ?? "").toLowerCase();
-if (!["official2", "wikipedia", "crossmatch"].includes(phase)) {
-  console.error("usage: research-tirupati-direct.ts <official2|wikipedia|crossmatch>");
+if (!["official2", "wikipedia", "extract-official2", "crossmatch", "new-names"].includes(phase)) {
+  console.error("usage: research-tirupati-direct.ts <official2|wikipedia|extract-official2|crossmatch|new-names>");
   process.exit(2);
 }
 
@@ -83,7 +87,7 @@ function isHomepageShell(html: string): boolean {
 }
 
 async function runOfficial2(): Promise<void> {
-  const results: Array<{ url: string; file: string | null; httpStatus: number | null; bytes: number | null; error?: string; why: string }> = [];
+  const results: Array<{ url: string; file: string | null; httpStatus: number | null; bytes: number | null; pageTitle?: string | null; servedHomepageShell?: boolean; note?: string; error?: string; why: string }> = [];
   for (const p of OFFICIAL2_PAGES) {
     const existing = join(OFFICIAL_DIR, p.file);
     if (existsSync(existing)) {
@@ -142,7 +146,7 @@ const WIKI_PAGES: Array<{ title: string; area: string; areaTokens: RegExp }> = [
   { title: "Tirumala Venkateswara Temple", area: "tirumala", areaTokens: /\btirumala\b/i },
   { title: "Alamelu Mangapuram", area: "tiruchanur", areaTokens: /\btiruchan(oo|u)r\b|alamelu\s*manga/i },
   { title: "Srinivasa Mangapuram", area: "srinivasa-mangapuram", areaTokens: /srinivasa\s*manga/i },
-  { title: "Chandragiri, Tirupati district", area: "chandragiri", areaTokens: /\bchandragiri\b/i },
+  { title: "Chandragiri", area: "chandragiri", areaTokens: /\bchandragiri\b/i },
   { title: "Srikalahasti", area: "surrounding", areaTokens: /\bsrikalahasti\b|\bchittoor\b/i },
   { title: "Nagalapuram", area: "surrounding", areaTokens: /\bnagalapuram\b|\bchittoor\b/i },
   { title: "Talakona", area: "surrounding", areaTokens: /\btalakona\b|\bchittoor\b|\btirupati\b/i },
@@ -160,6 +164,8 @@ interface WikiEntry {
   sourceUrl: string;
   pageTitle: string;
   verbatimQuote: string | null;
+  /** how the locality attribution was established (recorded per entry) */
+  areaEvidence: "sentence-locality" | "paragraph-locality" | "name-locality";
   /** article subject coordinate when the page publishes one (geohack params) */
   pageCoord: { lat: number; lng: number } | null;
 }
@@ -182,6 +188,11 @@ function cleanText(raw: string): string {
 /** non-place link titles — conservative blocklist (films, people topics,
  *  transport hubs, language/culture meta, lists, disambiguation). */
 const WIKI_LINK_BLOCK = /(\bfilm\b|\bmovie\b|disambiguation|List of|airport|railway station|expressway|highway|National Highway|\broad\b|\bbus\b|\btrain\b|caste|language|cuisine \(|legend of|history of|timeline|portal:|Template:|File:|Category:|Help:)/i;
+/** Wikipedia navigation-chrome links (sidebar/menu namespaces). The first
+ *  run leaked these into entries because the collapsed whole-page sentence
+ *  context let them pass the gates — this blocklist runs FIRST now, and
+ *  extraction is scoped to the article body (see runWikipedia). */
+const WIKI_CHROME_LINK = /^(Main Page|Wikipedia:|Special:|Help:|Category:|Portal:|Template:|File:|Talk:|Draft:|MOS:|Manual:|MediaWiki:)/i;
 /** a link is place-ish when the title or the surrounding sentence carries
  *  place vocabulary AND the area gate can confirm locality context. */
 const PLACEISH = /\b(temple|swamy|swami|theertham|teertham|kshetram|shrine|mutt|matha|ashram|church|dargah|masjid|mosque|fort|mahal|palace|museum|zoo|park|garden|dam|lake|falls|waterfall|hill|hills|peak|cave|village|suburb|neighbourhood|neighborhood|colony|nagar|petta|peta|bazaar|market|street|pushkarini|konelu|tirtham)\b/i;
@@ -206,34 +217,89 @@ async function runWikipedia(): Promise<void> {
         const geo = /geohack\.geohack\.geohack|geohack\.com?\/[^"']*params=([\d.]+)_N_([\d.]+)_E/i.exec(raw)
           ?? /params=([\d.]+)_N_([\d.]+)_E/i.exec(raw);
         rec.pageCoord = geo ? { lat: Number(geo[1]), lng: Number(geo[2]) } : null;
-        // link extraction with sentence context
-        const text = cleanText(raw);
-        const sentences = text.split(SENTENCE_SPLIT);
+        // disambiguation guard: a disambig page's links are OTHER same-named
+        // places elsewhere — they would pass the locality gate spuriously
+        // (e.g. "Chandragiri, Kerala" naming "Chandragiri"). Such pages are
+        // recorded honestly with ZERO entries, never mined for candidates.
+        if (/may refer to/i.test(raw.slice(0, 6000))) {
+          rec.disambiguationPage = true;
+          rec.entries = [];
+          rec.entryCount = 0;
+          out.pages.push(rec);
+          console.log(`[wikipedia] ${rec.httpStatus} "${p.title}" → DISAMBIGUATION PAGE — 0 entries (guard)`);
+          await sleep(4000);
+          continue;
+        }
+        // scope extraction to the ARTICLE BODY — sidebar/nav chrome lives
+        // outside mw-content-text (the first run's whole-page collapse let
+        // "Main Page"/"Special:Random" links leak into entries; fixed here)
+        const bodyStart = raw.indexOf('id="mw-content-text"');
+        const bodyEndIdx = Math.min(...[raw.indexOf('id="catlinks"'), raw.indexOf("printfooter"), raw.length].filter((n) => n > 0));
+        const articleBody = bodyStart >= 0 ? raw.slice(bodyStart, bodyEndIdx > bodyStart ? bodyEndIdx : undefined) : raw;
+        if (bodyStart < 0) rec.note = "mw-content-text marker not found — extraction fell back to full HTML (chrome-leak risk; recorded)";
         const seen = new Map<string, WikiEntry>();
-        const linkRe = /<a\s+href="\/wiki\/([^"#?][^"]*)"[^>]*?(?:title="([^"]*)")?[^>]*>([\s\S]*?)<\/a>/g;
+        // anchors in the served HTML come in TWO forms: relative
+        // (/wiki/X — nav chrome) and ABSOLUTE with attributes before href
+        // (<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/X"> —
+        // article-body wikilinks). Both must match; chrome filtering then
+        // removes the relative-form namespace links.
+        const linkRe = /<a\s[^>]*?href="(?:https:\/\/en\.wikipedia\.org)?\/wiki\/([^"#?][^"]*)"[^>]*?>([\s\S]*?)<\/a>/g;
         let m: RegExpExecArray | null;
-        while ((m = linkRe.exec(raw)) !== null) {
+        while ((m = linkRe.exec(articleBody)) !== null) {
           const hrefTitle = decodeURIComponent(m[1].replace(/_/g, " "));
-          const titleAttr = m[2] ? decodeURIComponent(m[2]) : hrefTitle;
-          const label = cleanText(m[3]) || titleAttr;
+          const label = cleanText(m[2]) || hrefTitle;
           if (!label || label.length < 4 || label.length > 80) continue;
+          if (hrefTitle.length < 4 || hrefTitle.length > 100) continue;
+          if (WIKI_CHROME_LINK.test(hrefTitle) || hrefTitle.includes(":")) continue; // namespace chrome — blocked FIRST
           if (WIKI_LINK_BLOCK.test(hrefTitle) || WIKI_LINK_BLOCK.test(label)) continue;
           if (/^(List of|Index of|Outline of)/i.test(hrefTitle)) continue;
-          // find the sentence containing this label (first occurrence)
-          const needle = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-          const sent = sentences.find((s) => new RegExp(`\\b${needle}\\b`, "i").test(s));
+          const name = hrefTitle.split("(")[0].trim();
+          if (!name || name.length < 4) continue;
+          // LOCAL sentence: ±400 chars around the anchor inside the article
+          // body, cleaned and sentence-split (no global whole-page collapse —
+          // that is what let chrome links pass in the first run).
+          const from = Math.max(0, (m.index ?? 0) - 400);
+          const win = cleanText(articleBody.slice(from, (m.index ?? 0) + m[0].length + 400));
+          const esc = (v: string) => v.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          const sent =
+            win.split(SENTENCE_SPLIT).find((s) => new RegExp(`\\b${esc(label)}\\b`, "i").test(s))
+            ?? win.split(SENTENCE_SPLIT).find((s) => new RegExp(`\\b${esc(name)}\\b`, "i").test(s))
+            ?? null;
           if (!sent) continue;
-          const contextText = sent;
-          if (!PLACEISH.test(label) && !PLACEISH.test(hrefTitle) && !PLACEISH.test(contextText)) continue;
-          // locality gate: the sentence or the title must name the page's area
-          if (!p.areaTokens.test(contextText) && !p.areaTokens.test(label) && !p.areaTokens.test(hrefTitle)) continue;
-          const name = titleAttr.split("(")[0].trim();
-          if (!name || seen.has(name)) continue;
-          const quote = contextText.slice(0, 300);
-          seen.set(name, { name, area: p.area, sourceUrl: url, pageTitle: p.title, verbatimQuote: quote, pageCoord: (rec.pageCoord as { lat: number; lng: number } | null) ?? null });
+          if (!PLACEISH.test(label) && !PLACEISH.test(name) && !PLACEISH.test(sent)) continue;
+          // locality gate, with the evidence tier recorded per entry:
+          //   sentence-locality — the sentence itself names the area;
+          //   paragraph-locality — the ±1200 paragraph names the area (the
+          //     article's locality narrative; the sentence alone often omits
+          //     the area word — e.g. teertham descriptions inside the Tirumala
+          //     article body);
+          //   name-locality — the link name itself carries the area token.
+          const wide = cleanText(articleBody.slice(Math.max(0, (m.index ?? 0) - 1200), (m.index ?? 0) + m[0].length + 1200));
+          let areaEvidence: WikiEntry["areaEvidence"] | null = null;
+          if (p.areaTokens.test(sent)) areaEvidence = "sentence-locality";
+          else if (p.areaTokens.test(label) || p.areaTokens.test(name)) areaEvidence = "name-locality";
+          else if (p.areaTokens.test(wide)) areaEvidence = "paragraph-locality";
+          if (!areaEvidence) continue;
+          if (seen.has(name)) continue;
+          const quote = sent.slice(0, 300);
+          seen.set(name, { name, area: p.area, sourceUrl: url, pageTitle: p.title, verbatimQuote: quote, areaEvidence, pageCoord: (rec.pageCoord as { lat: number; lng: number } | null) ?? null });
         }
-        rec.entries = Array.from(seen.values());
-        rec.entryCount = rec.entries.length;
+        // The article SUBJECT itself is independent-source evidence for its own
+        // name+area: the page documents the place (infobox location, body lede,
+        // published coordinate). Wikipedia never self-links the subject, so the
+        // link loop above cannot capture it — add it explicitly, quoted from
+        // the first body sentence that names it.
+        const subjName = p.title.split("(")[0].trim();
+        if (subjName.length >= 4 && !seen.has(subjName)) {
+          const subjRe = new RegExp(`\\b${subjName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+          const subjSent = cleanText(articleBody).split(SENTENCE_SPLIT).find((s) => subjRe.test(s)) ?? null;
+          if (subjSent) {
+            seen.set(subjName, { name: subjName, area: p.area, sourceUrl: url, pageTitle: p.title, verbatimQuote: subjSent.slice(0, 300), areaEvidence: "sentence-locality", pageCoord: (rec.pageCoord as { lat: number; lng: number } | null) ?? null });
+          }
+        }
+        const entriesFinal = Array.from(seen.values());
+        rec.entries = entriesFinal;
+        rec.entryCount = entriesFinal.length;
       } else {
         rec.note = `HTTP ${res.status} — recorded, not retried`;
       }
@@ -251,6 +317,104 @@ async function runWikipedia(): Promise<void> {
 }
 
 /* ------------------------------------------------------------------ */
+/* Phase B2: extract-official2 — venue names from the 4 REAL official   */
+/* ------------------------------------------------------------------ */
+
+/** The 4 REAL official2 pages (the other 3 URLs served the homepage shell —
+ *  see official2-fetch-log.json). Subjects are derived from each page's own
+ *  heading, never from the filename; a page with no guest-house heading gets
+ *  subject:null and only its rate-table venue rows are mined. */
+const O2_REAL_PAGES: Array<{ file: string; url: string }> = [
+  { file: "ttd-marriagehallcotteges.html", url: "https://www.tirumala.org/marriagehallcotteges.aspx" },
+  { file: "ttd-sripadmavathiguesthouse.html", url: "https://www.tirumala.org/sripadmavathiguesthouse.aspx" },
+  { file: "ttd-srivenkateswaraguesthouse.html", url: "https://www.tirumala.org/srivenkateswaraguesthouse.aspx" },
+  { file: "ttd-varahaswamiguesthouse.html", url: "https://www.tirumala.org/varahaswamiguesthouse.aspx" },
+];
+
+function cellText(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&#160;|&nbsp;/g, " ")
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** rate-table header cells — never venue names */
+const O2_HEADER_CELL = /^(sl\s*no\.?|s\.?no\.?|name|rate per unit.*|per day.*|cost|cottage|no\.?|number|description)$/i;
+/** unit sub-descriptions inside a venue row — "2 suites", "- Single rooms",
+ *  "Corner Suite", "Deluxe Cottages", "3 master suites" — never venue names */
+const O2_UNIT_DESC = /^(\d+\s+)?(-\s*)?(single|double|corner|deluxe|big|small|other|master|ordinary|\d+)?\s*(suites?|suits?|rooms?|cottages?)(\s+no\.?\s*[\d,]+)?$/i;
+
+/** display-name trimmer: strips unit sub-descriptions / rate numbers that the
+ *  page glues into a venue name cell ("Gayathri Sadan 2500.00 1500.00" →
+ *  "Gayathri Sadan"; "Alwar Tank Cottages - Single rooms" → "Alwar Tank
+ *  Cottages"; "Mangala Bavi Cottages 2 suites 4 cottages" → "Mangala Bavi
+ *  Cottages"). The verbatim quote keeps the full raw cell; only the display
+ *  name is normalized. Safe-by-construction: a bare trailing unit word is
+ *  NEVER stripped ("Mangala Bavi Cottages" stays whole) — stripping requires
+ *  a leading digit or a dash separator. */
+function trimNameTail(v: string): string {
+  let s = v;
+  for (;;) {
+    const next = s
+      .replace(/\s+\d+(?:\.\d{1,2})?\s*(?:[a-z]+\s+)?(?:suites?|suits?|rooms?|cottages?)\s*$/i, "")
+      .replace(/\s*[-–]\s*(?:single|double|corner|deluxe|big|small|other|master|ordinary)?\s*(?:suites?|suits?|rooms?|cottages?)(?:\s+no\.?\s*[\d,]+)?\s*$/i, "")
+      .replace(/(?:\s+\d+(?:\.\d{1,2})?)+\s*$/, "")
+      .replace(/\s*[-–]\s*$/, "");
+    if (next === s) return s.trim();
+    s = next;
+  }
+}
+
+async function runExtractOfficial2(): Promise<void> {
+  const out = {
+    retrievedOn: RETRIEVED,
+    sourceHost: "www.tirumala.org (official TTD website)",
+    areaBasis: "area assigned 'tirumala' — these are tirumala.org TIRUMALA-side accommodation rate tables; venue locality names (Alwar Tank, Narayanagiri, Hill View, Sanku Mitta) are Tirumala localities",
+    provenance: "documentary corroboration for the batch-013 queued TTD accommodation rows (cross-checked in the prior session). These named venues are NOT new raw-worksheet candidates — no new place claims are created from these pages; unit-level rate rows are recorded with verbatim quotes for human review.",
+    shellExclusions: ["ttd-garden.html", "ttd-theerthams.html", "ttd-varahaswamytirumala.html"].map((f) => `${f} (served homepage shell — no content)`),
+    pages: [] as Array<Record<string, unknown>>,
+  };
+  for (const p of O2_REAL_PAGES) {
+    const raw = readFileSync(join(OFFICIAL_DIR, p.file), "utf8");
+    // page subject from the page's own heading (never the filename) — the TTD
+    // site titles guest-house pages with a styled <div>, not <h1>/<h2>
+    const heading = /<h[12][^>]*>([\s\S]*?)<\/h[12]>/i.exec(raw)?.[1]
+      ?? /<(?:div|span|p)[^>]*class="[^"]*(?:title|heading|header)[^"]*"[^>]*>([\s\S]{0,300}?)<\/(?:div|span|p)>/i.exec(raw)?.[1]
+      ?? "";
+    const subjectRaw = cellText(heading);
+    const subject = /guest\s*house/i.test(subjectRaw) ? subjectRaw : null;
+    // rate-table rows → venue-name cells
+    const extracted = new Map<string, { name: string; verbatimQuote: string | null }>();
+    const rows = raw.match(/<tr[^>]*>[\s\S]*?<\/tr>/gi) ?? [];
+    for (const tr of rows) {
+      if (!/rate\s*per\s*unit/i.test(tr) && !/\d{2,4}\.\d{2}/.test(tr)) continue; // rate rows only
+      const cells = (tr.match(/<t[dh][^>]*>[\s\S]*?<\/t[dh]>/gi) ?? []).map((c) => cellText(c.replace(/^<t[dh][^>]*>|<\/t[dh]>$/gi, "")));
+      const quote = cells.filter(Boolean).join(" | ").slice(0, 300);
+      for (const c of cells) {
+        if (!c || !/[A-Za-z]{4}/.test(c)) continue; // needs ≥4 letters
+        if (/^[\d.,\s&()/-]+$/.test(c)) continue; // pure numbers/rates
+        if (O2_HEADER_CELL.test(c)) continue;
+        if (O2_UNIT_DESC.test(c)) continue;
+        const key0 = c.replace(/^\s+/, "");
+        const key = trimNameTail(key0) || key0;
+        if (!extracted.has(key)) extracted.set(key, { name: key, verbatimQuote: quote });
+      }
+    }
+    const entries = Array.from(extracted.values());
+    if (subject && !entries.some((e) => e.name === subject)) entries.unshift({ name: subject, verbatimQuote: `page heading on ${p.url}` });
+    out.pages.push({ page: p.file, sourceUrl: p.url, subject, area: "tirumala", extracted: entries, entryCount: entries.length });
+    console.log(`[extract-official2] ${p.file}: subject="${subject ?? "—"}" venues=${entries.length}`);
+  }
+  writeFileSync(join(OFFICIAL_DIR, "official2-extractions.json"), JSON.stringify(out, null, 2));
+  const total = out.pages.reduce((a, pg) => a + ((pg.entryCount as number) ?? 0), 0);
+  console.log(`[extract-official2] DONE — ${out.pages.length} pages, ${total} venue names → official/official2-extractions.json`);
+}
+
+/* ------------------------------------------------------------------ */
 /* Phase C: crossmatch — independent-source confirmation for PENDING   */
 /* ------------------------------------------------------------------ */
 
@@ -262,7 +426,35 @@ const norm = (s: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
-interface SourceName { name: string; norm: string; area: string; kind: string; url: string; quote: string | null }
+interface SourceName { name: string; norm: string; area: string; kind: string; url: string; quote: string | null; pageTitle?: string | null; areaEvidence?: string | null }
+
+/** independent-source name corpus — shared by crossmatch (pending-row
+ *  confirmation) and new-names (review queue) */
+async function buildCorpus(): Promise<SourceName[]> {
+  const corpus: SourceName[] = [];
+  // wikipedia entries
+  const wikiPath = join(WIKI_DIR, "wikipedia-evidence.json");
+  if (existsSync(wikiPath)) {
+    const wiki = JSON.parse(readFileSync(wikiPath, "utf8")) as { pages: Array<{ area: string; url: string; pageTitle: string; entries?: Array<{ name: string; verbatimQuote: string | null; areaEvidence?: string | null }> }> };
+    for (const page of wiki.pages) {
+      for (const e of page.entries ?? []) {
+        corpus.push({ name: e.name, norm: norm(e.name), area: page.area, kind: "wikipedia", url: page.url, quote: e.verbatimQuote, pageTitle: page.pageTitle, areaEvidence: e.areaEvidence ?? null });
+      }
+    }
+  }
+  // NEW official page extractions (official2 pages only — their per-page
+  // area is known; the legacy 18 pages' places already flow via OFFICIAL_NAME_MAP)
+  const o2Path = join(OFFICIAL_DIR, "official2-extractions.json");
+  if (existsSync(o2Path)) {
+    const o2 = JSON.parse(readFileSync(o2Path, "utf8")) as { pages: Array<{ area: string; sourceUrl: string; page: string; extracted: Array<{ name: string; verbatimQuote: string | null }> }> };
+    for (const page of o2.pages) {
+      for (const e of page.extracted ?? []) {
+        corpus.push({ name: e.name, norm: norm(e.name), area: page.area, kind: "official-ttd", url: page.sourceUrl, quote: e.verbatimQuote, pageTitle: page.page });
+      }
+    }
+  }
+  return corpus;
+}
 
 async function runCrossmatch(): Promise<void> {
   // 1. load the raw worksheet (evidence-derived candidates)
@@ -270,28 +462,7 @@ async function runCrossmatch(): Promise<void> {
     rows: Array<{ area: string; name: string; verification: { queried: boolean; areaConfirmed: boolean }; verificationThrottled?: boolean; sourceUrl: string; group: string }>;
   };
   // 2. build the independent-source name corpus (per area) from NEW sources
-  const corpus: SourceName[] = [];
-  // 2a. wikipedia entries
-  const wikiPath = join(WIKI_DIR, "wikipedia-evidence.json");
-  if (existsSync(wikiPath)) {
-    const wiki = JSON.parse(readFileSync(wikiPath, "utf8")) as { pages: Array<{ area: string; url: string; pageTitle: string; entries?: Array<{ name: string; verbatimQuote: string | null }> }> };
-    for (const page of wiki.pages) {
-      for (const e of page.entries ?? []) {
-        corpus.push({ name: e.name, norm: norm(e.name), area: page.area, kind: "wikipedia", url: page.url, quote: e.verbatimQuote });
-      }
-    }
-  }
-  // 2b. NEW official page extractions (official2 pages only — their per-page
-  //     area is known; the legacy 18 pages' places already flow via OFFICIAL_NAME_MAP)
-  const o2Path = join(OFFICIAL_DIR, "official2-extractions.json");
-  if (existsSync(o2Path)) {
-    const o2 = JSON.parse(readFileSync(o2Path, "utf8")) as { pages: Array<{ area: string; sourceUrl: string; page: string; extracted: Array<{ name: string; verbatimQuote: string | null }> }> };
-    for (const page of o2.pages) {
-      for (const e of page.extracted ?? []) {
-        corpus.push({ name: e.name, norm: norm(e.name), area: page.area, kind: "official-ttd", url: page.sourceUrl, quote: e.verbatimQuote });
-      }
-    }
-  }
+  const corpus = await buildCorpus();
   console.log(`[crossmatch] corpus: ${corpus.length} independent-source names`);
   // 3. match PENDING candidates only (no completed verify evidence)
   const stats = { pending: 0, matched: 0, written: 0 };
@@ -326,6 +497,74 @@ async function runCrossmatch(): Promise<void> {
   console.log(`[crossmatch] TALLY — pending: ${stats.pending}, independent-source matches: ${stats.matched}, crossmatch files written: ${stats.written}`);
 }
 
+/* ------------------------------------------------------------------ */
+/* Phase D: new-names — genuinely NEW names → REVIEW QUEUE (never       */
+/* counted as candidates; each needs human research before any batch)  */
+/* ------------------------------------------------------------------ */
+
+/** obvious non-place concepts that slip past PLACEISH via their context —
+ *  excluded from the review queue (they are never place claims) */
+const GENERIC_NAME = /^(vishnu|lakshmi|krishna|shiva|venkateswara|venkateshwara|andhra pradesh|tirupati district|tirupati \(dist.*\)|india|indian state|postal code|time zone|vehicle registration.*|dam|gravity dam|drainage basin|village|middle ages|britannica|encyclop|krishnadevaraya|vijayanagara empire|east india company|eastern ghats|divya desam|alvars?|vaishnavism|deciduous|laddu|tirupati laddu|matsya|garuda|ramanuja|bhoga srinivasa|eparchaean unconformity|swarnamukhi|venkata|sapthagiri|gopuram|vimana|mandal|ib-settlement.*|mw-.*)$/i;
+/** place vocabulary that must appear in the NAME itself (not just context)
+ *  for a queue entry */
+const PLACE_TOKEN_IN_NAME = /\b(temple|swamy|swami|theertham|teertham|kshetram|shrine|mutt|matha|ashram|church|dargah|masjid|mosque|fort|mahal|palace|museum|zoo|park|garden|dam|lake|falls|waterfall|hill|hills|peak|cave|reservoir|pushkarini|kone|guest house|cottages?|kuteer|sadan|nivas|bhavan|arch|beach|valley|bungalow|ghat)\b/i;
+
+async function runNewNames(): Promise<void> {
+  // 1. inventory universe: raw + curated worksheet names (batches 011-014 are
+  //    generated FROM this same universe; no separate name set exists)
+  const ws = JSON.parse(readFileSync(join(HERE, "worksheets", "tirupati-master.json"), "utf8")) as { rows: Array<{ area: string; name: string }> };
+  const cur = JSON.parse(readFileSync(join(HERE, "worksheets", "tirupati-master-curated.json"), "utf8")) as { rows: Array<{ area: string; name: string; rawNames?: string[] }> };
+  const invNames = new Set<string>();
+  for (const r of ws.rows) invNames.add(norm(r.name));
+  for (const r of cur.rows) {
+    invNames.add(norm(r.name));
+    for (const rn of r.rawNames ?? []) invNames.add(norm(rn));
+  }
+  // 2. corpus
+  const corpus = await buildCorpus();
+  const seenName = new Set<string>();
+  const genuinelyNew: Array<Record<string, unknown>> = [];
+  const weakMatches: Array<Record<string, unknown>> = [];
+  let exactExisting = 0;
+  for (const c of corpus) {
+    if (seenName.has(c.norm)) continue;
+    seenName.add(c.norm);
+    if (GENERIC_NAME.test(c.norm)) continue;
+    if (invNames.has(c.norm)) { exactExisting++; continue; } // corroboration of a known name — not new
+    // weak overlap: one name contains the other (shorter side ≥6 chars)
+    let weak: string | null = null;
+    for (const inv of invNames) {
+      if (inv.length < 6) continue;
+      if (c.norm.includes(inv) || inv.includes(c.norm)) { weak = inv; break; }
+    }
+    const rec = { name: c.name, area: c.area, kind: c.kind, url: c.url, pageTitle: c.pageTitle ?? null, verbatimQuote: c.quote };
+    if (weak) { weakMatches.push({ ...rec, overlapsKnownName: weak }); continue; }
+    // queue bar: a place token IN the name, or sentence-locality evidence
+    const placeToken = PLACE_TOKEN_IN_NAME.test(c.name);
+    const strongSentence = c.areaEvidence === "sentence-locality";
+    if (!placeToken && !strongSentence) continue; // noise — not queued
+    // review priority: proximity language in the quote ("in/at/near Tirupati",
+    // possessives) is the strongest human signal; corpus entries can also be
+    // UNRELATED places that merely share article context (e.g. Khajuraho/
+    // Bhubaneswar temples cited in architecture comparisons) — the quote is
+    // the arbiter, and LOW priority flags exactly those for fast triage.
+    const proximity = /\b(?:in|at|near|around|of|from)\s+(?:Tirupati|Tirumala|Tiruchanoor|Tiruchanur|Chandragiri|Renigunta|Srinivasa\s+Mangapuram|Nagalapuram|Srikalahasti|Narayanavanam|Chittoor)|\bTirupati's\b|\bTirumala's\b/i.test(c.quote ?? "");
+    const reviewPriority = placeToken && proximity ? "HIGH" : (placeToken || (strongSentence && proximity)) ? "MEDIUM" : "LOW";
+    genuinelyNew.push({ ...rec, areaEvidence: c.areaEvidence ?? null, placeTokenInName: placeToken, proximityInQuote: proximity, reviewPriority });
+  }
+  const out = {
+    retrievedOn: RETRIEVED,
+    statusDefinition: "REVIEW QUEUE ONLY — these names are NOT counted as candidates anywhere in the pipeline; they carry no verification beyond the quoted source text; each requires human research (address, operation status, category) before any batch could ever be generated. NOTE: entries include UNRELATED places that share article context (architecture comparisons, history mentions) — the verbatimQuote is the arbiter; reviewPriority HIGH means the quote itself ties the name to the locality with proximity language.",
+    whyNotCandidates: "web_search is quota-exhausted (recorded limitation); identity verification therefore cannot run for new names this session — they enter the queue as leads with provenance, never as verified or even partially-verified records",
+    universe: { rawWorksheetRows: ws.rows.length, curatedWorksheetRows: cur.rows.length, inventoryNameNorms: invNames.size },
+    tallies: { corpusUniqueNames: seenName.size + exactExisting, corroboratedExistingNames: exactExisting, weakMatches: weakMatches.length, genuinelyNewQueued: genuinelyNew.length },
+    genuinelyNew,
+    weakMatches,
+  };
+  writeFileSync(join(EV, "review-queue-new-names.json"), JSON.stringify(out, null, 2));
+  console.log(`[new-names] corpus unique: ${seenName.size + exactExisting}, corroborated existing: ${exactExisting}, weak: ${weakMatches.length}, genuinely new queued: ${genuinelyNew.length} → review-queue-new-names.json`);
+}
+
 switch (phase) {
   case "official2":
     runOfficial2().catch((e) => { console.error("FATAL:", e); process.exit(1); });
@@ -333,7 +572,13 @@ switch (phase) {
   case "wikipedia":
     runWikipedia().catch((e) => { console.error("FATAL:", e); process.exit(1); });
     break;
+  case "extract-official2":
+    runExtractOfficial2().catch((e) => { console.error("FATAL:", e); process.exit(1); });
+    break;
   case "crossmatch":
     runCrossmatch().catch((e) => { console.error("FATAL:", e); process.exit(1); });
+    break;
+  case "new-names":
+    runNewNames().catch((e) => { console.error("FATAL:", e); process.exit(1); });
     break;
 }

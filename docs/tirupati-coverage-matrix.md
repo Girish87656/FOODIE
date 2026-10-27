@@ -25,3 +25,12 @@ cells are honest gaps with a next action — completeness is never claimed while
 - 151 geocode attempts returned no area-gated match; re-run after verification upgrades for a second chance at coordinates.
 - Official TTD pages PlacesatTirumala.aspx, MoreTemples.aspx, RestHousesInTirumala.aspx, ttdklmps.aspx and S.V. Museum.aspx were FETCHED in the batch-2 pass (HTTP 200, verbatim quotes in evidence/official/) — the 28 TTD rest-house/cottage rows in batch-013 come straight from the official rates page.
 - District/AP-tourism domains remain network-blocked from this sandbox; retry from a network with access, or provide exported content.
+
+## Batch-4 direct-source evidence (no search provider, 2026-10-27)
+
+- web_search: still HTTP 429 (one bounded probe, then paused per protocol) — the limitation is recorded, not worked around.
+- tirumala.org batch-4: 4 real accommodation/rate pages landed; 3 URLs (garden.aspx, theerthams.aspx, varahaswamytirumala.aspx) served the homepage shell — dead links, recorded as limitations, never treated as content.
+- Wikipedia (bounded 15-article set, ≥4 s spacing): 494 place-link entries + published article coordinates only.
+- Independent-source corroboration: 6 pending rows confirmed (list in the inventory doc).
+- Review queue: 133 genuinely new unverified leads (priority-tiered) + 53 weak overlaps — NOT added as candidates; human research required first.
+- Small food businesses (tiffin centres, tea stalls, messes, bakeries) could NOT be expanded this pass — the accessible direct sources cover TTD accommodation/attractions/encyclopedic places only; the search provider or a directory export is required for the food categories. Recorded as a gap.

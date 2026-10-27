@@ -1,0 +1,18 @@
+{
+  "candidate": {
+    "name": "Kalyana Venkateswara Temple, Narayanavanam",
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org",
+    "group": "temples"
+  },
+  "match": {
+    "kind": "wikipedia",
+    "name": "Kalyana Venkateswara Temple, Narayanavanam",
+    "url": "https://en.wikipedia.org/wiki/Narayanavanam",
+    "verbatimQuote": "The town is known for Kalyana Venkateswara Temple dedicated to Lord Venkateswara and constructed in 1541 AD. <span class="
+  },
+  "rule": "exact normalized-name equality within the SAME honest area",
+  "meaning": "INDEPENDENT-SOURCE locality confirmation — the candidate's identity is corroborated by a second, non-search source. This is NOT a web_search identity verification and is never labelled as one.",
+  "previousVerifyState": "pending (throttled stub or never attempted) — stub file preserved untouched on disk",
+  "retrievedOn": "2026-10-27"
+}

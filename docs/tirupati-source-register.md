@@ -86,3 +86,56 @@ Hosts that actually surfaced allow-listed hits in this pass:
 Usage policy: only the identity of a listing (name + URL + public snippet) is used as evidence;
 listing pages are NOT scraped wholesale, no descriptions are copied, no Google Maps bulk
 harvesting was attempted (their terms prohibit it), and no copyrighted photo was downloaded.
+
+## 6. Batch-4 direct sources (fetched WITHOUT any search provider, 2026-10-27)
+
+The z-ai web_search provider stayed quota-exhausted (HTTP 429) — ONE bounded probe this session,
+then paused per protocol. These sources were fetched directly instead:
+
+### 6a. tirumala.org official pages (batch-4 additions)
+
+| Source | Status | Size | Result |
+|---|---|---|---|
+| https://www.tirumala.org/garden.aspx | 200 | 218151 B | HOMEPAGE SHELL — dead/retired URL, no place content (recorded limitation) |
+| https://www.tirumala.org/theerthams.aspx | 200 | 218151 B | HOMEPAGE SHELL — dead/retired URL, no place content (recorded limitation) |
+| https://www.tirumala.org/marriagehallcotteges.aspx | 200 | 61898 B | real page: Marriage halls and Cottages |
+| https://www.tirumala.org/sripadmavathiguesthouse.aspx | 200 | 59685 B | real rate-table page: Sri Padmavathi Guest House |
+| https://www.tirumala.org/srivenkateswaraguesthouse.aspx | 200 | 55624 B | real rate-table page: Sri Venkateswara Guest House |
+| https://www.tirumala.org/varahaswamiguesthouse.aspx | 200 | 60566 B | real rate-table page: VarahaSwami Guest House |
+| https://www.tirumala.org/varahaswamytirumala.aspx | 200 | 218151 B | HOMEPAGE SHELL — dead/retired URL, no place content (recorded limitation) |
+
+Extracted 42 TTD accommodation venue names from the 4 real rate-table
+pages (official/official2-extractions.json) — documentary corroboration for the batch-013 queued
+accommodation rows; NOT new candidates.
+
+### 6b. English Wikipedia article pages
+
+| Article | Area | Status | Entries | Page coord published |
+|---|---|---|---|---|
+| Tirupati | tpt-central | 200 | 81 | yes |
+| Tirumala | tirumala | 200 | 86 | yes |
+| Tirumala Venkateswara Temple | tirumala | 200 | 142 | no |
+| Alamelu Mangapuram | tiruchanur | 200 | 15 | no |
+| Srinivasa Mangapuram | srinivasa-mangapuram | 200 | 14 | yes |
+| Chandragiri | chandragiri | 200 | 15 | yes |
+| Srikalahasti | surrounding | 200 | 9 | yes |
+| Nagalapuram | surrounding | 200 | 12 | yes |
+| Talakona | surrounding | 200 | 19 | no |
+| Kapila Theertham | tpt-central | 200 | 16 | no |
+| Sri Venkateswara National Park | surrounding | 200 | 28 | no |
+| Narayanavanam | surrounding | 200 | 4 | yes |
+| Kalyani Dam | surrounding | 200 | 23 | no |
+| Sri Venkateswara Zoological Park | tpt-neighbourhoods | 200 | 21 | yes |
+| Renigunta | renigunta | 200 | 9 | yes |
+
+494 place-link entries (dedup per page) with verbatim sentence quotes; article-subject
+coordinates recorded only where Wikipedia itself publishes one — coordinates are NEVER inferred.
+api.php limitation: en.wikipedia.org api.php returned HTTP 429 from this shared sandbox egress IP (recorded limitation); ARTICLE pages fetch fine and were used instead. Bounded set, >=4 s spacing, page-subject data only — no bulk harvesting.
+
+### 6c. Independent-source crossmatch + review queue
+
+- Corpus: 352 unique source names → **41 corroborate existing
+  inventory names**, 53 weak partial overlaps, 133 genuinely new names queued for
+  review (review-queue-new-names.json — leads only, never counted as candidates).
+- 6 pending candidates received an independent-source locality confirmation
+  (crossmatch-*.json; inventory §Batch-4 lists them).

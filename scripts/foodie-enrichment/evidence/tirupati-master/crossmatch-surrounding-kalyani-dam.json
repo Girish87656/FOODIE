@@ -1,0 +1,18 @@
+{
+  "candidate": {
+    "name": "Kalyani Dam",
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+    "group": "attractions"
+  },
+  "match": {
+    "kind": "wikipedia",
+    "name": "Kalyani Dam",
+    "url": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+    "verbatimQuote": "id=\"mw-content-text\" class=\"mw-body-content\"> Dam in Andhra Pradesh, India Dam in Tirupati district, Andhra Pradesh Kalyani Dam Kalyani Dam Location within Andhra Pradesh Official name Kalyani Dam Country India Location Tirupati , Tirupati district , Andhra Pradesh Coordinates 13°39′27.5″N 79°16′9.4"
+  },
+  "rule": "exact normalized-name equality within the SAME honest area",
+  "meaning": "INDEPENDENT-SOURCE locality confirmation — the candidate's identity is corroborated by a second, non-search source. This is NOT a web_search identity verification and is never labelled as one.",
+  "previousVerifyState": "pending (throttled stub or never attempted) — stub file preserved untouched on disk",
+  "retrievedOn": "2026-10-27"
+}
