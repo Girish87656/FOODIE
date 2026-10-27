@@ -1,0 +1,1120 @@
+{
+  "retrievedOn": "2026-10-27",
+  "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+  "apiLimitation": "en.wikipedia.org api.php returned HTTP 429 from this shared sandbox egress IP (recorded limitation); ARTICLE pages fetch fine and were used instead. Bounded set, >=4 s spacing, page-subject data only — no bulk harvesting.",
+  "pages": [
+    {
+      "pageTitle": "Tirupati",
+      "area": "tpt-central",
+      "url": "https://en.wikipedia.org/wiki/Tirupati",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.6355,
+        "lng": 79.4236
+      },
+      "entries": [],
+      "entryCount": 0
+    },
+    {
+      "pageTitle": "Tirumala",
+      "area": "tirumala",
+      "url": "https://en.wikipedia.org/wiki/Tirumala",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.680916,
+        "lng": 79.3506
+      },
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Special:Random",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Special:Search",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Special:WhatLinksHere/Tirumala",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        },
+        {
+          "name": "Special:RecentChangesLinked/Tirumala",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
+          "pageTitle": "Tirumala",
+          "verbatimQuote": "Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": {
+            "lat": 13.680916,
+            "lng": 79.3506
+          }
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Tirumala Venkateswara Temple",
+      "area": "tirumala",
+      "url": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": null,
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Random",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Search",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:WhatLinksHere/Venkateswara Temple, Tirumala",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChangesLinked/Venkateswara Temple, Tirumala",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Venkateswara Temple, Tirumala - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance D",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:General disclaimer",
+          "area": "tirumala",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+          "pageTitle": "Tirumala Venkateswara Temple",
+          "verbatimQuote": "Privacy policy About Wikipedia Disclaimers Contact Wikipedia Legal & safety contacts Code of Conduct Developers Statistics Cookie statement Mobile view Search Search Toggle the table of contents Venkateswara Temple, Tirumala 25 languages Add topic",
+          "pageCoord": null
+        }
+      ],
+      "entryCount": 12
+    },
+    {
+      "pageTitle": "Alamelu Mangapuram",
+      "area": "tiruchanur",
+      "url": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": null,
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Random",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Search",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:WhatLinksHere/Tiruchanur",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChangesLinked/Tiruchanur",
+          "area": "tiruchanur",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Alamelu_Mangapuram",
+          "pageTitle": "Alamelu Mangapuram",
+          "verbatimQuote": "Tiruchanur - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accoun",
+          "pageCoord": null
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Srinivasa Mangapuram",
+      "area": "srinivasa-mangapuram",
+      "url": "https://en.wikipedia.org/wiki/Srinivasa_Mangapuram",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.6355,
+        "lng": 79.4236
+      },
+      "entries": [],
+      "entryCount": 0
+    },
+    {
+      "pageTitle": "Chandragiri, Tirupati district",
+      "area": "chandragiri",
+      "url": "https://en.wikipedia.org/wiki/Chandragiri%2C_Tirupati_district",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 404,
+      "note": "HTTP 404 — recorded, not retried"
+    },
+    {
+      "pageTitle": "Srikalahasti",
+      "area": "surrounding",
+      "url": "https://en.wikipedia.org/wiki/Srikalahasti",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.76,
+        "lng": 79.7
+      },
+      "entries": [],
+      "entryCount": 0
+    },
+    {
+      "pageTitle": "Nagalapuram",
+      "area": "surrounding",
+      "url": "https://en.wikipedia.org/wiki/Nagalapuram",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.3889,
+        "lng": 79.7967
+      },
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Special:Random",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Special:Search",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Special:WhatLinksHere/Nagalapuram",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        },
+        {
+          "name": "Special:RecentChangesLinked/Nagalapuram",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nagalapuram",
+          "pageTitle": "Nagalapuram",
+          "verbatimQuote": "Nagalapuram - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": {
+            "lat": 13.3889,
+            "lng": 79.7967
+          }
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Talakona",
+      "area": "surrounding",
+      "url": "https://en.wikipedia.org/wiki/Talakona",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": null,
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Random",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Search",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:WhatLinksHere/Talakona",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChangesLinked/Talakona",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Talakona",
+          "pageTitle": "Talakona",
+          "verbatimQuote": "Talakona - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account ",
+          "pageCoord": null
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Kapila Theertham",
+      "area": "tpt-central",
+      "url": "https://en.wikipedia.org/wiki/Kapila_Theertham",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": null,
+      "entries": [],
+      "entryCount": 0
+    },
+    {
+      "pageTitle": "Sri Venkateswara National Park",
+      "area": "surrounding",
+      "url": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": null,
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Random",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Search",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:WhatLinksHere/Sri Venkateswara National Park",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChangesLinked/Sri Venkateswara National Park",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
+          "pageTitle": "Sri Venkateswara National Park",
+          "verbatimQuote": "Sri Venkateswara National Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance ",
+          "pageCoord": null
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Narayanavanam",
+      "area": "surrounding",
+      "url": "https://en.wikipedia.org/wiki/Narayanavanam",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.42,
+        "lng": 79.58
+      },
+      "entries": [],
+      "entryCount": 0
+    },
+    {
+      "pageTitle": "Kalyani Dam",
+      "area": "surrounding",
+      "url": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": null,
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Random",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:Search",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:WhatLinksHere/Kalyani Dam",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        },
+        {
+          "name": "Special:RecentChangesLinked/Kalyani Dam",
+          "area": "surrounding",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
+          "pageTitle": "Kalyani Dam",
+          "verbatimQuote": "Kalyani Dam - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create accou",
+          "pageCoord": null
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Sri Venkateswara Zoological Park",
+      "area": "tpt-neighbourhoods",
+      "url": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.6249,
+        "lng": 79.3646
+      },
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Special:Random",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Special:Search",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Special:WhatLinksHere/Sri Venkateswara Zoological Park",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        },
+        {
+          "name": "Special:RecentChangesLinked/Sri Venkateswara Zoological Park",
+          "area": "tpt-neighbourhoods",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_Zoological_Park",
+          "pageTitle": "Sri Venkateswara Zoological Park",
+          "verbatimQuote": "Sri Venkateswara Zoological Park - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearanc",
+          "pageCoord": {
+            "lat": 13.6249,
+            "lng": 79.3646
+          }
+        }
+      ],
+      "entryCount": 11
+    },
+    {
+      "pageTitle": "Renigunta",
+      "area": "renigunta",
+      "url": "https://en.wikipedia.org/wiki/Renigunta",
+      "fetchedOn": "2026-10-27",
+      "httpStatus": 200,
+      "pageCoord": {
+        "lat": 13.65,
+        "lng": 79.52
+      },
+      "entries": [
+        {
+          "name": "Main Page",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Wikipedia:Contents",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Special:Random",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Wikipedia:About",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Wikipedia:Community portal",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Special:RecentChanges",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Wikipedia:File upload wizard",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Special:SpecialPages",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Special:Search",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Special:WhatLinksHere/Renigunta",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        },
+        {
+          "name": "Special:RecentChangesLinked/Renigunta",
+          "area": "renigunta",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Renigunta",
+          "pageTitle": "Renigunta",
+          "verbatimQuote": "Renigunta - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account",
+          "pageCoord": {
+            "lat": 13.65,
+            "lng": 79.52
+          }
+        }
+      ],
+      "entryCount": 11
+    }
+  ]
+}

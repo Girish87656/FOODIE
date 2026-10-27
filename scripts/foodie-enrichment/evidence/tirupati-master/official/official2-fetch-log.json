@@ -1,0 +1,73 @@
+{
+  "task": "batch-4 direct official fetch",
+  "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+  "retrievedOn": "2026-10-27",
+  "results": [
+    {
+      "url": "https://www.tirumala.org/garden.aspx",
+      "file": "ttd-garden.html",
+      "httpStatus": 200,
+      "bytes": 218151,
+      "pageTitle": "Tirumala Tirupati Devasthanams (Official Website)",
+      "servedHomepageShell": true,
+      "note": "URL served the site's default homepage shell — dead/retired link; NO place content; recorded as limitation",
+      "why": "TTD gardens/parks page — parks & gardens coverage gap (already fetched — resume semantics: kept)"
+    },
+    {
+      "url": "https://www.tirumala.org/theerthams.aspx",
+      "file": "ttd-theerthams.html",
+      "httpStatus": 200,
+      "bytes": 218151,
+      "pageTitle": "Tirumala Tirupati Devasthanams (Official Website)",
+      "servedHomepageShell": true,
+      "note": "URL served the site's default homepage shell — dead/retired link; NO place content; recorded as limitation",
+      "why": "TTD teerthams page — sacred sites coverage (already fetched — resume semantics: kept)"
+    },
+    {
+      "url": "https://www.tirumala.org/marriagehallcotteges.aspx",
+      "file": "ttd-marriagehallcotteges.html",
+      "httpStatus": 200,
+      "bytes": 61898,
+      "pageTitle": "Marriage halls and Cottages",
+      "servedHomepageShell": false,
+      "why": "TTD marriage halls & cottages — pilgrim accommodation coverage (already fetched — resume semantics: kept)"
+    },
+    {
+      "url": "https://www.tirumala.org/sripadmavathiguesthouse.aspx",
+      "file": "ttd-sripadmavathiguesthouse.html",
+      "httpStatus": 200,
+      "bytes": 59685,
+      "pageTitle": "Tirumala Tirupati Devasthanams (Official Website)",
+      "servedHomepageShell": false,
+      "why": "named TTD guest house page — pilgrim lodges (already fetched — resume semantics: kept)"
+    },
+    {
+      "url": "https://www.tirumala.org/srivenkateswaraguesthouse.aspx",
+      "file": "ttd-srivenkateswaraguesthouse.html",
+      "httpStatus": 200,
+      "bytes": 55624,
+      "pageTitle": "Tirumala Tirupati Devasthanams (Official Website)",
+      "servedHomepageShell": false,
+      "why": "named TTD guest house page — pilgrim lodges (already fetched — resume semantics: kept)"
+    },
+    {
+      "url": "https://www.tirumala.org/varahaswamiguesthouse.aspx",
+      "file": "ttd-varahaswamiguesthouse.html",
+      "httpStatus": 200,
+      "bytes": 60566,
+      "pageTitle": "Tirumala Tirupati Devasthanams (Official Website)",
+      "servedHomepageShell": false,
+      "why": "named TTD guest house page — pilgrim lodges (already fetched — resume semantics: kept)"
+    },
+    {
+      "url": "https://www.tirumala.org/varahaswamytirumala.aspx",
+      "file": "ttd-varahaswamytirumala.html",
+      "httpStatus": 200,
+      "bytes": 218151,
+      "pageTitle": "Tirumala Tirupati Devasthanams (Official Website)",
+      "servedHomepageShell": true,
+      "note": "URL served the site's default homepage shell — dead/retired link; NO place content; recorded as limitation",
+      "why": "TTD Varahaswamy temple (Tirumala) page — temple coverage (already fetched — resume semantics: kept)"
+    }
+  ]
+}
