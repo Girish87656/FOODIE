@@ -10,7 +10,12 @@ import { join } from "node:path";
  * Enforces the honesty contract mechanically:
  *   • deterministic uuid5 ids (recomputed in-test, never trusted from text);
  *   • Batch-012 = exactly the 29 reviewed rows (10 T1 restaurants + 19 T2
- *     places) — no drift against the curated worksheet;
+ *     places) — display names EQUAL the worksheet canonicals (rebased
+ *     2026-10-26 after the batch-2 curation renamed canons), so ids cannot
+ *     collide with a differently-named worksheet row;
+ *   • forward + reverse drift gates: EVERY eligible worksheet row (T1/T2,
+ *     new, curated, not identity-held) is imported under its canonical-name
+ *     id, and NO ineligible row is imported;
  *   • every row: verification_status 'unverified', NULL coordinates, NULL
  *     verification fields, populated source_url — an import NEVER
  *     self-verifies and NEVER invents data;
@@ -52,30 +57,30 @@ const official = JSON.parse(readFileSync(OFFICIAL_PATH, "utf8")) as {
 
 const REST_NAMES = [
   "Garuda Cafe", "Bhai Ka Biryani", "Mayuri Restaurant", "Manju Foods",
-  "Shankar Chats", "Chillies Restaurant", "Southern Spice",
+  "Shankar Chats", "Chillies Restaurant", "Southern Spice, Avilala",
   "Srinivasam Restaurant", "Anandan Vasavi Vegetarian Restaurant",
   "Meenakshi Pure Veg Restaurant",
 ];
 const PLACE_ROWS: Array<{ name: string; slug: string; placeType: string }> = [
-  { name: "Sri Bhu Varahaswamy Temple", slug: "sri-bhu-varahaswamy-temple", placeType: "temple" },
-  { name: "Sri Bedi Anjaneya Swamy Temple", slug: "sri-bedi-anjaneya-swamy-temple", placeType: "temple" },
-  { name: "Sri Venkateswara Museum", slug: "sri-venkateswara-museum", placeType: "other" },
+  { name: "Sri Varahaswamy Temple, Tirumala", slug: "sri-varahaswamy-temple", placeType: "temple" },
+  { name: "Sri Bedi Anjaneya Swamy Temple, Tirumala", slug: "sri-bedi-anjaneya-swamy-temple", placeType: "temple" },
+  { name: "Sri Venkateswara Museum, Tirumala", slug: "sri-venkateswara-museum", placeType: "other" },
   { name: "Swami Pushkarini", slug: "swami-pushkarini", placeType: "other" },
-  { name: "Sri Hathiramjee Mutt", slug: "sri-hathiramjee-mutt", placeType: "temple" },
+  { name: "Sri Hathiramjee Mutt, Tirumala", slug: "sri-hathiramjee-mutt", placeType: "temple" },
   { name: "Akasha Ganga Theertham", slug: "akasha-ganga-theertham", placeType: "waterfall" },
   { name: "Chakra Theertham", slug: "chakra-theertham", placeType: "other" },
   { name: "Vaikuntha Teertham", slug: "vaikuntha-theertham", placeType: "other" },
   { name: "Papavinasam Theertham", slug: "papavinasam-theertham", placeType: "other" },
-  { name: "Sreenivasam Complex", slug: "sreenivasam-complex", placeType: "hotel" },
-  { name: "Sri Venkateswara Dharmasala", slug: "sri-venkateswara-dharmasala", placeType: "hotel" },
-  { name: "Sri Govindaraja Swamy Dharmasala", slug: "sri-govindaraja-swamy-dharmasala", placeType: "hotel" },
-  { name: "Vishnu Nivasam", slug: "vishnu-nivasam", placeType: "hotel" },
-  { name: "Sri Krishna Swamy Temple", slug: "sri-krishna-swamy-temple-tiruchanoor", placeType: "temple" },
-  { name: "Sri Varada Raja Swamy Temple", slug: "sri-varada-raja-swamy-temple", placeType: "temple" },
-  { name: "Sri Suryanarayana Swamy Temple", slug: "sri-suryanarayana-swamy-temple", placeType: "temple" },
-  { name: "Sri Prasanna Venkateswara Swamy Temple", slug: "sri-prasanna-venkateswara-swamy-temple", placeType: "temple" },
+  { name: "Sreenivasam Complex (TTD Pilgrim Accommodation)", slug: "sreenivasam-complex", placeType: "hotel" },
+  { name: "Sri Venkateswara Dharmasala (TTD)", slug: "sri-venkateswara-dharmasala", placeType: "hotel" },
+  { name: "Sri Govindaraja Swamy Dharmasala (TTD)", slug: "sri-govindaraja-swamy-dharmasala", placeType: "hotel" },
+  { name: "Vishnu Nivasam (TTD Free Accommodation)", slug: "vishnu-nivasam", placeType: "hotel" },
+  { name: "Sri Krishna Swamy Temple (Alagiyaperumal Shrine), Tiruchanoor", slug: "sri-krishna-swamy-temple-tiruchanoor", placeType: "temple" },
+  { name: "Sri Varada Raja Swamy Temple, Tiruchanoor", slug: "sri-varada-raja-swamy-temple", placeType: "temple" },
+  { name: "Sri Suryanarayana Swamy Temple, Tiruchanoor", slug: "sri-suryanarayana-swamy-temple", placeType: "temple" },
+  { name: "Sri Prasanna Venkateswara Swamy Temple, Appalayagunta", slug: "sri-prasanna-venkateswara-swamy-temple", placeType: "temple" },
   { name: "Sri Sridevi Bhudevi Sametha Thondamanadu Temple", slug: "sri-sridevi-bhudevi-sametha-thondamanadu-temple", placeType: "temple" },
-  { name: "Regional Science Centre", slug: "regional-science-centre", placeType: "other" },
+  { name: "Regional Science Centre, Tirupati", slug: "regional-science-centre", placeType: "other" },
 ];
 const ALL_IDS = [
   ...REST_NAMES.map((n) => uuid5(`foodie-tptm:Tirupati:${n}`)),
@@ -213,6 +218,28 @@ describe("tirupati master — curated worksheet honesty", () => {
         expect(importedIds.has(id)).toBe(false);
       }
     }
+  });
+
+  test("forward drift: every eligible worksheet row is imported under its canonical-name id", () => {
+    const imported = new Set([...b12Ids, ...ids13]);
+    const heldKeys = new Set([
+      "tpt-neighbourhoods::kafe", "tirumala::kafe tirupati",
+      "tpt-neighbourhoods::anjaneya swamy temple",
+      "tpt-neighbourhoods::sri vinayaka swamy temple",
+      "tpt-neighbourhoods::mini park",
+    ]);
+    const missing: string[] = [];
+    let eligible = 0;
+    for (const r of curated.rows) {
+      if (r.status !== "curated" || r.existingSet !== "new") continue;
+      if (!['T1', 'T2'].includes(r.tier as string)) continue;
+      if (heldKeys.has(r.key as string)) continue;
+      eligible++;
+      const id = uuid5(`foodie-tptm:Tirupati:${r.name as string}`);
+      if (!imported.has(id)) missing.push(`${r.key as string} ("${r.name as string}" → ${id})`);
+    }
+    expect(eligible).toBe(86); // 29 batch-012 + 57 batch-013
+    expect(missing).toEqual([]);
   });
 
   test("coordinates are never estimated (all curated geocodes trace to committed evidence files)", () => {

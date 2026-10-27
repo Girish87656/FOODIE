@@ -7,9 +7,12 @@ records what was ACTUALLY done; `docs/tirupati-source-register.md` lists sources
 reviewed; `docs/tirupati-coverage-matrix.md` tracks searched/not-searched status per locality ×
 category.
 
-**Status of this pass:** BATCH 1 COMPLETE (first discovery sweep + curation +
-Batch-012 review candidate generated; see `docs/tirupati-discovery-worklog.md`
-for the factual record and backlog). The completeness standard is
+**Status of this pass:** BATCHES 1–2 COMPLETE (two discovery sweeps + curation +
+Batch-012 review candidate [29 rows] + Batch-013 review candidate [57 rows] generated,
+never executed; see `docs/tirupati-discovery-worklog.md` for the factual record and
+backlog). Batch-012 was REBASED onto the batch-2 worksheet canonicals (2026-10-27) after
+the batch-2 curation renamed canons — the previously generated SQL was never executed, so
+the rebase is safe and documented. The completeness standard is
 "broadest practical, not absolute" — unfinished work is preserved as an explicit backlog, never
 claimed complete.
 

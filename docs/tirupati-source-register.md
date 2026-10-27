@@ -30,7 +30,7 @@ Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrit
 |---|---|---|
 | https://tirupati.ap.gov.in/ (+ /tourist-places/ /religious-tourism/ /eco-tourism/) | connection failed from sandbox network (3 attempts incl. browser UA) | content enters ONLY via quoted snippets in search results, attributed; NOT counted as reviewed pages |
 | https://tourism.ap.gov.in/ | connection failed (same) | same |
-| https://www.tirumala.org/PlacesatTirumala.aspx, /MoreTemples.aspx, /RestHousesInTirumala.aspx, /ttdklmps.aspx, S.V. Museum.aspx | discovered via nav, NOT yet fetched | explicit backlog for the next pass |
+| https://ttdevasthanams.ap.gov.in/ + https://tirupatibalaji.ap.gov.in/ | connection failed (recorded) | TTD's alternate domains remain unreachable from the sandbox; tirumala.org content is used instead |
 
 ## 3. Search channel
 

@@ -64,18 +64,18 @@ begin
   raise notice 'PREFLIGHT OK: tptm-master-import markers unused.';
 
   -- (b) id collisions anywhere
-  select count(*) into v_dup_ids from public.places where id in (3b5ab7fd-e6a4-5328-bb98-81dbc955ebe3, 24c42e4e-f84e-5cb8-8bad-35c27654a8d7, de43137e-e375-5c29-88ac-05cc54b8a0d5, 955af3d5-9aca-592e-b1f1-74848dc180d3, 9079e097-f201-55dc-9c74-77dd0c64de99, 6606469d-406f-59f5-b98e-c791f38807c0, 362c2008-7a12-5a5d-b68d-c7864abce88a, ac29dd19-b9c2-5dc2-8a44-60e33f458753, af36446d-155d-5fa7-abe2-69423c80516d, 93a5b657-59fb-5c6e-80e0-3c1be5b5767a, 49c4358d-8cee-5322-8825-23b9cf2bdffe, ed9f1376-0a45-5227-a090-feadaa13d344, f348325b-2589-52d2-a2c6-1e9bca7652db, f7c6fcef-f91c-571a-a1b8-5de864d08c91, 2d5f77bd-7860-5bbb-aa0d-a2b769f5d1a2, 7681bf92-6967-587a-971a-9c4afb63310b, 1a70ae24-251e-5d09-8b44-85a820b7bc5e, 718859f3-f741-50a4-90a0-afdf4d714d4c, 30b45f8b-a352-50be-8afa-2bf1fc333a50, 0424d840-6918-5fb1-bc57-8aee3aeefd50, 3049a946-ea45-59a0-8bd4-e00a136c26e2, 0f18f6d3-8b3d-5787-b051-00f132144d97, 83ba0664-53cb-50e1-9591-2df76373206e, 6fdd559e-d088-579e-afa8-c294542b8eef, 00f66db6-afd8-56c8-bc0b-102837b44f2d, 6d9a1af1-f72c-5d59-8f30-cf725b861fde, b8c8f500-d943-5b8c-86b7-701506a13409, 1129d06d-5d26-5df0-ad38-46ded3ad92f7, faee526f-6058-5b58-b6b4-f9b4f88e5ecd);
+  select count(*) into v_dup_ids from public.places where id in (3b5ab7fd-e6a4-5328-bb98-81dbc955ebe3, 24c42e4e-f84e-5cb8-8bad-35c27654a8d7, de43137e-e375-5c29-88ac-05cc54b8a0d5, 955af3d5-9aca-592e-b1f1-74848dc180d3, 9079e097-f201-55dc-9c74-77dd0c64de99, 6606469d-406f-59f5-b98e-c791f38807c0, 9feb7ea0-c671-561f-8606-fc2dcdfb2fd9, ac29dd19-b9c2-5dc2-8a44-60e33f458753, af36446d-155d-5fa7-abe2-69423c80516d, 93a5b657-59fb-5c6e-80e0-3c1be5b5767a, 78099e62-ae58-5fc7-a3db-72e7f5240c80, cacd5c74-7eeb-5f56-8a5c-42a2b29a1e49, b1660d31-28d0-579a-b79b-5f0129d45596, f7c6fcef-f91c-571a-a1b8-5de864d08c91, 02361f9d-33b1-5a83-802f-0b80e225fc5f, 7681bf92-6967-587a-971a-9c4afb63310b, 1a70ae24-251e-5d09-8b44-85a820b7bc5e, 718859f3-f741-50a4-90a0-afdf4d714d4c, 30b45f8b-a352-50be-8afa-2bf1fc333a50, e09b9c51-81bc-5010-a5e9-e9ff538cbe8d, eb364ba9-adb7-51ae-ab59-96e5b7bfc89e, 5504da20-0ea0-5de8-9c59-2d993d802aec, 20c8ffcb-31d1-5e57-9170-1a1a5ff43b27, 202cb317-47bb-5feb-9e87-2824562edcd3, e5ad93d1-d790-54f0-8dd1-5ce79e51fbfc, 58183f64-a271-5f3a-ad81-344465a47577, 64e90ec0-84ff-5c2a-8e3c-177a2b4ec6ce, 1129d06d-5d26-5df0-ad38-46ded3ad92f7, 47ac95bb-d5ce-55ab-9aea-6572d4caecdb);
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-012 place ids already exist — importing would collide.', v_dup_ids;
   end if;
-  select count(*) into v_dup_ids from public.restaurants where id in (3b5ab7fd-e6a4-5328-bb98-81dbc955ebe3, 24c42e4e-f84e-5cb8-8bad-35c27654a8d7, de43137e-e375-5c29-88ac-05cc54b8a0d5, 955af3d5-9aca-592e-b1f1-74848dc180d3, 9079e097-f201-55dc-9c74-77dd0c64de99, 6606469d-406f-59f5-b98e-c791f38807c0, 362c2008-7a12-5a5d-b68d-c7864abce88a, ac29dd19-b9c2-5dc2-8a44-60e33f458753, af36446d-155d-5fa7-abe2-69423c80516d, 93a5b657-59fb-5c6e-80e0-3c1be5b5767a, 49c4358d-8cee-5322-8825-23b9cf2bdffe, ed9f1376-0a45-5227-a090-feadaa13d344, f348325b-2589-52d2-a2c6-1e9bca7652db, f7c6fcef-f91c-571a-a1b8-5de864d08c91, 2d5f77bd-7860-5bbb-aa0d-a2b769f5d1a2, 7681bf92-6967-587a-971a-9c4afb63310b, 1a70ae24-251e-5d09-8b44-85a820b7bc5e, 718859f3-f741-50a4-90a0-afdf4d714d4c, 30b45f8b-a352-50be-8afa-2bf1fc333a50, 0424d840-6918-5fb1-bc57-8aee3aeefd50, 3049a946-ea45-59a0-8bd4-e00a136c26e2, 0f18f6d3-8b3d-5787-b051-00f132144d97, 83ba0664-53cb-50e1-9591-2df76373206e, 6fdd559e-d088-579e-afa8-c294542b8eef, 00f66db6-afd8-56c8-bc0b-102837b44f2d, 6d9a1af1-f72c-5d59-8f30-cf725b861fde, b8c8f500-d943-5b8c-86b7-701506a13409, 1129d06d-5d26-5df0-ad38-46ded3ad92f7, faee526f-6058-5b58-b6b4-f9b4f88e5ecd);
+  select count(*) into v_dup_ids from public.restaurants where id in (3b5ab7fd-e6a4-5328-bb98-81dbc955ebe3, 24c42e4e-f84e-5cb8-8bad-35c27654a8d7, de43137e-e375-5c29-88ac-05cc54b8a0d5, 955af3d5-9aca-592e-b1f1-74848dc180d3, 9079e097-f201-55dc-9c74-77dd0c64de99, 6606469d-406f-59f5-b98e-c791f38807c0, 9feb7ea0-c671-561f-8606-fc2dcdfb2fd9, ac29dd19-b9c2-5dc2-8a44-60e33f458753, af36446d-155d-5fa7-abe2-69423c80516d, 93a5b657-59fb-5c6e-80e0-3c1be5b5767a, 78099e62-ae58-5fc7-a3db-72e7f5240c80, cacd5c74-7eeb-5f56-8a5c-42a2b29a1e49, b1660d31-28d0-579a-b79b-5f0129d45596, f7c6fcef-f91c-571a-a1b8-5de864d08c91, 02361f9d-33b1-5a83-802f-0b80e225fc5f, 7681bf92-6967-587a-971a-9c4afb63310b, 1a70ae24-251e-5d09-8b44-85a820b7bc5e, 718859f3-f741-50a4-90a0-afdf4d714d4c, 30b45f8b-a352-50be-8afa-2bf1fc333a50, e09b9c51-81bc-5010-a5e9-e9ff538cbe8d, eb364ba9-adb7-51ae-ab59-96e5b7bfc89e, 5504da20-0ea0-5de8-9c59-2d993d802aec, 20c8ffcb-31d1-5e57-9170-1a1a5ff43b27, 202cb317-47bb-5feb-9e87-2824562edcd3, e5ad93d1-d790-54f0-8dd1-5ce79e51fbfc, 58183f64-a271-5f3a-ad81-344465a47577, 64e90ec0-84ff-5c2a-8e3c-177a2b4ec6ce, 1129d06d-5d26-5df0-ad38-46ded3ad92f7, 47ac95bb-d5ce-55ab-9aea-6572d4caecdb);
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-012 ids already exist in restaurants — importing would collide.', v_dup_ids;
   end if;
   raise notice 'PREFLIGHT OK: no id collisions.';
 
   -- (c) slug collisions on OTHER ids
-  select count(*) into v_dup_slugs from public.places where slug in ('sri-bhu-varahaswamy-temple', 'sri-bedi-anjaneya-swamy-temple', 'sri-venkateswara-museum', 'swami-pushkarini', 'sri-hathiramjee-mutt', 'akasha-ganga-theertham', 'chakra-theertham', 'vaikuntha-theertham', 'papavinasam-theertham', 'sreenivasam-complex', 'sri-venkateswara-dharmasala', 'sri-govindaraja-swamy-dharmasala', 'vishnu-nivasam', 'sri-krishna-swamy-temple-tiruchanoor', 'sri-varada-raja-swamy-temple', 'sri-suryanarayana-swamy-temple', 'sri-prasanna-venkateswara-swamy-temple', 'sri-sridevi-bhudevi-sametha-thondamanadu-temple', 'regional-science-centre');
+  select count(*) into v_dup_slugs from public.places where slug in ('sri-varahaswamy-temple', 'sri-bedi-anjaneya-swamy-temple', 'sri-venkateswara-museum', 'swami-pushkarini', 'sri-hathiramjee-mutt', 'akasha-ganga-theertham', 'chakra-theertham', 'vaikuntha-theertham', 'papavinasam-theertham', 'sreenivasam-complex', 'sri-venkateswara-dharmasala', 'sri-govindaraja-swamy-dharmasala', 'vishnu-nivasam', 'sri-krishna-swamy-temple-tiruchanoor', 'sri-varada-raja-swamy-temple', 'sri-suryanarayana-swamy-temple', 'sri-prasanna-venkateswara-swamy-temple', 'sri-sridevi-bhudevi-sametha-thondamanadu-temple', 'regional-science-centre');
   if v_dup_slugs <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-012 slugs already exist — importing would collide.', v_dup_slugs;
   end if;
@@ -83,7 +83,7 @@ begin
 
   -- (d) restaurant name collisions
   select count(*) into v_dup_names from public.restaurants
-   where lower(btrim(name)) in (lower(btrim('Garuda Cafe')), lower(btrim('Bhai Ka Biryani')), lower(btrim('Mayuri Restaurant')), lower(btrim('Manju Foods')), lower(btrim('Shankar Chats')), lower(btrim('Chillies Restaurant')), lower(btrim('Southern Spice')), lower(btrim('Srinivasam Restaurant')), lower(btrim('Anandan Vasavi Vegetarian Restaurant')), lower(btrim('Meenakshi Pure Veg Restaurant')));
+   where lower(btrim(name)) in (lower(btrim('Garuda Cafe')), lower(btrim('Bhai Ka Biryani')), lower(btrim('Mayuri Restaurant')), lower(btrim('Manju Foods')), lower(btrim('Shankar Chats')), lower(btrim('Chillies Restaurant')), lower(btrim('Southern Spice, Avilala')), lower(btrim('Srinivasam Restaurant')), lower(btrim('Anandan Vasavi Vegetarian Restaurant')), lower(btrim('Meenakshi Pure Veg Restaurant')));
   if v_dup_names <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-012 restaurant names already exist — importing would duplicate rows.', v_dup_names;
   end if;
@@ -222,8 +222,8 @@ values
     'unverified'           -- an import NEVER self-verifies
   ),
   (
-    '362c2008-7a12-5a5d-b68d-c7864abce88a'::uuid,
-    'Southern Spice',
+    '9feb7ea0-c671-561f-8606-fc2dcdfb2fd9'::uuid,
+    'Southern Spice, Avilala',
     'restaurant',
     'Avilala, Tirupati, Andhra Pradesh',     -- locality-level address EXACTLY as the listing title supports (no street invented)
     'Tirupati',
@@ -311,10 +311,10 @@ begin
     (id, slug, place_type, name, description, address, locality, city, destination_id, latitude, longitude, tags, source, source_url, last_verified_at, name_verified, address_verified, coordinates_verified, verification_status, is_active)
   values
   (
-    '49c4358d-8cee-5322-8825-23b9cf2bdffe'::uuid,
-    'sri-bhu-varahaswamy-temple',
+    '78099e62-ae58-5fc7-a3db-72e7f5240c80'::uuid,
+    'sri-varahaswamy-temple',
     'temple',
-    'Sri Bhu Varahaswamy Temple',
+    'Sri Varahaswamy Temple, Tirumala',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirumala',
@@ -333,10 +333,10 @@ begin
     true
   ),
   (
-    'ed9f1376-0a45-5227-a090-feadaa13d344'::uuid,
+    'cacd5c74-7eeb-5f56-8a5c-42a2b29a1e49'::uuid,
     'sri-bedi-anjaneya-swamy-temple',
     'temple',
-    'Sri Bedi Anjaneya Swamy Temple',
+    'Sri Bedi Anjaneya Swamy Temple, Tirumala',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirumala',
@@ -355,10 +355,10 @@ begin
     true
   ),
   (
-    'f348325b-2589-52d2-a2c6-1e9bca7652db'::uuid,
+    'b1660d31-28d0-579a-b79b-5f0129d45596'::uuid,
     'sri-venkateswara-museum',
     'other',
-    'Sri Venkateswara Museum',
+    'Sri Venkateswara Museum, Tirumala',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirumala',
@@ -399,10 +399,10 @@ begin
     true
   ),
   (
-    '2d5f77bd-7860-5bbb-aa0d-a2b769f5d1a2'::uuid,
+    '02361f9d-33b1-5a83-802f-0b80e225fc5f'::uuid,
     'sri-hathiramjee-mutt',
     'temple',
-    'Sri Hathiramjee Mutt',
+    'Sri Hathiramjee Mutt, Tirumala',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirumala',
@@ -509,10 +509,10 @@ begin
     true
   ),
   (
-    '0424d840-6918-5fb1-bc57-8aee3aeefd50'::uuid,
+    'e09b9c51-81bc-5010-a5e9-e9ff538cbe8d'::uuid,
     'sreenivasam-complex',
     'hotel',
-    'Sreenivasam Complex',
+    'Sreenivasam Complex (TTD Pilgrim Accommodation)',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirupati',
@@ -531,10 +531,10 @@ begin
     true
   ),
   (
-    '3049a946-ea45-59a0-8bd4-e00a136c26e2'::uuid,
+    'eb364ba9-adb7-51ae-ab59-96e5b7bfc89e'::uuid,
     'sri-venkateswara-dharmasala',
     'hotel',
-    'Sri Venkateswara Dharmasala',
+    'Sri Venkateswara Dharmasala (TTD)',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirupati',
@@ -553,10 +553,10 @@ begin
     true
   ),
   (
-    '0f18f6d3-8b3d-5787-b051-00f132144d97'::uuid,
+    '5504da20-0ea0-5de8-9c59-2d993d802aec'::uuid,
     'sri-govindaraja-swamy-dharmasala',
     'hotel',
-    'Sri Govindaraja Swamy Dharmasala',
+    'Sri Govindaraja Swamy Dharmasala (TTD)',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirupati',
@@ -575,10 +575,10 @@ begin
     true
   ),
   (
-    '83ba0664-53cb-50e1-9591-2df76373206e'::uuid,
+    '20c8ffcb-31d1-5e57-9170-1a1a5ff43b27'::uuid,
     'vishnu-nivasam',
     'hotel',
-    'Vishnu Nivasam',
+    'Vishnu Nivasam (TTD Free Accommodation)',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirupati',
@@ -597,10 +597,10 @@ begin
     true
   ),
   (
-    '6fdd559e-d088-579e-afa8-c294542b8eef'::uuid,
+    '202cb317-47bb-5feb-9e87-2824562edcd3'::uuid,
     'sri-krishna-swamy-temple-tiruchanoor',
     'temple',
-    'Sri Krishna Swamy Temple',
+    'Sri Krishna Swamy Temple (Alagiyaperumal Shrine), Tiruchanoor',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tiruchanoor',
@@ -619,10 +619,10 @@ begin
     true
   ),
   (
-    '00f66db6-afd8-56c8-bc0b-102837b44f2d'::uuid,
+    'e5ad93d1-d790-54f0-8dd1-5ce79e51fbfc'::uuid,
     'sri-varada-raja-swamy-temple',
     'temple',
-    'Sri Varada Raja Swamy Temple',
+    'Sri Varada Raja Swamy Temple, Tiruchanoor',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tiruchanoor',
@@ -641,10 +641,10 @@ begin
     true
   ),
   (
-    '6d9a1af1-f72c-5d59-8f30-cf725b861fde'::uuid,
+    '58183f64-a271-5f3a-ad81-344465a47577'::uuid,
     'sri-suryanarayana-swamy-temple',
     'temple',
-    'Sri Suryanarayana Swamy Temple',
+    'Sri Suryanarayana Swamy Temple, Tiruchanoor',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tiruchanoor',
@@ -663,10 +663,10 @@ begin
     true
   ),
   (
-    'b8c8f500-d943-5b8c-86b7-701506a13409'::uuid,
+    '64e90ec0-84ff-5c2a-8e3c-177a2b4ec6ce'::uuid,
     'sri-prasanna-venkateswara-swamy-temple',
     'temple',
-    'Sri Prasanna Venkateswara Swamy Temple',
+    'Sri Prasanna Venkateswara Swamy Temple, Appalayagunta',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Appalayagunta',
@@ -707,10 +707,10 @@ begin
     true
   ),
   (
-    'faee526f-6058-5b58-b6b4-f9b4f88e5ecd'::uuid,
+    '47ac95bb-d5ce-55ab-9aea-6572d4caecdb'::uuid,
     'regional-science-centre',
     'other',
-    'Regional Science Centre',
+    'Regional Science Centre, Tirupati',
     null,                    -- description: not captured — NEVER invented
     null,                    -- address: official pages support locality only
     'Tirupati',

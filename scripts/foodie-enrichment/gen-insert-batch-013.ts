@@ -87,7 +87,7 @@ interface CuratedRow {
   category: string; placeType: string | null; tags: string[];
   sourceUrl: string; sourceKind: string | null; tier: string;
   existingSet: string; status: string; localityHint: string | null;
-  geocode: { lat: number | null; lng: number | null; displayName: string | null } | null;
+  geocode: { lat: number | null; lng: number | null; displayName: string | null; areaConfirmed?: boolean | null } | null;
 }
 
 const ws = JSON.parse(readFileSync(WS, "utf8")) as { rows: CuratedRow[] };

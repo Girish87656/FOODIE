@@ -9,6 +9,7 @@
    ================================================================== */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "fs";
+import { createHash } from "crypto";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -42,6 +43,36 @@ const AREA_LABEL: Record<string, string> = {
   "renigunta": "Renigunta (airport/junction corridor, ~10-12 km north)",
   "surrounding": "Surrounding destinations (beyond city/Tirumala core)",
 };
+
+/* identity-held candidates: verify-confirmed but names too generic to admit as
+   distinct places without stronger identity evidence (documented in the
+   batch-013 review-candidate header; same list as the integrity test). */
+const HELD_KEYS = new Set([
+  "tpt-neighbourhoods::kafe", "tirumala::kafe tirupati",
+  "tpt-neighbourhoods::anjaneya swamy temple",
+  "tpt-neighbourhoods::sri vinayaka swamy temple",
+  "tpt-neighbourhoods::mini park",
+]);
+
+/* batch review-candidate INSERT ids (parsed from the generated SQL files —
+   single source of truth for "which rows are queued for import"). Preflight
+   guard ids are unquoted; INSERT tuple ids carry '…'::uuid. */
+const NAMESPACE_UUID5 = "6d3a0f5e-7b1c-4a2e-9d84-2f6a1c9e0b31";
+function uuid5(name: string): string {
+  const h = createHash("sha1").update(NAMESPACE_UUID5.replace(/-/g, "")).update(name).digest("hex");
+  return [
+    h.slice(0, 8), h.slice(8, 12), `5${h.slice(13, 16)}`,
+    ((parseInt(h.slice(16, 18), 16) & 0x3f) | 0x80).toString(16).padStart(2, "0") + h.slice(18, 20),
+    h.slice(20, 32),
+  ].join("-");
+}
+function insertIds(sqlPath: string): Set<string> {
+  if (!existsSync(sqlPath)) return new Set();
+  const text = readFileSync(sqlPath, "utf8");
+  return new Set(Array.from(text.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]));
+}
+const B12_IDS = insertIds(join(ROOT, "supabase", "review-candidates", "insert-batch-012-tptm-master.sql"));
+const B13_IDS = insertIds(join(ROOT, "supabase", "review-candidates", "insert-batch-013-tptm-b2.sql"));
 const GROUP_LABEL: Record<string, string> = {
   "food-restaurants": "Restaurants & messes",
   "food-tiffin": "Tiffin & breakfast centres",
@@ -117,7 +148,13 @@ DOC-LEVEL review layer. DB rows imported from this inventory always carry
 
 **Counts:** ${cur.summary.totalCandidatesIn} raw candidates → ${cur.summary.curated} curated
 (${cur.summary.byTier ? JSON.stringify(cur.summary.byTier) : ""}) → ${cur.summary.duplicatesMarked} possible duplicates
-(queued) → ${cur.summary.dropped} dropped with recorded reasons → Batch-012 = 29 rows.
+(queued) → ${cur.summary.dropped} dropped with recorded reasons.
+
+**Review candidates queued for owner execution:** Batch-012 = 29 rows (10 T1 restaurants +
+19 T2 places) + Batch-013 = 57 rows (17 T1 food venues + 40 POI/stay places) = **86 rows**,
+plus 5 verify-confirmed candidates HELD inventory-only (names too generic to admit without
+stronger identity evidence — see duplicate-review §B/batch-013 header). Neither batch is
+executed; both await owner approval.
 `;
 
 const areasInOrder = ["tpt-central", "tpt-neighbourhoods", "tirumala", "tiruchanur", "srinivasa-mangapuram", "chandragiri", "renigunta", "surrounding"];
@@ -129,11 +166,19 @@ for (const area of areasInOrder) {
     const gr = rows.filter((r) => r.group === g);
     if (!gr.length) continue;
     inv += `\n### ${GROUP_LABEL[g]}\n\n`;
-    inv += "| Place | Status | Locality hint | DB target | Sources (kind) | Batch-012 | Coordinates | Notes |\n";
+    inv += "| Place | Status | Locality hint | DB target | Sources (kind) | Import batch | Coordinates | Notes |\n";
     inv += "|---|---|---|---|---|---|---|---|\n";
     for (const r of gr) {
       const name = r.name as string;
-      const inBatch = (r.tier === "T1" && r.existingSet === "new") ? "YES (restaurants)" : (r.tier === "T2" && r.existingSet === "new") ? "YES (places)" : r.existingSet === "batch-011" ? "— (already Batch-011 candidate)" : r.existingSet === "production" ? "— (already live)" : "no (T3 backlog)";
+      const id = uuid5(`foodie-tptm:Tirupati:${name}`);
+      const dest = r.target === "restaurant" ? "restaurants" : "places";
+      let inBatch: string;
+      if (B12_IDS.has(id)) inBatch = `YES → batch-012 (${dest})`;
+      else if (B13_IDS.has(id)) inBatch = `YES → batch-013 (${dest})`;
+      else if (HELD_KEYS.has(r.key as string)) inBatch = "no (identity-held — name too generic)";
+      else if (r.existingSet === "batch-011") inBatch = "— (already Batch-011 candidate)";
+      else if (r.existingSet === "production") inBatch = "— (already live)";
+      else inBatch = "no (T3 backlog)";
       const geo = (r.geocode as { lat: number | null }).lat != null
         ? `${(r.geocode as { lat: number }).lat.toFixed(5)}, ${(r.geocode as { lng: number }).lng.toFixed(5)}`
         : "null (never estimated)";
@@ -190,7 +235,7 @@ reg += `
 |---|---|---|
 | https://tirupati.ap.gov.in/ (+ /tourist-places/ /religious-tourism/ /eco-tourism/) | connection failed from sandbox network (3 attempts incl. browser UA) | content enters ONLY via quoted snippets in search results, attributed; NOT counted as reviewed pages |
 | https://tourism.ap.gov.in/ | connection failed (same) | same |
-| https://www.tirumala.org/PlacesatTirumala.aspx, /MoreTemples.aspx, /RestHousesInTirumala.aspx, /ttdklmps.aspx, S.V. Museum.aspx | discovered via nav, NOT yet fetched | explicit backlog for the next pass |
+| https://ttdevasthanams.ap.gov.in/ + https://tirupatibalaji.ap.gov.in/ | connection failed (recorded) | TTD's alternate domains remain unreachable from the sandbox; tirumala.org content is used instead |
 `;
 
 reg += `
@@ -262,7 +307,7 @@ for (const g of gapBacklog) cov += `- ${g} → add fixed queries to \`GROUPS\` a
 cov += `\n## Verification backlog\n\n`;
 cov += `- ${active.filter((r) => r.tier === "T3").length} T3 candidates still need their independent verification query (\`research-tirupati-master.ts verify\`, resumable; rate-limited to ~9 candidates/9 min at current backend throttling).\n`;
 cov += `- ${geocodeNull} geocode attempts returned no area-gated match; re-run after verification upgrades for a second chance at coordinates.\n`;
-cov += `- Official TTD pages discovered but unfetched: PlacesatTirumala.aspx, MoreTemples.aspx, RestHousesInTirumala.aspx, ttdklmps.aspx, S.V. Museum.aspx.\n`;
+cov += `- Official TTD pages PlacesatTirumala.aspx, MoreTemples.aspx, RestHousesInTirumala.aspx, ttdklmps.aspx and S.V. Museum.aspx were FETCHED in the batch-2 pass (HTTP 200, verbatim quotes in evidence/official/) — the 28 TTD rest-house/cottage rows in batch-013 come straight from the official rates page.\n`;
 cov += `- District/AP-tourism domains remain network-blocked from this sandbox; retry from a network with access, or provide exported content.\n`;
 
 /* ---------------- 4. duplicate review ---------------- */
@@ -280,20 +325,25 @@ for (const l of cur.curationLog.filter((l) => l.action === "merged")) {
 }
 dup += `\n## B. POSSIBLE DUPLICATES awaiting evidence (review queue — NOT merged, NOT deleted)\n\n`;
 dup += `These carry \`status: duplicate\` in the curated worksheet with \`dupOf\` pointers. They are
-EXCLUDED from Batch-012 until a human confirms whether each is a distinct branch or a repeat listing.\n\n`;
+EXCLUDED from the batch review candidates until a human confirms whether each is a distinct branch or a repeat listing.\n\n`;
 dup += "| Candidate | Area | Points to | Reason |\n|---|---|---|---|\n";
 for (const r of dups) {
   dup += `| ${r.name as string} | ${r.area} | ${r.dupOf as string} | ${(r.dupReason as string).replace(/\|/g, "/")} |\n`;
 }
 dup += `\n## C. Name-similarity watchlist (identity confusion risks)\n\n`;
-dup += `- **Srinivasam Restaurant** (Batch-012, Tirumala) vs **Sreenivasam Complex** (Batch-012, TTD
+dup += `- **Srinivasam Restaurant** (Batch-012, Tirumala) vs **Sreenivasam Complex (TTD Pilgrim Accommodation)** (Batch-012, TTD
   accommodation) — different spellings and different venue types per sources; flagged so a future
   editor does not "fix" either spelling into the other.\n`;
-dup += `- **Sri Govindaraja Swamy Temple** (Batch-011) vs **Sri Govindaraja Swamy Dharmasala** (Batch-012) —
+dup += `- **Sri Govindaraja Swamy Temple** (Batch-011) vs **Sri Govindaraja Swamy Dharmasala (TTD)** (Batch-012) —
   distinct places (temple vs TTD lodging); slugs are distinct by design.\n`;
-dup += `- **Sri Bhu Varahaswamy Temple** (Batch-012, official TTD name) vs any "Varaha Swami" listing
-  variants — same temple; alias-guarded in curation.\n`;
-dup += `\n## D. Existing-set cross-references (excluded from Batch-012)\n\n`;
+dup += `- **Sri Varahaswamy Temple, Tirumala** (Batch-012 canonical; TTD also uses the dual name
+  "Sri Bhu Varahaswamy Temple") vs any "Varaha Swami" listing
+  variants — same temple; alias-guarded in curation and the alias kept in rawNames.\n`;
+dup += `- **Sri Prasanna Venkateswara Swamy Temple, Appalayagunta** (Batch-012) vs **Sri Prasanna Venkateswara
+  Swamy Temple** (Renigunta, T3 backlog) — two DISTINCT temples sharing a base name (verify evidence for the
+  Renigunta listing matched a Kadapa address, so it stays unimported); the Appalayagunta canonical carries the
+  locality suffix so their deterministic ids can never collide.\n`;
+dup += `\n## D. Existing-set cross-references (excluded from batch imports)\n\n`;
 dup += `| Curated candidate | Already covered by |\n|---|---|\n`;
 for (const r of b11) dup += `| ${r.name as string} | Batch-011: ${r.existingSetId as string} (owner-blocked import) |\n`;
 for (const r of prod) dup += `| ${r.name as string} | production (live row) |\n`;
@@ -305,16 +355,16 @@ Honest photograph coverage for the Tirupati master inventory (${official.accesse
 
 ## Current state
 
-1. **No Batch-012 row ships with a photograph.** No identity-verifiable, licence-clear photo was
-   found during this pass for any of the 29 rows. Per the project honesty contract:
+1. **No review-candidate row ships with a photograph.** No identity-verifiable, licence-clear photo was
+   found during this pass for any of the 86 queued rows (Batch-012 + Batch-013). Per the project honesty contract:
    - no stock photo may stand in for a named venue;
    - AI-generated imagery may NEVER be presented as a real photo of the place;
    - Google Maps / directory photos may not be downloaded or republished.
-   These 29 rows will render the app's labelled AI-generated representative fallback or the
+   These rows will render the app's labelled AI-generated representative fallback or the
    category icon tile — both clearly labelled as non-venue imagery in the UI.
 2. **Batch-011's 10 attraction photos remain bundled in the repo** (with per-photo attribution in
    IMAGE-CREDITS.md) and go live only when the owner executes the Batch-011 SQL.
-3. The 105 T3 backlog candidates equally have no photos; the same fallback chain applies.
+3. The ${active.filter((r) => r.tier === "T3").length} T3 backlog candidates equally have no photos; the same fallback chain applies.
 
 ## What is needed to close a photo gap
 

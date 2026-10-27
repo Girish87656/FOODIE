@@ -119,7 +119,7 @@ const RESTAURANT_ROWS: RestRow[] = [
   { key: "tpt-neighbourhoods::manju foods", name: "Manju Foods", category: "restaurant", address: "Bhavani Nagar, Tirupati, Andhra Pradesh", locality: "Bhavani Nagar", tags: [], sourceUrl: "" },
   { key: "tpt-neighbourhoods::shankar chats", name: "Shankar Chats", category: "restaurant", address: "MR Palli Junction, Tirupati, Andhra Pradesh", locality: "MR Palli", tags: [], sourceUrl: "" },
   { key: "tpt-neighbourhoods::chillies restaurant", name: "Chillies Restaurant", category: "restaurant", address: "Air Bypass Road, Tirupati, Andhra Pradesh", locality: "AIR Bypass Road", tags: [], sourceUrl: "" },
-  { key: "tpt-neighbourhoods::southern spice avilala", name: "Southern Spice", category: "restaurant", address: "Avilala, Tirupati, Andhra Pradesh", locality: "Avilala", tags: [], sourceUrl: "" },
+  { key: "tpt-neighbourhoods::southern spice avilala", name: "Southern Spice, Avilala", category: "restaurant", address: "Avilala, Tirupati, Andhra Pradesh", locality: "Avilala", tags: [], sourceUrl: "" },
   { key: "tirumala::srinivasam restaurant", name: "Srinivasam Restaurant", category: "restaurant", address: "Tirumala, Tirupati, Andhra Pradesh", locality: "Tirumala", tags: [], sourceUrl: "" },
   { key: "tirumala::anandan vasavi vegetarian restaurant", name: "Anandan Vasavi Vegetarian Restaurant", category: "restaurant", address: "Tirumala, Tirupati, Andhra Pradesh", locality: "Tirumala", tags: ["pure_veg"], sourceUrl: "" },
   { key: "tirumala::meenakshi pure veg restaurant", name: "Meenakshi Pure Veg Restaurant", category: "restaurant", address: "Tirumala, Tirupati, Andhra Pradesh", locality: "Tirumala", tags: ["pure_veg"], sourceUrl: "" },
@@ -131,25 +131,25 @@ interface PlaceRow {
   locality: string; tags: string[]; sourceUrl: string;
 }
 const PLACE_ROWS: PlaceRow[] = [
-  { key: "tirumala::sri bhu varahaswamy temple", name: "Sri Bhu Varahaswamy Temple", slug: "sri-bhu-varahaswamy-temple", placeType: "temple", locality: "Tirumala", tags: ["tirumala"], sourceUrl: "https://www.tirumala.org/PlacesToVisit.aspx" },
-  { key: "tirumala::sri bedi anjaneya swamy temple", name: "Sri Bedi Anjaneya Swamy Temple", slug: "sri-bedi-anjaneya-swamy-temple", placeType: "temple", locality: "Tirumala", tags: ["tirumala"], sourceUrl: "https://www.tirumala.org/PlacesToVisit.aspx" },
-  { key: "tirumala::sri venkateswara museum tirumala", name: "Sri Venkateswara Museum", slug: "sri-venkateswara-museum", placeType: "other", locality: "Tirumala", tags: ["museum", "tirumala"], sourceUrl: "https://www.tirumala.org/" },
+  { key: "tirumala::sri varahaswamy temple tirumala", name: "Sri Varahaswamy Temple, Tirumala", slug: "sri-varahaswamy-temple", placeType: "temple", locality: "Tirumala", tags: ["tirumala"], sourceUrl: "https://www.tirumala.org/PlacesToVisit.aspx" },
+  { key: "tirumala::sri bedi anjaneya swamy temple tirumala", name: "Sri Bedi Anjaneya Swamy Temple, Tirumala", slug: "sri-bedi-anjaneya-swamy-temple", placeType: "temple", locality: "Tirumala", tags: ["tirumala"], sourceUrl: "https://www.tirumala.org/PlacesToVisit.aspx" },
+  { key: "tirumala::sri venkateswara museum tirumala", name: "Sri Venkateswara Museum, Tirumala", slug: "sri-venkateswara-museum", placeType: "other", locality: "Tirumala", tags: ["museum", "tirumala"], sourceUrl: "https://www.tirumala.org/" },
   { key: "tirumala::swami pushkarini", name: "Swami Pushkarini", slug: "swami-pushkarini", placeType: "other", locality: "Tirumala", tags: ["teertham", "tirumala"], sourceUrl: "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx" },
-  { key: "tirumala::sri hathiramjee mutt tirumala", name: "Sri Hathiramjee Mutt", slug: "sri-hathiramjee-mutt", placeType: "temple", locality: "Tirumala", tags: ["mutt", "tirumala"], sourceUrl: "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx" },
+  { key: "tirumala::sri hathiramjee mutt tirumala", name: "Sri Hathiramjee Mutt, Tirumala", slug: "sri-hathiramjee-mutt", placeType: "temple", locality: "Tirumala", tags: ["mutt", "tirumala"], sourceUrl: "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx" },
   { key: "tirumala::akasha ganga theertham", name: "Akasha Ganga Theertham", slug: "akasha-ganga-theertham", placeType: "waterfall", locality: "Tirumala", tags: ["teertham", "tirumala"], sourceUrl: "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx" },
   { key: "tirumala::chakra theertham", name: "Chakra Theertham", slug: "chakra-theertham", placeType: "other", locality: "Tirumala", tags: ["teertham", "tirumala"], sourceUrl: "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx" },
   { key: "tirumala::vaikuntha teertham", name: "Vaikuntha Teertham", slug: "vaikuntha-theertham", placeType: "other", locality: "Tirumala", tags: ["teertham", "tirumala"], sourceUrl: "https://www.tirumala.org/Places%20to%20see%20around%20Tirumala.aspx" },
   { key: "tirumala::papavinasam theertham", name: "Papavinasam Theertham", slug: "papavinasam-theertham", placeType: "other", locality: "Tirumala", tags: ["teertham", "tirumala"], sourceUrl: "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati" },
-  { key: "tpt-central::sreenivasam complex ttd pilgrim accommodation", name: "Sreenivasam Complex", slug: "sreenivasam-complex", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
-  { key: "tpt-central::sri venkateswara dharmasala ttd", name: "Sri Venkateswara Dharmasala", slug: "sri-venkateswara-dharmasala", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
-  { key: "tpt-central::sri govindaraja swamy dharmasala ttd", name: "Sri Govindaraja Swamy Dharmasala", slug: "sri-govindaraja-swamy-dharmasala", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
-  { key: "tpt-central::vishnu nivasam ttd free accommodation", name: "Vishnu Nivasam", slug: "vishnu-nivasam", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
-  { key: "tiruchanur::sri krishna swamy temple alagiyaperumal shrine tiruchanoor", name: "Sri Krishna Swamy Temple", slug: "sri-krishna-swamy-temple-tiruchanoor", placeType: "temple", locality: "Tiruchanoor", tags: ["alagiyaperumal_shrine", "surrounding-corridor"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
-  { key: "tiruchanur::sri varada raja swamy temple tiruchanoor", name: "Sri Varada Raja Swamy Temple", slug: "sri-varada-raja-swamy-temple", placeType: "temple", locality: "Tiruchanoor", tags: ["surrounding-corridor"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
-  { key: "tiruchanur::sri suryanarayana swamy temple tiruchanoor", name: "Sri Suryanarayana Swamy Temple", slug: "sri-suryanarayana-swamy-temple", placeType: "temple", locality: "Tiruchanoor", tags: ["surrounding-corridor"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
-  { key: "surrounding::sri prasanna venkateswara swamy temple appalayagunta", name: "Sri Prasanna Venkateswara Swamy Temple", slug: "sri-prasanna-venkateswara-swamy-temple", placeType: "temple", locality: "Appalayagunta", tags: ["surrounding"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
+  { key: "tpt-central::sreenivasam complex ttd pilgrim accommodation", name: "Sreenivasam Complex (TTD Pilgrim Accommodation)", slug: "sreenivasam-complex", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
+  { key: "tpt-central::sri venkateswara dharmasala ttd", name: "Sri Venkateswara Dharmasala (TTD)", slug: "sri-venkateswara-dharmasala", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
+  { key: "tpt-central::sri govindaraja swamy dharmasala ttd", name: "Sri Govindaraja Swamy Dharmasala (TTD)", slug: "sri-govindaraja-swamy-dharmasala", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
+  { key: "tpt-central::vishnu nivasam ttd free accommodation", name: "Vishnu Nivasam (TTD Free Accommodation)", slug: "vishnu-nivasam", placeType: "hotel", locality: "Tirupati", tags: ["pilgrim_accommodation", "ttd"], sourceUrl: "https://www.tirumala.org/AccommodationAtTirupati.aspx" },
+  { key: "tiruchanur::sri krishna swamy temple alagiyaperumal shrine tiruchanoor", name: "Sri Krishna Swamy Temple (Alagiyaperumal Shrine), Tiruchanoor", slug: "sri-krishna-swamy-temple-tiruchanoor", placeType: "temple", locality: "Tiruchanoor", tags: ["alagiyaperumal_shrine", "surrounding-corridor"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
+  { key: "tiruchanur::sri varada raja swamy temple tiruchanoor", name: "Sri Varada Raja Swamy Temple, Tiruchanoor", slug: "sri-varada-raja-swamy-temple", placeType: "temple", locality: "Tiruchanoor", tags: ["surrounding-corridor"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
+  { key: "tiruchanur::sri suryanarayana swamy temple tiruchanoor", name: "Sri Suryanarayana Swamy Temple, Tiruchanoor", slug: "sri-suryanarayana-swamy-temple", placeType: "temple", locality: "Tiruchanoor", tags: ["surrounding-corridor"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
+  { key: "surrounding::sri prasanna venkateswara swamy temple appalayagunta", name: "Sri Prasanna Venkateswara Swamy Temple, Appalayagunta", slug: "sri-prasanna-venkateswara-swamy-temple", placeType: "temple", locality: "Appalayagunta", tags: ["surrounding"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
   { key: "surrounding::sri sridevi bhudevi sametha thondamanadu temple", name: "Sri Sridevi Bhudevi Sametha Thondamanadu Temple", slug: "sri-sridevi-bhudevi-sametha-thondamanadu-temple", placeType: "temple", locality: "Thondamanadu", tags: ["surrounding"], sourceUrl: "https://www.tirumala.org/TemplesAtTiruchanoor.aspx" },
-  { key: "tpt-central::regional science centre tirupati", name: "Regional Science Centre", slug: "regional-science-centre", placeType: "other", locality: "Tirupati", tags: ["museum"], sourceUrl: "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati" },
+  { key: "tpt-central::regional science centre tirupati", name: "Regional Science Centre, Tirupati", slug: "regional-science-centre", placeType: "other", locality: "Tirupati", tags: ["museum"], sourceUrl: "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati" },
 ];
 
 /* source_url fallback: the curated row's own primary source */
@@ -161,12 +161,13 @@ function restUrl(r: RestRow): string {
 }
 
 /* drift assertions: every declared row must exist in the curated worksheet
-   with a matching name (canonical) and area */
+   and the declared name must EQUAL the worksheet canonical name — ids are
+   uuid5("foodie-tptm:Tirupati:<name>") so any canonical rename MUST be
+   consciously rebased into this batch (fail-loud, never silently drift). */
 for (const r of [...RESTAURANT_ROWS.map((x) => ({ row: x, c: cur(x.key) })), ...PLACE_ROWS.map((x) => ({ row: x, c: cur(x.key) }))]) {
   const cName = r.c.name;
-  if (!cName.toLowerCase().startsWith(r.row.name.toLowerCase().split(",")[0])) {
-    // canonical curated name may carry a ", <locality>" suffix; assert prefix identity
-    throw new Error(`DRIFT: curated name "${cName}" does not match batch name "${r.row.name}" for ${r.row.key}`);
+  if (cName !== r.row.name) {
+    throw new Error(`DRIFT: curated canonical "${cName}" != batch name "${r.row.name}" for ${r.row.key} — rebase this row onto the current worksheet canonical`);
   }
 }
 

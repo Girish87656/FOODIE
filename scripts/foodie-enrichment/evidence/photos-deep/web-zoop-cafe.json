@@ -1,0 +1,22 @@
+{
+  "place": {
+    "id": "2a0132c0-1eaf-5a0b-bb8b-3265ef4ecc4d",
+    "name": "Zoop Cafe",
+    "category": "cafe",
+    "address": "Abhi Nivas, Near Anand Comfort, Jalappa College Road, Doddaballapura Locality, Doddaballapura",
+    "city": "Doddaballapura",
+    "locality": "Doddaballapura town",
+    "latitude": 13.2999467004,
+    "longitude": 77.5283644348,
+    "sourceUrl": "https://www.district.in/dining/doddaballapura/zoop-cafe-doddaballapura-locality",
+    "index": 77
+  },
+  "query": "\"Zoop Cafe\" Doddaballapura town",
+  "hits": [],
+  "errors": [
+    "rate-limited (6)",
+    "persistent rate limit — remaining places skipped this run (resumable)"
+  ],
+  "retrievedOn": "2026-10-12",
+  "skipped": true
+}

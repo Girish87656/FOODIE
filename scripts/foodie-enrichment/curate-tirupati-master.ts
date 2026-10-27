@@ -468,6 +468,21 @@ for (const row of ws.rows) {
 
 /* ---- official-source candidates (T2) ---- */
 
+/* official additions must carry a SEMANTIC category group (the `group` field
+   drives the inventory tables and the coverage matrix — a placeholder like
+   "official" would make those rows invisible in every group-rendered view). */
+const CATEGORY_TO_GROUP: Record<string, string> = {
+  restaurant: "food-restaurants",
+  tiffin: "food-tiffin",
+  street_food: "food-street",
+  bakery_sweets: "food-bakery",
+  cafe: "food-cafe",
+  temple: "temples",
+  hotel: "stays",
+  other: "attractions",
+  waterfall: "attractions",
+};
+
 const OFFICIAL_NAME_MAP: Array<{ match: RegExp; name: string; area: string; target: string; category: string; placeType: string | null; tags: string[] }> = [
   { match: /swami pushkarini/i, name: "Swami Pushkarini", area: "tirumala", target: "place", category: "other", placeType: "other", tags: ["teertham", "tirumala"] },
   { match: /papavinasam/i, name: "Papavinasam Theertham", area: "tirumala", target: "place", category: "other", placeType: "other", tags: ["teertham", "tirumala"] },
@@ -577,7 +592,7 @@ for (const src of official.sources) {
     const b11 = batch011Hit(map.name);
     curated.set(key, {
       key, name: map.name, rawNames: [n.name], nameCleaned: false,
-      area: map.area, localityHint: null, group: "official", target: map.target,
+      area: map.area, localityHint: null, group: CATEGORY_TO_GROUP[map.category] ?? "attractions", target: map.target,
       category: map.category, placeType: map.placeType, tags: map.tags,
       sourceUrl: src.sourceUrl, sourceKind: "official",
       verifyAreaConfirmed: null, verifyAddressEvidence: null,

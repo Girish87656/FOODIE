@@ -53,7 +53,7 @@ Identity-level merges performed by the alias groups + normalized names in
 ## B. POSSIBLE DUPLICATES awaiting evidence (review queue — NOT merged, NOT deleted)
 
 These carry `status: duplicate` in the curated worksheet with `dupOf` pointers. They are
-EXCLUDED from Batch-012 until a human confirms whether each is a distinct branch or a repeat listing.
+EXCLUDED from the batch review candidates until a human confirms whether each is a distinct branch or a repeat listing.
 
 | Candidate | Area | Points to | Reason |
 |---|---|---|---|
@@ -67,15 +67,20 @@ EXCLUDED from Batch-012 until a human confirms whether each is a distinct branch
 
 ## C. Name-similarity watchlist (identity confusion risks)
 
-- **Srinivasam Restaurant** (Batch-012, Tirumala) vs **Sreenivasam Complex** (Batch-012, TTD
+- **Srinivasam Restaurant** (Batch-012, Tirumala) vs **Sreenivasam Complex (TTD Pilgrim Accommodation)** (Batch-012, TTD
   accommodation) — different spellings and different venue types per sources; flagged so a future
   editor does not "fix" either spelling into the other.
-- **Sri Govindaraja Swamy Temple** (Batch-011) vs **Sri Govindaraja Swamy Dharmasala** (Batch-012) —
+- **Sri Govindaraja Swamy Temple** (Batch-011) vs **Sri Govindaraja Swamy Dharmasala (TTD)** (Batch-012) —
   distinct places (temple vs TTD lodging); slugs are distinct by design.
-- **Sri Bhu Varahaswamy Temple** (Batch-012, official TTD name) vs any "Varaha Swami" listing
-  variants — same temple; alias-guarded in curation.
+- **Sri Varahaswamy Temple, Tirumala** (Batch-012 canonical; TTD also uses the dual name
+  "Sri Bhu Varahaswamy Temple") vs any "Varaha Swami" listing
+  variants — same temple; alias-guarded in curation and the alias kept in rawNames.
+- **Sri Prasanna Venkateswara Swamy Temple, Appalayagunta** (Batch-012) vs **Sri Prasanna Venkateswara
+  Swamy Temple** (Renigunta, T3 backlog) — two DISTINCT temples sharing a base name (verify evidence for the
+  Renigunta listing matched a Kadapa address, so it stays unimported); the Appalayagunta canonical carries the
+  locality suffix so their deterministic ids can never collide.
 
-## D. Existing-set cross-references (excluded from Batch-012)
+## D. Existing-set cross-references (excluded from batch imports)
 
 | Curated candidate | Already covered by |
 |---|---|
