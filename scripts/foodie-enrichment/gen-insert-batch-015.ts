@@ -411,11 +411,11 @@ begin
   end if;
   raise notice 'PREFLIGHT OK: ${MARKER} markers unused.';
 
-  select count(*) into v_dup_ids from public.places where id in (${ALL_IDS.join(", ")});
+  select count(*) into v_dup_ids from public.places where id in (${ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-015 place ids already exist — importing would collide.', v_dup_ids;
   end if;
-  select count(*) into v_dup_ids from public.restaurants where id in (${ALL_IDS.join(", ")});
+  select count(*) into v_dup_ids from public.restaurants where id in (${ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-015 ids already exist in restaurants — importing would collide.', v_dup_ids;
   end if;
@@ -434,28 +434,28 @@ begin
   end if;
   raise notice 'PREFLIGHT OK: no restaurant name collisions.';
 
-  select count(*) into v_b11 from public.places where id in (${BATCH011_ALL_IDS.join(", ")});
+  select count(*) into v_b11 from public.places where id in (${BATCH011_ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_b11 not in (0, 16) then
     raise exception 'PREFLIGHT FAIL: Batch-011 rows PARTIALLY present (%) — owner review required before batch-015.', v_b11;
   end if;
   raise notice 'PREFLIGHT OK: Batch-011 state coherent (%/16 present).', v_b11;
 
-  select count(*) into v_b12 from public.places where id in (${b12Ids.join(", ")});
-  v_b12 := v_b12 + (select count(*) from public.restaurants where id in (${b12Ids.join(", ")}));
+  select count(*) into v_b12 from public.places where id in (${b12Ids.map((i) => `'${i}'`).join(", ")});
+  v_b12 := v_b12 + (select count(*) from public.restaurants where id in (${b12Ids.map((i) => `'${i}'`).join(", ")}));
   if v_b12 not in (0, 29) then
     raise exception 'PREFLIGHT FAIL: Batch-012 rows PARTIALLY present (%) — owner review required before batch-015.', v_b12;
   end if;
   raise notice 'PREFLIGHT OK: Batch-012 state coherent (%/29 present).', v_b12;
 
-  select count(*) into v_b13 from public.places where id in (${b13Ids.join(", ")});
-  v_b13 := v_b13 + (select count(*) from public.restaurants where id in (${b13Ids.join(", ")}));
+  select count(*) into v_b13 from public.places where id in (${b13Ids.map((i) => `'${i}'`).join(", ")});
+  v_b13 := v_b13 + (select count(*) from public.restaurants where id in (${b13Ids.map((i) => `'${i}'`).join(", ")}));
   if v_b13 not in (0, 57) then
     raise exception 'PREFLIGHT FAIL: Batch-013 rows PARTIALLY present (%) — owner review required before batch-015.', v_b13;
   end if;
   raise notice 'PREFLIGHT OK: Batch-013 state coherent (%/57 present).', v_b13;
 
-  select count(*) into v_b14 from public.places where id in (${b14Ids.join(", ")});
-  v_b14 := v_b14 + (select count(*) from public.restaurants where id in (${b14Ids.join(", ")}));
+  select count(*) into v_b14 from public.places where id in (${b14Ids.map((i) => `'${i}'`).join(", ")});
+  v_b14 := v_b14 + (select count(*) from public.restaurants where id in (${b14Ids.map((i) => `'${i}'`).join(", ")}));
   if v_b14 not in (0, 27) then
     raise exception 'PREFLIGHT FAIL: Batch-014 rows PARTIALLY present (%) — owner review required before batch-015.', v_b14;
   end if;
@@ -563,13 +563,13 @@ select 'places_b15_unverified', count(*) from public.places where source = '${MA
 union all
 select 'places_b15_with_coords', count(*) from public.places where source = '${MARKER}' and latitude is not null
 union all
-select 'batch012_present', count(*) from public.places where id in (${b12Ids.join(", ")})
+select 'batch012_present', count(*) from public.places where id in (${b12Ids.map((i) => `'${i}'`).join(", ")})
 union all
-select 'batch013_present', count(*) from public.places where id in (${b13Ids.join(", ")})
+select 'batch013_present', count(*) from public.places where id in (${b13Ids.map((i) => `'${i}'`).join(", ")})
 union all
-select 'batch014_present', count(*) from public.places where id in (${b14Ids.join(", ")})
+select 'batch014_present', count(*) from public.places where id in (${b14Ids.map((i) => `'${i}'`).join(", ")})
 union all
-select 'batch011_present', count(*) from public.places where id in (${BATCH011_ALL_IDS.join(", ")});
+select 'batch011_present', count(*) from public.places where id in (${BATCH011_ALL_IDS.map((i) => `'${i}'`).join(", ")});
 `;
 
 writeFileSync(join(OUT, "insert-batch-015-tptm-b5.sql"), SQL);

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Srinivasa Auditorium - Mr Palli Circle, Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Srinivasa-Auditorium-Mr-Palli-Circle/9999PX877-X877-221229225441-W4M9_BZDET/things-to-do"
   },
   "query": "\"Srinivasa Auditorium - Mr Palli Circle, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Srinivasa-Auditorium-Mr-Palli-Circle/9999PX877-X877-221229225441-W4M9_BZDET/photos",
+      "name": "10 Photos of Srinivasa Auditorium in Mr Palli Circle, Tirupati",
+      "snippet": "Visit Justdial for Address , Contact Number, Reviews & Ratings, Photos ... Srinivasa Auditorium, Mr Palli Circle, tirupati - Auditoriums - 1. Srinivasa ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Auditoriums-in-Mr-Palli-Circle/nct-10026356",
+      "name": "Top Auditoriums in Mr Palli Circle - Tirupati",
+      "snippet": "Tirupati - 1.42 km. Ask for Price. Get Best Price. Srinivasa Auditorium Mr Palli Circle, tirupati . Srinivasa Auditorium. 4.51.7k Ratings. Tirupati - 1.41 km. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Auditoriums-in-Padmavati-Puram/nct-10026356",
+      "name": "Top Auditoriums in Padmavati Puram - Tirupati",
+      "snippet": "Tirupati - 3.83 km. Ask for Price. Get Best Price. Srinivasa Auditorium Mr Palli Circle, tirupati . Srinivasa Auditorium. 4.51.7k Ratings. Tirupati - 3.81 km. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/te/Tirupati/Srinivasa-Auditorium-Mr-Palli-Circle/9999PX877-X877-221229225441-W4M9_BZDET/photos",
+      "name": "10 Photos of Srinivasa Auditorium in Mr Palli Circle, Tirupati",
+      "snippet": "... Tirupati Rated 4.5 based on 1700 Customer Reviews and Ratings with 10 Photos. Visit Justdial for Address ... Srinivasa Auditorium, Mr Palli Circle, tirupati - ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mini-Theatres-in-Stv-Nagar/nct-11019615",
+      "name": "Mini Theatres in Stv Nagar, Tirupati - Justdial Jd",
+      "snippet": "Srinivasa Auditorium Mr Palli Circle, tirupati . Srinivasa Auditorium. 4.51.7k Ratings. Sri Venkateswara Mr Palli Circle - 3.14 km. Send Enquiry. Spmvv Indira ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Kadapa/Auditoriums-in-Vontimitta/nct-10026356/page-2",
+      "name": "Auditoriums in Vontimitta, Kadapa - Page 2 - Justdial Jd",
+      "snippet": "Srinivasa Auditorium Mr Palli Circle, tirupati . Srinivasa Auditorium. 4.51.7k ... Address , National Highway, Bosepet, Gudiyattam - 632602 (Near ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "10 Photos of Srinivasa Auditorium in Mr Palli Circle, Tirupati :: Visit Justdial for Address , Contact Number, Reviews & Ratings, Photos ... Srinivasa Auditorium, Mr Palli Circle, tirupati - Auditoriums - 1. Srinivasa ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

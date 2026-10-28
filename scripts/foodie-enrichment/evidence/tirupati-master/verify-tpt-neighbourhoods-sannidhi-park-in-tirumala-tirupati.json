@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sannidhi Park in Tirumala,Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sannidhi-Park-Tirumala/9999PX877-X877-190825073654-W7F9_BZDET"
   },
   "query": "\"Sannidhi Park in Tirumala,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://sg.trip.com/hotels/tirupati-hotel-detail-51197267/sannidhi-service-apartments",
+      "name": "Sannidhi Service Apartments, Tirupati: 2026 Deals",
+      "snippet": "19-14-96/C, 5th Cross, near SGS Arts College, Raghavendra Nagar, Tirupati , Andhra Pradesh 517501, IndiaView",
+      "host": "sg.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Hotels-in-Sannidhi-Street-Tirumala/nct-10255012",
+      "name": "Best Deals - Top Hotels in Sannidhi Street Tirumala, Tirupati",
+      "snippet": "Sannidhi Street Tirumala. Average Rating 4.0 (15898 Ratings & Reviews. Address Tp Area, T P Area, Tirupati - 517501. Door No 18-3-60/15, KT Road ,Shanthi Nagar ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.agoda.com/en-ca/sannidhi-service-apartments/hotel/tirupati-in.html",
+      "name": "Best Price on Sannidhi Service Apartments in Tirupati +",
+      "snippet": "Sannidhi Service Apartments. YVRS Residency,19-14-96/C,5th Cross, near SGS Arts College, Raghavendra Nagar, Tirupati , Andhra Pradesh 517501 ... Read more",
+      "host": "www.agoda.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Guest-House-Rs-4001-To-Rs-4500-in-Sannidhi-Street-Tirumala/nct-10548280",
+      "name": "Guest House Rs 4001 To Rs 4500 - Tirupati",
+      "snippet": "Address , Tirumala, Tirupati - 517504, Golavaani Gunta , Revenue Ward 22, Renigunta Road, Tirupati - 517501 (Near Reliance Smart Mart), Alipiri Road, Korlagunta ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.easemytrip.com/hotels/tirupati-emthotel-2068348",
+      "name": "Sannidhi Service Apartments,Tirupati - Hotels",
+      "snippet": "19-14-96/C,5Th Cross,Raghavendra Nagar Near Sgs Arts College. ftricn No Service Fee. ftricn Free Cancellation. Good. 2. Deal Icon Exclusive Deal. Hurry Icon ... Read more",
+      "host": "www.easemytrip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.trip.com/travel-guide/attraction/chittoor/sannidhi-park-137224855",
+      "name": "Sannidhi Park Tickets [2026] - Promos, Prices, Reviews &",
+      "snippet": "M9M2+84Q, Tirumala- Tirupati Rd, Tirumala, Tirupati Urban, Andhra Pradesh 517504, India",
+      "host": "www.trip.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sannidhi Service Apartments, Tirupati: 2026 Deals :: 19-14-96/C, 5th Cross, near SGS Arts College, Raghavendra Nagar, Tirupati , Andhra Pradesh 517501, IndiaView",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "8 Photos of Perumal Temple in Nagari, Chittoor",
-    "area": "surrounding"
+    "area": "surrounding",
+    "sourceUrl": "https://www.justdial.com/Chittoor/Perumal-Temple-Nagari/9999P8572-8572-180302082749-Y9N1_BZDET/photos"
   },
   "query": "\"8 Photos of Perumal Temple in Nagari, Chittoor\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples-in-Sundaraiah-Nagar/nct-10475644",
+      "name": "Famous Temples in Sundaraiah Nagar, Tirupati",
+      "snippet": "Explore famous temples in Sundaraiah Nagar, The cave-like interiors, adorned with faded frescoes, create an ambience of mystery and reverence. Early morning ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Chittoor/Temples/nct-10475644/page-17",
+      "name": "Temples in Chittoor - Page 17",
+      "snippet": "Perumal Swamy Temple. Chittoor - The cave-like interiors, adorned with faded frescoes, Early morning visits provide the best lighting for photography and a ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/pages/Sri-Kariya-Manikya-Swamy-Nagari/349262292121965",
+      "name": "Sri Kariya Manikya Swamy, Nagari - Home",
+      "snippet": "Sri Kariya Manikya Swamy, Nagari, Nagari, Andhra Pradesh, India. Hindu Temple 303 people checked in here Nagari, Andhra Pradesh, India",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples-in-Tataiah-Gunta/nct-10475644/page-4",
+      "name": "Temples in Tataiah Gunta, Tirupati - Page 4",
+      "snippet": "Name, Tirupati Karumariamman Temple · Sri Lakshmi Narasimha Swamy Temple ; Address , Srinivasa Nagar, Ramchandra Nagar, Tirupati - 517501, Gs Mada Street, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Chittoor/Temples/nct-10475644/page-7",
+      "name": "Temples in Chittoor, Andhra Pradesh - Page 7",
+      "snippet": "458/A2, Tirupati , Puttur, Andhra Pradesh, RTC Colony, Chittoor - 517583. Listed Categories. Temples · Hindu Shrine · Temples · Religious Places · Temples. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Chittoor/Temples-in-Balaji-Nagar-Colony/nct-10475644",
+      "name": "Famous Temples in Balaji Nagar Colony, Chittoor",
+      "snippet": "Temples in Balaji Nagar Colony, Chittoor ; Address , Gandla St, Pagadamanu Street, Chittor Collectorate, Chittoor - 517002, National Highway 18, Saravana Puram, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Famous Temples in Sundaraiah Nagar, Tirupati :: Explore famous temples in Sundaraiah Nagar, The cave-like interiors, adorned with faded frescoes, create an ambience of mystery and reverence. Early morning ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

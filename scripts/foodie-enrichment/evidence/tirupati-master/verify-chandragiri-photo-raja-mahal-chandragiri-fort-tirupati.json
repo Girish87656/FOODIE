@@ -1,14 +1,85 @@
 {
   "candidate": {
     "name": "Photo: Raja Mahal-Chandragiri Fort - Tirupati",
-    "area": "chandragiri"
+    "area": "chandragiri",
+    "sourceUrl": "https://www.tripadvisor.com/LocationPhotoDirectLink-g297587-d4139139-i169163235-Chandragiri_Palaces_and_Fort-Tirupati_Chittoor_District_Andhra_Pradesh.html"
   },
   "query": "\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}"
+  "hits": [
+    {
+      "url": "https://www.mapquest.com/in/andhra-pradesh/chandragiri-palaces-and-fort-528112075",
+      "name": "Chandragiri Palaces and Fort - Tirupati",
+      "snippet": "Raja Mahal-Chandragiri … 11 Km From Tirupati , Tirupati , Chandragiri is now famous for the historical fort, and the Raja Mahal within it.",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://en.tripadvisor.com.hk/Attraction_Review-g297587-d4139139-Reviews-Chandragiri_Palaces_and_Fort-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Chandragiri Palaces and Fort - All You SHOULD Know Before",
+      "snippet": "The site contains the ornate Raja Mahal ・ area Address 11 Km From Tirupati , Tirupati 517501 India ・ is now an archaeological museum",
+      "host": "en.tripadvisor.com.hk",
+      "kind": null
+    },
+    {
+      "url": "https://bharatkasafar.wordpress.com/2014/07/16/chandragiri-fort-tirupati-the-majestic-structures-of-the-past",
+      "name": "Chandragiri Fort Tirupati – The Majestic Structures of the Past",
+      "snippet": "Jul 16, 2014 — The “Raja” Mahal is huge with two floors and stands majestically. The entire place has two divisions- The King's palace and the Queen's palace. ...",
+      "host": "bharatkasafar.wordpress.com",
+      "kind": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Chandragiri_Fort_-_Raja_Mahal_(11).jpg",
+      "name": "File:Chandragiri Fort - Raja Mahal (11).jpg",
+      "snippet": "Raja Mahal Palace of Vijayanagara Kings at Chandragiri Fort in Andhra Pradesh. Camera location 13° 34′ 58.48′′ N,",
+      "host": "commons.wikimedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.co.nz/ShowUserReviews-g297587-d4139139-r183729890-Chandragiri_Palaces_and_Fort-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Good fort from the Vijayanagar Empire - Tirupati - Tripadvisor",
+      "snippet": "Chandragiri fort is located just 12 kms from Tirupathi . Regular buses ply from tirupathi bus stand with a frequency of 15 mins. Travel time is approx 25 mins. Read more",
+      "host": "www.tripadvisor.co.nz",
+      "kind": null
+    },
+    {
+      "url": "https://www.tirupationline.in/guide/chandragiri-fort",
+      "name": "Chandragiri Fort - Tirupati",
+      "snippet": "Chandragiri Fort is located at a distance of 12kms from Tirupati and is popular for its old architecture & stone carving that are worth mentioning.",
+      "host": "www.tirupationline.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Chandragiri Palaces and Fort - All You SHOULD Know Before :: The site contains the ornate Raja Mahal ・ area Address 11 Km From Tirupati , Tirupati 517501 India ・ is now an archaeological museum",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}"
+      ]
+    },
+    {
+      "retrievedOn": "2026-10-28",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    },
+    {
+      "retrievedOn": "2026-10-28",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Photo: Raja Mahal-Chandragiri Fort - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    }
+  ]
 }

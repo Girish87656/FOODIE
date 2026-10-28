@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "name": "Kalyani Dam - Projects Data",
+    "area": "surrounding",
+    "sourceUrl": "https://irrigation.ap.gov.in/wrd/home/projects/17"
+  },
+  "query": "\"Kalyani Dam - Projects Data\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com.sg",
+      "name": "KALYANI DAM - All You SHOULD Know Before You Go",
+      "snippet": "It is located near Tirupati . Kalyani Dam - Picnic place near Tirupati . It is on the way from Tirupati to Pileru road ,near Rangampet.There",
+      "host": "www.tripadvisor.com.sg",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com",
+      "name": "THE BEST Tirupati Dams (2026)",
+      "snippet": "This 1963 built dam is one of the four dams that supplies water to the residents of Tirumala. It is on the way to Akash Ganga. few vehicles stop on the dam.",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://indiago.app",
+      "name": "Kalyani Dam, Tirumala: timings, tickets, how to visit - India GO",
+      "snippet": "Kalyani Dam. ← Tirumala. AreaOn the Tirupati –Madanapalle road, about 25 km from Tirupati . The reservoir that gives Tirupati and Tirumala their drinking water ... Read more",
+      "host": "indiago.app",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in",
+      "name": "Kalyani Dam - Picnic place near Tirupati - Reviews, Photos",
+      "snippet": "We came across this dam.It is around 20 km from Tirupati . It is on the way from Tirupati to Pileru road ,near Rangampet.There is a good approach road ( ~ 1 ... Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "KALYANI DAM - All You SHOULD Know Before You Go :: It is located near Tirupati . Kalyani Dam - Picnic place near Tirupati . It is on the way from Tirupati to Pileru road ,near Rangampet.There",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

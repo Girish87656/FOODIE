@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "330 Reviews for Tummalagunta Playground in Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tummalagunta-Playground/9999PX877-X877-250306022353-G1H2_BZDET/reviews"
   },
   "query": "\"330 Reviews for Tummalagunta Playground in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Parks-in-Kk-Layout/nct-10355258/page-5",
+      "name": "Parks in Kk Layout, Tirupati - Page 5",
+      "snippet": "These parks are often centrally located, making them easily accessible to residents. They typically feature landscaped gardens, walking paths, seating areas, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Parks-in-Tirupati-North/nct-10355258",
+      "name": "Parks in Tirupati North - Gardens near me - Justdial Jd",
+      "snippet": "125 Parks in Tirupati North. Find ✓Gardens, ✓Public parks, ✓Echo Park, ✓Amusements Parks in Tirupati North. Get Phone Numbers, Address , Reviews, Photos, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Parks-in-Tirupati-North/nct-10355258/page-2",
+      "name": "Parks in Tirupati North, Tirupati - Page 2",
+      "snippet": "Address , Old Renigunta Road, Renigunta Road, Tirupati - 517501 (Korramenugunta), Air Bypass Road, Mr Palli Circle, Tirupati - 517502 (Bairagi Patteda), Sri ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Parks-in-Pk-Layout/nct-10355258/page-3",
+      "name": "Parks in Pk Layout, Tirupati - Page 3",
+      "snippet": "Parks in Pk Layout, Tirupati - Page 3 ; Saladagu Nilayam. 4.33 Ratings ; Jogineni Vari Garden. 4.01 Rating ; Peruru Lake. 3.65 Ratings ; Gollapalli Brothers Mango ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Parks-in-Korlagunta/nct-10355258/page-3",
+      "name": "Parks in Korlagunta, Tirupati - Page 3",
+      "snippet": "Parks in Korlagunta, Tirupati - Page 3 ; Jogineni Vari Garden. 4.01 Rating ; Saladagu Nilayam. 4.33 Ratings ; Peruru Lake. 3.65 Ratings ; Water Birds. 4.02 Ratings. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tourism-in-Thummalagunta/nct-10489734/page-5",
+      "name": "20+ Tourism in Thummalagunta - Places to visit in Tirupati",
+      "snippet": "Tourism in Thummalagunta, Tirupati ; Name, Almah Medical Tourism & Leisure Travels · Travel Tales ; Address , No. 13, Mpt Officers Colony, Thirusulam, Tirusulam, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Parks in Kk Layout, Tirupati - Page 5 :: These parks are often centrally located, making them easily accessible to residents. They typically feature landscaped gardens, walking paths, seating areas, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

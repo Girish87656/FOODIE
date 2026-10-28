@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Kalyana Venkateswara Temple, Narayanavanam",
-    "area": "surrounding"
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org"
   },
   "query": "\"Kalyana Venkateswara Temple, Narayanavanam\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://uk.trip.com/travel-guide/attraction/chittoor-district/sri-kalyana-venkateswara-swamy-temple-narayanavanam-142672948?poiType=3",
+      "name": "Sri Kalyana Venkateswara Swamy Temple, Narayanavanam",
+      "snippet": "Open Open: 9:00–9:45, 11:00–17:30, 18:45–21:00  Narayanavanam, Andhra Pradesh 517581, India  Map",
+      "host": "uk.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.oneindiaonline.com/narayanavavanam.php",
+      "name": "Narayanavanam Temple and Narayanavanam Temple Timings",
+      "snippet": "Kalyana Venkateswara Swamy temple is in Narayanavanam, 11km norht-east of Nagari. The straight road, north, goes to Puttur, en route to Tirupati .",
+      "host": "www.oneindiaonline.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.waze.com/live-map/directions/in/ap/tirupati/sri-kalyana-venkateswara-swamy-temple?to=place.ChIJtUJt52a0sjsRNdeL6fpnork",
+      "name": "sri kalyana venkateswara swamy temple",
+      "snippet": "Friday06:00 - 20:00. Saturday06:00 - 20:00. SRI KALYANA VENKATESWARA SWAMY TEMPLE, New St, Tirupati , Mittapalem, Andhra Pradesh 517102, India. Read more",
+      "host": "www.waze.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.joonsquare.com/religious-building/kalyana-venkateswara-temple-narayanavanam-chittoor",
+      "name": "Kalyana Venkateswara Temple, Narayanavanam Chittoor",
+      "snippet": "Address & Contact Details. Address : Kalyana Venkateswara Temple, Narayanavanam , Narayanavanam, Chittoor, Andhra Pradesh, India, 517581. Share this Business ... Read more",
+      "host": "www.joonsquare.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/tirupatitirumalainfo/photos/narayanavanam-sri-kalyana-venkateswara-swamy-vari-brahmotsavams-will-be-observed/1011330221117988",
+      "name": "Narayanavanam, Sri Kalyana Venkateswara Swamy Vari",
+      "snippet": "Sri Kalyana Venkateswara Swamy … tirumalainfo.com/narayanavanam/ Info is in Tirumala, India. TTD website only: https://ttdevasthanams.ap.gov.in",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.bhaktibharat.com/en/mandir/kalyana-venkateswara-temple-narayanavanam",
+      "name": "Kalyana Venkateswara Temple Narayanavanam | कल्याण",
+      "snippet": "May 20, 2026 — The temple is located opposite the Sri Sorakayala Swamy Temple. Kalyana Venkateswara Temple, Narayanavanam Darshan Timing: Temple is open for ... Read more",
+      "host": "www.bhaktibharat.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Kalyana Venkateswara Swamy Temple, Narayanavanam :: Open Open: 9:00–9:45, 11:00–17:30, 18:45–21:00  Narayanavanam, Andhra Pradesh 517581, India  Map",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

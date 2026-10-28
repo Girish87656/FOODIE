@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sri Padmavathi Ammavari Temple",
-    "area": "surrounding"
+    "area": "surrounding",
+    "sourceUrl": "https://ttdevasthanams.ap.gov.in"
   },
   "query": "\"Sri Padmavathi Ammavari Temple\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Padmavati_Temple",
+      "name": "Padmavati Temple",
+      "snippet": "... Tirupati city in Tirupati district of Andhra Pradesh, India. Padmavati ... Jump up to: 1 2 \" Sri Padmavathi Ammavari Temple – Tirupati Tirumala Info\". Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705522-r668315551-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "PAT Temple visit - Review of Sri Padmavathi Ammavari",
+      "snippet": "Sri Padmavathi Ammavari Temple is one of the most important temples in Tirupati . Located at a distance of only 5 km from Tirupati , this temple in Tiruchanoor is ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://ttdevasthanams.ap.gov.in/temples",
+      "name": "Tirumala Tirupati Devasthanams(Official Booking Portal)",
+      "snippet": "Sri Vakulamatha Temple, Patakalva, Tirupati Rural (SKVST group). Open | Closes 8:30 PM IST ; Sri Padmavathi Ammavari Temple , Tiruchanoor. Open | Closes 9:30 PM ... Read more",
+      "host": "ttdevasthanams.ap.gov.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tirumala.org/PatAtThiruchanoorTempleLegend.aspx",
+      "name": "Sri Padmavathi Ammavari Temple",
+      "snippet": "Sri Padmavathi Ammavari Temple . Temple Legend Arjitha Sevas More Temples. At Tirupathi . Sri Govindarajaswami Temple Srivari Padalamandapam Temple Sri Lakshmi ... Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/ItsMyTirupathi/posts/sri-padmavathi-ammavari-temple-tiruchanoor%EF%B8%8Fvc-sreenu19-rays_of_tirupatitirumala-/5163642087056134",
+      "name": "Sri Padmavathi Ammavari Temple, Tiruchanoor VC",
+      "snippet": "Sri Padmavathi Ammavari Temple Gopuram, Tiruchanoor Credits: Sathish Kumar G # tirupati # tirupathi #tirumala # tirumalatirupatidevasthanam # ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Padmavati-Temple-Tiruchanoor/9999PX877-X877-220205214040-W7D9_BZDET",
+      "name": "Padmavati Temple in Tiruchanoor,Tirupati",
+      "snippet": "... Address , Contact Number, Reviews & Ratings, Photos, Maps of Padmavati Temple ... It is always preferred to visit first Sri Padmavathi Ammavari Temple at... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

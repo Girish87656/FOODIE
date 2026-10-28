@@ -42,13 +42,13 @@ Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrit
 z-ai `web_search` (multi-engine public web results): **251 discovery queries** across
 9 category groups × 8 locality groups, returning **1858 raw hits**.
 Rate limits: the backend hard-throttled during the pass (HTTP 429s with documented back-offs);
-0 queries ended in a recorded error state and 23 identity verifications were
+0 queries ended in a recorded error state and 2 identity verifications were
 rate-limit-skipped (all re-runnable — the pipeline is resumable per query/candidate).
 
 ## 4. Identity-verification + geocoding channels
 
-- Identity verification: **304 candidates verified** so far — 256 area-confirmed,
-  25 not confirmed, 23 skipped (rate limit). Remaining candidates keep their
+- Identity verification: **343 candidates verified** so far — 315 area-confirmed,
+  26 not confirmed, 2 skipped (rate limit). Remaining candidates keep their
   discovery-hit evidence and stay T3/backlog until verified.
 - Geocoding: OpenStreetMap Nominatim (keyless, 1 req/s, project UA, area-gated):
   170 attempts → **19 area-confirmed matches, 151 NULL** (coordinates are
@@ -57,31 +57,29 @@ rate-limit-skipped (all re-runnable — the pipeline is resumable per query/cand
 ## 5. Public listing platforms (via search snippets only — no page scraping)
 
 Hosts that actually surfaced allow-listed hits in this pass:
-- `www.justdial.com` — 138 curated reference(s)
-- `www.tirumala.org` — 71 curated reference(s)
-- `www.tripadvisor.com` — 30 curated reference(s)
-- `en.wikipedia.org` — 19 curated reference(s)
+- `www.justdial.com` — 133 curated reference(s)
+- `www.tirumala.org` — 64 curated reference(s)
+- `www.tripadvisor.com` — 29 curated reference(s)
 - `www.zomato.com` — 18 curated reference(s)
-- `www.facebook.com` — 14 curated reference(s)
-- `www.swiggy.com` — 12 curated reference(s)
+- `en.wikipedia.org` — 18 curated reference(s)
+- `www.facebook.com` — 11 curated reference(s)
+- `www.swiggy.com` — 11 curated reference(s)
 - `magicpin.in` — 8 curated reference(s)
 - `www.incredibleindia.gov.in` — 5 curated reference(s)
-- `www.makemytrip.com` — 5 curated reference(s)
 - `www.district.in` — 4 curated reference(s)
+- `www.makemytrip.com` — 4 curated reference(s)
 - `www.booking.com` — 3 curated reference(s)
 - `wanderlog.com` — 2 curated reference(s)
-- `www.agoda.com` — 2 curated reference(s)
 - `www.eazydiner.com` — 1 curated reference(s)
 - `www.goibibo.com` — 1 curated reference(s)
 - `tirupati.ap.gov.in` — 1 curated reference(s)
+- `www.agoda.com` — 1 curated reference(s)
 - `news.tirumala.org` — 1 curated reference(s)
 - `obms-tourist.rajasthan.gov.in` — 1 curated reference(s)
 - `or.wikipedia.org` — 1 curated reference(s)
 - `ttdevasthanams.ap.gov.in` — 1 curated reference(s)
-- `ignca.gov.in` — 1 curated reference(s)
 - `irrigation.ap.gov.in` — 1 curated reference(s)
 - `indiacinehub.gov.in` — 1 curated reference(s)
-- `www.holidify.com` — 1 curated reference(s)
 
 Usage policy: only the identity of a listing (name + URL + public snippet) is used as evidence;
 listing pages are NOT scraped wholesale, no descriptions are copied, no Google Maps bulk

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Accommodation at Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tirumala.org/AccommodationAtTirupati.aspx"
+  },
+  "query": "\"Accommodation at Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirupati-Hotel-Anjanadri-Nagar-Tirumala/9999PX877-X877-180702045022-U8L4_BZDET",
+      "name": "Book Tirupati Hotel in Tirumala,Tirupati - Justdial - Justdial Jd",
+      "snippet": "The nearby landmark for Tirupati Hotel in Tirumala is Anjanadri Nagar 2. Tirupati Hotel provides free room service. Hotel has a dine-in area. You can contact  ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.expedia.com/All-Tirupati-Hotels.d10058.Travel-Guide-City-All-Hotels",
+      "name": "List of all Properties in Tirupati",
+      "snippet": "We have found 252 Tirupati Hotels · Marasa Sarovar Premiere Tirupati · Ekante Bliss IHCL SeleQtions · Fortune Select Grand Ridge, Tirupati - Member ITC Hotels' ... Read more",
+      "host": "www.expedia.com",
+      "kind": null
+    },
+    {
+      "url": "https://fr.scribd.com/document/1051611873/Tirumala-Tirupati-Devasthanams-Official-Booking-Portal",
+      "name": "Tirumala Tirupati Devasthanams (Official Booking Portal)",
+      "snippet": "Pilgrim Address : Srikakulam, Andhra Pradesh Room Tariff (₹100/-) + SGST (₹0/-) + CGST (₹0/-). SNo. Pilgrim Name Age Gender ID Type ID Number. 1 Penki ... Read more",
+      "host": "fr.scribd.com",
+      "kind": null
+    },
+    {
+      "url": "https://indiago.app/en/tirumala-tirupati/where-to-stay",
+      "name": "Where to Stay in Tirupati: Tirumala Hill or Town - India GO",
+      "snippet": "Oct 12, 2026 — Taj TirupatiTirupati's marquee five-star, Dravidian design with a rooftop pool ... TTD: Accommodation at Tirupati · TTD: Rest Houses in Tirumala ... Read more",
+      "host": "indiago.app",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g297587-d4026606-Reviews-Tirupati_Hotels-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "TIRUPATI HOTELS - Lodge Reviews (India)",
+      "snippet": "ranked #21 of 73 specialty lodging. Tirupati hotel is perfect place to stay, It provides family rooms as well couple rooms. Staff have well patience and ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.booking.com/rooms/city/in/tirupati.html",
+      "name": "The 10 best rooms in Tirupati, India",
+      "snippet": "Nivasa Suites Tirupati - Premium Modern Rooms with spacious kitchen and Dining Area is located in Tirupati , 22 miles from Srikalahasti Temple and 6.5 miles from ... Read more",
+      "host": "www.booking.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Book Tirupati Hotel in Tirumala,Tirupati - Justdial - Justdial Jd :: The nearby landmark for Tirupati Hotel in Tirumala is Anjanadri Nagar 2. Tirupati Hotel provides free room service. Hotel has a dine-in area. You can contact  ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

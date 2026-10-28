@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Renigunta, Tirupati - Sri Venkateswara Swami Temple",
-    "area": "renigunta"
+    "area": "renigunta",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Swami-Temple-Renigunta/9999PX877-X877-190818084240-Q9T1_BZDET/photos"
   },
   "query": "\"Renigunta, Tirupati - Sri Venkateswara Swami Temple\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.ca/Attraction_Review-g297587-d3913313-Reviews-Sri_Prasanna_Venkateswara_Swamy_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Prasanna Venkateswara Swamy Temple (Tirupati, India)",
+      "snippet": "Sri Prasanna Venkateshree Swamy Temple is located at Appalayagunta which is 16 kilometers away from Tirupati . built the temple in 1232AD.",
+      "host": "www.tripadvisor.ca",
+      "kind": null
+    },
+    {
+      "url": "https://www.keralatemplesbooking.com/profile/?temple=136&category=&search=&pageNbr=3",
+      "name": "Tirumala Tirupati Sri Venkateswara Swami Temple Andhra",
+      "snippet": "Address S Mada St, Tirumala, Tirupati , Andhra Pradesh 517504 . The temple complex is spread over 16.2 acres of land.",
+      "host": "www.keralatemplesbooking.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/SriVenkateswaraSwamyTirupati",
+      "name": "Sri Venkateswara Swamy Tirupati | Tirupathi",
+      "snippet": "Sri Venkateswara Swamy Tirupati , Tirupathi . umala, Tirupathi , India, 517102. Tirupati Temple Nonprofit organization 418",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Venkateswara-Swamy-Temple-Renigunta/9999PX877-X877-180225150009-I9J3_BZDET/photos",
+      "name": "Renigunta, Tirupati - Venkateswara Swamy Temple",
+      "snippet": "11 Photos of Venkateswara Swamy Temple in Renigunta, Tirupati Rated 4.7 based on 112 Customer Reviews and Ratings with 11 Photos. Visit Justdial for Address ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://us.trip.com/travel-guide/attraction/tirupati/venkateswara-temple-tummalagunta-141838504",
+      "name": "Venkateswara Temple, Tummalagunta Tickets [2026]",
+      "snippet": "Open Open: 5:00–20:00  Tummalagunta, Thummala Gunta, Andhra Pradesh 517502, India. Open: 5:00–20:00",
+      "host": "us.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://thetaiwantimes.com/en/hindu-temples/tirumala-venkateswara-temple",
+      "name": "Tirumala Venkateswara Temple — Hindu Temple Guide",
+      "snippet": "Sep 11, 2026 — The Venkateswara Swami Temple—also … located in the hills of Tirumala, within Tirupati Urban Mandal, Tirupati district, Andhra Pradesh, India.",
+      "host": "thetaiwantimes.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Tirumala Tirupati Sri Venkateswara Swami Temple Andhra :: Address S Mada St, Tirumala, Tirupati , Andhra Pradesh 517504 . The temple complex is spread over 16.2 acres of land.",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

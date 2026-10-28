@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Amrutha Home Stay, Tiruchanoor, Tirupati",
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.booking.com/hotel/in/amrutha-home-stay-tirucaanur.html"
+  },
+  "query": "\"Amrutha Home Stay, Tiruchanoor, Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.booking.com/hotel/in/amrutha-home-stay-tirucaanur.ko.html",
+      "name": "Amrutha Home Stay, Tiruchanoor, Tirupati - 티루파티",
+      "snippet": "티루파티 내에 위치한 Amrutha Home Stay, Tiruchanoor, Tirupati 에서 머물러보세요. 숙소는 스리칼라하스티 사원에서 33km 거리에 있으며, 도시 전망, 무료 Wi-Fi, ...",
+      "host": "www.booking.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.booking.com/hotel/in/amrutha-home-stay-tirucaanur.sl.html",
+      "name": "Amrutha Home Stay, Tiruchanoor, Tirupati",
+      "snippet": "Nastanitev Amrutha Home Stay, Tiruchanoor, Tirupati se nahaja v mestu Tirupati , 33 km od znamenitosti tempelj Srikalahasti.",
+      "host": "www.booking.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/61594104117317/videos/-your-peaceful-stay-in-tirupati-starts-here-welcome-to-amrutha-home-stay-a-cozy-/3139968042876348",
+      "name": "Amrutha Home Stay Tirupati: Comfortable Rooms for Pilgrims &",
+      "snippet": "SAMASTA Homestay is a comfortable and family-friendly accommodation located on Tiruchanoor Road in Tirupati",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.airbnb.com/rooms/1747548792595783768",
+      "name": "Standard Double Room @ Amrutha Home Stay",
+      "snippet": "Welcome to Amrutha Home Stay! Relax in our comfortable AC family room featuring a private attached bathroom, terrace access, and beautiful mountain or city ... Read more",
+      "host": "www.airbnb.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Home-Stay-in-Tiruchanoor/nct-10835911/page-6",
+      "name": "Top Homestay in Tiruchanoor - Best Guest House near me",
+      "snippet": "8/93, 857/1, Tiruchanoor. Amrutha Residency, Tiruchanoor Road, Tirupati - 517501 (Srinivasapuram, Padmavati Nagar) H.No.6,26,Padmavathi",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.agoda.com/zh-tw/amrutha-home-stay-tiruchanoor-tirupati/hotel/tirupati-in.html",
+      "name": "提魯帕帝Amrutha Home Stay, Tiruchanoor, Tirupati線上訂房",
+      "snippet": "Amrutha Home Stay, Tiruchanoor, Tirupati . Flat no.385, Janachaithnya layout, opp. Collectorate, tiruchanoor, tirupati ... Read more",
+      "host": "www.agoda.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Amrutha Home Stay Tirupati: Comfortable Rooms for Pilgrims & :: SAMASTA Homestay is a comfortable and family-friendly accommodation located on Tiruchanoor Road in Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

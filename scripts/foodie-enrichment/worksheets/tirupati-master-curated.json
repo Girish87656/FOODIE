@@ -1,48 +1,48 @@
 {
   "summary": {
-    "curatedOn": "2026-10-27",
+    "curatedOn": "2026-10-28",
     "totalCandidatesIn": 351,
-    "curated": 273,
+    "curated": 251,
     "duplicatesMarked": 13,
-    "dropped": 65,
+    "dropped": 87,
     "officialCandidatesAdded": 56,
     "byTier": {
-      "T1": 81,
-      "T3": 137,
+      "T1": 170,
+      "T3": 26,
       "T2": 55
     },
     "byArea": {
-      "tpt-central": 76,
-      "tpt-neighbourhoods": 54,
-      "tirumala": 71,
+      "tpt-central": 73,
+      "tpt-neighbourhoods": 51,
+      "tirumala": 61,
       "chandragiri": 8,
-      "renigunta": 25,
-      "surrounding": 23,
+      "renigunta": 22,
+      "surrounding": 21,
       "tiruchanur": 13,
-      "srinivasa-mangapuram": 3
+      "srinivasa-mangapuram": 2
     },
     "byCategory": {
       "restaurant": 23,
-      "tiffin": 29,
+      "tiffin": 25,
       "street_food": 18,
       "bakery_sweets": 35,
       "cafe": 17,
-      "temple": 57,
+      "temple": 50,
       "sacred_water": 1,
       "church": 1,
       "zoo": 1,
       "park": 7,
-      "attraction": 11,
+      "attraction": 5,
       "fort": 1,
-      "waterfall": 3,
-      "hotel": 39,
+      "waterfall": 2,
+      "hotel": 35,
       "craft": 1,
       "shopping_centre": 5,
       "market": 18,
       "other": 6
     },
     "byExistingSet": {
-      "new": 255,
+      "new": 233,
       "production": 2,
       "batch-011": 16
     },
@@ -144,14 +144,14 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/mana-hari-villu-family-restaurant-vidyut-nagar/reviews",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Restaurants in Prakasam Nagar Colony, Tirupati :: Mana Harivillu Family Restaurant is a gem opposite Vakulamatha Temple Arch in Perumallapalle! The friendly staff truly enhances the dining experience, making ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -181,14 +181,14 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/mayura-garden-family-restaurant-korlagunta/reviews",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": false,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top All Day Dining Restaurants in Korlagunta, Tirupati near me :: Mayura Garden & Restaurant Idly's Address House No 19-8-182/A, Air Bypass Main Road, Tirupati - 517502. Mayura, Door No 204 & 209, T P Area, Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -255,14 +255,14 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/di-table-9-tirumala/order",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Home Delivery Restaurants in Thimminaidupalem, Tirupati :: Di Table 9 DEVI TAAZA. Tirupati - 517507. Kt Road, Tirupati - 517507 (Near Annarao Circle)",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -292,14 +292,14 @@
       "tags": [],
       "sourceUrl": "https://www.swiggy.com/restaurants/mayura-garden-family-restaurant-korlagunta-korlagunta-1291811/dineout",
       "sourceKind": "swiggy",
-      "verifyAreaConfirmed": false,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top All Day Dining Restaurants in Korlagunta, Tirupati near me :: Mayura Garden & Restaurant Idly's Address House No 19-8-182/A, Air Bypass Main Road, Tirupati - 517502. Mayura, Door No 204 & 209, T P Area, Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": "Mayura Garden Family Restaurant, Korlagunta",
@@ -329,14 +329,14 @@
       "tags": [],
       "sourceUrl": "https://www.district.in/dining/tirupati/bhagnis-family-restaurant-korlagunta?srsltid=AYCX9vLIn_dyPHdqZx7l2qnpLWpOsDKr_LHvSeEEQuiYVURpI7pn2F5L",
       "sourceKind": "district",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Bhagni's Family Restaurant | Korlagunta, Tirupati :: Bhagni's Family Restaurant . 3.9. Door 21-1-36/3, Sriram Nagar, Karakambadi Main ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -366,14 +366,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Bhavani-Bhojnalaya-Ramchandra-Nagar/9999PX877-X877-230129091202-F6W6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Bhojanalya in Renigunta Road, Tirupati :: Top Bhojanalya in Renigunta Road, Tirupati . Bhavani Bhojanalayam. Nagar - 430 mts Temple Korlagunta, Tirupati … 720 mts Tata Nagar, Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -518,7 +518,7 @@
       "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297587-d15743006-Reviews-Southern_Spice_Avilala_Circle-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": null,
+      "verifyAddressEvidence": "Order from Southern Spice - Avilala online in Tirupati :: Customers can order from Southern Spice - Avilala … s 02, Surabi Gardens, 200 Feet, Bypass Road, Tirupati .",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -769,14 +769,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Raja-Food-Centre-Chandragiri-Ho/9999PX877-X877-220621204525-L3L9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Restaurants in Tirupati :: Address , Circle, 160, M.R.Pally, Air Bypass Road, Mr Palli Circle, Tirupati - 517502 (New Balaji Colony), Dhiguva Mallavaram, Kummarapalle, Tirupati - 517520 ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -860,8 +860,8 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Ugadhi-Restrent-Near-Tirupati-Airport-Authority-Of-India-Renigunta/9999PX877-X877-210330194242-E1Q7_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": false,
+      "verifyAddressEvidence": "Best Pure Veg Restaurants in Yadava Street, Tirupati :: Address , Door No 20/5/1, Korlagunta, Tirupati - 517501 (Sanjay Gandhi Colony), Tiruchanoor Road, Tirupati - 517501 (Revenue Colony), Sreenivasam Complex ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -899,14 +899,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Star-Kitchen-Oppite-Railway-Station-Renigunta/9999PX877-X877-220621055015-R6F8_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Home Delivery Restaurants in Renigunta, Tirupati - Page 3 :: Address , House No 19-8-182/A, Air Bypass Main Road, Mr Palli Circle ... Road, Kapilateertham Road, Tirupati - 517501 (Near Anna Rao Circle), Tirumala ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -975,14 +975,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Vinayaka-Tiffin-Centre-Balaji-Colony-Tirupati-Bazar/9999PX877-X877-190912225349-Q1K7_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Gandhi Road, Tirupati - Justdial Jd :: Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1012,14 +1012,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Padamavathi-Tiffin-Center-Near-Cro-Office-Tirumala/9999PX877-X877-230210064010-I8X9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services For Lunch in TP Area, Tirupati :: At 30 Bairagi Patteda, Open until 10:00 pm. Tirumala - 650 mts Open until 10:30 pm. Call Now until 10:00 pm. Door No 19-12-116, Tirupati - 517501 19629, ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1049,14 +1049,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Kumari-Tiffin-Center-Korlagunta/9999PX877-X877-220130211023-Q8U7_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Autonagar, Tirupati :: Address , Tiruchanur, Korlagunta, Tirupati - 517501, Yogimallavaram, Tiruchanur, Tiruchanoor Road, Tiruchanoor, Tirupati - 517503, Padmavathipuram ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1086,14 +1086,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Tiffin-Center-Kt-Road/9999PX877-X877-240405120557-J7M3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Madhav Nagar, Tirupati :: Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, G Car Street, T P Area, Tirupati - 517501 (Opposite Buss Stand, Opposite Govindaraja Swamy Temple) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1123,14 +1123,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Madras-Tiffin-Center-Korlagunta/9999PX877-X877-241010052354-S8A3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Kk Layout, Tirupati - Justdial Jd :: Tiffin Center Address Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar) Door No 19-12-116, Korlagunta, Tirupati -",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1165,14 +1165,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Gayatri-Tiffin-Center-Bhavani-Nagar/9999PX877-X877-240113191928-S7A3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Kt Road, Tirupati - Justdial Jd :: 46 Tiffin Services in Kt Road. Bhavani Nagar Circle KT Road … 517507 G Car Street, T P Area, Tirupati -",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1202,14 +1202,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Lavanya-Tiffin-Center-Tirumala/9999PX877-X877-230210025710-S9C2_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1239,14 +1239,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Naidu-Tiffin-Center-Maruthi-Nagar/9999PX877-X877-110215142454-M4G4_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Lic Road, Tirupati - Order Food Online :: Services in Lic Road. Naidu Tiffin'S. Door No 19-12-116, Tirupati - 517501 19629, Nagar, Maruthi Nagar, Tirupati - 517501 (Near Naidu Mobiles)",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1278,14 +1278,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Chandra-Mess-Stv-Nagar/9999PX877-X877-220205211137-C7L1_BZDET?srcterm=Chandra%2520Mess&predocid=9999PX877.X877.140629094315.H3X5",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Chandu Fast Foods in Reservoir Colony Road,Tirupati :: Chandu Fast Foods in Reservoir Colony Road, Tirupati well known for Fast Food in Tirupati . ... Address . Giripuram, Nehru Nagar, Reservoir Colony Road, Tirupati - ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1317,14 +1317,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Revathi-Mess-CateringS-Hathiramji-Colony/9999PX877-X877-240425215955-K2D7_BZDET/things-to-do?source=SHARE&amp=1",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Mess in Railway Colony - Best Canteens Tirupati near me :: Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Bandla St Madhura Nagar, Mallaiah Gunta Katta, Tirupati - 517501, Indira Nagar ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1356,14 +1356,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Padmavathi-Mess-Bhavani-Nagar/9999PX877-X877-230217082439-T2N4_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "6 Reviews for Sri Padmavathi Mess in Bhavani Nagar, Tirupati :: ... Customer Reviews and Ratings with Photos. Check Timings, Address , Contact Number , Photos, Maps of Sri Padmavathi Mess in Bhavani Nagar, Tirupati - Justdial.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1395,14 +1395,14 @@
       ],
       "sourceUrl": "https://www.facebook.com/ItsMyTirupathi/videos/%EF%B8%8F-nagarjuna-military-mess-tirupatiauthentic-andhra-style-home-food-with-deliciou/1724885372028653",
       "sourceKind": "facebook-page",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Andhra Meals In Tirupati :: Subbayya Gari Hotel - Pure Veg Restaurant in Tirupati Address ... 🍽️ Nagarjuna Military Mess, Tirupati Authentic Andhra-style home food with delicious Veg & ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1434,14 +1434,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Deepika-Mess-Near-Rush-Hospital-Reddy-Reddy-Colony-Reddyreddy-Colony/9999PX877-X877-160421214701-A6S5_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Mess in Vidya Nagar Colony, Tirupati :: 11 Mess in Vidya Nagar Colony, Tirupati . 550 mts Opens at 09:00 AM - 517502 (Prakasam Nagar Colony) 517502 10-2-32, SV Nagar, Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1473,14 +1473,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Revathi-Mess-Catering-Veg-Non-Veg-Opposite-Chaitanya-Bharathi-School-Hathiramji-Colony/9999PX877-X877-260626075516-U7Y3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Mess in Tirupati North - Best Canteens Tirupati near me :: Get Phone Numbers, Address , Reviews, Photos, Maps … 1.84 km Open until 10:00 pm. Opposite Ramakrishna Delux Nehru Nagar, tirupati . Beri Street Tirupati Beri",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": "Revathi Mess & Catering",
@@ -1510,14 +1510,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Gokul-Mess-Opposite-Raj-Building-Beside-Hp-Petrol-Bunk-Lane-Air-Bypass-Road/9999PX877-X877-160726112635-Y7K2_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tiffin Services in Tilak Road, Tirupati - Justdial Jd :: Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, T P Area ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1585,14 +1585,14 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/otc-orion-tiffin-centre-korlagunta/order",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "24 Hours Tiffin Services in Korlagunta, Tirupati - Page 2 :: Address , Srinivasa Nagar, Jeevakona, Tirupati - 517507, Subba Reddy Nagar, Korlagunta, Tirupati - 517501 (Venky Gym Line Road), Subbareddy Nagar, Akkarampalle ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -1608,80 +1608,6 @@
           "url": "https://www.swiggy.com/city/tirupati/orion-tiffin-center-karakambadi-rd-korlagunta-rest870229",
           "kind": "swiggy",
           "title": "Order from Orion Tiffin Center online in Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "tpt-neighbourhoods::lovely breakfast at hotel orion",
-      "name": "Lovely breakfast at Hotel Orion",
-      "rawNames": [
-        "Lovely breakfast at Hotel Orion, Tirupati"
-      ],
-      "nameCleaned": true,
-      "area": "tpt-neighbourhoods",
-      "localityHint": null,
-      "group": "food-tiffin",
-      "target": "restaurant",
-      "category": "tiffin",
-      "placeType": null,
-      "tags": [],
-      "sourceUrl": "https://www.facebook.com/groups/chefatlarge/posts/7543345125754064",
-      "sourceKind": "facebook-page",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.facebook.com/groups/chefatlarge/posts/7543345125754064",
-          "kind": "facebook-page",
-          "title": "Lovely breakfast at Hotel Orion, Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "tpt-neighbourhoods::tirupati early morning non veg breakfast",
-      "name": "Tirupati early morning non-veg breakfast",
-      "rawNames": [
-        "Tirupati early morning non-veg breakfast - RANEMMA TIFFIN"
-      ],
-      "nameCleaned": true,
-      "area": "tpt-neighbourhoods",
-      "localityHint": null,
-      "group": "food-tiffin",
-      "target": "restaurant",
-      "category": "tiffin",
-      "placeType": null,
-      "tags": [],
-      "sourceUrl": "https://www.facebook.com/ItsMyTirupathi/videos/tirupati-early-morning-non-veg-breakfast-ranemma-tiffin-center-j9ch3vc-vidya-nag/1528358954271306",
-      "sourceKind": "facebook-page",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.facebook.com/ItsMyTirupathi/videos/tirupati-early-morning-non-veg-breakfast-ranemma-tiffin-center-j9ch3vc-vidya-nag/1528358954271306",
-          "kind": "facebook-page",
-          "title": "Tirupati early morning non-veg breakfast - RANEMMA TIFFIN"
         }
       ]
     },
@@ -1797,84 +1723,6 @@
       ]
     },
     {
-      "key": "tirumala::morning breakfast",
-      "name": "Morning Breakfast",
-      "rawNames": [
-        "Morning Breakfast at Tirumala Annaprasadam Centre"
-      ],
-      "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "food-tiffin",
-      "target": "restaurant",
-      "category": "tiffin",
-      "placeType": null,
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.facebook.com/ItsMyTirupathi/videos/mrng-breakfast-at-annaprasadam-centre-tirumala-%EF%B8%8Fcredits-kitchenandhomemaking-tir/1132344847464113",
-      "sourceKind": "facebook-page",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.facebook.com/ItsMyTirupathi/videos/mrng-breakfast-at-annaprasadam-centre-tirumala-%EF%B8%8Fcredits-kitchenandhomemaking-tir/1132344847464113",
-          "kind": "facebook-page",
-          "title": "Morning Breakfast at Tirumala Annaprasadam Centre"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::tirumala tiffins online in hyderabad",
-      "name": "Tirumala Tiffins online in Hyderabad",
-      "rawNames": [
-        "Order from Tirumala Tiffins online in Hyderabad"
-      ],
-      "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "food-tiffin",
-      "target": "restaurant",
-      "category": "tiffin",
-      "placeType": null,
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.swiggy.com/city/hyderabad/tirumala-tiffins-serilingampally-1-kondapur-rest405226",
-      "sourceKind": "swiggy",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.swiggy.com/city/hyderabad/tirumala-tiffins-serilingampally-1-kondapur-rest405226",
-          "kind": "swiggy",
-          "title": "Order from Tirumala Tiffins online in Hyderabad"
-        }
-      ]
-    },
-    {
       "key": "tiruchanur::muthunagar",
       "name": "Muthunagar",
       "rawNames": [
@@ -1892,8 +1740,8 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Kundhu-Tiffins-Muthunagar/9999PX877-X877-230329030845-L8T8_BZDET/amp",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": false,
+      "verifyAddressEvidence": "Best Tiffin Services in Sri Nagar Colony, Tirupati :: Tiffin Services in Sri Nagar Colony, Tirupati ; Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Kt Road, Tirupati - 517507 (Opposite Reliance Trends ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -1970,14 +1818,14 @@
       ],
       "sourceUrl": "https://magicpin.in",
       "sourceKind": "magicpin",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Supermarkets in Chandragiri, Tirupati - Page 3 :: Address , Stv Nagar, Tirupati - 517501, Dodapuram Street, Korlagunta, Tirupati - 517501 (Opposite to Trishool Dental Hospital), Door No 10-2-138/1A, Tk Street ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2009,14 +1857,14 @@
       ],
       "sourceUrl": "https://www.facebook.com/tirupathifoodiee/videos/aapam-tiffin-center-renigunta/513116665974866",
       "sourceKind": "facebook-page",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Renigunta Appam Center, Panchali Nagar, Tirupati - Justdial :: Renigunta Appam Center in Panchali Nagar,Tirupati well known for Tiffin Services in Tirupati . Rated 1.0 based on 1 Customer Reviews and Ratings with 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, Reviews & Ratings, Photos, Maps of Renigunta Appam Center, Panchali Nagar, Tirupati.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2126,14 +1974,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Ganapathi-Juice-Shop-Beside-Sri-Teja-Digital-Studio-Tilak-Road/9999PX877-X877-160615175306-K6L3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Sugar Cane Juice Centres in Tilak Road, Tirupati :: Sugar Cane Juice Centres in Tilak Road, Tirupati . Open until 10:30 pm. Open until 12:00 am A Call Now. Door no: 1-3-179, Tirupati - 517504",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2165,14 +2013,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/MrS-Juice-Bar-Kapilateertham-Road/9999PX877-X877-231114175204-C2I2_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Fruit Juice Bars in Tirupati :: For fresh fruit salads, there's a vendor on Kapila Teertham Road, and you can also grab coconut water at Cocofit near PLR Convention Hall. Ganesh Juice Center - ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2204,14 +2052,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Ganesh-Juice-Center-Tilak-Road/9999PX877-X877-220606211204-B3T7_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Ganesh fruit juice in S.V.University,Tirupati - Justdial Jd :: It is at Zoo road, Opposite to zoo park, This establishment is functional from 07:00 - 21:30. Please scroll to the top for the address and contact details of ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2241,14 +2089,14 @@
       "tags": [],
       "sourceUrl": "https://www.swiggy.com/city/tirupati/hygien-pani-puri-hot-chats-vidyut-nagar-tata-nagar-rest1125431",
       "sourceKind": "swiggy",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Chaat man now in Tirupati ⚡️ Opening offer 👇 Buy 2 :: Location : Babu Tiffin Centre Opp Ranga Stores, Bazar Street, Tirupati Gmaps :   https://maps.google.com/?q=13.632848,79.415833 Timings: Monday ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2278,14 +2126,14 @@
       "tags": [],
       "sourceUrl": "https://wanderlog.com/place/details/12149707/pani-puri-centre",
       "sourceKind": "wanderlog",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2316,7 +2164,7 @@
       "sourceUrl": "https://wanderlog.com/place/details/12149705/mirchi-bajji-point",
       "sourceKind": "wanderlog",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Bajji Center in Royal Nagar,Tirupati :: Bajji Center in Royal Nagar, Tirupati well known for Indian Restaurants in Tirupati . Rated 3.8 based on 4 Customer Reviews and Ratings with 3 Photos.",
+      "verifyAddressEvidence": "Top Fast Food With Counter Service in Tirupati North :: Address , Mosque Road, V V Mahal Road, Tirupati - 517501 (Survey No 3181 & 3184, Behind Bank Of Baroda, Near Municipal Office Junction, Korlagunta), prakasam ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -2353,7 +2201,7 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Mirchi-Bajji-Point-Mangalam/9999PX877-X877-250213141050-D7I7_BZDET",
       "sourceKind": "justdial",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Bajji Center in Royal Nagar,Tirupati :: Bajji Center in Royal Nagar, Tirupati well known for Indian Restaurants in Tirupati . Rated 3.8 based on 4 Customer Reviews and Ratings with 3 Photos.",
+      "verifyAddressEvidence": "Top Fast Food With Counter Service in Tirupati North :: Address , Mosque Road, V V Mahal Road, Tirupati - 517501 (Survey No 3181 & 3184, Behind Bank Of Baroda, Near Municipal Office Junction, Korlagunta), prakasam ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -2539,14 +2387,14 @@
       ],
       "sourceUrl": "https://magicpin.in/Tirupati/Bhavani-Nagar/Grocery/Vasundhara-Tea-Stall/store/39c068c?srsltid=AYCX9vId1MA1y54nFJfAEaIuvauM6TA8TFOXnvPVJFXgjGMLvfk-g9Pw",
       "sourceKind": "magicpin",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Tea Stalls in Tiruchanoor Road, Tirupati :: Address , Shop No, 2, Balijagadda, Mr Palli Road, Korlagunta, Tirupati - 517501, Patnool Street, Pushkarini Road, Nehru Nagar, Tirupati - 517501 (Near ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2578,14 +2426,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Venkat-Sai-Tea-Stall-Behind-Avani-Nagar/9999PX877-X877-200110232627-S6I1_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Venkat Sai Tea Stall in Bhavani Nagar,Tirupati :: Venkat Sai Tea Stall in Bhavani Nagar,Tirupati well known for Tea Stalls in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address, ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2615,14 +2463,14 @@
       "tags": [],
       "sourceUrl": "https://www.facebook.com/BeautifulTirupathi/videos/craving-something-sweet-delightful-and-utterly-irresistible-look-no-further-dess/2393091261517926",
       "sourceKind": "facebook-page",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Sweet Distributors in Bhavani Nagar, Tirupati near me :: Sweets Address Door No 3-163, Bazaar Street, Renigunta, Tirupati - 517520 Shop No:1, Tiruchanoor Road, Tirupati - 517501 … 18-1-420a, Ice Cream and Desserts ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2652,14 +2500,14 @@
       "tags": [],
       "sourceUrl": "https://www.swiggy.com/city/tirupati/18th-street-kitchen-korlagunta-rest1237008",
       "sourceKind": "swiggy",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Daily Kitchen, Tata Nagar order online :: Check out Daily Kitchen, Tata Nagar, Tirupati on Zomato for great deals, ratings, reviews and more! minimum item total required to place an order",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2855,14 +2703,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Bakery-House-Opposite-Sbi-Bhavani-Nagar/9999PX877-X877-250909173737-F4C1_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Bakeries With Drive Through in TP Area, Tirupati :: Tirumala Bakery Near Bhavani Nagar Circle Tirupati Bazar, Tirupati . Menu ... Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2892,14 +2740,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Bakers-Delight-Sv-Nagar/9999PX877-X877-240404225724-I1C8_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Aman Bakery & Sweets in Sv Nagar,Tirupati :: Aman Bakery & Sweets in Sv Nagar, Tirupati is a renowned bakery offering a delectable range of freshly baked goods and pastries. Situated in a prime location in ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2931,14 +2779,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Mayura-Bakery-Opposite-Sree-Chaitanya-Junior-College-Near-Naalukaal-Mandapam-Gandhi-Road/9999PX877-X877-160812171348-S3I3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Sweet Shops in Gandhi Road Tirumala, Tirupati :: - 880 mts Open until 10:30 pm. Open until 10:00 pm. Mayura Sweets & Bakery 5.0. Address Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle)",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -2970,14 +2818,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Babas-Bakery-Beside-Pasuparthy-Super-Market-Opposite-Sai-Baba-Temple-Tk-Street/9999PX877-X877-150722120504-H5R4_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Bakeries in Tk Street, Tirupati - Best Cake Shops - Justdial :: ... Address , Reviews, Photos, Maps for top Bakeries near me in Tk Street ... Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3009,14 +2857,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Bakery-And-Sweets-Sri-Nagar-Colony/9999PX877-X877-230129051522-Q3M3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati :: Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati well known for Bakeries in Tirupati . Rated 3.9 based on 33 Customer Reviews and Ratings with 1 ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3047,7 +2895,7 @@
       "sourceUrl": "https://www.swiggy.com/city/tirupati/amrutha-swagruha-foods-reddy-and-reddys-colony-v-v-mahal-road-rest219342",
       "sourceKind": "swiggy",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Amrutha Swagruha Foods in Tirupati, Andhra Pradesh, India :: Address 7-1-42A, RN Marda Street, Tirupati , Andhra Pradesh, 517501, India. RN Marda Street, Tirupati , Andhra Pradesh, 517501, India",
+      "verifyAddressEvidence": "Best Sweet Shops Swagruha in 1St Cross Road, Tirupati :: Order Food Online Amrutha Swagruha. Swagruha in 1st Cross Road, Tirupati may offer online ordering options through their website or mobile app, making it easy ...",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -3085,14 +2933,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Nic-Natural-Ice-Creams-Tml-By-Pass-Road/9999PX877-X877-211102211119-V6Y8_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Nic Natural Ice Creams in 8Th Mile Circle, Bangalore :: Address , Ganesha Sawmill Road, T Dasarahalli, Bangalore - 560057 (1'st Cross ... 20188c, Maruthi Nagar, tml by pass road, Tirupati - 517501, Avarampalyam ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3122,14 +2970,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Cream-Stone-Tata-Nagar/9999PX877-X877-190516034131-K3V9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Cream Stone in Tata Nagar,Tirupati - Order Food Online :: Address tirumala bypass road, Tata Nagar, Tirupati -517501, This establishment is functional from 11:00 - 01:00.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3161,14 +3009,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Shivam-Ice-Cream-Shiv-Jyoti-Nagar/9999PX877-X877-240305205641-U1V3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Ice Cream Parlours With Wheel Chair Accessible :: Door No 1, Shiv Jyoti Nagar, Tirupati - 517507 (Opposite Vodafone Office, Near Municipal Park, Shivajyothi Nagar) Ground Floor, 517507 23-8-160/a,",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3200,14 +3048,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Havmor-Ice-Cream-Opposite-Indian-Petrol-Bunk-Ramanuja-Circle-Ramanuja-Circle/9999PX877-X877-181026104402-Q4Z4_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Havmor Ice Cream in Ramanuja Circle,Tirupati :: Havmor Ice Cream in Ramanuja Circle,Tirupati well known for Ice Cream Parlours in Tirupati . Rated 3.5 based on 2 Customer Reviews and Ratings with 9 Photos ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3237,14 +3085,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Ice-Stone-Tirumala/9999PX877-X877-230304082326-W2D6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Ice Dealers in Tirumala - Tirupati :: Name, Anusha White ICE Factory · Sri Ganesh Ice Factory ; Address , Door No 18-2-263c-12, Tirumala Bypass Road, Korlagunta, Tirupati - 517501 (Near Leela Mahal) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3276,14 +3124,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Grand-cakes-bakes-Near-Ramakrishna-Deluxe-Nethaji-Road/9999PX877-X877-241220123306-I5U8_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Cake Shops in New Balaji Colony,Tirupati - Justdial Jd :: Name, Justbake · Bakers N Basket ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3315,14 +3163,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Cake-House-Opposite-Mahathi-Imaging-Diagnostics-Bhavani-Nagar/9999PX877-X877-240624122548-K3R9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Cake Shops - Bakeries in Tirupati North :: Bakeries in Tirupati North, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3354,14 +3202,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/BALAJI-BAKERY-AND-SWEETS-Jcr-Complex-Vidya-Nagar-Colony/9999PX877-X877-210422175849-V4P6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Balaji Bakery, Tirupati, India - Reviews, Ratings, Tips and :: Nestled in the heart of Tirupati , Balaji Bakery. Gowri Nagar, Thukivakam, Andhra Pradesh 517520, India Phone +91 70133 76420",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3393,14 +3241,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Mithaiwala-Opposite-Annarao-Curicul-Kt-Road/9999PX877-X877-210302132157-B3R2_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "cakes and sweet in KT Road,Tirupati :: cakes and sweet in KT Road, Tirupati is located Near Anna Rao Circle. 4. Can I get sugar-free sweets too? Many Sweet Shops provide sugar-free sweet ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3506,14 +3354,14 @@
       "tags": [],
       "sourceUrl": "https://www.swiggy.com/city/tirupati/vijaya-kitchen-korlagunta-rest1170731",
       "sourceKind": "swiggy",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Store Address: Shri Vijaya Kitchenware, Plot No: 113, OU :: Store Location: https://maps.app.goo.gl/jdDnm1GSx91ayRmj7 Store Address : Shri Vijaya Kitchenware, Plot No: 113, OU Colony, Shaikpet ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3545,14 +3393,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Krishna-Ayyangar-Sweets-Bakery-Opp-Kumran-Hardwares-Korlagunta/9999PX877-X877-160617182640-C2J3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Popular Sweet Retailers in 1St Cross Road, Tirupati :: Address , V V Mahal Road, Tirupati - 517501 (Near K.T. Road, Opp Eden Chaat) ... K Street Tirupathi , Tirupathi , TK Street, Tirupati - 517501, Theertha ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3584,14 +3432,14 @@
       ],
       "sourceUrl": "https://www.zomato.com/tirupati/bangalore-bakery-korlagunta/order",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Bakeries in Korlagunta, Tirupati - Best Cake Shops :: Bakeries in Korlagunta, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3623,14 +3471,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateshwara-Bakery-And-Sweets-Near-Devandra-Theatre-Bhavani-Nagar/9999PX877-X877-170325161023-V6P6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Venkateshwara Bakery & Sweets - Anantapur :: Sri Venkateshwara Bakery in Sreekantam Circle,Anantapur … hours from Monday:- 7:00 am - 9:30 pm, Tuesday:- 7:00 am - 9:30 pm,",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3662,14 +3510,14 @@
       ],
       "sourceUrl": "https://www.swiggy.com/city/tirupati/meghana-sweets-and-bakery-tata-nagar-rest1281481",
       "sourceKind": "swiggy",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Order from Meghana Sweets And Bakery online in Tirupati :: Order Online from Meghana Sweets And Bakery in Tata Nagar, Tirupati for delicious indian food. Enjoy fast delivery with Swiggy ... NEAR VAIKUNTAPURAM ARCH, ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -3739,7 +3587,7 @@
       "sourceUrl": "https://www.swiggy.com/city/tirupati/amrutha-swagruha-foods-reddy-and-reddys-colony-v-v-mahal-road-rest219342",
       "sourceKind": "swiggy",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Amrutha Swagruha Foods in Tirupati, Andhra Pradesh, India :: Address 7-1-42A, RN Marda Street, Tirupati , Andhra Pradesh, 517501, India. RN Marda Street, Tirupati , Andhra Pradesh, 517501, India",
+      "verifyAddressEvidence": "Best Sweet Shops Swagruha in 1St Cross Road, Tirupati :: Order Food Online Amrutha Swagruha. Swagruha in 1st Cross Road, Tirupati may offer online ordering options through their website or mobile app, making it easy ...",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -4336,7 +4184,7 @@
       "sourceUrl": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order",
       "sourceKind": "zomato",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": null,
+      "verifyAddressEvidence": "Kafe Tirupati (Quality Re-fined) in Tirupati | Is it Good? :: Address Lakshmi Puram, Ashok Nagar Tirupati , Andhra Pradesh 517501 India. Get directions. Hours. Opens soon·6 AM. Website kafetirupati .shop Phone+91 94412 22777. Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -4377,14 +4225,14 @@
       "tags": [],
       "sourceUrl": "https://www.zomato.com/tirupati/chota-cafe-mangalam/order",
       "sourceKind": "zomato",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Chota Cafe Tirupati | Little Moments. Big Flavours. :: Chota Cafe on Karakambadi Road, Tirupati . Find us on Karakambadi Road in Tirupati , Mangalam, Tirupati 517507. Get directions +91 79899 17113",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -4451,14 +4299,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Restaurants in Tirumala, Tirupati - Top Places to Eat :: Discover the best places to eat near Tirumala, Tirupati, from top dining spots to cozy cafes, vibrant pubs, and stylish bars. Explore a wide range of restaurants with Photos, Address, Reviews, Maps and Phone numbers on Justdial.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -4601,7 +4449,7 @@
       "sourceUrl": "https://www.zomato.com/tirupati/amor-fati-cafe-1-korlagunta/reviews",
       "sourceKind": "zomato",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": null,
+      "verifyAddressEvidence": "Amor Fati Cafe (@cafe.amorfati) :: Amor Fati Cafe . 786 followers. 0 following. Tirupati's first vibe cafe. Matcha. Smash Burgers. Pizzeria. V.V Mahal Road, beside khazana jeweller. Claim your ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -4796,14 +4644,14 @@
       ],
       "sourceUrl": "https://www.eazydiner.com/tirupati/citrus-cafe-tiruchanoor-rd-tirupati-716099",
       "sourceKind": "eazydiner",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Best Restaurants in Tiruchanoor Road, Tirupati - Justdial Jd :: Address 4/74, Ground Floor, Tiruchanur Road, Padmavati Puram, Tirupati - 517501 (Opposite Panchayathi Office, Tata Nagar), Ward 20, S12, Stv Nagar, Air ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -5409,7 +5257,7 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Anjaneya-Swamy-Temple-Vedullacheruvu/9999PX877-X877-181130222106-S7U5_BZDET",
       "sourceKind": "justdial",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Anjaneya Swamy Temple in Bhavani Nagar,Tirupati - Justdial Jd :: Anjaneya Swamy Temple in Bhavani Nagar,Tirupati listed under Temples in Tirupati . Rated 5.0 based on 113 Customer Reviews and Ratings with 9 Photos.",
+      "verifyAddressEvidence": "Famous Temples in Prakasam Nagar Road, Tirupati :: Anjaneya Swamy Vigraham Svuniversity, Tirupati - 517502. Bhavani Nagar, Tirupati - 517501. Nagar, Tirupati - 517501",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -5632,7 +5480,7 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Anjaneya-Swamy-Temple-Bhavani-Nagar/9999PX877-X877-200628005848-K1K3_BZDET",
       "sourceKind": "justdial",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Anjaneya Swamy Temple in Bhavani Nagar,Tirupati - Justdial Jd :: Anjaneya Swamy Temple in Bhavani Nagar,Tirupati listed under Temples in Tirupati . Rated 5.0 based on 113 Customer Reviews and Ratings with 9 Photos.",
+      "verifyAddressEvidence": "Famous Temples in Prakasam Nagar Road, Tirupati :: Anjaneya Swamy Vigraham Svuniversity, Tirupati - 517502. Bhavani Nagar, Tirupati - 517501. Nagar, Tirupati - 517501",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -5705,14 +5553,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Vara-Siddhi-Vinayaka-Ayyappa-Swamy-Temple-Shiv-Jyoti-Nagar/9999PX877-X877-250913200919-J6J6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Varasiddi Vinayaka Swamy Temple - Tirupati :: Address 7/46/2, Akkarampalle, Korramenugunta, Tirupati -517501, Andhra Pradesh. Business Hours Opens at : 6:00 am tomorrow",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -5742,14 +5590,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Varasiddi-Vinayaka-Swamy-Temple-Korramenugunta/9999PX877-X877-250416041025-J2A8_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Varasiddi Vinayaka Swamy Temple - Tirupati :: Photo. Upload Photos. Varasiddi Vinayaka Swamy Temple, tirupati , Bakki Reddy ColonyTemples - 1. Quick Information. Contacts. +Add Contact Number. Business Hours. Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -5779,14 +5627,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Ramulavari-Temple-Opposite-West-Nehru-Nagar/9999PX877-X877-200930013053-E3W9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Temples in Tirupati, Andhra Pradesh - Page 15 :: Sri Onnaramma Temple. Nehru Nagar, tirupati … 517101 Nehru Nagar, Tirupati - 517501 Tirumala, Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -5854,7 +5702,7 @@
       "sourceUrl": "https://www.justdial.com/Tirupati/Anjaneya-Swamy-Temple-Bhavani-Nagar/9999PX877-X877-200628005848-K1K3_BZDET",
       "sourceKind": "justdial",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Anjaneya Swamy Temple in Bhavani Nagar,Tirupati - Justdial Jd :: Anjaneya Swamy Temple in Bhavani Nagar,Tirupati listed under Temples in Tirupati . Rated 5.0 based on 113 Customer Reviews and Ratings with 9 Photos.",
+      "verifyAddressEvidence": "Famous Temples in Prakasam Nagar Road, Tirupati :: Anjaneya Swamy Vigraham Svuniversity, Tirupati - 517502. Bhavani Nagar, Tirupati - 517501. Nagar, Tirupati - 517501",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -5927,14 +5775,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Golden-Temple-Tata-Nagar/9999PX877-X877-220308210404-Y4S6_BZDET/reviews",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "224 Reviews for Tirupati Golden Temple in Tata Nagar :: Reviews for Tirupati Golden Temple in Tata Nagar, Tirupati . Unbiased, genuine based on 224 Customer Reviews and Ratings with Photos. Check Timings, Address ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -5966,14 +5814,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Avilala-Church/9999PX877-X877-260226103905-D6W4_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Avilala Church - Tirupati :: Address . Ambedhkar Colony, Tirupati , Avilala, Tirupati -517501, Andhra Pradesh. DirectionCopy. Photo. Upload Photos. Avilala Church, tirupati , AvilalaChurches - ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -5984,43 +5832,6 @@
           "url": "https://www.justdial.com/Tirupati/Avilala-Church/9999PX877-X877-260226103905-D6W4_BZDET",
           "kind": "justdial",
           "title": "Avilala Church - Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::tirupati balaji temple in",
-      "name": "Tirupati Balaji Temple in",
-      "rawNames": [
-        "Tirupati Balaji Temple in Tirumala"
-      ],
-      "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [],
-      "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Balaji-Temple-Tirumala/9999PX877-X877-240329134828-I7R1_BZDET",
-      "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.justdial.com/Tirupati/Tirupati-Balaji-Temple-Tirumala/9999PX877-X877-240329134828-I7R1_BZDET",
-          "kind": "justdial",
-          "title": "Tirupati Balaji Temple in Tirumala"
         }
       ]
     },
@@ -6040,14 +5851,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Vinayaka-Temple-Pac1-Opp-Shop-Tirumala/9999PX877-X877-181218103453-G9J8_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Shree Siddhi Vinayaka Swamy Temple in KT Road,Tirupati :: Shree Siddhi Vinayaka Swamy Temple in KT Road, Tirupati . Srinivasa Nagar, K.B Layout, Tirupati , Road, KT Road, Tirupati -517507, Andhra Pradesh. Hours Open Now : ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -6077,14 +5888,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Mandir-Alipiri-Gate/9999PX877-X877-260830184922-U5G5_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Tirumala Way to Footpath Alipiri :: Location. 1, Alipiri Rd, Alipiri Gate, Footpath, Tirupati , Andhra Pradesh 517507, India. Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -6214,7 +6025,7 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Natural_Arch,_Tirumala_hills",
       "sourceKind": "wikipedia",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Natural Arch at Tirumala Hills :: Feb 25, 2016 — Natural Arch, Tirumala hills is a distinctive geological wonder located 1 km (0.6 mi) North of the Tirumala hills temple, near the Chakra ... Read more",
+      "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
@@ -6250,201 +6061,6 @@
         {
           "url": "https://www.tirumala.org/PlacesatTirumala.aspx",
           "quote": "day of the fortnight of Dhanur Masa). More... Other Places Silathoranam is a natural rock formation in the form of an arch, near the Chakra Tirtham. Geologists have identified the"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::tirumala",
-      "name": "Tirumala",
-      "rawNames": [
-        "Tirumala"
-      ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala",
-      "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://en.wikipedia.org/wiki/Tirumala",
-          "kind": "wikipedia",
-          "title": "Tirumala"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::weekly sevas",
-      "name": "Weekly Sevas",
-      "rawNames": [
-        "Weekly Sevas"
-      ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": null,
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/WeeklySevas.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/WeeklySevas.aspx",
-          "kind": "official",
-          "title": "Weekly Sevas"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::sv temple amaravathi",
-      "name": "SV Temple Amaravathi",
-      "rawNames": [
-        "SV Temple Amaravathi"
-      ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": null,
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/SVphoto_gallery.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/SVphoto_gallery.aspx",
-          "kind": "official",
-          "title": "SV Temple Amaravathi"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::thomala seva",
-      "name": "Thomala Seva",
-      "rawNames": [
-        "Thomala Seva"
-      ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": null,
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/ThomalaSeva.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/ThomalaSeva.aspx",
-          "kind": "official",
-          "title": "Thomala Seva"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::ttd information centres and kalyana mandapams",
-      "name": "TTD Information Centres and Kalyana Mandapams",
-      "rawNames": [
-        "TTD Information Centres and Kalyana Mandapams"
-      ],
-      "nameCleaned": false,
-      "area": "tirumala",
-      "localityHint": null,
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/ttdklmps.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/ttdklmps.aspx",
-          "kind": "official",
-          "title": "TTD Information Centres and Kalyana Mandapams"
         }
       ]
     },
@@ -6634,14 +6250,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Shri-Ramulavari-Temple-Chandragiri/9999PX877-X877-200927020845-U2E3_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -6695,45 +6311,6 @@
       ]
     },
     {
-      "key": "renigunta::renigunta",
-      "name": "Renigunta",
-      "rawNames": [
-        "Renigunta, Tirupati - Sri Venkateswara Swami Temple"
-      ],
-      "nameCleaned": true,
-      "area": "renigunta",
-      "localityHint": "Renigunta",
-      "group": "temples",
-      "target": "place",
-      "category": "temple",
-      "placeType": "temple",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Swami-Temple-Renigunta/9999PX877-X877-190818084240-Q9T1_BZDET/photos",
-      "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Swami-Temple-Renigunta/9999PX877-X877-190818084240-Q9T1_BZDET/photos",
-          "kind": "justdial",
-          "title": "Renigunta, Tirupati - Sri Venkateswara Swami Temple"
-        }
-      ]
-    },
-    {
       "key": "renigunta::mathamma temple",
       "name": "Mathamma Temple",
       "rawNames": [
@@ -6751,14 +6328,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Mathamma-Temple-Renigunta-Road/9999PX877-X877-180223141720-T4N7_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "1 Photos of Mathamma Temple in Renigunta Road, Tirupati :: 1 Photos of Mathamma Temple in Renigunta Road, Tirupati Rated 4.0 based on 36 Customer Reviews and Ratings with 1 Photos. Visit Justdial for Address , ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -6790,14 +6367,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sai-Baba-Temple-Renigunta/9999PX877-X877-180224230022-C8B6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sai Baba Temple :: sai baba temple, tirupati district, andhra pradesh, 517505. Tirupati Road, Chandragiri, Tirupati District, Andhra Pradesh, 517505",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -6946,14 +6523,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Chittoor/Om-Shakthi-Temple-Nagari/9999P8572-8572-200221194311-P4P6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Om Shakthi Temple in Nagari,Chittoor :: Om Shakthi Temple in Nagari,Chittoor listed under Temples in Chittoor. Rated 5.0 based on 97 Customer Reviews and Ratings with 1 Photos.",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -6985,14 +6562,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Chittoor/Skms-Temple-Nagari/9999P8572-8572-180606001915-N8W2_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Krishna Temple in Thotapalyam,Chittoor :: Sri Krishna Temple in Thotapalyam,Chittoor. Tirupati Hwy, Thotapalyam, Chittoor-517001, Contacts +(91)-9959192570 Business Hours Open Now : until 7:45 pm",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7024,14 +6601,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Chittoor/Perumal-Temple-Nagari/9999P8572-8572-180302082749-Y9N1_BZDET/photos",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Famous Temples in Sundaraiah Nagar, Tirupati :: Explore famous temples in Sundaraiah Nagar, The cave-like interiors, adorned with faded frescoes, create an ambience of mystery and reverence. Early morning ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7063,14 +6640,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sri Kalyana Venkateswara Swamy Temple, Narayanavanam :: Open Open: 9:00–9:45, 11:00–17:30, 18:45–21:00  Narayanavanam, Andhra Pradesh 517581, India  Map",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Sri Kalyana Venkateswara Swamy Temple",
       "dupOf": null,
@@ -7199,7 +6776,7 @@
       "sourceUrl": "https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park",
       "sourceKind": "wikipedia",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Good - Review of Sri Venkateswara National Park, Tirupati :: Hyderabad, India 10944. The name of the place is 'Sri Venkateshwara Zoological park' its very near to the Tirupati city.",
+      "verifyAddressEvidence": null,
       "geocode": {
         "lat": 13.7953489,
         "lng": 79.2998635,
@@ -7249,7 +6826,7 @@
       "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d3172186-Reviews-Deer_Park-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Deer Park in Alipiri,Tirupati - Wildlife Sanctuary - Justdial Jd :: Address Alipiri Gate, Tirumala Up Road, Alipiri, Tirupati -517507, Andhra Pradesh. Open 24 Hrs Wednesday:- Open 24 Hrs. Open 24 Hrs,",
+      "verifyAddressEvidence": "Deer Park - All You SHOULD Know Before Going 2026 :: The area. Address . Hauz Khas Fort Rd, New Delhi 110016 India. Full view ... Deer Park - All You SHOULD Know Before Going 2026 (with Reviews). AsiaIndia ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
@@ -7290,14 +6867,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Srinivasa-Auditorium-Mr-Palli-Circle/9999PX877-X877-221229225441-W4M9_BZDET/things-to-do",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "10 Photos of Srinivasa Auditorium in Mr Palli Circle, Tirupati :: Visit Justdial for Address , Contact Number, Reviews & Ratings, Photos ... Srinivasa Auditorium, Mr Palli Circle, tirupati - Auditoriums - 1. Srinivasa ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7308,80 +6885,6 @@
           "url": "https://www.justdial.com/Tirupati/Srinivasa-Auditorium-Mr-Palli-Circle/9999PX877-X877-221229225441-W4M9_BZDET/things-to-do",
           "kind": "justdial",
           "title": "Srinivasa Auditorium - Mr Palli Circle, Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "tpt-central::tirupati historic sites and districts to visit",
-      "name": "Tirupati Historic Sites & Districts to Visit",
-      "rawNames": [
-        "Tirupati Historic Sites & Districts to Visit"
-      ],
-      "nameCleaned": false,
-      "area": "tpt-central",
-      "localityHint": null,
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [],
-      "sourceUrl": "https://www.tripadvisor.com/Attractions-g297587-Activities-c47-t17-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-      "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tripadvisor.com/Attractions-g297587-Activities-c47-t17-Tirupati_Chittoor_District_Andhra_Pradesh.html",
-          "kind": "tripadvisor",
-          "title": "Tirupati Historic Sites & Districts to Visit"
-        }
-      ]
-    },
-    {
-      "key": "tpt-central::tirupati regional centre",
-      "name": "Tirupati Regional Centre",
-      "rawNames": [
-        "Tirupati Regional Centre"
-      ],
-      "nameCleaned": false,
-      "area": "tpt-central",
-      "localityHint": null,
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [],
-      "sourceUrl": "https://ignca.gov.in/hi/regional-centers/tirupati-regional-centre",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://ignca.gov.in/hi/regional-centers/tirupati-regional-centre",
-          "kind": "official",
-          "title": "Tirupati Regional Centre"
         }
       ]
     },
@@ -7403,14 +6906,14 @@
       ],
       "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/ttd-gardens",
       "sourceKind": "makemytrip",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "TTD Gardens in Tirupati | Expedia.co.uk :: Check availability on hotels close to TTD Gardens ; Ekante Bliss IHCL SeleQtions · Near Ramanuja Circle,Renigunta Road Tirupati Andhra Pradesh ; Marasa Sarovar ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7440,14 +6943,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Artist-Colony-Bommagunta/9999PX877-X877-260227233806-J7J1_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Artists in Gandhi Road, Tirupati - Page 4 :: Artists in Gandhi Road, Tirupati . Gandhi Road, Tirupati - 517501 T.Kstreet , Tirupati , Door No 435, Bhavani Nagar, Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7518,14 +7021,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sannidhi-Park-Tirumala/9999PX877-X877-190825073654-W7F9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Sannidhi Service Apartments, Tirupati: 2026 Deals :: 19-14-96/C, 5th Cross, near SGS Arts College, Raghavendra Nagar, Tirupati , Andhra Pradesh 517501, IndiaView",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7555,14 +7058,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tummalagunta-Playground/9999PX877-X877-250306022353-G1H2_BZDET/reviews",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Parks in Kk Layout, Tirupati - Page 5 :: These parks are often centrally located, making them easily accessible to residents. They typically feature landscaped gardens, walking paths, seating areas, ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7573,43 +7076,6 @@
           "url": "https://www.justdial.com/Tirupati/Tummalagunta-Playground/9999PX877-X877-250306022353-G1H2_BZDET/reviews",
           "kind": "justdial",
           "title": "330 Reviews for Tummalagunta Playground in Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "tpt-neighbourhoods::activity toy in tirupati engaging fun and educational",
-      "name": "Activity Toy in Tirupati - Engaging, Fun & Educational",
-      "rawNames": [
-        "Activity Toy in Tirupati - Engaging, Fun & Educational"
-      ],
-      "nameCleaned": false,
-      "area": "tpt-neighbourhoods",
-      "localityHint": null,
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [],
-      "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Activity-Toy/jdm-1000966-ent-2-17398396",
-      "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.justdial.com/jdmart/Tirupati/Activity-Toy/jdm-1000966-ent-2-17398396",
-          "kind": "justdial",
-          "title": "Activity Toy in Tirupati - Engaging, Fun & Educational"
         }
       ]
     },
@@ -7629,14 +7095,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Kids-Zone-Near-Gantasala-Circle-V-V-Mahal-Road/9999PX877-X877-100115152041-N6D6DC_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Tour Packages For Tirupati For Good Place For Kids in :: Top Tour Packages For Tirupati For Good Place For Kids in V V Mahal Road, Tirupati . Find ✓Car Rental, ✓Car Rental-Toyota Innova, ✓Car Rental For ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7690,84 +7156,6 @@
       ]
     },
     {
-      "key": "renigunta::stores and outlets",
-      "name": "Stores and Outlets",
-      "rawNames": [
-        "Stores and Outlets in Holiday Inn in Renigunta, Tirupati"
-      ],
-      "nameCleaned": true,
-      "area": "renigunta",
-      "localityHint": "Renigunta",
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.justdial.com/Tirupati/Holiday-Inn-Near-Tirupati-International-Airport-Renigunta/9999PX877-X877-170113154918-V8H4_BZDET/stores",
-      "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.justdial.com/Tirupati/Holiday-Inn-Near-Tirupati-International-Airport-Renigunta/9999PX877-X877-170113154918-V8H4_BZDET/stores",
-          "kind": "justdial",
-          "title": "Stores and Outlets in Holiday Inn in Renigunta, Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "renigunta::videos from well kept",
-      "name": "Videos from Well-kept",
-      "rawNames": [
-        "Videos from Well-kept in Renigunta Road, Tirupati"
-      ],
-      "nameCleaned": true,
-      "area": "renigunta",
-      "localityHint": "Renigunta",
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.justdial.com/Tirupati/Well-kept-Near-Bliss-Hotel-Renigunta-Road/9999PX877-X877-170421093825-Z7B9_BZDET/videos",
-      "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.justdial.com/Tirupati/Well-kept-Near-Bliss-Hotel-Renigunta-Road/9999PX877-X877-170421093825-Z7B9_BZDET/videos",
-          "kind": "justdial",
-          "title": "Videos from Well-kept in Renigunta Road, Tirupati"
-        }
-      ]
-    },
-    {
       "key": "surrounding::talakona waterfall",
       "name": "Talakona Waterfall",
       "rawNames": [
@@ -7789,7 +7177,7 @@
       "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/talakona-waterfall",
       "sourceKind": "makemytrip",
       "verifyAreaConfirmed": true,
-      "verifyAddressEvidence": "Talakona waterfall :: Nov 6, 2025 — Talakona waterfall ... Talakona water fall is situated near Bakarapeta in Nallamala Hill Range and 40 Km. away from Tirupati . The height of the ... Read more",
+      "verifyAddressEvidence": "TALAKONA WATERFALL: All You SHOULD Know Before Going :: Address . Talakona L.///l, Tirupati 516101 India. Reach out directly ... TALAKONA WATERFALL: All You SHOULD Know Before Going (2026) ... Tirupati Photos Tirupati ...",
       "geocode": {
         "lat": 13.8116648,
         "lng": 79.2157823,
@@ -7851,14 +7239,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Photo: Kalyani Dam View - Tirupati :: Photo: Kalyani Dam View. From Review : Kalyani Dam - Picnic place near Tirupati of Kalyani Dam . Kalyani Dam · 13 reviews. #47 of 73 attractions in Tirupati . Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7902,14 +7290,14 @@
       ],
       "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/horsley-hills-andhra-pradesh",
       "sourceKind": "makemytrip",
-      "verifyAreaConfirmed": null,
+      "verifyAreaConfirmed": true,
       "verifyAddressEvidence": null,
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -7946,14 +7334,14 @@
       ],
       "sourceUrl": "https://www.tripadvisor.com/Attraction_Review-g297587-d3705043-Reviews-Silathoranam_Garden-Tirupati_Chittoor_District_Andhra_Pradesh.html",
       "sourceKind": "tripadvisor",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "The Natural Arch - Reviews, Photos - Silathoranam Garden :: Its Near to the Chakra Teertham Silathoranam is at a distance of only 1 km from the famous Tirupathi Temple. The rock formation is called as Silathoranam. we ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "batch-011",
       "existingSetId": "Natural Arch, Tirumala hills (Silathoranam)",
       "dupOf": "Natural Arch, Tirumala hills (Silathoranam)",
@@ -7964,45 +7352,6 @@
           "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d3705043-Reviews-Silathoranam_Garden-Tirupati_Chittoor_District_Andhra_Pradesh.html",
           "kind": "tripadvisor",
           "title": "Silathoranam Garden - All You SHOULD Know Before"
-        }
-      ]
-    },
-    {
-      "key": "surrounding::9 waterfalls near tirupati that every traveller must visit",
-      "name": "9 Waterfalls near Tirupati That Every Traveller Must Visit",
-      "rawNames": [
-        "9 Waterfalls near Tirupati That Every Traveller Must Visit"
-      ],
-      "nameCleaned": false,
-      "area": "surrounding",
-      "localityHint": null,
-      "group": "attractions",
-      "target": "place",
-      "category": "waterfall",
-      "placeType": "waterfall",
-      "tags": [
-        "surrounding"
-      ],
-      "sourceUrl": "https://www.holidify.com/collections/waterfalls-near-tirupati",
-      "sourceKind": "holidify",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.holidify.com/collections/waterfalls-near-tirupati",
-          "kind": "holidify",
-          "title": "9 Waterfalls near Tirupati That Every Traveller Must Visit"
         }
       ]
     },
@@ -8025,14 +7374,14 @@
       ],
       "sourceUrl": "https://en.wikipedia.org/wiki/Ubbalamadugu_Falls",
       "sourceKind": "wikipedia",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Trip to Tada Waterfalls (Ubbalamadugu Falls) A refreshing :: Tada Falls ( Ubbalamadugu Falls ) Location: Near Tada, Andhra Pradesh Distance from Chennai: Approximately 90 km A popular spot for trekking and ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8052,82 +7401,6 @@
       ]
     },
     {
-      "key": "surrounding::tada falls",
-      "name": "Tada Falls",
-      "rawNames": [
-        "Tada Falls"
-      ],
-      "nameCleaned": false,
-      "area": "surrounding",
-      "localityHint": null,
-      "group": "attractions",
-      "target": "place",
-      "category": "attraction",
-      "placeType": "other",
-      "tags": [
-        "surrounding"
-      ],
-      "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/tada-falls",
-      "sourceKind": "makemytrip",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.makemytrip.com/tripideas/attractions/tada-falls",
-          "kind": "makemytrip",
-          "title": "Tada Falls"
-        }
-      ]
-    },
-    {
-      "key": "tpt-central::accommodation at",
-      "name": "Accommodation at",
-      "rawNames": [
-        "Accommodation at Tirupati"
-      ],
-      "nameCleaned": true,
-      "area": "tpt-central",
-      "localityHint": null,
-      "group": "stays",
-      "target": "place",
-      "category": "hotel",
-      "placeType": "hotel",
-      "tags": [],
-      "sourceUrl": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/AccommodationAtTirupati.aspx",
-          "kind": "official",
-          "title": "Accommodation at Tirupati"
-        }
-      ]
-    },
-    {
       "key": "tpt-central::treebo sripadha residency alipiri road",
       "name": "Treebo Sripadha Residency Alipiri Road",
       "rawNames": [
@@ -8143,14 +7416,14 @@
       "tags": [],
       "sourceUrl": "https://www.booking.com/hotel/in/sripada-residency-tirupati-andhra-pradesh.html",
       "sourceKind": "booking",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Address of Treebo Sripadha Residency Alipiri Road :: Tirupati . 1.1 km drive to Kapila Theertham. 6-15-23, Srinivasa Nagar, A P Housing Board Colony517505 Tirupati ,India. Free Cancellation till 22-Oct-2026 12:59. Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8161,84 +7434,6 @@
           "url": "https://www.booking.com/hotel/in/sripada-residency-tirupati-andhra-pradesh.html",
           "kind": "booking",
           "title": "Treebo Sripadha Residency Alipiri Road - Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::rest houses in",
-      "name": "Rest Houses in",
-      "rawNames": [
-        "Rest Houses in Tirumala"
-      ],
-      "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "stays",
-      "target": "place",
-      "category": "hotel",
-      "placeType": "hotel",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/RestHousesInTirumala.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/RestHousesInTirumala.aspx",
-          "kind": "official",
-          "title": "Rest Houses in Tirumala"
-        }
-      ]
-    },
-    {
-      "key": "tirumala::free accommodation in",
-      "name": "free accommodation in",
-      "rawNames": [
-        "free accommodation in Tirumala"
-      ],
-      "nameCleaned": true,
-      "area": "tirumala",
-      "localityHint": "Tirumala",
-      "group": "stays",
-      "target": "place",
-      "category": "hotel",
-      "placeType": "hotel",
-      "tags": [
-        "tirumala"
-      ],
-      "sourceUrl": "https://www.tirumala.org/AccommodationAtTirumala.aspx",
-      "sourceKind": "official",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.tirumala.org/AccommodationAtTirumala.aspx",
-          "kind": "official",
-          "title": "free accommodation in Tirumala"
         }
       ]
     },
@@ -8260,14 +7455,14 @@
       ],
       "sourceUrl": "https://www.booking.com/hotel/in/amrutha-home-stay-tirucaanur.html",
       "sourceKind": "booking",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Amrutha Home Stay Tirupati: Comfortable Rooms for Pilgrims & :: SAMASTA Homestay is a comfortable and family-friendly accommodation located on Tiruchanoor Road in Tirupati",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8278,45 +7473,6 @@
           "url": "https://www.booking.com/hotel/in/amrutha-home-stay-tirucaanur.html",
           "kind": "booking",
           "title": "Amrutha Home Stay, Tiruchanoor, Tirupati"
-        }
-      ]
-    },
-    {
-      "key": "srinivasa-mangapuram::srinivasa mangapuram hotels and places to stay",
-      "name": "Srinivasa Mangapuram hotels & places to stay",
-      "rawNames": [
-        "Srinivasa Mangapuram hotels & places to stay"
-      ],
-      "nameCleaned": false,
-      "area": "srinivasa-mangapuram",
-      "localityHint": "Srinivasa Mangapuram",
-      "group": "stays",
-      "target": "place",
-      "category": "hotel",
-      "placeType": "hotel",
-      "tags": [
-        "surrounding-corridor"
-      ],
-      "sourceUrl": "https://www.agoda.com/en-au/srinivasa-mangapuram/maps/tirupati-in.html",
-      "sourceKind": "agoda",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
-      "geocode": {
-        "lat": null,
-        "lng": null,
-        "displayName": null
-      },
-      "tier": "T3",
-      "existingSet": "new",
-      "existingSetId": null,
-      "dupOf": null,
-      "dupReason": null,
-      "status": "curated",
-      "sources": [
-        {
-          "url": "https://www.agoda.com/en-au/srinivasa-mangapuram/maps/tirupati-in.html",
-          "kind": "agoda",
-          "title": "Srinivasa Mangapuram hotels & places to stay"
         }
       ]
     },
@@ -8338,14 +7494,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Lepakshi-Handicrafts-Emporium-Near-Lepakshi-Circle-Near-Indian-Bank-Tirumala-Hills-Tirumala/9999PX877-X877-090716162340-B1U9DC_BZDET/products-Planter",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Lepakshi Handicrafts Emporium in Tirumala,Tirupati :: Address Tirupati Airport, Tirumala, Tirupati -517504, Andhra Pradesh",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8377,14 +7533,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Lepakshi-Handicrafts-Emporium-Near-Lepakshi-Circle-Near-Indian-Bank-Tirumala-Hills-Tirumala/9999PX877-X877-090716162340-B1U9DC_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Nandi Statue Manufacturers Lepakshi in Tirupati :: Address , Lepakshi Handicrafts Emporium Building, Tirumala, Tirupati - 517504 (Near Lepakshi Circle, Near Indian Bank, Tirumala Hills), Ganagapeta, Kadapa - ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": "Lepakshi Handicrafts Emporium",
@@ -8416,14 +7572,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Bnr-Mall-Stv-Nagar/9999PX877-X877-201001020719-H4J7_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Wrogn, Shop No 19-4-37, BNR Mall, Air Bypass Road :: Information · pxw0qq, Shop No 19-4-3/7, BNR Mall, Air Bypass Road, Near MC Donalds, STV Nagar, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CL6-7TLK. Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8455,14 +7611,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Garuda-Mall-Beside-Hotel-Leela-Spice-Madhav-Puram/9999PX877-X877-221231031319-K6J6_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Malls in Tirupati - Page 3 :: Garuda Swagath Mall Opposite Police Station Jayanagar 4th Block, Bangalore Sri Garuda. Call Now TirupatiMalls in Tirupati Malls in Tirupati Average rating 4.5 ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8494,14 +7650,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Sirikala-Shopping-Mall-V-V-Mahal-Road/9999PX877-X877-140104093943-R3D7_BZDET/catalogue/photos",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Fancy Fabric Retailers in Tirupati near me - Justdial :: Fancy Fabric Retailers in Tirupati ; Name, Mohan Selection Cloth Merchants · Anuradha Stores ; Address , # 8, Gandhi Road, Tirupati - 517501 (Opposite To Chand ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8533,14 +7689,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Tirupathi-Vegetable-Market-Near-Sai-Baba-Temple-Tk-Street/9999PX877-X877-140905165905-G6X5_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Vegetable Vendors in Kotramangalam - Tirupati :: 31 Vegetable Vendors in Kotramangalam, Tirupati . Karakambadi Road, Karakambadi, Tirupati - 517520 (Governament Hospital) Shop No:-5-5-324, Reservior Road, ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8570,14 +7726,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Day-Fresh-vegetables-Grandworld-Road-Tirupati-Bazar/9999PX877-X877-231109123700-D9N9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Vegetable Vendors in Gandhi Road - Tirupati :: 31 Vegetable Vendors in Gandhi Road, Tirupati . Fresh vegetables at the best prices. KT Road, Tirupati - 517507 , Giddangi Street, Tirupati Bazar, Tirupati - ...",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8609,14 +7765,14 @@
       ],
       "sourceUrl": "https://www.justdial.com/Tirupati/Venky-Vegetables-Market-Mangalam/9999PX877-X877-190404072850-X8E2_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Vegetable Home Delivery Services in Mangalam - Justdial :: Vegetable Market Near Sai Baba Temple Tk Street, Tirupati . Opens at 07:30 AM Call Now",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8646,14 +7802,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/APURVA-TEXTILES-Bairagi-Patteda/9999PX877-X877-220321014758-D7H9_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Top Undergarment Retailers in Bairagi Patteda - Tirupati :: Address , Bairagi Patteda, Tirupati - 517501, AIR Bypass Road, Bairagi Patteda, Tirupati - 517501 (Survey No 233/2C/3, Ward No 19), Flat No.641, Bairagi Patteda ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -8683,14 +7839,14 @@
       "tags": [],
       "sourceUrl": "https://www.justdial.com/Tirupati/Sunil-Textiles-Near-West-Police-Station-Opp-New-Street-Tirupati-Bazar/9999PX877-X877-140701144756-B3R1_BZDET",
       "sourceKind": "justdial",
-      "verifyAreaConfirmed": null,
-      "verifyAddressEvidence": null,
+      "verifyAreaConfirmed": true,
+      "verifyAddressEvidence": "Popular Readymade Garment Retailers in TP Area, Tirupati :: Address , P K Street, Mallaiah Gunta Katta, Tirupati - 517501 (Near Groups Theater Circle), Nehru Street, Renigunta Road, Tirupati - 517501, Door No:-30, Dr ... Read more",
       "geocode": {
         "lat": null,
         "lng": null,
         "displayName": null
       },
-      "tier": "T3",
+      "tier": "T1",
       "existingSet": "new",
       "existingSetId": null,
       "dupOf": null,
@@ -12067,6 +11223,30 @@
       "reason": "same identity as \"Madras Tiffin Center\" (tpt-neighbourhoods::madras tiffin center)"
     },
     {
+      "raw": "Lovely breakfast at Hotel Orion, Tirupati",
+      "area": "tpt-neighbourhoods",
+      "action": "dropped",
+      "reason": "review-article title, not a place identity"
+    },
+    {
+      "raw": "Tirupati early morning non-veg breakfast - RANEMMA TIFFIN",
+      "area": "tpt-neighbourhoods",
+      "action": "dropped",
+      "reason": "article title, not a place identity"
+    },
+    {
+      "raw": "Morning Breakfast at Tirumala Annaprasadam Centre",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "meal/topic page (Annaprasadam), not a venue identity"
+    },
+    {
+      "raw": "Order from Tirumala Tiffins online in Hyderabad",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "Hyderabad delivery-kitchen listing, out of scope"
+    },
+    {
       "raw": "Aapam Tiffin center, Renigunta",
       "area": "renigunta",
       "action": "renamed",
@@ -12445,6 +11625,12 @@
       "reason": "same identity as \"Sri Venkateswara Swamy Temple, Tirumala\" (tirumala::sri venkateswara swamy temple tirumala)"
     },
     {
+      "raw": "Tirupati Balaji Temple in Tirumala",
+      "area": "tpt-neighbourhoods",
+      "action": "dropped",
+      "reason": "truncated listing title; identity = the main Tirumala temple already covered"
+    },
+    {
       "raw": "Tirumala Tirupati Devasthanams",
       "area": "tirumala",
       "action": "dropped",
@@ -12497,6 +11683,36 @@
       "area": "tirumala",
       "action": "merged",
       "reason": "same identity as \"Natural Arch, Tirumala hills (Silathoranam)\" (tirumala::natural arch tirumala hills silathoranam)"
+    },
+    {
+      "raw": "Tirumala",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "area/destination page; Tirumala exists as a destination, not a place row"
+    },
+    {
+      "raw": "Weekly Sevas",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "seva schedule page, not a place"
+    },
+    {
+      "raw": "SV Temple Amaravathi",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "out-of-scope locality (Amaravathi, Guntur district)"
+    },
+    {
+      "raw": "Thomala Seva",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "ritual/seva page, not a place"
+    },
+    {
+      "raw": "TTD Information Centres and Kalyana Mandapams",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "informational directory page, not a single place"
     },
     {
       "raw": "Padmavati Temple",
@@ -12601,6 +11817,12 @@
       "reason": "generic directory/category page, not a place"
     },
     {
+      "raw": "Renigunta, Tirupati - Sri Venkateswara Swami Temple",
+      "area": "renigunta",
+      "action": "dropped",
+      "reason": "locality page, not a venue (Renigunta is a locality, not a place row)"
+    },
+    {
       "raw": "Religious Tourism",
       "area": "surrounding",
       "action": "dropped",
@@ -12667,10 +11889,28 @@
       "reason": "generic directory/category page, not a place"
     },
     {
+      "raw": "Tirupati Historic Sites & Districts to Visit",
+      "area": "tpt-central",
+      "action": "dropped",
+      "reason": "article title, not a single place"
+    },
+    {
+      "raw": "Tirupati Regional Centre",
+      "area": "tpt-central",
+      "action": "dropped",
+      "reason": "ambiguous institutional listing, identity unresolved"
+    },
+    {
       "raw": "Nature & Parks in Tirupati",
       "area": "tpt-neighbourhoods",
       "action": "dropped",
       "reason": "generic category page title, not a place"
+    },
+    {
+      "raw": "Activity Toy in Tirupati - Engaging, Fun & Educational",
+      "area": "tpt-neighbourhoods",
+      "action": "dropped",
+      "reason": "product advertisement, not a place"
     },
     {
       "raw": "Must View in Tirumala - Review of Papavinasam",
@@ -12703,6 +11943,18 @@
       "reason": "same identity as \"Chandragiri Fort (Raja Mahal & Rani Mahal)\" (chandragiri::chandragiri fort raja mahal and rani mahal)"
     },
     {
+      "raw": "Stores and Outlets in Holiday Inn in Renigunta, Tirupati",
+      "area": "renigunta",
+      "action": "dropped",
+      "reason": "sub-listing of Holiday Inn shops, no distinct venue identity"
+    },
+    {
+      "raw": "Videos from Well-kept in Renigunta Road, Tirupati",
+      "area": "renigunta",
+      "action": "dropped",
+      "reason": "video-listing noise, not a place identity"
+    },
+    {
       "raw": "Discover the Beauty of Talakona Waterfall",
       "area": "surrounding",
       "action": "merged",
@@ -12733,6 +11985,12 @@
       "reason": "same identity as \"Horsley Hills\" (surrounding::horsley hills)"
     },
     {
+      "raw": "9 Waterfalls near Tirupati That Every Traveller Must Visit",
+      "area": "surrounding",
+      "action": "dropped",
+      "reason": "article title, not a single place"
+    },
+    {
       "raw": "Forest Tourism",
       "area": "surrounding",
       "action": "dropped",
@@ -12749,6 +12007,12 @@
       "area": "surrounding",
       "action": "merged",
       "reason": "same identity as \"Ubbalamadugu Falls\" (surrounding::ubbalamadugu falls)"
+    },
+    {
+      "raw": "Tada Falls",
+      "area": "surrounding",
+      "action": "dropped",
+      "reason": "duplicate alias of 'Ubbalamadugu Falls' (same waterfall, admitted once)"
     },
     {
       "raw": "5 Star hotels near Tirupati Railway Station Tirupati",
@@ -12769,6 +12033,24 @@
       "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (tpt-central::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
     },
     {
+      "raw": "Accommodation at Tirupati",
+      "area": "tpt-central",
+      "action": "dropped",
+      "reason": "truncated listing title, no venue identity"
+    },
+    {
+      "raw": "Rest Houses in Tirumala",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "truncated listing title, no venue identity"
+    },
+    {
+      "raw": "free accommodation in Tirumala",
+      "area": "tirumala",
+      "action": "dropped",
+      "reason": "truncated listing title, no venue identity"
+    },
+    {
       "raw": "10 Places to Stay Near Tirumala Temple - Tirupati Hotels",
       "area": "tirumala",
       "action": "dropped",
@@ -12785,6 +12067,12 @@
       "area": "srinivasa-mangapuram",
       "action": "merged",
       "reason": "same identity as \"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram\" (srinivasa-mangapuram::sri kalyana venkateswara swamy temple srinivasa mangapuram)"
+    },
+    {
+      "raw": "Srinivasa Mangapuram hotels & places to stay",
+      "area": "srinivasa-mangapuram",
+      "action": "dropped",
+      "reason": "listing-hub page, not a venue identity"
     },
     {
       "raw": "10 Top Hotels in Renigunta",

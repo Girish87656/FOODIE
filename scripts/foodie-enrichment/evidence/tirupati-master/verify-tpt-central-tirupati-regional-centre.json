@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirupati Regional Centre",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://ignca.gov.in/hi/regional-centers/tirupati-regional-centre"
   },
   "query": "\"Tirupati Regional Centre\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/rsctpt/photos/1553671386555977",
+      "name": "Regional Science Centre, Tirupati",
+      "snippet": "Contact the Education Section in person or call 0877-2286202 / 7989694681 . Phone: 0877-2286202 💬 WhatsApp: +91 7989694681",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://traveleva.in/tirupati-d382/regional-science-hub-a3121?srsltid=AYCX9vJojfnxH5akM6XlHS1NQOejUMrHnskMTQOEue8XBnFbln_tfjEZ",
+      "name": "Regional Science Hub - Tirupati | Timings, Entry Fee, Best",
+      "snippet": "Regst Address : A70 Third Floor Block A Vipul World Sector 48 Gurgaon 122018 · H.O. Address : WeWork Platina Tower, Ground Floor, PLATINA TOWER, Mehrauli ... Read more",
+      "host": "traveleva.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Regional-Science-Centre-Near-Alipiri-Gate-Alipiri/9999PX877-X877-110308121034-V4P9_BZDET/reviews",
+      "name": "1410 Reviews for Regional Science Centre in Alipiri, Tirupati",
+      "snippet": "Regional Science Centre in Alipiri, Tirupati . Opens in 27 mins Call Now Direction. The establishment is functional on Monday:- 9:30 Am - 6:00 Pm … holds an ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://ruggedanay.wordpress.com/tag/regional-science-centre-tirupati",
+      "name": "regional science centre tirupati - Rugged Anay - WordPress.com",
+      "snippet": "May 12, 2014 — The famed institute is established by the Central Government for the benefit of school children",
+      "host": "ruggedanay.wordpress.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/rsctpt/photos/1551787533411029",
+      "name": "Regional Science Centre, Tirupati",
+      "snippet": "Regional Science Centre, Tirupati is at Regional Science Centre, Tirupati . Aug 20, 2026· 󰟠. 󳄫. Celebrate India's journey to the stars ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://planetariums-database.org/index.php?onglet=planetariums&menu=sheet_planet2&filtre=2788",
+      "name": "Regional Science Centre",
+      "snippet": "Opened in 2017 ; Address : Alipiri Zoo Park Road - Tirupati , 517507, Andhra Pradesh ; Country: INDIA Email: rsctirupati @gmail.com. Phone: +91 877 228 6202 ; Website ... Read more",
+      "host": "planetariums-database.org",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Regional Science Hub - Tirupati | Timings, Entry Fee, Best :: Regst Address : A70 Third Floor Block A Vipul World Sector 48 Gurgaon 122018 · H.O. Address : WeWork Platina Tower, Ground Floor, PLATINA TOWER, Mehrauli ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Kids Zone in V V Mahal Road,Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Kids-Zone-Near-Gantasala-Circle-V-V-Mahal-Road/9999PX877-X877-100115152041-N6D6DC_BZDET"
   },
   "query": "\"Kids Zone in V V Mahal Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tour-Packages-For-Tirupati-for-Good-Place-for-Kids-in-V-V-Mahal-Road/nct-10489705-att-Rkids",
+      "name": "Top Tour Packages For Tirupati For Good Place For Kids in",
+      "snippet": "Top Tour Packages For Tirupati For Good Place For Kids in V V Mahal Road, Tirupati . Find ✓Car Rental, ✓Car Rental-Toyota Innova, ✓Car Rental For ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/crazykidstirupati/reel/DcAV4RKTwj-",
+      "name": "CRAZYKIDS PLAY ZONETIRUPATHI#365 days open",
+      "snippet": "The location is in the lane next to BNU, next to Star Dental on the 2nd floor. OCR. CRAZY Kids Playzone 1 HOUR 150/- ADDRESS : BESIDE STAR DENTAL ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Playgroups-in-V-V-Mahal-Road/nct-11123333/page-2",
+      "name": "Playgroups in V V Mahal Road, Tirupati - Page 2",
+      "snippet": "Playgroups in V V Mahal Road, Tirupati ; Name, Wee Kids · Priyadarshini High School ; Address , Sri Nagar Colony, RC Road, Tirupati - 517501 (Near Seicom College ) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Reddy-And-Reddys-Colony/Entertainment/Kids-Zone/store/3627b10?srsltid=AYCX9vLtzkqOlQ949psEz6MUg043AkmZP99hM097MSszJ2-B5I6y-b4a",
+      "name": "Kids Zone, Reddy and Reddy's Colony, Tirupati",
+      "snippet": "Address . No.-6, 2-80/B, VV Mahal Rd, Reddy and Reddy's Colony, Tirupati ... Kids Zone Reviews. 4.6. 2 Online Ratings. Searches leading to this page. Entertainment ... Read more",
+      "host": "magicpin.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/International-Pre-Schools-in-V-V-Mahal-Road/nct-12065003",
+      "name": "Top International Pre Schools in V V Mahal Road - Tirupati",
+      "snippet": "Address , Ithepalli Post Chandrigiri Mandal, Court Road, Tirupati - 517501 ( Tirupati Banglore Highway), 19-8210/A, Bairagi Patteda, Tirupati - 517501 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/unitedtirupati/videos/kids-play-zone-now-in-tirupati/666184085698740",
+      "name": "Largest Soft play zone now in tirupati Crazy kids",
+      "snippet": "Largest Soft play zone now in tirupati Crazy kids tirupati with 2000 sq.feet 10 % DISCOUNT for our followers ☎️9032516325 9032640511 ...",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Tour Packages For Tirupati For Good Place For Kids in :: Top Tour Packages For Tirupati For Good Place For Kids in V V Mahal Road, Tirupati . Find ✓Car Rental, ✓Car Rental-Toyota Innova, ✓Car Rental For ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,71 @@
+{
+  "candidate": {
+    "name": "Sirikala Shopping Mall - Fabric Retailers In Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Sirikala-Shopping-Mall-V-V-Mahal-Road/9999PX877-X877-140104093943-R3D7_BZDET/catalogue/photos"
+  },
+  "query": "\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Fancy-Fabric-Retailers/nct-10200306",
+      "name": "Top Fancy Fabric Retailers in Tirupati near me - Justdial",
+      "snippet": "Fancy Fabric Retailers in Tirupati ; Name, Mohan Selection Cloth Merchants · Anuradha Stores ; Address , # 8, Gandhi Road, Tirupati - 517501 (Opposite To Chand ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Fabric-Retailers/nct-10890504/page-4",
+      "name": "Fabric Retailers in Tirupati - Page 4",
+      "snippet": "Fabric Retailers in Tirupati ; Address , Door No. 173, TK Street, Tirupati - 517501, 20-3-37 /a, Shivajyothi Nagar, Tirumala By-pass Road, Korlagunta, Tirupati - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Siva-Tixtiles-And-Readymades-Near-Sridevi-Complex/9999PX877-X877-091126142728-V9F5DC_BZDET/moreinfo",
+      "name": "Siva Textiles And Readymades - Tirupati",
+      "snippet": "Siva Textiles And Readymades in Tilak Road, Tirupati is known to satisfactorily cater to the demands of its customer base. It stands located at # 13-3-395/A, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Silk-Fabric-Retailers-in-Tml-By-Pass-Road/nct-10437018",
+      "name": "Popular Silk Fabric Retailers in Tml By Pass Road, Tirupati",
+      "snippet": "Address , Gandhi Road, Tirupati - 517501 (Near Panchamuki Hanuman Temple), 10-13-480, 1st Floor, DL Plaza, VV Mahal Road, V V Mahal Road, Tirupati - 517501 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://justdial.com/Tirupati/Fabric-Retailers-in-Stv-Nagar/nct-10890504",
+      "name": "Top Fabric Retailers in Stv Nagar, Tirupati",
+      "snippet": "232 Fabric Retailers in Stv Nagar, Tirupati . Opens at 07:00 AM. Call Now - 1.54 km Call. Address Nimmakayala Street, Tk Street, Tirupati - 517501 (Near T K ...",
+      "host": "justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Printed-Fabric-Wholesalers/nct-10388001",
+      "name": "Top Printed Fabric Wholesalers in Tirupati near me",
+      "snippet": "Address , No. 67552/A, Sripuram Colony, Tirupati , Chittoor, Tilak Road, Tirupati - 517501, 2B , 14-285, East Kothapeta, CTM Road, Madanapalle - 517325 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Top Fancy Fabric Retailers in Tirupati near me - Justdial :: Fancy Fabric Retailers in Tirupati ; Name, Mohan Selection Cloth Merchants · Anuradha Stores ; Address , # 8, Gandhi Road, Tirupati - 517501 (Opposite To Chand ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-28",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sirikala Shopping Mall - Fabric Retailers In Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    }
+  ]
+}

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Skms Temple in Nagari,Chittoor",
-    "area": "surrounding"
+    "area": "surrounding",
+    "sourceUrl": "https://www.justdial.com/Chittoor/Skms-Temple-Nagari/9999P8572-8572-180606001915-N8W2_BZDET"
   },
   "query": "\"Skms Temple in Nagari,Chittoor\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/fb-answers/ancient-temples-in-chittoor-district/?locale=hr_HR",
+      "name": "Ancient Temples in Chittoor District",
+      "snippet": "The ancient temple of Sri Kalyana Venkateswara Swamy is located in Srinivasa Mangapuram, about 12 km to West Tirupati in Chittoor district🙏 58",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/ancient-temples-in-chittoor-district/?locale=ur_PK",
+      "name": "Ancient Temples in Chittoor District",
+      "snippet": "About 12 km west is the ancient Sri Kalyana Venkateswara Swamy Temple in Srinivasa Mangapuram, while the hill town of Tirumala hosts the Venkateswara Temple, ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/ancient-temples-in-chittoor-district/?locale=cx_PH",
+      "name": "Ancient Temples in Chittoor District",
+      "snippet": "Sri Govindarajaswamy Temple, an ancient Hindhu temple situated at the heart of the Tirupati City, in Chittoor District of Andhra Pradesh. 442. Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Chittoor/Sri-Krishna-Temple-Thotapalyam/9999P8572-8572-190118091148-J2S2_BZDET",
+      "name": "Sri Krishna Temple in Thotapalyam,Chittoor",
+      "snippet": "Sri Krishna Temple in Thotapalyam,Chittoor. Tirupati Hwy, Thotapalyam, Chittoor-517001, Contacts +(91)-9959192570 Business Hours Open Now : until 7:45 pm",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/ancient-temples-in-chittoor-district/?locale=es_ES",
+      "name": "Ancient Temples in Chittoor District",
+      "snippet": "Sri Govindarajaswamy Temple, an ancient Hindhu temple situated at the heart of the Tirupati City, in Chittoor District of Andhra Pradesh. 442. Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/ancient-temples-in-chittoor-district/?locale=af_ZA",
+      "name": "Ancient Temples in Chittoor District",
+      "snippet": "is located in Srinivasa Mangapuram, about 12 km to West Tirupati in Chittoor district🙏",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Krishna Temple in Thotapalyam,Chittoor :: Sri Krishna Temple in Thotapalyam,Chittoor. Tirupati Hwy, Thotapalyam, Chittoor-517001, Contacts +(91)-9959192570 Business Hours Open Now : until 7:45 pm",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

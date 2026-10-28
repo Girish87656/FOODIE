@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "TTD Gardens",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.makemytrip.com/tripideas/attractions/ttd-gardens"
   },
   "query": "\"TTD Gardens\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d3236115-Reviews-TTD_Gardens-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "TTD Gardens - All You SHOULD Know Before Going 2026",
+      "snippet": "TTD Gardens - All You SHOULD Know Before Going 2026 (with Reviews). AsiaIndiaAndhra PradeshChittoor District Tirupati Things to Do in TirupatiTTD ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.trawell.in/andhra/tirumala/ttd-gardens",
+      "name": "TTD Gardens, Tirumala - Timings, Entry Fee, Best Time to",
+      "snippet": "The TTD Gardens are a group of ornamental, landscape and flower gardens occupying an area of 460 acres in Tirupati and Tirumala. Read more",
+      "host": "www.trawell.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.mapquest.com/in/andhra-pradesh/ttd-gardens-527238147",
+      "name": "TTD Gardens - Tirupati",
+      "snippet": "Get more information for TTD Gardens in Tirupati , AP. See reviews, map, get the address , and find directions.",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.makemytrip.com/tripideas/attractions/ttd-gardens",
+      "name": "TTD Gardens | Tirupati - What to Expect | Timings | Tips",
+      "snippet": "Spanning 460 acres, TTD Gardens is a group of ornamental and landscaped gardens, believed to have been started by Sri Ramanuja and Sri Anandalwar in the ...",
+      "host": "www.makemytrip.com",
+      "kind": null
+    },
+    {
+      "url": "https://us.trip.com/travel-guide/attraction/tirupati/ttd-gardens-23489303",
+      "name": "TTD Gardens Tickets [2026] - Promos, Prices, Reviews &",
+      "snippet": "1. Ramakrishna Mission Ashrama, Tirupati , 515m from TTD Gardens · 2. Sahi Collections, 1.54 km from TTD Gardens · 3. Satyam Provisions Store, 1.91 km from TTD ... Read more",
+      "host": "us.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.expedia.co.uk/TTD-Gardens-Tirupati.d553248621532739233.Attraction",
+      "name": "TTD Gardens in Tirupati | Expedia.co.uk",
+      "snippet": "Check availability on hotels close to TTD Gardens ; Ekante Bliss IHCL SeleQtions · Near Ramanuja Circle,Renigunta Road Tirupati Andhra Pradesh ; Marasa Sarovar ...",
+      "host": "www.expedia.co.uk",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "TTD Gardens in Tirupati | Expedia.co.uk :: Check availability on hotels close to TTD Gardens ; Ekante Bliss IHCL SeleQtions · Near Ramanuja Circle,Renigunta Road Tirupati Andhra Pradesh ; Marasa Sarovar ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

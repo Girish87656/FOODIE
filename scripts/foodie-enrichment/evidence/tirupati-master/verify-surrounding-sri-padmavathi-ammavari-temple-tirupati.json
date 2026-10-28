@@ -1,14 +1,69 @@
 {
   "candidate": {
     "name": "Sri Padmavathi Ammavari Temple, Tirupati",
-    "area": "surrounding"
+    "area": "surrounding",
+    "sourceUrl": "https://www.tripadvisor.com"
   },
   "query": "\"Sri Padmavathi Ammavari Temple, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/groups/409035593262880/posts/1806567473509678",
+      "name": "Padmavathi Ammavari Temple: A Divine Journey",
+      "snippet": "Sri Padmavathi Ammavari Temple, Tirupati : Padmavathi Temple is a temple dedicated to Goddess Sri Padmavati Devi or Alamelumanga, consort of ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d3705522-Reviews-or340-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Padmavathi Ammavari Temple, Tirupati",
+      "snippet": "Sep 29, 2016 — The area. Address . Sannidhi St, Tirupati 517503 India. Reach out ... Sri Padmavathi Ammavari Temple, Tirupati . AsiaIndiaAndhra Pradesh ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/padmavathi-temple-tirupati-contact-number",
+      "name": "Padmavathi Temple Tirupati Contact Number",
+      "snippet": "Sri Padmavathi Ammavari Temple, Tirupati : Padmavathi Temple is a temple dedicated to Goddess Sri Padmavati Devi or Alamelumanga, consort of Lord Sri ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/Attraction_Review-g297587-d3705522-Reviews-or80-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Padmavathi Ammavari Temple, Tirupati",
+      "snippet": "The area. Address . Sannidhi St, Tirupati 517503 India. Reach out directly. Full ... Sri Padmavathi Ammavari Temple, Tirupati - Tripadvisor. AsiaIndiaAndhra ... Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://sb.2markers.com/842168",
+      "name": "Sri Padmavathi Ammavari Temple on the map, Tirupati",
+      "snippet": "Photo, address and average rating of visitors who have been here. Content ... Sri Padmavathi Ammavari Temple, Tirupati . Where is located Sri Padmavathi ... Read more",
+      "host": "sb.2markers.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/padmavathi-temple-directions",
+      "name": "Padmavathi Temple Directions",
+      "snippet": "Temple is located in Peruru village, which is 10 km from Tirumala Temple … 📞 Booking & Enquiries: 91826 99855",
+      "host": "www.instagram.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Padmavathi Ammavari Temple, Tirupati :: Sep 29, 2016 — The area. Address . Sannidhi St, Tirupati 517503 India. Reach out ... Sri Padmavathi Ammavari Temple, Tirupati . AsiaIndiaAndhra Pradesh ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sri Padmavathi Ammavari Temple, Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sri Padmavathi Ammavari Temple, Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "5 Star hotels near Tirupati Railway Station Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.makemytrip.com/hotels/hotels-near-tirupati_railway_station_tirupati-tirupati-five_star.html"
+  },
+  "query": "\"5 Star hotels near Tirupati Railway Station Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.hotelscombined.com/Place/Tirupati-5-Star-Hotels.5sr.49441.ksp",
+      "name": "5-star Hotels in Tirupati from $53",
+      "snippet": "... Tirupati , India. $9. View deal. Hotel Govind Heights · Hotel Govind Heights. 13,6-783, Street No 11,Peddakapu Colony., Tirupati , India. $11. Read more",
+      "host": "www.hotelscombined.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.skyscanner.co.in/hotels/india/tirupati-hotels/five-star/ci-27547186/sr-5",
+      "name": "5-star Hotels in Tirupati - Skyscanner",
+      "snippet": "Vakula Matha Grand , the best rated hotels for you near Tirupati are Tirupatihomestay, Nayath Serviced Apartment and Hotel Harsha Residency.",
+      "host": "www.skyscanner.co.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.co.nz/HotelsNear-g297587-d4145756-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Best Hotels Near Tirupati Station - Tripadvisor",
+      "snippet": "5 stars Highest-rated hotel within a 2 minute walk of Tirupati Station. Besides Bhimas Deluxe Hotel, Near Railway Station, Varadaraja ...",
+      "host": "www.tripadvisor.co.nz",
+      "kind": null
+    },
+    {
+      "url": "https://www.expedia.co.uk/5Star-Tirupati-Hotels.s50-0-d10058.Travel-Guide-Filter-Hotels",
+      "name": "The 10 Best 5 Star Hotels in Tirupati - 2026 Updated Prices",
+      "snippet": "Our top choices for Tirupati 5-star hotels · 1. Marasa Sarovar Premiere Tirupati · 2. Fortune Select Grand Ridge, Tirupati - Member ITC Hotels' Group · 3. Taj ... Read more",
+      "host": "www.expedia.co.uk",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.ie/HotelsNear-g297587-d4145756-Tirupati_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 CLOSEST Hotels to Tirupati Station",
+      "snippet": "5 stars Highest-rated hotel within a 2 minute walk of Tirupati Station (33) 42 G Car Street, Tirupati . Deluxe Hotel, Near Railway Station, ...",
+      "host": "www.tripadvisor.ie",
+      "kind": null
+    },
+    {
+      "url": "https://us.trip.com/hotels/tirupati-hotels-list-6054",
+      "name": "10 Best Tirupati Hotels, India (from $33)",
+      "snippet": "Best hotels in Tirupati ; Marasa Sarovar Premiere · 12th Cross, Karakambadi Rd, near AGS Company, Upadhyaya Nagar, Tirupati · 1 night $66 ; Taj Tirupati · Read more",
+      "host": "us.trip.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "5-star Hotels in Tirupati from $53 :: ... Tirupati , India. $9. View deal. Hotel Govind Heights · Hotel Govind Heights. 13,6-783, Street No 11,Peddakapu Colony., Tirupati , India. $11. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

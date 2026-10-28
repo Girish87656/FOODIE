@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Activity Toy in Tirupati - Engaging, Fun & Educational",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Activity-Toy/jdm-1000966-ent-2-17398396"
   },
   "query": "\"Activity Toy in Tirupati - Engaging, Fun & Educational\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/jdmart/Tirupati/Activity-Toy/jdm-1000966-ent-2-17398396",
+      "name": "Activity Toy in Tirupati - Engaging, Fun & Educational",
+      "snippet": "Explore a wide range of engaging activity toys for kids in Tirupati . sellers on JD Mart,&nbsp;... Includes items like swings, slides, and climbing structures.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

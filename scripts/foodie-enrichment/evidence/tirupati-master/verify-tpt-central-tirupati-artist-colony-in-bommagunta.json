@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirupati Artist Colony in Bommagunta",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Artist-Colony-Bommagunta/9999PX877-X877-260227233806-J7J1_BZDET"
   },
   "query": "\"Tirupati Artist Colony in Bommagunta\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Artists-in-Gandhi-Road/nct-10021078/page-4",
+      "name": "Artists in Gandhi Road, Tirupati - Page 4",
+      "snippet": "Artists in Gandhi Road, Tirupati . Gandhi Road, Tirupati - 517501 T.Kstreet , Tirupati , Door No 435, Bhavani Nagar, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Artists-in-Tirumala/nct-10021078",
+      "name": "Top Artists in Tirumala, Tirupati - Best Contemporary Artists",
+      "snippet": "... Address , Reviews, Photos, Maps for top Artists near me in Tirumala, Tirupati ... 118, Theerthakatta St, Tirumala, Tirupati , Korlagunta, Tirupati - 517501 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Artists-in-R-Mallavaram/nct-10021078",
+      "name": "Top Artists in R Mallavaram, Tirupati",
+      "snippet": "... Address , Reviews, Photos, Maps for top Artists near me in R Mallavaram ... 118, Theerthakatta St, Tirumala, Tirupati , Korlagunta, Tirupati - 517501 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Artists-in-Lic-Road/nct-10021078/page-5",
+      "name": "Top Artists in Lic Road, Tirupati - Best Contemporary Artists",
+      "snippet": "83 Artists in Lic Road. Address B-48, Vinayaka Nagar Quarters, Mr Palli Circle, Tirupati - 517502 Mangalam, Tirupati - 517507 (Tirumala Nagar)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Gopinath-Arts/9999PMULHYDSTD19346_BZDET",
+      "name": "Gopinath Arts in Korlagunta,Tirupati",
+      "snippet": "Please scroll to the top for the address and contact details of Gopinath Arts at Korlagunta, Tirupati . Artists in nearby areas. Artists in Mr Palli Circle. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Artists-in-Karakambadi/nct-10021078",
+      "name": "Top Artists in Karakambadi, Tirupati",
+      "snippet": "Colony, Tirupati - 517501 Theertha Katta St, es, 10-2-200a, Reddy's Colony, Kk. Door No:-6-154, Dhanalakshmi Nagar, Mr Palli Circle, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Artists in Gandhi Road, Tirupati - Page 4 :: Artists in Gandhi Road, Tirupati . Gandhi Road, Tirupati - 517501 T.Kstreet , Tirupati , Door No 435, Bhavani Nagar, Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

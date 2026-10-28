@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirupati Historic Sites & Districts to Visit",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tripadvisor.com/Attractions-g297587-Activities-c47-t17-Tirupati_Chittoor_District_Andhra_Pradesh.html"
   },
   "query": "\"Tirupati Historic Sites & Districts to Visit\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com.ph/AttractionProductReview-g297587-d16643153-10_places_to_Visit_in_Tirupati_Complete_Tirupati_Balaji_Temple-Tirupati_Chittoor_D.html",
+      "name": "10 places to Visit in Tirupati Complete Tirupati Balaji Temple",
+      "snippet": "Its Sri Venkateswara Temple sits atop. Stop At: Tirumala Temple, S Mada St, Tirupati 517504",
+      "host": "www.tripadvisor.com.ph",
+      "kind": null
+    },
+    {
+      "url": "https://www.thrillophilia.com/destinations/tirupati/places-to-visit",
+      "name": "Tourist Places to Visit in Tirupati",
+      "snippet": "Tirumala Temple, Sri Venkateswara Temple, Talakona Waterfall, Tirumala Deer Park Reserve, Sri Vari Museum, Govindaraja Temple, Srikalahasti, Swami Pushkarini ... Read more",
+      "host": "www.thrillophilia.com",
+      "kind": null
+    },
+    {
+      "url": "https://au.trip.com/travel-guide/destination/tirupati-15026",
+      "name": "Tirupati Travel Guide 2026: Top Attractions, Local Food &",
+      "snippet": "S.No.260/1B Tanapalli Road, Tirupati , Andhra Pradesh, 517501, India.",
+      "host": "au.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirupati-sites-to-visit",
+      "name": "Tirupati Sites to Visit",
+      "snippet": "Beyond the main temple, you can explore Padmavathi Temple, Kapileswara Temple, Silathoranam rock arch, and nearby spots like Sri Kalahasti and Sripuram Golden ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.co.za/Tourism-g297587-Tirupati_Chittoor_District_Andhra_Pradesh-Vacations.html",
+      "name": "Tirupati, India: All You Need to Know Before You Go (2026)",
+      "snippet": "Ancient Lord Venkateswara Temple, Historic Sites Srivari. Sri Padmavathi Ammavari Temple. Religious Sites Sri Kalyana Venkateswaraswami Temple",
+      "host": "www.tripadvisor.co.za",
+      "kind": null
+    },
+    {
+      "url": "https://skyticket.com/guide/55618",
+      "name": "The City with India's No.1 Temple! 4 Must-Visit Tourist Spots in",
+      "snippet": "Mar 21, 2025 — 4 Must-Visit Tourist Spots in Tirupati 1. Tirumala Venkateswara Temple 2. Sri Padmavathi Ammavari Temple 3. ISKCON Tirupati 4. Deer Park",
+      "host": "skyticket.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "10 places to Visit in Tirupati Complete Tirupati Balaji Temple :: Its Sri Venkateswara Temple sits atop. Stop At: Tirumala Temple, S Mada St, Tirupati 517504",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

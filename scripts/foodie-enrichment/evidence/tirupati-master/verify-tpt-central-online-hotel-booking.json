@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Online Hotel Booking",
+    "area": "tpt-central",
+    "sourceUrl": "https://www.goibibo.com/hotels"
+  },
+  "query": "\"Online Hotel Booking\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.easemytrip.com",
+      "name": "Tirupati - Hotels",
+      "snippet": "Book Tirupati Hotel online at lowest prices on EaseMyTrip. hra Pradesh is located at a distance of 18 Km from the Tirupati Airport. 517501, INDIA … km from the ...",
+      "host": "www.easemytrip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.kayak.sg",
+      "name": "Tirupati Hotel Directory",
+      "snippet": "KAYAK searches hundreds of travel sites at once for hotels in Tirupati . Booking.com. Hotels.com. Expedia. Priceline. Read more",
+      "host": "www.kayak.sg",
+      "kind": null
+    },
+    {
+      "url": "https://www.travelweekly.com",
+      "name": "Hotel Tirupati- Tirupati, India Hotels- GDS Reservation Codes",
+      "snippet": "Hotel Tirupati Road No. 19-3-10/A Korramenugunta, Tirupati , India 517501. View Phone: 91 877-224-6000 Fax: 91 804-190-3761",
+      "host": "www.travelweekly.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Hotel Reservations For Tirumala near me - Tirupati",
+      "snippet": "Popular Hotel Reservations For Tirupati in Tirupati ; Manasa Inn · 1k Ratings. Karakambadi Road Korlagunta ; Dhanasri Tours & Travels · 656 Ratings. Tml Tml By Pass ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.easemytrip.ae",
+      "name": "Tirupati - Hotels - EaseMyTrip.ae",
+      "snippet": "Book Tirupati Hotel online at lowest prices on EaseMyTrip. Renigunta High Road 4.4 Very 11 taxes & fees per night, situated near bus stand and opposite ...",
+      "host": "www.easemytrip.ae",
+      "kind": null
+    },
+    {
+      "url": "https://www.cozycozy.com",
+      "name": "Compare all Hotels in Tirupati",
+      "snippet": "Find your perfect Tirupati hotel from the largest selection of cozy cozy accommodations! ✓ Hotels with pool ✓ Best Reviews ✓ Savings up to 50%",
+      "host": "www.cozycozy.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirupati - Hotels :: Book Tirupati Hotel online at lowest prices on EaseMyTrip. hra Pradesh is located at a distance of 18 Km from the Tirupati Airport. 517501, INDIA … km from the ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

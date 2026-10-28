@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "Tirupati",
+    "area": "tpt-central",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tirupati"
+  },
+  "query": "\"Tirupati\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://maps.apple.com/place?place-id=I7567D57E3149BC0F",
+      "name": "Tirumala Tirupati Devasthanam",
+      "snippet": "View details about Tirumala Tirupati Devasthanam in Tirumala, Andhra Pradesh, India on Apple Maps. Address , driving directions, images, nearby attractions ...",
+      "host": "maps.apple.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirupati-temple-postal-address/?locale=tr_TR",
+      "name": "Tirupati Temple Postal Address",
+      "snippet": "The main Tirupati temple is the Sri Venkateswara Swamy Temple located in Tirumala, near Tirupati in Chittoor district, Andhra Pradesh. Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://mapcarta.com/Tirupati",
+      "name": "Tirupati Map - Andhra Pradesh",
+      "snippet": "Tiruchanur is a suburb and outgrowth of Tirupati and is located in Tirupati district of the Indian state of Andhra Pradesh. It is a part of Tirupati urban ... Read more",
+      "host": "mapcarta.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.quora.com/Where-is-the-Tirupati-temple",
+      "name": "Where is the Tirupati temple?",
+      "snippet": "Where is the Tirupati temple?",
+      "host": "www.quora.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mapquest.com/in/tirumala-tirupati-devasthanams-526720064",
+      "name": "Tirumala Tirupati Devasthanams",
+      "snippet": "Get more information for Tirumala Tirupati Devasthanams in Tirupati , AP. See reviews, map, get the address , and find directions.",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/tirupati-map-location",
+      "name": "Tirupati Map Location",
+      "snippet": "Tirupati is a major pilgrimage city in Andhra Pradesh, India, located at 13.63°N, 79.42°E in the Rayalaseema region. It serves as the headquarters of ... Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Tirupati Temple Postal Address :: The main Tirupati temple is the Sri Venkateswara Swamy Temple located in Tirumala, near Tirupati in Chittoor district, Andhra Pradesh. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

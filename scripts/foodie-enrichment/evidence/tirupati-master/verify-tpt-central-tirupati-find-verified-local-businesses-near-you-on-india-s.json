@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirupati - Find Verified Local Businesses Near You on India's",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati"
   },
   "query": "\"Tirupati - Find Verified Local Businesses Near You on India's\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://beezinfo.com/findbusiness/tirupati",
+      "name": "Tirupati - Top Businesses, Shops & Services",
+      "snippet": "Discover verified local businesses, shops, and services in Tirupati . Find contact details, read reviews, and connect directly with businesses. Read more",
+      "host": "beezinfo.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Online-Business-Consultants/nct-11380442",
+      "name": "Top Online Business Consultants in Tirupati - Justdial",
+      "snippet": "Online Business Consultants in Tirupati . Address Cherlopalle Village, Korlagunta, Tirupati - 517501 (Beside Chandra Provisions) Kapilateertham Road, Tirupati - ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Enterprises/nct-10852515",
+      "name": "Top Enterprises in Tirupati near me - Justdial Jd",
+      "snippet": "Enterprises in Tirupati - Find the top businesses to boost your growth! Connect with trusted suppliers, service providers, and industry leaders.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.submitmybusiness.com/andhra-pradesh/tirupati",
+      "name": "Business Directory Andhra Pradesh Tirupati",
+      "snippet": "Find trusted and verified Tirupati service providers, companies, and professionals offering quality services at competitive prices. Browse business profiles, ... Read more",
+      "host": "www.submitmybusiness.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/E-Commerce-Service-Providers-in-Renigunta/nct-11276455",
+      "name": "Top E-Commerce Service Providers in Renigunta, Tirupati",
+      "snippet": "Find leading e-commerce service providers in Renigunta, Tirupati offering expert solutions. Tirupati - 517501. KT Road, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/CA-in-Mango-Market-Road/nct-10066128",
+      "name": "Chartered Accountants in Mango Market Road, Tirupati",
+      "snippet": "Find experienced Chartered Accountants in Mango Market Road, Tirupati on Justdial. - 4.92 km Call Now Send Enquiry. Average Rating 4.7 (602 Ratings & Reviews",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Online Business Consultants in Tirupati - Justdial :: Online Business Consultants in Tirupati . Address Cherlopalle Village, Korlagunta, Tirupati - 517501 (Beside Chandra Provisions) Kapilateertham Road, Tirupati - ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

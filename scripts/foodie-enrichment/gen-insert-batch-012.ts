@@ -194,7 +194,7 @@ const BATCH011_NAMES = [
   "Natural Arch, Tirumala hills (Silathoranam)", "Talakona Waterfall",
   "Chandragiri Fort", "Sri Venkateswara Zoological Park",
 ];
-const BATCH011_ALL = [...BATCH011_IDS, ...BATCH011_NAMES.map((n) => uuid5(`foodie-p4:Tirupati:${n}`))].join(", ");
+const BATCH011_ALL = [...BATCH011_IDS, ...BATCH011_NAMES.map((n) => uuid5(`foodie-p4:Tirupati:${n}`))].map((i) => `'${i}'`).join(", ");
 
 /* ---------------- SQL: restaurants ---------------- */
 
@@ -310,11 +310,11 @@ begin
   raise notice 'PREFLIGHT OK: ${MARKER} markers unused.';
 
   -- (b) id collisions anywhere
-  select count(*) into v_dup_ids from public.places where id in (${ALL_IDS.join(", ")});
+  select count(*) into v_dup_ids from public.places where id in (${ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-012 place ids already exist — importing would collide.', v_dup_ids;
   end if;
-  select count(*) into v_dup_ids from public.restaurants where id in (${ALL_IDS.join(", ")});
+  select count(*) into v_dup_ids from public.restaurants where id in (${ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-012 ids already exist in restaurants — importing would collide.', v_dup_ids;
   end if;

@@ -206,6 +206,18 @@ function fetchRow(key: string, expectSet: "new" | "any"): CuratedRow {
   }
   return r;
 }
+
+/* FROZEN display-name overrides (batch-3 drift guard, reaffirmed batch-7 audit):
+ * the queued row keeps the FROZEN listing name 'Tirumala Balaji Sweets -'
+ * (justdial truncation artifact) so its id stays byte-stable with the
+ * originally reviewed candidate; the cleaned worksheet canonical
+ * 'Tirumala Balaji Sweets' must NEVER take its place — the two ids would
+ * drift apart and the owner-facing name-drift reconciliation would be lost.
+ * If this override is ever removed, the batch id 6c8eeb7d-5d63-54f7-9d14-
+ * 10e22d4c5eec changes — a fail-loud event for every downstream guard. */
+const FROZEN_NAME_OVERRIDES: Record<string, string> = {
+  "tirumala::tirumala balaji sweets": "Tirumala Balaji Sweets -",
+};
 for (const k of [...REST_KEYS, ...PLACE_KEYS]) fetchRow(k, "new");
 for (const k of [...B12_EXCLUDED_KEYS, ...HELD_KEYS]) fetchRow(k, "any");
 
@@ -234,9 +246,10 @@ function localitySuffix(name: string): string | null {
 
 const restRows = REST_KEYS.map((key) => {
   const r = fetchRow(key, "new");
+  const name = FROZEN_NAME_OVERRIDES[key] ?? r.name;
   const label = r.localityHint ?? AREA_LABEL[r.area] ?? "Tirupati";
   return {
-    key, name: r.name, category: r.category,
+    key, name, category: r.category,
     address: `${label}, Tirupati, Andhra Pradesh`,
     locality: label === "Tirupati" ? null : label,
     tags: r.tags.filter((t) => t !== "surrounding-corridor" || label !== "Tirupati"),
@@ -258,9 +271,10 @@ type PlaceType = (typeof PLACE_TYPES)[number];
 
 const placeRows = PLACE_KEYS.map((key) => {
   const r = fetchRow(key, "new");
+  const name = FROZEN_NAME_OVERRIDES[key] ?? r.name;
   const placeType = (r.placeType ?? "other") as PlaceType;
   if (!PLACE_TYPES.includes(placeType)) throw new Error(`FATAL: "${key}" placeType "${placeType}" not in enum`);
-  const locality = EXPLICIT_LOCALITY[key] ?? localitySuffix(r.name) ?? AREA_LABEL[r.area];
+  const locality = EXPLICIT_LOCALITY[key] ?? localitySuffix(name) ?? AREA_LABEL[r.area];
   if (!locality) throw new Error(`FATAL: "${key}" could not derive a locality`);
   const geo = r.geocode;
   /* curate-tirupati-master.ts stores geocodes ONLY when the OSM area gate passed,
@@ -269,7 +283,7 @@ const placeRows = PLACE_KEYS.map((key) => {
     ? { lat: geo.lat, lng: geo.lng }
     : null;
   return {
-    key, name: r.name, placeType, locality, tags: r.tags,
+    key, name, placeType, locality, tags: r.tags,
     sourceUrl: r.sourceUrl, coords, tier: r.tier,
   };
 });
@@ -440,11 +454,11 @@ begin
   end if;
   raise notice 'PREFLIGHT OK: ${MARKER} markers unused.';
 
-  select count(*) into v_dup_ids from public.places where id in (${ALL_IDS.join(", ")});
+  select count(*) into v_dup_ids from public.places where id in (${ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-013 place ids already exist — importing would collide.', v_dup_ids;
   end if;
-  select count(*) into v_dup_ids from public.restaurants where id in (${ALL_IDS.join(", ")});
+  select count(*) into v_dup_ids from public.restaurants where id in (${ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_dup_ids <> 0 then
     raise exception 'PREFLIGHT FAIL: % batch-013 ids already exist in restaurants — importing would collide.', v_dup_ids;
   end if;
@@ -463,14 +477,14 @@ begin
   end if;
   raise notice 'PREFLIGHT OK: no restaurant name collisions.';
 
-  select count(*) into v_b11 from public.places where id in (${BATCH011_ALL_IDS.join(", ")});
+  select count(*) into v_b11 from public.places where id in (${BATCH011_ALL_IDS.map((i) => `'${i}'`).join(", ")});
   if v_b11 not in (0, 16) then
     raise exception 'PREFLIGHT FAIL: Batch-011 rows PARTIALLY present (%) — owner review required before batch-013.', v_b11;
   end if;
   raise notice 'PREFLIGHT OK: Batch-011 state coherent (%/16 present).', v_b11;
 
-  select count(*) into v_b12 from public.places where id in (${b12Ids.join(", ")});
-  v_b12 := v_b12 + (select count(*) from public.restaurants where id in (${b12Ids.join(", ")}));
+  select count(*) into v_b12 from public.places where id in (${b12Ids.map((i) => `'${i}'`).join(", ")});
+  v_b12 := v_b12 + (select count(*) from public.restaurants where id in (${b12Ids.map((i) => `'${i}'`).join(", ")}));
   if v_b12 not in (0, 29) then
     raise exception 'PREFLIGHT FAIL: Batch-012 rows PARTIALLY present (%) — owner review required before batch-013.', v_b12;
   end if;
@@ -581,9 +595,9 @@ select 'places_b13_unverified', count(*) from public.places where source = '${MA
 union all
 select 'places_b13_with_coords', count(*) from public.places where source = '${MARKER}' and latitude is not null
 union all
-select 'batch012_present', count(*) from public.places where id in (${b12Ids.join(", ")})
+select 'batch012_present', count(*) from public.places where id in (${b12Ids.map((i) => `'${i}'`).join(", ")})
 union all
-select 'batch011_present', count(*) from public.places where id in (${BATCH011_ALL_IDS.join(", ")});
+select 'batch011_present', count(*) from public.places where id in (${BATCH011_ALL_IDS.map((i) => `'${i}'`).join(", ")});
 `;
 
 writeFileSync(join(OUT, "insert-batch-013-tptm-b2.sql"), SQL);

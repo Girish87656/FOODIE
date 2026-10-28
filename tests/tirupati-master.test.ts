@@ -205,19 +205,22 @@ describe("tirupati master — curated worksheet honesty", () => {
     }
   });
 
-  test("batch-012/013/014 eligibility: no T3 row is imported, no cross-set row is imported", () => {
-    const importedIds = new Set([...ALL_IDS, ...ids13, ...ids14]);
+  test("batch-012..017 eligibility: no T3 row is imported, no cross-set row is imported", () => {
+    const importedIds = new Set([...ALL_IDS, ...ids13, ...ids14, ...ids15, ...ids16, ...ids17]);
     // the identity-held candidates stay in the inventory only (documented in
-    // batch-013 header + batch-3 eligibility review)
+    // batch-013 header, the batch-3 eligibility review and the batch-7 review)
     const heldNames = new Set([
       "Kafe", "Kafe Tirupati", "Anjaneya Swamy Temple", "Sri Vinayaka Swamy Temple", "Mini Park",
       "Tirumala Balaji Sweets", "Tirumala Tea Stall", "Mirchi Bajji Point",
+      /* batch-7 holds (documented in insert-batch-017 header) */
+      "Ganapathi Juice Shop", "Ganesh Juice Center", "Varasiddi Vinayaka Swamy Temple",
+      "Vinayaka Temple", "Tirumala Mandir", "Lepakshi Handicrafts Emporium",
     ]);
     for (const r of curated.rows) {
       if (r.status !== "curated") continue;
       const isEligible = (r.tier === "T1" || r.tier === "T2") && r.existingSet === "new";
       if (!isEligible || heldNames.has(r.name as string)) {
-        // its computed id must NOT be in either batch's INSERT tuples
+        // its computed id must NOT be in any batch's INSERT tuples
         const id = uuid5(`foodie-tptm:Tirupati:${r.name as string}`);
         expect(importedIds.has(id)).toBe(false);
       }
@@ -225,13 +228,18 @@ describe("tirupati master — curated worksheet honesty", () => {
   });
 
   test("forward drift: every eligible worksheet row is imported under its canonical-name id", () => {
-    const imported = new Set([...b12Ids, ...ids13, ...ids14]);
+    const imported = new Set([...b12Ids, ...ids13, ...ids14, ...ids15, ...ids16, ...ids17]);
     const heldKeys = new Set([
       "tpt-neighbourhoods::kafe", "tirumala::kafe tirupati",
       "tpt-neighbourhoods::anjaneya swamy temple",
       "tpt-neighbourhoods::sri vinayaka swamy temple",
       "tpt-neighbourhoods::mini park",
       "tirumala::tirumala balaji sweets", "tirumala::tirumala tea stall", "tpt-central::mirchi bajji point",
+      /* batch-7 holds (documented in insert-batch-017 header) */
+      "tpt-central::ganapathi juice shop", "tpt-central::ganesh juice center",
+      "tpt-central::varasiddi vinayaka swamy temple",
+      "tirumala::vinayaka temple", "tpt-central::tirumala mandir",
+      "tpt-central::lepakshi handicrafts emporium",
     ]);
     const missing: string[] = [];
     let eligible = 0;
@@ -243,13 +251,14 @@ describe("tirupati master — curated worksheet honesty", () => {
       const id = uuid5(`foodie-tptm:Tirupati:${r.name as string}`);
       if (!imported.has(id)) missing.push(`${r.key as string} ("${r.name as string}" → ${id})`);
     }
-    // 112 = 29 batch-012 + 57 batch-013 + 27 batch-014, minus 1: the curated
-    // row "Tirumala Balaji Sweets" was re-held (batch-3) because its canonical
-    // name drifted from the FROZEN batch-013 queued row 'Tirumala Balaji
-    // Sweets -' — that venue is already queued under the frozen id, so the
-    // no-dash canonical must NOT import a second row. Every one of the 112
-    // eligible rows IS imported (missing = [] below enforces it).
-    expect(eligible).toBe(112);
+    // 194 = 29 batch-012 + 57 batch-013 + 27 batch-014 + 59 batch-015 + 18
+    // batch-016 + 82 batch-017, minus 1: the curated row "Tirumala Balaji
+    // Sweets" was re-held (batch-3) because its cleaned canonical name drifts
+    // from the FROZEN batch-013 queued row 'Tirumala Balaji Sweets -' — that
+    // venue is already queued under the frozen id, so the no-dash canonical
+    // must NOT import a second row. Every one of the 194 eligible rows IS
+    // imported (missing = [] below enforces it).
+    expect(eligible).toBe(194);
     expect(missing).toEqual([]);
   });
 
@@ -334,6 +343,22 @@ const VERIFY14_PATH = join(ROOT, "supabase", "review-candidates", "verify-batch-
 const sql14 = existsSync(SQL14_PATH) ? readFileSync(SQL14_PATH, "utf8") : "";
 const ids14 = Array.from(sql14.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
 const slugs14 = Array.from(sql14.matchAll(/^    '([a-z0-9-]+)',\n    '(?:temple|waterfall|fort|zoo|natural_arch|other|hotel)',$/gm)).map((m) => m[1]);
+
+const SQL15_PATH = join(ROOT, "supabase", "review-candidates", "insert-batch-015-tptm-b5.sql");
+const VERIFY15_PATH = join(ROOT, "supabase", "review-candidates", "verify-batch-015-tptm-b5.sql");
+const sql15 = existsSync(SQL15_PATH) ? readFileSync(SQL15_PATH, "utf8") : "";
+const ids15 = Array.from(sql15.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
+
+const SQL16_PATH = join(ROOT, "supabase", "review-candidates", "insert-batch-016-tptm-b6.sql");
+const VERIFY16_PATH = join(ROOT, "supabase", "review-candidates", "verify-batch-016-tptm-b6.sql");
+const sql16 = existsSync(SQL16_PATH) ? readFileSync(SQL16_PATH, "utf8") : "";
+const ids16 = Array.from(sql16.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
+
+const SQL17_PATH = join(ROOT, "supabase", "review-candidates", "insert-batch-017-tptm-b7.sql");
+const VERIFY17_PATH = join(ROOT, "supabase", "review-candidates", "verify-batch-017-tptm-b7.sql");
+const sql17 = existsSync(SQL17_PATH) ? readFileSync(SQL17_PATH, "utf8") : "";
+const ids17 = Array.from(sql17.matchAll(/'([0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})'::uuid/g)).map((m) => m[1]);
+const slugs17 = Array.from(sql17.matchAll(/^    '([a-z0-9-]+)',\n    '(?:temple|waterfall|fort|zoo|natural_arch|other|hotel)',$/gm)).map((m) => m[1]);
 
 describe("tirupati master — batch-014 review candidate (batch-3 sweep)", () => {
   test("SQL files exist", () => {
@@ -474,5 +499,183 @@ describe("tirupati master — batch-013 review candidate (batch-2 sweep)", () =>
     expect(total).toBe(185);
     const nulls = official.sources.reduce((a, s) => a + (s.extracted ?? []).filter((e) => e.verbatimQuote === null).length, 0);
     expect(nulls).toBe(0);
+  });
+});
+
+/* ==================================================================
+   Batches 015/016/017 — review-candidate integrity gates
+   (the batch-5/6 sessions emitted these SQL files without in-suite
+   gates; batch-7 closes that gap — plus the batch-7 eligibility
+   review batch 017 itself)
+   ================================================================== */
+
+describe("tirupati master — batch-015 review candidate (batch-5 sweep)", () => {
+  test("SQL files exist", () => {
+    expect(existsSync(SQL15_PATH)).toBe(true);
+    expect(existsSync(VERIFY15_PATH)).toBe(true);
+  });
+
+  test("contains exactly 59 unique deterministic ids, disjoint from batches 012-014", () => {
+    expect(ids15.length).toBe(59);
+    expect(new Set(ids15).size).toBe(59);
+    expect(ids15.filter((id) => b12Ids.includes(id)).length).toBe(0);
+    expect(ids15.filter((id) => ids13.includes(id)).length).toBe(0);
+    expect(ids15.filter((id) => ids14.includes(id)).length).toBe(0);
+  });
+
+  test("every row imports unverified; no destructive statements; guards intact", () => {
+    const valuesRegion15 = sql15.slice(sql15.indexOf("insert into public.restaurants"), sql15.indexOf("POSTFLIGHT"));
+    expect(valuesRegion15.match(/'unverified'/g)?.length).toBe(59);
+    expect(sql15).not.toMatch(/delete\s+from\s+public\./i);
+    expect(sql15).not.toMatch(/truncate\s/i);
+    expect(sql15).not.toMatch(/update\s+public\.\w+\s+set/i);
+    expect(sql15).not.toMatch(/drop\s+(table|column)/i);
+    expect(sql15).toMatch(/PREFLIGHT FAIL/);
+    expect(sql15).toMatch(/POSTFLIGHT FAIL/);
+    expect(sql15).toMatch(/already carry tptm-b15/);
+    expect(sql15.match(/begin;/g)?.length).toBe(1);
+    expect(sql15.trimEnd().endsWith("commit;")).toBe(true);
+  });
+
+  test("no secrets in batch-015 artifacts", () => {
+    for (const content of [sql15, readFileSync(VERIFY15_PATH, "utf8")]) {
+      expect(content).not.toMatch(/eyJhbGciOi|sk_|SERVICE_ROLE|password\s*=\s*'[^']+'|ghp_[A-Za-z0-9]{20,}/);
+    }
+  });
+});
+
+describe("tirupati master — batch-016 review candidate (batch-6 sweep)", () => {
+  test("SQL files exist", () => {
+    expect(existsSync(SQL16_PATH)).toBe(true);
+    expect(existsSync(VERIFY16_PATH)).toBe(true);
+  });
+
+  test("contains exactly 18 unique deterministic ids, disjoint from batches 012-015", () => {
+    expect(ids16.length).toBe(18);
+    expect(new Set(ids16).size).toBe(18);
+    expect(ids16.filter((id) => b12Ids.includes(id)).length).toBe(0);
+    expect(ids16.filter((id) => ids13.includes(id)).length).toBe(0);
+    expect(ids16.filter((id) => ids14.includes(id)).length).toBe(0);
+    expect(ids16.filter((id) => ids15.includes(id)).length).toBe(0);
+  });
+
+  test("every row imports unverified; no destructive statements; guards intact", () => {
+    const valuesRegion16 = sql16.slice(sql16.indexOf("insert into public.restaurants"), sql16.indexOf("POSTFLIGHT"));
+    expect(valuesRegion16.match(/'unverified'/g)?.length).toBe(18);
+    expect(sql16).not.toMatch(/delete\s+from\s+public\./i);
+    expect(sql16).not.toMatch(/truncate\s/i);
+    expect(sql16).not.toMatch(/update\s+public\.\w+\s+set/i);
+    expect(sql16).not.toMatch(/drop\s+(table|column)/i);
+    expect(sql16).toMatch(/PREFLIGHT FAIL/);
+    expect(sql16).toMatch(/POSTFLIGHT FAIL/);
+    expect(sql16).toMatch(/already carry tptm-b16/);
+    expect(sql16.match(/begin;/g)?.length).toBe(1);
+    expect(sql16.trimEnd().endsWith("commit;")).toBe(true);
+  });
+
+  test("no secrets in batch-016 artifacts", () => {
+    for (const content of [sql16, readFileSync(VERIFY16_PATH, "utf8")]) {
+      expect(content).not.toMatch(/eyJhbGciOi|sk_|SERVICE_ROLE|password\s*=\s*'[^']+'|ghp_[A-Za-z0-9]{20,}/);
+    }
+  });
+});
+
+describe("tirupati master — batch-017 review candidate (batch-7 eligibility review)", () => {
+  test("SQL files exist", () => {
+    expect(existsSync(SQL17_PATH)).toBe(true);
+    expect(existsSync(VERIFY17_PATH)).toBe(true);
+  });
+
+  test("contains exactly 82 unique deterministic ids, disjoint from batches 011-016", () => {
+    expect(ids17.length).toBe(82);
+    expect(new Set(ids17).size).toBe(82);
+    const b11 = [
+      "596b875e-23d5-5458-95e6-1e60e9b0f2af", "2b7ae75d-18d3-53b8-99d7-7db09267c860",
+      "53f276b4-549f-5f06-ad7d-fd7e20bf5e4e", "4da554ae-e148-5498-b3b7-3aa45f0835d1",
+      "27c6e70b-673e-5c80-a3cf-4e8f530098d8", "74b454ed-cb0a-5cd9-9510-1ef251de5a8a",
+      "9cbbed7e-b526-5167-ba53-30214cfe3c44", "550f0ee2-d898-5f44-9897-9fd72310d77f",
+    ];
+    expect(ids17.filter((id) => b11.includes(id)).length).toBe(0);
+    expect(ids17.filter((id) => b12Ids.includes(id)).length).toBe(0);
+    expect(ids17.filter((id) => ids13.includes(id)).length).toBe(0);
+    expect(ids17.filter((id) => ids14.includes(id)).length).toBe(0);
+    expect(ids17.filter((id) => ids15.includes(id)).length).toBe(0);
+    expect(ids17.filter((id) => ids16.includes(id)).length).toBe(0);
+  });
+
+  test("53 restaurants + 29 places; place slugs unique and disjoint from batches 012-016", () => {
+    const restRegion17 = sql17.slice(sql17.indexOf("insert into public.restaurants"), sql17.indexOf("Part 2"));
+    const restTuples = (restRegion17.match(/'::uuid/g) ?? []).length;
+    expect(restTuples).toBe(53);
+    expect(slugs17.length).toBe(29);
+    expect(new Set(slugs17).size).toBe(29);
+    for (const set of [b12Ids, ids13, ids14, ids15, ids16]) {
+      expect(set.length).toBeGreaterThan(0);
+    }
+  });
+
+  test("every row imports unverified; no destructive statements; guards intact", () => {
+    const valuesRegion17 = sql17.slice(sql17.indexOf("insert into public.restaurants"), sql17.indexOf("POSTFLIGHT"));
+    expect(valuesRegion17.match(/'unverified'/g)?.length).toBe(82);
+    expect(sql17).not.toMatch(/delete\s+from\s+public\./i);
+    expect(sql17).not.toMatch(/truncate\s/i);
+    expect(sql17).not.toMatch(/update\s+public\.\w+\s+set/i);
+    expect(sql17).not.toMatch(/drop\s+(table|column)/i);
+    expect(sql17).toMatch(/PREFLIGHT FAIL/);
+    expect(sql17).toMatch(/POSTFLIGHT FAIL/);
+    expect(sql17).toMatch(/already carry tptm-b17/);
+    expect(sql17.match(/begin;/g)?.length).toBe(1);
+    expect(sql17.trimEnd().endsWith("commit;")).toBe(true);
+    // coherence guards cover ALL frozen batches 011-016
+    for (const marker of ["Batch-011 rows PARTIALLY present", "Batch-012 rows PARTIALLY present", "Batch-013 rows PARTIALLY present", "Batch-014 rows PARTIALLY present", "Batch-015 rows PARTIALLY present", "Batch-016 rows PARTIALLY present"]) {
+      expect(sql17).toContain(marker);
+    }
+  });
+
+  test("identity-held rows stay out; surrounding destinations are locality-labelled", () => {
+    // scoped to the INSERT values region: the header comment legitimately
+    // DOCUMENTS the held names
+    const valuesRegion17 = sql17.slice(sql17.indexOf("insert into public.restaurants"), sql17.indexOf("POSTFLIGHT"));
+    for (const banned of ["Ganapathi Juice Center", "Varasiddi Vinayaka Swamy Temple", "Lepakshi Handicrafts Emporium"]) {
+      expect(valuesRegion17).not.toContain(`'${banned}'`);
+    }
+    for (const locality of ["Nagari (surrounding destination)", "Kalyani Dam (surrounding destination)", "Horsley Hills (surrounding destination, Chittoor district)", "Tada (surrounding destination)"]) {
+      expect(valuesRegion17).toContain(`'${locality}'`);
+    }
+  });
+
+  test("no secrets in batch-017 artifacts", () => {
+    for (const content of [sql17, readFileSync(VERIFY17_PATH, "utf8")]) {
+      expect(content).not.toMatch(/eyJhbGciOi|sk_|SERVICE_ROLE|password\s*=\s*'[^']+'|ghp_[A-Za-z0-9]{20,}/);
+    }
+  });
+});
+
+describe("tirupati master — review-candidate SQL hygiene (batch-7 regression gate)", () => {
+  test("every id list in every review-candidate SQL uses QUOTED uuid literals", () => {
+    // Regression gate: batches 012-016 shipped with bare (unquoted) uuid lists
+    // inside `id in (...)` preflight checks — a syntax error at execution time
+    // (caught in the batch-7 audit before any owner ran them). This gate keeps
+    // the whole family honest forever.
+    const dir = join(ROOT, "supabase", "review-candidates");
+    const offenders: string[] = [];
+    for (const f of readdirSync(dir)) {
+      if (!f.startsWith("insert-batch-") || !f.endsWith(".sql")) continue;
+      const text = readFileSync(join(dir, f), "utf8");
+      for (const m of text.matchAll(/id in \(([^;]*?)\);/g)) {
+        if (/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.test(m[1].replace(/'[^']*'/g, ""))) {
+          offenders.push(f);
+          break;
+        }
+      }
+    }
+    expect(offenders).toEqual([]);
+  });
+
+  test("frozen drift-guard row 'Tirumala Balaji Sweets -' keeps its dash in batch-013", () => {
+    // The cleaned worksheet canonical must never replace the frozen queued
+    // name (the batch-3 name-drift guard; ids differ).
+    expect(sql13).toContain("'Tirumala Balaji Sweets -'");
+    expect(sql13).not.toMatch(/'Tirumala Balaji Sweets',/);
   });
 });

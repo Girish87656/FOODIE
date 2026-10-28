@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sai Baba Temple in Renigunta,Tirupati",
-    "area": "renigunta"
+    "area": "renigunta",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sai-Baba-Temple-Renigunta/9999PX877-X877-180224230022-C8B6_BZDET"
   },
   "query": "\"Sai Baba Temple in Renigunta,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.trip.com/travel-guide/attraction/tirupati/shirdi-sai-baba-temple-144703865?poiType=3",
+      "name": "Shirdi Sai Baba Temple Tickets [2026]",
+      "snippet": "Shirdi Sai Baba Temple · 1. Ramakrishna Mission Ashrama, Tirupati , 3.95 km from Shirdi Sai Baba Temple · 2. Chandana Sarees, 414m from Shirdi Sai Baba Temple · 3. Read more",
+      "host": "www.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sai-Baba-Temple-Korlagunta/9999PX877-X877-250908140745-K8C2_BZDET/reviews",
+      "name": "10 Reviews for Sai Baba Temple in Korlagunta, Tirupati",
+      "snippet": "Reviews for Sai Baba Temple in Korlagunta, Tirupati . Unbiased, genuine based on 10 Customer Reviews and Ratings with Photos. Check Timings, Address , Contact ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-sai+baba+temple-pn+road-chandragiri-tirupati+district-andhra+pradesh-517505-xtdp9q@zdata=MTMuNTk2NTk4Kzc5LjMzODUyNSsxNyt4dGRwOXErKw==ed",
+      "name": "Sai Baba Temple",
+      "snippet": "sai baba temple, tirupati district, andhra pradesh, 517505. Tirupati Road, Chandragiri, Tirupati District, Andhra Pradesh, 517505",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mapquest.com/in/andhra-pradesh/sri-prasanna-venkateswara-swamy-temple-526713386",
+      "name": "Sri Prasanna Venkateswara Swamy Temple",
+      "snippet": "Sri Prasanna Venkateswara Swami Temple is situated in Renigunta Town (10 kms from Tirupati ) in Tirupati district of Andhra Pradesh, India. The 300-year old ... Read more",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.trip.com/travel-guide/attraction/tirupati/sai-baba-temple-144616323",
+      "name": "Sai Baba Temple Tickets [2026] - Promos, Prices, Reviews",
+      "snippet": "Tirupati Rd, Chandragiri, Andhra Pradesh 517101, India. Open: 6:00 AM–1:00 PM, 5:30 PM–8:30 PM",
+      "host": "www.trip.com",
+      "kind": null
+    },
+    {
+      "url": "http://www.shirdisaibabatemples.org/2009/01/sai-baba-temples-in-andhra-pradesh.html",
+      "name": "Sai Baba Temples in Andhra Pradesh.",
+      "snippet": "Jan 22, 2009 — Sai Baba Mandir Vesalamma Temple Street, Near Court Building and Fire Station, Tirupati , Tirupati Urban Mandal, Chittoor, Andhra Pradesh.",
+      "host": "www.shirdisaibabatemples.org",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sai Baba Temple :: sai baba temple, tirupati district, andhra pradesh, 517505. Tirupati Road, Chandragiri, Tirupati District, Andhra Pradesh, 517505",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -281,7 +281,7 @@ const placeValues = placeIds.map(({ r, id }) => `  (
     true
   )`).join(",\n");
 
-const idList = ALL_IDS.map((id) => `${id}`).join(", ");
+const idList = ALL_IDS.map((id) => `'${id}'`).join(", ");
 
 const SQL = `-- ===========================================================================
 -- insert-batch-016-tptm-b6.sql — REVIEW CANDIDATE (NEVER executed by the repo)

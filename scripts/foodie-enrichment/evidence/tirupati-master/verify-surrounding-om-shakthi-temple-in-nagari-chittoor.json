@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Om Shakthi Temple in Nagari,Chittoor",
-    "area": "surrounding"
+    "area": "surrounding",
+    "sourceUrl": "https://www.justdial.com/Chittoor/Om-Shakthi-Temple-Nagari/9999P8572-8572-200221194311-P4P6_BZDET"
   },
   "query": "\"Om Shakthi Temple in Nagari,Chittoor\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Chittoor/Om-Shakthi-Temple-Nagari/9999P8572-8572-200221194311-P4P6_BZDET",
+      "name": "Om Shakthi Temple in Nagari,Chittoor",
+      "snippet": "Om Shakthi Temple in Nagari,Chittoor listed under Temples in Chittoor. Rated 5.0 based on 97 Customer Reviews and Ratings with 1 Photos.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Om Shakthi Temple in Nagari,Chittoor :: Om Shakthi Temple in Nagari,Chittoor listed under Temples in Chittoor. Rated 5.0 based on 97 Customer Reviews and Ratings with 1 Photos.",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

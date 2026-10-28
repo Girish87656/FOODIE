@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "name": "10 Top Hotels in Renigunta",
+    "area": "renigunta",
+    "sourceUrl": "https://www.agoda.com/en-in/city/renigunta-in.html"
+  },
+  "query": "\"10 Top Hotels in Renigunta\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/HotelsNear-g297587-d4144971-oa30-Renigunta_Junction_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Hotels near Renigunta Junction Station - Tirupati",
+      "snippet": "31. Marasa Sarovar Premiere · 32. Courtyard By Marriott Tirupati · 33. Grand World · 34. Sri Alamelumanga Service Apartments · 35. FabExpress ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.makemytrip.com/hotels/hotels-near-renigunta_junction_railway_station-tirupati-three_star.html",
+      "name": "3 Star hotels near Renigunta Junction Railway Station",
+      "snippet": "3.6Very Good(67 Ratings). APPANNA GOLDEN INN · ₹ 2,200 ; 4.0Very Good(19 Ratings). FabHotel Skanda Inn · ₹ 3,636 ; HIMALAYA SWIMMING POOL AND RESORT · ₹ 2,500 ... Read more",
+      "host": "www.makemytrip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Hotels-in-Renigunta-Road-Renigunta/nct-10255012",
+      "name": "20+ Best Hotels in Renigunta Road Renigunta - Tirupati",
+      "snippet": "Best Deals - Top Hotels in Renigunta Road Renigunta, Tirupati · Hotel Durga Residency · Abhinaya Hotel · Sreenivasa Home Stay 1bhk 2bhk 3bhk · Svi Home Stay · Yk ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.expedia.co.in/3Star-Renigunta-Hotels.s30-0-d3000004360.Travel-Guide-Filter-Hotels",
+      "name": "The Best 3 Star Hotels in Renigunta, Andhra Pradesh",
+      "snippet": "Lemon Tree Premier Tirupati . Tiruchanoor Renigunta High Road Tirupati Andhra Pradesh. The price is ₹4,679 per night from 26 Oct ... Read more",
+      "host": "www.expedia.co.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.agoda.com/en-gb/city/renigunta-in.html",
+      "name": "HD Photos + Reviews of Hotels in Renigunta, India",
+      "snippet": "Agoda.com has the best prices on Renigunta Hotels, Resorts, Villas, Hostels & More. Guaranteed lowest rate. BOOK NOW, PAY LATER.",
+      "host": "www.agoda.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Hotels-with-City-View-in-Renigunta/nct-10255012-att-res37",
+      "name": "Top Hotels With City View in Renigunta - Tirupati",
+      "snippet": "Hotels in Renigunta, Tirupati ; Name, Svi Home Stay · Garuda Grand ; Address , Ideal Home Stay, Gollavani Gunta Road, Renigunta Road, Tirupati - 517501 (Near By ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Hotels near Renigunta Junction Station - Tirupati :: 31. Marasa Sarovar Premiere · 32. Courtyard By Marriott Tirupati · 33. Grand World · 34. Sri Alamelumanga Service Apartments · 35. FabExpress ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

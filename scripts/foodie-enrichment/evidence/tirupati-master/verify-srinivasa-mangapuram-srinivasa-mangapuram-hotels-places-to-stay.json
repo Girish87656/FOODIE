@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "name": "Srinivasa Mangapuram hotels & places to stay",
+    "area": "srinivasa-mangapuram",
+    "sourceUrl": "https://www.agoda.com/en-au/srinivasa-mangapuram/maps/tirupati-in.html"
+  },
+  "query": "\"Srinivasa Mangapuram hotels & places to stay\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.agoda.com/srinivasa-mangapuram/maps/tirupati-in.html",
+      "name": "30 Best Hotels in Srinivasa Mangapuram (Tirupati)",
+      "snippet": "Srinivasa Mangapuram hotels & places to stay . Search to compare prices and discover great deals with free cancellation. Srinivasa Mangapuram. Check-inSat, Oct ... Read more",
+      "host": "www.agoda.com",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28"
+}

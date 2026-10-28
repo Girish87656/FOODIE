@@ -500,3 +500,24 @@ Remaining gaps (honestly carried forward — NOT exhaustive, never claimed compl
 - Menus, hours, prices, photos: still no evidence captured for any queued row.
 - Kapila Teertham Road venues are zomato area-page T2 evidence; Srinivasa Mangapuram food coverage
   remains effectively zero in every source tried so far.
+
+## Batch-7 session (2026-10-27/28) — launch directive: verification resume + Batch-017 eligibility review + SQL runtime-defect fix
+
+Directive: carry FOODIE to a deployed, production-verified prototype. Preserve all work; bounded research; honest statuses; no destructive SQL; push/deploy only through legitimate authorization flows.
+
+Work Log:
+- Phase-1 state audit (all read-only): HEAD 47103a0 clean, origin/main 8cb0a37 (11 ahead), production healthy (86 restaurants = 80 Doddaballapura + 6 Tirupati; places 0; destinations 3; destination_foods 5; push_subscriptions + review_candidates tables ABSENT → migrations 005/010 never applied). Sandbox has NO Supabase write credentials (anon key only; DATABASE_URL = local SQLite) → batch execution remains an owner action by design.
+- Bounded verification resume (web_search provider LIVE again; chunks 6/12/12/12/8/6 with resume semantics, circuit breaker, Retry-After honoured): 60 rows resolved — 58 area-confirmed mostly with address evidence, 2 re-attempted stubs completed, 2 transient infra-fails parked (never counted as verified), 0 sustained throttles. Backlog 79 → 19 verifyPending (worksheet summary); 306/351 rows area-confirmed.
+- Verification upgrades broke the forward-drift gate (correctly): T1 89 → 204, eligible-not-batched rows surfaced. Remedy per the established pipeline: full eligibility review of every newly-eligible row.
+- BATCH-017 eligibility review (82 admits / 6 holds / 22 drops, all recorded):
+  * 53 restaurants (restaurant 7, tiffin 17, street_food 7, bakery_sweets 19, cafe 3) + 29 places (temple 9, other 17, waterfall 1, hotel 2) = 82 rows;
+  * 6 identity-HELD: Ganapathi Juice Shop + Ganesh Juice Center (Tilak Road drift cluster vs frozen b14 'Ganesh Juice Corner'), Varasiddi Vinayaka Swamy Temple (spelling cluster), Vinayaka Temple Tirumala (generic), Tirumala Mandir (ambiguous vs main temple), Lepakshi Handicrafts Emporium (two branches);
+  * 22 DROPS with reasons in curate-tirupati-master.ts GENERIC_PATTERNS (articles, topic/seva pages, truncated titles, area pages, one product ad, Holiday-Inn sub-listing, SV Temple Amaravathi out-of-scope, 'Tada Falls' duplicate alias of Ubbalamadugu Falls);
+  * 2 curation mis-derivations corrected fail-loud in the generator: 'kids zone' place_type 'fort' → 'other'; 'ubbalamadugu falls' fallback 'other' → 'waterfall' (evidence-backed);
+  * surrounding destinations (Nagari ×3 temples, Kalyani Dam, Horsley Hills, Ubbalamadugu/Tada) carry explicit '(surrounding destination)' locality labels + tag — never folded into the city;
+  * gen-insert-batch-017.ts → insert-batch-017-tptm-b7.sql sha256 bff810cd…, verify probe 5c471513…; byte-identical reruns verified; preflight guards batches 011-016 coherence; NOT executed.
+- REAL DEFECT found and fixed across ALL tptm batches 012-016: the preflight/verify `id in (...)` lists interpolated BARE (unquoted) uuid literals → executing any of these batches would abort with a syntax error at the first preflight check (fail-loud, so never a data risk — but un-runnable). Fixed every generator (quoted `'uuid'` lists), regenerated 012-016; diff vs HEAD is EXACTLY the quoting lines (0 tuple changes); added a permanent regression test scanning every insert-batch-*.sql.
+- Frozen drift-guard preserved: gen-013 now carries FROZEN_NAME_OVERRIDES so the queued row keeps 'Tirumala Balaji Sweets -' (frozen justdial-truncation name, id 6c8eeb7d…) while the cleaned worksheet canonical stays unbatched — caught by the eligibility gate when a naive regeneration silently swapped the names; a new test pins the dash row.
+- Test suite extended 170 → 186 (+16): batches 015/016/017 integrity gates (previously 015/016 had NO in-suite gates), quoted-uuid regression gate, frozen-name pin, unverified-count region checks, surrounding-locality labels.
+- Gates: 186/186 tests, lint 0, tsc 0 (project code), full-family determinism (two consecutive regenerations of 012-017 byte-identical), secret scans clean.
+- Honest limits: batch SQL execution still owner-side (no write credentials in sandbox); migrations 005/010 unapplied in production; remaining 19 verifyPending rows are the hard tail (mostly T3 tier); web_search availability is quota-dependent; nothing pushed, nothing deployed, no production SQL executed this session (yet).

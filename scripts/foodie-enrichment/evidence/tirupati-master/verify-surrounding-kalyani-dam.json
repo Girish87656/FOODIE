@@ -1,0 +1,60 @@
+{
+  "candidate": {
+    "name": "Kalyani Dam",
+    "area": "surrounding",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Kalyani_Dam"
+  },
+  "query": "\"Kalyani Dam\" Tirupati address",
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/LocationPhotoDirectLink-g297587-d6500949-i168915195-Kalyani_Dam-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Photo: Kalyani Dam View - Tirupati",
+      "snippet": "Photo: Kalyani Dam View. From Review : Kalyani Dam - Picnic place near Tirupati of Kalyani Dam . Kalyani Dam · 13 reviews. #47 of 73 attractions in Tirupati . Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/ShowUserReviews-g297587-d6500949-r341320042-Kalyani_Dam-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Kalyani Dam - Picnic place near Tirupati - Reviews, Photos",
+      "snippet": "Kalyani Dam - Picnic place near Tirupati - Kalyani Dam . Kalyani Dam ; Tirupati - Places to Visit; Tirupati ; Chittoor District; Andhra Pradesh; India; Asia. ₹ ... Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.wikiwand.com/en/Kalyani_Dam",
+      "name": "Kalyani Dam",
+      "snippet": "Kalyani Dam · India · Tirupati , Tirupati district, Andhra Pradesh · 13°39′27.5″N 79°16′9.4″E﻿ / ﻿13.657639°N 79.269278°E﻿ / 13.657639; 79.269278. Read more",
+      "host": "www.wikiwand.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/ItsMyTirupathi/videos/kalyani-dam-%EF%B8%8Fcredits-sagar_clickzz_-tirupati-tirupathi-itsmytirupati-tirumala-ka/530097671940854/?locale=ms_MY",
+      "name": "Kalyani Dam  Credits: @sagar_clickzz_ #tirupati #tirupathi #",
+      "snippet": "Kalyani Dam ❤️ Credits: @sagar_clickzz_ # tirupati # tirupathi #itsmytirupati #tirumala #kalyanidam #dam #dams #tirupati_smart_city # ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://elevation.maplogs.com/poi/kalyani_dam_andhra_pradesh_india.558340.html",
+      "name": "Elevation of Kalyani Dam, Andhra Pradesh, India - MAPLOGS",
+      "snippet": "Elevation of Kalyani Dam , Andhra Pradesh, India. Location: India > Andhra Pradesh > Chittoor > Nagapatla > Kalyani Dam ... Read more",
+      "host": "elevation.maplogs.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com.sg/Attraction_Review-g297587-d6500949-Reviews-Kalyani_Dam-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "KALYANI DAM - All You SHOULD Know Before You Go",
+      "snippet": "KALYANI DAM - All You SHOULD Know Before You Go 2026 (w/ Reviews). AsiaIndiaAndhra PradeshChittoor District TirupatiTirupati Attractions Kalyani Dam . Tirupati . Read more",
+      "host": "www.tripadvisor.com.sg",
+      "kind": null
+    }
+  ],
+  "areaConfirmed": true,
+  "addressEvidence": "Photo: Kalyani Dam View - Tirupati :: Photo: Kalyani Dam View. From Review : Kalyani Dam - Picnic place near Tirupati of Kalyani Dam . Kalyani Dam · 13 reviews. #47 of 73 attractions in Tirupati . Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Kalyani Dam\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Kalyani Dam\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true
+}
