@@ -521,3 +521,19 @@ Work Log:
 - Test suite extended 170 → 186 (+16): batches 015/016/017 integrity gates (previously 015/016 had NO in-suite gates), quoted-uuid regression gate, frozen-name pin, unverified-count region checks, surrounding-locality labels.
 - Gates: 186/186 tests, lint 0, tsc 0 (project code), full-family determinism (two consecutive regenerations of 012-017 byte-identical), secret scans clean.
 - Honest limits: batch SQL execution still owner-side (no write credentials in sandbox); migrations 005/010 unapplied in production; remaining 19 verifyPending rows are the hard tail (mostly T3 tier); web_search availability is quota-dependent; nothing pushed, nothing deployed, no production SQL executed this session (yet).
+
+### Push attempts (Phase 6, 2026-10-28) — recorded honestly
+
+- GitHub RFC 8628 device flow initiated 3× with the official gh client_id
+  (scope repo,workflow,read:org): user codes `8E58-0A3F`, `D520-A02B`,
+  `BC3F-7113` each shown in chat and polled through their FULL 15-minute
+  validity windows (~50 min total) — all three expired unauthorized
+  (owner not present at the keyboard). NO token was ever received, stored
+  beyond a window, or printed. Nothing was pushed.
+- Automated retries scheduled (cron): job 480976 (fixed_rate, ~90 min) and
+  job 480978 (one-time, next morning IST) — each re-issues a fresh code,
+  shows it in chat, polls, and on authorization pushes HEAD 4c6f686 to
+  origin/main (no force), then verifies the Vercel auto-deploy + production
+  checks. Both jobs self-delete after their attempt.
+- Launch therefore remains at the documented boundary: code ready and
+  gated, deployment awaiting the owner's 30-second device authorization.
