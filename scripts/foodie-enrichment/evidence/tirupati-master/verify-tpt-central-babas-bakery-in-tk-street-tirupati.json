@@ -1,14 +1,69 @@
 {
   "candidate": {
     "name": "Babas Bakery in TK Street,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Babas-Bakery-Beside-Pasuparthy-Super-Market-Opposite-Sai-Baba-Temple-Tk-Street/9999PX877-X877-150722120504-H5R4_BZDET"
   },
   "query": "\"Babas Bakery in TK Street,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-in-Tk-Street/nct-10033880",
+      "name": "Top Bakeries in Tk Street, Tirupati - Best Cake Shops - Justdial",
+      "snippet": "... Address , Reviews, Photos, Maps for top Bakeries near me in Tk Street ... Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Shops-in-Tk-Street/nct-10070075",
+      "name": "Top Cake Shops in Tk Street,Tirupati - Justdial - Justdial Jd",
+      "snippet": "Cake Shops in Tk Street, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/fuwrfg",
+      "name": "Cake Villa Bakery and Sweets, Reddy & Reddy Colony",
+      "snippet": "Get map of Cake Villa Bakery and Sweets, 1, TK Street, Opposite Sai Baba Temple, Reddy and Reddy's Colony, Tirupati , Andhra Pradesh, 517501 by Mappls.",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-babas+bakery-beside+pasuparthy+super+market-theertha+katta+street-nehru+nagar-tirupati-andhra+pradesh-517501-PF4CLY@zdata=MTMuNjM2MzI5Kzc5LjQxODA0MysxNytQRjRDTFkrK25yed",
+      "name": "Babas Bakery, Beside Pasuparthy Super Market, Theertha",
+      "snippet": "Information · pf4cly, Beside Pasuparthy Super Market, Theertha Katta Street, Nehru Nagar, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CL8-L4T5. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Shops-in-Anjanadri/nct-10070075",
+      "name": "Best Cake shops in Anjanadri, Tirupati",
+      "snippet": "Name, Justbake · Toptown Cakes ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park), KT ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Shops-in-Papavinasanam-Road/nct-10070075",
+      "name": "Top Cake Shops in Papavinasanam Road,Tirupati",
+      "snippet": "Address D.no-19-12-1/2,Ground Floor, Tirupati - 517501 … 2Nd Floor, Phase-5. Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) Building No ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Bakeries in Tk Street, Tirupati - Best Cake Shops - Justdial :: ... Address , Reviews, Photos, Maps for top Bakeries near me in Tk Street ... Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Babas Bakery in TK Street,Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Babas Bakery in TK Street,Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,384 @@
+{
+  "task": "batch-6 live production cross-check of the 61 Batch-015 candidates",
+  "checkedOn": "2026-10-28",
+  "method": "read-only GET via the app's own public PostgREST read (publishable key, RLS applies) — NO SQL executed, nothing written",
+  "production": {
+    "liveRestaurantRows": 86
+  },
+  "result": {
+    "checked": 61,
+    "exactCollisions": 0,
+    "baseNameCollisions": 0,
+    "looseOverlaps": 0
+  },
+  "looseAdjudication": [],
+  "honesty": "a live read NEVER upgrades a candidate's verification status — all 61 remain unverified review candidates; production remains untouched",
+  "rows": [
+    {
+      "name": "Babu Tiffin Centre",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Shankar Tiffin Center, Srinivasa Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Jayalakshmi Tiffin Center, Srinagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Uday Tiffin Center, Maruthi Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Nellore Mess, Prakasam Road",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Deva Tea Stall, Korlagunta",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sk Babu Tea Stall, Ashok Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Chai Buster Tea Stall, Dhanalakshmi Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "R.K. Tea Stall, Narula Market",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Cakevilla Bakery Sweets, TK Street",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sri Bhavani Sweets & Bakery, TML By Pass Road",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Tirupati Bakery, Tata Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Aswani Sweets & Bakery, Vasavi Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Doss Bakery",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Rainbow Vegetarian Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "SAI Juices & Tea Center, V V Mahal Road",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Saral Juice Shop, Pudipatla",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "T Nageshwara Rao Juice Shop, Tata Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Taj Juice Centre, Bairagi Patteda",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Garlic Family Restaurant, Mangalam",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Springs Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "SFC Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Yalamuri Bar And Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Hotel Sri Nandhi Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Carrots Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Harika Bar And Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Manal Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sunlight Veg Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Imperial Spice Restaurant",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Manasa Vihar Cafe",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Vanam Restaurant, Alipiri Road",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Golden Balaji Tiffin Center, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Chandra Tiffin Shop, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "V Mohan Tea Stall, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sri Guru Tiffin Centre, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Saarangi Restaurant, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Radha Rani Tiffin Centre, Padmavathi Nagar",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Vls Tiffin Centre And Catering, Mangalam",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Tasvija Tiffin Centre, Mangalam",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sumathi Tiffin Centre, Mangalam",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "J Bebamma Tiffin Center, Renigunta Road",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Amma Appam, Renigunta",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "VarahaSwami Guest House, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Seshachalam Hills",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Gogarbham Gardens, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Dharmagiri, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Narayangiri, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Asthana Mandapam, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Pandava Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Kumaradhara Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Tumbhuru Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Ramakrishna Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sesha Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sitamma Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Pasupu Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Jupali Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sanaka Sanandana Teertham, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Srivari Padalamandapam Temple, Tirupati",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Sri Lakshmi Narayana Swamy Temple, Tirupati",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Vaikuntam Queue Complex, Tirumala",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    },
+    {
+      "name": "Siddeswara Swamy Temple, Talakona",
+      "exact": false,
+      "baseName": false,
+      "looseOverlaps": []
+    }
+  ]
+}

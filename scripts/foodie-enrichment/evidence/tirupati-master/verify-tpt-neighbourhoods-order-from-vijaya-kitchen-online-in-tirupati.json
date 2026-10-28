@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Order from Vijaya Kitchen online in Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/vijaya-kitchen-korlagunta-rest1170731"
   },
   "query": "\"Order from Vijaya Kitchen online in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.instagram.com/popular/vijaya-roti-maker/?hl=en",
+      "name": "Vijaya Roti Maker",
+      "snippet": "Ordering is done via WhatsApp at 9701320939 or 9844844406. Prices and durability get mixed feedback, with some users citing around 2000 rupees and others ... Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.indiamart.com/shri-vijaya-kitchenware/aboutus.html?srsltid=AYCX9vIcz7-AYGmHKQ6-iCucqNyrgWERsGZXuxyiEnn116i3l0W5_K4i",
+      "name": "Shri Vijaya Kitchenware - Manufacturer from Bengaluru, India",
+      "snippet": "Shri Vijaya Kitchenware provides you the best range of Kitchen Appliance, Chapati Making Machines, Printed Butter Paper & New Items in Bengaluru, Karnataka. Read more",
+      "host": "www.indiamart.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/61584444950992/videos/store-location-httpsmapsappgoogljddnm1gsx91ayrmj7-store-address-shri-vijaya-kitc/1505691380905758",
+      "name": "Store Address: Shri Vijaya Kitchenware, Plot No: 113, OU",
+      "snippet": "Store Location: https://maps.app.goo.gl/jdDnm1GSx91ayRmj7 Store Address : Shri Vijaya Kitchenware, Plot No: 113, OU Colony, Shaikpet ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/vijaya-bakers-korlagunta/order",
+      "name": "Vijaya Bakers, Korlagunta order online",
+      "snippet": "Order food online from Vijaya Bakers, Korlagunta, Tirupati . Get great offers and super fast food delivery when you order food online from Vijaya Bakers on ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Vijaya-Cook-Near-Bsnl-Gest-House-Beside-Rc-Road/9999PX877-X877-140125130557-F7W8_BZDET",
+      "name": "Vijaya Cook - Caterers For Parties In Tirupati - Justdial Jd",
+      "snippet": "Located at Near Bsnl Gest House Beside, Vijaya Cook in Rc Road, Tirupati is easily accessible for clients, saving them both time and effort. The company has a ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/yammu.yammu.501/videos/whats-even-better-this-amazing-product-is-manufactured-exclusively-by-shri-vijay/834077769194239",
+      "name": "“What's even better? This amazing",
+      "snippet": "What's even better? This amazing product is manufactured exclusively by Shri Vijaya Kitchenware — from design to delivery, it's all theirs!",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Store Address: Shri Vijaya Kitchenware, Plot No: 113, OU :: Store Location: https://maps.app.goo.gl/jdDnm1GSx91ayRmj7 Store Address : Shri Vijaya Kitchenware, Plot No: 113, OU Colony, Shaikpet ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

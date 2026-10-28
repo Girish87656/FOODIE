@@ -1,14 +1,69 @@
 {
   "candidate": {
     "name": "Sri Vara Siddhi Vinayaka Ayyappa Swamy Temple - Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Vara-Siddhi-Vinayaka-Ayyappa-Swamy-Temple-Shiv-Jyoti-Nagar/9999PX877-X877-250913200919-J6J6_BZDET"
   },
   "query": "\"Sri Vara Siddhi Vinayaka Ayyappa Swamy Temple - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Varasiddi-Vinayaka-Swamy-Temple-Korramenugunta/9999PX877-X877-250416041025-J2A8_BZDET",
+      "name": "Varasiddi Vinayaka Swamy Temple - Tirupati",
+      "snippet": "Address 7/46/2, Akkarampalle, Korramenugunta, Tirupati -517501, Andhra Pradesh. Business Hours Opens at : 6:00 am tomorrow",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Varasiddhi-Vinayaka-Swamy-Temple-Kummarathopu/9999PX877-X877-260327073047-M5F2_BZDET",
+      "name": "Sri Varasiddhi Vinayaka Swamy Temple - Tirupati",
+      "snippet": "Address . Balaji Colony, Tirupati , Kummarathopu, Tirupati -517501, Andhra Pradesh. DirectionCopy. Photo. Upload Photos. Sri Varasiddhi Vinayaka Swamy Temple ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples/nct-10475644/page-10",
+      "name": "Temples in Tirupati, Andhra Pradesh - Page 10",
+      "snippet": "Sri Varasiddhi Vinayaka Temple Shree. Address Varadaraja Nagar, Tirupati - 517501 New St, Tirupati , Nehru Nagar, Tirupati - 517501",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Varasiddi-Vinayaka-Swamy-Temple-Tirupati-HO/9999PX877-X877-220319004550-C7Y4_BZDET",
+      "name": "Varasiddi Vinayaka Swamy Temple - Tirupati",
+      "snippet": "Vinayaka Street, Bakki Reddy Colony, Tummalagunta, Tirupati , Andhra Pradesh, Bakki Reddy Colony, Tirupati -517502, Andhra Pradesh. Hours Open Now : until 9:00 pm",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-sri+varasiddhi+vinayaka+swamy+temple-bairagi+patteda-tirupati-andhra+pradesh-517501-ntdccj@zdata=MTMuNjE1NTIzKzc5LjQyNjQ2OCsxNytudGRjY2orKw==ed",
+      "name": "Sri Varasiddhi Vinayaka Swamy Temple, Bairagi Patteda",
+      "snippet": "Information · ntdccj, Bairagi Patteda, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CML-JCMF. content_copyshare · Mappls Pin: mappls.com/ntdccj. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-sri+varasiddi+vinayaka+swamy+temple-marri+chenna+reddy+colony-tirupati-andhra+pradesh-517507-9fj5jh@zdata=MTMuNjQ0MTcrNzkuNDEyNzEyKzE3KzlmajVqaCsred",
+      "name": "Sri Varasiddi Vinayaka Swamy Temple, Marri Chenna",
+      "snippet": "9fj5jh, Marri Chenna Reddy Colony, Tirupati , Andhra Pradesh, 517507. DIGIPIN: 4TF-CL9-9FK6. content_copyshare · Mappls Pin: mappls.com/9fj5jh. content_copyshare. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Varasiddi Vinayaka Swamy Temple - Tirupati :: Address 7/46/2, Akkarampalle, Korramenugunta, Tirupati -517501, Andhra Pradesh. Business Hours Opens at : 6:00 am tomorrow",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Sri Vara Siddhi Vinayaka Ayyappa Swamy Temple - Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Sri Vara Siddhi Vinayaka Ayyappa Swamy Temple - Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

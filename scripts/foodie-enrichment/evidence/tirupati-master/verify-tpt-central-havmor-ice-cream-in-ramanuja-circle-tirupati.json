@@ -1,14 +1,51 @@
 {
   "candidate": {
     "name": "Havmor Ice Cream in Ramanuja Circle,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Havmor-Ice-Cream-Opposite-Indian-Petrol-Bunk-Ramanuja-Circle-Ramanuja-Circle/9999PX877-X877-181026104402-Q4Z4_BZDET"
   },
   "query": "\"Havmor Ice Cream in Ramanuja Circle,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Havmor-Ice-Cream-Opposite-Indian-Petrol-Bunk-Ramanuja-Circle-Ramanuja-Circle/9999PX877-X877-181026104402-Q4Z4_BZDET",
+      "name": "Havmor Ice Cream in Ramanuja Circle,Tirupati",
+      "snippet": "Havmor Ice Cream in Ramanuja Circle,Tirupati well known for Ice Cream Parlours in Tirupati . Rated 3.5 based on 2 Customer Reviews and Ratings with 9 Photos ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Havmor-Ice-Cream-Opposite-Indian-Petrol-Bunk-Ramanuja-Circle-Ramanuja-Circle/9999PX877-X877-181026104402-Q4Z4_BZDET/reviews",
+      "name": "2 Reviews for Havmor Ice Cream in Ramanuja Circle, Tirupati",
+      "snippet": "Unbiased, genuine based on 2 Customer Reviews and Ratings with Photos. Check Timings, Address ... Havmor Ice Cream in Ramanuja Circle, Tirupati - Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Havmor-Ice-Cream-Opposite-Indian-Petrol-Bunk-Ramanuja-Circle-Ramanuja-Circle/9999PX877-X877-181026104402-Q4Z4_BZDET/photos",
+      "name": "9 Photos of Havmor Ice Cream in Ramanuja Circle, Tirupati",
+      "snippet": "9 Photos of Havmor Ice Cream in Ramanuja Circle, Tirupati Rated 3.5 based on 2 Customer Reviews and Ratings with 9 Photos. Visit Justdial for Address , ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/kn/Tirupati/Havmor-Ice-Cream-Opposite-Indian-Petrol-Bunk-Ramanuja-Circle-Ramanuja-Circle/9999PX877-X877-181026104402-Q4Z4_BZDET/photos",
+      "name": "9 Photos of Havmor Ice Cream in Ramanuja Circle, Tirupati",
+      "snippet": "9 Photos of Havmor Ice Cream in Ramanuja Circle, Tirupati Rated 3.5 based on 2 Customer Reviews and Ratings with 9 Photos. Visit Justdial for Address , ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Havmor Ice Cream in Ramanuja Circle,Tirupati :: Havmor Ice Cream in Ramanuja Circle,Tirupati well known for Ice Cream Parlours in Tirupati . Rated 3.5 based on 2 Customer Reviews and Ratings with 9 Photos ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sri Venkateshwara Bakery And Sweets - Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateshwara-Bakery-And-Sweets-Near-Devandra-Theatre-Bhavani-Nagar/9999PX877-X877-170325161023-V6P6_BZDET"
   },
   "query": "\"Sri Venkateshwara Bakery And Sweets - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Anantapur/Sri-Venkateshwara-Bakery-Sweets-Near-Bharath-Petrol-Station-Sreekantam-Circle/9999P8554-8554-231111162343-Y5S7_BZDET",
+      "name": "Sri Venkateshwara Bakery & Sweets - Anantapur",
+      "snippet": "Sri Venkateshwara Bakery in Sreekantam Circle,Anantapur … hours from Monday:- 7:00 am - 9:30 pm, Tuesday:- 7:00 am - 9:30 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.snapchat.com/place/sri-venkateshwara-bakery-and-sweets/4a8480be-f627-11eb-b59c-bf6755e5cbc7",
+      "name": "Sri Venkateshwara Bakery And Sweets",
+      "snippet": "Address 793 T H Road, Chennai (Madras), Tamil Nadu",
+      "host": "www.snapchat.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Sweet-Bakery-Mangalam/9999PX877-X877-230210160224-G5U6_BZDET",
+      "name": "Sri Venkateswara Sweet & Bakery in Mangalam,Tirupati",
+      "snippet": "Mangalam, Tirupati -517507, Andhra Pradesh DirectionCopyUpdate Address … hours from Monday:- 10:00 am - 10:00 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Chittoor/Sree-Venkateswara-Bakery-And-Sweets-Gollapalle-Bangarupalem/9999P8572-8572-250314030019-Y6U8_BZDET",
+      "name": "Sree Venkateswara Bakery And Sweets - Chittoor",
+      "snippet": "Sree Venkateswara Bakery And Sweets in Bangarupalem, Chittoor is a renowned bakery offering a delectable range of freshly baked goods and pastries. Situated in ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/m9bdjm",
+      "name": "Sri Venkateshwara Bangalore Iyengar Bakery",
+      "snippet": "m9bdjm, Near Bus Stand, Chandragiri, Tirupati District, Andhra Pradesh, 517101. DIGIPIN: 4TF-JC6-2JKC. content_copyshare · Mappls Pin: mappls.com/m9bdjm. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Ramchandra-Nagar/Restaurant/Sri-Venkateswara-Sweets-and-Bakery/store/2228a55?srsltid=AYCX9vI2Lfj9oAd65ly31hewSTFFFBwVrLaJH9HIC-YtLvqluzxF9y8f",
+      "name": "Sri Venkateswara Sweets & Bakery - Ramchandra Nagar",
+      "snippet": "Address . Overhead Water, Annamayya Nagar, Sathyanarayanapuram, Tirupati , Andhra Pradesh 517507. Copy Direction. HoursOpen · 11:30 AM – 2:00 PM. Phone+ ... Read more",
+      "host": "magicpin.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Venkateshwara Bakery & Sweets - Anantapur :: Sri Venkateshwara Bakery in Sreekantam Circle,Anantapur … hours from Monday:- 7:00 am - 9:30 pm, Tuesday:- 7:00 am - 9:30 pm,",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

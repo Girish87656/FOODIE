@@ -1,14 +1,73 @@
 {
   "candidate": {
     "name": "Minerva Coffee Shop - Tirupati Restaurants",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g297587-d7291631-Reviews-Minerva_Coffee_Shop-Tirupati_Chittoor_District_Andhra_Pradesh.html"
   },
   "query": "\"Minerva Coffee Shop - Tirupati Restaurants\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297587-d33475794-Reviews-Hotel_Minerva_Grand-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Hotel Minerva Grand - Tirupati Restaurants",
+      "snippet": "Hanuman Temple St, Tata Nagar, Tirupati , Andhra Pradesh 517501, Tirupati 517501. Meal types Breakfast, Lunch, Dinner",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Minerva-Coffee-Shop-Near-Railway-Station-Flyover-Renigunta-Road/9999PX877-X877-170107114033-I9L9_BZDET/menu",
+      "name": "Menu of Minerva Coffee Shop in Renigunta Road, Tirupati",
+      "snippet": "Minerva Coffee Shop in Renigunta Road, Tirupati on Justdial. You can contact Minerva Coffee Shop in Renigunta Road directly through the contact details ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mapquest.com/in/andhra-pradesh/minerva-grand-tirupati-527392982",
+      "name": "Minerva Grand Hotel - Tirupati",
+      "snippet": "Minerva Grand Hotel in Tirupati , get the address , and find directions. Renigunta Road Near Railway Station Flyover, Tirupati , AP. Minerva Coffee shop in 1987. ...",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/n0qpg6",
+      "name": "Minerva Coffee Shop, National Highway 205, Renigunta",
+      "snippet": "Minerva Coffee Shop, National Highway 205, Renigunta Road, Near Railway Flyover, Tirupati , Andhra Pradesh, 517501 by Mappls. +918008002312 +918612358888,",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/kn/tirupati/minerva-coffee-shop-tata-nagar/order",
+      "name": "Minerva Coffee Shop, Tata Nagar order online",
+      "snippet": "Order food online from Minerva Coffee Shop, Tata Nagar, Tirupati . South Indian, North Indian, Chinese 4.5 DELIVERY",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.google.com.np/travel/hotels/entity/CgoIjdHEr5XC87UjEAE?g2lb=4207876,4208993,4220293,4223281,4242898,4245928,4251619,4253230,4254308,4256748,4258168,4250437,4251518,4253015&hl=en&gl=np&un=1&rp=MhsKEgml8-FZgqw7QBHB4nDmV1tVQBC245qvrC04AUgCwgIcIhoNAMB-RRITCJDD9L7nspADFQWvqwcdQo8jKQ&ictx=1&tcfs=EhoaGAoKMjAxOS0wNS0yMRIKMjAxOS0wNS0yMlIA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaWQo7EjcyJTB4M2E0ZDRhNTgyMDIwMTMwMToweGQ1MWRmN2VjMTg3ZGE3MGU6Dk1lZ2hkb290IE5hZ2FyGgASGhIUCgcI6Q8QChgXEgcI6Q8QChgYGAEyAhAAKgkKBToDTlBSGgA&sa=X&ap=MAA&ei=HimJaYvgJcHu5LcPwMDo6QI&ei=bi-JabbtK5vo5LcP5vK80AU&ved=2ahUKEwi23IzAmMuSAxUbNPkAHWY5D1oQkP8FegUIBBD7AQ",
+      "name": "Minerva Grand Tirupati - Google hotels",
+      "snippet": "The hotel is located 1 km (5 minutes drive) from Tirupati Railway Station & 14 kms (20 minutes drive) from Renigunta Airport. It is also in close proximity to . Read more",
+      "host": "www.google.com.np",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Hotel Minerva Grand - Tirupati Restaurants :: Hanuman Temple St, Tata Nagar, Tirupati , Andhra Pradesh 517501, Tirupati 517501. Meal types Breakfast, Lunch, Dinner",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    },
+    {
+      "retrievedOn": "2026-10-28",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}",
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Minerva Coffee Shop - Tirupati Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    }
+  ]
 }

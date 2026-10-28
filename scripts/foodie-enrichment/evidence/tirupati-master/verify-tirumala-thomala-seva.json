@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Thomala Seva",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://www.tirumala.org/ThomalaSeva.aspx"
   },
   "query": "\"Thomala Seva\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.mapquest.com/in/tirumala-tirupati-devasthanams-526720064",
+      "name": "Tirumala Tirupati Devasthanams",
+      "snippet": "Get more information for Tirumala Tirupati Devasthanams in Tirupati , AP. See reviews, map, get the address , and find directions.",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://maps.apple.com/place?place-id=I7567D57E3149BC0F",
+      "name": "Tirumala Tirupati Devasthanam",
+      "snippet": "View details about Tirumala Tirupati Devasthanam in Tirumala, Andhra Pradesh, India on Apple Maps. Address , driving directions, images, nearby attractions ...",
+      "host": "maps.apple.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/groups/698647974973701/posts/1127433202095174",
+      "name": "Location tirupati interested person cal me 87906 19783 NO",
+      "snippet": "Location tirupati interested person cal me 87906 19783 NO TIME PASS Discussion about buying or selling a cockerel in Tirupati , ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirumala-tirupati-devasthanam-office-address/?locale=ms_MY",
+      "name": "Tirumala Tirupati Devasthanam Office Address",
+      "snippet": "The main TTD office is the TTD Chairman's Office in Tirumala, and the administrative hub is the TTD Administrative Building in Tirupati . For general queries you ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirumala-tirupati-devasthanam-office-address/?locale=cx_PH",
+      "name": "Tirumala Tirupati Devasthanam Office Address",
+      "snippet": "The main TTD office is the TTD Chairman's Office in Tirumala, and the administrative hub is the TTD Administrative Building in Tirupati . For general queries you ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.localcircles.com/a/public/rating/tirumala-tirupati-information-centre/fdtrtrvv",
+      "name": "tirumala tirupati information centre",
+      "snippet": "HELPING PILGRIMS GOING TO TIRUPATI . ... phone 2561828,4349790 cell 9244649790. 4.00 / 5 3 Reviews. Coimbatore: 2,THIRUVEESAR NAGAR ... Read more",
+      "host": "www.localcircles.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "tirumala tirupati information centre :: HELPING PILGRIMS GOING TO TIRUPATI . ... phone 2561828,4349790 cell 9244649790. 4.00 / 5 3 Reviews. Coimbatore: 2,THIRUVEESAR NAGAR ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

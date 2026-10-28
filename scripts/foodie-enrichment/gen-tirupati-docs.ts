@@ -327,6 +327,104 @@ same as the original queue. Identity-HELD (${b5Cands.tallies.held}): ${b5Cands.h
   for (const l of b5Cands.limitations) inv += `- ${l}\n`;
 }
 
+/* batch-6 inputs (audit + evidence strengthening + coverage gaps, 2026-10-28) */
+const B6 = join(EV, "batch6");
+const b6Audit = existsSync(join(B6, "b015-audit.json"))
+  ? JSON.parse(readFileSync(join(B6, "b015-audit.json"), "utf8")) as {
+      auditedOn: string;
+      tallies: { audited: number; retained: number; movedToReviewQueue: number; manualAdjudications: number; deterministicFlags: number };
+      movedToReviewQueue: Array<{ name: string; reason: string }>;
+      adjudications: Array<{ name: string; decision: string; reason: string }>;
+      checksRun: Record<string, string>;
+    }
+  : null;
+const b6Crosscheck = existsSync(join(B6, "live-crosscheck.json"))
+  ? JSON.parse(readFileSync(join(B6, "live-crosscheck.json"), "utf8")) as {
+      checkedOn: string; production: { liveRestaurantRows: number };
+      result: { checked: number; exactCollisions: number; baseNameCollisions: number; looseOverlaps: number };
+    }
+  : null;
+const b6Second = existsSync(join(B6, "food-second-sources-assessment.json"))
+  ? JSON.parse(readFileSync(join(B6, "food-second-sources-assessment.json"), "utf8")) as {
+      assessedOn: string; tallies: Record<string, number>; gradeTally: Record<string, number>;
+      assessments: Array<{ venue: string; classification: string; secondSource?: { url: string; host: string }; secondSourceGrade?: string }>;
+    }
+  : null;
+const b6Cands = existsSync(join(B6, "discovery-candidates.json"))
+  ? JSON.parse(readFileSync(join(B6, "discovery-candidates.json"), "utf8")) as {
+      assembledOn: string;
+      tallies: { acceptedCandidates: number; held: number; weakLeads: number; corroborations: number; byArea: Record<string, number>; byCategory: Record<string, number>; byTier: Record<string, number> };
+      acceptedCandidates: Array<{ name: string; area: string; category: string; tier: string; evidence: { url: string; sourceKind: string } }>;
+      heldLeads: Array<{ name: string; reason: string }>;
+      weakLeads: Array<{ name: string; area: string; reason: string }>;
+      corroborations: Array<{ name: string; existingRecord: string; evidence: { url: string } }>;
+      limitations: string[];
+    }
+  : null;
+const b6Nom2 = existsSync(join(B6, "nominatim2-town-pois.json"))
+  ? JSON.parse(readFileSync(join(B6, "nominatim2-town-pois.json"), "utf8")) as {
+      retrievedOn: string;
+      queries: Array<{ town: string; keyword: string; inAreaCount?: number; usefulness?: string; inAreaHits?: Array<{ name?: string; lat?: string; lon?: string; type?: string }> }>;
+    }
+  : null;
+
+/* ---- Batch-6 inventory sections ---- */
+if (b6Audit && b6Cands) {
+  inv += `\n## Batch-6 audit of the Batch-015 candidates (${b6Audit.auditedOn})\n\nAll ${b6Audit.tallies.audited} Batch-015 proposed records were re-audited (scripts/foodie-enrichment/batch6-audit-b015.ts,
+evidence/tirupati-master/batch6/b015-audit.json): canonical uuid5 ids recomputed (exact match), zero exact
+collisions vs inventory/batches 011–015/worksheet/queue, slug uniqueness re-proven, every deterministic flag
+explicitly adjudicated with a recorded reason (${b6Audit.tallies.manualAdjudications} adjudications, ${b6Audit.tallies.deterministicFlags} deterministic flags).
+\n| Verdict | Count |\n|---|---|\n| retained | ${b6Audit.tallies.retained} |\n| moved to review queue | ${b6Audit.tallies.movedToReviewQueue} |\n\nMoved to the review queue (locality evidence insufficient — full reasons in the audit file):\n\n`;
+  for (const m of b6Audit.movedToReviewQueue) inv += `- **${m.name}** — ${m.reason.slice(0, 220)}…\n`;
+  inv += `\nBatch-015 SQL was regenerated deterministically with the retained ${b6Audit.tallies.retained} rows
+(40 restaurants + 19 places); the two moved rows keep their full evidence in batch6/review-queue-batch6.json
+and are counted NOWHERE as inventory/candidates. ALL retained rows remain verification_status='unverified'.
+`;
+}
+if (b6Crosscheck) {
+  inv += `\n### Batch-6 LIVE production cross-check (${b6Crosscheck.checkedOn})\n\nThe audit's local-proxy corpora were supplemented by a read of the ACTUAL production inventory through the
+app's own public read endpoint (read-only GET with the publishable key; NO SQL executed, nothing written):
+**${b6Crosscheck.production.liveRestaurantRows} live restaurant rows** — all ${b6Crosscheck.result.checked} candidates checked:
+${b6Crosscheck.result.exactCollisions} exact collisions, ${b6Crosscheck.result.baseNameCollisions} base-name collisions,
+${b6Crosscheck.result.looseOverlaps} loose token overlaps (batch6/live-crosscheck.json). A live read never
+upgrades a verification status.
+`;
+}
+if (b6Second) {
+  inv += `\n### Batch-6 second-source evidence for the batch-015 food venues (${b6Second.assessedOn})\n\nObjective: find a SECOND INDEPENDENT source per food venue (40 retained venues; one bounded web_search query
+each, 8 s pacing). Classification is corroboration-grade — it NEVER upgrades verification_status:
+\n| Classification | Count |\n|---|---|\n`;
+  for (const [k, v] of Object.entries(b6Second.tallies)) inv += `| ${k} | ${v} |\n`;
+  inv += `\nSecond-source grades: ${Object.entries(b6Second.gradeTally).map(([k, v]) => `${k} ${v}`).join(", ")}.
+The records (URL + host + quote per venue) live in batch6/food-second-sources-assessment.json and accompany
+the owner's batch-015 review. ${b6Second.tallies["same-host-corroboration"] ?? 0} venues matched only on their original host and ${b6Second.tallies["none"] ?? 0}
+found nothing — those rows stay single-source review candidates, honestly.
+`;
+}
+if (b6Cands) {
+  inv += `\n## Batch-6 accepted candidates (Batch-016 review-candidate SQL, ${b6Cands.assembledOn})\n\n${b6Cands.tallies.acceptedCandidates} accepted candidates were assembled from the coverage-gap sweep of the weakest locality×category
+cells (18 bounded web_search queries + 9 Nominatim town queries + 40 second-source queries after the ONE-probe
+availability check passed). Fail-loud dedupe gates proved zero collisions against inventory, batches 011–015,
+the curated worksheet (incl. rawNames aliases), the batch-6 review queue AND a base-name gate for the
+locality-less canonicals frozen in earlier batches.
+\n| Area | Accepted |\n|---|---|\n`;
+  for (const [k, v] of Object.entries(b6Cands.tallies.byArea)) inv += `| ${AREA_LABEL[k] ?? k} | ${v} |\n`;
+  inv += `\n| Category | Accepted |\n|---|---|\n`;
+  for (const [k, v] of Object.entries(b6Cands.tallies.byCategory)) inv += `| ${k} | ${v} |\n`;
+  inv += `\nThese rows import ONLY as \`verification_status='unverified'\` review candidates
+(supabase/review-candidates/insert-batch-016-tptm-b6.sql — never executed by this repo); coordinates stay
+NULL (published coordinates remain in the evidence files for human review).
+\nAccepted candidate names (canonical):\n\n`;
+  for (const c of b6Cands.acceptedCandidates) inv += `- ${c.name} [${c.area}/${c.category}/${c.tier}] — ${c.evidence.sourceKind}: ${c.evidence.url}\n`;
+  inv += `\n### Batch-6 corroborations of EXISTING records (not new rows)\n\n`;
+  for (const c of b6Cands.corroborations) inv += `- **${c.name}** → ${c.existingRecord} (${c.evidence.url})\n`;
+  inv += `\n### Batch-6 weak leads (review queue ONLY — not candidates, not counted)\n\n${b6Cands.weakLeads.length} discovery hits were recorded as weak leads (list-mentions without own locality, delivery-area
+pages, aggregator lists, truncated snippets, chain outlets, wrong-city Nominatim matches). Identity-HELD
+(${b6Cands.tallies.held}): ${b6Cands.heldLeads.map((h) => `"${h.name}"`).join(", ")} — see the duplicate-review doc.
+\n### Batch-6 source limitations\n\n`;
+  for (const l of b6Cands.limitations) inv += `- ${l}\n`;
+}
+
 /* ---------------- 2. source register ---------------- */
 
 let reg = `# FOODIE — Tirupati Discovery Source Register
@@ -449,6 +547,36 @@ websearch-probe.json, wikipedia-refetch-evidence.json, wikivoyage-evidence.json)
 `;
 }
 
+/* ---- Batch-6 register sections ---- */
+if (b6Cands && b6Second) {
+  reg += `\n## 8. Batch-6 sources (audit + evidence strengthening + coverage gaps, ${b6Cands.assembledOn})\n\nOne bounded availability probe PASSED, so bounded search resumed for the batch-6 objectives.
+\n### 8a. web_search (z-ai) — bounded evidence + discovery\n\n- 40 second-source queries for the retained batch-015 food venues (8 s pacing; 2 transient 429/timeout
+  errors retried successfully on resume; breaker never tripped). Evidence: batch6/food-second-sources.json.
+- 18 coverage-gap queries for the weakest locality×category cells (Bhavani Nagar, Akkayyapalem,
+  Cherlopalli/Satyanarayanapuram, MR Pally, Kapila Theertham Road, Avilala/Mangalam stays,
+  Srinivasa Mangapuram ×3, Chandragiri ×3, Renigunta ×2, Tiruchanur ×2, Srikalahasti ×2).
+  Evidence: batch6/search-coverage-gaps.json.
+- 48 verification-backlog rows re-attempted in 4 bounded chunks (47 confirmed, 1 infra-failed parked; see coverage matrix).
+\n### 8b. Hosts actually serving candidate-grade evidence this pass\n\n`;
+  const hosts = new Set<string>();
+  for (const a of b6Second.assessments) if (a.secondSource?.host) hosts.add(a.secondSource.host);
+  for (const c of b6Cands.acceptedCandidates) { try { hosts.add(new URL(c.evidence.url).host); } catch {/* keep */} }
+  for (const h of Array.from(hosts).sort()) reg += `- ${h}\n`;
+  reg += `\n### 8c. Nominatim town queries (public OSM)\n\n${b6Nom2 ? b6Nom2.queries.length : 9} bounded town POI queries (Srinivasa Mangapuram, Chandragiri, Renigunta, Tiruchanur,
+Srikalahasti; 2 s spacing, custom UA). Name-matching was NOT trusted: hits whose own published coordinates
+placed them in the WRONG CITY (Chandragiri cafés at 27.7N/85.2E = Kathmandu; "Renigunta" restaurants at
+13.1N/80.1E = Chennai/Perambur) were rejected as out-of-scope. The ONE area-gated find (APTDC Haritha
+Hotel, Srikalahasti, 13.73N/79.67E) is recorded with coordinates in evidence ONLY. Honest in-area zeros:
+Srinivasa Mangapuram (restaurants, hotels), Tiruchanur (restaurants), Srikalahasti (restaurants).
+\n### 8d. Production read (read-only)\n\nThe app's own public PostgREST read endpoint (publishable key, RLS applies) returned the live inventory
+snapshot used for the cross-check (${b6Crosscheck?.production.liveRestaurantRows ?? 86} restaurant rows). NO SQL was executed; nothing written.
+\nAll Batch-6 evidence: scripts/foodie-enrichment/evidence/tirupati-master/batch6/
+(b015-audit.json, review-queue-batch6.json, live-crosscheck.json, food-second-sources.json,
+food-second-sources-assessment.json, search-coverage-gaps.json, nominatim2-town-pois.json,
+discovery-candidates.json, websearch-probe.json).
+`;
+}
+
 /* ---------------- 3. coverage matrix ---------------- */
 
 let cov = `# FOODIE — Tirupati Discovery Coverage Matrix
@@ -511,6 +639,19 @@ if (b5Assess && b5Cands) {
   cov += `- Remaining honest gaps: 38 weak leads queued; 4 identity-holds (Indira Guest House / Reddy Tea Stall / 2 Balaji-name rows); Puttur-town venue evidence; Venugopalaswamy Karvetinagaram navbox-only leads now corroborated but still pending verify; menus, hours, photos; the 126-row verification backlog. NOT exhaustive.\n`;
 }
 
+/* ---- Batch-6 coverage sections ---- */
+if (b6Audit && b6Cands) {
+  cov += `\n## Batch-6 evidence (audit + second sources + coverage-gap sweep, ${b6Cands.assembledOn})\n\n`;
+  cov += `- Batch-015 audit: ${b6Audit.tallies.audited} candidates re-audited → ${b6Audit.tallies.retained} retained, ${b6Audit.tallies.movedToReviewQueue} moved to the review queue (Amma Appam Renigunta — address is central-Tirupati; Radha Rani Tiffin Centre — mixed category-page quote). Batch-015 SQL regenerated at ${b6Audit.tallies.retained} rows (40 restaurants + 19 places).\n`;
+  if (b6Crosscheck) cov += `- LIVE production cross-check (read-only public read, no SQL): ${b6Crosscheck.production.liveRestaurantRows} live rows; ${b6Crosscheck.result.checked}/${b6Crosscheck.result.checked} candidates collision-free (0 exact, 0 base-name, 0 loose).\n`;
+  if (b6Second) cov += `- Second-source pass over the ${b6Second.tallies.assessed ?? 40} retained food venues: ${b6Second.tallies["second-source"] ?? 0} gained a second independent source (${Object.entries(b6Second.gradeTally).map(([k, v]) => `${k} ${v}`).join(", ")}), ${b6Second.tallies["same-host-corroboration"] ?? 0} same-host only, ${b6Second.tallies["none"] ?? 0} none, ${b6Second.tallies["search-failed"] ?? 0} failed. Corroboration ≠ verification — all rows stay unverified.\n`;
+  cov += `- Coverage-gap sweep (18 bounded queries over the weakest cells): Bhavani Nagar bakery found (Sri Venkateshwara Bakery & Sweets — downgraded to a locality-resolving corroboration of the frozen worksheet row); Kapila Teertham Road corridor yielded 3 zomato area-page T2 venues (Kakinada Subbbayya Gari Hotel, Aroma Coffee House, The Vintage Cafe); Akkarampalli dhaba (Shree Dhaba House); Renigunta Locality dhabas (Good Luck Family Dhaba T1, Sreenivasa Reddy Dhaba T2); Srikalahasti tiffin centres (MSD Tiffin Centre, Kalahasteeswara Tiffens) + stays (Mgr/Raj/Kalahasteeswara Residency, APTDC Haritha); Srinivasa Mangapuram got its FIRST strong in-scope stay (Srinivasa Hotel — own official site) and the Srivari Mettu footpath-head attraction; Chandragiri/Thondavada stays (Kittu Home Stay, Kandy PLR Hotel); Mangalam/Tata Nagar lodges (Sreekanth Lodge, Sun Lights Lodge) → Batch-016 review candidate (${b6Cands.tallies.acceptedCandidates} rows).\n`;
+  cov += `- Honest still-zeros: Srinivasa Mangapuram food (no in-scope restaurant/mess found in any source this pass); Tiruchanur restaurants (only delivery-area page evidence → queued leads); Renigunta non-chain stays (OYO-family 'Hotel O' outlets deliberately skipped); Akkayyapalem queries returned VISAKHAPATNAM namesakes (wrong city — rejected).\n`;
+  cov += `- Wrong-city guard: Nominatim name-matches were rejected on their own published coordinates (Kathmandu-Chandragiri cafés 27.7N/85.2E; Chennai-Perambur "Renigunta" restaurants 13.1N/80.1E) — recorded in batch6/nominatim2-town-pois.json.\n`;
+  cov += `- Verification backlog RESUMED (bounded): 4 chunks × 12 = 48 attempted — 47 area-confirmed (most with address evidence), 1 not-confirmed (negative evidence), 1 infra-failed (remains parked, never counted as verified), 0 sustained throttles (2 transient 75 s backoffs recovered). Remaining backlog: 58 never-attempted + 21 throttled-stubs = 79 (down from 126).\n`;
+  cov += `- Remaining honest gaps: ${b6Cands.weakLeads.length} new weak leads queued + the 38 batch-5 weak leads + 5 original ambiguous leads; identity-holds now 4 batch-5 + 2 batch-6 (Ganapathi Juice Center, Chillies Food Paradise) + 2 batch-015 audit moves in the queue; menus, hours, photos; the 79-row verification backlog. NOT exhaustive.\n`;
+}
+
 /* ---------------- 4. duplicate review ---------------- */
 
 let dup = `# FOODIE — Tirupati Duplicate Review
@@ -563,6 +704,29 @@ if (b5Cands && b5Cands.heldLeads.length) {
   (independent Tripadvisor + official TTD-news evidence).\n`;
   dup += `- **"Sri Kodandaramaswami Temple"** HIGH queue lead — name-drift spelling of the existing
   **Sri Kodanda Ramaswamy Temple, Tirupati** (batch-013 queued); corroborated, not duplicated.\n`;
+}
+
+/* ---- Batch-6 duplicate-review sections ---- */
+if (b6Audit && b6Cands) {
+  dup += `\n## F. Batch-6 audit drift review & new identity holds (${b6Cands.assembledOn})\n\n`;
+  dup += `Batch-015 audit moves (identity/locality uncertain → review queue, never SQL):\n\n`;
+  for (const m of b6Audit.movedToReviewQueue) dup += `- **${m.name}** — ${m.reason.slice(0, 260)}…\n`;
+  dup += `\nBatch-6 drift downgrades (proposed as candidates, downgraded by the gates):\n\n`;
+  dup += `- **"Sri Venkateshwara Bakery & Sweets, Bhavani Nagar"** vs frozen worksheet canonical
+  **Sri Venkateshwara Bakery And Sweets** (T3, locality-less) — trivial '& Sweets' drift of the SAME venue;
+  the mappls listing RESOLVES the frozen row's locality (Leela Mahal Road, RS Gardens, Bhavani Nagar) and the
+  session's verify pass area-confirmed the frozen row — recorded as corroboration, NOT a new batch row.\n`;
+  dup += `- **"Otc Orion Tiffin Centre, Korlagunta"** → inventory row **OTC — Orion Tiffin Centre, Korlagunta**
+  already exists; re-found hit recorded as corroboration.\n`;
+  dup += `- **"Padamavathi Tiffin Center, Tirumala"** → inventory row **Padamavathi Tiffin Center** already exists
+  (worksheet T3, area tirumala); re-found hit recorded as corroboration (base-name gate).\n`;
+  dup += `- **"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram"** → inventory VERIFIED row + batch-011
+  candidate already exist; the official MoreTemples.aspx hit recorded as corroboration.\n`;
+  dup += `\nNEW identity-HELD leads (never SQL rows until reconciled):\n\n`;
+  for (const h of b6Cands.heldLeads) dup += `- **${h.name}** — ${h.reason}\n`;
+  dup += `\nCarried-forward frozen guards re-checked this pass (all clean): Indira Rest House, Tirumala Tea-Stall pair,
+Balaji-name family, Tirumala Bakery family — the batch-6 audit's hold-family scan found no new candidate
+inside these families (the 'Golden Balaji Tiffin Center' hit is a distinct full name; adjudicated retained).\n`;
 }
 
 /* ---------------- 5. photo gaps ---------------- */

@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Shri Ramulavari Temple in Chandragiri,Tirupati",
-    "area": "chandragiri"
+    "area": "chandragiri",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Shri-Ramulavari-Temple-Chandragiri/9999PX877-X877-200927020845-U2E3_BZDET"
   },
   "query": "\"Shri Ramulavari Temple in Chandragiri,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Shri-Ramulavari-Temple-Chandragiri/9999PX877-X877-200927020845-U2E3_BZDET",
+      "name": "Shri Ramulavari Temple in Chandragiri,Tirupati - Justdial Jd",
+      "snippet": "Shri Ramulavari Temple in Chandragiri,Tirupati listed under Temples in Tirupati ... Address , Contact Number, Reviews & Ratings, Photos, Maps of Shri ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "224 Reviews for Tirupati Golden Temple in Tata Nagar",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Golden-Temple-Tata-Nagar/9999PX877-X877-220308210404-Y4S6_BZDET/reviews"
   },
   "query": "\"224 Reviews for Tirupati Golden Temple in Tata Nagar\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirupati-Golden-Temple-Tata-Nagar/9999PX877-X877-220308210404-Y4S6_BZDET/reviews",
+      "name": "224 Reviews for Tirupati Golden Temple in Tata Nagar",
+      "snippet": "Reviews for Tirupati Golden Temple in Tata Nagar, Tirupati . Unbiased, genuine based on 224 Customer Reviews and Ratings with Photos. Check Timings, Address ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "224 Reviews for Tirupati Golden Temple in Tata Nagar :: Reviews for Tirupati Golden Temple in Tata Nagar, Tirupati . Unbiased, genuine based on 224 Customer Reviews and Ratings with Photos. Check Timings, Address ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

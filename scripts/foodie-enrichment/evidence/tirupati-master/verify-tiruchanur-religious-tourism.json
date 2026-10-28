@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Religious Tourism",
-    "area": "tiruchanur"
+    "area": "tiruchanur",
+    "sourceUrl": "https://tirupati.ap.gov.in/religious-tourism"
   },
   "query": "\"Religious Tourism\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d3705325-Reviews-or20-Tirumala_Tirupati_Devasthanams-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Tirumala Tirupati Devasthanams",
+      "snippet": "Address K.T. Road Srinivasa Nagar, Tirupati 517501 India",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.ie/Attraction_Review-g297587-d3705325-Reviews-Tirumala_Tirupati_Devasthanams-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Tirumala Tirupati Devasthanams",
+      "snippet": "Address K.T. Road Srinivasa Nagar, Tirupati 517501 India",
+      "host": "www.tripadvisor.ie",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d1220147-r515099096-Tirumala_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Best way for NRI and Foreigners to visit tirumala tirupati",
+      "snippet": "Aug 19, 2017 — There are two ways to reach tirumala from tirupati is by road or stairs. Nearest Railway station is at Tirupati . Tirumala is on hill where ... Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://pikme.org/activity/attractions/spiritual-tourism-tirupati-srikalahasti?srsltid=AYCX9vKdenpGyBMEzFZsfS-jMcbAtivRJlbaPGSje0Frpg3QLusPSKzu",
+      "name": "Tirupati Spiritual Tourism Circuit - Plan Your Yatra Now",
+      "snippet": "The Spiritual Tourism Circuit - Tirupati . Call Now : 9845991455 Whatsapp Now : 8088379983",
+      "host": "pikme.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/cntravellerindia/posts/everything-you-need-to-know-if-youre-planning-to-visit-the-tirupati-balaji-templ/1358644389739009",
+      "name": "Everything you need to know if you're planning to visit the",
+      "snippet": "Tirupati Balaji temple, one of the most sacred Hindu pilgrimage sites. Tirumala (18 km uphill ghat road / Alipiri steps) Tirupati Town (the ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Travel-Agents-for-Religious-Tour-in-Renigunta/nct-10496380-att-TAG01",
+      "name": "Popular Travel Agents For Religious Tour in Renigunta, Tirupati",
+      "snippet": "Address , Skv Finance Building, Bilss Circle ,Renigunta Road, Tirupati Bazar, Tirupati - 517501 (Beside Mnm Petrol Pump). Listed Categories. Travel Agents · Car ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": false,
+  "addressEvidence": "Tirumala Tirupati Devasthanams :: Address K.T. Road Srinivasa Nagar, Tirupati 517501 India",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirumala",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tirumala"
   },
   "query": "\"Tirumala\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tirumala.org/TTDBoard.aspx",
+      "name": "Tirumala Tirupati Devasthanams (Official Website)",
+      "snippet": "Address Tirumala Tirupati Devasthanams TTD Administrative Building K.T. Road Tirupati 517 501. Andhra Pradesh India. ; Phone Numbers for call Centre (24/7) Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://x.com/tirumalanews/status/52972333270446081",
+      "name": "\"Postal Address Tirumala Tirupati Devasthanams TTD",
+      "snippet": "Postal Address Tirumala Tirupati Devasthanams TTD Administrative Building K.T. Road Tirupati 517 501 Andhra Pradesh India. Read more",
+      "host": "x.com",
+      "kind": null
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tirumala",
+      "name": "Tirumala",
+      "snippet": "Tirumala is located atop the Venkata hill in the Sapthagiri range in the Seshachalam Hills of the Eastern Ghats. Spread over an area of 26.8 km 2 (10.33 ... Read more",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.tirumala.org",
+      "name": "Tirumala Tirupati Devasthanams (Official Website)",
+      "snippet": "Bhimavaram, Vizianagaram, Keesaragutta, and Nalgonda) run by Tirumala Tirupati Devasthanams and under the Academic Control of Sri Venkateswara Vedic University, ... Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.tirumala.org/Contactus.aspx",
+      "name": "Feedback",
+      "snippet": "Information hub of TTD and its associated groups which contains information about the temples in and around Tirumala and Tirupati so as to serve pilgrims ...",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.tirumala.org/FAQ.aspx",
+      "name": "Frequently Asked Questions",
+      "snippet": "Tirumala Tirupati Devasthanams, Tirupati 517 501, India. Phone No: +91-0877-2264543. Can I reserve accommodation and buy seva ... Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Tirumala Tirupati Devasthanams (Official Website) :: Address Tirumala Tirupati Devasthanams TTD Administrative Building K.T. Road Tirupati 517 501. Andhra Pradesh India. ; Phone Numbers for call Centre (24/7) Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

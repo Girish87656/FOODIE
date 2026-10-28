@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Coffee Shops - Srinivasa Cafe in Tilak Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com"
   },
   "query": "\"Coffee Shops - Srinivasa Cafe in Tilak Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-in-Tirumala/nct-10408936",
+      "name": "Best Restaurants in Tirumala, Tirupati - Top Places to Eat",
+      "snippet": "Discover the best places to eat near Tirumala, Tirupati, from top dining spots to cozy cafes, vibrant pubs, and stylish bars. Explore a wide range of restaurants with Photos, Address, Reviews, Maps and Phone numbers on Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://in.worldorgs.com/catalog/tirupati/event-venue/srinivasa-kalyana-mandapam",
+      "name": "Srinivasa Kalyana Mandapam in the city Tirupati",
+      "snippet": "Srinivasa Kalyana Mandapam in the city Tirupati by the address Raghavendra Nagar, Tirupati, Andhra Pradesh 517501, India",
+      "host": "in.worldorgs.com",
+      "kind": null
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Chikka_Tirupati",
+      "name": "Chikka Tirupati - Wikipedia",
+      "snippet": "Chikka Tirupati (meaning 'Small Tirupathi' in Kannada, with reference to Tirupathi in Andhra Pradesh) is a Hindu temple dedicated to Venkateshwara, the Hindu god Vishnu.",
+      "host": "en.wikipedia.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.zigwheels.com/bikes/dealers/tvs/Tirupati",
+      "name": "TVS Bike Showrooms in Tirupati (3 Dealers) – Address, Phone & Map",
+      "snippet": "3 authorised TVS bike showrooms in Tirupati – Keshvin Automotives Private Limited, Sreenivasa Bikes LLP. Address, phone number and directions.",
+      "host": "www.zigwheels.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupatitirumalainfo.com/vishnu-nivasam",
+      "name": "TTD Accommodation – Vishnu Nivasam, Tirupati – Details, Booking",
+      "snippet": "TTD Cottage, Vishnu Nivasam complex is located just opposite to Thirupathi Railway Station. It is very close to Tirupati bus stand and railway station.",
+      "host": "tirupatitirumalainfo.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.booking.com/hotel/in/gsr-srinivasa-inn.html",
+      "name": "Hotel GSR Srinivasa Inn, Tirupati (updated prices 2027)",
+      "snippet": "Hotel GSR Srinivasa Inn provides accommodations in Tirupati. This 3-star hotel offers an ATM and a tour desk.",
+      "host": "www.booking.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Restaurants in Tirumala, Tirupati - Top Places to Eat :: Discover the best places to eat near Tirumala, Tirupati, from top dining spots to cozy cafes, vibrant pubs, and stylish bars. Explore a wide range of restaurants with Photos, Address, Reviews, Maps and Phone numbers on Justdial.",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}"
+      ]
+    }
+  ]
 }

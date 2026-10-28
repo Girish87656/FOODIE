@@ -1,0 +1,32 @@
+{
+  "task": "batch-6 review-queue entries moved out of Batch-015 by the audit",
+  "createdOn": "2026-10-28",
+  "note": "counted NOWHERE as inventory or candidates; each keeps its full original evidence for the next evidence pass",
+  "entries": [
+    {
+      "name": "Radha Rani Tiffin Centre, Padmavathi Nagar",
+      "area": "tiruchanur",
+      "category": "tiffin",
+      "tier": "T1",
+      "evidence": {
+        "quote": "Tiffin Center in Tirupati :: Radha Rani Tiffin Centre. Mahila University Road, Padmavathi Nagar, Tirupati ... 503, Samajam Street, Tiruchanur, Tirupati",
+        "url": "https://tirupati.idbf.in/788403/tiffin-center",
+        "sourceKind": "directory-listing"
+      },
+      "movedReason": "MIXED QUOTE: the idbf category-page quote concatenates TWO different listings ('Mahila University Road, Padmavathi Nagar, Tirupati ... 503, Samajam Street, Tiruchanur, Tirupati'); which address belongs to Radha Rani is not decidable from the snippet, and the recorded area 'tiruchanur' is not supported by any address tied to the name. Moved to the review queue pending a venue-own listing."
+    },
+    {
+      "name": "Amma Appam, Renigunta",
+      "area": "renigunta",
+      "category": "tiffin",
+      "tier": "T1",
+      "evidence": {
+        "quote": "Name, Punjabi Dhaba Restaurant · Amma Appam Renigunta ; Address, G Car Street, T P Area, Tirupati - 51750",
+        "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Rajasthani-Food-in-Renigunta/nc",
+        "sourceKind": "directory-listing"
+      },
+      "note": "listing pairs 'Amma Appam Renigunta' with a G Car Street T P Area address — area recorded as renigunta per the listing title, address discrepancy flagged for verification",
+      "movedReason": "LOCALITY CONFLICT (carry-forward of the batch-5 ledger note): the only address in the quote is 'G Car Street, T P Area, Tirupati - 51750x' — a CENTRAL Tirupati street — while the 'Renigunta' attribution comes solely from a justdial category-page title ('Tiffin Services For Rajasthani Food in Renigunta'). Category-page titles group by service filter, not by venue address; name similarity alone is not proof of place. Moved to the review queue pending an address-bearing source."
+    }
+  ]
+}

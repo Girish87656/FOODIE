@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Order from Amrutha Swagruha Foods online in Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/amrutha-swagruha-foods-reddy-and-reddys-colony-v-v-mahal-road-rest219342"
   },
   "query": "\"Order from Amrutha Swagruha Foods online in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shops-Swagruha-in-1St-Cross-Road/nct-11269400",
+      "name": "Best Sweet Shops Swagruha in 1St Cross Road, Tirupati",
+      "snippet": "Order Food Online Amrutha Swagruha. Swagruha in 1st Cross Road, Tirupati may offer online ordering options through their website or mobile app, making it easy ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tradeindia.com/amrutha-swagruha-foods-9351799",
+      "name": "Amrutha Swagruha Foods in Tirupati, Andhra Pradesh, India",
+      "snippet": "Address 7-1-42A, RN Marda Street, Tirupati , Andhra Pradesh, 517501, India. RN Marda Street, Tirupati , Andhra Pradesh, 517501, India",
+      "host": "www.tradeindia.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Hyderabad/Sri-Amrutha-Swagruha-Foods-Near-Icici-Atm-Kukatpally/040PXX40-XX40-140321162958-E3H6_BZDET",
+      "name": "Sri Amrutha Swagruha Foods - Sweet Shops In Hyderabad",
+      "snippet": "You can contact the shop directly for the order. opens from Monday:- 9:00 am - 11:00 pm, 9:00 am - 11:00 pm. We suggest you contact the shop directly before ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/hyderabad/amrutha-swagruha-foods-kukatpally/order",
+      "name": "Amrutha Swagruha Foods, Kukatpally order online",
+      "snippet": "Amrutha Swagruha Foods ; Palli Karam. ₹60 ; Vellulli Karam. ₹60 ; Kakarakaya Karam. ₹60 ; Garam Masala. ₹90 ; Nalla Karam. ₹60. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/4099989/amrutha-swagruha-foods-famous-sweet-shop-in-tirupati-sweet-shop-in-tirupati-famous-pickles-in-tirupati",
+      "name": "Amrutha Swagruha Foods_ Famous Sweet Shop In Tirupati",
+      "snippet": "The full address is 225, VV Mahal Road, Contact them for details. Phone: 9498002668. You can call them at 9498002668 for inquiries or appointments. The office ...",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shops-Swagruha-in-Alipiri/nct-11269400",
+      "name": "Best Sweet Shops Swagruha in Alipiri, Tirupati",
+      "snippet": "Order Food Online Amrutha Swagruha Foods ・ at 8:30 am tomorrow V Call Now Order online. Address No 255, V.v Mahal Road, Kk Layout, Tirupati - 517501 ・ ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Sweet Shops Swagruha in 1St Cross Road, Tirupati :: Order Food Online Amrutha Swagruha. Swagruha in 1st Cross Road, Tirupati may offer online ordering options through their website or mobile app, making it easy ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

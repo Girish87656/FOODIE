@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Venkateswara Temple in Srinivasanagar,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Venkateswara-Temple-Srinivasanagar/9999PX877-X877-220308202401-M4J2_BZDET"
   },
   "query": "\"Venkateswara Temple in Srinivasanagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/tpttsc/posts/sri-kalyana-venkateswara-swamy-1970srinivasa-mangapuram-temple-19501950-follow-t/1800786716781626",
+      "name": "Sri Kalyana Venkateswara Swamy 1970🙏Srinivasa",
+      "snippet": "Kalyana Venkateswara Temple is an ancient Hindu temple at Srinivasamangapuram in Tirupati . It is located in Tirupati District of Andhra Pradesh ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Temple-Tirumala/9999PX877-X877-240522181353-E9J8_BZDET",
+      "name": "Sri Venkateswara Temple - Wedding Planners In Tirupati",
+      "snippet": "You can contact Sri Venkateswara Temple in Tirumala. Operating from Monday:- 10:00 am - 8:00 pm, Tuesday:- 10:00 am - 8:00 pm, Sunday:- 10:00 am - 8:00 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/srinivasa-temple-tirupati",
+      "name": "Srinivasa Temple Tirupati",
+      "snippet": "Mar 8, 2026 — The Venkateswara Temple of Tirumala or Sri Venkateswara Swami Temple is a Hindu temple situated in the hills of Tirumala, Tirupati Urban Mandal ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.trip.com/travel-guide/attraction/tirumala/sri-venkateswara-swamy-temple-132071624",
+      "name": "Sri Venkateswara Swamy Temple (Tirumala Tirupati",
+      "snippet": "Open Open all day  Tirumala, Tirupati Urban, Andhra Pradesh 517504, India  Map. Tirupati , 8.5 km",
+      "host": "www.trip.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/LordSrinivasaGodOfCamphorChin/posts/sri-kalyana-venkateswara-swamy-temple-srinivasa-mangapuram-near-tirupati-andhra/460709002747617",
+      "name": "Sri Kalyana Venkateswara Swamy Temple, Srinivasa",
+      "snippet": "Located at distance of about 12 km towards the West Tirupati , in Srinivasa Mangapuram of the Chittoor district of Andhra Pradesh, Sri Kalyana ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://thetaiwantimes.com/en/hindu-temples/tirumala-venkateswara-temple",
+      "name": "Tirumala Venkateswara Temple — Hindu Temple Guide",
+      "snippet": "Sep 11, 2026 — Venkateswara Temple is a Hindu temple in Tirupati district, India, built in 300. located in the hills of Tirumala, within Tirupati Urban Mandal ...",
+      "host": "thetaiwantimes.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Venkateswara Swamy Temple (Tirumala Tirupati :: Open Open all day  Tirumala, Tirupati Urban, Andhra Pradesh 517504, India  Map. Tirupati , 8.5 km",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

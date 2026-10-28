@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Order from Meghana Sweets And Bakery online in Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/meghana-sweets-and-bakery-tata-nagar-rest1281481"
   },
   "query": "\"Order from Meghana Sweets And Bakery online in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/tirupati/meghana-sweets-and-bakery-tata-nagar-rest1281481",
+      "name": "Order from Meghana Sweets And Bakery online in Tirupati",
+      "snippet": "Order Online from Meghana Sweets And Bakery in Tata Nagar, Tirupati for delicious indian food. Enjoy fast delivery with Swiggy ... NEAR VAIKUNTAPURAM ARCH, ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Order from Meghana Sweets And Bakery online in Tirupati :: Order Online from Meghana Sweets And Bakery in Tata Nagar, Tirupati for delicious indian food. Enjoy fast delivery with Swiggy ... NEAR VAIKUNTAPURAM ARCH, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,999 @@
+{
+  "task": "batch-6 coverage-gap discovery (weakest locality×category cells)",
+  "retrievedOn": "2026-10-28",
+  "pacingMs": 8000,
+  "pausedThisRun": false,
+  "honesty": "hits are LEADS with verbatim titles/snippets — hand-assessed next; never auto-accepted as candidates",
+  "queries": [
+    {
+      "area": "tpt-neighbourhoods",
+      "category": "food-restaurants",
+      "gap": "neighbourhoods: Akkayyapalem not yet searched",
+      "query": "restaurant OR mess Akkayyapalem Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.zomato.com/visakhapatnam/celebrations-restaurant-akkayyapalem-vizag/order",
+          "name": "Celebrations Restaurant, Akkayyapalem order online",
+          "snippet": "Celebrations Restaurant ; Chicken Avakaya Biryani. ₹384 ; Boneless Chicken Biryani. ₹432 ; Chicken Chettinadu Biryani. ₹420 ; Chicken Dum Biryani. ₹324 ; Chicken ... Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.zomato.com/visakhapatnam/sri-satwika-tiffin-center-akkayyapalem-vizag",
+          "name": "Sri Satwika Tiffin Center, Akkayyapalem, Vizag",
+          "snippet": ", and more for Sri Satwika Tiffin Center Restaurant. 44-3-1/2, 80 Feet Road , ClosedOpens at 7am. Average Cost ₹200 for two people (approx.) available No ...",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.zomato.com/or/visakhapatnam/akkayyapalem-order-online?delivery_subzone=12439&delivery-time=0&min-order=2",
+          "name": "Akkayyapalem,Visakhapatnam Restaurants",
+          "snippet": "Akkayyapalem,Visakhapatnam Restaurants ; S Kota's Muntaj Shaan · Biryani, North Indian, Chinese. ₹250 for one ; Sri Sairam Parlour · North Indian, South Indian. ₹ ... Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www-fallback.instagram.com",
+          "name": "Fish curry | Non veg Meals  #reels #foodie #instagramreels",
+          "snippet": "Location Leelamahal circle,hotel skylar ,ground floor ,Tirupati . Best restaurant in Tirupati | konaseema Kodi pulao | Thumps up | gongura ...",
+          "host": "www-fallback.instagram.com"
+        },
+        {
+          "url": "https://www.justdial.com/Visakhapatnam/Guntur-Vari-Sri-Sai-Mess-Near-Ramalingeswara-Circle-Akkayyapalem/0891PX891-X891-171230044131-S7H3_BZDET/photos",
+          "name": "Guntur Vari Sri Sai Mess - Akkayyapalem, Visakhapatnam",
+          "snippet": "Guntur Vari Sri Sai Mess in Akkayyapalem, Visakhapatnam Rated 3.9 based on 48 Customer Reviews and Ratings with 4 Photos. Pink-walled cafe … of Indian and ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/sri-vinayaka-reddy-mess-tada-tirupati-/order",
+          "name": "Sri Vinayaka Reddy Mess, Tada,Tirupati order online",
+          "snippet": "Sri Vinayaka Reddy Mess ; Chicken Fry. ₹199 · Spicy, aromatic. ; Mutton curry. ₹319 · Rich, spicy and aromatic. ; Fish Curry. ₹199 · Fish special fry. Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.justdial.com/Visakhapatnam/Lunch-Restaurants-in-Akkayyapalem/nct-11605363",
+          "name": "Best Lunch Restaurants in Akkayyapalem, Visakhapatnam",
+          "snippet": "Bombay Restaurant · Eatery (Four Points By Sheraton) · Olive Restaurant · Saffron Restaurant · Punjabi Dhaba · Kings Food House Multicuisine Restaurant · Sri ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 7
+    },
+    {
+      "area": "tpt-neighbourhoods",
+      "category": "food-bakery",
+      "gap": "neighbourhoods: Bhavani Nagar not yet searched",
+      "query": "bakery OR \"sweet shop\" Bhavani Nagar Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Bakery-Food-Home-Delivery-in-Bhavani-Nagar/nct-10837282",
+          "name": "Best Bakery Food Home Delivery in Bhavani Nagar, Tirupati",
+          "snippet": "Its a famous and big bakery and sweet shop in Kadapa or tirupati so many branches there, They have two shop side by side. Collection is pretty good. All kind of ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Eggless-Cake-Manufacturers-in-Bhavani-Nagar/nct-10180690",
+          "name": "Top Eggless Cake Manufacturers in Bhavani Nagar",
+          "snippet": "Its a famous and big bakery and sweet shop in Kadapa or tirupati so many branches there, They have two shop side by side. Collection is pretty good. All kind of ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Photo-Cake-with-Drive-Through-in-Bhavani-Nagar/nct-10363961-att-res40",
+          "name": "Top Photo Cake With Drive Through in Bhavani Nagar",
+          "snippet": "Bakery 4.21.4k Ratings Kt Road Tirupati Bazar - 220 mts Open until 10:30 pm. Average Rating 4.3 (7977 Ratings & Reviews as on 27/07/2026) range from 2 to 4 ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.mappls.com/bd64j8",
+          "name": "Sri Venkateshwara Bakery & Sweets, Bhavani Nagar",
+          "snippet": "Sri Venkateshwara Bakery &amp; Sweets, Leela Mahal Road, RS Gardens, Bhavani Nagar , Tirupati , Andhra Pradesh, 517501 by Mappls. +919039900376",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Cake-Shops-Having-Ice-Cream-in-Bhavani-Nagar/nct-10070075-att-res252",
+          "name": "Top Cake Shops Having Ice Cream in Bhavani Nagar",
+          "snippet": "Justbake · Tirumala Bakery · The Hangout Restaurant · Sweet Truth · Warmoven Cake & Desserts · MANASA CAKEWALA · Cupcake Bliss Cake & Desserts · Dumont Creamery. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/RAJASEKHAR3777/videos/sweets-in-tirupati-25-huge-discount/3236754649856513",
+          "name": "Sweets in Tirupati 25% Discount at Telugu Foodie Bakery",
+          "snippet": "This video provides a tour of the Jhunjhunu sweet shop , a local food business located in Jodhpur. The camera pans across the shop's interior, ...",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Bhavani-Nagar/Restaurant/Sri-Venkateswara-Bakery/store/2228a44?srsltid=AYCX9vJOZmGdg3mV9onu7vHbycQDVJCDbM1coG-58ddav_f0G-v0q7k-",
+          "name": "Sri Venkateswara Bakery, Bhavani Nagar, Tirupati",
+          "snippet": "Sri Venkateswara Bakery is a popular eating spot serving customers in Bhavani Nagar , Tirupati . Open now·11:30 AM – 2:00 PM 📞 ・ 11:30 AM – 2:00 PM Phone+ ...",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Bakeries-with-Party-Orders-Accepted-in-Bhavani-Nagar/nct-10033880-att-res34",
+          "name": "Top Bakeries With Party Orders Accepted in Bhavani Nagar",
+          "snippet": "Bakeries in Bhavani Nagar , Tirupati ; Address, Tilak Road, Tirupati - 517501 (Opposite Samsung Care), Door No :- 18-1-45, Shanti Nagar, KT Road, Tirupati - ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "tpt-neighbourhoods",
+      "category": "food-tiffin",
+      "gap": "neighbourhoods: Cherlopalli/Satyanarayanapuram not yet searched",
+      "query": "\"tiffin centre\" Cherlopalli OR Satyanarayanapuram Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Padamavathi-Tiffin-Center-Near-Cro-Office-Tirumala/9999PX877-X877-230210064010-I8X9_BZDET",
+          "name": "Padamavathi Tiffin Center in Tirumala,Tirupati",
+          "snippet": "Sri Guru Tiffin Centre · Muraga Tiffins · Vishnu Padam Tiffin Center · Homemade Tiffins · Original Home Tiffins · Balaji Tiffin Centre · Manjunath Tiffin Centre . Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://tirupati.idbf.in/788126/tiffin-centre",
+          "name": "Tiffin Centre in Tirupati",
+          "snippet": "Tiffin Centre is a Tiffin Services business located in Tirupati , Andhra Pradesh, India. The office is situated at Alipiri Road, Balaji Colony, Tirupati – 517501 ... Read more",
+          "host": "tirupati.idbf.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-1St-Cross-Road/nct-10481155",
+          "name": "Best Tiffin Services in 1St Cross Road, Tirupati",
+          "snippet": "Vinayaka Tiffin Centre Balaji ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://tirupati.idbf.in/782839/vinayaka-tiffin-centre",
+          "name": "Vinayaka Tiffin Centre in Tirupati",
+          "snippet": "Vinayaka Tiffin Centre is a Tiffin Services business located in Tirupati , Andhra Pradesh, India. The office is situated at Balaji Colony, Tirupati – 517501. The ... Read more",
+          "host": "tirupati.idbf.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Akkarampalli/nct-10000409",
+          "name": "Best 24 Hours Tiffin Services in Akkarampalli, Tirupati",
+          "snippet": "Otc Orion Tiffin Centre Korlagunta, tirupati . Menu. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Monthly-Basis/nct-11992539/page-3",
+          "name": "Tiffin Services For Monthly Basis in Tirupati - Page 3",
+          "snippet": "Vittal Tiffin Centre serves fresh, tasty food with generous portions at a reasonable price. The staff is good and the quantity of food is excellent. Call Now. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Orion-Tiffin-Center/9999PX877-X877-250712034056-G9T7_BZDET",
+          "name": "Orion Tiffin Center in Balajy Colony,Tirupati",
+          "snippet": "Sri Guru Tiffin Centre · Muraga Tiffins · Vishnu Padam Tiffin Center · Homemade Tiffins · Original Home Tiffins · Balaji Tiffin Centre · Manjunath Tiffin Centre . Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://tirupati.idbf.in/788403/tiffin-center",
+          "name": "Tiffin Center in Tirupati",
+          "snippet": "205 A, Gandhi Road, Balaji Colony, Tirupati · Shankar Tiffin Center. 6-1-169, Srinivasa Nagar, Varadaraja Nagar, Tirupati · Sri Guru Tiffin Centre . 1, Opp. Read more",
+          "host": "tirupati.idbf.in"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "tpt-neighbourhoods",
+      "category": "food-street",
+      "gap": "neighbourhoods: MR Pally not yet searched",
+      "query": "\"juice shop\" OR \"tea stall\" \"MR Pally\" OR M.R. Palle Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Stall-in-Mr-Palli-Circle/nct-10451854",
+          "name": "Top Stall in Mr Palli Circle - Best Stall Tirupati near me",
+          "snippet": "Jyothi Tea Stall . -No rating. Tirupati . Ask for Price. Call Now Get Best Price. Venkatsai Tea Stall Korlagunta, Tirupati . Venkatsai Tea Stall . -No rating.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.instagram.com",
+          "name": "Vlog #8 | ChaiWithVenky Tirupati lo chai ki special vibe unda? 🫖",
+          "snippet": "4. 30ML Cafe (tiruchanur flyover bridge) 5. Taaza Kitchen (Mangalam Road) 6. Venu tea stall (beside mr palle ps) 7. Zam Zam (tiruchanur starting) 8. Master Tea ...",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-C-Gollapalle/nct-10853304",
+          "name": "Top Tea Stalls in C Gollapalle - Best Chai Wala Tirupati near me",
+          "snippet": "Tea Stalls in C Gollapalle , Tirupati ; Name, Sai Tea Stall · Josh Irani Tea ; Address, Thatithopu, Tirupati - 517505, Peruru, Chandragiri Road, Srinagar, Tirupati ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/BeautifulTirupathi/videos/ice-cream-soda-in-tirupati-tirupati-just-got-sweeter-the-legendary-taste-of-gian/3950547518414501",
+          "name": "Ice Cream Soda In Tirupati  “Tirupati just got sweeter!",
+          "snippet": "... MR Palli area. ... This video showcases the Ganapathi Juice Center, a local juice shop located at Tirupati Market in Tirupati , Bangalore.",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://chotu.com/local/cafe-in-chittoor-andhra-pradesh-india/ct-1659431",
+          "name": "Cafes Near You in Chittoor | Order Coffee & Snacks - chotu",
+          "snippet": "Kishor Tea Stall . 1 ANGALLU, opp. MITS, Madanapalle, Andhra Pradesh 517325, India. Order Now. Omji Tea Stall . Omji Tea stall ... Read more",
+          "host": "chotu.com"
+        },
+        {
+          "url": "https://bavajan-tea-stall.wheree.com",
+          "name": "BAVAJAN TEA STALL - Reviews, Photos & Phone Number",
+          "snippet": "Bavajan Tea stall is a cozy tea shop located in Devalcheruvu, Andhra Pradesh ... Vesyalamma Gudivadhi, Balaji Colony, Tirupati , Andhra Pradesh 517501, India. Read more",
+          "host": "bavajan-tea-stall.wheree.com"
+        },
+        {
+          "url": "https://www.youtube.com",
+          "name": "Best chai Spot in Tirupathi? Vlog #9 #shorts #shortsfeed",
+          "snippet": "... Tea stall (beside mr palle police station ) 7)Zam Zam Restaurant (tiruchanur entrence) 8)The Master Tea (Annamaiah circle) 9)konaseema Ruchulu (KT Road) ...",
+          "host": "www.youtube.com"
+        },
+        {
+          "url": "https://www.facebook.com/WirallyFood/videos/tirupathi-loni-nellai-thati-bellam-coffee-lo-aratipuvvu-tho-chesina-vadafor-fran/655286646090953",
+          "name": "Tirupathi loni Nellai thati bellam coffee lo aratipuvvu tho",
+          "snippet": "Vellore Food Series AB Tea Stall located near Vellore Corporation office - Recommended one. 00:37. Vellore Food Series AB Tea Stall ... Read more",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "tpt-neighbourhoods",
+      "category": "food-restaurants",
+      "gap": "neighbourhoods: Kapila Theertham road corridor not yet searched",
+      "query": "restaurant near \"Kapila Theertham\" Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.tripadvisor.co.nz/Restaurant_Review-g297587-d15242957-Reviews-Orion_Restaurant-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "ORION RESTAURANT, Tirupati - Restaurant Reviews, Phone",
+          "snippet": "AsiaIndiaAndhra PradeshChittoor District TirupatiTirupati Restaurants Orion Restaurant ... Kapila Theertham Hotels near Sri Varahaswami TempleHotels near Sri ... Read more",
+          "host": "www.tripadvisor.co.nz"
+        },
+        {
+          "url": "https://www.tripadvisor.in/RestaurantsNear-g297587-d10800708-Vihas_Inn-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Restaurants Near Vihas Inn, Tirupati",
+          "snippet": "... TirupatiRestaurants near Tirumala Tirupati Devasthanams Restaurants near Kapila Theertham Restaurants near Silathoranam Garden · Travel ... Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://www.zomato.com/ta/tirupati/srinivasa-nagar-restaurants?all=1&delivery_subzone=20441",
+          "name": "Kapila Teertham Road, Tirupati Restaurants",
+          "snippet": "Di Andhra Spice Family Restaurant . 33 min. Di Table 9 Restaurant . 25 min. Kakinada Subbbayya Gari Hotel. 28 min. Kwalitys Spicy. 24 min. The Paradise. Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in/RestaurantsNear-g297587-d1220147-oa30-Tirumala_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Restaurants Near Tirumala Temple, Tirupati",
+          "snippet": "... TirupatiRestaurants near Tirumala Tirupati Devasthanams Restaurants near Kapila Theertham Restaurants near Silathoranam Garden · Travel ... Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://www.zomato.com/te/tirupati/srinivasa-nagar-restaurants/kontinentalni?ref_page=subzone&delivery_subzone=20441&online_payment=1&delivery-time=2&min-order=3",
+          "name": "Kapila Teertham Road, Tirupati Restaurants",
+          "snippet": "Kapila Teertham Road, Tirupati Restaurants · Lotus Marasa Sarovar Premiere · Aroma Coffee House · The Vintage Cafe · Shawarma Den · DSN Food Plaza · Happy Brew · Cafe ... Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/RestaurantsNear-g297587-d26564386-Varuna-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Restaurants near Varuna - Tirupati",
+          "snippet": "... TirupatiRestaurants near Tirumala Tirupati Devasthanams Restaurants near Kapila Theertham Restaurants near Silathoranam Garden · Travel ... Read more",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/srinivasa-nagar-restaurants?ref_page=subzone&delivery_subzone=20441&delivery-time=1",
+          "name": "Kapila Teertham Road, Tirupati Restaurants",
+          "snippet": "Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Di Table 9 New · KFC · Kakinada Subbbayya Gari Hotel · Five Star · Chillies Restaurant · Kwalitys Spicy · Kailash ... Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in/RestaurantsNear-g297587-d6364303-Hotel_SK_s-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Restaurants Near Hotel SK's, Tirupati",
+          "snippet": "Gufha Restaurant Tirupati . 4.5. 4.5 of 5 bubbles. (13 reviews) ... Kapila Theertham Hotels near Sri Varahaswami TempleHotels near ... Read more",
+          "host": "www.tripadvisor.in"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "tpt-neighbourhoods",
+      "category": "stays",
+      "gap": "neighbourhoods: stays cell 0 candidates",
+      "query": "lodge OR hotel Avilala OR Mangalam Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Hotels-where-Private-Dining-Area-in-Mangalam/nct-10255012-att-hote20",
+          "name": "Top Hotels Where Private Dining Area in Mangalam - Tirupati",
+          "snippet": "Top Hotels Where Private Dining Area in Mangalam , Tirupati . These include budget hotels, mid-range hotels, luxury hotels, boutique stays, and business hotels.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.travelated.com/india/tirupati/hotel-agarala-residency",
+          "name": "Hotel Agarala Residency, Tirupati, India - from $11",
+          "snippet": "Hotel Agarala Residency located in Tirupati, India. +1 (888) 385-8465 … cozy 1-star hotel located in the heart of Tirupati , India. From $11 6 WiFi quality 5.  ...",
+          "host": "www.travelated.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Hotels-in-Mangalam/nct-10255012/page-3",
+          "name": "Hotels in Mangalam, Tirupati - Page 3",
+          "snippet": "Best Deals - Top Hotels in Mangalam , Tirupati - Page 3 ; Sri Lakshmi Thulasi Residency · 36 Ratings. Near Temple kt road ; Hotel Hill View Residency · 29 Ratings. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.makemytrip.com/hotels/address-of-sun_lights_lodge-details-tirupati.html",
+          "name": "Address of Sun Lights Lodge - Hotel in Tirupati",
+          "snippet": "Address of Sun Lights Lodge . Tata Nagar, Tirupati | 6 minutes walk to Tirupati Central Bus Station. Travel Dates & Guests. EDIT. Check-In & Check-Out21 Oct, ... Read more",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-In-5-Star-Hotels-in-Avilala/nct-11076681",
+          "name": "Restaurants In 5 Star Hotels in Avilala, Tirupati",
+          "snippet": "In 5 Star Hotels Restaurants, in Avilala , Tirupati . Opens at 07:00 PM. Stayed at the hotel and had breakfast and dinner. Food quality is good and staff ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Mangalam-Tirupati/Hotel/Sreekanth-Lodge/store/3a2baa5?srsltid=AYCX9vIOjAImI1_oUKhNSBiXt_zazZfAirq7bTWQ-MgBmn1jsF7wLu-u",
+          "name": "Sreekanth Lodge - Mangalam Tirupati",
+          "snippet": "3.4 (49)· Mangalam Tirupati , Tata Nagar, Tirupati , Andhra Pradesh 517501, Mangalam Tirupati , Phone+918772289111. Hotel in Mangalam Tirupati , Email: care@ ...",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Hotels-Rs-4001-To-Rs-5000-in-Mangalam/nct-10255034",
+          "name": "Top Hotels Rs 4001 To Rs 5000 in Mangalam, Tirupati - Justdial",
+          "snippet": "Budget friendly hotel . Rooms are well maintained. New property located in prime place. Recommend for families. It was a decent stay. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.super.com/travel/hotels/hotel-agarala-residency-tirumala-tirupati/Bj1OwB3W",
+          "name": "Hotel Agarala Residency – Tirupati | 2-Star",
+          "snippet": "137 t.p. Other amenities: Cable TV, Conference Hall, Dry-cleaning, Free Wi-Fi, Free wifi, Ironing, Laundry, Luggage storage, Offsite parking reservations ...",
+          "host": "www.super.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "srinivasa-mangapuram",
+      "category": "food-restaurants",
+      "gap": "Srinivasa Mangapuram: restaurants cell 0 candidates",
+      "query": "restaurant OR mess \"Srinivasa Mangapuram\"",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.tripadvisor.com/RestaurantsNear-g297587-d13313684-Srinivasa_Mangapuram_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Restaurants near Srinivasa Mangapuram Temple",
+          "snippet": "Restaurants near Srinivasa Mangapuram Temple, Tirupati on Tripadvisor: Find traveler reviews and candid photos of dining near Srinivasa ...",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://us.trip.com/travel-guide/attraction/tirupati/srinivasa-mangapuram-temple-58369989",
+          "name": "Srinivasa Mangapuram Temple Tickets [2026]",
+          "snippet": "According to Trip.com data, these 3 restaurants are close to Srinivasa Mangapuram Temple and have great user reviews: 1. Zodiac Multicuisine Restaurant ... Read more",
+          "host": "us.trip.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-in-Srinivasa-Mangapuram-Road/nct-10408936",
+          "name": "Best Restaurants in Srinivasa Mangapuram Road, Tirupati",
+          "snippet": "Restaurants in Srinivasa Mangapuram Road, Tirupati ; Name, Maa Aathidyam Multi Cuisine Restaurant · Barkaas Indo Arabic Restaurant ; Address, D.No-1-425, Chittor ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.guestreservations.com/srinivasa-hotel-near-srinivasa-mangapuram-temple-tirupati/booking",
+          "name": "Srinivasa Hotel, near Srinivasa Mangapuram Temple",
+          "snippet": "Is there a restaurant at Srinivasa Hotel, near Srinivasa Mangapuram Temple, Tirupati? Yes, this hotel does have at least one on-site restaurant to enjoy ... Read more",
+          "host": "www.guestreservations.com"
+        },
+        {
+          "url": "https://www.agoda.com/dr-srinivasahotels/hotel/chirala-in.html",
+          "name": "Srinivasa Hotel, near Srinivasa Mangapuram Temple",
+          "snippet": "Start out your day with Srinivasa Hotel, near Srinivasa Mangapuram Temple, Tirupati's available cuisine and food options such as Vegetarian restaurant to enjoy ... Read more",
+          "host": "www.agoda.com"
+        },
+        {
+          "url": "https://www.atomtickets.com/movies/srinivasa-mangapuram/411288",
+          "name": "Srinivasa Mangapuram | Tickets & Showtimes Near Me",
+          "snippet": "Srinivasa Mangapuram . 2hr 30m. 2.5/5 (293). 2hr 30m; 2.5/5 (293). Vasu Babu and Manga are carefree young lovers whose romance faces sudden danger. When ... Read more",
+          "host": "www.atomtickets.com"
+        },
+        {
+          "url": "https://www.snapchat.com/place/tabunmanaruchulusrinivasamangapuram/49b7000d-516b-4922-8dbf-178a3b95d923",
+          "name": "Tabun Manaruchulu, Srinivasa Mangapuram",
+          "snippet": "Address Kalluru Road, Srinivasa Mangapuram , C Mallavaram Panchayat, Chandragiri, Andhra Pradesh. Copy Link. Open Now Monday - Sunday. 05:30 - 20:30. Read more",
+          "host": "www.snapchat.com"
+        }
+      ],
+      "hitCount": 7
+    },
+    {
+      "area": "srinivasa-mangapuram",
+      "category": "food-bakery",
+      "gap": "Srinivasa Mangapuram: bakery/street/stays cells 0 candidates",
+      "query": "\"Srinivasa Mangapuram\" bakery OR \"tea stall\" OR hotel",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://srinivasahotels.com",
+          "name": "Srinivasa Hotels near Srinivasamangapuram Temple and",
+          "snippet": "SRINIVASA HOTEL , Behind Srinivasa Mangapuram Temple, New Tirupati - Madanapalli Highway, TIRUPATI, A.P.. 9440271431 · 9440271431. Read more",
+          "host": "srinivasahotels.com"
+        },
+        {
+          "url": "https://us.trip.com/hotels/chittoor-srivari-mettu/hotels-c649284m19146354",
+          "name": "Best Hotels near Srivari Mettu - Srinivasa Mangapuram",
+          "snippet": "Srinivasa Hotel , near Srinivasa Mangapuram Temple, Tirupati provides flawless service and all the necessary facilities for visitors. Read more",
+          "host": "us.trip.com"
+        },
+        {
+          "url": "https://www.agoda.com/dr-srinivasahotels/hotel/chirala-in.html",
+          "name": "Srinivasa Hotel, near Srinivasa Mangapuram Temple",
+          "snippet": "Nestled just 10 kilometers from the vibrant city center of Tirupati, Srinivasa Hotel offers a tranquil retreat close to the revered Srinivasa Mangapuram Temple. Read more",
+          "host": "www.agoda.com"
+        },
+        {
+          "url": "https://www.hotels.com/de816619884828442624/hotels-near-srinivasa-mangapuram-temple-tirupati-india",
+          "name": "Top 10 Hotels Closest to Srinivasa Mangapuram Temple",
+          "snippet": "Where to stay near Srinivasa Mangapuram Temple? · 1. Srinivasa Hotel · 2. Fortune Select Grand Ridge, Tirupati - Member ITC Hotels' Group · 3. Ekante Bliss IHCL ... Read more",
+          "host": "www.hotels.com"
+        },
+        {
+          "url": "https://www.expedia.com.vn/en/Tirupati-Hotels-Hotel-O-Srinivasa-Mangapuram-Temple.h136510225.Hotel-Information",
+          "name": "Hotel O Srinivasa Mangapuram Temple",
+          "snippet": "Where is Hotel O Srinivasa Mangapuram Temple located? Situated in Tirupati, this holiday home is 0.6 mi (1 km) from Srinivasa Mangapuram Temple and 2.7 mi (4.4 ...",
+          "host": "www.expedia.com.vn"
+        },
+        {
+          "url": "https://www.flyin.com/ar/property/india/tirupati/srinivasa-hotel-3957354.ar.html",
+          "name": "Srinivasa Hotel — Tirupati, India",
+          "snippet": "Oct 16, 2026 — Srinivas Hotel is conveniently located near Srinivasa Mangapuram ... Hotel is located in serene environment and has lot of greenery around Hotel . Read more",
+          "host": "www.flyin.com"
+        },
+        {
+          "url": "https://www.guestreservations.com/srinivasa-hotel-near-srinivasa-mangapuram-temple-tirupati/booking",
+          "name": "Srinivasa Hotel, near Srinivasa Mangapuram Temple",
+          "snippet": "Srinivasa Hotel , near Srinivasa Mangapuram Temple, Tirupati provides flawless service and all the necessary facilities for visitors. Read more",
+          "host": "www.guestreservations.com"
+        }
+      ],
+      "hitCount": 7
+    },
+    {
+      "area": "srinivasa-mangapuram",
+      "category": "attractions",
+      "gap": "Srinivasa Mangapuram: attractions cell 0 candidates",
+      "query": "places to visit \"Srinivasa Mangapuram\" temple",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.tripadvisor.com/AttractionsNear-g297587-d13313684-Srinivasa_Mangapuram_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Things to do near Srinivasa Mangapuram Temple",
+          "snippet": "Srinivasa Mangapuram Temple · (13 reviews). Tirupati Road, Tirupati India ; Sri Padmavathi Ammavari Temple · (750 reviews). Sannidhi St, ... Read more",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://tirupatibalajitourstravels.com/srinivasa-mangapuram",
+          "name": "Srinivasa Mangapuram – The Sacred Abode of Sri Kalyana",
+          "snippet": "May 15, 2026 — Nearby Places to Visit Along with Srinivasa Mangapuram · Tiruchanur (Alamelu Mangapuram) — Temple of Goddess Padmavathi, about 5 km from Tirupati ... Read more",
+          "host": "tirupatibalajitourstravels.com"
+        },
+        {
+          "url": "https://www.tirumala.org/MoreTemples.aspx",
+          "name": "Sri Kalyana Venkateswara Swamy",
+          "snippet": "The ancient temple of Sri Kalyana Venkateswara Swamy is located in Srinivasa Mangapuram , about 12 km to West Tirupati in Chittoor district. This ancient temple ... Read more",
+          "host": "www.tirumala.org"
+        },
+        {
+          "url": "https://www.reddit.com/r/TirumalaDarshan/comments/1w9z50k/need_suggestions",
+          "name": "Need suggestions : r/TirumalaDarshan",
+          "snippet": "... places , visit museum if possible. in tirupati-- sri pat,sri govindaraja swami temple , kapila theertham, srinivasa mangapuram (place where lord ... Read more",
+          "host": "www.reddit.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g297587-d13313684-Reviews-Srinivasa_Mangapuram_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Srinivasa Mangapuram Temple - All You SHOULD Know",
+          "snippet": "Sri Kalyana Venkateswara swamy Temple is an ancient Hindu Vaishnavite temple located at Srinivasa Mangapuram which is 12 km from Tirupati.The temple is ... Read more",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://timesinputs.com/srinivasa-mangapuram-temple-timings",
+          "name": "Srinivasa Mangapuram Temple Timings, How to Reach & Best Time",
+          "snippet": "The Sri Kalyana Venkateswara Swamy Temple , located at Srinivasa Mangapuram near Tirupati, holds a very special place in Vaishnava tradition.",
+          "host": "timesinputs.com"
+        },
+        {
+          "url": "https://tirupati.ap.gov.in/religious-tourism",
+          "name": "Religious Tourism",
+          "snippet": "The ancient temple of Sri Kalyana Venkateswara Swamy is located in Srinivasa Mangapuram , about 10 km in the west part of Tirupati city. This ancient temple ... Read more",
+          "host": "tirupati.ap.gov.in"
+        },
+        {
+          "url": "https://www.facebook.com/srivyasapooja/posts/planning-a-visit-to-srinivasa-mangapuramthe-most-important-thing-to-know-is-tha/1514987917350049",
+          "name": "Srinivasa mangapuram temple ttd seva booking guide",
+          "snippet": "It is said that if you can't reach Tirumala you can visit Srinivasa Mangapuram . Seeking the darshan of Kalyana Venkateshwara is considered ... Read more",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "chandragiri",
+      "category": "food-restaurants",
+      "gap": "Chandragiri: cafés cell 0 raw hits",
+      "query": "cafe OR restaurant near Chandragiri Fort",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.tripadvisor.in/RestaurantsNear-g297587-d4139139-Chandragiri_Palaces_and_Fort-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Restaurants near Chandragiri Palaces and Fort",
+          "snippet": "1. Orion Restaurant · (45 reviews). Indian₹₹ - ₹₹₹ · 0 km ; 2. Dojin Smart Restuarant · (11 reviews). Chinese, Indian₹ · 0.9 km ; 3. 7th ... Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://us.trip.com/travel-guide/attraction/tirupati/chandragiri-fort-137414572",
+          "name": "Chandragiri Fort Tickets [2026] - Promos, Prices, Reviews",
+          "snippet": "1. Zodiac Multicuisine Restaurant, 2.45 km from Chandragiri Fort · 2. Dojin Smart Restaurant, 4.6 km from Chandragiri Fort · 3. Kafe Tirupathi, 4.48 km from ... Read more",
+          "host": "us.trip.com"
+        },
+        {
+          "url": "https://www.makemytrip.com/hotels/tirupati-hotels-near-chandragiri_fort.html",
+          "name": "Hotels Near Chandragiri Fort Book from Top Places to Stay",
+          "snippet": "Srinivasa Hotel 3.9 km from Chandragiri Fort . Veg Restaurant ₹ 912+₹ 128 taxes & feesPer Night Ideal spot for Srivari Mettu … serene village setting. 4 km from ...",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/chandragiri-fort",
+          "name": "Explore the Historic Chandragiri Fort in Tirupati",
+          "snippet": "Explore the majestic Chandragiri Fort in Tirupati , India. Built in the 11th century, this impressive fort has a rich history and breathtaking views.",
+          "host": "www.incredibleindia.gov.in"
+        },
+        {
+          "url": "https://www.instagram.com/popular/chandragiri-hills-restaurant",
+          "name": "Chandragiri Hills Restaurant",
+          "snippet": "Apr 4, 2026 — At the top of Chandragiri Hills, Hillton Restaurant serves local Nepali cuisine with mountain views, while The View Cafe offers snacks and ... Read more",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://in.hotels.com/de1681742/book-near-chandragiri-fort-tirupati-india-hotel-rooms",
+          "name": "293 Chandragiri Fort Hotels from ₹",
+          "snippet": "Flexible booking options on selected hotels. Compare 293 hotels near Chandragiri Fort using 714 real guest reviews.",
+          "host": "in.hotels.com"
+        },
+        {
+          "url": "https://restaurants.heyplaces.in/Chandragiri/Chandragiri_Fort",
+          "name": "The top 10 restaurants near Chandragiri Fort",
+          "snippet": "1. Anytime Restaurant And Bar 6.4. Oil Nigam, Opposite Tirupati Petrol Pump, (7 km away) · 2. Via Tirupati 6.6 · 3. PLR KANDY Resorts & Hotels 5.8 · 4. Pai Viceroy ... Read more",
+          "host": "restaurants.heyplaces.in"
+        },
+        {
+          "url": "https://www.swiggy.com/city/tirupati/chandragiri-fort-restaurants/non-veg-order-online",
+          "name": "Order Non Veg Food Online in Chandragiri Fort",
+          "snippet": "Order Non Veg Food Online in Chandragiri Fort ; The Waffle Co. 4.6 · 45-50 mins. Ice Cream, Biryani, South Indian, Indian ; Frozen Bottle - Milkshakes, Desserts ... Read more",
+          "host": "www.swiggy.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "chandragiri",
+      "category": "attractions",
+      "gap": "Chandragiri: attractions cell 0 candidates",
+      "query": "places to visit Chandragiri beyond the fort Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "http://indiantravelguide.weebly.com/blog/previous/21",
+          "name": "Indian Travel Guide - Indian Travel Guide",
+          "snippet": "Jan 17, 2014 — There is also the Raja Mahal or palace within Chandragiri and the fort is surrounded by as many as eight ruined temples of Saivite and ...",
+          "host": "indiantravelguide.weebly.com"
+        },
+        {
+          "url": "https://in.trip.com/moments/poi-chandragiri-hills-61929236",
+          "name": "[2026 Chandragiri Attraction] Chandragiri Hills Travel",
+          "snippet": "Chandragiri Hills is among the finest day-trip spots near Kathmandu, offering an ideal blend of natural beauty, adventure, and spirituality.",
+          "host": "in.trip.com"
+        },
+        {
+          "url": "https://us.trip.com/things-to-do/experiences/chandragiri-citysightseeing",
+          "name": "Top 10 Citysightseeing in Chandragiri 2026 - Book now on",
+          "snippet": "Everest Mountain Flight (Scenic Plane tour ) Chandragiri Hills Half-Day Tour with Cable Car and Mountain. Chandragiri Cable Car and Monkey Temple- were both ...",
+          "host": "us.trip.com"
+        },
+        {
+          "url": "https://bookretreats.com/t/getaways/weekend-getaways-chandragiri",
+          "name": "The Best 10 Weekend Getaways in Chandragiri in 2025",
+          "snippet": "Feb 24, 2025 — Must-See Attractions: Kali Temple, Namobuddha Monastery, and Dhulikhel View Tower . Where to Eat: Newa Kitchen, Gaia Holiday Home Restaurant, and ... Read more",
+          "host": "bookretreats.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Tourism-g27404358-Chandragiri_Chittoor_District_Andhra_Pradesh-Vacations.html",
+          "name": "Chandragiri, India: All You Must Know Before You Go (2026)",
+          "snippet": "Sri Kalyana Venkateswaraswami Temple . 4.7. 4.7 of 5 bubbles ; Srivari Mettu. 4.8. 4.8 of 5 bubbles ; Tirumala Temple. 4.5. 4.5 of 5 bubbles ; Deer Park. 4.2. 4.2 ... Read more",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.culturalindiatours.com/index.php/monuments/chandragiri/120",
+          "name": "Chandragiri",
+          "snippet": "One of the striking features of the Fort is the Raja Mahal, which is now an archaeological Museum. There were more than 800 temples of Vaishnava and Shaiva ... Read more",
+          "host": "www.culturalindiatours.com"
+        },
+        {
+          "url": "https://sg.trip.com/moments/theme/destination-chandragiri-1639535-attraction-993137",
+          "name": "Chandragiri - Attraction travel guide and discussion",
+          "snippet": "Chandragiri Amusement Park offers a perfect blend of excitement, nature, and breathtaking views. The journey begins with the iconic Chandragiri. Chandragiri ...",
+          "host": "sg.trip.com"
+        },
+        {
+          "url": "https://www.tripadvisor.co.nz/Attractions-g17607301-Activities-c61-Chandragiri_Kathmandu_Valley_Bagmati_Zone_Central_Region.html",
+          "name": "THE 10 BEST Outdoor Activities in Chandragiri (Updated 2026)",
+          "snippet": "explore the Chandragiri Hilltop Park . Visit the Bhaleshwor Mahadev Temple, Breathtaking Mountain Panorama Tour, Himalayan Skyline Experience. Chandragiri Hills ...",
+          "host": "www.tripadvisor.co.nz"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "chandragiri",
+      "category": "stays",
+      "gap": "Chandragiri: stays cell 0 candidates",
+      "query": "hotel OR lodge Chandragiri Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.ixigo.com/hotels/hotels-near-chandragiri-fort-in-tirupati",
+          "name": "Hotels Near Chandragiri Fort In Tirupati | Price Starting at",
+          "snippet": "hotels near chandragiri fort in tirupati , price starting from ₹574 ; Kittu Home Stay · 1.7 km from Chandragiri Fort. 9.8. Exceptional · 32 Users ; Srinivasa Hotel, ... Read more",
+          "host": "www.ixigo.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in",
+          "name": "THE 10 CLOSEST Hotels to Chandragiri Station, Tirumala",
+          "snippet": "Hotels near Chandragiri Station · 1. Sri Padmavathi Guest House · 2. Hotel SK's · 3. Kandy PLR Hotels · 4. Hotel SLV Grand · 5. Kesava Residency. Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://www.goibibo.com",
+          "name": "3 Star Hotels Near Chandragiri Fort Tirupati",
+          "snippet": "3 Star Hotels Near Chandragiri Fort Tirupati ; Kandy PLR Hotel · Kandy PLR Hotel. Thondavada | 4.7 km from Chandragiri Fort | 9.8 km drive to Alipiri Mettu. Read more",
+          "host": "www.goibibo.com"
+        },
+        {
+          "url": "https://www.travelmyth.com/Chandragiri-Chandragiri/Hotels/luxury",
+          "name": "Luxury Hotels in Chandragiri - Travelmyth",
+          "snippet": "Luxury Hotels in Chandragiri . Hotel recommendations by Travelmyth. Best hotels: Taj Tirupati, Fortune Select Grand Ridge, Tirupati - Member ITC Hotels' ...",
+          "host": "www.travelmyth.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/5-Star-Hotels-in-Chandragiri/nct-10890984",
+          "name": "20+ 5 Star Hotels in Chandragiri - Tirupati - Justdial Jd",
+          "snippet": "The Westin Hotel ; Name, Hotel Marasa Sarovar Premiere · Ekante Bliss - IHCL SeleQtions ; Address, Karkambadi Road, Marasa Sarovar Premiere Road, Tirupati - ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.easemytrip.com",
+          "name": "Lodges in Chandragiri | Flat ₹500 Cashback*",
+          "snippet": "Book your dream lodges hotels in Chandragiri the starting price of 799 per night with one &only EaseMyTrip.We are one of the fastest-growing online hotel ... Read more",
+          "host": "www.easemytrip.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com",
+          "name": "Hotels near Chandragiri Palaces and Fort - Tirupati",
+          "snippet": "\" Hotel Sri Lakshmi Grand Is Very Close to Kapilatheertham and Close Distance to Alipiri & A Beautiful hotel ,Excellent Helpful Staff. I've ... Read more",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.expedia.com",
+          "name": "Find hotels near Govindaraja Swami Temple, Tirupati",
+          "snippet": "Ramee Guestline Hotel TIRUPATI . Ramee Guestline Hotel TIRUPATI is a 3-star hotel located 3 miles from Govindaraja Swami Temple, a review rating of 6.0. Read more",
+          "host": "www.expedia.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "renigunta",
+      "category": "food-street",
+      "gap": "Renigunta: street-food cell 0 candidates",
+      "query": "\"street food\" OR dhaba Renigunta Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Punjabi-Restaurants-in-Renigunta-Road/nct-10396757",
+          "name": "Best Punjabi Restaurants in Renigunta Road, Tirupati",
+          "snippet": "Best Punjabi Restaurants in Renigunta Road, Tirupati - Order Food Online · Chillies Food Paradise · Maa Aathidyam Multi Cuisine Restaurant · Blue Fox Restaurant. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/good-luck-family-dhaba-renigunta-locality/reviews?showAutosuggestModal=1&fsc=1",
+          "name": "Good Luck Family Dhaba - Renigunta Locality",
+          "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Renigunta Locality restaurants, Best Renigunta Locality restaurants ... dhaba restaurant. Navigation. Home. Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Mix-Veg-Dish-Restaurants-in-Renigunta",
+          "name": "Popular Restaurants Serving Mix Veg in Renigunta, Tirupati",
+          "snippet": "SHREE DHABA HOUSE Beside Kajariya Tiles Near To D Mart Akkarampalli, tirupati ... Tirupati Mix Veg Dish Restaurants in Tirupati Mix Veg Dish Restaurants in ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Dhaba-Restaurants-in-Karakambadi/nct-10158813",
+          "name": "Best Dhaba Restaurants in Karakambadi, Tirupati",
+          "snippet": "Best Dhaba Restaurants in Karakambadi, Tirupati - Order Food Online · Maa Aathidyam Multi Cuisine Restaurant · SHREE DHABA HOUSE · Nellore Mess · Chitti's Family ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Dhaba-Restaurants-in-Bugga-Street-Renigunta/nct-10158813/page-2",
+          "name": "Dhaba Restaurants in Bugga Street Renigunta, Tirupati",
+          "snippet": "Dhaba Restaurants in Bugga Street Renigunta , Tirupati - Page 2 · Table 9 · Maa Aathidyam Multi Cuisine Restaurant · Sree Dhaba House · Punjabi Dhaba Restaurant. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://fuddo.in/local/sreenivasa-reddy-dhaba-renigunta-locality-tirupati?action=select_time&menu_page=true",
+          "name": "Sreenivasa Reddy Dhaba Menu, Takeaway & Online",
+          "snippet": "... Renigunta Locality, Tirupati ... Check our detailed Sreenivasa Reddy Dhaba location guide and read Sreenivasa Reddy Dhaba reviews from other food enthusiasts. Read more",
+          "host": "fuddo.in"
+        }
+      ],
+      "hitCount": 6
+    },
+    {
+      "area": "renigunta",
+      "category": "stays",
+      "gap": "Renigunta: stays cell 0 candidates",
+      "query": "hotel OR lodge Renigunta airport Tirupati",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.expedia.com/Tirupati-Airport-Hotels.0-aTIR-0.Travel-Guide-Filter-Hotels",
+          "name": "Find hotels near Tirupati Airport (TIR) from $15",
+          "snippet": "Conveniently stay near the airport with a Erpedu Airport hotel . Find deals on stays close to Tirupati (TIR) from $15. Most hotels are fully refundable.",
+          "host": "www.expedia.com"
+        },
+        {
+          "url": "https://www.trivago.in/en-IN/opr/hotels-near-tirupati-airport?search=500-4613504",
+          "name": "Hotels near Tirupati Airport in Tirupati, India",
+          "snippet": "Hotels Tirupati close to Tirupati Airport (Tirupati, India) · Lemon Tree Premier, Tirupati · Marasa Sarovar Premiere · Vihas Hotels · Fortune Select Grand Ridge, ... Read more",
+          "host": "www.trivago.in"
+        },
+        {
+          "url": "https://www.booking.com/city/in/renigunta.en-gb.html",
+          "name": "The best available hotels & places to stay near Renigunta",
+          "snippet": "Hotel Nivaara By VYDA is set in Tirupati. This 4-star hotel offers a tour desk. The accommodation offers a 24-hour front desk, airport transfers, room service ... Read more",
+          "host": "www.booking.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in/HotelsNear-g297587-qTIR-zfd2-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Motels near Tirupati Airport",
+          "snippet": "Hotel O Renigunta Near Railway Station. (0). Chennai Anantapur Hwy Gowri Nagar, Renigunta 517520 India. 5.1 km from Tirupati Airport . Enter ... Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://en.planetofhotels.com/india/tir?page=4",
+          "name": "Hotels near Tirupati Airport (TIR), Renigunta",
+          "snippet": "Location — 20.9 km from the airport . The property includes 24-hour front desk, luggage storage, soundproof rooms. $13. Average price / ... Read more",
+          "host": "en.planetofhotels.com"
+        },
+        {
+          "url": "https://www.facebook.com/tpttsc/posts/freshup-at-149rsfreshup-icon-vista-hotels-opp-renigunta-railway-station-contact-/1518432890328814",
+          "name": "Freshup at 149rs Freshup Icon vista Hotels Opp Renigunta",
+          "snippet": "97011 12347 RENIGUNTA 97051. For bookings, visit the link in our bio or call +91 9911701701. 550 meters from the Tirupati Temple ・ prices of ₹ ...",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.makemytrip.com/hotels/hotels-in-renigunta-tirupati.html",
+          "name": "Hotels in Renigunta, Tirupati Book with 𝗙𝗥𝗘𝗘",
+          "snippet": "Showing Properties in Renigunta . Sri Paadham Deluxe Rooms · 3.4Good(9 Ratings). HOTEL KR BHAVAN · 3.8Very Good(13 Ratings). Icon vista hotel · 4.7Excellent(3 ... Read more",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/HotelsNear-g297587-oa90-qTIR-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 CLOSEST Hotels to Tirupati Airport, TIR (2026)",
+          "snippet": "Nearby Hotels with Airport Shuttle Service ; 91. KVP Inn · (31). #19-9-1A, Near Venkateswra Theater, Old Tiruchnoor Road, Tirupati 517501 ... Read more",
+          "host": "www.tripadvisor.com"
+        }
+      ],
+      "hitCount": 8
+    },
+    {
+      "area": "tiruchanur",
+      "category": "food-restaurants",
+      "gap": "Tiruchanur: restaurants cell 0 candidates",
+      "query": "restaurant OR meals Tiruchanur Alamelu Mangapuram",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://timesinputs.com/alamelu-mangapuram-temple-timings",
+          "name": "Alamelu Mangapuram Temple Timings, How to Reach & Best",
+          "snippet": "Feb 5, 2026 — Alamelu Mangapuram, is located in Tiruchanur , Afternoon: 11:00 AM – 4:00 PM Evening: 6:30 PM – 9:30 PM. Entry tickets (around ₹100–₹200) are ...",
+          "host": "timesinputs.com"
+        },
+        {
+          "url": "https://www.tirumala.org/PatAtThiruchanoorTempleLegend.aspx",
+          "name": "Sri Padmavathi Ammavari Temple",
+          "snippet": "Tiruchanoor , is one of the oldest pilgrim towns. This pilgrim centre is popularly known as “Alarmelmangapuram” (Alar-Lotus, Mel-top, Manga-Goddess, Puram-town) ...",
+          "host": "www.tirumala.org"
+        },
+        {
+          "url": "https://www.tripadvisor.com.sg/ShowUserReviews-g297587-d3705522-r616841105-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Review of Sri Padmavathi Ammavari Temple - Tirupati",
+          "snippet": "Padmavathi Temple is dedicated to Goddess Padmavathi or Alamelumanga, the Consort of Lord Venkateshwara. This temple is located at Tiruchanur near Tirupati. It ... Read more",
+          "host": "www.tripadvisor.com.sg"
+        },
+        {
+          "url": "https://intemples.blogspot.com/2016/04/alamelu-mangapuram-tiruchanur.html",
+          "name": "Alamelu Mangapuram - tiruchanur padmavathi temple",
+          "snippet": "Apr 19, 2016 — The Alamelu Mangapuram temple is situated at a comparatively close-by distance of 5 KM. Timings: 5:00 AM to 9:00 PM",
+          "host": "intemples.blogspot.com"
+        },
+        {
+          "url": "https://www.swiggy.com/city/tirupati/tiruchanoor-order-online",
+          "name": "10 Best Order Online Delivery Restaurants In Tiruchanoor",
+          "snippet": "Best Places to Order Food Online in Tiruchanoor ; PS4 Veg Restaurant (Perambur Sri Srinivasa). 4.5 ; Dabba & Co. 4 ; Truth Bowl. 4.2 ; Burger Singh(Big Punjabi ... Read more",
+          "host": "www.swiggy.com"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Padmavati_Temple",
+          "name": "Padmavati Temple",
+          "snippet": "The temple is situated in Tiruchanur (also known as Alamelu Mangapuram . Padmavathi Devi at Tiruchanur is a daily ritual offered three times, featuring ...",
+          "host": "en.wikipedia.org"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Breakfast-Restaurants-in-Tiruchanoor/nct-11605361",
+          "name": "Best Breakfast Restaurants in Tiruchanoor, Tirupati - Justdial Jd",
+          "snippet": "Springs Cafe And Restaurant Pure Veg · Maa Aathidyam Multi Cuisine Restaurant · Siva's Food Village Restaurant · Vindu Restaurant · Hotel Padmavathi · Sree ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 7
+    },
+    {
+      "area": "tiruchanur",
+      "category": "attractions",
+      "gap": "Tiruchanur: attractions cell 0 candidates",
+      "query": "places to visit near Padmavathi Ammavari Temple Tiruchanoor",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://tirupatibalajitourstravels.com/padmavati-temple-tirupati",
+          "name": "Padmavati Temple Tirupati: A Complete Guide",
+          "snippet": "Mar 9, 2026 — Nearby Places to Visit Around Padmavati Temple . Govindaraja Swami Temple (Tirupati Town):",
+          "host": "tirupatibalajitourstravels.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in/Attraction_Review-g297587-d3705522-Reviews-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Sri Padmavathi Ammavari Temple, Tirupati",
+          "snippet": "Padmavati ammavaru temple in Tiruchanur is popular and devotees throng to have darshan. Temple outside is crowded but inside it's neat and clean. Rush as usual. Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://tirupatibalajitourstravels.com/attractions-near-me",
+          "name": "10+ Best Tirupati Attractions Near Me – Top Places to Visit",
+          "snippet": "Apr 22, 2026 — Chandragiri Fort — 11 km from Tirupati City · Srikalahasti — 36 km from Tirupati · Talakona Waterfall — 50 km from Tirupati · Kanipakam — 68 km ... Read more",
+          "host": "tirupatibalajitourstravels.com"
+        },
+        {
+          "url": "https://www.bestbus.in/tourist-attractions/city/tiruchanur",
+          "name": "Tiruchanur City - Must Visit Tourist Places, Tours, Hotels in 2026",
+          "snippet": "Tiruchanur is popular tourist destination with visiting places like Alamelu Manga or Padmavathi devi temple , Sri Ranganatha Swamy temple, Sri Vasavi kanyaka ... Read more",
+          "host": "www.bestbus.in"
+        },
+        {
+          "url": "https://www.tirupatitrip.com/places-to-visit-in-tirupati",
+          "name": "Places to visit in tirupati - Tirupatitrip.com",
+          "snippet": "1. Sri Kapileswara Swamy Temple · 2. Sri Govindaraja swamy Temple · 3. Sri Kodandarama Swamy Temple · 4. Iskcon Temple · 5. Sri Padamavathi Ammavari Temple ( ... Read more",
+          "host": "www.tirupatitrip.com"
+        },
+        {
+          "url": "https://tirupatibalajitourstravels.com/places/tiruchanur",
+          "name": "Tiruchanur – No.1 Amazing Padmavathi Ammavari Temple",
+          "snippet": "Key attractions include the Sri Padmavathi Ammavari Temple , Sri Krishna Swamy Temple, the sacred Padma Sarovaram (temple tank), and the Ananda Nilayam ... Read more",
+          "host": "tirupatibalajitourstravels.com"
+        },
+        {
+          "url": "https://www.facebook.com/TodoTirupati/posts/must-visit-places-in-tirupati-padmavathi-ammavari-temple-tiruchanur5-km-kapila-t/122141099780987669",
+          "name": "Must Visit Places in Tirupati 🙏🏻😇 • Padmavathi Ammavari",
+          "snippet": "Must Visit Places in Tirupati • Padmavathi Ammavari Temple, Tiruchanur(5 km ) • Kapila Theertham (3 km) • Govindaraja Swamy Temple ... Read more",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 7
+    },
+    {
+      "area": "surrounding",
+      "category": "food-restaurants",
+      "gap": "surrounding: tiffin/restaurants cells 0 candidates",
+      "query": "restaurant OR tiffin centre Srikalahasti",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.mappls.com/place-msd+tiffin+centre-pn+road-srikalahasti-andhra+pradesh-517644-E5MA5V@zdata=MTMuNzYwNjQ1Kzc5LjcwOTExMisxNytFNU1BNVYrK25yed",
+          "name": "MSD Tiffin Centre, PN Road, Srikalahasti, Andhra Pradesh,",
+          "snippet": "Get map of msd tiffin centre, pn road, srikalahasti , andhra pradesh, 517644 by Mappls ... Find location,directions,places & brands near msd tiffin centre, pn road",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Srikalahasti/Kalahasteeswara-Tiffens/9999P8578-8578-241207195059-J5R4_BZDET",
+          "name": "Kalahasteeswara Tiffens - Tiffin Services In Srikalahasti",
+          "snippet": "Kalahasteeswara Tiffens in Srikalahasti well known for Tiffin Services in Srikalahasti . Rated 4.7 based on 7 Customer Reviews and Ratings with 1 Photos.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g297586-d11925442-Reviews-Royal_Tiffin_Center-Hyderabad_Hyderabad_District_Telangana.html",
+          "name": "ROYAL TIFFIN CENTER, Hyderabad - Restaurant Reviews",
+          "snippet": "Royal Tiffin Center, Hyderabad : See 4 unbiased reviews of Royal Tiffin Center, rated 4.0 of 5 on Tripadvisor and ranked #1031 of 2030 restaurants in ...",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.justdial.com/Srikalahasti/Tiffin-Services-With-Veg-Options-Available-in-Government-Hospital-Road/nct-10481155-att-rest801",
+          "name": "Best Tiffin Services With Veg Options Available in Government",
+          "snippet": "Top Tiffin Services With Veg Options Available in Government Hospital Road, Srikalahasti. Tiffin Center Bahadur Pet , Opens at 08:00 AM … 517644 7163/2,",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g297586-d7959738-Reviews-Pragathi_Tiffin_Center-Hyderabad_Hyderabad_District_Telangana.html",
+          "name": "PRAGATHI TIFFIN CENTER, Hyderabad - 2026 Reviews &",
+          "snippet": "Pragathi Tiffin Center, Hyderabad: Expect fresh & tasty breakfast items, tasty south Indian tiffins . This place is very cheap and serves quality food.",
+          "host": "www.tripadvisor.co.uk"
+        },
+        {
+          "url": "https://www.zomato.com/hyderabad/sri-aashritha-tiffin-center-1-vanasthalipuram/menu",
+          "name": "Sri Aashritha Tiffin Center Menu - Hyderabad",
+          "snippet": "Plot 92, Laxmi Bhavani Colony, Vanasthalipuram, Hyderabad . Open now10am – 10pm (Today). Sri Aashritha Tiffin Center Menu. Menu menu. Menu. 1 page ... Read more",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 6
+    },
+    {
+      "area": "surrounding",
+      "category": "stays",
+      "gap": "surrounding: stays cell 0 candidates",
+      "query": "hotel OR lodge near Srikalahasti temple",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.makemytrip.com/hotels/srikalahasti-hotels-near-sri_kalahasti_railway_station.html",
+          "name": "Hotels Near Sri Kalahasti Railway Station",
+          "snippet": "Raj Residency (New). 9 minutes walk to Sri Kalahasti Railway Station ; Kalahasteeswara Residency. 10 minutes walk to Sri Kalahasti Railway Station ; 4.1Very Good( ... Read more",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://ae.makemytrip.global/hotels-international/en-ae/india/srikalahasti-hotels/srikalahasti_temple.html",
+          "name": "Book from 48 Hotels Near Srikalahasti Temple @ 25% OFF",
+          "snippet": "4.3 · (129 Ratings). Mgr Residency · 7 minutes walk to Srikalahasti Temple · AED 65 ; 4.5 · (226 Ratings) · The Lotus Park Hotel · Sannidhi St | 6 minutes walk to ... Read more",
+          "host": "ae.makemytrip.global"
+        },
+        {
+          "url": "https://www.facebook.com/groups/weekends.longweekendTrips/posts/3583774485226647",
+          "name": "Accommodation near Srikalahasti Temple for one day",
+          "snippet": "can someone  help me in booking  temple accomodation for one day in srikalahasti",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://uk.trip.com/hotels/srikalahasti-srikalahasti-temple/hotels-c60190m9538449",
+          "name": "Best Hotels near Srikalahasti Temple",
+          "snippet": "Best Hotels near Srikalahasti Temple ; Hotel Vijaya Grand. 8.3 · Very Good. 71 reviews ; Hotel Bluestone. 8.4 · Very Good. 65 reviews ; Hotel MGM Grand. 7.7 · Good. Read more",
+          "host": "uk.trip.com"
+        },
+        {
+          "url": "https://www.expedia.com/Sri-Kalahasteeswara-Swami-Temple-Hotels.0-l553248621532739240-0.Travel-Guide-Filter-Hotels",
+          "name": "Find hotels near Sri Kalahasteeswara Swami Temple",
+          "snippet": "Our top choices for Sri Kalahasteeswara Swami Temple hotels · 1. Devansh Bhanu Residency DBR · 2. Taj Tirupati · 3. Hotel MGM Grand · 4. Hotel GMR Pearls · 5. Hotel ... Read more",
+          "host": "www.expedia.com"
+        },
+        {
+          "url": "https://www.makemytrip.global/hotels-international/en-sg/india/srikalahasti-hotels",
+          "name": "Best Hotels In Srikalahasti, India (From SGD 8) - MakeMyTrip",
+          "snippet": "4.3 · (129 Ratings). Mgr Residency · 7 minutes walk to Srikalahasti Temple · SGD 23 ; 4.4 · (869 Ratings) · Brigade Hotels and Resorts · Sannidhi St | 4 minutes walk ... Read more",
+          "host": "www.makemytrip.global"
+        },
+        {
+          "url": "https://srikalahastitemple.org.in/ganga-sadan-srikalahasti-complete-stay-guide-for-pilgrims",
+          "name": "Ganga Sadan Srikalahasti: Rooms, Tariff & Booking Guide",
+          "snippet": "Ganga Sadan is actually a private hotel in the Bahadur Pet–Appalayagunta . Distance from temple: Approximately 1.26 km (5 minutes by auto) Roughly ₹800–₹1,500 ...",
+          "host": "srikalahastitemple.org.in"
+        },
+        {
+          "url": "https://www.google.com/travel/hotels/landingpage/srikalahasti-temple-hotels",
+          "name": "Hotels in Srikalahasti Temple",
+          "snippet": "Popular hotels in Srikalahasti Temple ; Hotel Bluestone 2. 4.8. (3.1K) ; SSR HOTEL SRIKALAHASTI. 4.0. (3.2K) ; Hotel MGM Grand. 4.0. (2.9K) ; Hotel KSR Grand. 5.0. Read more",
+          "host": "www.google.com"
+        }
+      ],
+      "hitCount": 8
+    }
+  ]
+}

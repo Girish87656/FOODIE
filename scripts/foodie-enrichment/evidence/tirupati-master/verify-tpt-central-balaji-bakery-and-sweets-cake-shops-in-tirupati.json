@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "balaji bakery and sweets - Cake Shops In Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/BALAJI-BAKERY-AND-SWEETS-Jcr-Complex-Vidya-Nagar-Colony/9999PX877-X877-210422175849-V4P6_BZDET"
   },
   "query": "\"balaji bakery and sweets - Cake Shops In Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://wanderlog.com/place/details/10546437/balaji-bakery",
+      "name": "Balaji Bakery, Tirupati, India - Reviews, Ratings, Tips and",
+      "snippet": "Nestled in the heart of Tirupati , Balaji Bakery. Gowri Nagar, Thukivakam, Andhra Pradesh 517520, India Phone +91 70133 76420",
+      "host": "wanderlog.com",
+      "kind": null
+    },
+    {
+      "url": "https://h-id.vyaparify.com/sree-balaji-bakery-and-sweets",
+      "name": "SREE BALAJI BAKERY AND SWEETS",
+      "snippet": "Situated at the flyover bridge end in Vidya Nagar Colony, we offer a delicious array of treats crafted with love and tradition. Indulge today! Address Verified ... Read more",
+      "host": "h-id.vyaparify.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Sai-Balaji-Bakers-Opposite-D-Mart-Managal-Road-Beside-Kuppanna-Hotel-Akkarampalli/9999PX877-X877-210419110821-D8A1_BZDET",
+      "name": "Sri Sai Balaji Bakers - Cake Shops In Tirupati - Justdial Jd",
+      "snippet": "Sri Sai Balaji Bakers. Opposite D MART, Beside Kuppanna Hotel, Tirumangalam Reddy Road, Akkarampalli, Tirupati -517507, hours from Monday:- 6:00 am - 9:00 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Birthday-Cake-Manufacturers-in-New-Balaji-Colony/nct-10046988",
+      "name": "Top Birthday Cake Manufacturers in New Balaji Colony,",
+      "snippet": "Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle), D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumalai-Sweets-And-Bakery-Renigunta-Road/9999PX877-X877-181126203131-N5A5_BZDET",
+      "name": "Tirumalai Sweets And Bakery in Renigunta Road,Tirupati",
+      "snippet": "Tirumalai Sweets And Bakery in Renigunta Road, Tirupati … hours from Monday:- 7:00 am - 10:00 pm, Tuesday:- 7:00 am - 10:00 pm, Sunday:- 7:00 am - 10:00 pm.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Balaji-Bakers-Near-Leela-Mahal-Circle-Gandhi-Road/9999PX877-X877-160730113156-U4T4_BZDET",
+      "name": "Balaji Bakers in Gandhi Road,Tirupati - Best Bakeries near me",
+      "snippet": "Balaji Bakers in Gandhi Road, Tirupati … hours from Monday:- 8:30 am - 10:30 pm, Sunday:- 8:30 am - 10:30 pm. cakes for birthdays, weddings, and anniversaries.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Balaji Bakery, Tirupati, India - Reviews, Ratings, Tips and :: Nestled in the heart of Tirupati , Balaji Bakery. Gowri Nagar, Thukivakam, Andhra Pradesh 517520, India Phone +91 70133 76420",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

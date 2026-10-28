@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Nic Natural Ice Creams in tml by pass road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Nic-Natural-Ice-Creams-Tml-By-Pass-Road/9999PX877-X877-211102211119-V6Y8_BZDET"
   },
   "query": "\"Nic Natural Ice Creams in tml by pass road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Bangalore/Nic-Natural-Ice-Creams-in-8th-Mile-Circle/nct-12162460",
+      "name": "Nic Natural Ice Creams in 8Th Mile Circle, Bangalore",
+      "snippet": "Address , Ganesha Sawmill Road, T Dasarahalli, Bangalore - 560057 (1'st Cross ... 20188c, Maruthi Nagar, tml by pass road, Tirupati - 517501, Avarampalyam ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Parlours-in-Tirupati-North/nct-10261168",
+      "name": "Best Ice Cream Parlours in Tirupati North, Tirupati",
+      "snippet": "Ice Cream Parlours in Tirupati North, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Guntur/Nic-Naturals-Ice-Creams-Pandaripuram/9999PX863-X863-230217042329-G2E7_BZDET?srcterm=Nic%2520Naturals%2520Ice%2520Creams&predocid=9999PX863.X863.221226164238.M2F1",
+      "name": "Nic Naturals Ice Creams in Pandaripuram,Guntur",
+      "snippet": "It is at Ashok Nagar, Beside Anvitha Kirana Stores, This establishment is functional from 11:30 - 22:30. s at Pandaripuram, Guntur.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Parlours-in-T-P-Area/nct-10261168",
+      "name": "Best Ice Cream Parlours in TP Area, Tirupati - Justdial Jd",
+      "snippet": "274 Ice Cream Parlours in T P Area, Tirupati . Nic Natural Ice Creams. Address D.no-19-12-1/2,Ground Floor, 517501 Kt Road, Tirupati . Air Bypass Road,Annamaiah",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Home-Delivery-with-Delivery-Service/nct-10260984-att-hos7182",
+      "name": "Best Ice Cream Home Delivery With Delivery Service in",
+      "snippet": "Nic Natural Ice Creams Ice Cream Lab Address C.M.R.Complex, Tml Bypass Road, Nandi Circle, Tirupati - 517507 (Opposite Hotel SK)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Hyderabad/Nic-Natural-Ice-Creams-Pragati-Nagar-Colony/040PXX40-XX40-190228161657-M1T3_BZDET",
+      "name": "Nic Natural Ice Creams in Pragati Nagar Colony,Hyderabad",
+      "snippet": "Address Shop No. 2 Venkateswara Homes Balanjeya Swami Temple Baghameeri Kukatpally, Pragati Nagar Colony, Hyderabad-500072, Telangana … is functional from 12: ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Nic Natural Ice Creams in 8Th Mile Circle, Bangalore :: Address , Ganesha Sawmill Road, T Dasarahalli, Bangalore - 560057 (1'st Cross ... 20188c, Maruthi Nagar, tml by pass road, Tirupati - 517501, Avarampalyam ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

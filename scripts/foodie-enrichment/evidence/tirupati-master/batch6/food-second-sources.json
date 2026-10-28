@@ -1,0 +1,1796 @@
+{
+  "task": "batch-6 second-source evidence search for the retained batch-015 food venues",
+  "retrievedOn": "2026-10-28",
+  "pacingMs": 8000,
+  "breaker": "pause after 3 consecutive errors",
+  "pausedThisRun": false,
+  "honesty": "a second source is CORROBORATION for owner review — it NEVER flips verification_status (an import never self-verifies)",
+  "venues": [
+    {
+      "venue": "Babu Tiffin Centre",
+      "area": "tpt-central",
+      "category": "tiffin",
+      "query": "\"Babu Tiffin Centre\" Tirupati",
+      "originalHost": "www.facebook.com",
+      "originalSourceKind": "facebook-page",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.facebook.com/fb-answers/best-tiffin-services-in-tirupati/?locale=es_ES",
+          "name": "Best Tiffin Services in Tirupati",
+          "snippet": "Babu Tiffin Centre on Bazar Street has been a pure veg favorite since 1984, known for ghee karam dosa and upma dosa. Only place in Tirupati serving more than ... Read more",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.mappls.com/place-babu+tiffin+centre-sarojini+devi+road-varadaraja+nagar-tirupati-andhra+pradesh-517501-HCARBQ@zdata=MTMuNjMyODM0Kzc5LjQxNTg4NCsxNytIQ0FSQlErK25yed",
+          "name": "Babu Tiffin Centre, Varadaraja Nagar",
+          "snippet": "Get map of babu tiffin centre , sarojini devi road, varadaraja nagar, tirupati , andhra pradesh, 517501 by Mapmyindia. Find location,directions,places ...",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.facebook.com/fb-answers/best-tiffin-services-in-tirupati/?locale=lt_LT",
+          "name": "Best Tiffin Services in Tirupati",
+          "snippet": "Babu Tiffin Centre on Bazar Street has been a pure veg favorite since 1984, known for ghee karam dosa and upma dosa. Only place in Tirupati serving more than ... Read more",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Varadaraja-Nagar/Restaurant/Babu-Tiffin-Centre/store/3b4bca4?srsltid=AYCX9vKlolv5LOCz1Gu6srjogZMajEq_HCEPDoFdCMpU3A9WKeCZVES8",
+          "name": "Babu Tiffin centre, Varadaraja Nagar, Tirupati",
+          "snippet": "Babu Tiffin centre offers dining services operating from Varadaraja Nagar, Tirupati . It is known for its range of food offerings. Visit in store to explore.",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Monthly-Basis/nct-11992539/page-3",
+          "name": "Tiffin Services For Monthly Basis in Tirupati - Page 3",
+          "snippet": "Babu Tiffin Center is a delightful gem for food lovers! The fresh food served here is truly unmatched, Opens at 7:00 am tomorrow",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Breakfast/nct-11324399",
+          "name": "Best Tiffin Services For Breakfast in Tirupati",
+          "snippet": "Enjoy delicious, homemade breakfast delivered to your doorstep. Tiffin Centre 3.8109. Open until 10:00 pm. The food is very tasty and fresh. Average rating 4.0 ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 4
+    },
+    {
+      "venue": "Shankar Tiffin Center, Srinivasa Nagar",
+      "area": "tpt-central",
+      "category": "tiffin",
+      "query": "\"Shankar Tiffin Center, Srinivasa Nagar\" Srinivasa Nagar",
+      "originalHost": "tirupati.idbf.in",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Bangalore/Sri-Srinivasa-Tiffin-Center-Whitefield/080PXX80-XX80-240711140617-X5V3_BZDET",
+          "name": "Sri Srinivasa Tiffin Center in Whitefield,Bangalore - Justdial Jd",
+          "snippet": "Sri Srinivasa Tiffin Center in Whitefield,Bangalore. Monday:- 7:00 am - 11:00 am, Sunday:- 7:00 am - 11:00 am hours of operation.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Kakinada/Srinivasa-Tiffin-Centre-Ramanayyapeta/9999PX884-X884-200627220014-J8Z5_BZDET",
+          "name": "Srinivasa Tiffin Centre in Ramanayyapeta,Kakinada",
+          "snippet": "Srinivasa Tiffin Centre in Ramanayyapeta,Kakinada. Rated 3.6 based on 523 Customer. This establishment is functional from 06:00 - 22:00.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Hyderabad/Srinivasa-Tiffins-Opposite-Hp-Petrol-Pump-Lb-Nagar/040PXX40-XX40-211101203505-I6Q6_BZDET",
+          "name": "Srinivasa Tiffins in lb nagar,Hyderabad - Order Food Online",
+          "snippet": "Srinivasa Tiffins in lb nagar ,Hyderabad. Address Plot No34, Sai Nagar ・ p Petrol Pump, LB Nagar , Hyderabad-500074, Monday:- 6:30 am - 12:30 pm, Sunday:- 6:30 ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.instagram.com/popular/srinivasa-tiffin-centre-menu",
+          "name": "Srinivasa Tiffin Centre Menu",
+          "snippet": "Watch short videos about srinivasa tiffin centre menu ・ finedining 14, 5th Ave, Z Block, Kathiravan Colony, Anna Nagar , Chennai, Tamil Nadu 600040 ・ neetham  ...",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.justdial.com/Chennai/Shankar-Tiffin-Center-Parrys/044PXX44-XX44-180327124456-G5T6_BZDET/reviews",
+          "name": "4 Reviews for Shankar Tiffin Center in Parrys, Chennai",
+          "snippet": "has Monday:- 6:30 am - 5:00 pm, Saturday:- 6:30 am - 5:00 pm, Sunday:- Closed hours of operation. an average rating of 3.5 based on user reviews.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Bangalore/Sri-Srinivasa-Tiffin-Centre/080PXX80-XX80-221109214829-A5V9_BZDET",
+          "name": "Sri Srinivasa Tiffin Centre in GNP School Road,Bangalore",
+          "snippet": "Sri Srinivasa Tiffin Centre in GNP School Road,Bangalore. NP School Road, Bangalore-560010, Monday:- 7:30 am - 11:30 pm, Sunday:- 7:30 am - 11:30 pm hours of ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Jayalakshmi Tiffin Center, Srinagar",
+      "area": "tpt-central",
+      "category": "tiffin",
+      "query": "\"Jayalakshmi Tiffin Center, Srinagar\" Srinagar",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Jayalakshmi-Tiffin-Center-Srinagar/9999PX877-X877-240709181138-J2J3_BZDET/reviews",
+          "name": "13 Reviews for Jayalakshmi Tiffin Center in Srinagar, Tirupati",
+          "snippet": "Jayalakshmi Tiffin Center in Srinagar , Tirupati currently holds an average rating of 4.8 based on user reviews. Checking reviews before visiting or availing ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Jayalakshmi-Tiffin-Center-Srinagar/9999PX877-X877-240709181138-J2J3_BZDET",
+          "name": "Jayalakshmi Tiffin Center in Srinagar,Tirupati",
+          "snippet": "... 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, Reviews & Ratings, Photos, Maps of Jayalakshmi Tiffin Center, Srinagar , Tirupati.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Jayalakshmi-Tiffin-Center-Srinagar/9999PX877-X877-240709181138-J2J3_BZDET/photos",
+          "name": "1 Photos of Jayalakshmi Tiffin Center in Srinagar, Tirupati",
+          "snippet": "Photos of Jayalakshmi Tiffin Center in Srinagar , Tirupati. Jayalakshmi Tiffin Center, Srinagar , tirupati - Tiffin Services - 1. TirupatiTiffin Services In ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Balaji-Tiffen-Center-Srinagar/9999PX877-X877-250408210921-D1U3_BZDET/amp",
+          "name": "Tiffin Services - Balaji Tiffen Center in Srinagar,Tirupati",
+          "snippet": "Balaji Tiffen Center in Srinagar ,Tirupati - Best Tiffin Services near me in Tirupati - Justdial. ... Jayalakshmi Tiffin Center Srinagar . 4.8. 14 Ratings · Paya ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Vidyanagar-3Rd-Cross-Road/nct-10481155",
+          "name": "Best Tiffin Services in Vidyanagar 3Rd Cross Road, Tirupati",
+          "snippet": "Jayalakshmi Tiffin Center Srinagar , tirupati. Upload Photos. Share. Jayalakshmi Tiffin Center. 4.814 Ratings. Srinagar - 2.45 km. Opens at 7:00 am tomorrow. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services/nct-10481155/page-3",
+          "name": "Tiffin Services in Tirupati - Page 3",
+          "snippet": "Tiffin Services in Tirupati - Page 3. Jayalakshmi Tiffin Center Srinagar , tirupati. Upload Photos. Share. Jayalakshmi Tiffin Center. 4.814 Ratings. Srinagar . Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "Uday Tiffin Center, Maruthi Nagar",
+      "area": "tpt-central",
+      "category": "tiffin",
+      "query": "\"Uday Tiffin Center, Maruthi Nagar\" Maruthi Nagar",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Uday-Tiffin-Center-Maruthi-Nagar/9999PX877-X877-200929015806-D3Z1_BZDET/reviews",
+          "name": "91 Reviews for Uday Tiffin Center in Maruthi Nagar, Tirupati",
+          "snippet": "Uday Tiffin Center in Tirupati has Monday:- 8:00 am - 1:00 pm | 5:00 pm - 10:00 pm, Sunday:- 8:00 am … currently holds an average rating of 3.8 based on user ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Uday-Tiffin-Center-Maruthi-Nagar/9999PX877-X877-200929015806-D3Z1_BZDET",
+          "name": "Uday Tiffin Center in Maruthi Nagar,Tirupati",
+          "snippet": "... Uday Tiffin Center, Maruthi Nagar , Tirupati ... Padmavathi Nagar, Maruthi Nagar , Tirupati-517501, Andhra Pradesh. DirectionCopy. Similar Businesses. Tiffins ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Uday-Tiffin-Center-Maruthi-Nagar/9999PX877-X877-200929015806-D3Z1_BZDET/photos",
+          "name": "2 Photos of Uday Tiffin Center in Maruthi Nagar, Tirupati",
+          "snippet": "Uday Tiffin Center, Maruthi Nagar , tirupati - Tiffin Services - 1. Uday Tiffin Center, Maruthi Nagar , tirupati - Tiffin Services - 2. TirupatiTiffin ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Maruthi-Nagar/nct-10481155",
+          "name": "Best Tiffin Services in Maruthi Nagar, Tirupati - Justdial Jd",
+          "snippet": "Uday Tiffin Center Maruthi Nagar , tirupati. Upload Photos. Share. Uday Tiffin ... Padmavathi Nagar, Maruthi Nagar , Tirupati - 517501, Muncipal Building ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://yellowpages-is.cybo.com/IN/tirupati/rannsoknarstofnun",
+          "name": "Rannsoknarstofnun Viðskipti í Tirupati",
+          "snippet": "... Uday Tiffin center, Maruthi Nagar . 4.3 (3) · 090302 64588. venkattechnologies.co.in. 1.6 km · PROFESSIONAL SERVICES, RANNSÓKNARSTOFNUN. 6. Srinivasa ...",
+          "host": "yellowpages-is.cybo.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Fast-Food-in-1St-Cross-Road/nct-12287245",
+          "name": "Top Tiffin Services For Fast Food in 1St Cross Road, Tirupati",
+          "snippet": "... Uday Tiffin Center Maruthi Nagar , tirupati. Upload Photos. Share. Uday Tiffin Center. 3.891 Ratings. Padmavathi Nagar Maruthi ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 1
+    },
+    {
+      "venue": "Nellore Mess, Prakasam Road",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Nellore Mess, Prakasam Road\" Prakasam Road",
+      "originalHost": "www.swiggy.com",
+      "originalSourceKind": "swiggy-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.swiggy.com/city/tirupati/nellore-mess-prakasam-road-rest126018",
+          "name": "Order from Nellore Mess online in Tirupati",
+          "snippet": "Nellore Mess is a popular food destination in Prakasam Road , Tirupati, known for serving delicious South Indian food. ... 120D, Prakasam Road , Tirupati. Read more",
+          "host": "www.swiggy.com"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Prakasam-Road-Tirupati/Restaurant/New-Nellore-Mess/store/425a341/reviews?srsltid=AYCX9vKix3iqAV8N-jYHkvlvyYGtgwafViIXiZLTmpWCE9uk6DjppHy9",
+          "name": "NEW NELLORE MESS Reviews - Prakasam Road Tirupati",
+          "snippet": "Reviews & posts — NEW NELLORE MESS, Prakasam Road Tirupati, Tirupati. 1–5☆ customer feedback, photos, and threads on magicpin.",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.mappls.com/place-nellore+mess-prakasam+road-tirupati-andhra+pradesh-517501-KNPJH2@zdata=MTMuNjI5ODAyKzc5LjQxMDg1NysxNytLTlBKSDIrK25yed",
+          "name": "Nellore Mess, Prakasam Road, Tirupati, Andhra Pradesh,",
+          "snippet": "Get map of nellore mess, prakasam road , tirupati, andhra pradesh, 517501 by Mappls. Find location,directions,places & brands near nellore mess, prakasam road ,",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Nellore-Mess-Prakasam-Road-Tirupati-Ho/9999PMULHYDSTD15492_BZDET/%7B%7Bbackurl%7D%7D",
+          "name": "Korlagunta, Tirupati",
+          "snippet": "Located in the vibrant heart of Korlagunta, Nellore Mess is a cherished culinary haven where tradition meets innovation. Known for its commitment to quality ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 4,
+      "hitsOnOtherHosts": 3
+    },
+    {
+      "venue": "Deva Tea Stall, Korlagunta",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"Deva Tea Stall, Korlagunta\" Korlagunta",
+      "originalHost": "tirupati.idbf.in",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-1St-Cross-Road/nct-10853304",
+          "name": "Best Tea Stalls in 1St Cross Road, Tirupati",
+          "snippet": "183 Tea Stalls in 1St Cross Road, Tirupati. Top Rated Best Tea Stalls in 1St Cross Road, Korlagunta - 2.23 km. Korlagunta , Tirupati - 517501 Patnool Street,  ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Tataiah-Gunta/nct-10853304/page-4?stype=category_list",
+          "name": "Tea Stalls in Tataiah Gunta, Tirupati - Page 4",
+          "snippet": "Korlagunta , Tirupati. Korlagunta ₹ 150 Price for two Opens at 08:00 AM at 10:00 AM Call Now. Average Rating 4.1 (783 Ratings & Reviews as on 24/08/2026) Road,  ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Maruthi-Nagar/nct-10853304",
+          "name": "Best Tea Stalls in Maruthi Nagar, Tirupati - Justdial Jd",
+          "snippet": "182 Tea Stalls in Maruthi Nagar, Tirupati. Korlagunta , Tirupati - 517501 L. S. Nagar,Tummalagunta, Korlagunta , Tirupati - 517501 20272/A1,",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.instagram.com/popular/deva-tea-stall",
+          "name": "Deva Tea Stall",
+          "snippet": "It operates daily from 4:00 AM to 10:00 PM and serves tea and snacks to visitors near the temple area ¹ ². Reviews frequently mention it as a quick stop for ... Read more",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.mappls.com/place-kerala+tea+stall-leela+mahal+road-korlagunta-tirupati-andhra+pradesh-517501-8YMW75@zdata=MTMuNjM3NjQyKzc5LjQyMzMzMysxNys4WU1XNzUrK25yed",
+          "name": "Kerala Tea Stall, Leela Mahal Road, Korlagunta, Tirupati,",
+          "snippet": "Information · 8ymw75, Leela Mahal Road, Korlagunta , Tirupati, Andhra Pradesh, 517501. DIGIPIN: 4TF-CL8-P85F. content_copyshare · Mappls Pin: mappls.com/8ymw75. Read more",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Sv-Nagar/nct-10853304",
+          "name": "Top Tea Stalls in Sv Nagar - Best Chai Wala Tirupati near me",
+          "snippet": "20 Tea Stalls in Sv Nagar, Tirupati. Korlagunta , Tirupati - 517501 Patnool Street, filled with exciting flavors like Tulsi Tea, Wooden Tea, and even Bamboo Tea ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Sk Babu Tea Stall, Ashok Nagar",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"Sk Babu Tea Stall, Ashok Nagar\" Ashok Nagar",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Jaipur/Babu-Tea-Stall-Siddharth-Nagar/0141PX141-X141-190821050923-G7J5_BZDET",
+          "name": "Babu Tea Stall in Siddharth Nagar,Jaipur - Justdial Jd",
+          "snippet": "Babu Tea Stall in Siddharth Nagar ,Jaipur well known for Tea Stalls in Jaipur . Rated 4.5 based on 103 Customer Reviews and Ratings with 2 Photos.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Delhi/Tea-Stalls-in-New-Ashok-Nagar-Metro-Station-New-Ashok-Nagar/page-1",
+          "name": "Best Tea Stalls near New Ashok Nagar Metro Station",
+          "snippet": "Best Tea Stalls near New Ashok Nagar Metro Station New Ashok Nagar , Delhi - Order Food Online ; Cha - Perfect Tea Blends · 64 Ratings. Mayur Vihar - 1.77 km. Open ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://ashoknagar.idbf.in/tea",
+          "name": "Best Tea Shops in Ashoknagar - Top Chai Stalls Near Me",
+          "snippet": "Popular Tea Shops and Chai Stalls in Ashoknagar · Abhishek TEA Shop · Adesh Tea Stall · Baba Shyam Tea Stall · Baghel Tea Stall · Chai Ki Shop · Gwal Tea Stall. Read more",
+          "host": "ashoknagar.idbf.in"
+        },
+        {
+          "url": "https://www.justdial.com/Kurnool/Ashok-K-Near-Krishna-Nagar-Railway-Gate-Krishna-Nagar/9999P8518-8518-151104155307-S4S9_BZDET",
+          "name": "Ashok K in Krishna Nagar,Kurnool - Best Tea Stalls near",
+          "snippet": "Where is Ashok K located? Ashok K is located in Krishna Nagar near Near Krishna Nagar Railway Gate. 5. Does Ashok K cater to special requests for orders of tea? Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Delhi/Ashok-Tea-Stall-West-Patel-Nagar/011PXX11-XX11-240925020356-C7Y4_BZDET",
+          "name": "Ashok Tea Stall in West Patel Nagar,Delhi",
+          "snippet": "Z, 37, Block 12, Patel Nagar , W Patel Nagar Road, West Patel Nagar , Delhi-110008 ... Located in the vibrant heart of West Patel Nagar , Ashok Tea Stall is a ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Ashoknagar/Tea-Stalls/nct-10853304/page-2",
+          "name": "Tea Stalls in Ashoknagar - Page 2",
+          "snippet": "Tea Stalls in Ashoknagar ; Name, Monu Coldrinks · Lali Coldrinks · Brahmanand Sharma ; Address, Galla Mandi Ke Pass, Rampura Mohalla, Ashoknagar - 473331, Shiv ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 1
+    },
+    {
+      "venue": "R.K. Tea Stall, Narula Market",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"R.K. Tea Stall, Narula Market\" Narula Market",
+      "originalHost": "www.facebook.com",
+      "originalSourceKind": "facebook-page",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.facebook.com/ItsMyTirupathi/posts/buy-1-tea-get-1-free-rkgrandbanquethallnote-offer-valid-only-on-this-sunday-apri/997967736252171",
+          "name": "Buy 1 Tea & Get 1 Free @rkgrandbanquethall Note  : Offer'",
+          "snippet": "888 666 9109 📍 RK Cafe, Air Bypass Road, R.K.Tea stall near our Prestige Tailors, Narula Market complex Sriya square, BBSR. SURAT 09 99754 98372",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.facebook.com/groups/foodaholicsinahmedabad/posts/1465028890235248",
+          "name": "Finally khetla aapa tea stall. Was more happy as there was",
+          "snippet": "R.K.Tea stall near our Prestige Tailors, Narula Market complex Sriya square, BBSR . Located on street corners, near markets, or in quiet lanes,",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.justdial.com/Delhi/Narula-Garments-Sector-3-Market-R-K-Puram/011PF012657_BZDET",
+          "name": "Narula Garments in R K Puram,Delhi",
+          "snippet": "Narula Garments in R K Puram, Delhi. Shop No-18, Sector-3 Market , Narula Garments in R K Puram, Delhi is located Sector-3 Market. Tea Stalls Street Food",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/narulasarees/videos/a-beautiful-journey-across-the-looms-of-india-curated-exclusively-for-you-at-nar/1334924375262752",
+          "name": "Narula Sarees & Readymade",
+          "snippet": "Visit us to explore these regional masterpieces. 🛍️✨ For any queries,DM us on Instagram or Contact us via call or whatsapp at 9337101861.",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.instagram.com/narulas_bhopal/?hl=en",
+          "name": "Narula's Bhopal (@narulas_bhopal)",
+          "snippet": "Easy to Find Easy to Remember The Narula's- 10 Number Market Bhopal +91 7999676019 SMM- @_social. · Find your perfect festive look at Narula's, the house of ...",
+          "host": "www.instagram.com"
+        }
+      ],
+      "hitCount": 5,
+      "hitsOnOtherHosts": 2
+    },
+    {
+      "venue": "Cakevilla Bakery Sweets, TK Street",
+      "area": "tpt-central",
+      "category": "bakery_sweets",
+      "query": "\"Cakevilla Bakery Sweets, TK Street\" TK Street",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Cakevilla-Bakery-Sweets-Opp-Sai-Baba-Temple-TK-Street/9999PX877-X877-200824114238-G5H5_BZDET/photos",
+          "name": "38 Photos of Cakevilla Bakery Sweets in TK Street, Tirupati",
+          "snippet": "Cakevilla Bakery Sweets, TK Street, tirupati - photo - Bakeries - 3. Cakevilla Bakery Sweets, TK Street, tirupati - photo - Bakeries - 4. Cakevilla Bakery ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 1,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "Sri Bhavani Sweets & Bakery, TML By Pass Road",
+      "area": "tpt-central",
+      "category": "bakery_sweets",
+      "query": "\"Sri Bhavani Sweets & Bakery, TML By Pass Road\" TML By Pass Road",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Sri-Venkateshwara-Bakery-And-Sweets-Near-Devandra-Theatre-Bhavani-Nagar/9999PX877-X877-170325161023-V6P6_BZDET/reviews",
+          "name": "1 Reviews for Sri Venkateshwara Bakery And Sweets in",
+          "snippet": "Sri Venkateshwara Bakery And Sweets in Bhavani Nagar, Tirupati currently holds an average rating of 4.5 based on user reviews. Checking reviews before visiting ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Warangal/Sri-Bhavani-Bakery-Opp-Svs-College-Bheemaram/9999PX870-X870-151127181554-F4Z4_BZDET",
+          "name": "Sri Bhavani Bakery in Bheemaram,Warangal",
+          "snippet": "MAIN ROAD , Bheemaram, Warangal-506009, Telangana DirectionCopy … hours from Monday:- 8:30 am - 9:00 pm, Sunday:- 8:30 am - 9:00 pm. including cakes for ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Khammam/Bhavani-Sweets-Sudimalla/9999P8742-8742-250416232325-U3I8_BZDET",
+          "name": "Bhavani Sweets in Sudimalla,Khammam",
+          "snippet": "Address Khammam Yellandu Road , Sudimalla, Khammam-507123, Bhavani Sweets opens from Monday:- 8:00 am - 10:00 pm, Tuesday:- Sunday:- 8:00 am - 10:00 pm.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Sweet-Shops-in-Bhavani-Nagar/nct-10465567",
+          "name": "Best Sweet Shops in Bhavani Nagar, Tirupati - Justdial Jd",
+          "snippet": "Bypass Road - 2.18 km Open until 10:00 pm The best designer fondant cakes in Tirupati. Awesome spread of pastries, pizzas +10 , Juice , puffs , sweets and ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Sri-Bhavani-Lala-Sweets-Bakery-Renigunta/9999PX877-X877-171002093843-G6J8_BZDET/reviews",
+          "name": "Sri Bhavani Lala Sweets & Bakery - Renigunta, Tirupati",
+          "snippet": "Sri Bhavani Lala Sweets & Bakery in Renigunta, Tirupati currently holds an average rating of 3.9 based on user reviews. Checking reviews before visiting or ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Visakhapatnam/Bhavani-Sweets-Scindia-Gandhigram/0891P891STD5107584_BZDET",
+          "name": "Bhavani Sweets in Gandhigram,Visakhapatnam",
+          "snippet": "Bhavani Sweets in Gandhigram, Visakhapatnam is a renowned bakery offering a delectable range of freshly baked goods and pastries. Situated in a prime location ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "Tirupati Bakery, Tata Nagar",
+      "area": "tpt-central",
+      "category": "bakery_sweets",
+      "query": "\"Tirupati Bakery, Tata Nagar\" Tata Nagar",
+      "originalHost": "www.district.in",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.zomato.com/tirupati/the-cake-factory-tata-nagar/reviews",
+          "name": "Reviews of The Cake Factory, Tata Nagar, Tirupati",
+          "snippet": "It is not at good in taste. The cake is dry not juicy at all. It felt normal cake not cool cake. Very disappointed.",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Desserts-in-Tata-Nagar/nct-10157864",
+          "name": "Desserts Restaurants in Tata Nagar, Tirupati",
+          "snippet": "Justbake is a delightful bakery that truly stands out! Average Rating 4.2 (21979 Ratings. Address D.no-19-12-1/2,Ground Floor, Ward 19, Block 4, Ground Floor, ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Bakery-Product-Manufacturers-in-Bhavani-Nagar/nct-10034025",
+          "name": "Top Bakery Product Manufacturers in Bhavani Nagar,",
+          "snippet": "Bakery Near Gangamma Temple Tata Nagar , Tirupati - 517507 (Near Town Club ) Tata Nagar , Tirupati - 517501 (near gangamma temple ) No:13-8-74, Tataiahgunta,  ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://tirupati.idbf.in/4071916/tirupati-bakery",
+          "name": "Tirupati Bakery",
+          "snippet": "Tirupati Bakery is located at 19-4-148/10, Phone: 9951607942. You can call them at 9951607942 for inquiries or appointments. The office opens at 10 AM on ...",
+          "host": "tirupati.idbf.in"
+        },
+        {
+          "url": "https://www.zomato.com/ta/tirupati/tata-nagar-restaurants/desserts?all=1&delivery_subzone=20420&delivery-time=1&min-order=2",
+          "name": "Tata Nagar, Tirupati Restaurants",
+          "snippet": "Tata Nagar , Tirupati Restaurants · Sweet Truth - Cake and Desserts · The Paradise · NIC Ice Creams · Ovenfresh Cakes & Desserts · Kakinada Subbbayya Gari Hotel. Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/the-cake-factory-tata-nagar/order",
+          "name": "The Cake Factory, Tata Nagar order online",
+          "snippet": "Check out The Cake Factory, Tata Nagar , Tirupati on Zomato for great deals, ratings, reviews and more! Desserts, Bakery, Cake 3.8 French Style Macrons 6pcs ₹349",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Aswani Sweets & Bakery, Vasavi Nagar",
+      "area": "tpt-central",
+      "category": "bakery_sweets",
+      "query": "\"Aswani Sweets & Bakery, Vasavi Nagar\" Vasavi Nagar",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Aswani-Sweets-Bakery-Vasavinagar/9999PX877-X877-250918124739-B5R6_BZDET",
+          "name": "Aswani Sweets & Bakery in Vasavinagar,Tirupati",
+          "snippet": "Aswani Sweets & Bakery in Vasavinagar ,Tirupati well known for Bakeries in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/Aswinshomespecial12/videos/%EF%B8%8F-from-just-2-of-us-to-a-family-of-3000-and-a-million-hearts-connected-by-sweetn/1524050909778028",
+          "name": "Aswins Sweets 40th Branch Opening in Vadapalani",
+          "snippet": "Aswin Sweets & Snacks, a local sweets and savory shop located on Chandalauta Avenue in Chennai. new store at Srinivasa Nagar , Kolathur,",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.instagram.com/popular/ashwini-sweets-bakery",
+          "name": "Ashwini Sweets Bakery",
+          "snippet": "Ashwini Sweets Bakery · Tamilnadu la 40+ outlets oda famous ah irukura Aswins Sweets & Snacks @ · 50% OFF on all Mysore Pak varieties — ONLY on launch day! Read more",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.facebook.com/Aswinshomespecial12/posts/aswins-sweets-new-restaurant-added-to-the-existing-branch-at-kk-nagar-opened-on-/428159271372834",
+          "name": "Aswins Home Special's post",
+          "snippet": "Aswins sweets ' new restaurant added to the existing branch at K.K Nagar , opened on 15th July. Visit the store to delight yourslef with authentic ... Read more",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.facebook.com/SmartSalemSmartSalem/videos/aswins-sweets-salem-a-best-place-to-buy-a-christmas-and-newyear-cakes-they-have-/1719742198521622",
+          "name": "Aswins Sweets #salem a best place to buy a Christmas and",
+          "snippet": "Aswins Sweets . For orders contact: 81482 34561. Address: Deevis cakes and sweets Anna nagar . 20, 2nd Ave, Tirumaniamman Nagar , Anna Nagar , ...",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://aswinssweets.com/?srsltid=AYCX9vJm8Szyyl5o_bVcMa6bOdQb-sSfY9QsC40PaXuUCWmwtPGjSMhU",
+          "name": "Aswins Sweets | Sweets & Savouries | All-India Delivery",
+          "snippet": "Aswins Sweets is a pioneer in sweets and savouries industry, Authentic South Indian Sweets & Savories ✨ | 40+ TN stores Made fresh daily. Free Shipping on ...",
+          "host": "aswinssweets.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 5
+    },
+    {
+      "venue": "Doss Bakery",
+      "area": "tpt-central",
+      "category": "bakery_sweets",
+      "query": "\"Doss Bakery\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Bakeries-in-Sarojini-Devi-Road/nct-10033880",
+          "name": "Best Bakeries in Sarojini Devi Road, Tirupati",
+          "snippet": "Doss Bakery Beside Kala Njali Korramenugunta, Tirupati . +33. View More. Upload Photos. Share. Doss Bakery . Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.mappls.com/place-doss+bakery+sweets+and+savouries-no+19-3-1$k1-renigunta+road-beside+kalanjali-tirupati-andhra+pradesh-517501-p8zsw6@zdata=MTMuNjI4MzI0Kzc5LjQzNzQ0OSsxNytwOHpzdzYrKw==ed",
+          "name": "Doss Bakery Sweets and Savouries, No 19-3-",
+          "snippet": "Get map of doss bakery sweets and savouries, no 19, 3, 1/k1, renigunta road, beside kalanjali, tirupati , andhra pradesh, 517501 by Mappls.",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Cake-Shops-in-Lic-Road/nct-10070075",
+          "name": "Top Cake Shops in Lic Road,Tirupati - Justdial - Justdial Jd",
+          "snippet": "Doss Bakery Beside Kala Njali Korramenugunta, Tirupati . +33. View More. Upload Photos. Share. Doss Bakery . Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Cake-Shops-in-Karakambadi/nct-10070075",
+          "name": "Top Cake Shops in Karakambadi,Tirupati",
+          "snippet": "Doss Bakery Beside Kala Njali Korramenugunta, Tirupati . +33. View More. Upload Photos. Share. Doss Bakery . Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "http://tirupatihelpline.blogspot.com/2009/04/bakery-shops-and-sweet-shops-in.html",
+          "name": "Bakery Shops and Sweet shops in tirupati",
+          "snippet": "Apr 18, 2009 — 0877-2220132. V.V.RAMANA. Doss Bakery Address: Theerthakatta Street, Tirupati , Andhra Pradesh - 517501. Phone Number: 0877 - 6669645 Read more",
+          "host": "tirupatihelpline.blogspot.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Cake-Shops-with-Drive-Through-in-Tirumala/nct-10070075-att-res40",
+          "name": "Best Cake Shops With Drive Through in Tirumala, Tirupati",
+          "snippet": "Doss Bakery Beside Kalanjali Near Theertha Katta Street Kothapalli, Tirupati . + ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Rainbow Vegetarian Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Rainbow Vegetarian Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://en.tripadvisor.com.hk/Restaurants-g297587-zfz10665-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "The 10 Best Vegetarian Restaurants in Tirupati (Updated 2026)",
+          "snippet": "Best Vegetarian-Friendly Restaurants in Tirupati , 1. Vyom, Ekante' Bliss, Tirupati . Good food with good ambience.. 2. Zodiac 4.5 4.5 of 5 ...",
+          "host": "en.tripadvisor.com.hk"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/rainbow-tiruchanur/order",
+          "name": "Rainbow, Tiruchanur order online",
+          "snippet": "Order food online from Rainbow, Tiruchanur, Tirupati . Get great offers and super fast food delivery when you order food online from Rainbow on Zomato.",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/9669085/green-meridian-veg-restaurant",
+          "name": "Green Meridian Veg Restaurant, Tirupati, India",
+          "snippet": "Nestled near Nandi Circle, Green Meridian Veg Restaurant is a delightful stop for anyone visiting Tirupati . After a spiritual experience at Tirupati Balaji, ...",
+          "host": "wanderlog.com"
+        },
+        {
+          "url": "https://www.district.in/dining/tirupati/rainbow-fortune-select-grand-ridge-tiruchanur?srsltid=AYCX9vLDNxsQRFgxqMwpNZ_oKusYUQnM5rhTRvctqsuYANg2IutqNH7I",
+          "name": "Rainbow - Fortune Select Grand Ridge | Tirupati | Book Table",
+          "snippet": "View menu, reviews, photos, contact details, 8-84, Silparaman, Tiruchanur, Tirupati ₹1200 for two Closed • Opens at 12:30 PM",
+          "host": "www.district.in"
+        },
+        {
+          "url": "https://www.tripadvisor.co.za/Restaurants-g297587-zfz10665-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "The 10 Best Tirupati Vegetarian Restaurants - Tripadvisor",
+          "snippet": "1. Vyom, Ekante' Bliss, Tirupati - Ihcl Seleqtions. 4,5. 4,5 of 5 bubbles ; 2. Zodiac. 4,5. 4,5 of 5 bubbles ; 3. Rainbow - Pure Vegitarian - ... Read more",
+          "host": "www.tripadvisor.co.za"
+        },
+        {
+          "url": "https://www.facebook.com/fb-answers/rainbow-exclusively-veg-restaurant-menu",
+          "name": "Rainbow Exclusively Veg Restaurant Menu",
+          "snippet": "Rainbow-themed veg menus focus on colorful, plant-based bowls, wraps, and thalis with fresh veggies, grains, and house sauces. prices starting around $10 for ...",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "SAI Juices & Tea Center, V V Mahal Road",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"SAI Juices & Tea Center, V V Mahal Road\" V V Mahal Road",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Bangalore/Juice-Centres-with-Counter-Service-in-V-V-Puram/nct-10283258-att-rest795",
+          "name": "Top Juice Centres With Counter Service in V V Puram",
+          "snippet": "Best Juice Centres With Counter Service in V V Puram, Bangalore - Order Food Online · Juice Magic · Salis · Sreeraj Lassi Bar · Fresh Juice Bar · Lakshmi Juice ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Vadodara/Sai-Juice-Center-Near-High-Bridge-Waghodia/0265PX265-X265-230217063323-X9L3_BZDET",
+          "name": "Sai Juice Center in Waghodia,Vadodara",
+          "snippet": "Sai Juice Center in Waghodia,Vadodara well known for Juice Centres in Vadodara . Rated 3.5 based on 2 Customer Reviews and Ratings with 1 Photos.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Bangalore/Juice-Centres-with-Standing-Tables-in-V-V-Puram/nct-10283258-att-res492",
+          "name": "Top Juice Centres With Standing Tables in V V Puram",
+          "snippet": "53 Juice Centres With Standing Tables in V V Puram, Bangalore. Old market road V V Puram - 140 mts ₹ 150 Price for two Open until 10:00 pm. Open until 9:00 pm",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Pune/Sai-Tea-Center/020PXX20-XX20-181016193600-F5E3_BZDET/amp",
+          "name": "Pune - Sai Tea Center",
+          "snippet": "Address Pune - 411001, Maharashtra. Am - 11:00 PmSaturday:- 7:00 Am - 11:00 PmSunday:- 7:00 Am - 11:00. This establishment is functional from 07:00 - 23:00.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Anantapur/Tea-Stalls-in-Sai-Nagar/nct-10853304",
+          "name": "Best Tea Stalls in Sai Nagar, Anantapur - Justdial Jd",
+          "snippet": "Best Tea Stalls in Sai Nagar, Anantapur - Order Food Online. Sree Sai Coffee Bar Opposite Dcms Main Gate Near Dhariwal Gift House R F Road , anantapur. Upload ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Pune/Juice-Centres-having-Tea-in-Market-Yard/nct-10283258-att-cou22",
+          "name": "Best Juice Centres Having Tea in Market Yard, Pune",
+          "snippet": "Juice Centres in Market Yard, Pune ; Address, Shop No 1, Opposed Azam Campus 2 Gate, New Modikhana, Pune - 411001, Survey No 20/1, Shevanta Hights, Pune Satara ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "Saral Juice Shop, Pudipatla",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"Saral Juice Shop, Pudipatla\" Pudipatla",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Thirumala-Juice-Point/9999PX877-X877-240426175930-B5X9_BZDET",
+          "name": "Thirumala Juice Point in RC Road,Tirupati",
+          "snippet": "Thirumala Juice Point in RC Road,Tirupati well known for Juice Centres. Rated 4.0 based on 3 Customer Reviews and Ratings. This establishment is functional ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Juice-Centres/nct-10283258/page-5",
+          "name": "Juice Centres in Tirupati - Page 5",
+          "snippet": "Juice Centres in Tirupati - Page 5 · Giris fresh juice · Devi Fancy Studio & Cool Drinks · Gajendhra Juice Palace · Mango Juice Factory · Vinayaka Fruit Juice Net. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/100087371270237/videos/abc-juice-in-tirupati-location-details-sri-vinayaka-juice-house-sri-ramachandra-/2029695314400164",
+          "name": "Abc juice in Tirupati 🥤 Location details 🏨 Sri Vinayaka",
+          "snippet": "This video promotes a local juice shop in Tirupati, Bangalore, called Sri Vinayaka juice house. The owner is shown outside the shop, ... Read more",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Juice-Centres-in-Autonagar/nct-10283258",
+          "name": "Top Fruit Juice Centres in Autonagar, Tirupati",
+          "snippet": "Fruit Juice Centres in Autonagar, Tirupati. Find ✓Seasonal Juice Centres, ✓Smoothies and Juice Centres, ✓Milkshake and Juice Centre, ✓Sugarcane Juice ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Juice-Centres-with-Veg-Options-Available-in-Tiruchanoor-Road/nct-10283258-att-rest801",
+          "name": "Best Juice Centres With Veg Options Available Tirupati",
+          "snippet": "A fruit juice centre may offer fresh fruit juices, mixed fruit juices, smoothies, milkshakes, seasonal beverages, fruit-based drinks, and other refreshment ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Juice-Dealers-Real/nct-14287379",
+          "name": "Popular Juice Dealers Real in Tirupati - Justdial Jd",
+          "snippet": "Top Juice Dealers Real in Tirupati. Opens at 8:00 am tomorrow. Open until 10:00 pm Call Now. Open until 10:30 pm Call Now",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 1
+    },
+    {
+      "venue": "T Nageshwara Rao Juice Shop, Tata Nagar",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"T Nageshwara Rao Juice Shop, Tata Nagar\" Tata Nagar",
+      "originalHost": "tirupati.idbf.in",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/West-Godavari/Nageswara-Rao-Cool-Drinks-Shop-Gangalamma-Temple-Road-Gopalapuram/9999P8812-8812-110129123507-X5U8_BZDET",
+          "name": "Nageswara Rao Cool Drinks Shop - West Godavari",
+          "snippet": "Nageswara Rao Cool Drinks Shop. The establishment is functional on Monday:- 9:00 Am - 9:00 Pm Tuesday:- 9:00. Sunday:- 9:00 Am - 9:00 Pm … is functional from ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.linkedin.com/in/nageswara-rao-tata-a67ab864",
+          "name": "Nageswara Rao Tata - Post-doc at Joslin Diabetes Center",
+          "snippet": "Boston, Massachusetts, United States · Post-doc · Joslin Diabetes Center Nageswara Rao Tata . Post-doc at Joslin Diabetes Center. Joslin Diabetes Center. Boston, Massachusetts, United States. 53 followers 48 connections. Read more",
+          "host": "www.linkedin.com"
+        },
+        {
+          "url": "https://in.linkedin.com/in/nageswara-rao-natha-92705a29",
+          "name": "Nageswara Rao Natha - Head of Commercial",
+          "snippet": "Hyderabad, Telangana, India · Sr. Manager - Head of Commercial Claims & Sales Accounting. · Unibic Foods India Pvt Ltd Nageswara Rao Natha · Head of Commercial - Audits, Claims & Sales Accounting. at Unibic Foods India Pvt Ltd · View mutual connections with Nageswara Rao. Read more",
+          "host": "in.linkedin.com"
+        },
+        {
+          "url": "https://www.linkedin.com/pub/dir/Nageswara+Rao/Tata",
+          "name": "5 \"Nageswara Rao Tata\" profiles",
+          "snippet": "View the profiles of professionals named \"Nageswara Rao Tata \" on LinkedIn. There are 5 professionals named \"Nageswara Rao Tata \", who use LinkedIn to exchange ...",
+          "host": "www.linkedin.com"
+        },
+        {
+          "url": "https://in.linkedin.com/in/nageswara-rao-9027a9112",
+          "name": "Nageswara Rao - Senior Manager at TATA Power",
+          "snippet": "Mandvi, Gujarat, India · Senior Manager · TATA Power Senior Manager at TATA Power · Experience: TATA Power · Location: Mandvi · 2 connections on LinkedIn. View Nageswara Rao's profile on LinkedIn, ...",
+          "host": "in.linkedin.com"
+        },
+        {
+          "url": "https://in.linkedin.com/in/nageshwar-rao-7301a110",
+          "name": "Nageshwar Rao - Rao at Tata Steel",
+          "snippet": "Jharkhand, India · Rao · Tata Steel Rao at Tata Steel · Experience: Tata Steel · Location: Jharkhand. Tata Steel Jharkhand, India. Contact Nageshwar directly. Nageshwar can help you find your ...",
+          "host": "in.linkedin.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Taj Juice Centre, Bairagi Patteda",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"Taj Juice Centre, Bairagi Patteda\" Bairagi Patteda",
+      "originalHost": "tirupati.idbf.in",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-in-Bairagi-Patteda/nct-10408936/page-2",
+          "name": "Restaurants in Bairagi Patteda, Tirupati - Page 2",
+          "snippet": "Best Restaurants in Bairagi Patteda , Tirupati - Food Restaurants Nearby - Page 2 · Leno Grill Restaurant · Leon Grill · Jalpaan · Rk Traditional Restaurant · Vishnu ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Bairagi-Patteda/Restaurant/The-Sugar-Cane-Co./store/15606c8/delivery?srsltid=AYCX9vIz26v4avv1RRgUj8v2K0ebOjEd33hDIGyP4r1RoGTVZIWKG164",
+          "name": "The Sugar Cane Co., Bairagi patteda | September, 2026",
+          "snippet": "Open now·11:30 AM – 9:00 PM JuicesBiryaniStreet … sugar cane juice [500 ml]. Savor refreshing juices, flavorful biryani, and mouthwatering street food.",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-with-Dance-Floor-in-Bairagi-Patteda/nct-10408936-att-res38",
+          "name": "Top Restaurants With Dance Floor in Bairagi Patteda",
+          "snippet": "Top Restaurants With Dance Floor in Bairagi Patteda , Tirupati. The food was really fresh and delicious. Average Rating 4.0 (341631 Ratings & Reviews",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Juicy-n-Creamy-Near-MRF-Showroom-Bairagi-Patteda/9999PX877-X877-171120175822-Y7X7_BZDET/products",
+          "name": "Products by Juicy 'n' Creamy in Bairagi Patteda, Tirupati",
+          "snippet": "Located in Bairagi Patteda , Tirupati, Juicy 'n' Creamy caters to a diverse customer base. From individuals looking for personal-use products to businesses ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Sujata-Cool-Drinks-Bairagi-Patteda/9999PX877-X877-180310012702-L6C8_BZDET",
+          "name": "Sujata Cool Drinks in Bairagi Patteda,Tirupati - Best Soft",
+          "snippet": "Sujata Cool Drinks in Bairagi Patteda ,Tirupati listed under Soft Drink Retailers in Tirupati. Rated 5.0 based on 1 Customer Reviews and Ratings",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Lounge-Bars-in-Bairagi-Patteda/nct-10304258",
+          "name": "Best Lounge Bars in Bairagi Patteda, Tirupati - Justdial Jd",
+          "snippet": "Dive Into A Youthful Time with Lounge Bars in Bairagi Patteda , Tirupati · Signature summer cocktails like mojitos and sangrias become popular. · Hot beverages ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Garlic Family Restaurant, Mangalam",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Garlic Family Restaurant, Mangalam\" Mangalam",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com",
+          "name": "Menu of Mangalam Family Restaurant in Sewar, Bharatpur",
+          "snippet": "Mangalam Family Restaurant Sewar outlet boasts a menu that combines various flavours, drawing inspiration from local and global food trends. So, treat yourself ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.beyondmenu.com",
+          "name": "Garlic Catering & Restaurant | Order Online | Santa Clara",
+          "snippet": "View Garlic Catering & Restaurant menu, Order Mediterranean food Pick up Online from Garlic Catering & Restaurant, Best Mediterranean in Santa Clara, CA.",
+          "host": "www.beyondmenu.com"
+        }
+      ],
+      "hitCount": 2,
+      "hitsOnOtherHosts": 1
+    },
+    {
+      "venue": "Springs Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Springs Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g297587-d23956937-Reviews-Springs_Hotel-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "SPRINGS HOTEL: Prices & Reviews (Tirupati, India)",
+          "snippet": "It's convince place , very clean and hygiene rooms , reasonable price,staff are very competitive,food is very good,very tasty, reasonable prices,iam ... Read more",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.expedia.co.in/Tirupati-Hotels-Springs-Hotel.h76161809.Hotel-Information",
+          "name": "Springs Hotel Reviews, Deals & Photos 2026",
+          "snippet": "Located close to ISKCON Tirupati and NTR Stadium, Springs Hotel provides laundry facilities. Stay connected with free in-room WiFi. You'll also enjoy the ... Read more",
+          "host": "www.expedia.co.in"
+        },
+        {
+          "url": "https://www.ixigo.com/hotels/springs-hotel-tirupati-in-tirupati-25925-d",
+          "name": "springs hotel tirupati",
+          "snippet": "Tasty Food Delicious breakfast and meals, with vegetarian options available. On-site eateries offer delicious and accessible meal choices … located at ...",
+          "host": "www.ixigo.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g297587-d34472431-Reviews-Springs_Hotel-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "SPRINGS HOTEL - Prices & Reviews (Tirupati, India)",
+          "snippet": "Book Springs Hotel, Tirupati on Tripadvisor: See traveler reviews, candid photos, and great deals for Springs Hotel at Tripadvisor. 12 Restaurantswithin 0.75 ...",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.makemytrip.com/hotels/address-of-springs_hotel-details-tirupati.html",
+          "name": "Address of SPRINGS HOTEL - Hotel in Tirupati",
+          "snippet": "Address of SPRINGS HOTEL in Tirupati . No.10-128/6-9, Nethaji Nagar,Silparam Road, Tiruchamoor, Bridge circle. Revenue Colony (30) Overall rating is : 3/5 ₹ 3, ...",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://www.zomato.com/mr/tirupati/springs-hotel-tiruchanur/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gRnJpZXMiLCJkaXNoX2lkcyI6WyI0NjE1NSJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+          "name": "Springs Hotel, Tiruchanur order online",
+          "snippet": "Check out Springs Hotel, Tiruchanur, Tirupati on Zomato for great deals, ratings, reviews and more! Springs Hotel North Indian, Chinese, South Indian … online ...",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "SFC Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"SFC Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://wanderlog.com/place/details/4458444/sfc-restaurant",
+          "name": "SFC Restaurant, Chittoor, India - Reviews, Ratings, Tips",
+          "snippet": "Nestled in the charming Sri Balaji colony of Mittoor, SFC Restaurant has become a beloved spot among locals. Known for its delightful offerings, the supreme veg ... Read more",
+          "host": "wanderlog.com"
+        },
+        {
+          "url": "https://www.swiggy.com/city/bangalore/sfc-garden-and-restaurant-bommasandra-rest220251",
+          "name": "Order from SFC Garden & Restaurant online in Bangalore",
+          "snippet": "Order Online from SFC Garden & Restaurant in Bommasandra, Bangalore for delicious North Indian food. Enjoy fast delivery with Swiggy.",
+          "host": "www.swiggy.com"
+        },
+        {
+          "url": "https://www.justdial.com/Chittoor/Sfc-Restaurant-Opposite-Raghava-Theatre-Mittoor/9999P8572-8572-170929073014-S1S4_BZDET/reviews",
+          "name": "907 Reviews for Sfc Restaurant in Mittoor, Chittoor",
+          "snippet": "Sfc Restaurant in Mittoor, Chittoor is one of the famous biryani restaurants, located Opposite Raghava Theatre. 3. Does the restaurant have veg biryani? While ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/sri-sai-restaurant-tirumala/reviews",
+          "name": "Reviews of Sri Sai Restaurant, Tirumala, Tirupati",
+          "snippet": "Sri Sai Restaurant South Indian, Chinese 18-1-673, Bhavani Nagar, Opposite Helios Hospital, Tirumala,",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/sri-venkateshwara-fastfood-restaurant-sv-auto-nagar/order",
+          "name": "Sri Venkateshwara Fastfood Restaurant, SV Auto Nagar",
+          "snippet": "Check out Sri Venkateshwara Fastfood Restaurant, SV Auto Nagar, Tirupati on Zomato for great deals, ratings, reviews and more!",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://chittoor.idbf.in/661526/sfc-restaurant",
+          "name": "SFC Restaurant in Chittoor",
+          "snippet": "SFC Restaurant is located at OPP:Raghava Theatre,Sri Balaji Complex,Ground Floor, Mittoor, Chittoor - 517001, Andhra Pradesh, India. What is the full address of ... Read more",
+          "host": "chittoor.idbf.in"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Yalamuri Bar And Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Yalamuri Bar And Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com",
+          "name": "Best Restaurants & Bars in Garuda Nagar, Tirupati",
+          "snippet": "Find ✓Family Restaurant And Bar, Open until 11:00 pm Call Now. From cozy cafes to lively bars, Garuda Nagar, Tirupati is a food lover's paradise.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.mappls.com",
+          "name": "Yalamuri Bar & Restaurant, Tata Nagar",
+          "snippet": "i7, Tata Nagar, Tirupati , Andhra Pradesh, 517501. Opening Hours Open: Mon-Sun 10:00-23:00",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://magicpin.in",
+          "name": "Photos of Yalamuri Bar & Restaurant, Ashok Nagar, Tirupati",
+          "snippet": "Open now·11:30 AM – 2:00 PM. Ratings Yalamuri Bar & Restaurant is a neighbourhood dining destination serving customers in Ashok Nagar, Tirupati . It serves a ...",
+          "host": "magicpin.in"
+        }
+      ],
+      "hitCount": 3,
+      "hitsOnOtherHosts": 3
+    },
+    {
+      "venue": "Hotel Sri Nandhi Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Hotel Sri Nandhi Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Non-Veg-Restaurants-in-Nandi-Circle/nct-10338914",
+          "name": "Best Non Veg Restaurants in Nandi Circle, Tirupati",
+          "snippet": "Best Non Veg Restaurants in Nandi Circle, Tirupati - Order Food Online · Potlam Biryani · Chickpet Donne Biryani House · Krishna Vilas · Red Wings · Junior Kuppanna. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/61573654847805/videos/follow-tirupatirestauranthdi-%E1%B4%A0%C9%AA%CA%80%E1%B4%80%CA%9F%E1%B4%98%E1%B4%8Fs%E1%B4%9B-tirupatirestaurant-follow%EF%BD%8De-likecommentsh/912168141412943",
+          "name": "Follow @tirupati.restaurant.hdi #ᴠɪʀᴀʟᴘᴏsᴛ #",
+          "snippet": "This video provides a tour of the new Tirumala Govindha restaurant in Tirumala, India. It begins with the exterior of the building and then ... Read more",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Dal-Dish-Restaurants-in-Tirumala",
+          "name": "Popular Restaurants Serving Dal in Tirumala, Tirupati",
+          "snippet": "Best Dal serving restaurants in Tirumala, Tirupati ; Hotel Saravana Bhavan · 1.9k Ratings. Balajy Colony Apsrtc Bus Stand Road ; Dosa Plaza · 505 Ratings. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-in-Nandi-Circle/nct-10408936",
+          "name": "Best Restaurants in Nandi Circle, Tirupati",
+          "snippet": "I went to the restaurant, ordered the biryani and tanduri tikka. Everything was fresh, properly done, and served hot. No wait, no fuss, just good food. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Nandini-Hotel-Near-M-R-Palli-Circle-Mr-Palli-Circle/9999PX877-X877-180217081307-R8L7_BZDET/photos",
+          "name": "6 Photos of Nandini Hotel in Mr Palli Circle, Tirupati",
+          "snippet": "6 Photos of Nandini Hotel in Mr Palli Circle, Tirupati Rated 3.6 based on 227 Customer Reviews and Ratings with 6 Photos. Visit Justdial for Address, ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 5,
+      "hitsOnOtherHosts": 5
+    },
+    {
+      "venue": "Carrots Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Carrots Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Carrots-Restaurant-Beside-Hdfc-Bank-Near-Railway-Road-Korlagunta/9999PX877-X877-140607130123-M5M7_BZDET",
+          "name": "Carrots Restaurant in Korlagunta,Tirupati - Justdial Jd",
+          "snippet": "Carrots Restaurant in Korlagunta, Tirupati is one of the famous biryani restaurants, located Beside Hdfc Bank, Near Railway Road. 3. Does the restaurant have ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/carrots-restaurant-tirumala/order",
+          "name": "Carrots Restaurant, Tirumala order online",
+          "snippet": "Carrots Restaurant ; Chicken Dum Biryani Regular. ₹220 ; Mughlai Chicken Biryani. ₹250 ; chicken Biryani Tub. ₹300 ; Fry Piece Biryani. ₹250 ; Fish Biryani. ₹ ... Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.makemytrip.com/hotels/hotels-near-carrots_restaurant-tirupati-four_star.html",
+          "name": "4 Star hotels near Carrots Restaurant Tirupati",
+          "snippet": "Carrots Restaurant Tirupati Hotels Price Starts from Rs. 2822. Check Price with Dates, as current listing are showing for Sunday, September 27, 2026- 23.05. Read more",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://www.latlong.net/poi/carrots-restaurant-439676",
+          "name": "Carrots Restaurant Map Location - Tirupati, Andhra Pradesh",
+          "snippet": "Carrots Restaurant Information ; AIR Bypass Rd, Ashok Nagar · 517501 · Tirupati · Carrots Restaurant · +91 877 224 4873. Read more",
+          "host": "www.latlong.net"
+        },
+        {
+          "url": "https://www.localsindia.com/tirupati/businesses/f491239e-4bae-43ee-85b8-38947d9ff959",
+          "name": "Carrots Restaurant — Tiffin & Food in Tirupati | LocalsIndia",
+          "snippet": "Carrots Restaurant . Restaurants in STV Nagar, Tirupati . AIR Bypass Rd, Ashok Nagar, Tirupati , 517501. More businesses in STV Nagar → · +918772244873. Open now ... Read more",
+          "host": "www.localsindia.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/carrots-restaurant-tirumala/reviews",
+          "name": "Reviews of Carrots Restaurant, Tirumala, Tirupati",
+          "snippet": "Carrots Restaurant . Biryani, North Indian, Chinese. No 180/A, Air Bypass Road ... Read more",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Harika Bar And Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Harika Bar And Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/24-Hours-Restaurants-Bars-in-Tirumala/nct-12395584",
+          "name": "Best 24 Hours Restaurants & Bars in Tirumala, Tirupati",
+          "snippet": "24 Hours Restaurants & Bars in Tirumala, Tirupati - Satisfy your late-night cravings with the best eateries and vibrant bars open around the clock!",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-Bars-in-Tiruchanoor-Road/nct-10408938",
+          "name": "Best Restaurants & Bars in Tiruchanoor Road, Tirupati",
+          "snippet": "Harika Bar & Restaurant 3.92.4k Ratings Nehru Street. Average rating 4.0 (23651 Ratings & Reviews",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-&-Bars-with-Dine-in/nct-10408938-att-Rdin",
+          "name": "Best Restaurants & Bars With Dine In near me - Tirupati",
+          "snippet": "Open the Justdial app or website and search for bars near me or restaurants & bars in Tirupati . Listings show ratings, reviews, photos, menus, and contact ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.mappls.com/place-harika+bar-giripuram-nehru+nagar-tirupati-andhra+pradesh-517501-6WMHZ8@zdata=MTMuNjM2Mjg2Kzc5LjQxMjM0NSsxNys2V01IWjgrK25yed",
+          "name": "Harika Bar, Giripuram, Nehru Nagar, Tirupati, Andhra",
+          "snippet": "Information · 6wmhz8, Giripuram, Nehru Nagar, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CL9-MT9F. content_copyshare · Mappls Pin: mappls.com/6wmhz8. Read more",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/harika-kitchen-tirumala/order",
+          "name": "Harika Kitchen, Tirumala order online",
+          "snippet": "Check out Harika Kitchen, Tirumala, Tirupati on Zomato for great deals, ratings, reviews and more! Biryani, Chinese, North Indian 4.2",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.facebook.com/pages/Harika-Restaurant-Bar/141020263422727",
+          "name": "Harika Restaurant & Bar - Home",
+          "snippet": "Harika Restaurant & Bar, Tirupati . 3 likes · 11 were here. Restaurant. ... 11 people checked in here. 󱦗. Tirupati 517501. Read more",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Manal Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Manal Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.zomato.com/tr/tirupati/manal-restaurant-tirumala/reviews",
+          "name": "Reviews of Manal Restaurant, Tirumala, Tirupati",
+          "snippet": "Manal Restaurant Dining Reviews ; Ram · Jun 12, 2024. awesome food and presentation thank u rana ; Sathi Pandu.. · Jun 12, 2024. nice restaurant.. fine and best ... Read more",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.mappls.com/direction-from--to-sri+manal+restaurant+kapilateertham+road,khadi+colony,tirupati,andhra+pradesh+tirupati,+zlpi0a?@zdata=ZnJvbSsrdG8rNzkuNDE5NDYyLDEzLjY0NjYyLHpscGkwYTs3OS40MTk1NiwxMy42NDY2MDMsemxwaTBhK3ZpYQ==",
+          "name": "Get map direction To Sri Manal Restaurant Kapilateertham",
+          "snippet": "Get map direction To Sri Manal Restaurant Kapilateertham Road,khadi Colony, tirupati ,andhra Pradesh Tirupati , Zlpi0a by Mappls. Find location,directions ...",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Ramchandra-Nagar/Restaurant/Manal-Restaurant/store/3a7124?srsltid=AYCX9vJ5okBHLJ6A0OYuYbGa7vdQy90Dt70NxI2BIp7B_qXiBn5y8mop",
+          "name": "Manal Restaurant, Ramchandra Nagar, Tirupati",
+          "snippet": "Manal Restaurant is a F&B-Casual Dining outlet located in the heart of the city. It offers a wide variety of delicious dishes from around the world. Read more",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Ramchandra-Nagar/Restaurant/Sri-Manal-Restaurant/store/2c7c39?srsltid=AYCX9vJzwctep6DOtcHMBDFlN0caEv6DQ0dWh_TQorXqax-jmTuU9zIN",
+          "name": "Sri Manal Restaurant, Ramchandra Nagar, Tirupati",
+          "snippet": "Sri Manal Restaurant is a food and dining establishment located in Ramchandra Nagar, Tirupati . Among its cuisines are Fast Food, Chinese, North Indian, etc.",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/restaurants/hotel-manasa",
+          "name": "Order Online from Hotel Manasa in Tirupati",
+          "snippet": "North Indian, Mughlai, Chinese, South Indian, Seafood, Kebab, Biryani, Desserts. ₹700 for two. Mangalam, Tirupati . Closes in 45 minutes. Read more",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 5,
+      "hitsOnOtherHosts": 5
+    },
+    {
+      "venue": "Sunlight Veg Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Sunlight Veg Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Pure-Veg-Restaurants-in-Prakasam-Road/nct-10396867",
+          "name": "Best Pure Veg Restaurants in Prakasam Road, Tirupati",
+          "snippet": "18 Pure Veg Restaurants in Prakasam Road. Open until 10:00 pm. The menu offered a delightful variety of vegetarian dishes, all reasonably priced, Open until 11 ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.facebook.com/fb-answers/veg-restaurants-in-tirupati/?locale=tl_PH",
+          "name": "Veg Restaurants in Tirupati",
+          "snippet": "For budget-friendly unlimited veg meals in Tirupati , offers meals at 120Rs near Vinayaka Temple. PS4 Pure Veg Restaurant is consistently mentioned for tiffins, ...",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Pure-Veg-Restaurants-in-Kt-Road/nct-10396867",
+          "name": "Best Pure Veg Restaurants in Kt Road, Tirupati - Justdial Jd",
+          "snippet": "18 Pure Veg Restaurants in Kt Road. The menu offered a delightful variety of vegetarian dishes, all reasonably priced,",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.instagram.com/popular/restaurant-in-tirupati-veg",
+          "name": "Restaurant In Tirupati Veg",
+          "snippet": "They serve a traditional 4-layer meal, everything is perfectly organized, super hygienic, and the food tastes amazing. 3,616 Circle, Anantapur. . . Breakfast, ...",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://tirupati100.com/ArticleDetail.aspx?slug=best-restaurants-tirupati-pilgrims",
+          "name": "Best Restaurants in Tirupati for Pilgrims",
+          "snippet": "Best restaurants in Tirupati for pilgrims - MGM Family Restaurant, Orion, Green Meridian, Bhimas Maya. Top vegetarian dining and Andhra Thali near Tirumala ...",
+          "host": "tirupati100.com"
+        },
+        {
+          "url": "https://www.marasaindia.com/ko/marasa-sarovar-hotel-in-tirupati/dining/krishna.html",
+          "name": "Krishna | Best Vegetarian Restaurants in Tirupati",
+          "snippet": "Krishna is one of the best vegetarian restaurants in Tirupati . Premiere Rd, Upadhyaya Nagar, Karakambadi Road, Tirupati - 517507 +91 87 7666",
+          "host": "www.marasaindia.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Imperial Spice Restaurant",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Imperial Spice Restaurant\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.instagram.com/imperial_spice_restaurant",
+          "name": "imperial_spice_restaurant",
+          "snippet": "A good place for all foodies. Tata nagar,Tirumala bypass road, tirupathi ... Birthday celebrations In Imperial Spice restaurant Celebrate your birthday in ... Read more",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Imperial-Spice-Restaurant-Near-Bus-Standtata-Nagar-Tata-Nagar/9999PX877-X877-230304082413-S9Y5_BZDET",
+          "name": "Imperial Spice Restaurant in Tata Nagar,Tirupati",
+          "snippet": "Imperial Spice Restaurant in Tata Nagar, Tirupati is one of the famous biryani restaurants, located Near Bus Stand,Tata Nagar. 3. Does the restaurant have veg ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.agoda.com/hotels-near-imperial-spice-restaurant/attractions/tirupati-in.html",
+          "name": "Hotels near IMPERIAL SPICE RESTAURANT, Tirupati",
+          "snippet": "IMPERIAL SPICE RESTAURANT in Tirupati is a culinary gem that showcases the rich tapestry of Indian cuisine. The restaurant is renowned for its authentic Indian ...",
+          "host": "www.agoda.com"
+        },
+        {
+          "url": "https://www.makemytrip.com/hotels/poi-guest_houses-near-imperial_spice_restaurant-tirupati.html",
+          "name": "Guest Houses near IMPERIAL SPICE RESTAURANT,Tirupati",
+          "snippet": "Ashok Nagar | 660 m from IMPERIAL SPICE RESTAURANT | 7 minutes walk to Tirupati Central Bus Station. Free Cancellation till check-in. Book with ₹0 Payment.",
+          "host": "www.makemytrip.com"
+        },
+        {
+          "url": "https://www.latlong.net/poi/imperial-spice-restaurant-439697",
+          "name": "IMPERIAL SPICE RESTAURANT Map Location",
+          "snippet": "Check the map of IMPERIAL SPICE RESTAURANT . Where is IMPERIAL SPICE RESTAURANT ? It is located in TP AREA ,NEAR RAILWAY STATION Number: 14-2-174 517501 Tirupati , ... Read more",
+          "host": "www.latlong.net"
+        },
+        {
+          "url": "https://www.facebook.com/p/Imperial-Spice-Restaurant-100086846051351",
+          "name": "Imperial Spice Restaurant | Tirupati",
+          "snippet": "Imperial Spice Restaurant · Happy Deepavali! · Happy Christmas Let's Celebrate with Santa's Brunch and Delicious Combo's Also get Special Discounts for Red and ...",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Manasa Vihar Cafe",
+      "area": "tpt-central",
+      "category": "cafe",
+      "query": "\"Manasa Vihar Cafe\" Tirupati",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://yandex.ru/maps/org/manasa_vihar_cafe/32387159129/gallery",
+          "name": "Manasa Vihar Cafe, быстрое питание, штат Андхра-",
+          "snippet": "Быстрое питание Manasa Vihar Cafe по адресу штат Андхра-Прадеш, Читтур-Дистрикт, город Тирупати. Смотреть часы работы. Построить маршрут в Яндекс Картах.",
+          "host": "yandex.ru"
+        },
+        {
+          "url": "https://magicpin.in/Tirupati/Padmavathi-Nagar/Restaurant/Cafe-Manasa/store/2c7995/menu?srsltid=AYCX9vKpnnORaU-hhKJTsTl5Q4e7HTmsNsqcdAXmImb2PgMMQsJIOBUu",
+          "name": "Menu of Cafe Manasa, Padmavathi Nagar, Tirupati",
+          "snippet": "Open now·8:00 AM – 10:00 PM South IndianFast Food. Cafe Manasa serves South Indian, Fast Food. main courses, desserts, and beverages. 8:00 AM – 10:00 PM",
+          "host": "magicpin.in"
+        },
+        {
+          "url": "https://www.mappls.com/place-cafe+manasa-air+bypass+road-padmavathi+nagar-tirupati-andhra+pradesh-517501-36729O@zdata=MTMuNjIyNTcyKzc5LjQxMjExMSsxNyszNjcyOU8rK25yed",
+          "name": "Cafe Manasa, Air Bypass Road, Maruti Nagar, Padmavathi",
+          "snippet": "36729o, Air Bypass Road, Maruti Nagar, Padmavathi Nagar, Tirupati , Andhra Pradesh, 517501 … +918125886688 Opening",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/restaurants/hotel-manasa",
+          "name": "Order Online from Hotel Manasa in Tirupati",
+          "snippet": "Find out Hotel Manasa restaurant locations, contact details, menus, reviews in Tirupati . Manasa Cafés Open Now Pure veg Fine Dining. Closes in 45 minutes 4.2 km",
+          "host": "www.zomato.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d11875004-r753044057-Hotel_Manasa_Veg_Non_Veg_Resturant-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Hotel Manasa Veg & Non-Veg Resturant - Tirupati",
+          "snippet": "Hours Today: 11:30 AM - 3:30 PM, The Manasa Fast Food section is located just outside the entrance to the Hotel Manasa Restaurant. The restaurant serves Veg ...",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.zomato.com/cs/tirupati/cafe-manasa-1-tirumala/reviews?amp=1",
+          "name": "Reviews of Cafe Manasa, Tirumala, Tirupati",
+          "snippet": "Reviews of Cafe Manasa Tirumala; see all unbiased reviews of Cafe Manasa Tirupati for delivery and dining on Zomato ... 162, AIR Bypass Road, M.R. Palli, Tirupati ... Read more",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "Golden Balaji Tiffin Center, Tirumala",
+      "area": "tirumala",
+      "category": "tiffin",
+      "query": "\"Golden Balaji Tiffin Center, Tirumala\" Tirumala",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Home-Delivery-Services-in-Tirumala/nct-11576244",
+          "name": "Best Tiffin Home Delivery Services in Tirumala, Tirupati",
+          "snippet": "Golden Balaji Tiffin Center Tirumala , tirupati. +12. View More. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food-in-Sundaraiah-Nagar/nct-10481190",
+          "name": "Top Veg Tiffin Services in Sundaraiah Nagar, Tirupati",
+          "snippet": "Golden Balaji Tiffin Center Tirumala , tirupati. +12. View More. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Orion-Tiffin-Center/9999PX877-X877-250712034056-G9T7_BZDET",
+          "name": "Orion Tiffin Center in Balajy Colony,Tirupati",
+          "snippet": "Golden Balaji Tiffin Center 3.2. Most Tiffin Services provide veg, non-veg and Jain food. in Services with Address, Contact Number, Photos, Maps. Golden Balaji ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.instagram.com/popular/tirupati-tiffin",
+          "name": "Tirupati Tiffin",
+          "snippet": "Tiffin Center is a well-known restaurant in Tirupati, open daily from 5:00 AM to 10:30 PM and serving South Indian breakfast like idly and dosa 1.",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Giri-Tiffins-Stall-Balaji-Nagar/9999PX877-X877-230204074232-X3U1_BZDET",
+          "name": "Giri Tiffins Stall in Balaji Nagar,Tirupati",
+          "snippet": "Address 89, Tirumala , 1st Line Road, Balaji Nagar, Tirupati-517504, Andhra Pradesh. Most Tiffin Services provide veg, non-veg and Jain food. This establishment ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.zomato.com/tirupati/tirumala-tiffin-center-srinivasa-nagar/book",
+          "name": "Tirumala Tiffin Center, Srinivasa Nagar order online",
+          "snippet": "Tirumala Tiffin Center ; Plain Dosa. ₹45 ; Pulihora. ₹115 ; Mushroom Dosa. ₹85 ; Paneer Dosa. ₹85 ; Ghee Karam Dosa. ₹70. Read more",
+          "host": "www.zomato.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 2
+    },
+    {
+      "venue": "Chandra Tiffin Shop, Tirumala",
+      "area": "tirumala",
+      "category": "tiffin",
+      "query": "\"Chandra Tiffin Shop, Tirumala\" Tirumala",
+      "originalHost": "www.zomato.com",
+      "originalSourceKind": "zomato-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food-in-Tirumala/nct-10481190",
+          "name": "Best Tiffin Services For Veg Food in Tirumala, Tirupati",
+          "snippet": "Best Tiffin Services For Veg Food in Tirumala , Tirupati - Order Food Online ; Sree Balaji Bhavan · 1.2k Ratings. Main Road Tirumala - 710 mts. Open until 11:00 pm. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.instagram.com/popular/tirupathi-tiffins",
+          "name": "Tirupathi Tiffins",
+          "snippet": "Thirupathi Bhimas serves classic South Indian tiffins like idli, vada, pongal, dosa, and uthappam, made with fresh batter and traditional recipes.",
+          "host": "www.instagram.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Tirumala/nct-10481155/page-3",
+          "name": "Tiffin Services in Tirumala, Tirupati - Page 3",
+          "snippet": "Tiffin Services in Tirumala , Tirupati - Page 3 ; A1 Tiffin Court · Shop 2Tummalagunta Bakki Reddy Colony - 8.68 km ; Sri Maruthi Tiffincentre · Shop No 1 Bhavani ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Non-Veg-Food-in-Tirumala/nct-10481177",
+          "name": "Best Tiffin Services For Non Veg Food in Tirumala, Tirupati",
+          "snippet": "Tiffin Services For Non Veg Food in Tirumala , Tirupati – Savor delicious, home-cooked non-veg meals delivered to your doorstep!",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.mappls.com/place-chandra+tiffin+center-shop+no+3-state+bank+of+india+colony-ashok+nagar-tirupati-andhra+pradesh-517501-8AO16L@zdata=MTMuNjIyODM0Kzc5LjQxOCsxNys4QU8xNkwrK25yed",
+          "name": "Chandra Tiffin Center Restaurant",
+          "snippet": "Get map of chandra tiffin center, shop no 3, state bank of india colony, ashok nagar, tirupati, andhra pradesh, 517501 by Mappls. Find location,directions ...",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Lunch-in-Prakasam-Road/nct-10481173/amp",
+          "name": "Best Tiffin Services For Lunch in Prakasam Road, Tirupati",
+          "snippet": "19629, Tirumala , Tirumala , Tirupati - 517504 (Beside Tvs Show Room), Door No: 18/1, Bhavani Nagar Circle, KT Road, Tirupati - 517507 (Near Mother Hospital ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    },
+    {
+      "venue": "V Mohan Tea Stall, Tirumala",
+      "area": "tirumala",
+      "category": "street_food",
+      "query": "\"V Mohan Tea Stall, Tirumala\" Tirumala",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/V-Mohan-Tea-Stall-Tirumala/9999PX877-X877-230406172600-N3H9_BZDET",
+          "name": "V Mohan Tea Stall in Tirumala,Tirupati",
+          "snippet": "... 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, Reviews & Ratings, Photos, Maps of V Mohan Tea Stall, Tirumala , Tirupati.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/V-Mohan-Tea-Stall-Tirumala/9999PX877-X877-230406172600-N3H9_BZDET/photos",
+          "name": "1 Photos of V Mohan Tea Stall in Tirumala, Tirupati",
+          "snippet": "Photos of V Mohan Tea Stall in Tirumala , Tirupati. V Mohan Tea Stall, Tirumala , tirupati - Tea Stalls - 1. TirupatiTea Stalls In TirupatiTea Stalls in ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/S-V-Tea-Stall-Tirumala/9999PX877-X877-230323064354-A1C8_BZDET/amp",
+          "name": "S V Tea Stall in Tirumala,Tirupati",
+          "snippet": "V Mohan Tea Stall Tirumala . 3.7. 3 Ratings · View All. Photos. Upload Photos. Quick Information. Business Hours. Open Now : until 11:00 pm · Type. Tea Stalls.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-having-Tea-in-Tirumala/nct-10853304-att-cou22",
+          "name": "Best Tea Stalls Having Tea in Tirumala, Tirupati",
+          "snippet": "V Mohan Tea Stall Tirumala , tirupati. Upload Photos. Share. V Mohan Tea Stall. 3.73 Ratings. 1 Pac 1 Balajy Colony Tirumala - 580 mts. ₹ 150 Price for two. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Subbu-Tea-Stall-Seshadri-Nagar/9999PX877-X877-231005203045-L1K6_BZDET/amp",
+          "name": "Subbu Tea Stall in Seshadri Nagar,Tirupati",
+          "snippet": "V Mohan Tea Stall Tirumala . 3.7. 3 Ratings · Balaramreddy Tea Shop Tirumala . 5.0. 1 Ratings · View All. Photos. Upload Photos. Quick Information. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tea-Stalls-with-Dine-in-in-Apsrtc-Bus-Stand-Road/nct-10853304-att-Rdin",
+          "name": "Top Tea Stalls With Dine In in Apsrtc Bus Stand Road",
+          "snippet": "- 60 mts. ₹ 150 Price for two. Open until 10:00 pm. V Mohan Tea Stall Tirumala , tirupati ... Bus Stop, Tirumala , Tirupati - 517504 (Opposite Sv Museum Vaikuntam ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "Sri Guru Tiffin Centre, Tirumala",
+      "area": "tirumala",
+      "category": "tiffin",
+      "query": "\"Sri Guru Tiffin Centre, Tirumala\" Tirumala",
+      "originalHost": "tirupati.idbf.in",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Dinner/nct-10943521",
+          "name": "Best Tiffin Services For Dinner in Tirupati - Order Food Online",
+          "snippet": "Open until 11:00 pm. Open until 10:00 pm. Average rating 4.0 (3826. Address Main Road, Tirumala , Tirupati - 517504 (Balaji Nagar) Door No 19-12-116,",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://tirupati.idbf.in/788126/tiffin-centre",
+          "name": "Tiffin Centre in Tirupati",
+          "snippet": "Sri Guru Tiffin Centre 1, Tiffin Centre is located at Alipiri Road, Balaji Colony, Tirupati - 517501, Andhra Pradesh, India. Tiffin Centre opens at 10 AM on ...",
+          "host": "tirupati.idbf.in"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food-in-Tml-By-Pass-Road/nct-10481190",
+          "name": "Top Veg Tiffin Services in Tml By Pass Road, Tirupati",
+          "snippet": "Tiffin Services For Veg Food in Tml By Pass Road, Tirupati ; Address, Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala , Tirumala , Tirupati ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.mappls.com/place-sri+tirumala+tiffin+centre-tada-tirupati+district-andhra+pradesh-524121-vvb3kl@zdata=MTMuNjYwMzEyKzgwLjAxMzM2NSsxNyt2dmIza2wrK25yed",
+          "name": "Sri Tirumala Tiffin Centre, Tada, Tirupati District, Andhra",
+          "snippet": "Get map of sri tirumala tiffin centre, tada, tirupati district, andhra pradesh, 524121 by Mappls. Find location,directions,places & brands near sri tirumala",
+          "host": "www.mappls.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food-in-Bhavani-Nagar/nct-10481190",
+          "name": "Best Tiffin Services For Veg Food in Bhavani Nagar, Tirupati",
+          "snippet": "19629, Tirumala , Tirumala , Tirupati - 517504 (Beside Tvs Show Room), G Car Street, T P Area, Tirupati - 517501 (Opposite Buss Stand, Opposite Govindaraja ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Tirumala/nct-10481155/page-3",
+          "name": "Tiffin Services in Tirumala, Tirupati - Page 3",
+          "snippet": "Tiffincentre Bhavani Nagar, Tiffincentre 4.54 Ratings - 8.97 km Opens at 07:00 AM Call. Open until 11:00 pm",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 5
+    },
+    {
+      "venue": "Saarangi Restaurant, Tirumala",
+      "area": "tirumala",
+      "category": "restaurant",
+      "query": "\"Saarangi Restaurant, Tirumala\" Tirumala",
+      "originalHost": "www.tripadvisor.com",
+      "originalSourceKind": "tripadvisor-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.facebook.com/shankar.ramakrishnan.79/posts/new-restaurant-tirumala-sarangee-opens-its-door-from-21st-march-2022-mondayfor-y/5249047121814625",
+          "name": "New Restaurant @ Tirumala *SARANGEE* opens it's door",
+          "snippet": "Public Royal Sarangee restaurant in Tirumala will be opening on 21st march. the best taste and quality food in Tirumala . umala, Narayanagiri Rd ...",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.justdial.com/Hyderabad/Saarangi-Fine-Dine-Restaurant-Tirumala-Above-To-Reliance-Trends-Malkajgiri-Dist-Bhavani-Nagar-Premavathi-Pet/040PXX40-XX40-230106160014-C9P8_BZDET",
+          "name": "Tirumala in Bhavani Nagar-Premavathi Pet,Hyderabad",
+          "snippet": "Saarangi Fine Dine Restaurant - Tirumala . Open from Monday:- 9:00 am - 11:00 pm, Sunday:- 8:00 am - 11:00 pm, at breakfast, lunch, and dinner,",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/LocationPhotoDirectLink-g1985457-d4811848-i121401514-Saarangi-Tirumala_Andhra_Pradesh.html",
+          "name": "Picture of Saarangi Restaurent, Tirumala",
+          "snippet": "279 reviews #1 of 7 restaurants in Tirumala Narayanagiri Area Between Vaikuntam-1 and Vaikuntam-2, Tirumala 517504 India",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.facebook.com/streetbyte/posts/amazing-veg-thali-at-saarangi-tirumala-priced-at-rs275-felt-over-priced-initiall/2219908908079860",
+          "name": "Amazing Veg Thali at Saarangi, Tirumala . Priced at Rs. 275",
+          "snippet": "Near Sannidanam Guest House, Tirumala ✅ Every item in the Thali is served unlimited 👌 Food Tastes Good with Great Restaurant Ambience",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in/ShowUserReviews-g1985457-d4811848-r240238026-Saarangi_Restaurent-Tirumala_Chittoor_District_Andhra_Pradesh.html",
+          "name": "The Sarangi - Reviews, Photos - Saarangi Restaurent",
+          "snippet": "On behalf our team at Saarangi restaurant, Tirumala I thank you for your visit. We deeply value your feedback and we would work on the areas as you have ... Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://saarangi.in/about",
+          "name": "About us",
+          "snippet": "Founded in 1998, Saarangi Fine Dine Restaurant began its journey in the sacred Narayanagiri Area, Tirumala (TTD). Over the years, Saarangi earned the trust ... Read more",
+          "host": "saarangi.in"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 5
+    },
+    {
+      "venue": "Vls Tiffin Centre And Catering, Mangalam",
+      "area": "tpt-neighbourhoods",
+      "category": "tiffin",
+      "query": "\"Vls Tiffin Centre And Catering, Mangalam\" Mangalam",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Thiruvananthapuram/Tiffin-Services-in-Mangalapuram/nct-10481155",
+          "name": "Best Tiffin Services in Mangalapuram, Thiruvananthapuram",
+          "snippet": "Find ✓Tiffin Center, ✓Veg Tiffin Service, Price for two Open until 10:00 pm Kumar Tiffin Centre , offering customised meal plans",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Kollam/Tiffin-Services-For-Veg-Food-in-Mulamkadakam-Road/nct-10481190",
+          "name": "Top Veg Tiffin Services in Mulamkadakam Road, Kollam",
+          "snippet": "Best Tiffin Services For Veg Food in Mulamkadakam Road, Kollam - Order Food Online ; Musammil Homely Foods · 1 Rating. Ayathil Puliyathumukku Road Ayathil ; Sachin ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Nellore/Tiffin-Services-For-Veg-Food-in-Venkatachalam/nct-10481190/page-2",
+          "name": "Tiffin Services For Veg Food in Venkatachalam, Nellore",
+          "snippet": "Tiffins And Catering 4.51 Rating Kandukur,Kanigiri Road Opens at 07:30 AM Call If you want fresh food and nice service,",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Ernakulam/Tiffin-Services-in-Mamagalam/nct-10481155",
+          "name": "Top Tiffin Services in Mamagalam - Best Tiffin Home Delivery",
+          "snippet": "Tiffin Services in Mamagalam. Find ✓Tiffin Center, ✓Veg Tiffin Service, ✓Homemade Tiffin Service, ✓Dabba Service in Mamagalam.",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.yelp.com/questions/komala-vilas-does-komala-vilas-do-catering-for-events/LyqNQEaWfrBAhGDS3cQrSw",
+          "name": "Does Komala Vilas Do Catering for events?",
+          "snippet": "Oct 7, 2021 — Does Komala Vilas Do Catering for events?",
+          "host": "www.yelp.com"
+        },
+        {
+          "url": "https://www.justdial.com/Jagtial/Tiffin-Services-For-Veg-Food-in-Mangala/nct-10481190",
+          "name": "Best Tiffin Services For Veg Food in Mangala, Jagtial",
+          "snippet": "Manu Tiffin Center is worth the money with good quantity of tasty food. The staff is friendly and the restaurant is well sanitized. Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 1
+    },
+    {
+      "venue": "Tasvija Tiffin Centre, Mangalam",
+      "area": "tpt-neighbourhoods",
+      "category": "tiffin",
+      "query": "\"Tasvija Tiffin Centre, Mangalam\" Mangalam",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://m.yelp.com",
+          "name": "Best Tiffin Service near Somerville, NJ",
+          "snippet": "Best Tiffin Service near Somerville, NJ · 15. Nalan Indian Cuisine · 14. Top Chef Meals · 13. Bollywood grill · 12. Mishree Indian Cuisine · 11. Zaika Indian Grill. Read more",
+          "host": "m.yelp.com"
+        },
+        {
+          "url": "https://www.yelp.com",
+          "name": "Best Tiffin Service near Monroe Township, NJ 08831",
+          "snippet": "Best Tiffin Service near Monroe Township, NJ 08831 ; 1. Tera Tera Tiffin Services. 5.0 (2 reviews) ; 2. Mrs. Kumar's Fine Indian Cuisine & Bar. 3.8 (158 reviews). Read more",
+          "host": "www.yelp.com"
+        },
+        {
+          "url": "https://www.justdial.com",
+          "name": "Best Tiffin Services in Semmandalam, Cuddalore - Justdial Jd",
+          "snippet": "Bhuvana Tiffin Centre is an excellent restaurant! The food is fresh, the ambience is great, and the seating is good. The live music adds to the wonderful ... Read more",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 3,
+      "hitsOnOtherHosts": 2
+    },
+    {
+      "venue": "Sumathi Tiffin Centre, Mangalam",
+      "area": "tpt-neighbourhoods",
+      "category": "tiffin",
+      "query": "\"Sumathi Tiffin Centre, Mangalam\" Mangalam",
+      "originalHost": "magicpin.in",
+      "originalSourceKind": "magicpin-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://magicpin.in/Tirupati/Mangalam/Restaurant/Sumathi-Tiffin-Centre/store/3c6ac43?srsltid=AYCX9vIrfWHOsud5oKU93Kr6d88hBWwU8u8mzuDqfNsVKCOD80oH3A0z",
+          "name": "Sumathi Tiffin centre, Mangalam, Tirupati",
+          "snippet": "... Sumathi Tiffin centre, Mangalam Deals Sumathi Tiffin centre, Mangalam , Tirupati. Sumathi Tiffin centre. Enquire now. orderhere-logo. Create your ... Read more",
+          "host": "magicpin.in"
+        }
+      ],
+      "hitCount": 1,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "J Bebamma Tiffin Center, Renigunta Road",
+      "area": "tpt-neighbourhoods",
+      "category": "tiffin",
+      "query": "\"J Bebamma Tiffin Center, Renigunta Road\" Renigunta Road",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.justdial.com/Tirupati/SVT-Tiffin-Center-Kalanjali-Showroom-Renigunta-Road/9999PX877-X877-170613102859-G9U5_BZDET",
+          "name": "SVT Tiffin Center in Renigunta Road,Tirupati",
+          "snippet": "Established in the year 2010, SVT Tiffin Center in Renigunta Road , Tirupati is a top player in the category Tiffin Services in the Tirupati. This well-known ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Ujwal-Tiffin-Center-Near-VMC-Renigunta-Road/9999PX877-X877-170617101258-V7H9_BZDET",
+          "name": "Ujwal Tiffin Center in Renigunta Road,Tirupati",
+          "snippet": "Ujwal Tiffin Center in Renigunta Road ,Tirupati … 7:00 am - 10:30 pm, Saturday:- 7:00 am - 10:30 pm, Sunday:- 7:00 am - 10:00 pm hours of operation. This ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Gujarati-Food-in-Renigunta/nct-10481166/page-4",
+          "name": "Tiffin Services For Gujarati Food in Renigunta, Tirupati",
+          "snippet": "Tiffin Services For Gujarati Food in Renigunta , 8.29 km Open until 9:00 pm. Price for two Open 24 Hrs",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Renigunta-Road/nct-10000409/page-4",
+          "name": "24 Hours Tiffin Services in Renigunta Road, Tirupati - Page 4",
+          "snippet": "24 Hours Tiffin Services in Renigunta Road , Tirupati ・ 2.66 km Opens in 13 mins ・ find best Tiffin Services for you!",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Ujwal-Tiffin-Center-Near-VMC-Renigunta-Road/9999PX877-X877-170617101258-V7H9_BZDET/photos",
+          "name": "6 Photos of Ujwal Tiffin Center in Renigunta Road, Tirupati",
+          "snippet": "Ujwal Tiffin Center in Tirupati has Monday:- 7:00 am - 10:30 pm, Tuesday:- 7:00 am - 10:30 pm, Wednesday:- 7:00 am - 10:30 pm, Thursday:- 7:00 am - 10:30 pm, ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Renigunta/nct-10000409",
+          "name": "Best 24 Hours Tiffin Services in Renigunta, Tirupati",
+          "snippet": "24 Hours Tiffin Services in Renigunta , Tirupati - Savor delicious, home-cooked meals delivered right to your door! 320 mts Call Now. Opens at 6:45 am tomorrow. ...",
+          "host": "www.justdial.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 0
+    },
+    {
+      "venue": "Chai Buster Tea Stall, Dhanalakshmi Nagar",
+      "area": "tpt-central",
+      "category": "street_food",
+      "query": "\"Chai Buster Tea Stall\" Dhanalakshmi Nagar",
+      "originalHost": "www.justdial.com",
+      "originalSourceKind": "directory-listing",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://chaibuster.com/menu-1.html",
+          "name": "Our Menu",
+          "snippet": "Contact us +91 9989995705 chaibusterindia@gmail.com. Decoction Lemon Tea ₹15.00 Black Tea ₹15.00 Green Tea ₹20.00 Ginger Lemon Tea ₹20.00 Mint Tea",
+          "host": "chaibuster.com"
+        },
+        {
+          "url": "https://www.instagram.com/chaibuster/p/DdiafG1RwZ4/?hl=am-et",
+          "name": "CHAI BUSTER – COMING SOON! ☕🔥 Get ready, tea lovers",
+          "snippet": "Address: Near Skanda International School, Kachavani Singaram Village, Ghatkesar Mandal, Rangareddy District – 500088. Telangana – 504294 … ...",
+          "host": "www.instagram.com"
+        }
+      ],
+      "hitCount": 2,
+      "hitsOnOtherHosts": 2
+    },
+    {
+      "venue": "Vanam Restaurant, Alipiri Road",
+      "area": "tpt-central",
+      "category": "restaurant",
+      "query": "\"Vanam Restaurant\" Alipiri Road",
+      "originalHost": "nominatim.openstreetmap.org",
+      "originalSourceKind": "osm-nominatim",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://wanderboat.ai/restaurants/india/andhra-pradesh/vanam-family-restaurant/ncYnoTuRQk6uug3SkMnIMQ",
+          "name": "Vanam Family Restaurant - Shop No 1, Opp, Zoo Park",
+          "snippet": "... Alipiri Road , Thatithopu, Tirupati, Andhra Pradesh 517505, India. New Deccan Delicious Restaurant. 3, Cherlopalli - Alipiri Rd ... Vanam restaurant , opposite the ...",
+          "host": "wanderboat.ai"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Vanam-Restaurant-OPPSV-ZOO-PARK-Air-Bypass-Road/9999PX877-X877-140810191518-K7K8_BZDET/things-to-do",
+          "name": "Air Bypass Road, Tirupati - Explore Vanam Restaurant",
+          "snippet": "Vanam Restaurant caters to their needs by offering fully furnished accommodations with flexible terms. Whether it's a backpacker looking for a budget-friendly ...",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/RestaurantsNear-g297587-d23654287-oa30-Treebo_Sripadha_Residency_Alipiri_Road-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Restaurants near Treebo Sripadha Residency Alipiri Road",
+          "snippet": "... and nonveg for... Good bar and restaurant · 45. VANAM RESTAURANT . 4.4. 4.4 of 5 bubbles. (20 reviews). Indian, Asian££ - £££. Open now.",
+          "host": "www.tripadvisor.co.uk"
+        },
+        {
+          "url": "https://www.justdial.com/Tirupati/Restaurants-with-Solo-Dinning-in-Alipiri/nct-10408936-att-rest800",
+          "name": "Best Restaurants With Solo Dinning in Alipiri, Tirupati",
+          "snippet": "We had lunch at Vanam Restaurant it was very tasty. I recommend to go their for breakfast, lunch and dinner. Call Now. Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://my.trip.com/travel-guide/destination/tirupati-15026?curr=PKR&locale=en-MY",
+          "name": "Tirupati 2026: Top Things to Do & Places to Visit",
+          "snippet": "VANAM RESTAURANT . View in App. VANAM RESTAURANT . This user hasn't left any comments yet. 󱓓. Southeast Asian cuisine. Gurunanak Punjabi Dhaba. View in App. Read more",
+          "host": "my.trip.com"
+        },
+        {
+          "url": "https://www.goibibo.com/hotels/g-la-nearby-vanam-restaurant-tirupati-with-parking-hotel.html",
+          "name": "Hotels near Vanam Restaurant Tirupati with Parking",
+          "snippet": "Choose hotels near Vanam Restaurant with Parking, perfect for your family at the best prices. Book now and get 15% off on hotels near Vanam Restaurant . Read ...",
+          "host": "www.goibibo.com"
+        }
+      ],
+      "hitCount": 6,
+      "hitsOnOtherHosts": 6
+    }
+  ]
+}

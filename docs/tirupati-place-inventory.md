@@ -847,3 +847,121 @@ same as the original queue. Identity-HELD (4): "Indira Guest House, Tirumala", "
 - Wikipedia re-fetches rate-limited (HTTP 429, shared egress IP) — the two targeted re-fetches failed; their leads were instead resolved via web_search lead-checks
 - Srinivasa Mangapuram locality query returned only out-of-city matches — 0 in-scope leads recorded honestly
 - national chain outlets (Cafe Coffee Day, Just Bake/Justbake, Fnp Cakes, Khetlaapa Chai, Tea Time additional outlets) deliberately skipped — not distinct local places
+
+## Batch-6 audit of the Batch-015 candidates (2026-10-28)
+
+All 61 Batch-015 proposed records were re-audited (scripts/foodie-enrichment/batch6-audit-b015.ts,
+evidence/tirupati-master/batch6/b015-audit.json): canonical uuid5 ids recomputed (exact match), zero exact
+collisions vs inventory/batches 011–015/worksheet/queue, slug uniqueness re-proven, every deterministic flag
+explicitly adjudicated with a recorded reason (26 adjudications, 17 deterministic flags).
+
+| Verdict | Count |
+|---|---|
+| retained | 59 |
+| moved to review queue | 2 |
+
+Moved to the review queue (locality evidence insufficient — full reasons in the audit file):
+
+- **Radha Rani Tiffin Centre, Padmavathi Nagar** — MIXED QUOTE: the idbf category-page quote concatenates TWO different listings ('Mahila University Road, Padmavathi Nagar, Tirupati ... 503, Samajam Street, Tiruchanur, Tirupati'); which address belongs to Radha Rani is n…
+- **Amma Appam, Renigunta** — LOCALITY CONFLICT (carry-forward of the batch-5 ledger note): the only address in the quote is 'G Car Street, T P Area, Tirupati - 51750x' — a CENTRAL Tirupati street — while the 'Renigunta' attribution comes solely from…
+
+Batch-015 SQL was regenerated deterministically with the retained 59 rows
+(40 restaurants + 19 places); the two moved rows keep their full evidence in batch6/review-queue-batch6.json
+and are counted NOWHERE as inventory/candidates. ALL retained rows remain verification_status='unverified'.
+
+### Batch-6 LIVE production cross-check (2026-10-28)
+
+The audit's local-proxy corpora were supplemented by a read of the ACTUAL production inventory through the
+app's own public read endpoint (read-only GET with the publishable key; NO SQL executed, nothing written):
+**86 live restaurant rows** — all 61 candidates checked:
+0 exact collisions, 0 base-name collisions,
+0 loose token overlaps (batch6/live-crosscheck.json). A live read never
+upgrades a verification status.
+
+### Batch-6 second-source evidence for the batch-015 food venues (2026-10-28)
+
+Objective: find a SECOND INDEPENDENT source per food venue (40 retained venues; one bounded web_search query
+each, 8 s pacing). Classification is corroboration-grade — it NEVER upgrades verification_status:
+
+| Classification | Count |
+|---|---|
+| assessed | 40 |
+| second-source | 22 |
+| same-host-corroboration | 8 |
+| none | 10 |
+
+Second-source grades: map-directory 5, established-directory 8, aggregator 5, social 4.
+The records (URL + host + quote per venue) live in batch6/food-second-sources-assessment.json and accompany
+the owner's batch-015 review. 8 venues matched only on their original host and 10
+found nothing — those rows stay single-source review candidates, honestly.
+
+## Batch-6 accepted candidates (Batch-016 review-candidate SQL, 2026-10-28)
+
+18 accepted candidates were assembled from the coverage-gap sweep of the weakest locality×category
+cells (18 bounded web_search queries + 9 Nominatim town queries + 40 second-source queries after the ONE-probe
+availability check passed). Fail-loud dedupe gates proved zero collisions against inventory, batches 011–015,
+the curated worksheet (incl. rawNames aliases), the batch-6 review queue AND a base-name gate for the
+locality-less canonicals frozen in earlier batches.
+
+| Area | Accepted |
+|---|---|
+| Tirupati residential neighbourhoods | 5 |
+| Renigunta (airport/junction corridor, ~10-12 km north) | 2 |
+| Surrounding destinations (beyond city/Tirumala core) | 6 |
+| Srinivasa Mangapuram (~10 km west) | 2 |
+| Tirupati city centre | 1 |
+| Chandragiri (~12-14 km south-west) | 2 |
+
+| Category | Accepted |
+|---|---|
+| restaurant | 4 |
+| cafe | 2 |
+| tiffin | 2 |
+| hotel | 9 |
+| attraction | 1 |
+
+These rows import ONLY as `verification_status='unverified'` review candidates
+(supabase/review-candidates/insert-batch-016-tptm-b6.sql — never executed by this repo); coordinates stay
+NULL (published coordinates remain in the evidence files for human review).
+
+Accepted candidate names (canonical):
+
+- Kakinada Subbbayya Gari Hotel, Kapila Teertham Road [tpt-neighbourhoods/restaurant/T2] — zomato-listing: https://www.zomato.com/tirupati/kapila-teertham-road-restaurants
+- Aroma Coffee House, Kapila Teertham Road [tpt-neighbourhoods/cafe/T2] — zomato-listing: https://www.zomato.com/tirupati/kapila-teertham-road-restaurants
+- The Vintage Cafe, Kapila Teertham Road [tpt-neighbourhoods/cafe/T2] — zomato-listing: https://www.zomato.com/tirupati/kapila-teertham-road-restaurants
+- Good Luck Family Dhaba, Renigunta Locality [renigunta/restaurant/T1] — zomato-listing: https://www.zomato.com/tirupati/good-luck-family-dhaba-renigunta
+- Sreenivasa Reddy Dhaba, Renigunta Locality [renigunta/restaurant/T2] — directory-listing: https://fuddo.in/sreenivasa-reddy-dhaba-renigunta
+- Shree Dhaba House, Akkarampalli [tpt-neighbourhoods/restaurant/T1] — directory-listing: https://www.justdial.com/Tirupati/Dhaba-Restaurants-in-Karakambadi
+- MSD Tiffin Centre, PN Road, Srikalahasti [surrounding/tiffin/T1] — map-listing: https://www.mappls.com/msd-tiffin-centre-pn-road-srikalahasti
+- Kalahasteeswara Tiffens, Srikalahasti [surrounding/tiffin/T1] — directory-listing: https://www.justdial.com/Srikalahasti/Kalahasteeswara-Tiffens
+- Srinivasa Hotel, Srinivasa Mangapuram [srinivasa-mangapuram/hotel/T1] — official-business: https://srinivasahotels.com
+- Sreekanth Lodge, Mangalam [tpt-neighbourhoods/hotel/T1] — directory-listing: https://magicpin.in/Tirupati/Mangalam/Sreekanth-Lodge
+- Sun Lights Lodge, Tata Nagar [tpt-central/hotel/T1] — directory-listing: https://www.makemytrip.com/hotels/sun-lights-lodge-tata-nagar
+- Kittu Home Stay, Chandragiri [chandragiri/hotel/T2] — directory-listing: https://www.ixigo.com/hotels-near-chandragiri-fort-tirupati
+- Kandy PLR Hotel, Thondavada [chandragiri/hotel/T2] — directory-listing: https://www.goibibo.com/hotels/kandy-plr-hotel-thondavada
+- Mgr Residency, Srikalahasti [surrounding/hotel/T2] — directory-listing: https://ae.makemytrip.global/hotels-near-srikalahasti-temple
+- Raj Residency, Srikalahasti [surrounding/hotel/T2] — directory-listing: https://www.makemytrip.com/hotels-near-sri-kalahasti-railway-station
+- Kalahasteeswara Residency, Srikalahasti [surrounding/hotel/T2] — directory-listing: https://www.makemytrip.com/hotels-near-sri-kalahasti-railway-station
+- APTDC Haritha Hotel, Srikalahasti [surrounding/hotel/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=hotel+Srikalahasti&format=jsonv2
+- Srivari Mettu, Srinivasa Mangapuram [srinivasa-mangapuram/attraction/T2] — tripadvisor-listing: https://www.tripadvisor.com/Tourism-g2282318-Chandragiri_Chittoor_District_Andhra_Pradesh-Vacations.html
+
+### Batch-6 corroborations of EXISTING records (not new rows)
+
+- **Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram** → Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram (inventory VERIFIED, batch-011) (https://www.tirumala.org/MoreTemples.aspx)
+- **OTC — Orion Tiffin Centre, Korlagunta** → OTC — Orion Tiffin Centre, Korlagunta (inventory) (https://www.justdial.com/Tirupati/24-hours-tiffin-akkarampalli)
+- **Padamavathi Tiffin Center** → Padamavathi Tiffin Center (inventory UNVERIFIED; worksheet T3, area tirumala) (https://www.justdial.com/Tirupati/Padamavathi-Tiffin-Center-Tirumala)
+- **Sri Venkateshwara Bakery & Sweets, Bhavani Nagar** → Sri Venkateshwara Bakery And Sweets (inventory UNVERIFIED; worksheet T3, tpt-neighbourhoods, locality-less) (https://www.mappls.com/sri-venkateshwara-bakery-sweets-leela-mahal-road)
+
+### Batch-6 weak leads (review queue ONLY — not candidates, not counted)
+
+21 discovery hits were recorded as weak leads (list-mentions without own locality, delivery-area
+pages, aggregator lists, truncated snippets, chain outlets, wrong-city Nominatim matches). Identity-HELD
+(2): "Ganapathi Juice Center, MR Palli", "Chillies Food Paradise, Renigunta Road" — see the duplicate-review doc.
+
+### Batch-6 source limitations
+
+- Srinivasa Mangapuram: the town itself still has essentially no in-scope food POIs in any source — ONE hotel (Srinivasa Hotel, official site) + the corroborated temple; honest near-zero
+- Renigunta stays: chain/'Hotel O' (OYO-family) outlets deliberately skipped; non-chain results lacked Renigunta locality lines
+- Kapila Teertham Road entries are zomato area-page T2 evidence — venue-own pages not captured this pass
+- Srikalahasti stays: three makemytrip listings with walk-distance anchors — T2 grade only
+- Tiruchanur food: only swiggy delivery-area page evidence (T3) — queued, not accepted

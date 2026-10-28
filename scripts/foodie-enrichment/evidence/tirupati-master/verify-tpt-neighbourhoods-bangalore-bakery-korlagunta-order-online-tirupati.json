@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Bangalore Bakery , Korlagunta order online - Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.zomato.com/tirupati/bangalore-bakery-korlagunta/order"
   },
   "query": "\"Bangalore Bakery , Korlagunta order online - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-in-Korlagunta/nct-10033880",
+      "name": "Top Bakeries in Korlagunta, Tirupati - Best Cake Shops",
+      "snippet": "Bakeries in Korlagunta, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/korlagunta-restaurants/bakery",
+      "name": "Korlagunta Restaurants, Tirupati",
+      "snippet": "Korlagunta Restaurants, Tirupati ; Baker's Delight. 4.0. Bakery, Cake. ₹150 for one ; Baker's Heaven. 4.3. Bakery, Cake. ₹200 for one ; Delight Shakes. 3.9. Cake ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/budget-bakes-korlagunta-rest1455241",
+      "name": "Order from Budget Bakes online in Tirupati",
+      "snippet": "Order Online from Budget Bakes in Korlagunta, Tirupati … dishes online and enjoy doorstep delivery. Budget Bakes Korlagunta 20-03-126/B4. Bypass road Tirupati",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shop-Home-Delivery-in-Court-Road/nct-10465557",
+      "name": "Best Sweet Shop Home Delivery in Court Road, Tirupati",
+      "snippet": "Order Food Online Tirumala Bakery … 51 Korlagunta Main Road - 1.98 km ₹ +27. Korlagunta Main Road, Tirupati - 517501 No 255,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/61771/bangalore-bakery",
+      "name": "Bangalore Bakery in Tirupati",
+      "snippet": "Address : Bangalore Bakery,prakasam Road,srirama. Tirupati - 517501. Phone: 9441151606. You can call them at 9441151606 for inquiries or appointments. opens at ...",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/4012853/sri-guru-bakery-and-sweets",
+      "name": "Sri Guru BAKERY And Sweets in Tirupati",
+      "snippet": "Sri Guru BAKERY And Sweets can be contacted via: Address : 1, Ashok Nagar, Korlagunta, Tirupati - 517501. Overview of Sri Guru BAKERY And Sweets. Sri Guru BAKERY ... Read more",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Bakeries in Korlagunta, Tirupati - Best Cake Shops :: Bakeries in Korlagunta, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

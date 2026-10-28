@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Review of Sri Padmavathi Ammavari Temple, Tirupati, India",
-    "area": "tiruchanur"
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705522-r298805836-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html"
   },
   "query": "\"Review of Sri Padmavathi Ammavari Temple, Tirupati, India\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705522-r567220779-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Review of Sri Padmavathi Ammavari Temple - Tirupati",
+      "snippet": "Situated on the outskirts of Tirupati . A must visit temple. The parking area charges are very high. Rs 50 for unorganised parking. The temple complex is ...",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.co.uk/Attraction_Review-g297587-d3705522-Reviews-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Padmavathi Ammavari Temple, Tirupati",
+      "snippet": "it was very good experience. Located in Tiruchanoor, about 5km away from Tirupati , Address Sannidhi St, Tirupati 517503 India",
+      "host": "www.tripadvisor.co.uk",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/ShowUserReviews-g297587-d3705522-r189097120-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Reviews, Photos - Sri Padmavathi Ammavari Temple",
+      "snippet": "So beautiful temple situated 4 km. Nice Temple is very beautiful and clean. Overall nice temple. a must visit place.",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.ca/Attraction_Review-g297587-d3705522-Reviews-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Padmavathi Ammavari Temple (Tirupati, India)",
+      "snippet": "it was very good experience. Temple outside is crowded but inside it's neat and clean. Rush as usual. Address Sannidhi St, Tirupati 517503 India",
+      "host": "www.tripadvisor.ca",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com.sg/ShowUserReviews-g297587-d3705522-r356482393-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Alamelu Mangapuram - Sri Padmavathi Ammavari Temple",
+      "snippet": "Situated in Tirupathi , this temple sees a lot less crowd as compared to main Balaji temple. You should be done with the visit in around 1 hour. Buy tickets near ... Read more",
+      "host": "www.tripadvisor.com.sg",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com.my/Attraction_Review-g297587-d3705522-Reviews-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Sri Padmavathi Ammavari Temple, Tirupati",
+      "snippet": "Satisfied Darshan of Sri Padmavathi clean and neat atmosphere. queue arrangements were better than before. very happy and satisfied darshan. Address Sannidhi ...",
+      "host": "www.tripadvisor.com.my",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Sri Padmavathi Ammavari Temple, Tirupati :: it was very good experience. Located in Tiruchanoor, about 5km away from Tirupati , Address Sannidhi St, Tirupati 517503 India",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

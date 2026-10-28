@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Weekly Sevas",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://www.tirumala.org/WeeklySevas.aspx"
   },
   "query": "\"Weekly Sevas\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/aanandhanilayam/posts/ttd-important-information-ttd-websites-phone-numbers-email-ids-customer-care-cau/404174065699692",
+      "name": "Caution Deposit Refund | Srivari seva | Aliipiri Toll",
+      "snippet": "Postal address :- Tirumala Tirupati Devasthanams TTD Administrative Building, K.T. Road, Tirupati -517 501 Andhra Pradesh, India.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://atozgoogle.com/tirumala-tirupati",
+      "name": "Tirumala Tirupati Devasthanams Dharshan Accomadation",
+      "snippet": "Nov 25, 2019 — Located in Chittor District Andrapradesh State, Located at 3200 feet (980 Meters) Above the Sea Level, located at Tirumala Seven Hills TTD- ...",
+      "host": "atozgoogle.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.scribd.com/document/261620721/Tirupati-Details",
+      "name": "Tirumala Seva and Worship Guide | PDF | Hindu Iconography",
+      "snippet": "situated at the north west corner of Pushkarini Tank north of the Main Temple. 2. Next, worship at the Venkateswara Temple, Tirumalas main temple. come down ...",
+      "host": "www.scribd.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/FAQ_Answers-g297587-d1220147-t7861618.html",
+      "name": "Is there any seva which will performed to main - Tirumala",
+      "snippet": "Nov 3, 2019 — Tirumala Temple, Tirupati : Pl go to TTD web site . It lists sevas and FYI abishakam on Fridays is performed for the main diety",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "http://www.kesavaresidency.com/TTD-information.php",
+      "name": "TTD Information",
+      "snippet": "Sevas of Tirumala … contact: 2232813, 2231777 Ext.4271 or 4217 at Tirupati : 2277933, 2277777 Extn. 3679, 3589 at Tirumala.",
+      "host": "www.kesavaresidency.com",
+      "kind": null
+    },
+    {
+      "url": "https://gotirupathi.wordpress.com/page/10",
+      "name": "Page 10 – One Stop Site for Tirumala and Tirupati, Pooja and",
+      "snippet": "May 20, 2015 — One Stop Site for Tirumala and Tirupati , Pooja and Darshan procedure. Directions to Tiruchanoor Temple, 1st WeekWednesday 7 am Rs.2000. ...",
+      "host": "gotirupathi.wordpress.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Caution Deposit Refund | Srivari seva | Aliipiri Toll :: Postal address :- Tirumala Tirupati Devasthanams TTD Administrative Building, K.T. Road, Tirupati -517 501 Andhra Pradesh, India.",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

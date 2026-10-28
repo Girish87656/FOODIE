@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Order from 18Th Street Kitchen online in Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/18th-street-kitchen-korlagunta-rest1237008"
   },
   "query": "\"Order from 18Th Street Kitchen online in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/daily-kitchen-tata-nagar/order",
+      "name": "Daily Kitchen, Tata Nagar order online",
+      "snippet": "Check out Daily Kitchen, Tata Nagar, Tirupati on Zomato for great deals, ratings, reviews and more! minimum item total required to place an order",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/delivery/dish-dinner",
+      "name": "Best Dinner Delivery Restaurants in Tirupati | Order Online",
+      "snippet": "Order Dinner online in Tirupati , check reviews and ratings, and enjoy quick delivery from top restaurants. Find the perfect Dinner for any occasion.",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-with-Counter-Service-in-Sundaraiah-Nagar/nct-10408936-att-rest795",
+      "name": "Top Restaurants With Counter Service in Sundaraiah Nagar",
+      "snippet": "Best Restaurants With Counter Service in Sundaraiah Nagar, Tirupati - Order Food Online · Vr Mathura Food Paradise · DEVI TAAZA KITCHEN · Dojin Smart Restaurant. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Home-Delivery-Restaurants-in-Porla-Street/nct-10250324",
+      "name": "Best Home Delivery Restaurants in Porla Street, Tirupati",
+      "snippet": "Best Home Delivery Restaurants in Porla Street, Tirupati - Order Food Online ; Vivaha Bhojanambu · 17.5k Ratings. Backside Tirupati Railway Station Dr Mahal Road ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/chicken-street-korlagunta/order",
+      "name": "Chicken Street, Korlagunta order online",
+      "snippet": "Order food online from Chicken Street, Korlagunta, Tirupati . Get great offers and super fast food delivery when you order food online from Chicken Street on ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/sharmas-kitchen-1-mangalam/order",
+      "name": "Sharma's Kitchen, Mangalam order online",
+      "snippet": "Order food online from Sharma's Kitchen, Mangalam, Tirupati . Get great offers and super fast food delivery when you order food online from Sharma's Kitchen ...",
+      "host": "www.zomato.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Daily Kitchen, Tata Nagar order online :: Check out Daily Kitchen, Tata Nagar, Tirupati on Zomato for great deals, ratings, reviews and more! minimum item total required to place an order",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

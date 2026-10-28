@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Padmavathi Ammavari Temple in Tiruchanoor,Tirupati",
-    "area": "tiruchanur"
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Padmavathi-Ammavari-Temple-Tiruchanoor/9999PX877-X877-100124112925-D7L9DC_BZDET"
   },
   "query": "\"Padmavathi Ammavari Temple in Tiruchanoor,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g297587-d3705522-r216342567-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Review of Sri Padmavathi Ammavari Temple, Tirupati, India",
+      "snippet": "It is situated on the outskirts of Tirupathi metropolitan area in Chittoor district, Andhra Pradesh, India. at 5 kms away from East Railway station",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/groups/409035593262880/posts/1806567473509678",
+      "name": "Padmavathi Ammavari Temple: A Divine Journey",
+      "snippet": "Located in the spiritual town of Tiruchanur, just 5 km from Tirupati , This temple is located in Tiruchanur, Tirupati district, Andhra Pradesh, ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirupati-to-sri-padmavathi-ammavari-temple-distance",
+      "name": "Tirupati to Sri Padmavathi Ammavari Temple Distance",
+      "snippet": "Sri Padmavathi Ammavari Temple is about 5 km from Tirupati in Tiruchanur. It's a quick 10-15 minute drive and many pilgrims visit it before heading to Tirumala. Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://jyotirlingatemples.com/article/id/1614/temple/252/padmavati-devi-temple-tiruchanoor",
+      "name": "Padmavati Devi Temple Tiruchanoor",
+      "snippet": "Padmavati Devi Temple is located in Tiruchanoor, about 5 km from Tirupati . Call Us 8452 040 404 9224 444 455 9987",
+      "host": "jyotirlingatemples.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/ShowUserReviews-g297587-d3705522-r548567040-Sri_Padmavathi_Ammavari_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "Alemelu mangapuram or Tiruchanoor or Padmavati Temple",
+      "snippet": "Padmavathi Ammavari Temple: Ratakonda S vijayawada 101 ・ can visit the temple it is in Tirupati 5km from Alipiri ・ take a slight detour to reach the temple. ...",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Padmavathi-Ammavari-Temple-Tiruchanoor/9999PX877-X877-100124112925-D7L9DC_BZDET/things-to-do",
+      "name": "Padmavathi Ammavari Temple - Tiruchanoor, Tirupati",
+      "snippet": "Explore services and facilities around Padmavathi Ammavari Temple in Tiruchanoor, Tirupati . Discover nearby travel, medical, transport, emergency, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

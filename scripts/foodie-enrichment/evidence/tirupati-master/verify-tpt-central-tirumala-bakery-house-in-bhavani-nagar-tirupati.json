@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirumala Bakery House in Bhavani Nagar,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Bakery-House-Opposite-Sbi-Bhavani-Nagar/9999PX877-X877-250909173737-F4C1_BZDET"
   },
   "query": "\"Tirumala Bakery House in Bhavani Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-with-Drive-Through-in-T-P-Area/nct-10033880-att-res40",
+      "name": "Best Bakeries With Drive Through in TP Area, Tirupati",
+      "snippet": "Tirumala Bakery Near Bhavani Nagar Circle Tirupati Bazar, Tirupati . Menu ... Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumala-Bakery-Near-Bhavani-Nagar-Circle-Tirupati-Bazar/9999PX877-X877-110405124200-M6R9_BZDET/products",
+      "name": "Products by Tirumala Bakery in Tirupati Bazar, Tirupati",
+      "snippet": "You can call +91-9035099842 for reservations and enquiries at Tirumala Bakery in Tirupati Bazar, Tirupati .",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-tirumala+bakery-kapilateertham+road-bhavani+nagar-tirupati-andhra+pradesh-517501-NSAVJD@zdata=MTMuNjM4OTIrNzkuNDE4NzI0KzE3K05TQVZKRCsred",
+      "name": "Tirumala Bakery, Bhavani Nagar",
+      "snippet": "Tirumala Bakery, Kapilateertham Road, Bhavani Nagar, Tirupati , Andhra Pradesh, 517501. Kapilateertham Road, Bhavani Nagar, Tirupati , Andhra Pradesh, 517501",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Hyderabad/Tirumala-Bakery-Bhavani-Nagar-Kushaiguda/040PXX40-XX40-240711140650-M3G8_BZDET",
+      "name": "Tirumala Bakery in Bhavani Nagar-Kushaiguda,Hyderabad",
+      "snippet": "Tirumala Bakery in Bhavani Nagar-Kushaiguda,Hyderabad. Tuesday:- 8:00 am - 11:00 pm, Sunday:- 8:00 am - 11:00 pm.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shops-with-Drive-Through-in-Tirumala/nct-10465567-att-res40",
+      "name": "Best Sweet Shops With Drive Through in Tirumala, Tirupati",
+      "snippet": "Name, Tirumala Bakery · Sri Raghavandhara Iyankars Bakery & Sweets ; Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle), No. 4/66, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumala-Bakery-Near-Bhavani-Nagar-Circle-Tirupati-Bazar/9999PX877-X877-110405124200-M6R9_BZDET/menu",
+      "name": "Menu of Tirumala Bakery in Tirupati Bazar, Tirupati",
+      "snippet": "You can call +91-9035099842 for reservations and enquiries at Tirumala Bakery in Tirupati Bazar, Tirupati .",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Bakeries With Drive Through in TP Area, Tirupati :: Tirumala Bakery Near Bhavani Nagar Circle Tirupati Bazar, Tirupati . Menu ... Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Bakers Delight in Sv Nagar,Tirupati - Order Food Online",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Bakers-Delight-Sv-Nagar/9999PX877-X877-240404225724-I1C8_BZDET"
   },
   "query": "\"Bakers Delight in Sv Nagar,Tirupati - Order Food Online\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Aman-Bakery-Sweets-Near-Padmavathi-University-Sv-Nagar/9999PX877-X877-160604123756-M7D6_BZDET",
+      "name": "Aman Bakery & Sweets in Sv Nagar,Tirupati",
+      "snippet": "Aman Bakery & Sweets in Sv Nagar, Tirupati is a renowned bakery offering a delectable range of freshly baked goods and pastries. Situated in a prime location in ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-in-L-B-Nagar/nct-10033880",
+      "name": "Top Bakeries in L B Nagar, Tirupati - Best Cake Shops",
+      "snippet": "48 Bakeries in L B Nagar, Tirupati . Open until 10:30 pm. Open until 10:00 pm. Address D.no-19-12-1/2,Ground Floor, Door No:6/2/84/A, KT Road, Tirupati - 517507",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-with-Food-Court-Seating-in-Prakasam-Nagar-Colony/nct-10033880-att-res496",
+      "name": "Best Bakeries With Food Court Seating in Prakasam Nagar",
+      "snippet": "Top Bakeries With Food Court Seating in Prakasam Nagar Colony, Tirupati . Find ✓Bakeries in Prakasam Nagar Colony, Tirupati . Get Phone Numbers, Address ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/delight-shakes-and-cakes-padmavathi-nagar-tirupati-dominos-rest861130",
+      "name": "Order from Delight Shakes and Cakes online in Tirupati",
+      "snippet": "Order Online from Delight Shakes and Cakes in Tirupati_Dominos, Shop No : 14/21 LB NAGAR , Floor :",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-in-Reservoir-Colony-Road/nct-10033880",
+      "name": "Best Bakeries in Reservoir Colony Road, Tirupati",
+      "snippet": "Bakeries in Reservoir Colony Road, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-with-WiFi-in-Tata-Nagar/nct-10033880-att-intwifi",
+      "name": "Best Bakeries With Wifi in Tata Nagar, Tirupati",
+      "snippet": "Address , Tilak Road, Tirupati - 517501 (Opposite Samsung Care), 10-11a/390, Doddapuram Street, Reddy&Reddy Colony, Tirupati - 517501 (Opp Premium Collection). Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Aman Bakery & Sweets in Sv Nagar,Tirupati :: Aman Bakery & Sweets in Sv Nagar, Tirupati is a renowned bakery offering a delectable range of freshly baked goods and pastries. Situated in a prime location in ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

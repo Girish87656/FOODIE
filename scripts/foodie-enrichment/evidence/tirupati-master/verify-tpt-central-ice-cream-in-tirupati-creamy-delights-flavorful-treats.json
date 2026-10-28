@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Ice Cream in Tirupati - Creamy Delights & Flavorful Treats",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/jdmart/Tirupati/Ice-Cream/jdm-1058114-ent-2-6849653"
   },
   "query": "\"Ice Cream in Tirupati - Creamy Delights & Flavorful Treats\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Retailers/nct-10261212",
+      "name": "Best Ice Cream Retailers in Tirupati - Order Food Online",
+      "snippet": "Address Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) .1-2-220, Ground Floor, Prakasam Road, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Parlours-in-Autonagar/nct-10261168",
+      "name": "Best Ice Cream Parlours in Autonagar, Tirupati",
+      "snippet": "19 Ice Cream Parlours in Autonagar, Tirupati . Address D.no-19-12-1/2,Ground Floor, Tirupati - 517501. Door 10-128/12-1, Plot 13, Muthunagar, Tirupati - 517503 ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Parlours-in-Tiruchanoor/nct-10261168",
+      "name": "Best Ice Cream Parlours in Tiruchanoor, Tirupati - Justdial Jd",
+      "snippet": "Address D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501. Door 10-128/12-1, Plot 13, Muthunagar, Tirupati - 517503 - 517501 Kt ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Parlours-in-Perur/nct-10261168",
+      "name": "Best Ice Cream Parlours in Perur, Tirupati",
+      "snippet": "Best Ice Cream Parlours in Perur, Tirupati - Order Food Online ; Smart Bites. 4.02 Ratings. Cherlopalli Alipiri Road Cherlopalli Road - 2.44 km. Opens at 10:00 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cream-Parlours-in-Karakambadi/nct-10261168",
+      "name": "Best Ice Cream Parlours in Karakambadi, Tirupati",
+      "snippet": "19 Ice Cream Parlours in Karakambadi, Tirupati . Open until 10:30 pm. Road - 10 mts 10. Address D.no-19-12-1/2,Ground Floor, Tirupati Road, KT Road, Tirupati - ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Live-Ice-Cream-Parlours-in-Anna-Rao-Circle/nct-11392808",
+      "name": "Best Live Ice Cream Parlours in Anna Rao Circle, Tirupati",
+      "snippet": "Address , New Balaji Colony, Air Bypass Road, Tirupati - 517501 (Next to Andhra Bank), Prakasam Road, Tirumala, Prakasam Road, Tirupati - 517507 (Beside Joy ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Ice Cream Retailers in Tirupati - Order Food Online :: Address Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle) .1-2-220, Ground Floor, Prakasam Road, Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

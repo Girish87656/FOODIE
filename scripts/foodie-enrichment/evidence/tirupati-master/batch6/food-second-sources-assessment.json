@@ -1,0 +1,498 @@
+{
+  "task": "batch-6 second-source assessment (objective 2: strengthen food-business evidence)",
+  "assessedOn": "2026-10-28",
+  "input": "batch6/food-second-sources.json",
+  "method": "identity-token subset match (venue core tokens all present in hit title/snippet); independent = different host than the venue's original evidence host",
+  "honesty": {
+    "verification": "corroboration NEVER upgrades verification_status — every batch-015 row remains 'unverified'; these records accompany the owner's review",
+    "t2": "'t2UpgradeSuggested' marks mapped-POI-only venues that gained a listing-grade second source — a suggestion recorded for the owner, no tier change applied by this script"
+  },
+  "tallies": {
+    "assessed": 40,
+    "second-source": 22,
+    "same-host-corroboration": 8,
+    "none": 10
+  },
+  "gradeTally": {
+    "map-directory": 5,
+    "established-directory": 8,
+    "aggregator": 5,
+    "social": 4
+  },
+  "assessments": [
+    {
+      "venue": "Babu Tiffin Centre",
+      "category": "tiffin",
+      "originalSourceKind": "facebook-page",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.mappls.com/place-babu+tiffin+centre-sarojini+devi+road-varadaraja+nagar-tirupati-andhra+pradesh-517501-HCARBQ@zdata=MTMuNjMyODM0Kzc5LjQxNTg4NCsxNytIQ0FSQlErK25yed",
+        "host": "www.mappls.com",
+        "title": "Babu Tiffin Centre, Varadaraja Nagar",
+        "quote": "Get map of babu tiffin centre , sarojini devi road, varadaraja nagar, tirupati , andhra pradesh, 517501 by Mapmyindia. Find location,directions,places ..."
+      },
+      "secondSourceGrade": "map-directory",
+      "otherHostHitCount": 3,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Shankar Tiffin Center, Srinivasa Nagar",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.justdial.com/Chennai/Shankar-Tiffin-Center-Parrys/044PXX44-XX44-180327124456-G5T6_BZDET/reviews",
+        "host": "www.justdial.com",
+        "title": "4 Reviews for Shankar Tiffin Center in Parrys, Chennai",
+        "quote": "has Monday:- 6:30 am - 5:00 pm, Saturday:- 6:30 am - 5:00 pm, Sunday:- Closed hours of operation. an average rating of 3.5 based on user reviews."
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Jayalakshmi Tiffin Center, Srinagar",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Uday Tiffin Center, Maruthi Nagar",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://yellowpages-is.cybo.com/IN/tirupati/rannsoknarstofnun",
+        "host": "yellowpages-is.cybo.com",
+        "title": "Rannsoknarstofnun Viðskipti í Tirupati",
+        "quote": "... Uday Tiffin center, Maruthi Nagar . 4.3 (3) · 090302 64588. venkattechnologies.co.in. 1.6 km · PROFESSIONAL SERVICES, RANNSÓKNARSTOFNUN. 6. Srinivasa ..."
+      },
+      "secondSourceGrade": "aggregator",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Nellore Mess, Prakasam Road",
+      "category": "restaurant",
+      "originalSourceKind": "swiggy-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://magicpin.in/Tirupati/Prakasam-Road-Tirupati/Restaurant/New-Nellore-Mess/store/425a341/reviews?srsltid=AYCX9vKix3iqAV8N-jYHkvlvyYGtgwafViIXiZLTmpWCE9uk6DjppHy9",
+        "host": "magicpin.in",
+        "title": "NEW NELLORE MESS Reviews - Prakasam Road Tirupati",
+        "quote": "Reviews & posts — NEW NELLORE MESS, Prakasam Road Tirupati, Tirupati. 1–5☆ customer feedback, photos, and threads on magicpin."
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 3,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Deva Tea Stall, Korlagunta",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.instagram.com/popular/deva-tea-stall",
+        "host": "www.instagram.com",
+        "title": "Deva Tea Stall",
+        "quote": "It operates daily from 4:00 AM to 10:00 PM and serves tea and snacks to visitors near the temple area ¹ ². Reviews frequently mention it as a quick stop for ... Read more"
+      },
+      "secondSourceGrade": "social",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Sk Babu Tea Stall, Ashok Nagar",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "R.K. Tea Stall, Narula Market",
+      "category": "street_food",
+      "originalSourceKind": "facebook-page",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.justdial.com/Delhi/Narula-Garments-Sector-3-Market-R-K-Puram/011PF012657_BZDET",
+        "host": "www.justdial.com",
+        "title": "Narula Garments in R K Puram,Delhi",
+        "quote": "Narula Garments in R K Puram, Delhi. Shop No-18, Sector-3 Market , Narula Garments in R K Puram, Delhi is located Sector-3 Market. Tea Stalls Street Food"
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 2,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Cakevilla Bakery Sweets, TK Street",
+      "category": "bakery_sweets",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Sri Bhavani Sweets & Bakery, TML By Pass Road",
+      "category": "bakery_sweets",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Tirupati Bakery, Tata Nagar",
+      "category": "bakery_sweets",
+      "originalSourceKind": "directory-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.zomato.com/tirupati/the-cake-factory-tata-nagar/reviews",
+        "host": "www.zomato.com",
+        "title": "Reviews of The Cake Factory, Tata Nagar, Tirupati",
+        "quote": "It is not at good in taste. The cake is dry not juicy at all. It felt normal cake not cool cake. Very disappointed."
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 6,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Aswani Sweets & Bakery, Vasavi Nagar",
+      "category": "bakery_sweets",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Doss Bakery",
+      "category": "bakery_sweets",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.mappls.com/place-doss+bakery+sweets+and+savouries-no+19-3-1$k1-renigunta+road-beside+kalanjali-tirupati-andhra+pradesh-517501-p8zsw6@zdata=MTMuNjI4MzI0Kzc5LjQzNzQ0OSsxNytwOHpzdzYrKw==ed",
+        "host": "www.mappls.com",
+        "title": "Doss Bakery Sweets and Savouries, No 19-3-",
+        "quote": "Get map of doss bakery sweets and savouries, no 19, 3, 1/k1, renigunta road, beside kalanjali, tirupati , andhra pradesh, 517501 by Mappls."
+      },
+      "secondSourceGrade": "map-directory",
+      "otherHostHitCount": 6,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Rainbow Vegetarian Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.tripadvisor.co.za/Restaurants-g297587-zfz10665-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+        "host": "www.tripadvisor.co.za",
+        "title": "The 10 Best Tirupati Vegetarian Restaurants - Tripadvisor",
+        "quote": "1. Vyom, Ekante' Bliss, Tirupati - Ihcl Seleqtions. 4,5. 4,5 of 5 bubbles ; 2. Zodiac. 4,5. 4,5 of 5 bubbles ; 3. Rainbow - Pure Vegitarian - ... Read more"
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "SAI Juices & Tea Center, V V Mahal Road",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Saral Juice Shop, Pudipatla",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "T Nageshwara Rao Juice Shop, Tata Nagar",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Taj Juice Centre, Bairagi Patteda",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Garlic Family Restaurant, Mangalam",
+      "category": "restaurant",
+      "originalSourceKind": "directory-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.beyondmenu.com",
+        "host": "www.beyondmenu.com",
+        "title": "Garlic Catering & Restaurant | Order Online | Santa Clara",
+        "quote": "View Garlic Catering & Restaurant menu, Order Mediterranean food Pick up Online from Garlic Catering & Restaurant, Best Mediterranean in Santa Clara, CA."
+      },
+      "secondSourceGrade": "aggregator",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Springs Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.tripadvisor.com/Hotel_Review-g297587-d23956937-Reviews-Springs_Hotel-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+        "host": "www.tripadvisor.com",
+        "title": "SPRINGS HOTEL: Prices & Reviews (Tirupati, India)",
+        "quote": "It's convince place , very clean and hygiene rooms , reasonable price,staff are very competitive,food is very good,very tasty, reasonable prices,iam ... Read more"
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 6,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "SFC Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://wanderlog.com/place/details/4458444/sfc-restaurant",
+        "host": "wanderlog.com",
+        "title": "SFC Restaurant, Chittoor, India - Reviews, Ratings, Tips",
+        "quote": "Nestled in the charming Sri Balaji colony of Mittoor, SFC Restaurant has become a beloved spot among locals. Known for its delightful offerings, the supreme veg ... Read more"
+      },
+      "secondSourceGrade": "aggregator",
+      "otherHostHitCount": 4,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Yalamuri Bar And Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.mappls.com",
+        "host": "www.mappls.com",
+        "title": "Yalamuri Bar & Restaurant, Tata Nagar",
+        "quote": "i7, Tata Nagar, Tirupati , Andhra Pradesh, 517501. Opening Hours Open: Mon-Sun 10:00-23:00"
+      },
+      "secondSourceGrade": "map-directory",
+      "otherHostHitCount": 2,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Hotel Sri Nandhi Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "5 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Carrots Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.justdial.com/Tirupati/Carrots-Restaurant-Beside-Hdfc-Bank-Near-Railway-Road-Korlagunta/9999PX877-X877-140607130123-M5M7_BZDET",
+        "host": "www.justdial.com",
+        "title": "Carrots Restaurant in Korlagunta,Tirupati - Justdial Jd",
+        "quote": "Carrots Restaurant in Korlagunta, Tirupati is one of the famous biryani restaurants, located Beside Hdfc Bank, Near Railway Road. 3. Does the restaurant have ... Read more"
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 6,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Harika Bar And Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.mappls.com/place-harika+bar-giripuram-nehru+nagar-tirupati-andhra+pradesh-517501-6WMHZ8@zdata=MTMuNjM2Mjg2Kzc5LjQxMjM0NSsxNys2V01IWjgrK25yed",
+        "host": "www.mappls.com",
+        "title": "Harika Bar, Giripuram, Nehru Nagar, Tirupati, Andhra",
+        "quote": "Information · 6wmhz8, Giripuram, Nehru Nagar, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CL9-MT9F. content_copyshare · Mappls Pin: mappls.com/6wmhz8. Read more"
+      },
+      "secondSourceGrade": "map-directory",
+      "otherHostHitCount": 4,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Manal Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.zomato.com/tr/tirupati/manal-restaurant-tirumala/reviews",
+        "host": "www.zomato.com",
+        "title": "Reviews of Manal Restaurant, Tirumala, Tirupati",
+        "quote": "Manal Restaurant Dining Reviews ; Ram · Jun 12, 2024. awesome food and presentation thank u rana ; Sathi Pandu.. · Jun 12, 2024. nice restaurant.. fine and best ... Read more"
+      },
+      "secondSourceGrade": "established-directory",
+      "otherHostHitCount": 4,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Sunlight Veg Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Imperial Spice Restaurant",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.instagram.com/imperial_spice_restaurant",
+        "host": "www.instagram.com",
+        "title": "imperial_spice_restaurant",
+        "quote": "A good place for all foodies. Tata nagar,Tirumala bypass road, tirupathi ... Birthday celebrations In Imperial Spice restaurant Celebrate your birthday in ... Read more"
+      },
+      "secondSourceGrade": "social",
+      "otherHostHitCount": 6,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Manasa Vihar Cafe",
+      "category": "cafe",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://yandex.ru/maps/org/manasa_vihar_cafe/32387159129/gallery",
+        "host": "yandex.ru",
+        "title": "Manasa Vihar Cafe, быстрое питание, штат Андхра-",
+        "quote": "Быстрое питание Manasa Vihar Cafe по адресу штат Андхра-Прадеш, Читтур-Дистрикт, город Тирупати. Смотреть часы работы. Построить маршрут в Яндекс Картах."
+      },
+      "secondSourceGrade": "aggregator",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": true
+    },
+    {
+      "venue": "Golden Balaji Tiffin Center, Tirumala",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Chandra Tiffin Shop, Tirumala",
+      "category": "tiffin",
+      "originalSourceKind": "zomato-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.mappls.com/place-chandra+tiffin+center-shop+no+3-state+bank+of+india+colony-ashok+nagar-tirupati-andhra+pradesh-517501-8AO16L@zdata=MTMuNjIyODM0Kzc5LjQxOCsxNys4QU8xNkwrK25yed",
+        "host": "www.mappls.com",
+        "title": "Chandra Tiffin Center Restaurant",
+        "quote": "Get map of chandra tiffin center, shop no 3, state bank of india colony, ashok nagar, tirupati, andhra pradesh, 517501 by Mappls. Find location,directions ..."
+      },
+      "secondSourceGrade": "map-directory",
+      "otherHostHitCount": 1,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "V Mohan Tea Stall, Tirumala",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Sri Guru Tiffin Centre, Tirumala",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "Saarangi Restaurant, Tirumala",
+      "category": "restaurant",
+      "originalSourceKind": "tripadvisor-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.facebook.com/streetbyte/posts/amazing-veg-thali-at-saarangi-tirumala-priced-at-rs275-felt-over-priced-initiall/2219908908079860",
+        "host": "www.facebook.com",
+        "title": "Amazing Veg Thali at Saarangi, Tirumala . Priced at Rs. 275",
+        "quote": "Near Sannidanam Guest House, Tirumala ✅ Every item in the Thali is served unlimited 👌 Food Tastes Good with Great Restaurant Ambience"
+      },
+      "secondSourceGrade": "social",
+      "otherHostHitCount": 4,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Vls Tiffin Centre And Catering, Mangalam",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Tasvija Tiffin Centre, Mangalam",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "3 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Sumathi Tiffin Centre, Mangalam",
+      "category": "tiffin",
+      "originalSourceKind": "magicpin-listing",
+      "classification": "same-host-corroboration",
+      "otherHostHitCount": 0,
+      "note": "identity tokens matched only on the original host"
+    },
+    {
+      "venue": "J Bebamma Tiffin Center, Renigunta Road",
+      "category": "tiffin",
+      "originalSourceKind": "directory-listing",
+      "classification": "none",
+      "otherHostHitCount": 0,
+      "note": "6 hits but none carried the venue's identity tokens"
+    },
+    {
+      "venue": "Chai Buster Tea Stall, Dhanalakshmi Nagar",
+      "category": "street_food",
+      "originalSourceKind": "directory-listing",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://www.instagram.com/chaibuster/p/DdiafG1RwZ4/?hl=am-et",
+        "host": "www.instagram.com",
+        "title": "CHAI BUSTER – COMING SOON! ☕🔥 Get ready, tea lovers",
+        "quote": "Address: Near Skanda International School, Kachavani Singaram Village, Ghatkesar Mandal, Rangareddy District – 500088. Telangana – 504294 … ..."
+      },
+      "secondSourceGrade": "social",
+      "otherHostHitCount": 2,
+      "t2UpgradeSuggested": false
+    },
+    {
+      "venue": "Vanam Restaurant, Alipiri Road",
+      "category": "restaurant",
+      "originalSourceKind": "osm-nominatim",
+      "classification": "second-source",
+      "secondSource": {
+        "url": "https://wanderboat.ai/restaurants/india/andhra-pradesh/vanam-family-restaurant/ncYnoTuRQk6uug3SkMnIMQ",
+        "host": "wanderboat.ai",
+        "title": "Vanam Family Restaurant - Shop No 1, Opp, Zoo Park",
+        "quote": "... Alipiri Road , Thatithopu, Tirupati, Andhra Pradesh 517505, India. New Deccan Delicious Restaurant. 3, Cherlopalli - Alipiri Rd ... Vanam restaurant , opposite the ..."
+      },
+      "secondSourceGrade": "aggregator",
+      "otherHostHitCount": 6,
+      "t2UpgradeSuggested": true
+    }
+  ]
+}

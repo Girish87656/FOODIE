@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Kafe Tirupati, Tirumala order online",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/kafe-tirupati-1-tirumala/order"
   },
   "query": "\"Kafe Tirupati, Tirumala order online\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.zomato.com/vi/tirupati/kafe-tirupati-1-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gRG9zYSIsImRpc2hfaWRzIjpbIjEwMjk2Il0sImN1aXNpbmVfaWRzIjpbXX19",
+      "name": "Kafe Tirupati, Tirumala order online",
+      "snippet": "Check out Kafe Tirupati , Tirumala, Tirupati on Zomato for great deals, ratings, reviews and more! South Indian, Fast Food, Biryani 4.5 DELIVERY. We need your ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://mindtrip.ai/restaurant/tirupati-andhra-pradesh/kafe-tirupati-quality-re-fined/re-8ase288H",
+      "name": "Kafe Tirupati (Quality Re-fined) in Tirupati | Is it Good?",
+      "snippet": "Address Lakshmi Puram, Ashok Nagar Tirupati , Andhra Pradesh 517501 India. Get directions. Hours. Opens soon·6 AM. Website kafetirupati .shop Phone+91 94412 22777. Read more",
+      "host": "mindtrip.ai",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Kafe-Tirupati-Air-Bypass-Road/9999PX877-X877-190514212114-H8K8_BZDET/menu",
+      "name": "Menu of Kafe Tirupati in Air Bypass Road, Tirupati",
+      "snippet": "Online for Kafe Tirupati in Air Bypass Road, Tirupati . Kafe Tirupati is open from Monday:- 6:00 am - 10:00 pm, 6:00 am - 10:00 pm. provided to place your order ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-kafe+tirupati-tata+nagar-tirupati-andhra+pradesh-517501-6HX6TA@zdata=MTMuNjI5NzU5Kzc5LjQyMjUxMysxNys2SFg2VEErK25yed",
+      "name": "Kafe Tirupati, Tata Nagar",
+      "snippet": "Information · 6hx6ta, Tata Nagar, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CL7-55LK. content_copyshare · Mappls Pin: mappls.com/6hx6ta. content_copyshare. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-with-Home-Delivery/nct-10408936-att-res13",
+      "name": "Best Restaurants With Home Delivery near me - Tirupati",
+      "snippet": "Kafe Tirupati Chillies Restaurant. Shiv Jyoti Nagar, Tirupati - 517507 ( Opposite … 19 Tiruchanoor Road,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/pt/tirupati/kafe-tirupati-1-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6Ik9zIG1lbGhvcmVzIGVtIFRlYSIsImRpc2hfaWRzIjpbIjEzNjIwIl0sImN1aXNpbmVfaWRzIjpbXX19",
+      "name": "Kafe Tirupati, Tirumala order online",
+      "snippet": "Check out Kafe Tirupati , Tirumala, Tirupati on Zomato for great deals, ratings, reviews and more! We need your number to place the order flag +91",
+      "host": "www.zomato.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Kafe Tirupati (Quality Re-fined) in Tirupati | Is it Good? :: Address Lakshmi Puram, Ashok Nagar Tirupati , Andhra Pradesh 517501 India. Get directions. Hours. Opens soon·6 AM. Website kafetirupati .shop Phone+91 94412 22777. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

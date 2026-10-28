@@ -1,14 +1,69 @@
 {
   "candidate": {
     "name": "Tirumala Mandir in Alipiri Gate,Tirupati - Temples",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Mandir-Alipiri-Gate/9999PX877-X877-260830184922-U5G5_BZDET"
   },
   "query": "\"Tirumala Mandir in Alipiri Gate,Tirupati - Temples\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/fb-answers/tirumala-temple-hiking-trails",
+      "name": "Tirumala Temple Hiking Trails: Alipiri Vs Srivari Mettu Guide",
+      "snippet": "Alipiri Mettu starts at Alipiri in Tirupati and is the most commonly used footpath. It's about 11 km with 3,550 steps and usually takes 4-5 hours to climb. The ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com.ph/Attraction_Review-g297587-d16819589-Reviews-Alipiri_Mettu_Tirumala-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "ALIPIRI METTU TIRUMALA - All You SHOULD Know",
+      "snippet": "Alipiri Mettu is the traditional stepped pilgrimage route at Alipiri in Tirupati , Andhra Pradesh, that leads up to the Tirumala Venkateswara Temple. Read more",
+      "host": "www.tripadvisor.com.ph",
+      "kind": null
+    },
+    {
+      "url": "https://mindtrip.ai/attraction/tirupati-andhra-pradesh/tirumala-way-footpath-alipiri/at-ZQNE718i",
+      "name": "Tirumala Way to Footpath Alipiri",
+      "snippet": "Location. 1, Alipiri Rd, Alipiri Gate, Footpath, Tirupati , Andhra Pradesh 517507, India. Read more",
+      "host": "mindtrip.ai",
+      "kind": null
+    },
+    {
+      "url": "https://www.mapquest.com/in/tirumala-tirupati-devasthanams-526720064",
+      "name": "Tirumala Tirupati Devasthanams",
+      "snippet": "Tirumala Tirupati Devasthanams in Tirupati , AP. See reviews, map, get the address , and find directions. Road Srinivasa Nagar, Tirupati ,",
+      "host": "www.mapquest.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/tirumala-darshan-from-alipiri",
+      "name": "Tirumala Darshan From Alipiri: Steps, Timings, Tickets & Tips",
+      "snippet": "Alipiri is the main 3550-step footpath from Tirupati to Tirumala, about 9-11 km and takes 4-5 hours to climb. Devotees must collect Divya Darshan tokens...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.co.nz/Attraction_Review-g297587-d16819589-Reviews-Alipiri_Mettu_Tirumala-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "ALIPIRI METTU TIRUMALA - All You SHOULD Know Before",
+      "snippet": "Alipiri Mettu is the traditional stepped pilgrimage route at Alipiri in Tirupati , Andhra Pradesh, that leads up to the Tirumala Venkateswara Temple. Read more",
+      "host": "www.tripadvisor.co.nz",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Tirumala Way to Footpath Alipiri :: Location. 1, Alipiri Rd, Alipiri Gate, Footpath, Tirupati , Andhra Pradesh 517507, India. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Tirumala Mandir in Alipiri Gate,Tirupati - Temples\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Tirumala Mandir in Alipiri Gate,Tirupati - Temples\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

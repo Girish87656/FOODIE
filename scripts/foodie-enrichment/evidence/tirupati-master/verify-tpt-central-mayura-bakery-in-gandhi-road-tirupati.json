@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Mayura Bakery in Gandhi Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Mayura-Bakery-Opposite-Sree-Chaitanya-Junior-College-Near-Naalukaal-Mandapam-Gandhi-Road/9999PX877-X877-160812171348-S3I3_BZDET"
   },
   "query": "\"Mayura Bakery in Gandhi Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shops-in-Gandhi-Road-Tirumala/nct-10465567",
+      "name": "Best Sweet Shops in Gandhi Road Tirumala, Tirupati",
+      "snippet": "- 880 mts Open until 10:30 pm. Open until 10:00 pm. Mayura Sweets & Bakery 5.0. Address Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/best-bakeries-in-tirupati/?locale=lt_LT",
+      "name": "Best Bakeries in Tirupati",
+      "snippet": "Mayura Bakery on Gandhi Road comes up as a local favorite, 36 7 Purnima Tpt Pakomentavo. Public Ramakrishna Bakery Gandhi road, Tirupati .",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/New-Mayura-Bakery-Near-Railway-Station-Nethaji-Road/9999PX877-X877-1237782330L8E2Q9-DC_BZDET/photos",
+      "name": "8 Photos of New Mayura Bakery in Nethaji Road, Tirupati",
+      "snippet": "New Mayura Bakery in Nethaji Road, Tirupati ・ 08:00 PM Call Now Direction Share ・ hours from Monday:- 9:30 am - 8:00 pm, , Sunday:- 8:00 pm - 8:30 pm.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Manufacturers-in-Gandhi-Road/nct-10070023",
+      "name": "Top Cake Manufacturers in Gandhi Road, Tirupati near me",
+      "snippet": "Gandhi Road, Tirupati . Open until 10:30 pm. Mayura Bakery 5.0 The … big bakery and sweet shop. Tirupati - 517501 (Near Annamaiah Circle) Door No 33-8-21, Main",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/best-bakeries-in-tirupati/?locale=eo_EO",
+      "name": "Best Bakeries in Tirupati",
+      "snippet": "Mayura Bakery on Gandhi Road comes up as a local favorite, the most directly named bakery in Tirupati ・ 36 7 Purnima Tpt ・ 8 5 Viji Kishore",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mayura-Sweets-Bakery-Opp-KFC-V-V-Mahal-Road/9999PXXXX-XXXX-110106182930-H1U4_BZDET/photos",
+      "name": "Photos of Mayura Sweets & Bakery in VV Mahal Road, Tirupati",
+      "snippet": "Mayura Sweets & Bakery in V V Mahal Road, Tirupati is located Opp KFC. 4. Can I get sugar-free sweets too? Many Sweet Shops provide sugar-free sweet ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Sweet Shops in Gandhi Road Tirumala, Tirupati :: - 880 mts Open until 10:30 pm. Open until 10:00 pm. Mayura Sweets & Bakery 5.0. Address Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle)",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

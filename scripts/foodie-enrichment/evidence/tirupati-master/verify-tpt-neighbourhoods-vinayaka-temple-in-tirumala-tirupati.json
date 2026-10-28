@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Vinayaka Temple in Tirumala,Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Vinayaka-Temple-Pac1-Opp-Shop-Tirumala/9999PX877-X877-181218103453-G9J8_BZDET"
   },
   "query": "\"Vinayaka Temple in Tirumala,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Shree-Siddhi-Vinayaka-Swamy-Temple-Kt-Road/9999PX877-X877-250923224424-L8B7_BZDET",
+      "name": "Shree Siddhi Vinayaka Swamy Temple in KT Road,Tirupati",
+      "snippet": "Shree Siddhi Vinayaka Swamy Temple in KT Road, Tirupati . Srinivasa Nagar, K.B Layout, Tirupati , Road, KT Road, Tirupati -517507, Andhra Pradesh. Hours Open Now : ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-sri+vinayaka+temple-tirupati+road-kothapalli-tirupati-andhra+pradesh-517501-LG786O@zdata=MTMuNjM3MTY5Kzc5LjQyODA0OCsxNytMRzc4Nk8rKw==ed",
+      "name": "Sri Vinayaka Temple, Tirupati Road",
+      "snippet": "Information · lg786o, Tirupati Road, Kothapalli, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CMF-MJJ5. content_copyshare · Mappls Pin: mappls.com/lg786o. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/vinayagar-temple-near-tirupati",
+      "name": "Vinayagar Temple Near Tirupati",
+      "snippet": "The Kanipakam Vinayaka Temple - Sri Varasiddhi Vinayaka Swamy Temple, istam a hindu temple dedicated to Lord Ganesha located in Kanipakam village, ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sree-Vinayaka-Swamy-Temple-Near-Palani-Theatreroyal-Nagar-Royal-Nagar/9999PX877-X877-230205043903-K6B4_BZDET/reviews",
+      "name": "Sree Vinayaka Swamy Temple - Royal Nagar, Tirupati",
+      "snippet": "Sree Vinayaka Swamy Temple in Royal Nagar, Tirupati . Unbiased, genuine based on 4 Customer Reviews and Ratings with Photos.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Vinayaka-Temple-Thummalagunta/9999PX877-X877-240118114306-Q6J3_BZDET",
+      "name": "Vinayaka Temple Thummalagunta - Tirupati",
+      "snippet": "Address Vinayaka St, Tummalagunta, Bakki Reddy Colony, Tirupati -517502, Andhra Pradesh. Business Hours Open Now : until 9:30 pm you",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://us.trip.com/travel-guide/attraction/madanapalle/vinayaka-temple-144776546",
+      "name": "Vinayaka Temple Tickets [2026] - Promos, Prices, Reviews",
+      "snippet": "Open tomorrow at 4:00 AM–9:00 PM  Rama Gopal Naidu Colony, Madanapalle, Andhra Pradesh 517325, India. Open tomorrow at 4:00 AM–9:00 PM",
+      "host": "us.trip.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Shree Siddhi Vinayaka Swamy Temple in KT Road,Tirupati :: Shree Siddhi Vinayaka Swamy Temple in KT Road, Tirupati . Srinivasa Nagar, K.B Layout, Tirupati , Road, KT Road, Tirupati -517507, Andhra Pradesh. Hours Open Now : ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

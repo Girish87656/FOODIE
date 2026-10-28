@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Avilala Church - Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Avilala-Church/9999PX877-X877-260226103905-D6W4_BZDET"
   },
   "query": "\"Avilala Church - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Avilala-Church/9999PX877-X877-260226103905-D6W4_BZDET",
+      "name": "Avilala Church - Tirupati",
+      "snippet": "Address . Ambedhkar Colony, Tirupati , Avilala, Tirupati -517501, Andhra Pradesh. DirectionCopy. Photo. Upload Photos. Avilala Church, tirupati , AvilalaChurches - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Avilala Church - Tirupati :: Address . Ambedhkar Colony, Tirupati , Avilala, Tirupati -517501, Andhra Pradesh. DirectionCopy. Photo. Upload Photos. Avilala Church, tirupati , AvilalaChurches - ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

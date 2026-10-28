@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sri Krishna Ayyangar Sweets & Bakery in Korlagunta,Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Krishna-Ayyangar-Sweets-Bakery-Opp-Kumran-Hardwares-Korlagunta/9999PX877-X877-160617182640-C2J3_BZDET"
   },
   "query": "\"Sri Krishna Ayyangar Sweets & Bakery in Korlagunta,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Retailers-in-1St-Cross-Road/nct-11215065",
+      "name": "Popular Sweet Retailers in 1St Cross Road, Tirupati",
+      "snippet": "Address , V V Mahal Road, Tirupati - 517501 (Near K.T. Road, Opp Eden Chaat) ... K Street Tirupathi , Tirupathi , TK Street, Tirupati - 517501, Theertha ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakery-Product-Manufacturers-in-Karakambadi/nct-10034025",
+      "name": "Bakery Product Manufacturers - Tirupati",
+      "snippet": "Address , R C Road, Royal Nagar, Tirupati - 517501 (Near Palani Theatre), Gandhi Road, Tirupati - 517501 (Opposite Sree Chaitanya Junior College, Near Naalukaal ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-With-Takeaway-Available-in-Sri-Krishna-Nagar/nct-10033880-att-res265",
+      "name": "Top Bakeries With Takeaway Available in Sri Krishna Nagar",
+      "snippet": "25 Bakeries With Takeaway Available in Sri Krishna Nagar, Tirupati . Find ✓Bakeries in Sri Krishna Nagar, Tirupati . Get Phone Numbers, Address , Reviews ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/4012853/sri-guru-bakery-and-sweets",
+      "name": "Sri Guru BAKERY And Sweets in Tirupati",
+      "snippet": "The full address is 1, Ashok Nagar, Korlagunta, Tirupati - 517501, Andhra Pradesh, India. What is the pincode of Sri Guru BAKERY And Sweets? Sri Guru BAKERY And ... Read more",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakery-Product-Manufacturers-in-Renigunta-Road/nct-10034025",
+      "name": "Top Bakery Product Manufacturers in Renigunta Road",
+      "snippet": "Address , R C Road, Royal Nagar, Tirupati - 517501 (Near Palani Theatre), Gandhi Road, Tirupati - 517501 (Opposite Sree Chaitanya Junior College, Near Naalukaal ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Manufacturers-in-Renigunta/nct-10465490",
+      "name": "Top Sweet Manufacturers in Renigunta, Tirupati",
+      "snippet": "D.No.23-8-159, M.R.Palli Circle, Mr Palli Circle, Tirupati - 517502 (Opp Face Dental Hospital, Beside More Supermarket.) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Popular Sweet Retailers in 1St Cross Road, Tirupati :: Address , V V Mahal Road, Tirupati - 517501 (Near K.T. Road, Opp Eden Chaat) ... K Street Tirupathi , Tirupathi , TK Street, Tirupati - 517501, Theertha ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

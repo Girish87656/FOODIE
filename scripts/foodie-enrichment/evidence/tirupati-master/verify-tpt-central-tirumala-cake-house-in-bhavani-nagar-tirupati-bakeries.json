@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Cake-House-Opposite-Mahathi-Imaging-Diagnostics-Bhavani-Nagar/9999PX877-X877-240624122548-K3R9_BZDET"
   },
   "query": "\"Tirumala Cake House in Bhavani Nagar, Tirupati - Bakeries\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakeries-in-Tirupati-North/nct-10033880",
+      "name": "Best Cake Shops - Bakeries in Tirupati North",
+      "snippet": "Bakeries in Tirupati North, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Manufacturers-in-Mangalam/nct-10070023",
+      "name": "Top Cake Manufacturers in Mangalam, Tirupati near me",
+      "snippet": "Name, Tirumala Bakery · Justbake ; Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle), D.no-19-12-1/2,Ground Floor, Kesavayanagunta, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Shops-Freshes-in-Bhavani-Nagar/nct-10070081",
+      "name": "Best Cake Shops Freshes in Bhavani Nagar, Tirupati",
+      "snippet": "Address , New Balaji Colony, Air Bypass Road, Tirupati - 517501 (Next to Andhra Bank), Mr Palli, Air Bypass Road, Tirupati - 517501 (MR PALLI CIRCLE BESIDE ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bakery-Product-Manufacturers-in-Bhavani-Nagar/nct-10034025",
+      "name": "Top Bakery Product Manufacturers in Bhavani Nagar,",
+      "snippet": "Bakery Product Manufacturers in Bhavani Nagar, Tirupati ; Address , R C Road, Royal Nagar, Tirupati - 517501 (Near Palani Theatre), Gandhi Road, Tirupati - 517501 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/tirumala-cake-house-2-tirupati",
+      "name": "Tirumala Cake House 2 Tirupati",
+      "snippet": "Tirumala Cake House 2 Tirupati · Cool Cake 1kg Just ₹499 Rs ah     . . VV Mahal · Tirumala Cakes 86860 43335 Near Rajana park Opp.Mahathi Hospital ... Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-tirumala+bakery-kapilateertham+road-bhavani+nagar-tirupati-andhra+pradesh-517501-NSAVJD@zdata=MTMuNjM4OTIrNzkuNDE4NzI0KzE3K05TQVZKRCsred",
+      "name": "Tirumala Bakery, Bhavani Nagar",
+      "snippet": "nsavjd, Kapilateertham Road, Bhavani Nagar, Tirupati , Andhra Pradesh, 517501. DIGIPIN: 4TF-CL8-K6FP. content_copyshare · Mappls Pin: mappls.com/nsavjd. Read more",
+      "host": "www.mappls.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Cake Shops - Bakeries in Tirupati North :: Bakeries in Tirupati North, Tirupati ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

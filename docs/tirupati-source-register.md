@@ -42,13 +42,13 @@ Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrit
 z-ai `web_search` (multi-engine public web results): **251 discovery queries** across
 9 category groups × 8 locality groups, returning **1858 raw hits**.
 Rate limits: the backend hard-throttled during the pass (HTTP 429s with documented back-offs);
-0 queries ended in a recorded error state and 70 identity verifications were
+0 queries ended in a recorded error state and 23 identity verifications were
 rate-limit-skipped (all re-runnable — the pipeline is resumable per query/candidate).
 
 ## 4. Identity-verification + geocoding channels
 
-- Identity verification: **304 candidates verified** so far — 210 area-confirmed,
-  24 not confirmed, 70 skipped (rate limit). Remaining candidates keep their
+- Identity verification: **304 candidates verified** so far — 256 area-confirmed,
+  25 not confirmed, 23 skipped (rate limit). Remaining candidates keep their
   discovery-hit evidence and stay T3/backlog until verified.
 - Geocoding: OpenStreetMap Nominatim (keyless, 1 req/s, project UA, area-gated):
   170 attempts → **19 area-confirmed matches, 151 NULL** (coordinates are
@@ -171,3 +171,59 @@ the dead garden.aspx/theerthams.aspx homepage shells never delivered gardens/tee
 All Batch-5 evidence: scripts/foodie-enrichment/evidence/tirupati-master/batch5/
 (review-queue-assessment.json, discovery-candidates.json, search-*.json, nominatim-food-pois.json,
 websearch-probe.json, wikipedia-refetch-evidence.json, wikivoyage-evidence.json).
+
+## 8. Batch-6 sources (audit + evidence strengthening + coverage gaps, 2026-10-28)
+
+One bounded availability probe PASSED, so bounded search resumed for the batch-6 objectives.
+
+### 8a. web_search (z-ai) — bounded evidence + discovery
+
+- 40 second-source queries for the retained batch-015 food venues (8 s pacing; 2 transient 429/timeout
+  errors retried successfully on resume; breaker never tripped). Evidence: batch6/food-second-sources.json.
+- 18 coverage-gap queries for the weakest locality×category cells (Bhavani Nagar, Akkayyapalem,
+  Cherlopalli/Satyanarayanapuram, MR Pally, Kapila Theertham Road, Avilala/Mangalam stays,
+  Srinivasa Mangapuram ×3, Chandragiri ×3, Renigunta ×2, Tiruchanur ×2, Srikalahasti ×2).
+  Evidence: batch6/search-coverage-gaps.json.
+- 48 verification-backlog rows re-attempted in 4 bounded chunks (47 confirmed, 1 infra-failed parked; see coverage matrix).
+
+### 8b. Hosts actually serving candidate-grade evidence this pass
+
+- ae.makemytrip.global
+- fuddo.in
+- magicpin.in
+- nominatim.openstreetmap.org
+- srinivasahotels.com
+- wanderboat.ai
+- wanderlog.com
+- www.beyondmenu.com
+- www.facebook.com
+- www.goibibo.com
+- www.instagram.com
+- www.ixigo.com
+- www.justdial.com
+- www.makemytrip.com
+- www.mappls.com
+- www.tripadvisor.co.za
+- www.tripadvisor.com
+- www.zomato.com
+- yandex.ru
+- yellowpages-is.cybo.com
+
+### 8c. Nominatim town queries (public OSM)
+
+9 bounded town POI queries (Srinivasa Mangapuram, Chandragiri, Renigunta, Tiruchanur,
+Srikalahasti; 2 s spacing, custom UA). Name-matching was NOT trusted: hits whose own published coordinates
+placed them in the WRONG CITY (Chandragiri cafés at 27.7N/85.2E = Kathmandu; "Renigunta" restaurants at
+13.1N/80.1E = Chennai/Perambur) were rejected as out-of-scope. The ONE area-gated find (APTDC Haritha
+Hotel, Srikalahasti, 13.73N/79.67E) is recorded with coordinates in evidence ONLY. Honest in-area zeros:
+Srinivasa Mangapuram (restaurants, hotels), Tiruchanur (restaurants), Srikalahasti (restaurants).
+
+### 8d. Production read (read-only)
+
+The app's own public PostgREST read endpoint (publishable key, RLS applies) returned the live inventory
+snapshot used for the cross-check (86 restaurant rows). NO SQL was executed; nothing written.
+
+All Batch-6 evidence: scripts/foodie-enrichment/evidence/tirupati-master/batch6/
+(b015-audit.json, review-queue-batch6.json, live-crosscheck.json, food-second-sources.json,
+food-second-sources-assessment.json, search-coverage-gaps.json, nominatim2-town-pois.json,
+discovery-candidates.json, websearch-probe.json).

@@ -4,9 +4,11 @@
    ------------------------------------------------------------------
    Emits THREE artifacts, all REVIEW CANDIDATES — never executed by this repo:
      1. supabase/review-candidates/insert-batch-015-tptm-b5.sql
-        61 evidence-curated rows from the Batch-5 discovery session
-        (2026-10-29):
-          - 42 small food venues -> public.restaurants [the owner's biggest
+        59 evidence-curated rows (BATCH-6 AUDIT 2026-10-28: the original 61
+        minus 2 rows moved to the review queue for locality-evidence
+        conflicts — see batch6/b015-audit.json; the original Batch-5 session
+        proposal was 61) from the Batch-5 discovery session (2026-10-29):
+          - 40 small food venues -> public.restaurants [the owner's biggest
             known gap: tiffin centres, tea stalls, messes, bakeries, sweet
             shops, juice shops, neighbourhood eateries — T1 directory/
             swiggy/zomato listing titles with locality, or T2 OSM/Nominatim
@@ -35,6 +37,19 @@
    ELIGIBILITY:
      * T1/T2 evidence only (locality in listing title / address line, official
        page, news, or mapped POI with published coordinates);
+     * BATCH-6 AUDIT (2026-10-28): all 61 candidates re-audited — canonical
+       ids recomputed (exact match), zero duplicate/name-drift collisions vs
+       inventory/batches 011-014/worksheet/queue, every deterministic flag
+       explicitly adjudicated. TWO rows moved OUT to the review queue with
+       recorded reasons (batch6/b015-audit.json):
+         - 'Amma Appam, Renigunta' — the only quoted address is central-Tirupati
+           (G Car Street, T P Area); the Renigunta label came from a category-
+           page title, not the venue's own address;
+         - 'Radha Rani Tiffin Centre, Padmavathi Nagar' — the category-page
+           quote concatenates two different listings; the recorded area is not
+           decidable from the snippet.
+       The two rows keep their full evidence in batch6/review-queue-batch6.json
+       and are counted NOWHERE as inventory/candidates.
      * dedupe gates proved zero collisions against inventory, batches 011–014
        and the curated worksheet (fail-loud at generation);
      * identity-HELD rows excluded (4: Indira Guest House vs frozen batch-013
@@ -57,8 +72,8 @@
        (including against batches 011-014 id sets); batches 011 AND 012 AND
        013 AND 014 each fully absent or fully applied (never partial);
        exactly one ACTIVE tirupati destination.
-     * Idempotent rerun: 0/61 fresh or 61/61 applied → no changes; 1-60 → abort.
-     * POSTFLIGHT: exact 61-id set; unverified everywhere; ZERO coordinate
+     * Idempotent rerun: 0/59 fresh or 59/59 applied → no changes; 1-58 → abort.
+     * POSTFLIGHT: exact 59-id set; unverified everywhere; ZERO coordinate
        rows; destination linkage; source_url mandatory; place_type
        distribution exact (temple 3, hotel 1, other 15).
 
@@ -107,13 +122,41 @@ const ledger = JSON.parse(readFileSync(LEDGER, "utf8")) as {
   acceptedCandidates: LedgerCand[];
   tallies: { acceptedCandidates: number };
 };
-const cands = ledger.acceptedCandidates;
-if (cands.length !== 61) throw new Error(`FATAL: ledger has ${cands.length} accepted candidates, expected 61 — ledger changed under the generator; re-audit first.`);
+
+/* ---------------- BATCH-6 audit exclusions (explicit, reason-coded) ---------------- */
+
+/* The Batch-6 audit (batch6/b015-audit.json) moved locality-uncertain rows out
+ * of the batch. The generator reads the audit result and excludes EXACTLY the
+ * recorded rows — if the audit file is missing, or its moved set differs from
+ * the ledger, the generator fails loudly instead of silently drifting. */
+const AUDIT_PATH = join(HERE, "evidence", "tirupati-master", "batch6", "b015-audit.json");
+let movedFromB015: Array<{ name: string }> = [];
+if (readFileSync(AUDIT_PATH, "utf8")) {
+  const audit = JSON.parse(readFileSync(AUDIT_PATH, "utf8")) as {
+    tallies: { audited: number; retained: number; movedToReviewQueue: number };
+    movedToReviewQueue: Array<{ name: string }>;
+  };
+  if (audit.tallies.audited !== ledger.acceptedCandidates.length) {
+    throw new Error(`FATAL: batch-6 audit audited ${audit.tallies.audited} rows but the ledger has ${ledger.acceptedCandidates.length} — re-run the audit first.`);
+  }
+  movedFromB015 = audit.movedToReviewQueue;
+}
+const movedNames = new Set(movedFromB015.map((m) => m.name));
+const cands = ledger.acceptedCandidates.filter((c) => !movedNames.has(c.name));
+if (ledger.acceptedCandidates.length - cands.length !== movedFromB015.length) {
+  throw new Error("FATAL: audit moved-set does not align with the ledger — re-audit.");
+}
+if (movedFromB015.length > 0) {
+  console.log(`[gen-015] batch-6 audit exclusions applied: ${movedFromB015.map((m) => m.name).join("; ")}`);
+}
+const N_TOTAL = cands.length;
+const N_EXPECTED = 59; // 61 original − 2 batch-6 audit moves
 
 const FOOD_CATEGORIES = new Set(["tiffin", "restaurant", "street_food", "bakery_sweets", "cafe"]);
 const restCands = cands.filter((c) => FOOD_CATEGORIES.has(c.category));
 const placeCands = cands.filter((c) => !FOOD_CATEGORIES.has(c.category));
-if (restCands.length !== 42) throw new Error(`FATAL: expected 42 restaurant rows, got ${restCands.length}`);
+if (cands.length !== N_EXPECTED) throw new Error(`FATAL: expected ${N_EXPECTED} rows after batch-6 audit exclusions, got ${cands.length}`);
+if (restCands.length !== 40) throw new Error(`FATAL: expected 40 restaurant rows, got ${restCands.length}`);
 if (placeCands.length !== 19) throw new Error(`FATAL: expected 19 place rows, got ${placeCands.length}`);
 
 /* tags only where the quote/title evidences them */
@@ -138,7 +181,7 @@ function localitySuffix(name: string): string | null {
   return i > 0 ? name.slice(i + 2).trim() : null;
 }
 
-/* ---------------- restaurants (42) ---------------- */
+/* ---------------- restaurants (40) ---------------- */
 
 const restRows = restCands.map((c) => {
   const locality = localitySuffix(c.name)
@@ -292,9 +335,9 @@ const SQL = `-- ================================================================
 -- Generated by scripts/foodie-enrichment/gen-insert-batch-015.ts (deterministic).
 -- ===========================================================================
 --
--- SCOPE (61 rows; evidence ledger
+-- SCOPE (${N_TOTAL} rows; evidence ledger
 --   scripts/foodie-enrichment/evidence/tirupati-master/batch5/discovery-candidates.json):
---   * 42 small food venues -> public.restaurants [T1 directory/swiggy/zomato/
+--   * ${restCands.length} small food venues -> public.restaurants [T1 directory/swiggy/zomato/
 --     magicpin listing titles with locality, T2 OSM/Nominatim mapped POIs in
 --     the bounded Tirupati viewbox] — the owner's stated biggest gap:
 --     tiffin centres, tea stalls, messes, bakeries, sweet shops, juice shops,
@@ -428,7 +471,7 @@ end
 $$;
 
 -- ---------------------------------------------------------------------------
--- Part 1 — INSERTS (42 food-venue rows; fixed ids; full provenance)
+-- Part 1 — INSERTS (${restCands.length} food-venue rows; fixed ids; full provenance)
 -- ---------------------------------------------------------------------------
 insert into public.restaurants
   (id, name, category, address, city, locality, latitude, longitude, rating, price_level, opening_hours, phone, tags, source, source_url, verification_status)
@@ -466,8 +509,8 @@ declare
   v_nolink integer; v_nosrc integer; v_temple integer; v_hotel integer; v_other integer;
 begin
   select count(*) into v_rest from public.restaurants where source = '${MARKER}';
-  if v_rest <> 42 then
-    raise exception 'POSTFLIGHT FAIL: expected 42 batch-015 restaurant rows, found %.', v_rest;
+  if v_rest <> ${restCands.length} then
+    raise exception 'POSTFLIGHT FAIL: expected ${restCands.length} batch-015 restaurant rows, found %.', v_rest;
   end if;
   select count(*) into v_places from public.places where source = '${MARKER}';
   if v_places <> 19 then
@@ -502,7 +545,7 @@ begin
   if v_temple <> ${ptDist.temple} or v_hotel <> ${ptDist.hotel} or v_other <> ${ptDist.other} then
     raise exception 'POSTFLIGHT FAIL: place_type distribution drifted (temple=% hotel=% other=%; expected ${ptDist.temple}/${ptDist.hotel}/${ptDist.other}).', v_temple, v_hotel, v_other;
   end if;
-  raise notice 'POSTFLIGHT OK: 61 rows verified (42 restaurants + 19 places; temple ${ptDist.temple}, hotel ${ptDist.hotel}, other ${ptDist.other}).';
+  raise notice 'POSTFLIGHT OK: ${N_TOTAL} rows verified (${restCands.length} restaurants + ${placeCands.length} places; temple ${ptDist.temple}, hotel ${ptDist.hotel}, other ${ptDist.other}).';
 end
 $post015$;
 

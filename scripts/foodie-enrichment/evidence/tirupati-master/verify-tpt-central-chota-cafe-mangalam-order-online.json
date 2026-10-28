@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Chota Cafe, Mangalam order online",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.zomato.com/tirupati/chota-cafe-mangalam/order"
   },
   "query": "\"Chota Cafe, Mangalam order online\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/mangalam-order-online",
+      "name": "Mangalam Restaurants, Tirupati",
+      "snippet": "Mangalam Restaurants - Menus, Reviews, Photos for Restaurants, Pubs, Lounges, and Bars in Mangalam. Order on app Experience seamless online ordering only on ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://chotacafe.com",
+      "name": "Chota Cafe Tirupati | Little Moments. Big Flavours.",
+      "snippet": "Chota Cafe on Karakambadi Road, Tirupati . Find us on Karakambadi Road in Tirupati , Mangalam, Tirupati 517507. Get directions +91 79899 17113",
+      "host": "chotacafe.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/The-Little-Cafe-Closed-down-Mangalam/9999PX877-X877-190719213032-Y5C7_BZDET",
+      "name": "The Little Cafe (Closed down) in Mangalam,Tirupati",
+      "snippet": "Dec 6, 2023 — The Little Cafe (Closed down) in Mangalam, Tirupati well known for in Tirupati . Rated 3.9 based on 195 Customer Reviews and Ratings with 8 ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tej-mini-restaurant-mangalam/order",
+      "name": "Tej Mini Restaurant, Mangalam order online",
+      "snippet": "Order food online from Tej Mini Restaurant, Mangalam, Tirupati . South Indian, Chinese, Seafood, Biryani, Get the live order tracking on the app. We need your ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/choc-zo-mangalam/order",
+      "name": "Choc Zo, Mangalam order online",
+      "snippet": "Order food online from Choc Zo, Mangalam, Tirupati . Get great offers and super fast food delivery. Juices, Pizza, Sandwich, Burger, Beverages, Ice Cream, We ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Coffee-Shops-with-Veg-Option-Available-in-Mangalam/nct-10104727-att-rest801",
+      "name": "Top Coffee Shops With Veg Option Available in Mangalam",
+      "snippet": "Address , Karakambadi Road, Mangalam, Tirupati - 517507, Kadapa Tirupati Road, Mangalam, Tirupati - 517507, 22459, Karakambadi Road, Mangalam, Tirupati - 517507 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Chota Cafe Tirupati | Little Moments. Big Flavours. :: Chota Cafe on Karakambadi Road, Tirupati . Find us on Karakambadi Road in Tirupati , Mangalam, Tirupati 517507. Get directions +91 79899 17113",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

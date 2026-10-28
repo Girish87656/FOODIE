@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sri Ramulavari Temple in Nehru Nagar,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Ramulavari-Temple-Opposite-West-Nehru-Nagar/9999PX877-X877-200930013053-E3W9_BZDET"
   },
   "query": "\"Sri Ramulavari Temple in Nehru Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples/nct-10475644/page-15",
+      "name": "Temples in Tirupati, Andhra Pradesh - Page 15",
+      "snippet": "Sri Onnaramma Temple. Nehru Nagar, tirupati … 517101 Nehru Nagar, Tirupati - 517501 Tirumala, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Ramulavari-Temple/9999PX877-X877-181130232247-Z7I6_BZDET",
+      "name": "Sri Ramulavari Temple in Panchali Nagar,Tirupati - Justdial Jd",
+      "snippet": "Address Annaswamipalle, Panchali Nagar, Tirupati -517520, Andhra Pradesh. Contacts +(91)-9848086190",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples-in-Varadaraja-Nagar/nct-10475644/page-3",
+      "name": "Temples in Varadaraja Nagar, Tirupati - Page 3",
+      "snippet": "Address , Rm Madastreet, Tirupati , Nehru Nagar, Tirupati - 517501, 711, Tirupati , Sarojini Devi Road, Nehru Nagar, Tirupati - 517501 ; Listed Categories. Temples. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples/nct-10475644/page-23",
+      "name": "Temples in Tirupati, Andhra Pradesh - Page 23",
+      "snippet": "Temple Address Tirumala, Tirupati - 517504 (Near Ambedkar Circle) 292, Kotha Veedi, Nehru Nagar, Tirupati - 517501 Pushkarini St, Tirupati Urban, Tirumala,  ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Hindu-Shrine-in-Maruthi-Nagar/nct-12265868",
+      "name": "Top Hindu Shrine in Maruthi Nagar, Tirupati near me",
+      "snippet": "Top Hindu Shrine near Maruthi Nagar, Tirupati ; Address , Hare Krishan Road, Alipiri, Tirupati - 517507 (Vinayaka Nagar), Kothapalli, Tirupati - 517501 ; Listed ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples-in-Tilak-Road/nct-10475644/page-4",
+      "name": "Temples in Tilak Road, Tirupati - Page 4",
+      "snippet": "Temples in Tilak Road, Tirupati ; Address , Tirupati , Andhra Pradesh, Tata Nagar, Tirupati - 517501, Varadaraja Nagar, Tirupati - 517501 ; Listed Categories. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Temples in Tirupati, Andhra Pradesh - Page 15 :: Sri Onnaramma Temple. Nehru Nagar, tirupati … 517101 Nehru Nagar, Tirupati - 517501 Tirumala, Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

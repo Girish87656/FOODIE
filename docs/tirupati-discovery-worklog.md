@@ -417,3 +417,86 @@ Remaining gaps (honestly carried forward — NOT exhaustive, never claimed compl
 - Menus, hours, prices, photos: still no evidence captured for any queued row.
 - Coverage is directory/mapped-POI grade for the 42 new food venues — no field
   verification, no operation-status proof beyond listing existence.
+
+## Batch-6 session (2026-10-28) — Batch-015 audit + evidence strengthening + coverage gaps + Batch-016
+
+Starting state verified: HEAD = 15644aa (auto-commit) on top of the Batch-5 commit 01b0937; working
+tree clean; 10 commits ahead of origin/main. Nothing pushed, nothing deployed, no production SQL
+executed, no GitHub authorization initiated.
+
+1. Batch-015 AUDIT (objective 1; batch6-audit-b015.ts → batch6/b015-audit.json): all 61 proposed
+   records cross-checked against the inventory proxy, curated worksheet (incl. rawNames aliases),
+   pending batches 011–015, and the queue corpus. Checks: C1 canonical uuid5 ids recomputed (exact
+   match against the SQL), C2 zero exact collisions, C3 slug uniqueness (incl. batches 012–014),
+   C4 locality-suffix-in-own-quote, C5 name-drift scan (core tokens + frozen hold families), C6 SQL
+   honesty (unverified/NULL-coordinates row-by-row). 17 deterministic flags, ALL explicitly
+   adjudicated with recorded reasons. Verdict: 59 retained, 2 moved to the review queue —
+   "Amma Appam, Renigunta" (the only quoted address is central-Tirupati G Car Street; the Renigunta
+   label came from a category-page title) and "Radha Rani Tiffin Centre, Padmavathi Nagar"
+   (category-page quote concatenates two different listings; area undecidable). Batch-015 SQL
+   REGENERATED deterministically with 59 rows (40 restaurants + 19 places); sha256 4fa99309…
+   Both moved rows keep full evidence in batch6/review-queue-batch6.json, counted nowhere.
+
+2. LIVE production cross-check (objective 1 supplement; batch6-live-crosscheck.ts →
+   batch6/live-crosscheck.json): read the ACTUAL production inventory through the app's own public
+   read endpoint (read-only GET, publishable key, RLS applies — NO SQL executed, nothing written):
+   86 live restaurant rows; all 61 candidates checked → 0 exact, 0 base-name, 0 loose token
+   collisions. (lib/live.ts small robustness fix: a missing .env.local no longer crashes the
+   documented public-env reader.)
+
+3. Second-source evidence pass (objective 2; research-tirupati-batch6.ts evidence →
+   batch6/food-second-sources.json + batch6-assess-second-sources.ts → …-assessment.json):
+   ONE availability probe passed; 40 retained food venues × 1 bounded query (8 s pacing); 2 transient
+   429/timeout errors retried cleanly on resume (query form fixed: base name quoted, locality
+   unquoted). Result: 22 venues gained a SECOND INDEPENDENT source (5 map-directory, 8
+   established-directory, 5 aggregator, 4 social), 8 same-host corroboration only, 10 none, 0 failed.
+   Corroboration NEVER upgrades verification_status; 10 single-source rows stay honestly marked.
+   T2 (mapped-POI-only) venues with a listing-grade second source flagged t2UpgradeSuggested for the
+   owner — no tier change applied by script.
+
+4. Verification backlog RESUMED (objective 3; research-tirupati-master.ts verify, 4 × 12 bounded
+   chunks): 48 attempted — 47 area-confirmed (most with address evidence), 1 not-confirmed (negative
+   evidence recorded), 1 infra-failed (parked, never counted as verified), 0 sustained throttles
+   (2 transient 75 s backoffs recovered). Backlog: 126 → 79 (58 never-attempted + 21 throttled-stubs).
+   Previous evidence and retry history preserved (resume semantics; completed records never overwritten).
+
+5. Coverage-gap sweep (objective 4; research-tirupati-batch6.ts coverage + nominatim2): 18 bounded
+   web_search queries over the weakest locality×category cells + 9 bounded Nominatim town queries.
+   Wrong-city guard enforced on published coordinates (Kathmandu-Chandragiri cafés 27.7N/85.2E and
+   Chennai-Perambur "Renigunta" restaurants 13.1N/80.1E rejected as out-of-scope). Honest still-zeros
+   recorded for Srinivasa Mangapuram food, Tiruchanur restaurants, Renigunta non-chain stays.
+
+6. Batch-6 ledger assembled (batch6-discovery-candidates.ts, fail-loud gates mirroring batch-5 +
+   NEW base-name gate): 18 accepted candidates (8 food: Kakinada Subbbayya Gari Hotel / Aroma Coffee
+   House / The Vintage Cafe [Kapila Teertham Road T2], Shree Dhaba House [Akkarampalli T1], Good Luck
+   Family Dhaba [T1] + Sreenivasa Reddy Dhaba [T2] [Renigunta Locality], MSD Tiffin Centre +
+   Kalahasteeswara Tiffens [Srikalahasti T1]; 10 places: Srinivasa Hotel [Srinivasa Mangapuram — own
+   official site, T1], Sreekanth Lodge [Mangalam T1], Sun Lights Lodge [Tata Nagar T1], Kittu Home
+   Stay [Chandragiri T2], Kandy PLR Hotel [Thondavada T2], Mgr/Raj/Kalahasteeswara Residency +
+   APTDC Haritha Hotel [Srikalahasti T2], Srivari Mettu [Srinivasa Mangapuram T2]), 2 identity-HELD
+   (Ganapathi Juice Center vs inventory 'Ganapathi Juice Shop'; Chillies Food Paradise vs 'Chillies
+   Restaurant'), 21 weak leads queued-only, 4 corroborations (incl. the drift downgrade of "Sri
+   Venkateshwara Bakery & Sweets, Bhavani Nagar" → locality-resolving corroboration of the frozen
+   worksheet canonical "Sri Venkateshwara Bakery And Sweets", and OTC Orion / Padamavathi Tiffin /
+   Kalyana Venkateswara Srinivasa Mangapuram re-finds downgraded by the gates).
+
+7. Batch-016 review-candidate SQL generated (gen-insert-batch-016.ts, deterministic, byte-identical
+   rerun verified): insert-batch-016-tptm-b6.sql — 8 restaurants + 10 places (place types: hotel 9,
+   other 1); verification_status 'unverified' everywhere; coordinates NULL on every row; preflight
+   checks batches 011–015 coherence + id/slug/name collisions; postflight exact-count guards. NEVER
+   executed by this repo.
+
+8. Docs regenerated by the extended gen-tirupati-docs.ts: inventory (Batch-6 audit + live cross-check
+   + second-source + Batch-016 sections), source register (§8 batch-6 sources incl. hosts serving
+   candidate-grade evidence and honest in-area zeros), coverage matrix (Batch-6 evidence with
+   still-zeros and wrong-city guard), duplicate review (§F batch-6 drift review + new identity holds).
+   Worklog (this file) appended by hand.
+
+Remaining gaps (honestly carried forward — NOT exhaustive, never claimed complete):
+- 79 verification-backlog rows pending (58 never-attempted + 21 throttled-stubs).
+- Weak leads: 38 (batch-5) + 21 (batch-6) + 5 original ambiguous; identity-holds: 4 (batch-5) +
+  2 (batch-6); 2 batch-015 audit moves await a venue-own source.
+- Batches 011–016 ALL remain unexecuted owner review candidates — production unchanged.
+- Menus, hours, prices, photos: still no evidence captured for any queued row.
+- Kapila Teertham Road venues are zomato area-page T2 evidence; Srinivasa Mangapuram food coverage
+  remains effectively zero in every source tried so far.

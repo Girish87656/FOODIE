@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Varasiddi Vinayaka Swamy Temple - Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Varasiddi-Vinayaka-Swamy-Temple-Korramenugunta/9999PX877-X877-250416041025-J2A8_BZDET"
   },
   "query": "\"Varasiddi Vinayaka Swamy Temple - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Varasiddi-Vinayaka-Swamy-Temple-Tirupati-HO/9999PX877-X877-220319004550-C7Y4_BZDET",
+      "name": "Varasiddi Vinayaka Swamy Temple - Tirupati",
+      "snippet": "Photo. Upload Photos. Varasiddi Vinayaka Swamy Temple, tirupati , Bakki Reddy ColonyTemples - 1. Quick Information. Contacts. +Add Contact Number. Business Hours. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Varasiddi-Vinayaka-Swamy-Temple-Bhavani-Nagar/9999PX877-X877-200926225755-G6Q3_BZDET",
+      "name": "Sri Varasiddi Vinayaka Swamy Temple - Tirupati - Justdial Jd",
+      "snippet": "Jun 11, 2025 — ... Address , Contact Number, Reviews & Ratings ... Photo. Upload Photos. Sri Varasiddi Vinayaka Swamy Temple, tirupati , Bhavani NagarTemples - 1. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Varasiddi-Vinayaka-Swamy-Temple-Korramenugunta/9999PX877-X877-250416041025-J2A8_BZDET",
+      "name": "Varasiddi Vinayaka Swamy Temple - Tirupati",
+      "snippet": "7/46/2, Akkarampalle, Korramenugunta, Tirupati -517501, Andhra Pradesh. DirectionCopy. Photo. Upload Photos. Varasiddi Vinayaka Swamy Temple, tirupati , ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Saree-Retailers/nct-10420585/page-15",
+      "name": "Saree Retailers in Tirupati - Best Deals online",
+      "snippet": "Sri Mayurika Silks Near Sri Varasiddi Vinayaka Swamy Temple, tirupati . Sri Mayurika Silks. -No rating. 3rd Street. Call Now. Nagarani Tailor Sanjay Gandhi ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://journeyidea.org/hotels-arcot",
+      "name": "THE 18 BEST Hotels in Arcot, , India | journeyidea.org",
+      "snippet": "Just moments from the hotel, guests will find attractions, such as Varasiddi Vinayaka swamy Temple. Tirupati train station is 3.9 km from the accommodation ... Read more",
+      "host": "journeyidea.org",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Chittoor/Saree-Retailers-in-Puttur-Chittoor/nct-10420585/page-4",
+      "name": "Saree Retailers in Puttur Chittoor, Chittoor - Page 4",
+      "snippet": "Sri Mayurika Silks Near Sri Varasiddi Vinayaka Swamy Temple, tirupati . Sri ... Address , DNo: 1-56, Pudi Road, Tiruchanoor, Tirupati - 517503 (Beside ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Varasiddi Vinayaka Swamy Temple - Tirupati :: Photo. Upload Photos. Varasiddi Vinayaka Swamy Temple, tirupati , Bakki Reddy ColonyTemples - 1. Quick Information. Contacts. +Add Contact Number. Business Hours. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

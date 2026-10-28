@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Grand cakes & bakes in Nethaji Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Grand-cakes-bakes-Near-Ramakrishna-Deluxe-Nethaji-Road/9999PX877-X877-241220123306-I5U8_BZDET"
   },
   "query": "\"Grand cakes & bakes in Nethaji Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Shops-in-New-Balaji-Colony/nct-10070075",
+      "name": "Top Cake Shops in New Balaji Colony,Tirupati - Justdial Jd",
+      "snippet": "Name, Justbake · Bakers N Basket ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Birthday-Cake-Manufacturers-in-New-Balaji-Colony/nct-10046988",
+      "name": "Top Birthday Cake Manufacturers in New Balaji Colony,",
+      "snippet": "Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle), D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Birthday-Cake-Retailers/nct-10891000/page-2",
+      "name": "Birthday Cake Retailers in Tirupati - Page 2",
+      "snippet": "Address , Padmavathi Complex, Air Bypass Road, Tirupati - 517501 (Near ... Door No 10/14/584, Tirupati Bazar, Tirupati - 517501 (Opposite to Aurelia), D ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Delivery-Services-in-Gandhi-Road/nct-10069979",
+      "name": "Best Cake Delivery Services in Gandhi Road, Tirupati",
+      "snippet": "Tirupati Cakes And Gifts. Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park), Tilak ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Retailers-in-Tk-Street/nct-10930539",
+      "name": "Best Cake Retailers in Tk Street, Tirupati",
+      "snippet": "Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park), Tilak Road, Tirupati - 517501 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Cake-Manufacturers-in-Gandhi-Road/nct-10070023",
+      "name": "Top Cake Manufacturers in Gandhi Road, Tirupati near me",
+      "snippet": "... Address , Reviews, Photos, Maps , FAQs for top Cake Manufacturers near me in ... Door No 10/14/584, Tirupati Bazar, Tirupati - 517501 (Opposite to Aurelia) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Cake Shops in New Balaji Colony,Tirupati - Justdial Jd :: Name, Justbake · Bakers N Basket ; Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda, Tirupati - 517501 (Opposite to Babu Jagjivan Park) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -6,14 +6,16 @@
  * itself uses; RLS applies). Nothing else in the pipeline touches Supabase.
  */
 
-import { readFileSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 import type { LivePlace } from "./types";
 
 /** Read the public env pair exactly the way the app does. */
 function loadPublicEnv(): { url: string; key: string } {
   // scripts run from the repo root via `bun scripts/...`
+  // .env.local is optional (the repo may only ship .env); missing ≠ error
+  const localLines = existsSync(".env.local") ? readFileSync(".env.local", "utf8").split("\n") : [];
   const lines = [
-    ...readFileSync(".env.local", "utf8").split("\n"),
+    ...localLines,
     ...readFileSync(".env", "utf8").split("\n"),
   ];
   let url = "";

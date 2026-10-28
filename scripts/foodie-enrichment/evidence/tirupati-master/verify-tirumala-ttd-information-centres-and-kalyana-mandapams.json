@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "TTD Information Centres and Kalyana Mandapams",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://www.tirumala.org/ttdklmps.aspx"
   },
   "query": "\"TTD Information Centres and Kalyana Mandapams\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tirumala.org/ttdklmps.aspx",
+      "name": "TTD Information Centres and Kalyana Mandapams",
+      "snippet": "Audio and video casettes are also available here. TTD Information Centres and Kalyana Mandapams . City/Town, Contact. Aluru, The Manager TTD Kalyanamandapam Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "http://tirupati-info.blogspot.com/2008/11/ttd-information-centres-and-kalyana.html",
+      "name": "TTD Information Centres and Kalyana Mandapams",
+      "snippet": "TTD Information Centres and Kalyana Mandapams Bangalore TTD Information Centre 16th Cross, Vyalikavel Bangalore - 560 003. Bhopal The Balaji Baktha Mandali Read more",
+      "host": "tirupati-info.blogspot.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/how-to-order-tirupati-laddu-online/?hl=en",
+      "name": "How To Order Tirupati Laddu Online",
+      "snippet": "... TTD Information Centres and Kalyana Mandapams in cities like Bangalore. Pick-up requires the booking receipt and a valid government ID matching the booking ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.thehansindia.com/andhra-pradesh/speed-up-development-works-ttd-jeo-tells-information-centres-576343",
+      "name": "Speed up development works: TTD JEO tells Information",
+      "snippet": "Oct 28, 2019 — Tirupati : TTD JEO P Basant Kumar directed all the In-charge officers of TTD Information Centres and Kalyana Mandapams spread across the ... Read more",
+      "host": "www.thehansindia.com",
+      "kind": null
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/city/vijayawada/higher-rates-to-pave-way-for-hassle-free-sale/articleshow/88598960.cms",
+      "name": "'Higher rates to pave way for hassle-free sale' | Vijayawada",
+      "snippet": "Dec 31, 2021 — ... Tirupati and at all TTD information centres and Kalyana mandapams across the country. Only those devotees who do not have access to TTD ... Read more",
+      "host": "timesofindia.indiatimes.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/no-special-entry-tickets-at-tirumala-on-ekadasi-day/article2724157.ece",
+      "name": "No special entry tickets at Tirumala on Ekadasi day",
+      "snippet": "Dec 18, 2011 — ... TTD information centres and kalyana mandapams in Andhra Pradesh, apart from the centres in Chennai, New Delhi, Mumbai, Pune, Coimbatore and ... Read more",
+      "host": "www.thehindu.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "SV Temple Amaravathi",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://www.tirumala.org/SVphoto_gallery.aspx"
   },
   "query": "\"SV Temple Amaravathi\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.tirumala.org/SVphoto_gallery.aspx",
+      "name": "SV Temple Amaravathi",
+      "snippet": "To Reach Tirupati Tirupati to Tirumala Free Buses at Tirumala Free Buses at ... S.V. Temple Amaravathi . S.V. Temple Amaravathi . KN1GHT - Last Moon. Read more",
+      "host": "www.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://news.tirumala.org/%E0%B0%85%E0%B0%AE%E0%B0%B0%E0%B0%BE%E0%B0%B5%E0%B0%A4%E0%B0%BF%E0%B0%B2%E0%B1%8B-%E0%B0%A8%E0%B0%BF-%E0%B0%B6%E0%B1%8D%E0%B0%B0%E0%B1%80%E0%B0%B5%E0%B0%BE%E0%B0%B0%E0%B0%BF-%E0%B0%86%E0%B0%B2",
+      "name": "అమరావతిలో ని శ్రీవారి ఆలయ అభివృద్ధి ప‌నుల‌కు వైభవంగా",
+      "snippet": "AP CM ADDRESSING . AP CM ADDRESSING1. AP CM ADDRESSING3. AP CM ADDRESSING4. AP CM ADDRESSING5. AP CM IN SV TEMPLE AMARAVATHI . AP CM IN SV TEMPLE ... Read more",
+      "host": "news.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://hindudayashankar.com/devotional/grand-foundation-ceremony-for-the-development-of-sri-venkateshwara-swamy-in-amaravati",
+      "name": "Grand foundation ceremony for the development of Sri",
+      "snippet": "Nov 27, 2025 — AP-CM-IN- SV-TEMPLE-AMARAVATHI . A MAGNIFICENT SRI VENKATESWARA SWAMY TEMPLE IN AMARAVATI WITH AN INVESTMENT OF RS.260 CRORE, MODELED ON ... Read more",
+      "host": "hindudayashankar.com",
+      "kind": null
+    },
+    {
+      "url": "https://news.tirumala.org/pavithrotsavams-commence-at-amaravati-in-sri-venkateswara-swamy-temple-_-%E0%B0%85%E0%B0%AE%E0%B0%B0%E0%B0%BE%E0%B0%B5%E0%B0%A4%E0%B0%BF-%E0%B0%B6%E0%B1%8D%E0%B0%B0%E0%B1%80-%E0%B0%B5%E0%B1%87",
+      "name": "అమరావతి శ్రీ వేంకటేశ్వర ఆలయంలో పవిత్రోత్సవాలు ప్రారంభం – TTD",
+      "snippet": "Tirupati / Amaravati, August 19, 2025: The Pavithrotsavam rituals commenced with religious fervour on Tuesday at ... PAVITHROTSAVAM BEGINS IN SV TEMPLE AMARAVATHI · PAVITHROTSAVAM BEGINS IN SV TEMPLE AMARAVATHI1. Read more",
+      "host": "news.tirumala.org",
+      "kind": null
+    },
+    {
+      "url": "https://tender.zoltwic.com/t/e9be1ef2-cd29-4e15-b45f-947aeb66d82d",
+      "name": "Erection and removal of pendals for all festivals in S.V. Temple",
+      "snippet": "Erection and removal of pendals for all festivals in S.V. Temple Amaravathi , Venkatapalem (V), Thullur (M), Guntur (Dist). TIRUMALA TIRUPATI DEVASTHANAMS ...",
+      "host": "tender.zoltwic.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Guntur/Opticians-in-Pattabipuram/nct-10344205/page-4",
+      "name": "Opticians in Pattabipuram, Guntur - Page 4",
+      "snippet": "Swetha Opticals Near Sv Temple Amaravathi Road, Guntur. Swetha Opticals. -No rating. Near Sv Temple Amaravathi Road - 640 mts. Opens at 10:00 am tomorrow. Madhu ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Opticians in Pattabipuram, Guntur - Page 4 :: Swetha Opticals Near Sv Temple Amaravathi Road, Guntur. Swetha Opticals. -No rating. Near Sv Temple Amaravathi Road - 640 mts. Opens at 10:00 am tomorrow. Madhu ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

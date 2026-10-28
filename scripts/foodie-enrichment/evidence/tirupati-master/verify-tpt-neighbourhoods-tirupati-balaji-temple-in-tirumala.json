@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirupati Balaji Temple in Tirumala",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirupati-Balaji-Temple-Tirumala/9999PX877-X877-240329134828-I7R1_BZDET"
   },
   "query": "\"Tirupati Balaji Temple in Tirumala\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/fb-answers/tirupati-temple-is-located-in-which-state",
+      "name": "Tirupati Temple Is Located in Which State",
+      "snippet": "The main Tirupati Balaji temple is on the Tirumala Hills in Andhra Pradesh's Chittoor district. It's one of India's most visited pilgrimage sites and is ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupatibalajitemples.blogspot.com/2008/11/tirumala-tirupati-devasthanam-ttd.html",
+      "name": "Tirumala Tirupati Devasthanam (TTD) offices In India",
+      "snippet": "Nov 28, 2008 — Tirupati Balaji Temple, Following are the list of offices with address . Contact No. : 08674-45630 32 )",
+      "host": "tirupatibalajitemples.blogspot.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Venkatesh-Swamy-Venkatesh-Swamy-Tirupati-Balaji-Mandir-Tirumala/9999PX877-X877-250703021422-D1W7_BZDET",
+      "name": "Venkatesh Swamy Venkatesh Swamy Tirupati Balaji Mandir",
+      "snippet": "Tirupati Balaji Mandir in Tirumala, Tirupati listed under Temples in Tirupati . umala, Tirupati -517504, Hours Opens at : 6:00 am tomorrow Website",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Temples-in-Balaji-Nagar/nct-10475644/page-5",
+      "name": "Temples in Balaji Nagar, Tirupati - Page 5",
+      "snippet": "Name, Sri Tirumala Nambhi Tolappa Kainkarya Nilayam · Tirumala Balaji Temple ; Address , Tirumala, Tirupati - 517504, W Mada St, Tirupati , Tirupati Urban, Tirumala, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/how-to-visit-tirupati-balaji-temple",
+      "name": "How to Visit Tirupati Balaji Temple",
+      "snippet": "Tirumala is about 22 km uphill from Tirupati town, reachable by bus, cab, or the 9 km Alipiri footpath with 3550 steps.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://maps.app.goo.gl/ttdCmHEmjHg2q9vj6",
+      "name": "Sri Venkateswara Swamy Temple (Tirupati Balaji Mandir)",
+      "snippet": "Sri Venkateswara Swamy Temple ( Tirupati Balaji Mandir) President's Estate, New Delhi, Delhi 110001, India +91 85888 62170 Modern Hindu temple",
+      "host": "maps.app.goo.gl",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Venkatesh Swamy Venkatesh Swamy Tirupati Balaji Mandir :: Tirupati Balaji Mandir in Tirumala, Tirupati listed under Temples in Tirupati . umala, Tirupati -517504, Hours Opens at : 6:00 am tomorrow Website",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

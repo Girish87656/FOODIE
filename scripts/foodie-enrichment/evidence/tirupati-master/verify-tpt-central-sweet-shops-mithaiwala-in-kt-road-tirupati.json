@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sweet Shops - Mithaiwala in KT Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Mithaiwala-Opposite-Annarao-Curicul-Kt-Road/9999PX877-X877-210302132157-B3R2_BZDET"
   },
   "query": "\"Sweet Shops - Mithaiwala in KT Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Cakes-and-sweet-Near-Anna-Rao-Circle-Kt-Road/9999PX877-X877-160614110232-T3M2_BZDET",
+      "name": "cakes and sweet in KT Road,Tirupati",
+      "snippet": "cakes and sweet in KT Road, Tirupati is located Near Anna Rao Circle. 4. Can I get sugar-free sweets too? Many Sweet Shops provide sugar-free sweet ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Sweets-Kt-Road-KT-Road/9999PX877-X877-110108004031-P2Q1_BZDET",
+      "name": "Sri Venkateswara Sweets in KT Road,Tirupati",
+      "snippet": "Sri Venkateswara Sweets in KT Road, Tirupati … opens from Monday:- 8:00 am - 10:00 pm, Tuesday:- 8:00 am - 10:00 pm, Sunday:- 8:00 am - 10:00 pm.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shop-Home-Delivery/nct-10465557/page-2",
+      "name": "Sweet Shop Home Delivery in Tirupati - Page 2",
+      "snippet": "KT Road KT Road Opens at 09:00. Mithai is a popular sweets shop chain. Address Shop No:2, Main KT Road, KT Road, Tirupati - 517507 (Anna Rao Circle)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shops-in-Annamaiah-Circle/nct-10465567",
+      "name": "Best Sweet Shops in Annamaiah Circle, Tirupati - Justdial Jd",
+      "snippet": "Sweet Shops in Annamaiah Circle, Tirupati ; Address , Kt Road, Tirupati Bazar, Tirupati - 517501 (Near Bhavani Nagar Circle), Leela Mahal Circle 20, 51, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mithaiwala-Opp-Face-Dental-Hospital-Beside-More-Supermarket-Mr-Palli-Circle/9999PX877-X877-200102152226-K2H3_BZDET/locations",
+      "name": "Locations of Mithaiwala in Tirupati",
+      "snippet": "Mithaiwala in Mr Palli Circle, Tirupati is located Opp Face Dental Hospital, Beside More Supermarket.. 4. Can I get sugar-free sweets too? Many Sweet Shops ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Shops-in-1St-Cross-Road/nct-10465567",
+      "name": "Best Sweet Shops in 1St Cross Road, Tirupati",
+      "snippet": "KT Road - 250 mts Opens at 07:00 AM. Kt Road, Tirupati . Door No:6/2/84/A, Bhavani Nagar Circle, KT Road, Tirupati - 517507 (Opp Signals)",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "cakes and sweet in KT Road,Tirupati :: cakes and sweet in KT Road, Tirupati is located Near Anna Rao Circle. 4. Can I get sugar-free sweets too? Many Sweet Shops provide sugar-free sweet ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

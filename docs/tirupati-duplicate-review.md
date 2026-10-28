@@ -141,3 +141,32 @@ Additional name-drift flags from the same pass (kept out of Batch-015 for the sa
   (independent Tripadvisor + official TTD-news evidence).
 - **"Sri Kodandaramaswami Temple"** HIGH queue lead — name-drift spelling of the existing
   **Sri Kodanda Ramaswamy Temple, Tirupati** (batch-013 queued); corroborated, not duplicated.
+
+## F. Batch-6 audit drift review & new identity holds (2026-10-28)
+
+Batch-015 audit moves (identity/locality uncertain → review queue, never SQL):
+
+- **Radha Rani Tiffin Centre, Padmavathi Nagar** — MIXED QUOTE: the idbf category-page quote concatenates TWO different listings ('Mahila University Road, Padmavathi Nagar, Tirupati ... 503, Samajam Street, Tiruchanur, Tirupati'); which address belongs to Radha Rani is not decidable from the snippet, and the r…
+- **Amma Appam, Renigunta** — LOCALITY CONFLICT (carry-forward of the batch-5 ledger note): the only address in the quote is 'G Car Street, T P Area, Tirupati - 51750x' — a CENTRAL Tirupati street — while the 'Renigunta' attribution comes solely from a justdial category-page title ('Tiffin…
+
+Batch-6 drift downgrades (proposed as candidates, downgraded by the gates):
+
+- **"Sri Venkateshwara Bakery & Sweets, Bhavani Nagar"** vs frozen worksheet canonical
+  **Sri Venkateshwara Bakery And Sweets** (T3, locality-less) — trivial '& Sweets' drift of the SAME venue;
+  the mappls listing RESOLVES the frozen row's locality (Leela Mahal Road, RS Gardens, Bhavani Nagar) and the
+  session's verify pass area-confirmed the frozen row — recorded as corroboration, NOT a new batch row.
+- **"Otc Orion Tiffin Centre, Korlagunta"** → inventory row **OTC — Orion Tiffin Centre, Korlagunta**
+  already exists; re-found hit recorded as corroboration.
+- **"Padamavathi Tiffin Center, Tirumala"** → inventory row **Padamavathi Tiffin Center** already exists
+  (worksheet T3, area tirumala); re-found hit recorded as corroboration (base-name gate).
+- **"Sri Kalyana Venkateswara Swamy Temple, Srinivasa Mangapuram"** → inventory VERIFIED row + batch-011
+  candidate already exist; the official MoreTemples.aspx hit recorded as corroboration.
+
+NEW identity-HELD leads (never SQL rows until reconciled):
+
+- **Ganapathi Juice Center, MR Palli** — NAME-DRIFT GUARD: inventory already has 'Ganapathi Juice Shop' (Tilak Road, corroborated batch-5); 'Ganapathi Juice Center' at 'Tirupati Market / MR Palli area' plausibly the same business under a drifted name with conflicting locality — reconcile before any import
+- **Chillies Food Paradise, Renigunta Road** — NAME-DRIFT GUARD: inventory has 'Chillies Restaurant'; 'Chillies Food Paradise' on the Renigunta Road punjabi-restaurants page may be the same brand/venue under a drifted name — reconcile first
+
+Carried-forward frozen guards re-checked this pass (all clean): Indira Rest House, Tirumala Tea-Stall pair,
+Balaji-name family, Tirumala Bakery family — the batch-6 audit's hold-family scan found no new candidate
+inside these families (the 'Golden Balaji Tiffin Center' hit is a distinct full name; adjudicated retained).

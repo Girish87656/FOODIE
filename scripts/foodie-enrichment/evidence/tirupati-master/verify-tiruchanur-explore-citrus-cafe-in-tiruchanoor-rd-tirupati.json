@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Explore Citrus Cafe in Tiruchanoor Rd, Tirupati",
-    "area": "tiruchanur"
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.eazydiner.com/tirupati/citrus-cafe-tiruchanoor-rd-tirupati-716099"
   },
   "query": "\"Explore Citrus Cafe in Tiruchanoor Rd, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Explore Citrus Cafe in Tiruchanoor Rd, Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Explore Citrus Cafe in Tiruchanoor Rd, Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-in-Tiruchanoor-Road/nct-10408936",
+      "name": "Best Restaurants in Tiruchanoor Road, Tirupati - Justdial Jd",
+      "snippet": "Address 4/74, Ground Floor, Tiruchanur Road, Padmavati Puram, Tirupati - 517501 (Opposite Panchayathi Office, Tata Nagar), Ward 20, S12, Stv Nagar, Air ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Filter-Coffee-Dish-Restaurants-in-Mosque-Road",
+      "name": "Popular Restaurants Serving Filter Coffee in Mosque Road",
+      "snippet": "Discover the best Filter Coffee in Mosque Road, Tirupati . Door No 19-42-M 3-2, Tiruchanoor Road, Tirupati - 517501 (Near Lakshmipuram",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/30Ml-Cafe-Tiruchanoor-Road/9999PX877-X877-230912000357-Z5Y3_BZDET/reviews",
+      "name": "5 Reviews for 30Ml Cafe in Tiruchanoor Road, Tirupati",
+      "snippet": "30Ml Cafe in Tiruchanoor Road, Tirupati . 30Ml Cafe are Drive-Through,, etc. hours from Monday:- 10:00 am - 10:00 pm, Sunday:- 10:00 am - 10:00 pm for more ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Coffee-Shops-with-Drive-Through/nct-10104727-att-res40",
+      "name": "Best Coffee Shops With Drive Through in Tirupati",
+      "snippet": "Tiruchanoor Road, tirupati . Door No 19-42-M 3-2, Tiruchanoor Road, Tirupati - 517501 (Near Lakshmipuram Circle, Beside Bharath Petrol Pump)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Restaurants-Family-Friendly-in-Tiruchanoor/nct-10408936-att-res494",
+      "name": "Best Restaurants Family Friendly in Tiruchanoor, Tirupati",
+      "snippet": "42 Restaurants Family Friendly in Tiruchanoor, Tirupati . Address 200 Feet Bypass Road, Tiruchanoor, Tirupati - 517503. Cafe and Restaurant Pure Veg, 128/6-9/1,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Muniraja-Cafe/9999PX877-X877-240505105433-T2A6_BZDET",
+      "name": "Muniraja Cafe - Best Coffee Shops near me in Tirupati",
+      "snippet": "Muniraja Cafe in Tiruchanoor, Tirupati well known for Coffee Shops in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address , Contact Number ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Restaurants in Tiruchanoor Road, Tirupati - Justdial Jd :: Address 4/74, Ground Floor, Tiruchanur Road, Padmavati Puram, Tirupati - 517501 (Opposite Panchayathi Office, Tata Nagar), Ward 20, S12, Stv Nagar, Air ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Explore Citrus Cafe in Tiruchanoor Rd, Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Explore Citrus Cafe in Tiruchanoor Rd, Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,286 @@
+{
+  "task": "batch-6 nominatim town POI queries (uncovered towns)",
+  "retrievedOn": "2026-10-28",
+  "queries": [
+    {
+      "town": "Srinivasa Mangapuram",
+      "keyword": "restaurant Srinivasa Mangapuram",
+      "url": "https://nominatim.openstreetmap.org/search?q=restaurant%20Srinivasa%20Mangapuram&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [],
+      "outOfAreaHits": [],
+      "inAreaCount": 0,
+      "usefulness": "no rows"
+    },
+    {
+      "town": "Srinivasa Mangapuram",
+      "keyword": "hotel Srinivasa Mangapuram",
+      "url": "https://nominatim.openstreetmap.org/search?q=hotel%20Srinivasa%20Mangapuram&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [],
+      "outOfAreaHits": [],
+      "inAreaCount": 0,
+      "usefulness": "no rows"
+    },
+    {
+      "town": "Chandragiri",
+      "keyword": "cafe Chandragiri",
+      "url": "https://nominatim.openstreetmap.org/search?q=cafe%20Chandragiri&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [
+        {
+          "name": "Ohsho Cafe",
+          "displayName": "Ohsho Cafe, Kisipide to Gurjudhara, Chandragiri-05, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44619, Nepal",
+          "osmType": "node",
+          "osmId": 5289087423,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "27.6839981",
+          "lon": "85.2397302",
+          "importance": 0.00006794460975046947
+        },
+        {
+          "name": "Cherdung Cafe",
+          "displayName": "Cherdung Cafe, Cherdung Street, Chandragiri-12, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44618, Nepal",
+          "osmType": "node",
+          "osmId": 11224544237,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "27.7010018",
+          "lon": "85.2533147",
+          "importance": 0.00006794460975046947
+        },
+        {
+          "name": "Newa Cafe",
+          "displayName": "Newa Cafe, Tribhuvan Rajpath, Chandragiri-11, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44619, Nepal",
+          "osmType": "node",
+          "osmId": 4773245721,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "27.6872710",
+          "lon": "85.2488880",
+          "importance": 0.00006794460975046947
+        },
+        {
+          "name": "Pipal Bot Cafe",
+          "displayName": "Pipal Bot Cafe, Tribhuvan Rajpath, Anand Chok, Tinthana, Chandragiri-15, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44618, Nepal",
+          "osmType": "node",
+          "osmId": 3079598141,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "27.6892092",
+          "lon": "85.2709334",
+          "importance": 0.00006794460975046947
+        },
+        {
+          "name": "Billiards Cafe",
+          "displayName": "Billiards Cafe, Satungal Road, Satungal, Chandragiri-11, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44619, Nepal",
+          "osmType": "node",
+          "osmId": 9704578112,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "27.6851595",
+          "lon": "85.2508755",
+          "importance": 0.00006794460975046947
+        },
+        {
+          "name": "Zitrone Bakery Cafe",
+          "displayName": "Zitrone Bakery Cafe, 27DR009, Chandragiri-12, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44619, Nepal",
+          "osmType": "node",
+          "osmId": 7057314985,
+          "category": "shop",
+          "type": "bakery",
+          "lat": "27.6904643",
+          "lon": "85.2443009",
+          "importance": 0.00006794460975046947
+        },
+        {
+          "name": "Stone Villa Cafe",
+          "displayName": "Stone Villa Cafe, Tribhuvan Rajpath, Anand Chok, Tinthana, Chandragiri-15, Chandragiri, Chandragiri Municipality, Kathmandu, Bagamati Province, 44618, Nepal",
+          "osmType": "node",
+          "osmId": 4772745425,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "27.6884037",
+          "lon": "85.2702181",
+          "importance": 0.00006794460975046947
+        }
+      ],
+      "outOfAreaHits": [],
+      "inAreaCount": 7,
+      "usefulness": "7 area-gated hits (published coordinates evidence-only)"
+    },
+    {
+      "town": "Chandragiri",
+      "keyword": "hotel Chandragiri",
+      "url": "https://nominatim.openstreetmap.org/search?q=hotel%20Chandragiri&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [
+        {
+          "name": "hotel chandragiri",
+          "displayName": "hotel chandragiri, kizhur road,near chandragiri school, MDR100, Melparamba, Kasaragod, Kerala, 671317, India",
+          "osmType": "node",
+          "osmId": 11351385728,
+          "category": "tourism",
+          "type": "hotel",
+          "lat": "12.4672998",
+          "lon": "75.0070446",
+          "importance": 0.00004948729686422549
+        }
+      ],
+      "outOfAreaHits": [],
+      "inAreaCount": 1,
+      "usefulness": "1 area-gated hits (published coordinates evidence-only)"
+    },
+    {
+      "town": "Renigunta",
+      "keyword": "restaurant Renigunta",
+      "url": "https://nominatim.openstreetmap.org/search?q=restaurant%20Renigunta&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [
+        {
+          "name": "Aaladipattiyan Sweets / Restaurant",
+          "displayName": "Aaladipattiyan Sweets / Restaurant, Chennai - Tiruttani - Renigunta Road, Manikanda Puram, Ward 81, Zone 7 Ambattur, Chennai, Chennai Metropolitan Area, Ambattur, Chennai District, Tamil Nadu, 600054, India",
+          "osmType": "way",
+          "osmId": 1534023211,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.1232668",
+          "lon": "80.1452577",
+          "importance": 0.0000728046082245673
+        },
+        {
+          "name": "Perambur Sri Srinivasa Sweets, Snacks and restaurant (Pure veg)",
+          "displayName": "Perambur Sri Srinivasa Sweets, Snacks and restaurant (Pure veg), 453, Chennai - Tiruttani - Renigunta Road, Venkatapuram, Ward 81, Zone 7 Ambattur, Chennai, Chennai Metropolitan Area, Ambattur, Chennai District, Tamil Nadu, 600053, India",
+          "osmType": "way",
+          "osmId": 1533546777,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.1206844",
+          "lon": "80.1487091",
+          "importance": 0.0000728046082245673
+        },
+        {
+          "name": "Day Night Restaurant",
+          "displayName": "Day Night Restaurant, Chennai - Tiruttani - Renigunta Road, Rajiv Gandhi Nagar, Pattabiram, Avadi, Chennai Metropolitan Area, Avadi, Thiruvallur, Tamil Nadu, 600054, India",
+          "osmType": "node",
+          "osmId": 5229679251,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.1207533",
+          "lon": "80.0660893",
+          "importance": 0.00005404821850914805
+        }
+      ],
+      "outOfAreaHits": [
+        {
+          "name": "Hotel karaikudi chettinad restaurant",
+          "displayName": "Hotel karaikudi chettinad restaurant, Chennai Tirupati Highway, Kakkalur, Tiruvallur, Chennai Metropolitan Area, Thiruvallur, Tamil Nadu, 602001, India",
+          "osmType": "node",
+          "osmId": 12175859500,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.1391650",
+          "lon": "79.9075875",
+          "importance": 0.00005542915999079908
+        }
+      ],
+      "inAreaCount": 3,
+      "usefulness": "3 area-gated hits (published coordinates evidence-only)"
+    },
+    {
+      "town": "Renigunta",
+      "keyword": "hotel Renigunta",
+      "url": "https://nominatim.openstreetmap.org/search?q=hotel%20Renigunta&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [
+        {
+          "name": "Hotel Kumar's (Pure Veg)",
+          "displayName": "Hotel Kumar's (Pure Veg), 399A, Chennai - Tiruttani - Renigunta Road, Venkatapuram, Ward 81, Zone 7 Ambattur, Chennai, Chennai Metropolitan Area, Ambattur, Chennai District, Tamil Nadu, 600053, India",
+          "osmType": "way",
+          "osmId": 1533546778,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.1199224",
+          "lon": "80.1494596",
+          "importance": 0.0000728046082245673
+        }
+      ],
+      "outOfAreaHits": [
+        {
+          "name": "Hotel karaikudi chettinad restaurant",
+          "displayName": "Hotel karaikudi chettinad restaurant, Chennai Tirupati Highway, Kakkalur, Tiruvallur, Chennai Metropolitan Area, Thiruvallur, Tamil Nadu, 602001, India",
+          "osmType": "node",
+          "osmId": 12175859500,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.1391650",
+          "lon": "79.9075875",
+          "importance": 0.00005542915999079908
+        }
+      ],
+      "inAreaCount": 1,
+      "usefulness": "1 area-gated hits (published coordinates evidence-only)"
+    },
+    {
+      "town": "Tiruchanur",
+      "keyword": "restaurant Tiruchanur",
+      "url": "https://nominatim.openstreetmap.org/search?q=restaurant%20Tiruchanur&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [],
+      "outOfAreaHits": [],
+      "inAreaCount": 0,
+      "usefulness": "no rows"
+    },
+    {
+      "town": "Srikalahasti",
+      "keyword": "restaurant Srikalahasti",
+      "url": "https://nominatim.openstreetmap.org/search?q=restaurant%20Srikalahasti&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [],
+      "outOfAreaHits": [],
+      "inAreaCount": 0,
+      "usefulness": "no rows"
+    },
+    {
+      "town": "Srikalahasti",
+      "keyword": "hotel Srikalahasti",
+      "url": "https://nominatim.openstreetmap.org/search?q=hotel%20Srikalahasti&format=jsonv2&limit=15&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "inAreaHits": [
+        {
+          "name": "APTDC Hotel (Haritha)",
+          "displayName": "APTDC Hotel (Haritha), Sri Kala Hasthi Main Road, Cherlopalle Vyavasayapu Khandriga, Cherlapalle, Srikalahasti Mandal, Tirupati District, Andhra Pradesh, 517600, India",
+          "osmType": "way",
+          "osmId": 1569031209,
+          "category": "tourism",
+          "type": "hotel",
+          "lat": "13.7306928",
+          "lon": "79.6706815",
+          "importance": 0.00004577935454332826
+        }
+      ],
+      "outOfAreaHits": [],
+      "inAreaCount": 1,
+      "usefulness": "1 area-gated hits (published coordinates evidence-only)"
+    }
+  ]
+}

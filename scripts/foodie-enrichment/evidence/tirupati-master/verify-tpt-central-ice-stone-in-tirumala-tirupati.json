@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Ice Stone in Tirumala,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Ice-Stone-Tirumala/9999PX877-X877-230304082326-W2D6_BZDET"
   },
   "query": "\"Ice Stone in Tirumala,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/nalini.12141/posts/the-stone-idol-of-tirupati-stays-warm-at-110f-43c-year-round-and-its-back-always/2219125208705173",
+      "name": "The stone idol of Tirupati stays warm at *110°F (43°C)* year-",
+      "snippet": "Tirumala, a living idol mystery with real hair and sweating stone by Historic Boy Mohit. located in the Tirupati Balaji Temple Tirumala.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Dealers-in-Tirumala/nct-10261481",
+      "name": "Top Ice Dealers in Tirumala - Tirupati",
+      "snippet": "Name, Anusha White ICE Factory · Sri Ganesh Ice Factory ; Address , Door No 18-2-263c-12, Tirumala Bypass Road, Korlagunta, Tirupati - 517501 (Near Leela Mahal) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Manufacturers-in-Tirumala/nct-10261534",
+      "name": "Top Ice Manufacturers in Tirumala, Tirupati near me",
+      "snippet": "Address , Renigunta Road, Tirupati - 517501 (Behind Reliance Mart, Kennedy Nagar), 3-81 N CHINNABBA KOTHAPETA MATHA STREET CHANDRAGIRI CHITOOR, Chandragiri ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/112913752635798",
+      "name": "Ice Stone, Tirupathi - Home",
+      "snippet": "Ice Stone, Tirupathi , Tirupati . Ice Cream Shop 141 people checked in here Tirupati",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ice-Cube-Dealers-in-Tirumala/nct-10261411",
+      "name": "Top Ice Cube Dealers in Tirumala - Tirupati",
+      "snippet": "Name, Anusha White ICE Factory · Sri Ganesh Ice Factory ; Address , Door No 18-2-263c-12, Tirumala Bypass Road, Korlagunta, Tirupati - 517501 (Near Leela Mahal) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Balaji-Colony/Restaurant/Ice-Stone-Ice-Cream-Parlour/store/2074493?srsltid=AYCX9vJl_GMC0nLjvE42JPwCEsvHDmt3KAFyRbonGcss9kBJ1dhV9LZd",
+      "name": "ICE STONE ICE CREAM PARLOUR, Balaji Colony, Tirupati",
+      "snippet": "· Open now·11:30 AM – 2:00 PM. Prakasam Rd, opposite GRT JEWELLERY, Balaji Colony, Tirupati , Andhra Pradesh 517501 11:30 AM – 2:00 PM. AM – 2:00 PM. Plot No. ...",
+      "host": "magicpin.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Ice Dealers in Tirumala - Tirupati :: Name, Anusha White ICE Factory · Sri Ganesh Ice Factory ; Address , Door No 18-2-263c-12, Tirumala Bypass Road, Korlagunta, Tirupati - 517501 (Near Leela Mahal) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

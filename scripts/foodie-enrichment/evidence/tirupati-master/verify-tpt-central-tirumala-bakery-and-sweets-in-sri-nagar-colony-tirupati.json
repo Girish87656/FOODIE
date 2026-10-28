@@ -1,14 +1,37 @@
 {
   "candidate": {
     "name": "Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Tirumala-Bakery-And-Sweets-Sri-Nagar-Colony/9999PX877-X877-230129051522-Q3M3_BZDET"
   },
   "query": "\"Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumala-Bakery-And-Sweets-Sri-Nagar-Colony/9999PX877-X877-230129051522-Q3M3_BZDET",
+      "name": "Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati",
+      "snippet": "Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati well known for Bakeries in Tirupati . Rated 3.9 based on 33 Customer Reviews and Ratings with 1 ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumala-Bakery-And-Sweets-Sri-Nagar-Colony/9999PX877-X877-230129051522-Q3M3_BZDET/reviews",
+      "name": "33 Reviews for Tirumala Bakery And Sweets in Sri Nagar",
+      "snippet": "... and Ratings with Photos. Check Timings, Address , Contact Number, Photos, Maps of Tirumala Bakery And Sweets in Sri Nagar Colony, Tirupati - Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati :: Tirumala Bakery And Sweets in Sri Nagar Colony,Tirupati well known for Bakeries in Tirupati . Rated 3.9 based on 33 Customer Reviews and Ratings with 1 ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }
