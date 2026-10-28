@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Star Kitchen in Renigunta,Tirupati - Order Food Online",
-    "area": "renigunta"
+    "area": "renigunta",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Star-Kitchen-Oppite-Railway-Station-Renigunta/9999PX877-X877-220621055015-R6F8_BZDET"
   },
   "query": "\"Star Kitchen in Renigunta,Tirupati - Order Food Online\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Home-Delivery-Restaurants-in-Renigunta/nct-10250324/page-3",
+      "name": "Home Delivery Restaurants in Renigunta, Tirupati - Page 3",
+      "snippet": "Address , House No 19-8-182/A, Air Bypass Main Road, Mr Palli Circle ... Road, Kapilateertham Road, Tirupati - 517501 (Near Anna Rao Circle), Tirumala ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/star-food-tirumala",
+      "name": "Star Food, Tirumala order online - Tirupati",
+      "snippet": "Order food online from Star Food, Tirumala, Tirupati . Get great offers and super fast food delivery when you order food online from Star Food on Zomato.",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Five-Star-Chicken-Renigunta-Road/9999PX877-X877-220620210601-M8R5_BZDET",
+      "name": "Five Star Chicken in renigunta road,Tirupati",
+      "snippet": "Address D No: 1931e, Postal Colony, Tata Nagar, Renigunta Road, Tirupati -517501, This establishment is functional from 12:00 - 23:00.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/starfoodrestaurant.tirupati",
+      "name": "(@starfoodrestaurant.tirupati) • Instagram photos and videos",
+      "snippet": "Order: 6302184542 Follow … 📍Star Food Restaurant,Near Babu Jagjivanram Park,Bairagi patteda, Tirupati . Contact 7995058204. Contact number :6302184542",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ar-Kitchen-Renigunta/9999PX877-X877-260328081011-J2V6_BZDET",
+      "name": "Ar Kitchen in Renigunta,Tirupati - Best South Indian",
+      "snippet": "Ar Kitchen in Renigunta, Tirupati well known for South Indian Restaurants in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address , Contact Number ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/starfoodrestaurant2016/reel/DdER67ipOcO/?hl=he",
+      "name": "We open new in location STAR FOOD RESTAURANT",
+      "snippet": "📍 Kapilateertham Road, Siva Jyothi Nagar, Tirupati 🕚 Opening Tomorrow | 11:00 AM … we're OPEN!",
+      "host": "www.instagram.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Home Delivery Restaurants in Renigunta, Tirupati - Page 3 :: Address , House No 19-8-182/A, Air Bypass Main Road, Mr Palli Circle ... Road, Kapilateertham Road, Tirupati - 517501 (Near Anna Rao Circle), Tirumala ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

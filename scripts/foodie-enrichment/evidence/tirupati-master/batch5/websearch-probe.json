@@ -1,0 +1,38 @@
+{
+  "task": "batch-5 single web_search availability probe",
+  "retrievedOn": "2026-10-28",
+  "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+  "httpLike": "ok",
+  "latencyMs": 2957,
+  "resultCount": 3,
+  "results": [
+    {
+      "url": "https://www.facebook.com/ItsMyTirupathi/videos/tirupati-early-morning-non-veg-breakfast-ranemma-tiffin-center-j9ch3vc-vidya-nag/648949056838452",
+      "name": "Tirupati Early Morning Non-Veg Breakfast at Ranemma Tiffin",
+      "snippet": "TIFFIN CENTER J9CH+3VC, Vidya Nagar Colony, Tirupati , Andhra Pradesh 517502... It's Rayalaseema style idli with non veg curry.",
+      "host_name": "www.facebook.com",
+      "rank": 0,
+      "date": "",
+      "favicon": ""
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services/nct-10481155",
+      "name": "Best Tiffin Services in Tirupati - Order Food Online",
+      "snippet": "390 Tiffin Services in Tirupati . At 30 4.31k. Open until 10:00 pm. Tiffin Centre 4.394. Opens at 8:00 am tomorrow. Open until 11:00 pm. Offering Fresh, ...",
+      "host_name": "www.justdial.com",
+      "rank": 1,
+      "date": "",
+      "favicon": ""
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/orion-tiffin-center-karakambadi-rd-korlagunta-rest870229",
+      "name": "Order from Orion Tiffin Center online in Tirupati",
+      "snippet": "Orion Tiffin Center is a popular food destination in Korlagunta, Tirupati , known for serving delicious North Indian food. Customers can order from Orion Tiffin ... Read more",
+      "host_name": "www.swiggy.com",
+      "rank": 2,
+      "date": "",
+      "favicon": ""
+    }
+  ],
+  "decision": "provider AVAILABLE — bounded verification may resume this session"
+}

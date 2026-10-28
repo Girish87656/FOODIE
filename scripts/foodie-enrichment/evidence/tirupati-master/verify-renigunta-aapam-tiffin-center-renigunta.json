@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Aapam Tiffin center, Renigunta",
-    "area": "renigunta"
+    "area": "renigunta",
+    "sourceUrl": "https://www.facebook.com/tirupathifoodiee/videos/aapam-tiffin-center-renigunta/513116665974866"
   },
   "query": "\"Aapam Tiffin center, Renigunta\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Renigunta-Appam-Center-Panchali-Nagar/9999PX877-X877-260403055417-A2E7_BZDET",
+      "name": "Renigunta Appam Center, Panchali Nagar, Tirupati - Justdial",
+      "snippet": "Renigunta Appam Center in Panchali Nagar,Tirupati well known for Tiffin Services in Tirupati . Rated 1.0 based on 1 Customer Reviews and Ratings with 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, Reviews & Ratings, Photos, Maps of Renigunta Appam Center, Panchali Nagar, Tirupati.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Amma-Appam-Renigunta-Thukivakam/9999PX877-X877-260811080721-V4W4_BZDET",
+      "name": "Amma Appam Renigunta in Thukivakam,Tirupati - Best Tiffin",
+      "snippet": "Amma Appam Renigunta in Thukivakam,Tirupati well known for Tiffin Services in Tirupati . Rated 3.9 based on 2780 Customer Reviews and Ratings with 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, Reviews & Ratings, Photos, Maps of Amma Appam Renigunta, Thukivakam, Tirupati.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://promallu.com/toprated/india/amma-appam-renigunta-zxv9y",
+      "name": "Amma Appam Renigunta - Reviews, Contact Number & Phone",
+      "snippet": "Amma Appam Renigunta is a trusted tiffin center in Chittoor, Renigunta, Andhra Pradesh, India. Rated 4.2/5 by 2,738 reviewers. Get contact number, phone.",
+      "host": "promallu.com",
+      "kind": null
+    },
+    {
+      "url": "https://yandex.com/maps/org/amma_appam_renigunta/163306947305",
+      "name": "Amma Appam Renigunta, restaurant, State of Andhra  - Yandex",
+      "snippet": "Restaurant Amma Appam Renigunta State of Andhra Pradesh, 71, ☎️ +91 9963 38 82 28. View working hours. Get directions in Yandex Maps.",
+      "host": "yandex.com",
+      "kind": null
+    },
+    {
+      "url": "https://yappe.in/andhra-pradesh/renigunta/appam-egg-dosa-centre/685324",
+      "name": "Appam Egg Dosa Centre - Breakfast restaurant - Renigunta",
+      "snippet": "Appam Egg Dosa Centre is a breakfast restaurant and fast food restaurant located in Renigunta, Andhra Pradesh. The average rating of this place is 4.20 out of 5 stars based on 2546 reviews. The street address of this place is Srikalahasti - Tirupati Rd, Renigunta, Tirupati, Andhra Pradesh 517520, India. It is about 0.57 kilometers away from the Renigunta Junction railway station.",
+      "host": "yappe.in",
+      "kind": null
+    },
+    {
+      "url": "https://yappe.in/andhra-pradesh/tirupati/amma-appam/834396",
+      "name": "Amma Appam - Fast food restaurant - Tirupati - Andhra Pradesh",
+      "snippet": "About Amma Appam is a fast food restaurant located in Tirupati, Andhra Pradesh. The average rating of this place is 4.00 out of 5 stars based on 10 reviews. The street address of this place is 1, Renigunta Rd, Tirupati, Andhra Pradesh 517501, India. It is about 0.60 kilometers away from the Renigunta Junction railway station.",
+      "host": "yappe.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Renigunta Appam Center, Panchali Nagar, Tirupati - Justdial :: Renigunta Appam Center in Panchali Nagar,Tirupati well known for Tiffin Services in Tirupati . Rated 1.0 based on 1 Customer Reviews and Ratings with 1 Photos. Check Menu, Offers, Prices, Timings, Address, Contact Number, Reviews & Ratings, Photos, Maps of Renigunta Appam Center, Panchali Nagar, Tirupati.",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Padamavathi Tiffin Center in Tirumala,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Padamavathi-Tiffin-Center-Near-Cro-Office-Tirumala/9999PX877-X877-230210064010-I8X9_BZDET"
   },
   "query": "\"Padamavathi Tiffin Center in Tirumala,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Lunch-in-T-P-Area/nct-10481173",
+      "name": "Best Tiffin Services For Lunch in TP Area, Tirupati",
+      "snippet": "At 30 Bairagi Patteda, Open until 10:00 pm. Tirumala - 650 mts Open until 10:30 pm. Call Now until 10:00 pm. Door No 19-12-116, Tirupati - 517501 19629, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/788126/tiffin-centre",
+      "name": "Tiffin Centre in Tirupati",
+      "snippet": "The full address is Alipiri Road, Balaji Colony, Tirupati - 517501, Andhra Pradesh, India. What is the pincode of Tiffin Centre? Tiffin Centre is in the 517501 ... Read more",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food-in-Tirumala/nct-10481190",
+      "name": "Best Tiffin Services For Veg Food in Tirumala, Tirupati",
+      "snippet": "Main Road Tirumala - 710 mts Open until 11:00 pm. Open until 10:30 pm. Address Main Road, Tirumala, Tirupati - 517504 (Balaji Nagar)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.agoda.com/en-sg/hotels-near-sri-padmavathi-tiffin-centre/attractions/tirupati-in.html",
+      "name": "Hotels near Sri Padmavathi Tiffin Centre, Tirupati",
+      "snippet": "Discount hotels near Sri Padmavathi Tiffin Centre, Tirupati . SAVE UP TO 75% OFF hotels near in Tirupati . Rates from USD S$9.",
+      "host": "www.agoda.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Pavan-Tiffins-Sbi-Colony/9999PX877-X877-250804225731-C6U8_BZDET",
+      "name": "Pavan Tiffins in Sbi Colony,Tirupati",
+      "snippet": "Please scroll to the top for the address and contact details of Pavan Tiffins at Sbi Colony, Tirupati . JD Guides. IFSC Code: UTIB0003226, MICR Code, NALASOPARA ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Tirupati-Urban/Restaurant/Sri-Padmavati-Tiffin-Centre/store/2179735?srsltid=AYCX9vLo_Y4W002XwDDHdMWBZwDgt-g5Eh1gOTZjNjKJmPUIdHyD__MZ",
+      "name": "Sri Padmavati tiffin centre - Tirupati Urban",
+      "snippet": "Address . Rambagicha, Bus Stand, Balaji Nagar, Tirumala, Tirupati Urban, Andhra Pradesh 517504. Copy Direction. HoursOpen · 11:30 AM – 2:00 PM. ✓ Verified ... Read more",
+      "host": "magicpin.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services For Lunch in TP Area, Tirupati :: At 30 Bairagi Patteda, Open until 10:00 pm. Tirumala - 650 mts Open until 10:30 pm. Call Now until 10:00 pm. Door No 19-12-116, Tirupati - 517501 19629, ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

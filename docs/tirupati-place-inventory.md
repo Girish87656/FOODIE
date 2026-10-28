@@ -698,3 +698,152 @@ All other pending rows remain pending (throttled stubs and never-attempted rows 
 Review-queue leads from the same pass (133 names in
 evidence/tirupati-master/review-queue-new-names.json) are NOT inventory rows and are NOT counted
 anywhere — each is an unverified lead with a verbatim quote, awaiting human research.
+
+## Batch-5 review-queue assessment (2026-10-28)
+
+All 133 genuinely-new leads were assessed MANUALLY on their exact quotations and
+source URLs (never name-similarity alone) — evidence/evidence/tirupati-master/batch5/review-queue-assessment.json:
+
+| Decision | Count |
+|---|---|
+| accept | 3 |
+| corroborate-existing | 18 |
+| reject-generic | 53 |
+| reject-out-of-scope | 54 |
+| ambiguous-keep-queue | 5 |
+
+ALL FIVE HIGH-priority leads resolved WITHOUT becoming candidates: 3 corroborate existing inventory
+records (Sri Kodandaramaswami → Sri Kodanda Ramaswamy Temple; Zoo Park → Sri Venkateswara Zoological
+Park; Srikalahasti Temple → Srikalahasteeswara temple), 1 is a generic-term extraction ("Hindu temple")
+and 1 is an out-of-scope Bihar namesake (Kapileshwar Temple, Bihar).
+
+## Batch-5 accepted candidates (Batch-015 review-candidate SQL, 2026-10-28)
+
+61 accepted candidates were assembled from (a) the queue assessment, (b) the ALREADY-SAVED
+official TTD page places-around-tirumala.aspx (the dead garden.aspx/theerthams.aspx homepage shells never
+delivered this content), (c) 4 targeted queue-lead checks, and (d) 31 bounded discovery searches
+(19 web_search locality×category + 12 Nominatim POI) aimed at the biggest known gap: SMALL FOOD BUSINESSES.
+Fail-loud dedupe gates proved zero collisions against inventory, batches 011–014 and the curated worksheet.
+
+| Area | Accepted |
+|---|---|
+| Tirupati city centre | 34 |
+| Tirumala hills | 20 |
+| Tiruchanur (Alamelu Mangapuram corridor) | 1 |
+| Tirupati residential neighbourhoods | 4 |
+| Renigunta (airport/junction corridor, ~10-12 km north) | 1 |
+| Surrounding destinations (beyond city/Tirumala core) | 1 |
+
+| Category | Accepted |
+|---|---|
+| tiffin | 13 |
+| restaurant | 14 |
+| street_food | 9 |
+| bakery_sweets | 5 |
+| cafe | 1 |
+| hotel | 1 |
+| attraction | 6 |
+| sacred_water | 9 |
+| temple | 3 |
+
+These rows import ONLY as `verification_status='unverified'` review candidates
+(supabase/review-candidates/insert-batch-015-tptm-b5.sql — never executed by this repo); coordinates stay
+NULL (published OSM coordinates remain in the evidence ledger for human review).
+
+Accepted candidate names (canonical):
+
+- Babu Tiffin Centre [tpt-central/tiffin/T1] — facebook-page: https://www.facebook.com/fb-answers/best-tiffin-services-in-tirupati/
+- Shankar Tiffin Center, Srinivasa Nagar [tpt-central/tiffin/T1] — directory-listing: https://tirupati.idbf.in/788403/tiffin-center
+- Jayalakshmi Tiffin Center, Srinagar [tpt-central/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/Jayalakshmi-Tiffin-Center-Srinagar/9999PX877-X877-2
+- Uday Tiffin Center, Maruthi Nagar [tpt-central/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/Uday-Tiffin-Center-Maruthi-Nagar/9999PX877-X877-200
+- Nellore Mess, Prakasam Road [tpt-central/restaurant/T1] — swiggy-listing: https://www.swiggy.com/city/tirupati/nellore-mess-prakasam-road-rest126018
+- Deva Tea Stall, Korlagunta [tpt-central/street_food/T1] — directory-listing: https://tirupati.idbf.in/4017588/deva-tea-stall
+- Sk Babu Tea Stall, Ashok Nagar [tpt-central/street_food/T1] — directory-listing: https://www.justdial.com/Tirupati/Coffee-Shops-having-Tea/nct-10104727-att-cou22
+- Chai Buster Tea Stall, Dhanalakshmi Nagar [tpt-central/street_food/T2] — directory-listing: https://www.justdial.com/Tirupati/Juice-Centres-having-Tea/nct-10283258-att-cou22
+- R.K. Tea Stall, Narula Market [tpt-central/street_food/T2] — facebook-page: https://www.facebook.com/ItsMyTirupathi/posts/buy-1-tea-get-1-free-rkgrandbanquethall
+- Cakevilla Bakery Sweets, TK Street [tpt-central/bakery_sweets/T1] — directory-listing: https://www.justdial.com/Tirupati/Cakevilla-Bakery-Sweets-Opp-Sai-Baba-Temple-Tk-Stre
+- Sri Bhavani Sweets & Bakery, TML By Pass Road [tpt-central/bakery_sweets/T1] — directory-listing: https://www.justdial.com/Tirupati/Sri-Bhavani-Sweets-Bakery-Near-Leelamahal-Junction-
+- Tirupati Bakery, Tata Nagar [tpt-central/bakery_sweets/T1] — directory-listing: https://www.district.in/dining/tirupati/tirupati-bakery-tata-nagar
+- Aswani Sweets & Bakery, Vasavi Nagar [tpt-central/bakery_sweets/T1] — directory-listing: https://www.justdial.com/Tirupati/Aswani-Sweets-Bakery-Vasavinagar/9999PX877-X877-250
+- Doss Bakery [tpt-central/bakery_sweets/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=bakery+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Rainbow Vegetarian Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- SAI Juices & Tea Center, V V Mahal Road [tpt-central/street_food/T1] — directory-listing: https://www.justdial.com/Tirupati/SAI-Juices-Tea-Center-V-V-Mahal-Road/9999PX877-X877
+- Saral Juice Shop, Pudipatla [tpt-central/street_food/T1] — directory-listing: https://www.justdial.com/Tirupati/Juice-Centres-in-Vidya-Nagar-Road/nct-10283258
+- T Nageshwara Rao Juice Shop, Tata Nagar [tpt-central/street_food/T1] — directory-listing: https://tirupati.idbf.in/4246612/juice-junktion
+- Taj Juice Centre, Bairagi Patteda [tpt-central/street_food/T1] — directory-listing: https://tirupati.idbf.in/4246612/juice-junktion
+- Garlic Family Restaurant, Mangalam [tpt-central/restaurant/T1] — directory-listing: https://www.justdial.com/Tirupati/Restaurants-Family-Friendly-in-Kt-Road/nct-10408936
+- Springs Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- SFC Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Yalamuri Bar And Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Hotel Sri Nandhi Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Carrots Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Harika Bar And Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Manal Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Sunlight Veg Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Imperial Spice Restaurant [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Manasa Vihar Cafe [tpt-central/cafe/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=cafe+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Vanam Restaurant, Alipiri Road [tpt-central/restaurant/T2] — osm-nominatim: https://nominatim.openstreetmap.org/search?q=restaurant+Tirumala&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1
+- Golden Balaji Tiffin Center, Tirumala [tirumala/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/Golden-Balaji-Tiffin-Center-Tirumala/9999PX877-X877
+- Chandra Tiffin Shop, Tirumala [tirumala/tiffin/T1] — zomato-listing: https://www.zomato.com/tirupati/chandra-tiffin-shop-tirumala/order
+- V Mohan Tea Stall, Tirumala [tirumala/street_food/T1] — directory-listing: https://www.justdial.com/Tirupati/V-Mohan-Tea-Stall-Tirumala/9999PX877-X877-230406172
+- Sri Guru Tiffin Centre, Tirumala [tirumala/tiffin/T1] — directory-listing: https://tirupati.idbf.in/4016107/sri-guru-tiffin-centre
+- Saarangi Restaurant, Tirumala [tirumala/restaurant/T2] — tripadvisor-listing: https://www.tripadvisor.com/Restaurants-g1985457-Tirumala_Chittoor_District_Andhra_Pradesh.html
+- Radha Rani Tiffin Centre, Padmavathi Nagar [tiruchanur/tiffin/T1] — directory-listing: https://tirupati.idbf.in/788403/tiffin-center
+- Vls Tiffin Centre And Catering, Mangalam [tpt-neighbourhoods/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/Vls-Tiffin-Centre-And-Catering-Mangalam/9999PX877-X
+- Tasvija Tiffin Centre, Mangalam [tpt-neighbourhoods/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/Tasvija-Tiffin-Centre-Mangalam/9999PX877-X877-23040
+- Sumathi Tiffin Centre, Mangalam [tpt-neighbourhoods/tiffin/T1] — magicpin-listing: https://magicpin.in/Tirupati/Mangalam/Restaurant/Sumathi-Tiffin-Centre/store/3c6ac43
+- J Bebamma Tiffin Center, Renigunta Road [tpt-neighbourhoods/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/J-Bebamma-Tiffin-Center-Diamond-Collection-Renigunt
+- Amma Appam, Renigunta [renigunta/tiffin/T1] — directory-listing: https://www.justdial.com/Tirupati/Tiffin-Services-For-Rajasthani-Food-in-Renigunta/nc
+- VarahaSwami Guest House, Tirumala [tirumala/hotel/T1] — official-ttd: https://www.tirumala.org/varahaswamiguesthouse.aspx
+- Seshachalam Hills [tpt-central/attraction/T1] — wikipedia: https://en.wikipedia.org/wiki/Sri_Venkateswara_National_Park
+- Gogarbham Gardens, Tirumala [tirumala/attraction/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Dharmagiri, Tirumala [tirumala/attraction/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Narayangiri, Tirumala [tirumala/attraction/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Asthana Mandapam, Tirumala [tirumala/attraction/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Pandava Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Kumaradhara Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Tumbhuru Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Ramakrishna Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Sesha Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Sitamma Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Pasupu Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Jupali Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Sanaka Sanandana Teertham, Tirumala [tirumala/sacred_water/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Srivari Padalamandapam Temple, Tirupati [tpt-central/temple/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Sri Lakshmi Narayana Swamy Temple, Tirupati [tpt-central/temple/T1] — official-ttd: https://www.tirumala.org/places-around-tirumala.aspx
+- Vaikuntam Queue Complex, Tirumala [tirumala/attraction/T1] — news: https://www.thehansindia.com/news/cities/tirupathi/ttd-to-take-up-feasibility-study-for-vqc-3
+- Siddeswara Swamy Temple, Talakona [surrounding/temple/T1] — wikipedia: https://en.wikipedia.org/wiki/Talakona
+
+### Batch-5 corroborations of EXISTING records (not new rows)
+
+- **Nagarjuna Military Mess** → Nagarjuna Military Mess (inventory) (https://www.swiggy.com/city/tirupati/military-mess-tata-nagar-rest1295934)
+- **Mayura Bakery** → Mayura Bakery (inventory) (https://nominatim.openstreetmap.org/search?q=bakery+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1)
+- **Ganapathi Juice Shop** → Ganapathi Juice Shop (inventory) (https://www.justdial.com/Tirupati/Juice-Centres-in-T-P-Area/nct-10283258)
+- **Sri Venkateswara Annaprasadam Trust** → Sri Venkateswara Annaprasadam Trust (inventory) (https://www.tirumala.org/SRIVENKATESWARAANNAPRASADAMTRUST.aspx)
+- **BNR Sweets & Bakery** → BNR Sweets & Bakery (inventory) (https://magicpin.in/Tirupati/Chandragiri/Restaurant/Bnr-Sweets-and-Bakery/store/22289)
+- **Balasubramanyam Tea Stall** → Balasubramanyam Tea Stall (inventory) (https://www.justdial.com/Tirupati/Balasubramanyam-Tea-Stall-Tirumala/9999PX877-X877-2)
+- **Vinayaka Tiffin Centre** → Vinayaka Tiffin Centre (inventory) (https://www.mappls.com/place-vinayaka+tiffin+centre-tirumala+reddy+nagar-mangalam-tir)
+- **Nandini Sweets And Bakery, Tiruchanur** → Nandini Sweets And Bakery, Tiruchanur (inventory) (https://www.justdial.com/Tirupati/Sweet-Shops-in-Tiruchanoor/nct-10465567)
+- **Tirumala Bakery And Sweets** → Tirumala Bakery And Sweets (curated worksheet row) (https://www.indiacakes.com/cake-shop/tirupati/tirumala-bakery-and-sweets-tirupati)
+- **Chillies Restaurant** → Chillies Restaurant (inventory) (https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1)
+- **Manju Foods** → Manju Foods (inventory) (https://nominatim.openstreetmap.org/search?q=restaurant+Tirupati&format=jsonv2&viewbox=79.25,13.78,79.55,13.50&bounded=1)
+- **SVT Tiffin Center** → SVT Tiffin Center (inventory) (https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food-in-Renigunta/nct-10481)
+- **Amor Fati Cafe** → Amor Fati Cafe (inventory) (https://www.zomato.com/tirupati/restaurants/street-food)
+- **Tea Time, Srinivasa Nagar** → Tea Time, Srinivasa Nagar (inventory, batch-014) (https://biashara.cybo.com/IN/tirumala/mkahawa-wa-chai)
+- **Di Table 9** → Di Table 9 (inventory) (https://www.zomato.com/tirupati/restaurants)
+- **Srikalahasteeswara temple** → Srikalahasteeswara temple (inventory) (https://www.incredibleindia.gov.in/en/andhra-pradesh/tirupati/srikalahasti-temple)
+- **Sri Venugopala Swamy Temple, Karvetinagaram** → Sri Venugopala Swamy Temple, Karvetinagaram (inventory, batch-013 queued) (https://news.tirumala.org/grand-pushpa-yagam-performed-at-sri-venugopala-swamy-temple-karvetinagaram)
+
+### Batch-5 weak leads (review queue ONLY — not candidates, not counted)
+
+38 discovery hits were recorded as weak leads (list-mentions without locality,
+aggregator pages, chain outlets, institutional canteens, dated sources) — they stay OUT of every count,
+same as the original queue. Identity-HELD (4): "Indira Guest House, Tirumala", "Reddy Tea Stall, Tirumala", "Sri Balaji Tea Stall, Tirumala", "Balaji Sweets & Bakery, Korramenugunta"
+— see the duplicate-review doc.
+
+### Batch-5 source limitations
+
+- Wikivoyage blocked (HTTP 403) — recorded, not retried
+- Wikipedia re-fetches rate-limited (HTTP 429, shared egress IP) — the two targeted re-fetches failed; their leads were instead resolved via web_search lead-checks
+- Srinivasa Mangapuram locality query returned only out-of-city matches — 0 in-scope leads recorded honestly
+- national chain outlets (Cafe Coffee Day, Just Bake/Justbake, Fnp Cakes, Khetlaapa Chai, Tea Time additional outlets) deliberately skipped — not distinct local places

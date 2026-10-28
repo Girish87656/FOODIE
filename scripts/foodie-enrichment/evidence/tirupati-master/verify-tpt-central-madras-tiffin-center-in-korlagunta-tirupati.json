@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Madras Tiffin Center in Korlagunta,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Madras-Tiffin-Center-Korlagunta/9999PX877-X877-241010052354-S8A3_BZDET"
   },
   "query": "\"Madras Tiffin Center in Korlagunta,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Kk-Layout/nct-10481155",
+      "name": "Best Tiffin Services in Kk Layout, Tirupati - Justdial Jd",
+      "snippet": "Tiffin Center Address Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar) Door No 19-12-116, Korlagunta, Tirupati -",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Gujarati-Food-in-Renigunta/nct-10481166/page-2",
+      "name": "Tiffin Services For Gujarati Food in Renigunta, Tirupati",
+      "snippet": "Tiffin Centre Address Subba Reddy Nagar, Korlagunta, Tirupati - 517501 (Venky Gym Line Road) Tiffin Centre, 101/1,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Lavanya-Tiffin-Center-Korlagunta-Korlagunta/9999PX877-X877-230314193437-D1Z6_BZDET",
+      "name": "Lavanya Tiffin Center in Korlagunta,Tirupati",
+      "snippet": "Please scroll to the top for the address and contact details of Lavanya Tiffin Center at Korlagunta, Tirupati . Tiffin Services in nearby areas. Tiffin Services ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Maruthi-Nagar/nct-10481155",
+      "name": "Best Tiffin Services in Maruthi Nagar, Tirupati - Justdial Jd",
+      "snippet": "Address , Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar), Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/manasa-tiffins-korlagunta-rest1302635",
+      "name": "Order from Manasa Tiffins online in Tirupati",
+      "snippet": ": Order Online from Manasa Tiffins in Korlagunta, Tirupati . Manasa Tiffins Korlagunta D NO 1054,KORELAGUNTA ,Andhra Pradesh-517501",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Kumari-Tiffin-Center/9999PX877-X877-220130211023-Q8U7_BZDET/reviews",
+      "name": "346 Reviews for Kumari Tiffin Center in Korlagunta, Tirupati",
+      "snippet": "Kumari Tiffin Center in Tirupati has Monday:- 7:00 am - 11:30 am, Tuesday:- 7:00 am - 11:30 am, Wednesday:- 7:00 am - 11:30 am, Thursday:- 7:00 am - 11:30 am, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Kk Layout, Tirupati - Justdial Jd :: Tiffin Center Address Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar) Door No 19-12-116, Korlagunta, Tirupati -",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

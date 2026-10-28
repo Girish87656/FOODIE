@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Morning Breakfast at Tirumala Annaprasadam Centre",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://www.facebook.com/ItsMyTirupathi/videos/mrng-breakfast-at-annaprasadam-centre-tirumala-%EF%B8%8Fcredits-kitchenandhomemaking-tir/1132344847464113"
   },
   "query": "\"Morning Breakfast at Tirumala Annaprasadam Centre\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/SalemCookingTime/videos/thirumalai-thirupathi-annaprasanam-thirumalai-thirupati-travel-annaprasana-food-/1245356703741699",
+      "name": "Thirumalai Thirupathi Annaprasanam",
+      "snippet": "Thirupathi Free Breakfast Lunch Dinner&nbsp;... Free Meals @ Tirumala | India's No1 Biggest Kitchen | Amazing Food. India's No1 Biggest Kitchen | ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/culinaryjourneybynaveen/videos/this-is-matrusri-tarigonda-vengamamba-annaprasada-kendram-%E0%B0%B5%E0%B1%86%E0%B0%82%E0%B0%97%E0%B0%AE%E0%B0%BE%E0%B0%82%E0%B0%AC-%E0%B0%85%E0%B0%A8%E0%B1%8D%E0%B0%A8%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%B8%E0%B0%BE%E0%B0%A6-%E0%B0%95%E0%B1%87/763944896494507",
+      "name": "Matrusri Tarigonda Vengamamba Annaprasadam at Tirumala",
+      "snippet": "This video showcases a traditional Nepali meal, highlighting the food service at the Tirumala Venkateswara Temple in Annaprasada Kendram.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/TodoTirupati/photos/trumala-free-anna-prasadam-timings-every-day-thousands-of-devotees-are-served-fr/122167704632987669",
+      "name": "To - Trumala Free Anna Prasadam Timings 🛕",
+      "snippet": "wholesome meals at Tirumala. Breakfast: 8:30 AM – 10:30 AM 🍛 … is in Tirumala, India. Do Tirupati is in Tirumala, India.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/city/hyderabad/ttd-launches-free-breakfast-service/articleshow/52116145.cms",
+      "name": "TTD launches free breakfast service | Hyderabad News",
+      "snippet": "May 5, 2016 — The Tirumala Tirupati Devastanams (TTD) on Wednesday launched free breakfast service to devotees at Matrusri Tarigonda Vengamamba Annaprasada ...",
+      "host": "timesofindia.indiatimes.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/ttd-food-timings",
+      "name": "Ttd Food Timings",
+      "snippet": "Breakfast is served from 9:00 AM to 10:30 AM, lunch from 10:30 AM to 4:00 PM, and dinner from 5:00 PM to 10:30 PM at the main MTVAC complex ¹. Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Annaprasadam-Tirumala/9999PX877-X877-240927134709-S9U6_BZDET/things-to-do",
+      "name": "Annaprasadam - Tirumala, Tirupati - Justdial Jd",
+      "snippet": "Explore services and facilities around Annaprasadam in Tirumala, Tirupati . The Hungry Birds Cafe. Shop 360 mts Kishore Book Centre",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

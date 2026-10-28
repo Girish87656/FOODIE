@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "OTC - Orion Tiffin Centre",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.district.in/dining/tirupati/otc-orion-tiffin-centre-korlagunta?srsltid=AYCX9vKISlCqdFEfLlS-GwN-TXaNMoybahz-YyFWnum19eRHtesappec"
   },
   "query": "\"OTC - Orion Tiffin Centre\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Indira-Maidanam-Road/nct-10000409",
+      "name": "Top 24 Hours Tiffin Services in Indira Maidanam Road",
+      "snippet": "Otc Orion Tiffin Centre Korlagunta, tirupati . Menu. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Court-Road/nct-10481155",
+      "name": "Best Tiffin Services in Court Road, Tirupati",
+      "snippet": "... Address , Reviews, Photos, Maps for top Tiffin Center near me in Tirupati ... Otc Orion Tiffin Centre Korlagunta, tirupati . Menu. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Annamaiah-Circle/nct-10481155",
+      "name": "Best Tiffin Services in Annamaiah Circle, Tirupati - Justdial Jd",
+      "snippet": "... Address , Reviews, Photos, Maps for top Tiffin Center near me in Tirupati ... Otc Orion Tiffin Centre Korlagunta, tirupati . Menu. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumala-Food-Corner-Tilad-Road-Tilak-Road/9999P8581-8581-110202122701-S9J5_BZDET",
+      "name": "Tiffin Services - Tirumala Food Corner in Tilak Road,Tirupati",
+      "snippet": "Please scroll to the top for the address and contact details of Tirumala Food Corner at Tilak Road, Tirupati . ... Otc Orion Tiffin Centre · Di Andhra Tiffins · Ms ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services/nct-10481155/page-2",
+      "name": "Tiffin Services in Tirupati - Page 2",
+      "snippet": "Address , Bhanu Estate Road, Royal Nagar, Tirupati - 517501, Sri Padmavati ... Otc Orion Tiffin Centre · Srivaari Padalu Tea Coffee & Tiffin · Sri Sai Siri ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ak-Raju-Tiffin-Centre-Autonagar/9999PX877-X877-250812084056-I4P7_BZDET",
+      "name": "Ak Raju Tiffin Centre in Autonagar,Tirupati",
+      "snippet": "Ak Raju Tiffin Centre in Autonagar, Tirupati . Sunday:- 6:30 am - 11:00 am | 6:30 pm - 9:30 pm hours of operation. Tiffin Services with Address , Contact Number , ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top 24 Hours Tiffin Services in Indira Maidanam Road :: Otc Orion Tiffin Centre Korlagunta, tirupati . Menu. Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Naidu Tiffin Center in Maruthi Nagar,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Naidu-Tiffin-Center-Maruthi-Nagar/9999PX877-X877-110215142454-M4G4_BZDET"
   },
   "query": "\"Naidu Tiffin Center in Maruthi Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Lic-Road/nct-10481155",
+      "name": "Best Tiffin Services in Lic Road, Tirupati - Order Food Online",
+      "snippet": "Services in Lic Road. Naidu Tiffin'S. Door No 19-12-116, Tirupati - 517501 19629, Nagar, Maruthi Nagar, Tirupati - 517501 (Near Naidu Mobiles)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Rajasthani-Food-in-T-P-Area/nct-10481182",
+      "name": "Best Tiffin Services For Rajasthani Food in TP Area, Tirupati",
+      "snippet": "Naidu Tiffin'S Address G Car Street, T P Area, Tirupati - 517501 (Opposite Buss Stand, Opposite Govindaraja Swamy Temple) Door No 19-12-116, Door No 8-47/6,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Tilak-Road/nct-10481155",
+      "name": "Best Tiffin Services in Tilak Road, Tirupati - Justdial Jd",
+      "snippet": "Naidu Tiffin'S Address Door No 19-12-116, Tirupati - 517501 19629, Tirumala, Tirumala, Tirupati - 517504. Nagar, Maruthi Nagar, Tirupati - (Near Naidu Mobiles)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/naidu-tiffins-and-meals",
+      "name": "Naidu Tiffins And Meals",
+      "snippet": "The spot operates from 7:00 AM to 11:00 AM daily but is currently closed 1. Tirupati Address : Padmavati puram, Tiruchanoor Road , opposite Panchayat Office, ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Naidu-Mess-Tiruchanoor-Road/9999P8581-8581-110128165509-M2G1_BZDET",
+      "name": "Naidu Mess - Tiffin Services In Tirupati - Justdial Jd",
+      "snippet": "Naidu Mess in Tiruchanoor Road, Tirupati well known for Tiffin Services in Tirupati . Road, Tirupati -517501, Monday:- 10:00 am - 9:00 pm, Closed hours of ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Sri-Nagar-Colony/nct-10481155",
+      "name": "Best Tiffin Services in Sri Nagar Colony, Tirupati",
+      "snippet": "Tiffin Services in Sri Nagar Colony, Tirupati ; Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Kt Road, Tirupati - 517507 (Opposite Reliance Trends ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Lic Road, Tirupati - Order Food Online :: Services in Lic Road. Naidu Tiffin'S. Door No 19-12-116, Tirupati - 517501 19629, Nagar, Maruthi Nagar, Tirupati - 517501 (Near Naidu Mobiles)",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

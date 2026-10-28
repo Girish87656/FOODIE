@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Order from Hygien Pani Puri Hot Chats online in Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/hygien-pani-puri-hot-chats-vidyut-nagar-tata-nagar-rest1125431"
   },
   "query": "\"Order from Hygien Pani Puri Hot Chats online in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/61551118813366/videos/chaat-man-now-in-tirupati-%EF%B8%8Fopening-offer-buy-2-chaats-get-1-pani-puri-free-buy-a/2596403657358436",
+      "name": "Chaat man now in Tirupati ⚡️ Opening offer 👇 Buy 2",
+      "snippet": "Location : Babu Tiffin Centre Opp Ranga Stores, Bazar Street, Tirupati Gmaps :   https://maps.google.com/?q=13.632848,79.415833 Timings: Monday ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Pani-Puri-Centres-in-Tirupati-Bazar/nct-11380850",
+      "name": "Top Pani Puri Centres in Tirupati Bazar",
+      "snippet": "Mar 1, 2020 — Online Ordering Open Now. Pani Puri & Chats) Road - 870 mts Opens at 04:00 PM. Doddapuram Street, Tirupati … 94, Balaji Colony, Prakasam Road, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/vi/tirupati/the-tirupati-chats-and-foods-srinivasa-nagar",
+      "name": "The Tirupati Chats And Foods, Srinivasa Nagar order online",
+      "snippet": "Check out The Tirupati Chats And Foods, Srinivasa Nagar, Tirupati on Zomato … online ordering only on the Zomato app. Chaat Pani puri Pani Puri [9 Pieces] ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Chaat-Corners-in-Doddapuram-Street/nct-11300695",
+      "name": "Best Chaat Corners in Doddapuram Street, Tirupati",
+      "snippet": "45 Chaat Corners in Doddapuram Street, Tirupati . Order Food Online Naveen Chat ( Pani Puri & Chats) Open until 10:00 pm Very hygienic and good quality of chats ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/The-King-Of-Bangarpet-Pani-Puri-Chats-Opp-Rayalaseema-College-Bairagi-Patteda/9999PX877-X877-200226122853-K7P8_BZDET/menu",
+      "name": "The King Of Bangarpet ( Pani Puri & Chats) Menu in",
+      "snippet": "These are easily available at every ice cream parlour in Tirupati . the contact details available above for enquiries. in Bairagi Patteda, Tirupati .",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Fresh-GreenS-ChatS-Opposite-Lic-Officebeside-Emeralds-College-Lic-Road/9999PX877-X877-230926012627-A9N3_BZDET",
+      "name": "Fresh Green'S Chat'S in Lic Road,Tirupati - Pani Puri Centres",
+      "snippet": "Fresh Green'S Chat'S in Lic Road, Tirupati well known for Pani Puri Centres in Tirupati . Rated 3.0 based on 3 Customer Reviews and Ratings with 2 Photos.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Chaat man now in Tirupati ⚡️ Opening offer 👇 Buy 2 :: Location : Babu Tiffin Centre Opp Ranga Stores, Bazar Street, Tirupati Gmaps :   https://maps.google.com/?q=13.632848,79.415833 Timings: Monday ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

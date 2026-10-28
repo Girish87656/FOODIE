@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Bhagni's Family Restaurant",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.district.in/dining/tirupati/bhagnis-family-restaurant-korlagunta?srsltid=AYCX9vLIn_dyPHdqZx7l2qnpLWpOsDKr_LHvSeEEQuiYVURpI7pn2F5L"
   },
   "query": "\"Bhagni's Family Restaurant\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tirupati/bhagnis-family-restaurant-korlagunta/order",
+      "name": "Bhagni's Family Restaurant, Korlagunta order online",
+      "snippet": "Check out Bhagni's Family Restaurant , Korlagunta, Tirupati on Zomato for great deals, ratings, reviews and more!",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bhagnis-Family-Restaurant-Korlagunta/9999PX877-X877-211113221707-S4Y4_BZDET",
+      "name": "Bhagni's Family Restaurant in Korlagunta,Tirupati",
+      "snippet": "... . Check Menu, Offers, Prices, Timings, Address , Contact Number , Reviews & Ratings, Photos, Maps of Bhagni's Family Restaurant , Korlagunta, Tirupati .",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.district.in/dining/tirupati/bhagnis-family-restaurant-korlagunta?srsltid=AYCX9vLcALXE5CB51Eilzk4XBznArSPm2THvStl6corIr9L174_dVWB9",
+      "name": "Bhagni's Family Restaurant | Korlagunta, Tirupati",
+      "snippet": "Bhagni's Family Restaurant . 3.9. Door 21-1-36/3, Sriram Nagar, Karakambadi Main ... Read more",
+      "host": "www.district.in",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Korlagunta/Restaurant/Bhagnis-Family-Restaurant/store/168720a?srsltid=AYCX9vLfOFS8UsZB-HHWLDzwKVmWZ7wV19XGQPRvDzBCm89OGhz76kga",
+      "name": "Bhagni's Family Restaurant, Korlagunta, Tirupati",
+      "snippet": "Bhagni's Family Restaurant is a food and dining establishment in Korlagunta, Tirupati ... Address . Door 21-1-36/3, Sriram Nagar, Karakambadi Main Road ... Read more",
+      "host": "magicpin.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/bhagnis-family-restaurant-korlagunta/reviews",
+      "name": "Reviews of Bhagni's Family Restaurant, Korlagunta, Tirupati",
+      "snippet": "Bhagni's Family Restaurant . Biryani, Chinese. Door 21-1-36/3, Sriram Nagar, Karakambadi Main Road ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bhagnis-Family-Restaurant-Korlagunta/9999PX877-X877-211113221707-S4Y4_BZDET/menu",
+      "name": "Menu of Bhagni's Family Restaurant in Korlagunta, Tirupati",
+      "snippet": "You can contact Bhagni's Family Restaurant in Korlagunta directly through the contact details available above for enquiries. Business Information. Bhagni's ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Bhagni's Family Restaurant | Korlagunta, Tirupati :: Bhagni's Family Restaurant . 3.9. Door 21-1-36/3, Sriram Nagar, Karakambadi Main ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

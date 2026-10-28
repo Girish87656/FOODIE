@@ -42,13 +42,13 @@ Fetch UA: `FOODIE-Research/1.0 (place-discovery-audit)`. Verbatim-quote integrit
 z-ai `web_search` (multi-engine public web results): **251 discovery queries** across
 9 category groups × 8 locality groups, returning **1858 raw hits**.
 Rate limits: the backend hard-throttled during the pass (HTTP 429s with documented back-offs);
-0 queries ended in a recorded error state and 118 identity verifications were
+0 queries ended in a recorded error state and 70 identity verifications were
 rate-limit-skipped (all re-runnable — the pipeline is resumable per query/candidate).
 
 ## 4. Identity-verification + geocoding channels
 
-- Identity verification: **304 candidates verified** so far — 165 area-confirmed,
-  21 not confirmed, 118 skipped (rate limit). Remaining candidates keep their
+- Identity verification: **304 candidates verified** so far — 210 area-confirmed,
+  24 not confirmed, 70 skipped (rate limit). Remaining candidates keep their
   discovery-hit evidence and stay T3/backlog until verified.
 - Geocoding: OpenStreetMap Nominatim (keyless, 1 req/s, project UA, area-gated):
   170 attempts → **19 area-confirmed matches, 151 NULL** (coordinates are
@@ -139,3 +139,35 @@ api.php limitation: en.wikipedia.org api.php returned HTTP 429 from this shared 
   review (review-queue-new-names.json — leads only, never counted as candidates).
 - 6 pending candidates received an independent-source locality confirmation
   (crossmatch-*.json; inventory §Batch-4 lists them).
+
+## 7. Batch-5 sources (web_search RESUMED + bounded direct fetches, 2026-10-28)
+
+One bounded availability probe PASSED (provider AVAILABLE — bounded verification may resume this session), so bounded search resumed per protocol:
+
+### 7a. web_search (z-ai) — bounded discovery
+
+- 19 locality×category queries (tiffin centres, tea stalls, messes, bakeries, sweet shops, juice shops,
+  street food, neighbourhood eateries across tpt-central / tirumala / tiruchanur / renigunta /
+  chandragiri / srinivasa-mangapuram / tpt-neighbourhoods) + 4 targeted queue-lead checks;
+  8 s pacing; 0 throttles. Evidence: batch5/search-discovery-food.json, batch5/search-lead-checks.json.
+- Single identity-verification queries also resumed: 48 backlog rows attempted in 4 bounded chunks
+  (verify-*.json; resume semantics preserved).
+
+### 7b. Nominatim (public OSM)
+
+- 12 bounded keyword POI queries, viewbox 79.25,13.78,79.55,13.50, 2 s spacing, custom UA;
+  21 raw hits recorded with published coordinates in evidence ONLY.
+
+### 7c. Sources that REMAINED unusable (recorded, not worked around)
+
+- Wikivoyage https://en.wikivoyage.org/wiki/Tirupati: HTTP 403.
+- Wikipedia targeted re-fetch (Vaikuntam Queue Complex): HTTP 200 — shared-egress 429; lead resolved via web_search instead where possible.
+- Wikipedia targeted re-fetch (Siddheswara Swamy Temple): HTTP 200 — shared-egress 429; lead resolved via web_search instead where possible.
+
+### 7d. Already-saved official page re-examined (no fetch)
+
+the dead garden.aspx/theerthams.aspx homepage shells never delivered gardens/teerthams content; the ALREADY-SAVED official page places-around-tirumala.html (Places To Visit Around Tirumala) lists named gardens, giris, mandapams and 11 teerthams verbatim — no new fetch was needed
+
+All Batch-5 evidence: scripts/foodie-enrichment/evidence/tirupati-master/batch5/
+(review-queue-assessment.json, discovery-candidates.json, search-*.json, nominatim-food-pois.json,
+websearch-probe.json, wikipedia-refetch-evidence.json, wikivoyage-evidence.json).

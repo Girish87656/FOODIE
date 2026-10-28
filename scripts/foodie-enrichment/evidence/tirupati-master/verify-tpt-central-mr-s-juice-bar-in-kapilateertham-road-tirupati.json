@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Mr'S Juice Bar in Kapilateertham Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/MrS-Juice-Bar-Kapilateertham-Road/9999PX877-X877-231114175204-C2I2_BZDET"
   },
   "query": "\"Mr'S Juice Bar in Kapilateertham Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/fb-answers/fruit-juice-bars-in-tirupati/?locale=sr_RS",
+      "name": "Fruit Juice Bars in Tirupati",
+      "snippet": "For fresh fruit salads, there's a vendor on Kapila Teertham Road, and you can also grab coconut water at Cocofit near PLR Convention Hall. Ganesh Juice Center - ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Girish-Juice-Bar-MR-palli-Circle-TPArea/9999PX877-X877-110317121725-E5J9_BZDET",
+      "name": "Girish Juice Bar in T P Area,Tirupati",
+      "snippet": "This establishment is functional from 09:30 - 20:00. Please scroll to the top for the address and contact details of Girish Juice Bar at T P Area, Tirupati . Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/4246612/juice-junktion",
+      "name": "JUICE JUNKTION in Tirupati",
+      "snippet": "JUICE JUNKTION is located at Ashok Nagar Opposite To Cs Thetare,beside Helios Hospital First Floor,3rd House, Tirupati - 517501, Andhra Pradesh, India. What is ... Read more",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/fruit-juice-bars-in-tirupati/?locale=fr_FR",
+      "name": "Fruit Juice Bars in Tirupati",
+      "snippet": "For fresh fruit salads, there's a vendor on Kapila Teertham Road, and you can also grab coconut water at Cocofit near PLR Convention Hall. Ganesh Juice Center - ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Juice-Centres/nct-10283258/page-6",
+      "name": "Juice Centres in Tirupati - Page 6",
+      "snippet": "Address , Chinnakupustreet, Tata Nagar, Tirupati - 517501, Vasavi Nagar, Mr Palli Circle, Tirupati - 517502, Shop No 281, Main Road, Dr Mahal Road, Tirupati ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/fruit-juice-bars-in-tirupati/?locale=nl_NL",
+      "name": "Fruit Juice Bars in Tirupati",
+      "snippet": "For fresh fruit salads, there's a vendor on Kapila Teertham Road, and you can also grab coconut water at Cocofit near PLR Convention Hall. Ganesh Juice Center - ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Fruit Juice Bars in Tirupati :: For fresh fruit salads, there's a vendor on Kapila Teertham Road, and you can also grab coconut water at Cocofit near PLR Convention Hall. Ganesh Juice Center - ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

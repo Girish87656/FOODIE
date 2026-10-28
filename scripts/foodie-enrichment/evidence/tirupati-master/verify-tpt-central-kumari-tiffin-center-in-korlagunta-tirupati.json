@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Kumari Tiffin Center in Korlagunta,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Kumari-Tiffin-Center-Korlagunta/9999PX877-X877-220130211023-Q8U7_BZDET"
   },
   "query": "\"Kumari Tiffin Center in Korlagunta,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Autonagar/nct-10481155",
+      "name": "Best Tiffin Services in Autonagar, Tirupati",
+      "snippet": "Address , Tiruchanur, Korlagunta, Tirupati - 517501, Yogimallavaram, Tiruchanur, Tiruchanoor Road, Tiruchanoor, Tirupati - 517503, Padmavathipuram ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/sri-hari-tiffin-center-korlagunta-rest1302660",
+      "name": "Order from Sri Hari Tiffin Center online in Tirupati",
+      "snippet": "Sri Hari Tiffin Center is a popular food destination in Korlagunta, Tirupati , known for serving delicious indian food. Customers can order from Sri Hari Tiffin ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Bhavani-Nagar/nct-10000409",
+      "name": "Best 24 Hours Tiffin Services in Bhavani Nagar, Tirupati",
+      "snippet": "Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, Nethaji Road ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Brahmin-Food/nct-12454586/page-2",
+      "name": "Tiffin Services For Brahmin Food in Tirupati - Page 2",
+      "snippet": "Address , Bhanu Estate Road, Royal Nagar, Tirupati - 517501, Sri Padmavati Mahila Visvavidyalayam, Zoo Park Road, Reservoir Colony Road, Tirupati - 517507 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/785058/kumari-tiffen-center",
+      "name": "Kumari Tiffen Center in Tirupati",
+      "snippet": "The full address is Tirupati , Padmavathipuram, Tirupati - 517501, Andhra Pradesh, India. What is the pincode of Kumari Tiffen Center? Kumari Tiffen Center is in ... Read more",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Om-Tiffin-Centre-Korlagunta/9999PX877-X877-221123223017-S2P7_BZDET",
+      "name": "Om Tiffin Centre in Korlagunta,Tirupati",
+      "snippet": "This establishment is functional from 7:15 - 23:30. Please scroll to the top for the address and contact details of Om Tiffin Centre at Korlagunta, Tirupati . Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Autonagar, Tirupati :: Address , Tiruchanur, Korlagunta, Tirupati - 517501, Yogimallavaram, Tiruchanur, Tiruchanoor Road, Tiruchanoor, Tirupati - 517503, Padmavathipuram ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

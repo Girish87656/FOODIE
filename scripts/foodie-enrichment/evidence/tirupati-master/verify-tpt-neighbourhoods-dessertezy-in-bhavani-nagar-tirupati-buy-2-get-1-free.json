@@ -1,14 +1,51 @@
 {
   "candidate": {
     "name": "Dessertezy in Bhavani Nagar Tirupati: Buy 2 Get 1 Free",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.facebook.com/BeautifulTirupathi/videos/craving-something-sweet-delightful-and-utterly-irresistible-look-no-further-dess/2393091261517926"
   },
   "query": "\"Dessertezy in Bhavani Nagar Tirupati: Buy 2 Get 1 Free\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Sweet-Distributors-in-Bhavani-Nagar/nct-10465386",
+      "name": "Top Sweet Distributors in Bhavani Nagar, Tirupati near me",
+      "snippet": "Sweets Address Door No 3-163, Bazaar Street, Renigunta, Tirupati - 517520 Shop No:1, Tiruchanoor Road, Tirupati - 517501 … 18-1-420a, Ice Cream and Desserts ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/dessertezy",
+      "name": "(@dessertezy) • Instagram photos and videos",
+      "snippet": "Buy any 2 desserts and get 1 FREE! Address : Bhavani Nagar Circle, near Giftezy, Tirupati . Call: 9951666773 🛵",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Desserts-in-Bhavani-Nagar/nct-10157864",
+      "name": "Desserts Restaurants in Bhavani Nagar, Tirupati",
+      "snippet": "Address , D.no-19-12-1/2,Ground Floor, Kesavayanagunta, Bairagi Patteda ... 1024, V.V.Mahal Road, V V Mahal Road, Tirupati - 517501, Balaiah Complex ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Giftezy-Art-Crafts-Nehru-Nagar/9999PX877-X877-230727040037-V1P1_BZDET/photos",
+      "name": "35 Photos of Giftezy Art Crafts in Bhavani Nagar, Tirupati",
+      "snippet": "To contact Giftezy Art Crafts in Bhavani Nagar, you can call them on the number given during their working hours from Monday:- 10:00 am - 9:00 pm, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Sweet Distributors in Bhavani Nagar, Tirupati near me :: Sweets Address Door No 3-163, Bazaar Street, Renigunta, Tirupati - 517520 Shop No:1, Tiruchanoor Road, Tirupati - 517501 … 18-1-420a, Ice Cream and Desserts ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

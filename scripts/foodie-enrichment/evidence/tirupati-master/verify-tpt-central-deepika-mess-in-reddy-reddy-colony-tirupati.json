@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Deepika Mess in Reddy&Reddy Colony,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Deepika-Mess-Near-Rush-Hospital-Reddy-Reddy-Colony-Reddyreddy-Colony/9999PX877-X877-160421214701-A6S5_BZDET"
   },
   "query": "\"Deepika Mess in Reddy&Reddy Colony,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-in-Vidya-Nagar-Colony/nct-10319116",
+      "name": "Best Mess in Vidya Nagar Colony, Tirupati",
+      "snippet": "11 Mess in Vidya Nagar Colony, Tirupati . 550 mts Opens at 09:00 AM - 517502 (Prakasam Nagar Colony) 517502 10-2-32, SV Nagar, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-Group-Friendly-in-Air-Bypass-Road/nct-10319116-att-pg7",
+      "name": "Best Mess Group Friendly in Air Bypass Road, Tirupati",
+      "snippet": "Mess in Air Bypass Road, Tirupati ; Name, Reddemma Mess · Nellore Mess ; Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Indira ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-with-Drive-Through-in-T-P-Area/nct-10319116-att-res40",
+      "name": "Best Mess With Drive Through in TP Area, Tirupati - Justdial Jd",
+      "snippet": "Opens at 12:30 PM. Mess Address Indira Nagar, 517501 Beri Street, Tirupati , 1146 474 Rating 3.9 3.9",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-in-New-Balaji-Colony/nct-10319116/page-3",
+      "name": "Mess in New Balaji Colony, Tirupati - Page 3",
+      "snippet": "Mess in New Balaji Colony, Tirupati - Mess Address Talakona Road, Reddy Colony, Pileru, Piler, Chittoor - 517214",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-in-Khadi-Colony/nct-10319116",
+      "name": "Top Mess in Khadi Colony - Best Canteens Tirupati near me",
+      "snippet": "Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Bandla St Madhura Nagar, Mallaiah Gunta Katta, Tirupati - 517501, Reservoir ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.mappls.com/place-kanaka+durga+mess-reddy+&+reddy+colony-tirupati-andhra+pradesh-517501-WYTQT9@zdata=MTMuNjM1OTc5Kzc5LjQyMTg1KzE3K1dZVFFUOSsrbnI=ed",
+      "name": "Kanaka Durga Mess, Reddy & Reddy Colony",
+      "snippet": "kanaka durga mess, reddy colony, tirupati , andhra pradesh, 517501. Reddy & Reddy Colony, Tirupati , Andhra Pradesh, 517501 … +917097402095 Opening Hours Open: ...",
+      "host": "www.mappls.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Mess in Vidya Nagar Colony, Tirupati :: 11 Mess in Vidya Nagar Colony, Tirupati . 550 mts Opens at 09:00 AM - 517502 (Prakasam Nagar Colony) 517502 10-2-32, SV Nagar, Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

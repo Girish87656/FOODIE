@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Geetha General Stores & Tiffin Centre, Chandragiri, Tirupati",
-    "area": "chandragiri"
+    "area": "chandragiri",
+    "sourceUrl": "https://magicpin.in"
   },
   "query": "\"Geetha General Stores & Tiffin Centre, Chandragiri, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Supermarkets-in-Chandragiri/nct-10463784/page-3",
+      "name": "Supermarkets in Chandragiri, Tirupati - Page 3",
+      "snippet": "Address , Stv Nagar, Tirupati - 517501, Dodapuram Street, Korlagunta, Tirupati - 517501 (Opposite to Trishool Dental Hospital), Door No 10-2-138/1A, Tk Street ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Gayathri-Provisions-Yogimallavaram/9999PX877-X877-240314062918-N3A4_BZDET",
+      "name": "Gayathri Provisions in Yogimallavaram,Tirupati",
+      "snippet": "Gayathri Provisions in Tirupati is one of the leading businesses in the General Stores. Find Address , Contact Number, Reviews & Ratings, Photos, Maps of ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/General-Stores-in-Padmavati-Puram/nct-10227851",
+      "name": "Top General Stores in Padmavati Puram - Tirupati",
+      "snippet": "937 General Stores in Padmavati Puram, Tirupati . Centre Address Stv Nagar, Tirupati - 517501. Main Road, Renigunta Road, Tirupati - Dr Mahal Road, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Chandra-General-Store-Ashoka-Nagar-Tirupathi-Ho/9999PMULHYDSTD10040_BZDET",
+      "name": "Chandra General Store in Mr Palli Circle,Tirupati",
+      "snippet": "Chandra General Store in Mr Palli Circle, Tirupati is located Ashoka Nagar. It is at Ak Palli Road, Ashoka Nagar, This establishment is functional from 08:00 - ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/General-Stores-in-Tml-By-Pass-Road/nct-10227851",
+      "name": "Top General Stores in Tml By Pass Road - Tirupati",
+      "snippet": "937 General Stores in Tml By Pass Road, Tirupati . Find ✓Grocery Stores, ✓Provision Stores, ✓Dairy Product Retailers, ✓Pickle Retailers, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Grocery-Stores-in-Chandragiri/nct-10237947",
+      "name": "Top Grocery Stores in Chandragiri - Tirupati",
+      "snippet": "Address , Vinaya Temple, Punganur Tirupathi Road, Chandragiri, Tirupati - 517101, New Pet, Vijaya Nagara Colony, Tirupati - 517101, Koneti Street, Tirupati ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Supermarkets in Chandragiri, Tirupati - Page 3 :: Address , Stv Nagar, Tirupati - 517501, Dodapuram Street, Korlagunta, Tirupati - 517501 (Opposite to Trishool Dental Hospital), Door No 10-2-138/1A, Tk Street ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

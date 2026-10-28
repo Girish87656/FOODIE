@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Renigunta Restaurants",
-    "area": "renigunta"
+    "area": "renigunta",
+    "sourceUrl": "https://www.zomato.com/tirupati/renigunta-restaurants"
   },
   "query": "\"Renigunta Restaurants\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.district.in/dining/tirupati/renigunta/renigunta-locality-restaurants?srsltid=AYCX9vIBMlPUcWapBrcfrezg7BW_6ZTQK6RxwkkKlboJ940UamLTfPMM",
+      "name": "Restaurants in Renigunta Locality",
+      "snippet": "Restaurants in Renigunta Locality Renigunta · Lotus Marasa Sarovar Premiere · The Kitchen Collective - Courtyard By Marriott · Gufha-Hotel Pai Viceroy · Mayura ... Read more",
+      "host": "www.district.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/gu/tirupati/renigunta-locality-restaurants?online_payment=1&min-order=2&category=10",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Hotel Sri Balaji Bhavan · The Irani & Co · R.S. Chillies Family Restaurant · The Vintage Cafe · AR Bhavan · Potlam Biryani. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/RestaurantsNear-g297587-d4144971-oa30-Renigunta_Junction_Station-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE 10 BEST Restaurants Near Renigunta Junction Station",
+      "snippet": "Restaurants near Renigunta Junction Station, Tirupati on Tripadvisor: Find traveller reviews and candid photos of dining near ...",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/gu/tirupati/renigunta-locality-restaurants?amp%3Bdelivery_subzone=20440&amp%3Bmin-order=2&amp%3Bdelivery-time=0",
+      "name": "Renigunta Locality Restaurants, Tirupati",
+      "snippet": "Renigunta Locality Restaurants, Tirupati · Hotel Sri Balaji Bhavan · Vaibhav Grand Family Restaurant · Mayura Garden Family Restaurant · R.S. Chillies Family ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Pure-Veg-Thali-Restaurants-in-Renigunta-Road/nct-10396872",
+      "name": "Pure Veg Thali Restaurants in Renigunta Road, Tirupati",
+      "snippet": "Pure Veg Thali Restaurants in Renigunta Road, Tirupati ; Name, Green Meridian Restaurant · Hotel Vakulas Grand ; Address , Kapilateertham Road, Tirupati - 517501 ( ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/sri-annapurna-restaurant-renigunta-locality/order",
+      "name": "Sri Annapurna Restaurant, Renigunta Locality order online",
+      "snippet": "Restaurants in Tirupati , Tirupati Restaurants, Renigunta Locality restaurants, Best Renigunta Locality restaurants, Renigunta restaurants ... tirupati menu ... Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "THE 10 BEST Restaurants Near Renigunta Junction Station :: Restaurants near Renigunta Junction Station, Tirupati on Tripadvisor: Find traveller reviews and candid photos of dining near ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

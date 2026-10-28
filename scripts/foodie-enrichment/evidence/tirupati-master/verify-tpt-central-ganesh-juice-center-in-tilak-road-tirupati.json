@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Ganesh Juice Center in Tilak Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Ganesh-Juice-Center-Tilak-Road/9999PX877-X877-220606211204-B3T7_BZDET"
   },
   "query": "\"Ganesh Juice Center in Tilak Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/fb-answers/fruit-juice-bars-in-tirupati/?locale=ko_KR",
+      "name": "Fruit Juice Bars in Tirupati",
+      "snippet": "Ganesh Juice Center is. It started at Karumariamman Temple on Tilak Rd and has expanded to other parts of the city.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ganesh-fruit-juice-Opposite-to-zoo-park-SVUniversity/9999PX877-X877-160525114132-P3D6_BZDET",
+      "name": "Ganesh fruit juice in S.V.University,Tirupati - Justdial Jd",
+      "snippet": "It is at Zoo road, Opposite to zoo park, This establishment is functional from 07:00 - 21:30. Please scroll to the top for the address and contact details of ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://wanderlog.com/place/details/9789635/ganesh-juice-center",
+      "name": "Ganesh Juice Center, Tirupati, India - Reviews, Ratings",
+      "snippet": "Ganesh Juice Center, located on Tuda Office Rd, Tilak Rd, Varadaraja Nagar, Tirupati , Andhra Pradesh 517501, India Phone +91 99893 88440 Hours SuSunday: 9AM–9 ...",
+      "host": "wanderlog.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/fruit-juice-bars-in-tirupati/?locale=fi_FI",
+      "name": "Fruit Juice Bars in Tirupati",
+      "snippet": "Ganesh Juice Center is a well-known spot in Tirupati with a separate fan base and offers one glass free with another. For fresh fruit salads, there's a...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Packaged-Juice-Dealers-in-Tilak-Road/nct-12047664",
+      "name": "Top Packaged Juice Dealers in Tilak Road - Tirupati",
+      "snippet": "Packaged Juice Dealers in Tilak Road, Tirupati ; Address , AIR Bypass Road, Bairagi Patteda, Tirupati - 517501 (Survey No 233/2C/3, Ward No 19), abhi tower, Ashok ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.aptshealth.in/tirupati/ganapati-cool-drinks-juice-corner",
+      "name": "Ganapati Cool Drinks Juice Corner in Tirupati",
+      "snippet": "Address JCJ9+VW4, Varadaraja Nagar, Tirupati , Andhra Pradesh 517501. Ganesh Juice Center. Tilak Rd, Varadaraja Nagar, Tirupati ,",
+      "host": "www.aptshealth.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Ganesh fruit juice in S.V.University,Tirupati - Justdial Jd :: It is at Zoo road, Opposite to zoo park, This establishment is functional from 07:00 - 21:30. Please scroll to the top for the address and contact details of ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

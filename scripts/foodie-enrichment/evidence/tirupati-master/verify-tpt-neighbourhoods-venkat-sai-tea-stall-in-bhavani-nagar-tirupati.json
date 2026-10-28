@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Venkat Sai Tea Stall in Bhavani Nagar,Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Venkat-Sai-Tea-Stall-Behind-Avani-Nagar/9999PX877-X877-200110232627-S6I1_BZDET"
   },
   "query": "\"Venkat Sai Tea Stall in Bhavani Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Venkat-Sai-Tea-Stall-Behind-Avani-Nagar/9999PX877-X877-200110232627-S6I1_BZDET",
+      "name": "Venkat Sai Tea Stall in Bhavani Nagar,Tirupati",
+      "snippet": "Venkat Sai Tea Stall in Bhavani Nagar,Tirupati well known for Tea Stalls in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Venkat Sai Tea Stall in Bhavani Nagar,Tirupati :: Venkat Sai Tea Stall in Bhavani Nagar,Tirupati well known for Tea Stalls in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address, ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

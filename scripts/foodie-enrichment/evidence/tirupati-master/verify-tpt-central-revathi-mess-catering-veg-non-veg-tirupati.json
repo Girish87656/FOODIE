@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Revathi Mess & Catering Veg & Non Veg - Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Revathi-Mess-Catering-Veg-Non-Veg-Opposite-Chaitanya-Bharathi-School-Hathiramji-Colony/9999PX877-X877-260626075516-U7Y3_BZDET"
   },
   "query": "\"Revathi Mess & Catering Veg & Non Veg - Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-in-Tirupati-North/nct-10319116",
+      "name": "Top Mess in Tirupati North - Best Canteens Tirupati near me",
+      "snippet": "Get Phone Numbers, Address , Reviews, Photos, Maps … 1.84 km Open until 10:00 pm. Opposite Ramakrishna Delux Nehru Nagar, tirupati . Beri Street Tirupati Beri",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/100090427557096/videos/looking-for-tasty-veg-and-non-veg-meals-at-srikalahasthi-ravi-mess-is-the-best-o/2120728251866150",
+      "name": "Ravi Mess Veg & Non Veg Catering in Srikalahasti",
+      "snippet": "more Details:@ 9949933080 9676163043 … a catering service based in Tirupathi , India. available across the Sri Kalthasti Temple and surrounding ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Non-Veg-Mess-in-New-Balaji-Colony/nct-11993264",
+      "name": "Top Non Veg Mess in New Balaji Colony, Tirupati near me",
+      "snippet": "5.0 Triplicane High Road, Triplicane, Chennai - 600005. No 171, Dr Natesan Road, Triplicane, Chennai - 600005",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Revathi-Tea-Chinna-Bazar-Road-Tirupati-Bazar/9999PXXXX-XXXX-110126204659-B9J6_BZDET",
+      "name": "Revathi Tea in Tirupati Bazar,Tirupati",
+      "snippet": "It is at S.d Road, Chinna Bazar Road, This establishment is functional from 07:00 - 18:00.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess/nct-10319116/page-3",
+      "name": "Mess in Tirupati - Page 3",
+      "snippet": "Address , Shop no 2, Vaikuntapuram arch road, Mr Palli Circle, Tirupati - 517502 (Beside panchayath office), 4-4-650/2 Nehru Nagar Nehru Nagar Nehru Nagar ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Caterers-which-Live-Catering-Service-Available/nct-10083293-att-bleL1",
+      "name": "Best Caterers Which Live Catering Service Available near me",
+      "snippet": "Address , 935 Balaji Nagar, Balaji Nagar, Tirumala, Tirupati - 517504 (Near Laxmi Krupa Guest House), Srinivasa Nagar, Tirupati Bazar, Tirupati - 517501 (Shiva ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Mess in Tirupati North - Best Canteens Tirupati near me :: Get Phone Numbers, Address , Reviews, Photos, Maps … 1.84 km Open until 10:00 pm. Opposite Ramakrishna Delux Nehru Nagar, tirupati . Beri Street Tirupati Beri",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Mayura Garden Family Restaurant In Korlagunta, Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/restaurants/mayura-garden-family-restaurant-korlagunta-korlagunta-1291811/dineout"
   },
   "query": "\"Mayura Garden Family Restaurant In Korlagunta, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/ItsMyTirupathi/videos/get-decoration-free-for-your-event-when-you-avail-catering-services-for-above-15/850744367592300",
+      "name": "Get decoration free for your event when you avail catering",
+      "snippet": "Get decoration free for your event when you avail catering services for above 150+ at Mayura garden restaurant. # tirupati #itsmytirupati.",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mayura-Garden-Restaurant-Near-Andini-Street-Opposite-APSRTC-Bus-Stand-T-P-Area/9999PX877-X877-140607135201-V5E7_BZDET/reviews",
+      "name": "Reviews for Mayura Garden & Restaurant in TP Area, Tirupati",
+      "snippet": "... Customer Reviews and Ratings with Photos. Check Timings, Address , Contact Number , Photos, Maps of Mayura Garden & Restaurant in T P Area, Tirupati - Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/All-Day-Dining-Restaurants-in-Korlagunta/nct-11956687",
+      "name": "Top All Day Dining Restaurants in Korlagunta, Tirupati near me",
+      "snippet": "Mayura Garden & Restaurant Idly's Address House No 19-8-182/A, Air Bypass Main Road, Tirupati - 517502. Mayura, Door No 204 & 209, T P Area, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/mayura-hotel-in-tirupati",
+      "name": "Mayura Hotel In Tirupati",
+      "snippet": "Mayura Garden Family Restaurant 📍Next to Ramee Guestline Road, Ph: 7416814222. Contact 8801771352 9603555535 Address , tiruchanoor road, Tirupati 517503. ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mayura-Family-Restaurant-Beside-Big-Bajar-Tirumala/9999PX877-X877-190805073537-G2C2_BZDET",
+      "name": "Mayura Family Restaurant in Tirumala,Tirupati",
+      "snippet": "Address Beside Big Bajar, Airbypass Road, Tirumala, Tirumala, Tirupati -517504, Andhra Pradesh",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/best-restaurants-in-tirupati-for-family",
+      "name": "Best Restaurants In Tirupati For Family",
+      "snippet": "Introducing our team Mayura Garden Family Restaurant Next to Ramee Guestline Road, opp 865 · Hotel Shadab Irani, SV Auto Nagar, Tirupati # tirupati # ... Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top All Day Dining Restaurants in Korlagunta, Tirupati near me :: Mayura Garden & Restaurant Idly's Address House No 19-8-182/A, Air Bypass Main Road, Tirupati - 517502. Mayura, Door No 204 & 209, T P Area, Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

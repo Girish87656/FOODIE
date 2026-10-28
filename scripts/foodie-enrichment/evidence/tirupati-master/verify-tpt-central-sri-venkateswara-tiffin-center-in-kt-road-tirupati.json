@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Sri Venkateswara Tiffin Center in KT Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Venkateswara-Tiffin-Center-Kt-Road/9999PX877-X877-240405120557-J7M3_BZDET"
   },
   "query": "\"Sri Venkateswara Tiffin Center in KT Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Madhav-Nagar/nct-10481155",
+      "name": "Best Tiffin Services in Madhav Nagar, Tirupati",
+      "snippet": "Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, G Car Street, T P Area, Tirupati - 517501 (Opposite Buss Stand, Opposite Govindaraja Swamy Temple) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Papavinasanam-Road/nct-10000409",
+      "name": "Top 24 Hours Tiffin Services in Papavinasanam Road",
+      "snippet": "Sri Venkateswara Tiffin Center ; Name, Sree Balaji Bhavan · V.C.B Tea & Tiffin Stall (Om Namo Venkatesaya) ; Address , Main Road, Tirumala, Tirupati - 517504 ( ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Srinivasa-Tiffin-Centre-Gandhi-Road/9999PX877-X877-171002104036-M9H5_BZDET",
+      "name": "Srinivasa Tiffin Centre in Gandhi Road,Tirupati",
+      "snippet": "Srinivasa Tiffin Centre in Gandhi Road, Tirupati well known for Tiffin Services in Tirupati . 1 Photos. Check Menu, Offers, Prices, Timings, Address , Contact ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://tirupati.idbf.in/788403/tiffin-center",
+      "name": "Tiffin Center in Tirupati",
+      "snippet": "The full address is Plot No.190, L. S. Nagar, Tummalagunta, Tirupati - 517501, Andhra Pradesh, India. What is the pincode of Tiffin Center ... Read more",
+      "host": "tirupati.idbf.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/sri-venkateswara-tiffin-center-srinivasa-nagar/order",
+      "name": "Sri Venkateswara Tiffin Center, Srinivasa Nagar order online",
+      "snippet": "Order food online from Sri Venkateswara Tiffin Center, Srinivasa Nagar, Tirupati . Get great offers and super fast food delivery when you order food online ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Mosque-Road/nct-10481155",
+      "name": "Best Tiffin Services in Mosque Road, Tirupati - Justdial Jd",
+      "snippet": "Address , Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar), Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Madhav Nagar, Tirupati :: Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, G Car Street, T P Area, Tirupati - 517501 (Opposite Buss Stand, Opposite Govindaraja Swamy Temple) ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

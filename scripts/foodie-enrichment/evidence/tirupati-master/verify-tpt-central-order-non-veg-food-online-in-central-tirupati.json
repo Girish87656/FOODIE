@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Order Non Veg Food Online in Central Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/central-tirupati-restaurants/non-veg-order-online"
   },
   "query": "\"Order Non Veg Food Online in Central Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/tirupati/central-tirupati-restaurants/non-veg-order-online",
+      "name": "Order Non Veg Food Online in Central Tirupati",
+      "snippet": "Order Non Veg Food Online in Central Tirupati ; PS4 Veg Restaurant (Perambur Sri Srinivasa). 4.5 ; DI Andhra Spice Family Restaurant. 4.2 ; DI Andhra Tiffins. 4.3 ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

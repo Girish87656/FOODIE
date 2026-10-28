@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Chandra Mess in Stv Nagar,Tirupati - Fast Food",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Chandra-Mess-Stv-Nagar/9999PX877-X877-220205211137-C7L1_BZDET?srcterm=Chandra%2520Mess&predocid=9999PX877.X877.140629094315.H3X5"
   },
   "query": "\"Chandra Mess in Stv Nagar,Tirupati - Fast Food\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Chandu-Fast-Foods-Sarojini-Devi-Road/9999PX877-X877-191113020911-K4Z6_BZDET",
+      "name": "Chandu Fast Foods in Reservoir Colony Road,Tirupati",
+      "snippet": "Chandu Fast Foods in Reservoir Colony Road, Tirupati well known for Fast Food in Tirupati . ... Address . Giripuram, Nehru Nagar, Reservoir Colony Road, Tirupati - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Fast-Food/nct-10200860/page-7",
+      "name": "Best Fast Food Restaurants Updated 2024 - Tirupati",
+      "snippet": "1197 Fast Food in Tirupati . Walla Chandragiri, tirupati . Open until 10:00 pm. Tirupati - 517507 (Opposite Dmart) Tirupati - 517504 … 517520 Sv Auto Nagar,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Veg-Mess-in-Tk-Street/nct-11993262",
+      "name": "Top Veg Mess in Tk Street, Tirupati near me",
+      "snippet": "Veg Mess in Tk Street, Tirupati . Open until 9:45 pm. House No 1-1-89, Tirupati - 517501. Nagar, Tirupati - 517501",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sv-Fast-Food-Balaji-Nagar/9999PX877-X877-230312121555-A4F8_BZDET",
+      "name": "Sv Fast Food - Indian Restaurants in Balaji Nagar",
+      "snippet": "Sv Fast Food in Balaji Nagar, Tirupati . Located in the vibrant heart of Balaji Nagar, Open from Monday:- 11:00 am - 11:00 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Fast-Food-with-Indoor-Seating-in-Sv-Nagar/nct-10200860-att-res491",
+      "name": "Best Fast Food With Indoor Seating in Sv Nagar, Tirupati",
+      "snippet": "Address , Door No 14-184, Nehru Street, T P Area, Tirupati - 517501, KT Road, Tirupati - 517507 (Beside Bata Show Room), Padmavathipuram, Bairagipatteda Road ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ranemma-Tiffin-Center-Vidya-Nagar-Colony/9999PX877-X877-200929231607-Q4A8_BZDET/reviews",
+      "name": "Ranemma Tiffin Center - Vidya Nagar Colony, Tirupati",
+      "snippet": "Ranemma Tiffin Center in Tirupati has Monday:- 7:30 am - 4:00 pm, Tuesday:- Closed, Wednesday:- Closed, Thursday:- Closed, Friday:- Closed, Saturday:- Closed, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Chandu Fast Foods in Reservoir Colony Road,Tirupati :: Chandu Fast Foods in Reservoir Colony Road, Tirupati well known for Fast Food in Tirupati . ... Address . Giripuram, Nehru Nagar, Reservoir Colony Road, Tirupati - ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

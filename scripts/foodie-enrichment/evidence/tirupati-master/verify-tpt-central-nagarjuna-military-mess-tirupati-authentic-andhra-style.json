@@ -1,14 +1,37 @@
 {
   "candidate": {
     "name": "Nagarjuna Military Mess, Tirupati Authentic Andhra-style",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.facebook.com/ItsMyTirupathi/videos/%EF%B8%8F-nagarjuna-military-mess-tirupatiauthentic-andhra-style-home-food-with-deliciou/1724885372028653"
   },
   "query": "\"Nagarjuna Military Mess, Tirupati Authentic Andhra-style\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.instagram.com",
+      "name": "Best Andhra Meals In Tirupati",
+      "snippet": "Subbayya Gari Hotel - Pure Veg Restaurant in Tirupati Address ... 🍽️ Nagarjuna Military Mess, Tirupati Authentic Andhra-style home food with delicious Veg & ... Read more",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com",
+      "name": "Free Home Delivery At Andhra Spice Restaurant Tirupati . .",
+      "snippet": "🍽️ | Tirupati's Hidden F... Jul 27, 2026 · 1.1K views. 🍽️ Nagarjuna Military Mess, Tirupati Authentic Andhra-style home food with delicious Veg &. 00:37 ...",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Andhra Meals In Tirupati :: Subbayya Gari Hotel - Pure Veg Restaurant in Tirupati Address ... 🍽️ Nagarjuna Military Mess, Tirupati Authentic Andhra-style home food with delicious Veg & ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Pani Puri Centre, Tirupati, India - Reviews, Ratings, Tips",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://wanderlog.com/place/details/12149707/pani-puri-centre"
   },
   "query": "\"Pani Puri Centre, Tirupati, India - Reviews, Ratings, Tips\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://wanderlog.com/place/details/12149707/pani-puri-centre",
+      "name": "Pani Puri Centre, Tirupati, India - Reviews, Ratings, Tips",
+      "snippet": "Reviewers praise the masala poori and cutlet, highlighting their superb taste at very reasonable prices. Visitors recommend trying various items",
+      "host": "wanderlog.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

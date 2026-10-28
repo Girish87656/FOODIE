@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Revathi Mess & Catering'S - Hathiramji Colony, Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Revathi-Mess-CateringS-Hathiramji-Colony/9999PX877-X877-240425215955-K2D7_BZDET/things-to-do?source=SHARE&amp=1"
   },
   "query": "\"Revathi Mess & Catering'S - Hathiramji Colony, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-in-Railway-Colony/nct-10319116",
+      "name": "Top Mess in Railway Colony - Best Canteens Tirupati near me",
+      "snippet": "Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Bandla St Madhura Nagar, Mallaiah Gunta Katta, Tirupati - 517501, Indira Nagar ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Padmavathi-Mess-Bhavani-Nagar/9999PX877-X877-230217082439-T2N4_BZDET",
+      "name": "Sri Padmavathi Mess in Bhavani Nagar,Tirupati - Justdial",
+      "snippet": "Address . 10-9-591, Bhavani Nagar, Tirupati -517501, Andhra Pradesh. DirectionCopyUpdate Address . Similar Restaurants. Chickpet Donne Biryani House. 4.9. 1.8k ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-Group-Friendly-in-Tilak-Road/nct-10319116-att-pg7",
+      "name": "Best Mess Group Friendly in Tilak Road, Tirupati",
+      "snippet": "Mess in Tilak Road, Tirupati ; Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Indira Nagar, Vesyalamma Gudivadhi, Balaji Colony, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Mess-in-Mosque-Road/nct-10319116",
+      "name": "Top Mess in Mosque Road - Best Canteens Tirupati near me",
+      "snippet": "Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Bandla St Madhura Nagar, Mallaiah Gunta Katta, Tirupati - 517501, Indira Nagar ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Salem/Revathi-Mess-Shevapet/0427PX427-X427-240214200518-H4R3_BZDET",
+      "name": "Revathi Mess in Shevapet,Salem",
+      "snippet": "Revathi Mess in Shevapet, Salem. Located in the vibrant heart of Shevapet, Revathi Mess is a cherished culinary haven where tradition meets innovation. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Revathi-Provisions/9999PX877-X877-231222194701-W5W3_BZDET",
+      "name": "Revathi Provisions - Best Grocery Stores near me in Tirupati",
+      "snippet": "This establishment is functional from 08:00 - 22:00. Please scroll to the top for the address and contact details of Revathi Provisions at Yogimallavaram, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Top Mess in Railway Colony - Best Canteens Tirupati near me :: Address , Karnala Veedi, New Balaji Colony, Tirupati - 517501 (Balaji Colony), Bandla St Madhura Nagar, Mallaiah Gunta Katta, Tirupati - 517501, Indira Nagar ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

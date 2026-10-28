@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Popular Packaged Juice Manufacturers in Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Packaged-Juice-Manufacturers/nct-10283312"
   },
   "query": "\"Popular Packaged Juice Manufacturers in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Grape-Juice-Manufacturers/nct-10235995",
+      "name": "Best Grape Juice Manufacturers near me - Tirupati",
+      "snippet": "TirupatiPackaged Grape Juice Manufacturers in Tirupati2+. Maiyas Beverages And Foods Pvt Ltd (Corporate Office) M Chanakeshva Enterprises Juice Corner Maiyas. ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Packaged-Fruit-Juice-Wholesalers/nct-10217814",
+      "name": "Top Packaged Fruit Juice Wholesalers in Tirupati near me",
+      "snippet": "Popular Packaged Fruit Juice. Address T.p Area, Peddakapu Colony, Tirupati - 517501 3, Mehta Road, V V Mahal Road, Tirupati - 517501 Dn No 18-7-365,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Packaged-Juice-Dealers-in-Bhavani-Nagar/nct-12047664",
+      "name": "Top Packaged Juice Dealers in Bhavani Nagar - Tirupati",
+      "snippet": "Popular Packaged Juice Dealers in Bhavani Nagar, Tirupati D Mart Survey No 2332c3 Ward No 19 Bairagi Patteda, Tirupati D Mart 4.022.1k. Open until 10:00 pm",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Girish-Fruit-juice-Opposite-To-Manamandhir-Mr-Palli-Circle/9999PX877-X877-160723184318-E8I9_BZDET",
+      "name": "Girish Fruit juice in Mr Palli Circle,Tirupati",
+      "snippet": "Girish Fruit juice in Mr Palli Circle, Tirupati . Packaged Fruit Juice Manufacturers in Tirupati . It stands located at Door No:#9-61, Opposite. Amaravathi Nagar, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tomato-Juice-Manufacturers/nct-10485687",
+      "name": "Top Tomato Juice Manufacturers in Tirupati near me",
+      "snippet": "Popular Tomato Juice Manufacturers in Tirupati · Urban Platter (Regional Office) · Holyland Marketing Pvt Ltd · SK TOMATOES AND VEGETABLES · Banbayalu · Divya Agro ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.dial4trade.com/tirupati/juice.htm",
+      "name": "Juice Manufacturers and Suppliers in Tirupati",
+      "snippet": "Sri Varsha Food Products India Ltd. Address , 3/177, Ooty Vari Palli, Pakala, Pakala, Tirupati , Andhra Pradesh, India, S N Puram, Puttur Road, Renigunta ... Read more",
+      "host": "www.dial4trade.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Grape Juice Manufacturers near me - Tirupati :: TirupatiPackaged Grape Juice Manufacturers in Tirupati2+. Maiyas Beverages And Foods Pvt Ltd (Corporate Office) M Chanakeshva Enterprises Juice Corner Maiyas. ...",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

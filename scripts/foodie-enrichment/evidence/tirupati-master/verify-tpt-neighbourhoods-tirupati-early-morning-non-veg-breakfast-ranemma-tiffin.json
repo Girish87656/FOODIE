@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tirupati early morning non-veg breakfast - RANEMMA TIFFIN",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.facebook.com/ItsMyTirupathi/videos/tirupati-early-morning-non-veg-breakfast-ranemma-tiffin-center-j9ch3vc-vidya-nag/1528358954271306"
   },
   "query": "\"Tirupati early morning non-veg breakfast - RANEMMA TIFFIN\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/fb-answers/tirupati-tiffin-timings/?locale=af_ZA",
+      "name": "Tirupati Tiffin Timings",
+      "snippet": "Morning Tiffin & Breakfast Timings in Tirupati ; Foodie Addict. Timings   6:30AM - 11:30AM ; Lamesa Buffet & Cater… ⚜️BREAKFAST: 6:00 AM - 10:00 AM (CALL TIME: ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Vidya-Nagar-Colony/nct-10000409",
+      "name": "Best 24 Hours Tiffin Services in Vidya Nagar Colony, Tirupati",
+      "snippet": "Name, Mom's Kitchen · Ranemma Tiffin Center ; Address , Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar), Vidya Nagar Colony, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Breakfast/nct-11324399",
+      "name": "Best Tiffin Services For Breakfast in Tirupati",
+      "snippet": "Address , Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar), Tata Nagar, Tirupati - 517501 (Near Post Office, Peddakapu Street) ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://indiago.app/en/tirumala-tirupati/breakfast",
+      "name": "Breakfast in Tirupati and Tirumala: Tiffin and Where to Eat",
+      "snippet": "Oct 15, 2026 — Sri Lakshmi Narayana Bhavan, on Netaji Road opposite the railway station and next to the bus stand, is the classic first meal for pilgrims off ... Read more",
+      "host": "indiago.app",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Breakfast-Restaurants-with-Veg-Options-Available/nct-11605361-att-rest801",
+      "name": "Best Breakfast Restaurants With Veg Options Available in",
+      "snippet": "Breakfast Restaurants in Tirupati ; Name, Sri Vari Sannidhanam Ac Restaurant · DHAWAT RESTAURANT ; Address , Tirumala, Tirupati - 517504 (Near HVC Free Bus Stop, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/best-tiffin-services-in-tirupati/?locale=ms_MY",
+      "name": "Best Tiffin Services in Tirupati",
+      "snippet": "If you want non-veg options, on Kotakommala Street serves unlimited veg. Located on Nehru 14 Popular. Spot In Tirupati 552 10 Vinod. Please drop your contact ...",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best 24 Hours Tiffin Services in Vidya Nagar Colony, Tirupati :: Name, Mom's Kitchen · Ranemma Tiffin Center ; Address , Mahila University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar), Vidya Nagar Colony, ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

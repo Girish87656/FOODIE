@@ -48,6 +48,40 @@ const rq = existsSync(join(EV, "review-queue-new-names.json"))
   : null;
 const crossmatchFiles = existsSync(EV) ? readdirSync(EV).filter((f) => f.startsWith("crossmatch-")).sort() : [];
 
+/* batch-5 inputs (search resumed + direct, 2026-10-29) */
+const B5 = join(EV, "batch5");
+const b5Assess = existsSync(join(B5, "review-queue-assessment.json"))
+  ? JSON.parse(readFileSync(join(B5, "review-queue-assessment.json"), "utf8")) as {
+      assessedOn: string; tallies: Record<string, number>;
+      queueMeta: { retrievedOn: string; leadsIn: number };
+      officialPageReExamination: { note: string; newCandidates: unknown[]; corroborations: unknown[] };
+      seshachalamHills: { name: string; decision: string };
+    }
+  : null;
+const b5Cands = existsSync(join(B5, "discovery-candidates.json"))
+  ? JSON.parse(readFileSync(join(B5, "discovery-candidates.json"), "utf8")) as {
+      assembledOn: string;
+      tallies: { acceptedCandidates: number; held: number; weakLeads: number; corroborations: number; byArea: Record<string, number>; byCategory: Record<string, number>; byTier: Record<string, number> };
+      acceptedCandidates: Array<{ name: string; area: string; category: string; tier: string; evidence: { url: string; sourceKind: string } }>;
+      heldLeads: Array<{ name: string; reason: string }>;
+      weakLeads: Array<{ name: string; area: string; reason: string }>;
+      corroborations: Array<{ name: string; existingRecord: string; evidence: { url: string } }>;
+      limitations: string[];
+    }
+  : null;
+const b5Probe = existsSync(join(B5, "websearch-probe.json"))
+  ? JSON.parse(readFileSync(join(B5, "websearch-probe.json"), "utf8")) as { retrievedOn: string; decision: string; resultCount?: number }
+  : null;
+const b5Nom = existsSync(join(B5, "nominatim-food-pois.json"))
+  ? JSON.parse(readFileSync(join(B5, "nominatim-food-pois.json"), "utf8")) as { retrievedOn: string; viewbox: string; queries: Array<{ keyword: string; httpStatus?: number; hitCount?: number; error?: string }> }
+  : null;
+const b5Wv = existsSync(join(B5, "wikivoyage-evidence.json"))
+  ? JSON.parse(readFileSync(join(B5, "wikivoyage-evidence.json"), "utf8")) as { retrievedOn: string; pages: Array<{ url: string; httpStatus: number | null; usefulness: string }> }
+  : null;
+const b5Refetch = existsSync(join(B5, "wikipedia-refetch-evidence.json"))
+  ? JSON.parse(readFileSync(join(B5, "wikipedia-refetch-evidence.json"), "utf8")) as { retrievedOn: string; pages: Array<{ queueLead: string; httpStatus: number | null; usefulness: string }> }
+  : null;
+
 const AREA_LABEL: Record<string, string> = {
   "tpt-central": "Tirupati city centre",
   "tpt-neighbourhoods": "Tirupati residential neighbourhoods",
@@ -254,6 +288,45 @@ anywhere — each is an unverified lead with a verbatim quote, awaiting human re
 `;
 }
 
+/* ---- Batch-5 sections ---- */
+if (b5Assess && b5Cands) {
+  inv += `\n## Batch-5 review-queue assessment (${b5Assess.assessedOn})\n\nAll ${b5Assess.queueMeta.leadsIn} genuinely-new leads were assessed MANUALLY on their exact quotations and
+source URLs (never name-similarity alone) — evidence/evidence/tirupati-master/batch5/review-queue-assessment.json:
+\n| Decision | Count |\n|---|---|\n`;
+  for (const [k, v] of Object.entries(b5Assess.tallies)) inv += `| ${k} | ${v} |\n`;
+  inv += `\nALL FIVE HIGH-priority leads resolved WITHOUT becoming candidates: 3 corroborate existing inventory
+records (Sri Kodandaramaswami → Sri Kodanda Ramaswamy Temple; Zoo Park → Sri Venkateswara Zoological
+Park; Srikalahasti Temple → Srikalahasteeswara temple), 1 is a generic-term extraction ("Hindu temple")
+and 1 is an out-of-scope Bihar namesake (Kapileshwar Temple, Bihar).
+`;
+
+  inv += `\n## Batch-5 accepted candidates (Batch-015 review-candidate SQL, ${b5Cands.assembledOn})\n\n${b5Cands.tallies.acceptedCandidates} accepted candidates were assembled from (a) the queue assessment, (b) the ALREADY-SAVED
+official TTD page places-around-tirumala.aspx (the dead garden.aspx/theerthams.aspx homepage shells never
+delivered this content), (c) 4 targeted queue-lead checks, and (d) ${19 + 12} bounded discovery searches
+(19 web_search locality×category + 12 Nominatim POI) aimed at the biggest known gap: SMALL FOOD BUSINESSES.
+Fail-loud dedupe gates proved zero collisions against inventory, batches 011–014 and the curated worksheet.
+\n| Area | Accepted |\n|---|---|\n`;
+  for (const [k, v] of Object.entries(b5Cands.tallies.byArea)) inv += `| ${AREA_LABEL[k] ?? k} | ${v} |\n`;
+  inv += `\n| Category | Accepted |\n|---|---|\n`;
+  for (const [k, v] of Object.entries(b5Cands.tallies.byCategory)) inv += `| ${k} | ${v} |\n`;
+  inv += `\nThese rows import ONLY as \`verification_status='unverified'\` review candidates
+(supabase/review-candidates/insert-batch-015-tptm-b5.sql — never executed by this repo); coordinates stay
+NULL (published OSM coordinates remain in the evidence ledger for human review).
+\nAccepted candidate names (canonical):
+\n`;
+  for (const c of b5Cands.acceptedCandidates) inv += `- ${c.name} [${c.area}/${c.category}/${c.tier}] — ${c.evidence.sourceKind}: ${c.evidence.url}\n`;
+
+  inv += `\n### Batch-5 corroborations of EXISTING records (not new rows)\n\n`;
+  for (const c of b5Cands.corroborations) inv += `- **${c.name}** → ${c.existingRecord} (${c.evidence.url})\n`;
+
+  inv += `\n### Batch-5 weak leads (review queue ONLY — not candidates, not counted)\n\n${b5Cands.weakLeads.length} discovery hits were recorded as weak leads (list-mentions without locality,
+aggregator pages, chain outlets, institutional canteens, dated sources) — they stay OUT of every count,
+same as the original queue. Identity-HELD (${b5Cands.tallies.held}): ${b5Cands.heldLeads.map((h) => `"${h.name}"`).join(", ")}
+— see the duplicate-review doc.
+\n### Batch-5 source limitations\n\n`;
+  for (const l of b5Cands.limitations) inv += `- ${l}\n`;
+}
+
 /* ---------------- 2. source register ---------------- */
 
 let reg = `# FOODIE — Tirupati Discovery Source Register
@@ -357,6 +430,25 @@ api.php limitation: ${wiki.apiLimitation}
   }
 }
 
+if (b5Assess && b5Cands && b5Probe) {
+  reg += `\n## 7. Batch-5 sources (web_search RESUMED + bounded direct fetches, ${b5Cands.assembledOn})\n\nOne bounded availability probe PASSED (${b5Probe.decision}), so bounded search resumed per protocol:
+\n### 7a. web_search (z-ai) — bounded discovery\n\n- 19 locality×category queries (tiffin centres, tea stalls, messes, bakeries, sweet shops, juice shops,
+  street food, neighbourhood eateries across tpt-central / tirumala / tiruchanur / renigunta /
+  chandragiri / srinivasa-mangapuram / tpt-neighbourhoods) + 4 targeted queue-lead checks;
+  8 s pacing; 0 throttles. Evidence: batch5/search-discovery-food.json, batch5/search-lead-checks.json.\n- Single identity-verification queries also resumed: 48 backlog rows attempted in 4 bounded chunks
+  (verify-*.json; resume semantics preserved).
+\n### 7b. Nominatim (public OSM)\n\n- 12 bounded keyword POI queries, viewbox ${b5Nom?.viewbox ?? "(bounded)"}, 2 s spacing, custom UA;
+  ${b5Nom?.queries.reduce((a, q) => a + (q.hitCount ?? 0), 0) ?? 0} raw hits recorded with published coordinates in evidence ONLY.\n\n### 7c. Sources that REMAINED unusable (recorded, not worked around)\n\n`;
+  if (b5Wv) for (const p of b5Wv.pages) reg += `- Wikivoyage ${p.url}: HTTP ${p.httpStatus}.\n`;
+  if (b5Refetch) for (const p of b5Refetch.pages) reg += `- Wikipedia targeted re-fetch (${p.queueLead}): HTTP ${p.httpStatus} — shared-egress 429; lead resolved via web_search instead where possible.\n`;
+  reg += `\n### 7d. Already-saved official page re-examined (no fetch)\n\n${b5Assess.officialPageReExamination.note}
+`;
+  reg += `\nAll Batch-5 evidence: scripts/foodie-enrichment/evidence/tirupati-master/batch5/
+(review-queue-assessment.json, discovery-candidates.json, search-*.json, nominatim-food-pois.json,
+websearch-probe.json, wikipedia-refetch-evidence.json, wikivoyage-evidence.json).
+`;
+}
+
 /* ---------------- 3. coverage matrix ---------------- */
 
 let cov = `# FOODIE — Tirupati Discovery Coverage Matrix
@@ -399,7 +491,24 @@ if (o2log && wiki && rq) {
   cov += `- Wikipedia (bounded 15-article set, ≥4 s spacing): ${wiki.pages.reduce((a, p) => a + (p.entryCount ?? 0), 0)} place-link entries + published article coordinates only.\n`;
   cov += `- Independent-source corroboration: ${crossmatchFiles.length} pending rows confirmed (list in the inventory doc).\n`;
   cov += `- Review queue: ${rq.tallies.genuinelyNewQueued} genuinely new unverified leads (priority-tiered) + ${rq.tallies.weakMatches} weak overlaps — NOT added as candidates; human research required first.\n`;
-  cov += `- Small food businesses (tiffin centres, tea stalls, messes, bakeries) could NOT be expanded this pass — the accessible direct sources cover TTD accommodation/attractions/encyclopedic places only; the search provider or a directory export is required for the food categories. Recorded as a gap.\n`;
+  cov += `- Small food businesses (tiffin centres, tea stalls, messes, bakeries) could NOT be expanded in the BATCH-4 pass itself — see the Batch-5 section below where this gap is finally addressed with resumed search + direct sources.\n`;
+}
+
+/* ---- Batch-5 coverage sections ---- */
+if (b5Assess && b5Cands) {
+  cov += `\n## Batch-5 evidence (web_search RESUMED + bounded direct sources, ${b5Cands.assembledOn})\n\n`;
+  if (b5Probe) cov += `- web_search availability: ONE bounded probe → ${b5Probe.decision}${b5Probe.resultCount != null ? ` (${b5Probe.resultCount} results on the probe query)` : ""}. Bounded discovery then ran: 19 locality×category queries + 4 queue-lead checks (8 s pacing; 0 throttles, breaker never tripped).\n`;
+  if (b5Nom) {
+    const nomHits = b5Nom.queries.reduce((a, q) => a + (q.hitCount ?? 0), 0);
+    cov += `- Nominatim: 12 bounded keyword POI queries inside the Tirupati viewbox (\`${b5Nom.viewbox}\`) → ${nomHits} raw hits; published coordinates recorded in evidence ONLY (never imported).\n`;
+  }
+  if (b5Wv) for (const p of b5Wv.pages) cov += `- Wikivoyage ${p.url}: HTTP ${p.httpStatus} — ${p.usefulness}.\n`;
+  if (b5Refetch) for (const p of b5Refetch.pages) cov += `- Wikipedia targeted re-fetch (${p.queueLead}): HTTP ${p.httpStatus} — ${p.usefulness}.\n`;
+  cov += `- Review queue: all ${b5Assess.queueMeta.leadsIn} leads manually assessed on their exact quotations → ${b5Assess.tallies["accept"]} accepts (routed to Batch-015), ${b5Assess.tallies["corroborate-existing"]} corroborations of existing records, ${b5Assess.tallies["reject-generic"]} generic rejects, ${b5Assess.tallies["reject-out-of-scope"]} out-of-scope rejects, ${b5Assess.tallies["ambiguous-keep-queue"]} stay ambiguous in the queue.\n`;
+  cov += `- Tirumala gardens/teerthams: the dead official shells were worked around WITHOUT new fetches — the already-saved official page places-around-tirumala.aspx verbatim lists Gogarbham Gardens, Dharmagiri, Narayangiri, Asthana Mandapams and 11 teerthams; 9 teerthams + Gogarbham/Dharmagiri/Narayangiri/Asthana Mandapam became Batch-015 candidates, the remaining names corroborated existing rows.\n`;
+  cov += `- Small food businesses: THE BIGGEST KNOWN GAP IS NOW PARTIALLY COVERED — ${b5Cands.tallies.byCategory["tiffin"] ?? 0} tiffin centres, ${b5Cands.tallies.byCategory["street_food"] ?? 0} tea-stall/juice/street vendors, ${b5Cands.tallies.byCategory["bakery_sweets"] ?? 0} bakery/sweet shops, ${b5Cands.tallies.byCategory["restaurant"] ?? 0} restaurants and ${b5Cands.tallies.byCategory["cafe"] ?? 0} cafe accepted into Batch-015 (42 food rows total, all UNVERIFIED review candidates; coverage is still directory/mapped-POI grade, not field-verified).\n`;
+  cov += `- Verification backlog RESUMED (bounded): 4 chunks × 12 candidates = 48 attempted this session — 45 area-confirmed (13 with address evidence), 3 not-confirmed (negative evidence recorded); 0 throttled. Remaining backlog: 58 never-attempted + 68 throttled-stubs = 126 (down from 174).\n`;
+  cov += `- Remaining honest gaps: 38 weak leads queued; 4 identity-holds (Indira Guest House / Reddy Tea Stall / 2 Balaji-name rows); Puttur-town venue evidence; Venugopalaswamy Karvetinagaram navbox-only leads now corroborated but still pending verify; menus, hours, photos; the 126-row verification backlog. NOT exhaustive.\n`;
 }
 
 /* ---------------- 4. duplicate review ---------------- */
@@ -439,6 +548,22 @@ dup += `\n## D. Existing-set cross-references (excluded from batch imports)\n\n`
 dup += `| Curated candidate | Already covered by |\n|---|---|\n`;
 for (const r of b11) dup += `| ${r.name as string} | Batch-011: ${r.existingSetId as string} (owner-blocked import) |\n`;
 for (const r of prod) dup += `| ${r.name as string} | production (live row) |\n`;
+
+if (b5Cands && b5Cands.heldLeads.length) {
+  dup += `\n## E. Batch-5 identity holds & name-drift flags (${b5Cands.assembledOn})\n\n`;
+  dup += `Discovery hits that were deliberately NOT imported (never SQL rows) until identity is resolved:\n\n`;
+  for (const h of b5Cands.heldLeads) dup += `- **${h.name}** — ${h.reason}\n`;
+  dup += `\nAdditional name-drift flags from the same pass (kept out of Batch-015 for the same reasons):\n\n`;
+  dup += `- **"Tirumala Bakery, Amaraja Road"** (indiacakes listing) vs frozen batch-014 row **Tirumala Bakery**
+  (Tirupati Bazar) and worksheet row **Tirumala Bakery And Sweets** (Srinagar Colony) — branch identity unresolved; recorded as weak lead only.\n`;
+  dup += `- **"Nagarjuna Military Mess"** search hit ("Military Mess", Tata Nagar swiggy listing) — treated as a
+  CORROBORATION of the existing inventory row, never a new row.\n`;
+  dup += `- **"Sri Venugopala Swamy Temple, Karvetinagaram"** queue lead #87 — proposed for upgrade, but the
+  batch-5 dedupe gate proved the temple already exists (inventory + batch-013 queued); downgraded to corroboration
+  (independent Tripadvisor + official TTD-news evidence).\n`;
+  dup += `- **"Sri Kodandaramaswami Temple"** HIGH queue lead — name-drift spelling of the existing
+  **Sri Kodanda Ramaswamy Temple, Tirupati** (batch-013 queued); corroborated, not duplicated.\n`;
+}
 
 /* ---------------- 5. photo gaps ---------------- */
 

@@ -1,14 +1,58 @@
 {
   "candidate": {
     "name": "Bhavani Bhojnalaya in Ramchandra Nagar,Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Bhavani-Bhojnalaya-Ramchandra-Nagar/9999PX877-X877-230129091202-F6W6_BZDET"
   },
   "query": "\"Bhavani Bhojnalaya in Ramchandra Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Bhojanalya-in-Renigunta-Road/nct-12098833",
+      "name": "Best Bhojanalya in Renigunta Road, Tirupati",
+      "snippet": "Top Bhojanalya in Renigunta Road, Tirupati . Bhavani Bhojanalayam. Nagar - 430 mts Temple Korlagunta, Tirupati … 720 mts Tata Nagar, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com",
+      "name": "Tirupati Bhojnalaya in Ramkrishna Nagar,Parbhani",
+      "snippet": "Nestled near Near R R Petrol Pump in Ramkrishna Nagar, Tirupati Bhojnalaya is a convenient stop for both locals and visitors exploring the city. The ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/100072816422302/posts/tirupati-bhojnalaya-family-restaurant/710867511350457",
+      "name": "Tirupati bhojnalaya family restaurant",
+      "snippet": "Authentic food in Tirupati Address :- opposite indian oil. Contact details 9133999022 9133999044. Next to Ramee Guestline Road, Tirupati – ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Sangamner/Tirupati-Balaji-Bhojnalaya-Suyog-Colony/9999PX241-X241-260103224616-L9A8_BZDET",
+      "name": "Tirupati Balaji Bhojnalaya in Suyog Colony,Sangamner",
+      "snippet": "Located in the vibrant heart of Suyog Colony, Open from Monday:- 7:00 am - 5:00 pm,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Bhojanalya-in-Padmavati-Puram/nct-12098833",
+      "name": "Best Bhojanalya in Padmavati Puram, Tirupati",
+      "snippet": "Address , Railway Station, Korramenugunta, Tirupati - 517501 (Opposite to Bhima Hotel), G. S Mada Street, Korlagunta, Tirupati - 517501 (Opposite Yugadhar ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Bhojanalya in Renigunta Road, Tirupati :: Top Bhojanalya in Renigunta Road, Tirupati . Bhavani Bhojanalayam. Nagar - 430 mts Temple Korlagunta, Tirupati … 720 mts Tata Nagar, Tirupati",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

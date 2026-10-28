@@ -1,14 +1,69 @@
 {
   "candidate": {
     "name": "Popular Restaurants Serving Upma in Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Upma-Dish-Restaurants"
   },
   "query": "\"Popular Restaurants Serving Upma in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Indian-Restaurants-in-Rs-Mada-Street/nct-10263652",
+      "name": "Best Indian Food Restaurants in Rs Mada Street, Tirupati",
+      "snippet": "Address , D.no: 13 , 7-936/6/1, Korlagunta, Tuda Office Rd, Tirupati - 517501 (Opp DSN One Mall), Door No 20/5/1, Korlagunta, Tirupati - 517501 (Sanjay Gandhi ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/South-Indian-Restaurants-in-Bommagunta/nct-10445766",
+      "name": "South Indian Restaurants in Bommagunta, Tirupati - Justdial",
+      "snippet": "South Indian Restaurants in Bommagunta, Tirupati ; Name, Chillies Food Paradise ; Address , House No 19-8-182/A, Air Bypass Main Road, Mr Palli Circle, Tirupati - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/South-Indian-Restaurants-with-Indoor-Seating/nct-10445766-att-res491",
+      "name": "Best South Indian Restaurants With Indoor Seating in Tirupati",
+      "snippet": "Best South Indian Restaurants With Indoor Seating in Tirupati - Order Food Online · Vivaha Bhojanambu · Kafe Tirupati · DHAWAT RESTAURANT · Hotel Saravana Bhavan. Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/South-Indian-Restaurants-with-Counter-Service-in-Tirumala/nct-10445766-att-rest795",
+      "name": "Best South Indian Restaurants With Counter Service in",
+      "snippet": "South Indian Restaurants in Tirumala, Tirupati ; Name, Dojin Smart Restaurant · Krishna Vilas ; Address , Door No 7-6-232, Mitta Street, Nehru Nagar, Tirupati - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Indian-Restaurants-in-Tk-Street/nct-10263652",
+      "name": "Best Indian Restaurants in Tk Street, Tirupati - Justdial Jd",
+      "snippet": "Address , D.no: 13 , 7-936/6/1, Korlagunta, Tuda Office Rd, Tirupati - 517501 (Opp DSN One Mall), H.no:19 , D R MAHAL ROAD , Backside Tirupati Railway Station ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/te/tirupati/restaurants/south-indian?sort=best",
+      "name": "Best South Indian Restaurant in Tirupati",
+      "snippet": "Best South Indian Restaurant in Tirupati · Hotel Ranga Rao · Ps4 Pure Veg Restaurant - Perambur Sri Srinivasa · Sai Fast Food · Nandakam Restaurant · RK Meat Foods. Read more",
+      "host": "www.zomato.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Indian Food Restaurants in Rs Mada Street, Tirupati :: Address , D.no: 13 , 7-936/6/1, Korlagunta, Tuda Office Rd, Tirupati - 517501 (Opp DSN One Mall), Door No 20/5/1, Korlagunta, Tirupati - 517501 (Sanjay Gandhi ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "transientErrors": [
+    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Popular Restaurants Serving Upma in Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Popular Restaurants Serving Upma in Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  ],
+  "retriedAfterThrottle": true,
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

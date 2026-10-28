@@ -1,0 +1,15 @@
+{
+  "task": "batch-5 wikivoyage small-food-business leads",
+  "retrievedOn": "2026-10-28",
+  "pages": [
+    {
+      "url": "https://en.wikivoyage.org/wiki/Tirupati",
+      "httpStatus": 403,
+      "error": "HTTP 403",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "sections": [],
+      "usefulness": "fetch failed (HTTP 403) — recorded as limitation"
+    }
+  ]
+}

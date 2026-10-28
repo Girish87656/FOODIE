@@ -1,14 +1,37 @@
 {
   "candidate": {
     "name": "Craving something sweet, delightful, and utterly irresistible?",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.facebook.com/BeautifulTirupathi/posts/craving-something-sweet-delightful-and-utterly-irresistible-look-no-further-dess/1633924718108116"
   },
   "query": "\"Craving something sweet, delightful, and utterly irresistible?\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.facebook.com/100009158002240/videos/sweet-cravings-weve-got-you-covered-your-favorite-desserts-are-now-just-a-few-ta/1355509630070151",
+      "name": "Sweet cravings? We've got you covered! 🍰✨ Your favorite",
+      "snippet": "The post provides the addresses and phone number for customers to visit the bakery in several locations across Odisha, including Bhubaneswar, ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/LovelyTea.2020/videos/good-food-good-mood-craving-something-tasty-come-grab-your-favorites-today-eat-e/970903586032235",
+      "name": "Good food, good mood! 😋✨ Craving something tasty?",
+      "snippet": "Good food, good mood! ✨ Craving something tasty? Come grab your favorites today! San Vicente Ferrer Chapel. Casa Andres Hotel resort. Craving ...",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": false,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

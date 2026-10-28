@@ -1,14 +1,37 @@
 {
   "candidate": {
     "name": "Raja Food Centre in Chandragiri,Tirupati - Restaurants",
-    "area": "chandragiri"
+    "area": "chandragiri",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Raja-Food-Centre-Chandragiri-Ho/9999PX877-X877-220621204525-L3L9_BZDET"
   },
   "query": "\"Raja Food Centre in Chandragiri,Tirupati - Restaurants\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Raja Food Centre in Chandragiri,Tirupati - Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Raja Food Centre in Chandragiri,Tirupati - Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com",
+      "name": "Best Restaurants in Tirupati",
+      "snippet": "Address , Circle, 160, M.R.Pally, Air Bypass Road, Mr Palli Circle, Tirupati - 517502 (New Balaji Colony), Dhiguva Mallavaram, Kummarapalle, Tirupati - 517520 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in",
+      "name": "FOOD COURT Reviews - Chandragiri Road",
+      "snippet": "Restaurant in Chandragiri Road, Tirupati Restaurant in Tirupati FOOD COURT ... Registered Office Address : Plot No.379 & 380, Sector - 29, Near IFFCO ... Read more",
+      "host": "magicpin.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Restaurants in Tirupati :: Address , Circle, 160, M.R.Pally, Air Bypass Road, Mr Palli Circle, Tirupati - 517502 (New Balaji Colony), Dhiguva Mallavaram, Kummarapalle, Tirupati - 517520 ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Raja Food Centre in Chandragiri,Tirupati - Restaurants\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Raja Food Centre in Chandragiri,Tirupati - Restaurants\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    }
+  ]
 }

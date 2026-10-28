@@ -1,0 +1,147 @@
+{
+  "task": "batch-5 web_search lead-checks",
+  "retrievedOn": "2026-10-28",
+  "pacingMs": 8000,
+  "queries": [
+    {
+      "lead": "Vaikuntam Queue Complex",
+      "query": "\"Vaikuntam Queue Complex\" Tirumala",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.thehansindia.com/news/cities/tirupathi/ttd-to-take-up-feasibility-study-for-vqc-3-at-tirumala-997417",
+          "name": "TTD to take up feasibility study for VQC-3 at Tirumala",
+          "snippet": "Aug 16, 2025 — ... Vaikuntam Queue Complex (VQC-3). The study, expected to roll out in the coming weeks, will lay the groundwork for what could become a major ... Read more",
+          "host": "www.thehansindia.com"
+        },
+        {
+          "url": "https://www.facebook.com/TirumalaNestam/videos/tirumala-temple-atc-circle-and-vaikuntam-queue-complex-tour/202187468064210/?locale=hi_IN",
+          "name": "Tirumala Temple ATC Circle And Vaikuntam Queue",
+          "snippet": "Tirumala Temple ATC Circle And Vaikuntam Queue Complex Tour Video # Tirumala #TeluguNestam #TirumalaNestam. Read more",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/new-waiting-complex-coming-up-at-tirumala/article8311386.ece",
+          "name": "New waiting complex coming up at Tirumala",
+          "snippet": "Mar 4, 2016 — massive Vaikuntam queue complexes … built in a sprawling area of about 17,000 sq feet at a whopping cost of Rs.1.20 crore.",
+          "host": "www.thehindu.com"
+        },
+        {
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/arduous-wait-for-darshan-at-tirumala/article4820746.ece",
+          "name": "Arduous wait for darshan at Tirumala",
+          "snippet": "Jun 17, 2013 — Devotees were rather forced to spend prolonged hours in the labyrinthine queue even before reaching the entry point (Vaikuntam complex) for the ... Read more",
+          "host": "www.thehindu.com"
+        },
+        {
+          "url": "https://my.trip.com/travel-guide/attraction/chittoor-district/vaikuntam-queue-complex-1-141557066",
+          "name": "Harga Tiket Vaikuntam Queue Complex - 1 [2026]",
+          "snippet": "Tempah tiket Vaikuntam Queue Complex - 1 dalam talian dengan Trip.com. Semak harga tiket, teroka tawaran, baca ulasan pengunjung sebenar, lihat waktu buka ...",
+          "host": "my.trip.com"
+        }
+      ],
+      "hitCount": 5
+    },
+    {
+      "lead": "Siddheswara Swamy Temple",
+      "query": "\"Siddheswara Swamy Temple\" Talakona",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.facebook.com",
+          "name": "Sri Talakona Siddeswara Swamy Devastanam",
+          "snippet": "Talakona is home of Siddheswara Swami. As per the Puranas, devotees seeking children visit here to pray. This managed by Lord Shiva's devotees and is not ... Read more",
+          "host": "www.facebook.com"
+        }
+      ],
+      "hitCount": 1
+    },
+    {
+      "lead": "Venugopalaswamy Temple, Karvetinagaram",
+      "query": "\"Venugopalaswamy Temple\" Karvetinagaram",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://us.trip.com/travel-guide/attraction/prakasam/venugopalaswamy-temple-144794515",
+          "name": "VenugopalaSwamy Temple Tickets [2026]",
+          "snippet": "Book VenugopalaSwamy Temple tickets online with Trip.com. Check ticket prices, discover deals, read real visitor reviews, view updated opening hours, ...",
+          "host": "us.trip.com"
+        },
+        {
+          "url": "https://kalyangeetha.wordpress.com/karivetinagar-venugopalaswamy-temple-1",
+          "name": "karivetinagar-venugopalaswamy-temple-1 - Kshethradanam",
+          "snippet": "karivetinagar- venugopalaswamy-temple -1. Posted on November 26, 2021 Full size 1150 × 644. Leave a comment Cancel reply. Write a comment. Read more",
+          "host": "kalyangeetha.wordpress.com"
+        },
+        {
+          "url": "https://www.tripadvisor.in/ShowUserReviews-g297587-d3704865-r310043968-Sri_Venugopala_Swamy_Temple-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "On my visit to Karveti Venugopala Swamy Temple",
+          "snippet": "Sep 14, 2015 — Karveti Venugopala Swamy temple Is in karvetinagaram , at a distance of 48 kms from Titupati. It was built in 15th century. The journey ... Read more",
+          "host": "www.tripadvisor.in"
+        },
+        {
+          "url": "https://news.tirumala.org/grand-pushpa-yagam-performed-at-sri-venugopala-swamy-temple-karvetinagaram-_-%E0%B0%AA%E0%B1%81%E0%B0%B7%E0%B1%8D%E0%B0%AA%E0%B0%B8%E0%B1%81%E0%B0%97%E0%B0%82%E0%B0%A7%E0%B0%BE%E0%B0%B2",
+          "name": "పుష్పసుగంధాల మధ్య వైభవంగా శ్రీ వేణుగోపాలస్వామివారి పుష్పయాగ",
+          "snippet": "Jun 15, 2026 — GRAND PUSHPA YAGAM PERFORMED AT SRI VENUGOPALA SWAMY TEMPLE, KARVETINAGARAM _ పుష్పసుగంధాల మధ్య వైభవంగా శ్రీ ... Read more",
+          "host": "news.tirumala.org"
+        }
+      ],
+      "hitCount": 4
+    },
+    {
+      "lead": "Puttur, Andhra Pradesh",
+      "query": "Puttur Tirupati district places to visit",
+      "retrievedOn": "2026-10-28",
+      "hits": [
+        {
+          "url": "https://www.facebook.com/ItsMyTirupathi/videos/top-7-places-to-visit-in-tirupati-part-1-%EF%B8%8Fvideo-by-spy_creations-tirumala-tirupa/376155060804158",
+          "name": "Top 7 Places to visit in Tirupati (Part 1) ❤️ Video by @",
+          "snippet": "Top 7 Places to visit in Tirupati. Heavenly hills Tirupati Heavenly hills Tirupati",
+          "host": "www.facebook.com"
+        },
+        {
+          "url": "https://www.tripadvisor.co.nz/Attractions-g297587-Activities-c57-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "Nature & Parks in Tirupati - Tripadvisor",
+          "snippet": "Theerthastan . The Rock garden and Chakra Theertham. Papa vinasam Dam is a famous place to visit in tirupati, Theerrtham is a must visit spiritual place.",
+          "host": "www.tripadvisor.co.nz"
+        },
+        {
+          "url": "https://www.scribd.com/document/320258005/Tirupati-Tourist-Spots",
+          "name": "Key Tourist Spots in Tirupati Area | PDF | Religion And Belief",
+          "snippet": "In addition to temples, the district has scenic areas that are tourist attractions, such as Chandragiri Fort, Horsley Hills, Kalyani Dam, Kailasakona Waterfalls ... Read more",
+          "host": "www.scribd.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Attractions-g297587-Activities-c47-oa30-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Tirupati Sights & Historical Landmarks",
+          "snippet": "Sri Chennakesavaswami Temple 4.0 . Sri Varasiddi Vinayaka Temple 4.0. The varasiddi temple is also known as the wish filling temple.",
+          "host": "www.tripadvisor.com"
+        },
+        {
+          "url": "https://www.tripadvisor.ie/Attractions-g297587-Activities-c57-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Parks & Nature Attractions in Tirupati",
+          "snippet": "Chakra Teertham . The Rock garden and Chakra. Papa vinasam Dam is a famous place to visit in tirupati,",
+          "host": "www.tripadvisor.ie"
+        },
+        {
+          "url": "https://www.justdial.com/Chittoor/Tourist-Attraction-in-Puttur-Chittoor/nct-10596038/page-2",
+          "name": "Tourist Attraction in Puttur Chittoor, Chittoor - Page 2",
+          "snippet": "Mamanduru River Front · Puligundu Rock Mountain · Kalyani Dam · Naravari Palli Waterfalls · Naravari Palle Road Waterfalls · Katuru Kalangi River Bridge · Mosco Hill ... Read more",
+          "host": "www.justdial.com"
+        },
+        {
+          "url": "https://www.tripadvisor.com.sg/Attractions-g297587-Activities-c57-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+          "name": "THE 10 BEST Parks & Nature Attractions in Tirupati",
+          "snippet": "Nature & Parks in Tirupati ; 1. Talakona Waterfall . 4.1 ; 2. Japali Teertham. 4.6 ; 3. Silathoranam Garden. 4.4 ; 4. Akashaganga. 4.2 ; 5. Deer Park. 4.2. Read more",
+          "host": "www.tripadvisor.com.sg"
+        },
+        {
+          "url": "https://www.instagram.com/popular/puttur-best-places",
+          "name": "Puttur Best Places",
+          "snippet": "Puttur in Karnataka is known for its 11th century temples, natural hot springs, and chocolate factory . The Sri Mahalingeshwara Temple is a central landmark ...",
+          "host": "www.instagram.com"
+        }
+      ],
+      "hitCount": 8
+    }
+  ]
+}

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Order from Orion Tiffin Center online in Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.swiggy.com/city/tirupati/orion-tiffin-center-karakambadi-rd-korlagunta-rest870229"
   },
   "query": "\"Order from Orion Tiffin Center online in Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.zomato.com/tr/tirupati/otc-orion-tiffin-centre-korlagunta/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkVuIGl5aSBTb3V0aCBJbmRpYW4gTWVhbHMiLCJkaXNoX2lkcyI6WyIzMjEyNSJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+      "name": "OTC - Orion Tiffin Centre, Korlagunta order online",
+      "snippet": "Order food online from OTC - Orion Tiffin Centre, Korlagunta, Tirupati . Get great offers and super fast food delivery when you order food online from OTC ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-with-Dine-in-in-Tiruchanoor/nct-10481155-att-Rdin",
+      "name": "Best Tiffin Services With Dine In in Tiruchanoor, Tirupati",
+      "snippet": "Name, Sri Lakshmi Venkateswara Fast Foods · Idli Reddy Tiffin Centre ; Address , Yogimallavaram, Tiruchanur, Tiruchanoor Road, Tiruchanoor, Tirupati - 517503 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/sk/tirupati/otc-orion-tiffin-centre-korlagunta/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gTm9ydGggSW5kaWFuIE1lYWwiLCJkaXNoX2lkcyI6WyI3MDU0MSJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D",
+      "name": "OTC - Orion Tiffin Centre, Korlagunta order online",
+      "snippet": "Order food online from OTC - Orion Tiffin Centre, Korlagunta, Tirupati . Get great offers and super fast food delivery when you order food online from OTC ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://oriongroups.in/contact",
+      "name": "Premium Hospitality in Tirupati - Orion Group of Hotels",
+      "snippet": "Orion Group of Hotels offers premium hotel stays, authentic vegetarian restaurants, tiffin centres, and catering services across Tirupati , Andhra Pradesh.",
+      "host": "oriongroups.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/chandra-tiffin-shop-tirumala/order",
+      "name": "Chandra Tiffin Shop, Tirumala order online",
+      "snippet": "Order food online from Chandra Tiffin Shop, Tirumala, Tirupati . Get great offers and super fast food delivery when you order food online from Chandra Tiffin ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-with-Dine-in-in-Gowri-Nagar/nct-10481155-att-Rdin",
+      "name": "Top Tiffin Services With Dine In in Gowri Nagar - Tirupati",
+      "snippet": "Address , Bazaarstreet, Gowri Nagar, Renigunta, Tirupati - 517520, Old Checkpost, Renigunta, Tirupati - 517520, Renigunta, Gowri Nagar, Tirupati - 517520 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services With Dine In in Tiruchanoor, Tirupati :: Name, Sri Lakshmi Venkateswara Fast Foods · Idli Reddy Tiffin Centre ; Address , Yogimallavaram, Tiruchanur, Tiruchanoor Road, Tiruchanoor, Tirupati - 517503 ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

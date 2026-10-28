@@ -1,14 +1,44 @@
 {
   "candidate": {
     "name": "Lavanya Tiffin Center in Tirumala,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Lavanya-Tiffin-Center-Tirumala/9999PX877-X877-230210025710-S9C2_BZDET"
   },
   "query": "\"Lavanya Tiffin Center in Tirumala,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Lavanya-Tiffin-Center-Tirumala/9999PX877-X877-230210025710-S9C2_BZDET/photos",
+      "name": "4 Photos of Lavanya Tiffin Center in Tirumala, Tirupati",
+      "snippet": "4 Photos of Lavanya Tiffin Center in Tirumala, Tirupati Rated 4.4 based on 28 Customer Reviews and Ratings with 4 Photos. Visit Justdial for Address , ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Lavanya-Tiffin-Center-Tirumala-Tirumala/9999PX877-X877-230210025710-S9C2_BZDET/reviews",
+      "name": "28 Reviews for Lavanya Tiffin Center in Tirumala, Tirupati",
+      "snippet": "... 28 Customer Reviews and Ratings with Photos. Check Timings, Address , Contact Number, Photos, Maps of Lavanya Tiffin Center in Tirumala, Tirupati - Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Lavanya-Tiffin-Center-Tirumala/9999PX877-X877-230210025710-S9C2_BZDET/writereview?tab=writereview&search=&docid=9999PX877-X877-230210025710-S9C2&bname=Lavanya%20Tiffin%20Center%20Tirumala&srvname=&totalJdReviews=&city=Tirupati&area=&rateval=&datacity=Tirupati&defFid=&fromFlow=1&source=SHARE&amp=1",
+      "name": "Give Rating & Review for Lavanya Tiffin Center in Tirumala",
+      "snippet": "Write a Review for Lavanya Tiffin Center in Tirumala, Tirupati . Get Best Price, Address , Contact Number, Reviews and Ratings of Lavanya Tiffin Center in ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

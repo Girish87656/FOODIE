@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Vasundhara Tea Stall, Bhavani Nagar, Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://magicpin.in/Tirupati/Bhavani-Nagar/Grocery/Vasundhara-Tea-Stall/store/39c068c?srsltid=AYCX9vId1MA1y54nFJfAEaIuvauM6TA8TFOXnvPVJFXgjGMLvfk-g9Pw"
   },
   "query": "\"Vasundhara Tea Stall, Bhavani Nagar, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Tiruchanoor-Road/nct-10853304",
+      "name": "Best Tea Stalls in Tiruchanoor Road, Tirupati",
+      "snippet": "Address , Shop No, 2, Balijagadda, Mr Palli Road, Korlagunta, Tirupati - 517501, Patnool Street, Pushkarini Road, Nehru Nagar, Tirupati - 517501 (Near ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Stv-Nagar/nct-10853304",
+      "name": "Top Tea Stalls in Stv Nagar - Best Chai Wala Tirupati near me",
+      "snippet": "183 Tea Stalls in Stv Nagar, Tirupati . Open until 9:30 pm Call Now , Tirupati - 517501 (Opposite Padmavathi Park) TK Street, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Stalls-Family-Friendly-in-Kt-Road/nct-10853304-att-res494",
+      "name": "Best Tea Stalls Family Friendly in Kt Road, Tirupati",
+      "snippet": "Top Tea Stalls Family Friendly in Kt Road, Tirupati . Opens at 4:00 am tomorrow. Renigunta Road, Tirupati - 517501 , locations, and contact details easily.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Kr-Nagar/nct-10853304",
+      "name": "Top Tea Stalls in Kr Nagar - Best Chai Wala Tirupati near me",
+      "snippet": "32 Tea Stalls in Kr Nagar, Tirupati . Address Karakambadi Road, Mangalam, Tirupati - 517507",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Black-Tea-Dish-Restaurants-in-Bhavani-Nagar",
+      "name": "Best Black Tea serving restaurants in Bhavani Nagar, Tirupati",
+      "snippet": "Address , Srinivasa Residency Complex, tuda office rd, Tirupati - 517501 (Near Sankalpa Super Specialty Hospital), Ttd Complex, Prakasam Road, Balaji Colony ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tea-Stalls-in-Gandhi-Road/nct-10853304",
+      "name": "Best Tea Stalls in Gandhi Road, Tirupati - Justdial Jd",
+      "snippet": "183 Tea Stalls in Gandhi Road, Tirupati . Get Phone Numbers, Address , Reviews, Photos, Maps. Nehru Nagar - 1.63 km ₹ 150 Price for two Open until 10:30 pm",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tea Stalls in Tiruchanoor Road, Tirupati :: Address , Shop No, 2, Balijagadda, Mr Palli Road, Korlagunta, Tirupati - 517501, Patnool Street, Pushkarini Road, Nehru Nagar, Tirupati - 517501 (Near ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

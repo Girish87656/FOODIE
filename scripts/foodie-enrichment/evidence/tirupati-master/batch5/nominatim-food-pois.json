@@ -1,0 +1,363 @@
+{
+  "task": "batch-5 nominatim small-food-business discovery",
+  "retrievedOn": "2026-10-28",
+  "viewbox": "79.25,13.78,79.55,13.50",
+  "queries": [
+    {
+      "keyword": "tiffin centre Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=tiffin%20centre%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "mess Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=mess%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [
+        {
+          "name": "B Block mess Area",
+          "displayName": "B Block mess Area, Tirupati Rd, Reservoir Colony, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India",
+          "osmType": "way",
+          "osmId": 1458514365,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6296981",
+          "lon": "79.4033838",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "B-mess sv university",
+          "displayName": "B-mess sv university, Tirupati Rd, Reservoir Colony, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India",
+          "osmType": "node",
+          "osmId": 13376209087,
+          "category": "amenity",
+          "type": "food_court",
+          "lat": "13.6296994",
+          "lon": "79.4033171",
+          "importance": 0.00005350499732962566
+        }
+      ],
+      "hitCount": 2,
+      "usefulness": "hits recorded (names + published coordinates for human review; batch rows still import coordinates-NULL)"
+    },
+    {
+      "keyword": "bakery Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=bakery%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [
+        {
+          "name": "Mayura bakery",
+          "displayName": "Mayura bakery, Gandhi Road, Tirupathi Urban, Reservoir Colony, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India",
+          "osmType": "way",
+          "osmId": 1436672958,
+          "category": "building",
+          "type": "commercial",
+          "lat": "13.6313324",
+          "lon": "79.4187900",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Doss bakery",
+          "displayName": "Doss bakery, Yadava Street, Tirupathi Urban, Reservoir Colony, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "way",
+          "osmId": 1436671975,
+          "category": "building",
+          "type": "commercial",
+          "lat": "13.6321224",
+          "lon": "79.4183021",
+          "importance": 0.00005350499732962566
+        }
+      ],
+      "hitCount": 2,
+      "usefulness": "hits recorded (names + published coordinates for human review; batch rows still import coordinates-NULL)"
+    },
+    {
+      "keyword": "sweets Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=sweets%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "juice shop Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=juice%20shop%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "tea stall Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=tea%20stall%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "cafe Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=cafe%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [
+        {
+          "name": "Manasa Vihar Cafe",
+          "displayName": "Manasa Vihar Cafe, Prakasam Road, Tirupathi Urban, Reservoir Colony, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "way",
+          "osmId": 1436662973,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "13.6305027",
+          "lon": "79.4117142",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Cafe Coffee Day",
+          "displayName": "Cafe Coffee Day, 456, Gandhi Road, Tirupathi Urban, Reservoir Colony, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4532475882,
+          "category": "amenity",
+          "type": "cafe",
+          "lat": "13.6460925",
+          "lon": "79.4122916",
+          "importance": 0.00005350499732962566
+        }
+      ],
+      "hitCount": 2,
+      "usefulness": "hits recorded (names + published coordinates for human review; batch rows still import coordinates-NULL)"
+    },
+    {
+      "keyword": "restaurant Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=restaurant%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [
+        {
+          "name": "Vanam Restaurant",
+          "displayName": "Vanam Restaurant, Tirumala Link Road, Alipiri Gate, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517502, India",
+          "osmType": "node",
+          "osmId": 4446303912,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6236005",
+          "lon": "79.3646973",
+          "importance": 0.00005389105058361208
+        },
+        {
+          "name": "Springs Restaurant",
+          "displayName": "Springs Restaurant, SH488, Alimelumangapuram Rural, Narayanapuram, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India",
+          "osmType": "node",
+          "osmId": 12594956574,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6115341",
+          "lon": "79.4425827",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "SFC Restaurant",
+          "displayName": "SFC Restaurant, 18-1-421, Srinivasa Flyover, Tirupathi Urban, Narayanapuram, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446461132,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6236886",
+          "lon": "79.4306379",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Yalamuri Bar And Restaurant",
+          "displayName": "Yalamuri Bar And Restaurant, SH488, Tirupathi Urban, Narayanapuram, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446404162,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6222899",
+          "lon": "79.4304903",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Manju Foods Family Restaurant",
+          "displayName": "Manju Foods Family Restaurant, K.T.Road, Tirupathi Urban, K.B Layout, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446487701,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6390546",
+          "lon": "79.4199634",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Hotel Sri Nandhi Restaurant",
+          "displayName": "Hotel Sri Nandhi Restaurant, K.T.Road, Tirupathi Urban, K.B Layout, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446575081,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6530860",
+          "lon": "79.4206324",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Tirupati Social and Cultural Society Club Bar & Restaurant",
+          "displayName": "Tirupati Social and Cultural Society Club Bar & Restaurant, Srinivasa Flyover, Tirupathi Urban, Tataiah Gunta, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India",
+          "osmType": "node",
+          "osmId": 12597538217,
+          "category": "amenity",
+          "type": "bar",
+          "lat": "13.6257899",
+          "lon": "79.4320161",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Rainbow Vegetarian Restaurant",
+          "displayName": "Rainbow Vegetarian Restaurant, SH488, Alimelumangapuram Rural, Narayanapuram, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446470826,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6139463",
+          "lon": "79.4407677",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Chillies Restaurant",
+          "displayName": "Chillies Restaurant, Air Bypass Road, Tirupathi Urban, STV Nagar, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446392860,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6230616",
+          "lon": "79.4230082",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Carrots Restaurant",
+          "displayName": "Carrots Restaurant, Air Bypass Road, Tirupathi Urban, STV Nagar, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446363951,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6227852",
+          "lon": "79.4193850",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Harika Bar And Restaurant",
+          "displayName": "Harika Bar And Restaurant, 4-4-515, Nehru Street, Tirupathi Urban, Tataiah Gunta, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446410559,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6361984",
+          "lon": "79.4119654",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Manal Restaurant",
+          "displayName": "Manal Restaurant, K.T.Road, Tirupathi Urban, K.B Layout, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517500, India",
+          "osmType": "node",
+          "osmId": 4446434741,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6467356",
+          "lon": "79.4196474",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "Sunlight Veg Restaurant",
+          "displayName": "Sunlight Veg Restaurant, K.T.Road, Tirupathi Urban, K.B Layout, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 4446413971,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6505264",
+          "lon": "79.4183175",
+          "importance": 0.00005350499732962566
+        },
+        {
+          "name": "IMPERIAL SPICE RESTAURANT",
+          "displayName": "IMPERIAL SPICE RESTAURANT, 14-2-174, Nethaji Road, Tirupathi Urban, Tataiah Gunta, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517501, India",
+          "osmType": "node",
+          "osmId": 9112845989,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6289957",
+          "lon": "79.4236211",
+          "importance": 0.00005350499732962566
+        }
+      ],
+      "hitCount": 14,
+      "usefulness": "hits recorded (names + published coordinates for human review; batch rows still import coordinates-NULL)"
+    },
+    {
+      "keyword": "biryani Tirupati",
+      "url": "https://nominatim.openstreetmap.org/search?q=biryani%20Tirupati&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "canteen Tirumala",
+      "url": "https://nominatim.openstreetmap.org/search?q=canteen%20Tirumala&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "tiffin centre Tirumala",
+      "url": "https://nominatim.openstreetmap.org/search?q=tiffin%20centre%20Tirumala&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [],
+      "hitCount": 0,
+      "usefulness": "no bounded hits"
+    },
+    {
+      "keyword": "restaurant Tirumala",
+      "url": "https://nominatim.openstreetmap.org/search?q=restaurant%20Tirumala&format=jsonv2&limit=25&viewbox=79.25,13.78,79.55,13.50&bounded=1&addressdetails=1&accept-language=en",
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "httpStatus": 200,
+      "hits": [
+        {
+          "name": "Vanam Restaurant",
+          "displayName": "Vanam Restaurant, Tirumala Link Road, Alipiri Gate, Tirupati, Tirupati Urban Mandal, Tirupati District, Andhra Pradesh, 517502, India",
+          "osmType": "node",
+          "osmId": 4446303912,
+          "category": "amenity",
+          "type": "restaurant",
+          "lat": "13.6236005",
+          "lon": "79.3646973",
+          "importance": 0.00005389105058361208
+        }
+      ],
+      "hitCount": 1,
+      "usefulness": "hits recorded (names + published coordinates for human review; batch rows still import coordinates-NULL)"
+    }
+  ]
+}

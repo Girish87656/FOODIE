@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Ugadhi Restrent - Pure Veg Restaurants In Tirupati",
-    "area": "renigunta"
+    "area": "renigunta",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Ugadhi-Restrent-Near-Tirupati-Airport-Authority-Of-India-Renigunta/9999PX877-X877-210330194242-E1Q7_BZDET"
   },
   "query": "\"Ugadhi Restrent - Pure Veg Restaurants In Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
-    "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Ugadhi Restrent - Pure Veg Restaurants In Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Ugadhi Restrent - Pure Veg Restaurants In Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Pure-Veg-Restaurants-in-Yadava-Street/nct-10396867",
+      "name": "Best Pure Veg Restaurants in Yadava Street, Tirupati",
+      "snippet": "Address , Door No 20/5/1, Korlagunta, Tirupati - 517501 (Sanjay Gandhi Colony), Tiruchanoor Road, Tirupati - 517501 (Revenue Colony), Sreenivasam Complex ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/marasasarovarpremieretirupati/posts/celebrate-ugadi-with-a-feast-fit-for-the-occasion-indulge-in-a-special-sunday-br/1053814096764496",
+      "name": "Celebrate Ugadi with a feast fit for the occasion!",
+      "snippet": "🍽️   Venue: Lotus Restaurant, Marasa Sarovar Premiere, Tirupati Date: 30th March Time: 12:30PM - 3:30 PM Come together with your loved ones ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/north-eastern-cuisine-order-online",
+      "name": "Best North Eastern Restaurants in Tirupati",
+      "snippet": "Explore The Best North Eastern Restaurants In Tirupati . View Menus, Photos, Ratings, Reviews Or Order Online And Enjoy Mouth-watering North Eastern.",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.com/Restaurants-g297587-zfp40-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "THE BEST Restaurants for Special Occasions in Tirupati",
+      "snippet": "Tirupati Restaurants for Special Occasions ; 1. Vyom, Ekante' Bliss, Tirupati - Ihcl Seleqtions. 4.5. 4.5 of 5 bubbles. (122 reviews). Chinese, Indian ; 2. Zodiac. Read more",
+      "host": "www.tripadvisor.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/subbayyagarihoteltirupati/videos/happy-ugadi-may-this-ugadi-bring-new-beginnings-happiness-and-the-rich-flavors-o/4130152620582745",
+      "name": "Subbayya gari hotel tirupati",
+      "snippet": "95425 68888 Padmavati puram, Tiruchanoor Rd, opposite Panchayat Office, Korramenugunta, Tirupati , Andhra Pradesh 517503 . #HappyUgadi # ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/South-Indian-Restaurants-That-Are-Pure-Veg-in-T-P-Area/nct-10445766-att-res450",
+      "name": "Top South Indian Restaurants That Are Pure Veg in T P Area",
+      "snippet": "Find ✓South Indian Restaurants in T P Area, Tirupati . Get Phone Numbers, Address ... Tirupati Bazar, Tirupati - 517501 (Near Ramanuja Circle), C/O Hotel ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": false,
+  "addressEvidence": "Best Pure Veg Restaurants in Yadava Street, Tirupati :: Address , Door No 20/5/1, Korlagunta, Tirupati - 517501 (Sanjay Gandhi Colony), Tiruchanoor Road, Tirupati - 517501 (Revenue Colony), Sreenivasam Complex ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 429: {\\\"code\\\":429,\\\"data\\\":null,\\\"message\\\":\\\"Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"name\\\":\\\"UpstreamAPIError\\\",\\\"readableMessage\\\":\\\"UpstreamAPIError: Primary search failed: ReadTimeout(ReadTimeoutError(\\\\\\\"HTTPSConnectionPool(host='google.serper.dev.psmoe.com', port=443): Read timed out. (read timeout=4)\\\\\\\"))\\\",\\\"status\\\":42900}\\n\"}",
+        "retry failed: Function invoke failed with status 500: {\"result\":null,\"error\":\"Search failed: request failed with status 422: {\\\"code\\\":422,\\\"data\\\":null,\\\"message\\\":\\\"No search results available for query \\\\\\\"Ugadhi Restrent - Pure Veg Restaurants In Tirupati\\\\\\\" Tirupati address\\\",\\\"name\\\":\\\"AssertionFailureError\\\",\\\"readableMessage\\\":\\\"AssertionFailureError: No search results available for query \\\\\\\"Ugadhi Restrent - Pure Veg Restaurants In Tirupati\\\\\\\" Tirupati address\\\",\\\"status\\\":42206}\\n\"}"
+      ]
+    }
+  ]
 }

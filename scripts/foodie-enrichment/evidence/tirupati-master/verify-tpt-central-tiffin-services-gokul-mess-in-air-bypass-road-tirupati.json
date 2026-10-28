@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Tiffin Services - Gokul Mess in Air Bypass Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Gokul-Mess-Opposite-Raj-Building-Beside-Hp-Petrol-Bunk-Lane-Air-Bypass-Road/9999PX877-X877-160726112635-Y7K2_BZDET"
   },
   "query": "\"Tiffin Services - Gokul Mess in Air Bypass Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Tilak-Road/nct-10481155",
+      "name": "Best Tiffin Services in Tilak Road, Tirupati - Justdial Jd",
+      "snippet": "Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, T P Area ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Vidyanagar-3Rd-Cross-Road/nct-10481155",
+      "name": "Best Tiffin Services in Vidyanagar 3Rd Cross Road, Tirupati",
+      "snippet": "Tiffin Services in Vidyanagar 3Rd Cross Road, Tirupati ; Name, Mom's Kitchen · Ranemma Tiffin Center ; Address , Mahila University Road, L B Nagar, Tirupati - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Rajasthani-Food/nct-10481182",
+      "name": "Best Tiffin Services For Rajasthani Food in Tirupati",
+      "snippet": "Address , G Car Street, T P Area, Tirupati - 517501 (Opposite Buss Stand, Opposite Govindaraja Swamy Temple), Tirumala Reddy Nagar, Mangalam, Tirupati - 517507 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Monthly-Basis/nct-11992539/page-3",
+      "name": "Tiffin Services For Monthly Basis in Tirupati - Page 3",
+      "snippet": "Tiffin Services For Monthly Basis in Tirupati ; Name, Pushpagiri Tiffin Centre · Sri Andhra Mess And Tiffin ; Address , Bengaluru, Yerthiganahalli, Bangalore - ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-with-Dine-in-in-Tiruchanoor/nct-10481155-att-Rdin",
+      "name": "Best Tiffin Services With Dine In in Tiruchanoor, Tirupati",
+      "snippet": "Name, Sri Lakshmi Venkateswara Fast Foods · Idli Reddy Tiffin Centre ; Address , Yogimallavaram, Tiruchanur, Tiruchanoor Road, Tiruchanoor, Tirupati - 517503 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Office-in-Air-Bypass-Road/nct-10481179",
+      "name": "Best Tiffin Services For Office in Air Bypass Road, Tirupati",
+      "snippet": "Address , B-block Ground Floor Mahalaxmi Residency, Padamavathi Pooram, Tiruchanoor, Tirupati - 517503 (Near Padamavathi Kalyana Mandapam), Varadharaja Swamy ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Tilak Road, Tirupati - Justdial Jd :: Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, T P Area ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,30 @@
 {
   "candidate": {
     "name": "Order from Tirumala Tiffins online in Hyderabad",
-    "area": "tirumala"
+    "area": "tirumala",
+    "sourceUrl": "https://www.swiggy.com/city/hyderabad/tirumala-tiffins-serilingampally-1-kondapur-rest405226"
   },
   "query": "\"Order from Tirumala Tiffins online in Hyderabad\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.swiggy.com/city/hyderabad/tirumala-tiffins-serilingampally-1-kondapur-rest405226",
+      "name": "Order from Tirumala Tiffins online in Hyderabad",
+      "snippet": "Order Online from Tirumala Tiffins in Kondapur, Hyderabad for delicious South Indian food. Customers can order their favorite dishes online and enjoy doorstep ...",
+      "host": "www.swiggy.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": null,
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

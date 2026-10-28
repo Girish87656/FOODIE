@@ -1,0 +1,39 @@
+{
+  "task": "batch-5 targeted wikipedia refetch",
+  "retrievedOn": "2026-10-28",
+  "pages": [
+    {
+      "article": "Vaikuntam Queue Complex",
+      "url": "https://en.wikipedia.org/wiki/Tirumala_Venkateswara_Temple",
+      "httpStatus": 200,
+      "error": null,
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "queueLead": "Vaikuntam Queue Complex",
+      "usefulness": "page served but target strings absent — lead stays queued",
+      "findings": []
+    },
+    {
+      "article": "Siddheswara Swamy Temple",
+      "url": "https://en.wikipedia.org/wiki/Talakona",
+      "httpStatus": 200,
+      "error": null,
+      "retrievedOn": "2026-10-28",
+      "userAgent": "FoodieEnrichmentResearch/1.0 (https://github.com/Girish87656/FOODIE; contact: repo issue tracker)",
+      "queueLead": "Siddheswara Swamy Temple",
+      "usefulness": "content retrieved; findings require manual locality check",
+      "findings": [
+        {
+          "name": "Siddheswara Swamy Temple",
+          "verbatimQuote": "[ 1 ] Talakona is also known for the Lord Siddheswara Swamy Temple , which is located close to the waterfall.",
+          "upgradeDecision": "manual — locality must be IN the sentence"
+        },
+        {
+          "name": "Siddheswara",
+          "verbatimQuote": "[ 1 ] Talakona is also known for the Lord Siddheswara Swamy Temple , which is located close to the waterfall.",
+          "upgradeDecision": "manual — locality must be IN the sentence"
+        }
+      ]
+    }
+  ]
+}

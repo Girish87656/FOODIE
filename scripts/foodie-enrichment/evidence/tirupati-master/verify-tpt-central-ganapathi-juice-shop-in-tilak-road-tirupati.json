@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Ganapathi Juice Shop in Tilak Road,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Ganapathi-Juice-Shop-Beside-Sri-Teja-Digital-Studio-Tilak-Road/9999PX877-X877-160615175306-K6L3_BZDET"
   },
   "query": "\"Ganapathi Juice Shop in Tilak Road,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Sugar-Cane-Juice-Centres-in-Tilak-Road/nct-10461309",
+      "name": "Best Sugar Cane Juice Centres in Tilak Road, Tirupati",
+      "snippet": "Sugar Cane Juice Centres in Tilak Road, Tirupati . Open until 10:30 pm. Open until 12:00 am A Call Now. Door no: 1-3-179, Tirupati - 517504",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/BeautifulTirupathi/posts/this-juice-centre-had-separate-fan-base-in-tirupati-%E0%B0%92%E0%B0%95-%E0%B0%97%E0%B1%8D%E0%B0%B2%E0%B0%BE%E0%B0%B8%E0%B1%8D-%E0%B0%9C%E0%B1%8D%E0%B0%AF%E0%B1%82%E0%B0%B8%E0%B1%8D-%E0%B0%A4%E0%B1%80%E0%B0%B8%E0%B1%81%E0%B0%95%E0%B1%81%E0%B0%82%E0%B0%9F%E0%B1%87-%E0%B0%87/1611591612525761",
+      "name": "This Juice Centre Had Separate Fan Base In Tirupati 😍👌💪",
+      "snippet": "Ganesh Juice Center, Their original base was at Karumariamman Temple, Tilak rd, One of the oldest juice shop in tirupathi . Location ( opposite ...",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Ganapathi-Cooldrinks-Tilak-Road-Tilak-Road/9999P8581-8581-110202145806-N8Y2_BZDET/photos",
+      "name": "3 Photos of Ganapathi Cooldrinks in Tilak Road, Tirupati",
+      "snippet": "3 Photos of Ganapathi Cooldrinks in Tilak Road, Tirupati Rated 4.0 based on 1 Customer Reviews and Ratings with 3 Photos. Visit Justdial for Address ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.aptshealth.in/tirupati/ganapati-cool-drinks-juice-corner",
+      "name": "Ganapati Cool Drinks Juice Corner in Tirupati",
+      "snippet": "Address JCJ9+VW4, Varadaraja Nagar, Tirupati , Andhra Pradesh 517501. Hours × Monday09:00 AM – 09:00 PM. Tilak Rd, Varadaraja Nagar, Tirupati ,",
+      "host": "www.aptshealth.in",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Juice-Centres-in-Abbanna-Colony/nct-10283258",
+      "name": "Top Fruit Juice Centres in Abbanna Colony, Tirupati",
+      "snippet": "199 Fruit Juice Centres in Abbanna Colony, Tirupati . 310 mts Open until 10:00 pm. Shop No : 8, Municipal Complex, Akkarampalle, Akkarampalli, Tirupati - 517507 ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/fruit-juice-bars-in-tirupati/?locale=fa_IR",
+      "name": "Fruit Juice Bars in Tirupati",
+      "snippet": "Ganesh Juice Center is a well-known spot in Tirupati with a separate fan base and offers one glass free with another ... Ganesh Juice Center is a well-known spot ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Sugar Cane Juice Centres in Tilak Road, Tirupati :: Sugar Cane Juice Centres in Tilak Road, Tirupati . Open until 10:30 pm. Open until 12:00 am A Call Now. Door no: 1-3-179, Tirupati - 517504",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

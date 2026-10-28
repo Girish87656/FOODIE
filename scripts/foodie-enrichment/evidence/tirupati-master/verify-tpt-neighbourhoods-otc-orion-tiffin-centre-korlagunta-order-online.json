@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "OTC - Orion Tiffin Centre, Korlagunta order online",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.zomato.com/tirupati/otc-orion-tiffin-centre-korlagunta/order"
   },
   "query": "\"OTC - Orion Tiffin Centre, Korlagunta order online\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Korlagunta/nct-10000409/page-2",
+      "name": "24 Hours Tiffin Services in Korlagunta, Tirupati - Page 2",
+      "snippet": "Address , Srinivasa Nagar, Jeevakona, Tirupati - 517507, Subba Reddy Nagar, Korlagunta, Tirupati - 517501 (Venky Gym Line Road), Subbareddy Nagar, Akkarampalle ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Andhra-Delivery-Restaurants-in-Korlagunta/nct-11960469",
+      "name": "Best Andhra Delivery Restaurants in Korlagunta, Tirupati",
+      "snippet": "14 Andhra Delivery Restaurants in Korlagunta, Tirupati . Order Food Online Table 9 Beside Pgr Theatre Tata Nagar, Tirupati - 517501 Kt Road, Tirupati - 517507 … ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/tirupati/tiffins-at-30-only-korlagunta/order",
+      "name": "Tiffins At 30 Only, Korlagunta order online",
+      "snippet": "Order food online from Tiffins At 30 Only, Korlagunta, Tirupati . Get great offers and super fast food delivery when you order food online from Tiffins At 30 ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/brundavan-food-court-korlagunta-rest1203028",
+      "name": "What are the most popular dishes at Brundavan Food Court?",
+      "snippet": "Yes, Brundavan Food Court delivers food in Tirupati through Swiggy. Customers can order their favorite dishes online and enjoy doorstep delivery.",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.swiggy.com/city/tirupati/inti-vindhuu-kitchen-korlagunta-rest1367900",
+      "name": "How can I order from Inti Vindhuu Kitchen online?",
+      "snippet": "Yes, Inti Vindhuu Kitchen delivers food in Tirupati through Swiggy. Customers can order their favorite dishes online and enjoy doorstep delivery. What is Inti ... Read more",
+      "host": "www.swiggy.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Home-Delivery-Restaurants-in-Korlagunta/nct-10250324",
+      "name": "Best Home Delivery Restaurants in Korlagunta, Tirupati",
+      "snippet": "... Korlagunta, Tirupati . Get Phone Numbers, Address , Reviews, Photos, Maps for top Home Delivery Restaurants near me in Korlagunta, Tirupati on Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "24 Hours Tiffin Services in Korlagunta, Tirupati - Page 2 :: Address , Srinivasa Nagar, Jeevakona, Tirupati - 517507, Subba Reddy Nagar, Korlagunta, Tirupati - 517501 (Venky Gym Line Road), Subbareddy Nagar, Akkarampalle ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

@@ -1,14 +1,44 @@
 {
   "candidate": {
     "name": "Sri Padmavathi Mess in Bhavani Nagar,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Sri-Padmavathi-Mess-Bhavani-Nagar/9999PX877-X877-230217082439-T2N4_BZDET"
   },
   "query": "\"Sri Padmavathi Mess in Bhavani Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Padmavathi-Mess-Bhavani-Nagar/9999PX877-X877-230217082439-T2N4_BZDET/reviews?source=SHARE&amp=1",
+      "name": "6 Reviews for Sri Padmavathi Mess in Bhavani Nagar, Tirupati",
+      "snippet": "... Customer Reviews and Ratings with Photos. Check Timings, Address , Contact Number , Photos, Maps of Sri Padmavathi Mess in Bhavani Nagar, Tirupati - Justdial.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Padmavathi-Mess-Bhavani-Nagar/9999PX877-X877-230217082439-T2N4_BZDET",
+      "name": "Sri Padmavathi Mess in Bhavani Nagar,Tirupati - Justdial",
+      "snippet": "Sri Padmavathi Mess in Bhavani Nagar,Tirupati well known for Restaurants in Tirupati . Rated 4.1 based on 6 Customer Reviews and Ratings with 1 Photos.",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Padmavathi-Mess-Bhavani-Nagar/9999PX877-X877-230217082439-T2N4_BZDET/things-to-do?source=SHARE&amp=1",
+      "name": "Bhavani Nagar, Tirupati - Explore Sri Padmavathi Mess",
+      "snippet": "Explore services and facilities around Sri Padmavathi Mess in Bhavani Nagar, Tirupati . Discover nearby travel, medical, transport, emergency, financial, ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "6 Reviews for Sri Padmavathi Mess in Bhavani Nagar, Tirupati :: ... Customer Reviews and Ratings with Photos. Check Timings, Address , Contact Number , Photos, Maps of Sri Padmavathi Mess in Bhavani Nagar, Tirupati - Justdial.",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

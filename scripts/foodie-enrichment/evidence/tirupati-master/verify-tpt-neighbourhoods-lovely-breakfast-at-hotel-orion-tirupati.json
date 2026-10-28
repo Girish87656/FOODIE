@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Lovely breakfast at Hotel Orion, Tirupati",
-    "area": "tpt-neighbourhoods"
+    "area": "tpt-neighbourhoods",
+    "sourceUrl": "https://www.facebook.com/groups/chefatlarge/posts/7543345125754064"
   },
   "query": "\"Lovely breakfast at Hotel Orion, Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.instagram.com/popular/hotel-orion-stay-tirupati",
+      "name": "Hotel Orion Stay Tirupati",
+      "snippet": "Amazing food available in Tirumala beautiful ambience 🤩. Great service and friendly staff - Delicious food ( a little less spicy for my taste though)",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.google.com.np/travel/hotels/entity/ChkI2tmT4eKHjPBHGg0vZy8xMXRzZzlyazFxEAE?g2lb=4207876,4208993,4220293,4223281,4242898,4245928,4251619,4253230,4254308,4256748,4258168,4250437,4251518,4253015&hl=en&gl=np&un=1&rp=MhsKEgml8-FZgqw7QBHB4nDmV1tVQBC245qvrC04AUgC&ictx=1&tcfs=EhoaGAoKMjAxOS0wNS0yMRIKMjAxOS0wNS0yMlIA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaWwo9EjkyJTB4M2E0ZDRhZjg1Mjk2ZWM2MzoweGM0ZTEzODliY2UyMDZiMjg6EFJhbWNoYW5kcmEgTmFnYXIaABIaEhQKBwjqDxABGBsSBwjqDxABGBwYATICEAAqCQoFOgNOUFIaAA&sa=X&ap=MAA&ei=o5YnapD6I8TVlsYPrt-IgQM&ved=2ahUKEwjQ18aSqfmUAxXEqsUCHa4vIjAQyvcEegUIBBCwAQ",
+      "name": "Hotel Orion Inn - Google",
+      "snippet": "Enjoyed tasty food … 2 Tirumala Bypass Rd, Srinivasa Nagar, Shiv Jyoti Nagar, Tirupati , Andhra Pradesh 517507, India. Luxury Hotel & Restaurant",
+      "host": "www.google.com.np",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g297587-d15242957-Reviews-Orion_Restaurant-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "ORION RESTAURANT, Tirupati - 2026 Reviews &",
+      "snippet": "Orion Restaurant, Tirupati : See 45 unbiased reviews of Orion Restaurant, rated 2.8 of 5 on Tripadvisor and ranked #57 of 57 restaurants in Tirupati .",
+      "host": "www.tripadvisor.co.uk",
+      "kind": null
+    },
+    {
+      "url": "https://www.instagram.com/popular/hotel-orion-restaurant",
+      "name": "Hotel Orion Restaurant",
+      "snippet": "Small hotel on Footpath in Tirupati . Contact for details 97011 12347 📍Freshup. Padmavathipuram, Tirupati , Andhra Pradesh 517503. Contact Number: +91 9848000199 ...",
+      "host": "www.instagram.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.google.com.ng/travel/hotels/entity/ChkI2tmT4eKHjPBHGg0vZy8xMXRzZzlyazFxEAE",
+      "name": "Hotel Orion Inn - Google",
+      "snippet": "Dining (20) Breakfast (11) Bar (7) Service (28) Hotel in Ramanuja Circle, Tirupati 4.0",
+      "host": "www.google.com.ng",
+      "kind": null
+    },
+    {
+      "url": "https://www.tripadvisor.in/Hotel_Review-g297587-d28163784-Reviews-Orion_Inn-Tirupati_Chittoor_District_Andhra_Pradesh.html",
+      "name": "HOTEL ORION INN (Tirupati) - Specialty B&B Reviews,",
+      "snippet": "Location ; Gufha Restaurant Tirupati . 13 reviews. 9 min ; Perambur Srinivasa Sweets and Snacks. 34 reviews. 1.9 km ; Nine Flavours. 22 reviews. 17 min ; Usha Vasavi ... Read more",
+      "host": "www.tripadvisor.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Hotel Orion Inn - Google :: Enjoyed tasty food … 2 Tirumala Bypass Rd, Srinivasa Nagar, Shiv Jyoti Nagar, Tirupati , Andhra Pradesh 517507, India. Luxury Hotel & Restaurant",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

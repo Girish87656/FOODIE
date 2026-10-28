@@ -5,21 +5,68 @@
     "sourceUrl": "https://www.zomato.com/tirupati/di-table-9-tirumala/order"
   },
   "query": "\"Di Table 9, Tirumala order online\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Home-Delivery-Restaurants-in-Thimminaidupalem/nct-10250324",
+      "name": "Best Home Delivery Restaurants in Thimminaidupalem, Tirupati",
+      "snippet": "Di Table 9 DEVI TAAZA. Tirupati - 517507. Kt Road, Tirupati - 517507 (Near Annarao Circle)",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/di-table9-restaurant-mangalam-road-tirupati/?locale=ml_IN",
+      "name": "Table 9 Restaurant Mangalam Road Tirupati",
+      "snippet": "Table 9 has a Mangalam branch in Tirupati … ☎️ 0877 - 2280999 📍 https://maps.app.goo.gl/B5hadnz3V6SmzY2t9",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Di-Table-9-Srinivasanagar/9999PX877-X877-241107200533-N4I8_BZDET/photos",
+      "name": "1 Photos of Di Table 9 in TML By Pass Road, Tirupati - Justdial",
+      "snippet": "1 Photos of Di Table 9 in TML By Pass Road, Tirupati Rated 3.9 based on 12 Customer Reviews and Ratings with 1 Photos. Visit Justdial for Address , Contact ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.zomato.com/it/tirupati/di-table-9-new-tirumala/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUHVuamFiaSIsImRpc2hfaWRzIjpbIjg4MDEiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D",
+      "name": "Di Table 9 New, Tirumala order online",
+      "snippet": "Order food online from Di Table 9 New, Tirumala, Tirupati . Get great offers and super fast food delivery. North Indian 4.2 DELIVERY. We need your number to ...",
+      "host": "www.zomato.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Di-Table-9-Family-Restaurant-Kt-Road-Tirupati-Opposite-Karur-Vysya-Bank-Renigunta-Road/9999PX877-X877-220318233729-C2Y4_BZDET/categories",
+      "name": "Categories of Di Table 9 Family Restaurant Kt Road Tirupati in",
+      "snippet": "Nestled near Opposite Karur Vysya Bank in Renigunta Road, Di Table 9 Family Restaurant Kt Road Tirupati is a convenient stop for both locals and visitors ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://magicpin.in/Tirupati/Tata-Nagar/Restaurant/Di-Table-9/store/5b3cc4/delivery?srsltid=AYCX9vJZlli8KBNNQieLH1lxVPjMrDo7gAMsY-525oUTqD012oaGCG1A",
+      "name": "Di Table 9, Tata Nagar, Tirupati | September, 2026",
+      "snippet": "Order Di Table 9, Tata Nagar, Tirupati . Registered Office Address : Plot No.379 & 380, wk Metro Station, Gurugram, Haryana-122001, India Email: care@magicpin.in",
+      "host": "magicpin.in",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-27",
-  "skipped": true,
-  "skipReason": "rate-limited",
+  "areaConfirmed": true,
+  "addressEvidence": "Best Home Delivery Restaurants in Thimminaidupalem, Tirupati :: Di Table 9 DEVI TAAZA. Tirupati - 517507. Kt Road, Tirupati - 517507 (Near Annarao Circle)",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
   "previousAttempts": [
     {
       "retrievedOn": "2026-10-26",
       "errors": [
         "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
         "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    },
+    {
+      "retrievedOn": "2026-10-27",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
       ]
     }
   ]

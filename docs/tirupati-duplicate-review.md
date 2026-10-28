@@ -120,3 +120,24 @@ EXCLUDED from the batch review candidates until a human confirms whether each is
 | Sri Kalyana Venkateswara Swamy Temple, Narayanavanam | Batch-011: Sri Kalyana Venkateswara Swamy Temple (owner-blocked import) |
 | PERAMBUR SRINIVASA SWEETS AND SNACKS | production (live row) |
 | Perambur Srinivasa Sweets Ps4 Veg Restaurant (Tiruchanoor | production (live row) |
+
+## E. Batch-5 identity holds & name-drift flags (2026-10-28)
+
+Discovery hits that were deliberately NOT imported (never SQL rows) until identity is resolved:
+
+- **Indira Guest House, Tirumala** — NAME-DRIFT GUARD: batch-013 already queues the frozen canonical 'Indira Rest House, Tirumala'; the VarahaSwami-GH rate-table row 'Indira Guest House A/C (4 suites)' is plausibly the same TTD property under a drifted name — reconcile against the frozen row before any import (queue lead #132)
+- **Reddy Tea Stall, Tirumala** — overlaps the batch-014 identity-HELD 'Tirumala Tea Stall' conflicting-locality pair (Reddy and Reddy's Colony) — held pending identity resolution
+- **Sri Balaji Tea Stall, Tirumala** — Balaji-name drift family (batch-014 hold on 'Tirumala Balaji Sweets' vs frozen batch-013 row extends by analogy to new Balaji-named venue claims); vyaparify self-published page
+- **Balaji Sweets & Bakery, Korramenugunta** — Balaji-name drift family (see above); justdial snippet lacks the full address
+
+Additional name-drift flags from the same pass (kept out of Batch-015 for the same reasons):
+
+- **"Tirumala Bakery, Amaraja Road"** (indiacakes listing) vs frozen batch-014 row **Tirumala Bakery**
+  (Tirupati Bazar) and worksheet row **Tirumala Bakery And Sweets** (Srinagar Colony) — branch identity unresolved; recorded as weak lead only.
+- **"Nagarjuna Military Mess"** search hit ("Military Mess", Tata Nagar swiggy listing) — treated as a
+  CORROBORATION of the existing inventory row, never a new row.
+- **"Sri Venugopala Swamy Temple, Karvetinagaram"** queue lead #87 — proposed for upgrade, but the
+  batch-5 dedupe gate proved the temple already exists (inventory + batch-013 queued); downgraded to corroboration
+  (independent Tripadvisor + official TTD-news evidence).
+- **"Sri Kodandaramaswami Temple"** HIGH queue lead — name-drift spelling of the existing
+  **Sri Kodanda Ramaswamy Temple, Tirupati** (batch-013 queued); corroborated, not duplicated.

@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Gayatri Tiffin Center in Bhavani Nagar,Tirupati",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Gayatri-Tiffin-Center-Bhavani-Nagar/9999PX877-X877-240113191928-S7A3_BZDET"
   },
   "query": "\"Gayatri Tiffin Center in Bhavani Nagar,Tirupati\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Kt-Road/nct-10481155",
+      "name": "Best Tiffin Services in Kt Road, Tirupati - Justdial Jd",
+      "snippet": "46 Tiffin Services in Kt Road. Bhavani Nagar Circle KT Road … 517507 G Car Street, T P Area, Tirupati -",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Nethaji-Road/nct-10481155",
+      "name": "Best Tiffin Services in Nethaji Road, Tirupati",
+      "snippet": "Gayatri Tiffin Center. University Road, L B Nagar, Tirupati - 517502 (Near Padhmavathi Nagar) Door No 19-12-116,",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/tirupathifoodiee/posts/gayathri-tiffins-located-on-bhavani-nagar-is-one-of-the-most-renowned-shops-in-t/365621578275387",
+      "name": "Tirupathi Foodie",
+      "snippet": "Gayathri Tiffins, located on Bhavani Nagar, is one of the most renowned shops in the area. I attempted a few of our classic tiffin dishes such ... Read more",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Sankarambadi/nct-10481155",
+      "name": "Best Tiffin Services in Sankarambadi, Tirupati",
+      "snippet": "Open until 10:00 pm. Open until 10:30 pm. Gayatri Tiffin Center. Address Door No 19-12-116, Tirupati - 517501 19629, Tirumala, Tirumala, Tirupati - 517504. ...",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-T-P-Area/nct-10481155",
+      "name": "Best Tiffin Services in TP Area, Tirupati - Justdial Jd",
+      "snippet": "Open until 10:00 pm. Tiffin'S Address Door No 19-12-116, Tirupati - 517501 19629, Tirumala, Tirumala, Tirupati - 517504. Maruthi Nagar, Tirupati",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Gandhi-Road/nct-10481155",
+      "name": "Best Tiffin Services in Gandhi Road, Tirupati - Justdial Jd",
+      "snippet": "Tiffin Services in Gandhi Road, Tirupati ; Name, Raju's Dosa Club · Tiffins At 30 ; Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Door No 19-12-116, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Kt Road, Tirupati - Justdial Jd :: 46 Tiffin Services in Kt Road. Bhavani Nagar Circle KT Road … 517507 G Car Street, T P Area, Tirupati -",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

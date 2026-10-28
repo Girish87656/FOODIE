@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Muthunagar, Tirupati - Kundhu Tiffins",
-    "area": "tiruchanur"
+    "area": "tiruchanur",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Kundhu-Tiffins-Muthunagar/9999PX877-X877-230329030845-L8T8_BZDET/amp"
   },
   "query": "\"Muthunagar, Tirupati - Kundhu Tiffins\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Sri-Nagar-Colony/nct-10481155",
+      "name": "Best Tiffin Services in Sri Nagar Colony, Tirupati",
+      "snippet": "Tiffin Services in Sri Nagar Colony, Tirupati ; Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Kt Road, Tirupati - 517507 (Opposite Reliance Trends ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Veg-Food/nct-10481190/page-2",
+      "name": "Tiffin Services For Veg Food in Tirupati - Page 2",
+      "snippet": "Address , 12-3-312b, Tilad Road, Tilak Road, Tirupati - 517501, Renigunta, Tirupati - 517520 (Opp Railway Station), Korlagunta, Tirupati - 517501, Beside ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-For-Organic-Food-in-T-P-Area/nct-11182876",
+      "name": "Best Tiffin Services For Organic Food in TP Area, Tirupati",
+      "snippet": "Ms Naidu Tiffin'S ; Name, Tiffins At 30 · Sakhi Tiffin House ; Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Bhavani-Nagar/nct-10000409",
+      "name": "Best 24 Hours Tiffin Services in Bhavani Nagar, Tirupati",
+      "snippet": "Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, Nethaji Road ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-with-Vegan-Options-Available-in-Mangalam/nct-10481155-att-Rvgn",
+      "name": "Best Tiffin Services With Vegan Options Available Tirupati",
+      "snippet": "Name, Raju's Dosa Club · Sucharita Andhra Meals & Tiffins · Punjabi Dhaba Restaurant ; Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Kr Nagar, ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-T.p.area/nct-10481155/page-3",
+      "name": "Tiffin Services in T P Area, Tirupati - Page 3",
+      "snippet": "Address , 137, Kola Road, Bommagunta, Nehru Nagar, Tirupati - 517501 (Near Naidu Tea Stall), Annapurnamma Temple, Lakshmi Puram Circle, Ashok Nagar, Tirupati ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": false,
+  "addressEvidence": "Best Tiffin Services in Sri Nagar Colony, Tirupati :: Tiffin Services in Sri Nagar Colony, Tirupati ; Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Kt Road, Tirupati - 517507 (Opposite Reliance Trends ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }

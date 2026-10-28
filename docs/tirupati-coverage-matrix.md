@@ -33,4 +33,17 @@ cells are honest gaps with a next action — completeness is never claimed while
 - Wikipedia (bounded 15-article set, ≥4 s spacing): 494 place-link entries + published article coordinates only.
 - Independent-source corroboration: 6 pending rows confirmed (list in the inventory doc).
 - Review queue: 133 genuinely new unverified leads (priority-tiered) + 53 weak overlaps — NOT added as candidates; human research required first.
-- Small food businesses (tiffin centres, tea stalls, messes, bakeries) could NOT be expanded this pass — the accessible direct sources cover TTD accommodation/attractions/encyclopedic places only; the search provider or a directory export is required for the food categories. Recorded as a gap.
+- Small food businesses (tiffin centres, tea stalls, messes, bakeries) could NOT be expanded in the BATCH-4 pass itself — see the Batch-5 section below where this gap is finally addressed with resumed search + direct sources.
+
+## Batch-5 evidence (web_search RESUMED + bounded direct sources, 2026-10-28)
+
+- web_search availability: ONE bounded probe → provider AVAILABLE — bounded verification may resume this session (3 results on the probe query). Bounded discovery then ran: 19 locality×category queries + 4 queue-lead checks (8 s pacing; 0 throttles, breaker never tripped).
+- Nominatim: 12 bounded keyword POI queries inside the Tirupati viewbox (`79.25,13.78,79.55,13.50`) → 21 raw hits; published coordinates recorded in evidence ONLY (never imported).
+- Wikivoyage https://en.wikivoyage.org/wiki/Tirupati: HTTP 403 — fetch failed (HTTP 403) — recorded as limitation.
+- Wikipedia targeted re-fetch (Vaikuntam Queue Complex): HTTP 200 — page served but target strings absent — lead stays queued.
+- Wikipedia targeted re-fetch (Siddheswara Swamy Temple): HTTP 200 — content retrieved; findings require manual locality check.
+- Review queue: all 133 leads manually assessed on their exact quotations → 3 accepts (routed to Batch-015), 18 corroborations of existing records, 53 generic rejects, 54 out-of-scope rejects, 5 stay ambiguous in the queue.
+- Tirumala gardens/teerthams: the dead official shells were worked around WITHOUT new fetches — the already-saved official page places-around-tirumala.aspx verbatim lists Gogarbham Gardens, Dharmagiri, Narayangiri, Asthana Mandapams and 11 teerthams; 9 teerthams + Gogarbham/Dharmagiri/Narayangiri/Asthana Mandapam became Batch-015 candidates, the remaining names corroborated existing rows.
+- Small food businesses: THE BIGGEST KNOWN GAP IS NOW PARTIALLY COVERED — 13 tiffin centres, 9 tea-stall/juice/street vendors, 5 bakery/sweet shops, 14 restaurants and 1 cafe accepted into Batch-015 (42 food rows total, all UNVERIFIED review candidates; coverage is still directory/mapped-POI grade, not field-verified).
+- Verification backlog RESUMED (bounded): 4 chunks × 12 candidates = 48 attempted this session — 45 area-confirmed (13 with address evidence), 3 not-confirmed (negative evidence recorded); 0 throttled. Remaining backlog: 58 never-attempted + 68 throttled-stubs = 126 (down from 174).
+- Remaining honest gaps: 38 weak leads queued; 4 identity-holds (Indira Guest House / Reddy Tea Stall / 2 Balaji-name rows); Puttur-town venue evidence; Venugopalaswamy Karvetinagaram navbox-only leads now corroborated but still pending verify; menus, hours, photos; the 126-row verification backlog. NOT exhaustive.

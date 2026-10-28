@@ -1,14 +1,65 @@
 {
   "candidate": {
     "name": "Vinayaka Tiffin Centre in Tirupati Bazar",
-    "area": "tpt-central"
+    "area": "tpt-central",
+    "sourceUrl": "https://www.justdial.com/Tirupati/Vinayaka-Tiffin-Centre-Balaji-Colony-Tirupati-Bazar/9999PX877-X877-190912225349-Q1K7_BZDET"
   },
   "query": "\"Vinayaka Tiffin Centre in Tirupati Bazar\" Tirupati address",
-  "hits": [],
-  "errors": [
-    "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
-    "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+  "hits": [
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-Gandhi-Road/nct-10481155",
+      "name": "Best Tiffin Services in Gandhi Road, Tirupati - Justdial Jd",
+      "snippet": "Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tiffin-Services-in-V-V-Mahal-Road/nct-10481155",
+      "name": "Best Tiffin Services in VV Mahal Road, Tirupati",
+      "snippet": "Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, T P Area ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/24-Hours-Tiffin-Services-in-Indira-Maidanam-Road/nct-10000409",
+      "name": "Top 24 Hours Tiffin Services in Indira Maidanam Road",
+      "snippet": "Address , Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 (Beside Tvs Show Room), G Car Street, T P Area ... Read more",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.facebook.com/fb-answers/popular-tiffin-centers-in-tirupati",
+      "name": "Popular Tiffin Centers in Tirupati",
+      "snippet": "Babu Tiffin Centre on Bazar Street. Address : Door 10-3-202/C, Kotakommala Street, Landmark: Near Vinayaka Temple … y, Tirupati , Andhra Pradesh 517502",
+      "host": "www.facebook.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Sri-Vinayaka-Refrigeration-Service-Tirupati-Bazar/9999PX877-X877-190404114657-R9R3_BZDET/photos",
+      "name": "7 Photos of Sri Vinayaka Refrigeration Service in Tirupati",
+      "snippet": "Sri Vinayaka Refrigeration Service in Tirupati Bazar, Tirupati … 8:00 pm Call Now WhatsApp Direction Share Enquire Now",
+      "host": "www.justdial.com",
+      "kind": null
+    },
+    {
+      "url": "https://www.justdial.com/Tirupati/Tirumala-Food-Corner-Tilad-Road-Tilak-Road/9999P8581-8581-110202122701-S9J5_BZDET",
+      "name": "Tiffin Services - Tirumala Food Corner in Tilak Road,Tirupati",
+      "snippet": "Tirumala Food Corner in Tilak Road, Tirupati . Sunday:- 7:00 am - 11:00 pm hours of operation. Number, Photos, Maps. This establishment is functional from 07:00 ...",
+      "host": "www.justdial.com",
+      "kind": null
+    }
   ],
-  "retrievedOn": "2026-10-26",
-  "skipped": true
+  "areaConfirmed": true,
+  "addressEvidence": "Best Tiffin Services in Gandhi Road, Tirupati - Justdial Jd :: Address , Tirumala Reddy Nagar, Mangalam, Tirupati - 517507, Door No 19-12-116, Bairagi Patteda, Tirupati - 517501, 19629, Tirumala, Tirumala, Tirupati - 517504 ... Read more",
+  "errors": [],
+  "retrievedOn": "2026-10-28",
+  "previousAttempts": [
+    {
+      "retrievedOn": "2026-10-26",
+      "errors": [
+        "Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}",
+        "retry failed: Function invoke failed with status 429: {\"error\":\"Too many requests, please try again later\"}"
+      ]
+    }
+  ]
 }
