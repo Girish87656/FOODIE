@@ -28,6 +28,7 @@ import {
   Clock3,
   ExternalLink,
   FlaskConical,
+  Heart,
   MapPin,
   Navigation,
   RefreshCw,
@@ -36,6 +37,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { useFoodieStore } from "@/lib/foodie/store";
+import { useSavedStore } from "@/lib/foodie/savedStore";
 import { getPointOfInterestById } from "@/lib/foodie/data/repository";
 import type { DataMode } from "@/lib/foodie/data/types";
 import type { PointOfInterest } from "@/lib/foodie/types";
@@ -164,6 +166,25 @@ export function AttractionDetailScreen() {
   const mode: DataMode | null = current?.mode ?? null;
   const detailStatus = current === null ? "loading" : current.kind === "ready" ? "ready" : "error";
   const retry = () => setAttempt((n) => n + 1);
+
+  // Saved (bookmarked) state — device-persisted list, honest prototype scope.
+  const savedItems = useSavedStore((s) => s.items);
+  const toggleSaved = useSavedStore((s) => s.toggle);
+  const isSavedPoi = poi ? savedItems.some((i) => i.id === poi.id) : false;
+  const onToggleSaved = () => {
+    if (!poi) return;
+    const nowSaved = toggleSaved({
+      id: poi.id,
+      kind: "attraction",
+      name: poi.name,
+      area: poi.locality ?? null,
+    });
+    if (nowSaved) {
+      toast.success("Saved", { description: poi.name });
+    } else {
+      toast("Removed from Saved", { description: poi.name });
+    }
+  };
 
   if (detailStatus === "loading") return <PoiSkeleton />;
 
@@ -402,41 +423,57 @@ export function AttractionDetailScreen() {
         className="shrink-0 border-t border-border/60 bg-background/95 p-4 backdrop-blur shadow-[0_-12px_32px_-24px_rgba(0,0,0,0.35)]"
         style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}
       >
-        <a
-          href={mapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={
-            coords ? `Get directions to ${poi.name}` : `Open ${poi.name} in Google Maps`
-          }
-          onClick={() =>
-            coords
-              ? toast.success("Opening directions…", {
-                  description:
-                    distanceKm != null
-                      ? `${poi.name} · ${formatDistance(distanceKm)} from your location`
-                      : poi.address ?? poi.locality ?? poi.city,
-                })
-              : toast.success("Opening Google Maps…", {
-                  description: `${poi.name} · location pending verification`,
-                })
-          }
-          className="foodie-gradient flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl text-[15.5px] font-bold text-white shadow-xl shadow-orange-600/30 transition-all hover:opacity-95 active:scale-[0.98]"
-        >
-          {coords ? (
-            <>
-              <Navigation className="size-4.5" aria-hidden="true" />
-              Get Directions
-              <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
-            </>
-          ) : (
-            <>
-              <MapPin className="size-4.5" aria-hidden="true" />
-              Open in Google Maps
-              <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
-            </>
-          )}
-        </a>
+        <div className="flex gap-2.5">
+          <button
+            type="button"
+            onClick={onToggleSaved}
+            aria-pressed={isSavedPoi}
+            aria-label={isSavedPoi ? `Remove ${poi.name} from Saved` : `Save ${poi.name}`}
+            className={cn(
+              "grid size-[52px] shrink-0 place-items-center rounded-2xl border transition-all active:scale-[0.98]",
+              isSavedPoi
+                ? "border-primary/50 bg-orange-50 text-primary"
+                : "border-border bg-card text-stone-500 hover:border-primary/40 hover:text-primary"
+            )}
+          >
+            <Heart className={cn("size-5", isSavedPoi && "fill-primary")} aria-hidden="true" />
+          </button>
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={
+              coords ? `Get directions to ${poi.name}` : `Open ${poi.name} in Google Maps`
+            }
+            onClick={() =>
+              coords
+                ? toast.success("Opening directions…", {
+                    description:
+                      distanceKm != null
+                        ? `${poi.name} · ${formatDistance(distanceKm)} from your location`
+                        : poi.address ?? poi.locality ?? poi.city,
+                  })
+                : toast.success("Opening Google Maps…", {
+                    description: `${poi.name} · location pending verification`,
+                  })
+            }
+            className="foodie-gradient flex h-[52px] flex-1 items-center justify-center gap-2 rounded-2xl text-[15.5px] font-bold text-white shadow-xl shadow-orange-600/30 transition-all hover:opacity-95 active:scale-[0.98]"
+          >
+            {coords ? (
+              <>
+                <Navigation className="size-4.5" aria-hidden="true" />
+                Get Directions
+                <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
+              </>
+            ) : (
+              <>
+                <MapPin className="size-4.5" aria-hidden="true" />
+                Open in Google Maps
+                <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
+              </>
+            )}
+          </a>
+        </div>
       </div>
     </div>
   );

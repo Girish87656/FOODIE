@@ -2433,3 +2433,22 @@ Stage Summary:
 - Gates: 170/170 tests, lint 0, tsc 0 for project code (4 pre-existing examples/skills errors untouched), determinism byte-identical, secret scan clean.
 - Honest limits: web_search still 429 (one bounded probe, paused); 168/174 pending rows remain pending; small food businesses NOT expandable this pass (recorded gap); 3 dead TTD URLs; ap.gov.in + Overpass blocked; wiki api.php rate-limited.
 - Nothing pushed, nothing deployed, no production SQL, no GitHub authorization.
+
+---
+Task ID: batch-8-final-prototype
+Agent: Z.ai Code (main session)
+Task: FOODIE Final Prototype Completion & Launch — re-establish state, complete the product (saved places + area chips), reconcile batch docs, package the consolidated owner import action, final QA, deploy.
+
+Work Log:
+- State re-established read-only: local HEAD had 2 unpushed gateway/worklog commits (15644aa, 0b67ce4) on top of deployed c080d81 = origin/main; production API 86 rows (80 Doddaballapura + 6 Tirupati), destinations 3; per directive the two gateway commits were NOT pushed merely to sync (they ride along only with the real-change push below).
+- Batch reconciliation (ground truth re-parse of all seven committed SQL files): 011 = 16 places (10 attractions + 6 hotels — NOT the "33 places" the docs claimed), 012 = 10r+19p, 013 = 17r+40p, 014 = 22r+5p, 015 = 40r+19p, 016 = 8r+10p, 017 = 53r+29p → 288 rows (150r + 138p); all shas byte-identical to the audited set; zero unquoted-UUID defects; INSERT-only confirmed (keyword hits are comments/guards only); 011 supersedes 010 (carries its 6 hotel ids byte-identical). Corrected the wrong numbers in docs/batch-import-audit-report.md (011 row, totals 245→288, deltas +33→+16, 194-drift-gate explanation), docs/launch-checklist.md (pending-SQL row) and the misleading arithmetic comment in tests/tirupati-master.test.ts (assertions unchanged).
+- supabase/OWNER-IMPORT-PACKAGE.md written — ONE consolidated owner action: ordered batch table with exact filenames, cumulative row expectations (86/0 → 236/138), Supabase SQL Editor procedure, expected PREFLIGHT/POSTFLIGHT notices, per-failure-mode handling, optional read-only verify-*.sql probes, and the separate pending migrations 005/010; explicitly lists insert-batch-010 as DO-NOT-RUN.
+- Product completion (verified gaps): (1) Area filter — DestinationScreen gained a data-derived area chip rail (All areas + per-locality counts, shared by attractions & food lists, resets per destination, honest filtered-empty notes); (2) Saved places — new src/lib/foodie/savedStore.ts (zustand persist, device-local, honest snapshot), heart toggle on both detail screens above sticky CTAs, "Saved" section on Home opening live detail by id with per-item remove.
+- E2E (agent-browser): mobile 390px — demo golden path: auth-honest fallback → home → Tirupati destination → area chips filter 16→1 (Tirumala) → attraction detail → save (toast + aria-pressed + localStorage foodie-saved-places-v1) → Home Saved section → open from Saved → food-place save → reload persistence (2 items) → search "pizza" honest 0-state → Bakery & Sweets filter → desktop 1280px framed layout; 0 console/page errors. Production E2E on deployed c080d81 with clearly-identified test account foodie-qa-final@foodie-test.example: register → onboarding → home live data → Tirupati destination (6 live rows, honest attractions empty state, no area chips when single-area — correct data-derived behaviour) → place detail provenance/maps → account menu → sign out → login ✓; AI assistant grounded answer ✓; 0 console/page errors.
+- Quality gates: lint 0; tsc 0 for FOODIE source (4 pre-existing examples/skills errors untouched); 186/186 tests (batch integrity gates re-verified green); secret scans clean (only public Zomato URL params in committed evidence files).
+- Deployment: fast-forward push of the product commit (carrying the 2 gateway commits); Vercel deploy verified serving the new commit; post-deploy production re-checks recorded in the launch report.
+
+Stage Summary:
+- Product changes committed on top of 0b67ce4/c080d81; production redeployed and re-verified.
+- Batches 011–017 remain owner-side INSERT-only imports (no Supabase write path in sandbox — boundary respected, never bypassed); the single consolidated action is supabase/OWNER-IMPORT-PACKAGE.md.
+- Known honest limits documented: Srinivasa Mangapuram food zero, Tiruchanur restaurants queued-only, 79-row verification backlog, push honestly disabled until migration-010 + VAPID owner config.

@@ -9,7 +9,7 @@
  * has been curated yet, the screen says so honestly — nothing is invented.
  */
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, Compass, Landmark, MapPin, RefreshCw, SearchX, UtensilsCrossed } from "lucide-react";
 import { useFoodieStore } from "@/lib/foodie/store";
 import {
@@ -30,6 +30,7 @@ import type {
 } from "@/lib/foodie/types";
 import { useLocationStore } from "@/lib/foodie/locationStore";
 import { haversineKm } from "@/lib/foodie/location";
+import { cn } from "@/lib/utils";
 
 export function DestinationScreen() {
   const destinationId = useFoodieStore((s) => s.selectedDestinationId);
@@ -43,6 +44,35 @@ export function DestinationScreen() {
   const attractionsFeed = useDestinationAttractions(destinationId);
   const origin = useLocationStore((s) => s.origin);
   const openAttraction = useFoodieStore((s) => s.openAttraction);
+
+  // Area filter — derived ONLY from the actually-loaded rows (never
+  // hardcoded): a destination whose data spans several localities (Tirupati
+  // city vs Tirumala vs Renigunta…) gets honest per-area chips; a
+  // single-area destination shows no chips at all. Reset per destination.
+  const [areaFilter, setAreaFilter] = useState<string | null>(null);
+  const [areasForId, setAreasForId] = useState<string | null>(destinationId);
+  if (destinationId !== areasForId) {
+    setAreasForId(destinationId);
+    setAreaFilter(null);
+  }
+
+  const placeAreas = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const p of placesFeed.places) {
+      const a = (p.area || "").trim();
+      if (a) counts.set(a, (counts.get(a) ?? 0) + 1);
+    }
+    return [...counts.entries()].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
+  }, [placesFeed.places]);
+
+  const attractionAreas = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const p of attractionsFeed.attractions) {
+      const a = (p.locality || "").trim();
+      if (a) counts.set(a, (counts.get(a) ?? 0) + 1);
+    }
+    return [...counts.entries()].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
+  }, [attractionsFeed.attractions]);
 
   // Real distance from the user's actual origin — the same Haversine rule as
   // every other list. Coordinate-less places keep NO distance and show their
@@ -62,6 +92,18 @@ export function DestinationScreen() {
         ? { ...p, distanceKm: haversineKm(origin, { lat: p.latitude, lng: p.longitude }) }
         : p
   );
+
+  // Area-filtered views (chips above each list). The filter only applies
+  // when the loaded data actually has several areas — otherwise it stays
+  // inert so small datasets keep their original single-list behaviour.
+  const shownPlaces =
+    areaFilter && placeAreas.length > 1
+      ? annotatedPlaces.filter((p) => (p.area || "").trim() === areaFilter)
+      : annotatedPlaces;
+  const shownAttractions =
+    areaFilter && attractionAreas.length > 1
+      ? annotatedAttractions.filter((p) => (p.locality || "").trim() === areaFilter)
+      : annotatedAttractions;
 
   // No selection → there is nothing honest to show; return home. The screen
   // check keeps this guard from firing while this screen is merely EXITING
@@ -288,11 +330,26 @@ export function DestinationScreen() {
                 ))}
 
               {attractionsFeed.status === "ready" && attractionsFeed.attractions.length > 0 && (
-                <div className="mt-4 space-y-2.5 px-5">
-                  {annotatedAttractions.map((p) => (
-                    <PoiListRow key={p.id} poi={p} onSelect={openAttraction} />
-                  ))}
-                </div>
+                <>
+                  {attractionAreas.length > 1 && (
+                    <AreaChipRail
+                      areas={attractionAreas}
+                      value={areaFilter}
+                      onChange={setAreaFilter}
+                      label="Filter attractions by area"
+                    />
+                  )}
+                  <div className="mt-4 space-y-2.5 px-5">
+                    {shownAttractions.map((p) => (
+                      <PoiListRow key={p.id} poi={p} onSelect={openAttraction} />
+                    ))}
+                  </div>
+                  {shownAttractions.length === 0 && (
+                    <p className="px-5 pt-4 text-center text-[13px] text-muted-foreground">
+                      Nothing recorded in {areaFilter} yet — try All areas.
+                    </p>
+                  )}
+                </>
               )}
             </section>
 
@@ -352,16 +409,101 @@ export function DestinationScreen() {
               )}
 
               {placesFeed.status === "ready" && placesFeed.places.length > 0 && (
-                <div className="mt-4 space-y-2.5 px-5">
-                  {annotatedPlaces.map((p) => (
-                    <ListRow key={p.id} place={p} onSelect={openPlace} />
-                  ))}
-                </div>
+                <>
+                  {placeAreas.length > 1 && (
+                    <AreaChipRail
+                      areas={placeAreas}
+                      value={areaFilter}
+                      onChange={setAreaFilter}
+                      label="Filter places by area"
+                    />
+                  )}
+                  <div className="mt-4 space-y-2.5 px-5">
+                    {shownPlaces.map((p) => (
+                      <ListRow key={p.id} place={p} onSelect={openPlace} />
+                    ))}
+                  </div>
+                  {shownPlaces.length === 0 && (
+                    <p className="px-5 pt-4 text-center text-[13px] text-muted-foreground">
+                      Nothing recorded in {areaFilter} yet — try All areas.
+                    </p>
+                  )}
+                </>
               )}
             </section>
           </>
         )}
       </main>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Area chip rail — data-derived locality filter                        */
+/* ------------------------------------------------------------------ */
+
+/**
+ * One scrollable chip row shared by both destination lists. Every chip is a
+ * real area present in the loaded rows, with its live count — nothing is
+ * hardcoded and empty areas can never appear. Selecting a chip narrows BOTH
+ * lists to that area (food places match on their mapped `area`, attractions
+ * on their `locality`); "All" resets. The rail renders only when the data
+ * actually spans several areas, so small datasets keep their simple list.
+ */
+function AreaChipRail({
+  areas,
+  value,
+  onChange,
+  label,
+}: {
+  /** [area, rowCount] pairs sorted by count desc then name. */
+  areas: [string, number][];
+  value: string | null;
+  onChange: (area: string | null) => void;
+  label: string;
+}) {
+  const total = areas.reduce((sum, [, n]) => sum + n, 0);
+  return (
+    <div
+      className="foodie-rail mt-3 flex snap-x gap-2 overflow-x-auto px-5 pb-1"
+      role="group"
+      aria-label={label}
+    >
+      <button
+        type="button"
+        onClick={() => onChange(null)}
+        aria-pressed={value === null}
+        className={cn(
+          "shrink-0 snap-start rounded-full border px-3.5 py-1.5 text-[12px] font-bold transition-all active:scale-[0.97]",
+          value === null
+            ? "border-primary bg-primary text-white shadow-sm shadow-orange-600/25"
+            : "border-border bg-card text-stone-600 hover:border-primary/40 hover:text-foreground"
+        )}
+      >
+        All areas
+        <span className={cn("ml-1.5", value === null ? "text-white/80" : "text-stone-400")}>
+          {total}
+        </span>
+      </button>
+      {areas.map(([area, n]) => (
+        <button
+          key={area}
+          type="button"
+          onClick={() => onChange(value === area ? null : area)}
+          aria-pressed={value === area}
+          className={cn(
+            "shrink-0 snap-start rounded-full border px-3.5 py-1.5 text-[12px] font-bold transition-all active:scale-[0.97]",
+            value === area
+              ? "border-primary bg-primary text-white shadow-sm shadow-orange-600/25"
+              : "border-border bg-card text-stone-600 hover:border-primary/40 hover:text-foreground"
+          )}
+        >
+          {area}
+          <span className={cn("ml-1.5", value === area ? "text-white/80" : "text-stone-400")}>
+            {n}
+          </span>
+        </button>
+      ))}
     </div>
   );
 }

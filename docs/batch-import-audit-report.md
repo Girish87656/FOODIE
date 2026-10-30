@@ -8,7 +8,7 @@ schema, current production state, and each other, in dependency order.
 
 | Batch | File | Rows (r / p) | sha256 (first 16) | Verdict |
 | --- | --- | --- | --- | --- |
-| 011 | insert-batch-011-p4-places.sql | 33 / — | `88681545565fdbb5` | PASS (guards pre-date the defect; id lists quoted with `::uuid`) |
+| 011 | insert-batch-011-p4-places.sql | — / 16 | `88681545565fdbb5` | PASS (guards pre-date the defect; id lists quoted with `::uuid`) |
 | 012 | insert-batch-012-tptm-master.sql | 10 / 19 | `792fd3bbc7dbf267` | PASS after quoting fix (was `110b95a5…`) |
 | 013 | insert-batch-013-tptm-b2.sql | 17 / 40 | `466b194959d842b4` | PASS after quoting fix (was `7a41e8a6…`); frozen drift-guard row preserved |
 | 014 | insert-batch-014-tptm-b3.sql | 22 / 5 | `9010aa6247781ac6` | PASS after quoting fix (was `0d0c4043…`) |
@@ -16,9 +16,15 @@ schema, current production state, and each other, in dependency order.
 | 016 | insert-batch-016-tptm-b6.sql | 8 / 10 | `4e034304c1bf7b52` | PASS after quoting fix (was `2f54a9a3…`) |
 | 017 | insert-batch-017-tptm-b7.sql | 53 / 29 | `bff810cd58d02ac5` | PASS (generated this session with the fix from the start) |
 
-Totals: **245 candidate rows** (153 restaurants + 92 places), all
+Totals: **288 candidate rows** (150 restaurants + 138 places), all
 INSERT-only, all `verification_status='unverified'`, coordinates NULL on
 every row except batch-013's single evidenced National Park row.
+(Per-file ground truth, re-parsed from the committed SQL: 011 = 16 places
+[10 attractions + 6 hotels]; 012 = 10r+19p; 013 = 17r+40p; 014 = 22r+5p;
+015 = 40r+19p; 016 = 8r+10p; 017 = 53r+29p. An earlier revision of this
+doc said "33 places / 245 rows" — that was a transcription error, never
+a property of the SQL files, whose own preflight/postflight always
+asserted exactly these counts.)
 
 ## Critical defect found and fixed (would have blocked execution)
 
@@ -69,7 +75,7 @@ review-candidate file. Batch-011 pre-dates the defect (its lists are quoted
 ## Reconciliation with production (read-only)
 
 - Production `restaurants`: 86 rows (80 Doddaballapura + GITAM corridor,
-  6 Tirupati). ZERO of the 245 candidate ids exist in production (verified
+  6 Tirupati). ZERO of the 288 candidate ids exist in production (verified
   via the app's public read API + REST counts; batch-6 audit previously
   proved 61/61 zero-collision, this audit re-checked the new 82).
 - Production `places`: 0 rows — batches 012/013/014/015/016/017 place rows
@@ -92,9 +98,11 @@ mis-derivations corrected fail-loud in the generator ('kids zone' fort→other;
 Kalyani Dam, Horsley Hills, Tada) carry explicit locality labels + the
 'surrounding-destination' tag.
 
-Forward-drift gate now asserts: **194 eligible rows = 29+57+27+59+18+82 − 1
-frozen drift-guard row ('Tirumala Balaji Sweets -')**, all imported under
-canonical-name ids, zero ineligible imports.
+Forward-drift gate now asserts: **194 eligible master-worksheet rows**
+(curated + new + T1/T2 − holds, computed from the worksheet itself) are
+imported under canonical-name ids, zero ineligible imports. Batches
+012–017 additionally carry sweep-discovered rows beyond that worksheet;
+their combined total is 272 rows (150 restaurants + 122 places).
 
 ## sha change ledger (this session, all pre-execution, documented)
 
@@ -119,7 +127,7 @@ editor (or an authorized connection). The exact reviewed action:
 > In the Supabase SQL editor, run `supabase/review-candidates/insert-batch-011-p4-places.sql`
 > through `insert-batch-017-tptm-b7.sql` in ascending order, one at a time,
 > verifying each batch's PREFLIGHT notices and POSTFLIGHT OK before the next.
-> Expected row deltas: +33 places, +29, +57, +27, +59, +18, +82.
+> Expected row deltas: +16 places, +29, +57, +27, +59, +18, +82.
 > Run `verify-batch-0XX-*.sql` probes before/after if desired (read-only).
 > Also pending owner actions: migrations 005 (verification/review foundation)
 > and 010 (push_subscriptions) are not applied in production.

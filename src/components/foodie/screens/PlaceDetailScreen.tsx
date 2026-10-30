@@ -18,9 +18,11 @@ import {
   Tag,
   UtensilsCrossed,
   FlaskConical,
+  Heart,
 } from "lucide-react";
 import { toast } from "sonner";
 import { useFoodieStore } from "@/lib/foodie/store";
+import { useSavedStore } from "@/lib/foodie/savedStore";
 import { getRestaurantById } from "@/lib/foodie/data/repository";
 import type { DataMode } from "@/lib/foodie/data/types";
 import type { Dish, PhotoCredit, Place } from "@/lib/foodie/types";
@@ -159,6 +161,11 @@ export function PlaceDetailScreen() {
   const locState = useLocationStore();
   const locSource = locState.source;
 
+  // Saved (bookmarked) subscriptions — must sit ABOVE every early return
+  // (rules of hooks). Device-persisted list, honest prototype scope.
+  const savedItems = useSavedStore((s) => s.items);
+  const toggleSaved = useSavedStore((s) => s.toggle);
+
   // Load through the data-access layer — Supabase when connected,
   // the labelled demo dataset otherwise. No hardcoded data in the UI.
   // (Result is keyed to the request; state updates happen in async callbacks.)
@@ -258,6 +265,21 @@ export function PlaceDetailScreen() {
 
   // Phone from the database — a Call button only exists when a number exists.
   const telHref = place.phone ? `tel:${place.phone.replace(/[^\d+]/g, "")}` : null;
+
+  const isSavedPlace = savedItems.some((i) => i.id === place.id);
+  const onToggleSaved = () => {
+    const nowSaved = toggleSaved({
+      id: place.id,
+      kind: "place",
+      name: place.name,
+      area: place.area || null,
+    });
+    if (nowSaved) {
+      toast.success("Saved", { description: place.name });
+    } else {
+      toast("Removed from Saved", { description: place.name });
+    }
+  };
 
   // Menu provenance (migration-007): unique source domains actually recorded on
   // this place's dish rows. Nothing is displayed when no dish carries a
@@ -887,6 +909,20 @@ export function PlaceDetailScreen() {
         style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}
       >
         <div className="flex gap-2.5">
+          <button
+            type="button"
+            onClick={onToggleSaved}
+            aria-pressed={isSavedPlace}
+            aria-label={isSavedPlace ? `Remove ${place.name} from Saved` : `Save ${place.name}`}
+            className={cn(
+              "grid size-[52px] shrink-0 place-items-center rounded-2xl border transition-all active:scale-[0.98]",
+              isSavedPlace
+                ? "border-primary/50 bg-orange-50 text-primary"
+                : "border-border bg-card text-stone-500 hover:border-primary/40 hover:text-primary"
+            )}
+          >
+            <Heart className={cn("size-5", isSavedPlace && "fill-primary")} aria-hidden="true" />
+          </button>
           {telHref && (
             <a
               href={telHref}

@@ -21,7 +21,7 @@ below was measured on 2026-10-27 against the working tree and live systems.
 | Production `destinations` | 3 rows; `destination_foods` 5 rows | Supabase REST count=exact |
 | Production `push_subscriptions` | **404 — migration-010 NOT applied** | Supabase REST |
 | Production `review_candidates` | 404 — migration-005 table NOT applied (not needed by batches) | Supabase REST |
-| Pending batch SQL | 011=33 places, 012=29 (10r+19p), 013=57 (17r+40p), 014=27 (22r+5p), 015=59 (40r+19p), 016=18 (8r+10p) → **223 rows** | parsed INSERT tuples |
+| Pending batch SQL | 011=16 places (10 attractions + 6 hotels), 012=29 (10r+19p), 013=57 (17r+40p), 014=27 (22r+5p), 015=59 (40r+19p), 016=18 (8r+10p) → **206 rows**; +017=82 (53r+29p) → **288 total** | parsed INSERT tuples (corrected 2026-10-28; an earlier revision mis-listed 011 as 33 places) |
 | Git push | **BLOCKED — no credentials** (sandbox wiped `~/.git-credentials`; no `gh`, no SSH, no env tokens) | `git push --dry-run` |
 | Supabase write credentials | **NONE in sandbox** — only publishable anon key + URL; `DATABASE_URL` is local SQLite | env inspection |
 

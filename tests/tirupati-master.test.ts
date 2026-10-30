@@ -251,13 +251,18 @@ describe("tirupati master — curated worksheet honesty", () => {
       const id = uuid5(`foodie-tptm:Tirupati:${r.name as string}`);
       if (!imported.has(id)) missing.push(`${r.key as string} ("${r.name as string}" → ${id})`);
     }
-    // 194 = 29 batch-012 + 57 batch-013 + 27 batch-014 + 59 batch-015 + 18
-    // batch-016 + 82 batch-017, minus 1: the curated row "Tirumala Balaji
-    // Sweets" was re-held (batch-3) because its cleaned canonical name drifts
-    // from the FROZEN batch-013 queued row 'Tirumala Balaji Sweets -' — that
-    // venue is already queued under the frozen id, so the no-dash canonical
-    // must NOT import a second row. Every one of the 194 eligible rows IS
-    // imported (missing = [] below enforces it).
+    // 194 = the number of curated master-worksheet rows that are eligible to
+    // import (status 'curated', existingSet 'new', tier T1/T2, minus the
+    // held keys above) — computed from the worksheet itself, not asserted
+    // numerically from batch sizes. The eligible rows spread across batches
+    // 012–017 (which hold 272 rows in total: 29 + 57 + 27 + 59 + 18 + 82,
+    // including sweep-discovered rows beyond this worksheet). One related
+    // subtlety: the curated row "Tirumala Balaji Sweets" was re-held
+    // (batch-3) because its cleaned canonical name drifts from the FROZEN
+    // batch-013 queued row 'Tirumala Balaji Sweets -' — that venue is
+    // already queued under the frozen id, so the no-dash canonical must NOT
+    // import a second row. Every one of the 194 eligible rows IS imported
+    // (missing = [] below enforces it).
     expect(eligible).toBe(194);
     expect(missing).toEqual([]);
   });

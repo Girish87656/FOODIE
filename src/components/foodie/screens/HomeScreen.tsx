@@ -5,19 +5,23 @@ import { motion } from "framer-motion";
 import {
   AlertTriangle,
   Bell,
+  Bookmark,
   ChevronDown,
   Compass,
   Database,
   Flame,
+  Landmark,
   LocateFixed,
   MapPinned,
   RefreshCw,
   SearchX,
   UtensilsCrossed,
+  X,
   type LucideIcon,
 } from "lucide-react";
 import { toast } from "sonner";
 import { useFoodieStore } from "@/lib/foodie/store";
+import { sortedSaved, useSavedStore } from "@/lib/foodie/savedStore";
 import { PLACE_CATEGORIES } from "@/lib/foodie/constants";
 import {
   EAT_CONTEXT_HERO_ICONS,
@@ -216,6 +220,10 @@ export function HomeScreen() {
   const activeCategory = useFoodieStore((s) => s.activeCategory);
   const setActiveCategory = useFoodieStore((s) => s.setActiveCategory);
   const openPlace = useFoodieStore((s) => s.openPlace);
+  const openAttraction = useFoodieStore((s) => s.openAttraction);
+  const savedItems = useSavedStore((s) => s.items);
+  const removeSaved = useSavedStore((s) => s.remove);
+  const saved = useMemo(() => sortedSaved(savedItems), [savedItems]);
   const distanceFilterKm = useFoodieStore((s) => s.distanceFilterKm);
   const setDistanceFilter = useFoodieStore((s) => s.setDistanceFilter);
   const sortBy = useFoodieStore((s) => s.sortBy);
@@ -684,6 +692,73 @@ export function HomeScreen() {
                     <div className="foodie-rail flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">
                       {favorites.map((p) => (
                         <WideCard key={p.id} place={p} onSelect={openPlace} />
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {/* saved — the user's own bookmark list (device-persisted) */}
+                {saved.length > 0 && (
+                  <section className="mt-8">
+                    <SectionHeader
+                      icon={Bookmark}
+                      title="Saved"
+                      subtitle="Your personal list — stored on this device"
+                      className="px-5"
+                    />
+                    <div className="mx-5 mt-3 overflow-hidden rounded-3xl border border-border/60 bg-card shadow-sm">
+                      {saved.map((item, idx) => (
+                        <div
+                          key={item.id}
+                          className={cn(
+                            "flex items-stretch",
+                            idx > 0 && "border-t border-border/40"
+                          )}
+                        >
+                          <button
+                            type="button"
+                            onClick={() =>
+                              item.kind === "place" ? openPlace(item.id) : openAttraction(item.id)
+                            }
+                            className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-accent"
+                            aria-label={`Open ${item.name}`}
+                          >
+                            <span
+                              className={cn(
+                                "grid size-9 shrink-0 place-items-center rounded-xl",
+                                item.kind === "place" ? "bg-orange-50 text-primary" : "bg-stone-100 text-stone-500"
+                              )}
+                              aria-hidden="true"
+                            >
+                              {item.kind === "place" ? (
+                                <UtensilsCrossed className="size-4" />
+                              ) : (
+                                <Landmark className="size-4" />
+                              )}
+                            </span>
+                            <span className="min-w-0 flex-1">
+                              <span className="block truncate text-[14px] font-bold text-foreground">
+                                {item.name}
+                              </span>
+                              <span className="mt-0.5 block truncate text-[11.5px] text-muted-foreground">
+                                {item.kind === "place" ? "Food place" : "Attraction & stays"}
+                                {item.area ? ` · ${item.area}` : ""}
+                              </span>
+                            </span>
+                            <ChevronDown className="size-4 -rotate-90 shrink-0 text-stone-300" aria-hidden="true" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              removeSaved(item.id);
+                              toast("Removed from Saved", { description: item.name });
+                            }}
+                            className="grid w-11 shrink-0 place-items-center text-stone-300 transition-colors hover:bg-accent hover:text-rose-500"
+                            aria-label={`Remove ${item.name} from Saved`}
+                          >
+                            <X className="size-4" aria-hidden="true" />
+                          </button>
+                        </div>
                       ))}
                     </div>
                   </section>
